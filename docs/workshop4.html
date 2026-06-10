@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Workshop 4: AI for Documents &amp; Visuals (Adobe) – AI Workshops for DSPH</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-185884c8c6106d4d5e21bb702d36b605.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<meta name="robots" content="noindex, nofollow">
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">AI Workshops for DSPH</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./workshop1.html"> 
+<span class="menu-text">Workshop 1</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./workshop2.html"> 
+<span class="menu-text">Workshop 2</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./workshop3.html"> 
+<span class="menu-text">Workshop 3</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./workshop4.html" aria-current="page"> 
+<span class="menu-text">Workshop 4</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./tools.html"> 
+<span class="menu-text">Tools &amp; Access</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./resources.html"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="mailto:daq26@drexel.edu"> <i class="bi bi-envelope" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#workshop-4-ai-for-documents-visuals" id="toc-workshop-4-ai-for-documents-visuals" class="nav-link active" data-scroll-target="#workshop-4-ai-for-documents-visuals">Workshop 4: AI for Documents &amp; Visuals</a></li>
+  <li><a href="#what-youll-leave-with" id="toc-what-youll-leave-with" class="nav-link" data-scroll-target="#what-youll-leave-with">What You’ll Leave With</a></li>
+  <li><a href="#run-of-show" id="toc-run-of-show" class="nav-link" data-scroll-target="#run-of-show">Run of Show</a></li>
+  <li><a href="#overview-10-min" id="toc-overview-10-min" class="nav-link" data-scroll-target="#overview-10-min">Overview (10 min)</a></li>
+  <li><a href="#activity-1-acrobat-ai-assistant-on-a-real-pdf" id="toc-activity-1-acrobat-ai-assistant-on-a-real-pdf" class="nav-link" data-scroll-target="#activity-1-acrobat-ai-assistant-on-a-real-pdf">Activity 1: Acrobat AI Assistant on a Real PDF</a>
+  <ul class="collapse">
+  <li><a href="#activity-1-acrobat-ai-assistant-on-a-real-pdf-1" id="toc-activity-1-acrobat-ai-assistant-on-a-real-pdf-1" class="nav-link" data-scroll-target="#activity-1-acrobat-ai-assistant-on-a-real-pdf-1">Activity 1: Acrobat AI Assistant on a Real PDF</a></li>
+  </ul></li>
+  <li><a href="#activity-2-a-communication-graphic-in-firefly-express" id="toc-activity-2-a-communication-graphic-in-firefly-express" class="nav-link" data-scroll-target="#activity-2-a-communication-graphic-in-firefly-express">Activity 2: A Communication Graphic in Firefly / Express</a>
+  <ul class="collapse">
+  <li><a href="#activity-2-a-communication-graphic-in-firefly-express-1" id="toc-activity-2-a-communication-graphic-in-firefly-express-1" class="nav-link" data-scroll-target="#activity-2-a-communication-graphic-in-firefly-express-1">Activity 2: A Communication Graphic in Firefly / Express</a></li>
+  </ul></li>
+  <li><a href="#wrap-up-5-min" id="toc-wrap-up-5-min" class="nav-link" data-scroll-target="#wrap-up-5-min">Wrap-Up (5 min)</a></li>
+  <li><a href="#related" id="toc-related" class="nav-link" data-scroll-target="#related">Related</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Workshop 4: AI for Documents &amp; Visuals (Adobe)</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="workshop-4-ai-for-documents-visuals" class="level1 day-header">
+<h1>Workshop 4: AI for Documents &amp; Visuals</h1>
+<div class="day-subtitle">
+<p>Adobe Creative Cloud Pro — Acrobat AI Assistant for PDFs and Firefly for communication graphics</p>
+</div>
+<div class="day-time">
+<p>Upcoming — Fall 2026 | Date TBD | 1 hour | Bring a laptop</p>
+</div>
+</section>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Upcoming Workshop
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This session is planned for the <strong>fall</strong>. The date will be posted on the <a href="./index.html#schedule">home page</a> once scheduled. The agenda below is a draft.</p>
+</div>
+</div>
+<section id="what-youll-leave-with" class="level2">
+<h2 class="anchored" data-anchor-id="what-youll-leave-with">What You’ll Leave With</h2>
+<p>By the end of this hour, you will be able to:</p>
+<ol type="1">
+<li>Use <strong>Acrobat AI Assistant</strong> to summarize, query, and pull from long PDFs</li>
+<li>Use <strong>Firefly / Adobe Express</strong> to make a clean communication graphic without design software experience</li>
+<li>Know what the <strong>moderate-risk data</strong> approval does and doesn’t allow</li>
+<li>Decide when an AI-generated visual is appropriate for published public health materials</li>
+</ol>
+</section>
+<section id="run-of-show" class="level2">
+<h2 class="anchored" data-anchor-id="run-of-show">Run of Show</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 40%">
+<col style="width: 60%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Time</th>
+<th>Segment</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0:00–0:10</td>
+<td>Overview: Adobe at Drexel, the two AI tools, data and “commercially safe” generation</td>
+</tr>
+<tr class="even">
+<td>0:10–0:32</td>
+<td>Activity 1: Acrobat AI Assistant on a real PDF</td>
+</tr>
+<tr class="odd">
+<td>0:32–0:55</td>
+<td>Activity 2: A communication graphic in Firefly / Express</td>
+</tr>
+<tr class="even">
+<td>0:55–1:00</td>
+<td>Wrap-up and where visuals fit your work</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="overview-10-min" class="level2">
+<h2 class="anchored" data-anchor-id="overview-10-min">Overview (10 min)</h2>
+<p><strong>What you have.</strong> Drexel provides <strong>Adobe Creative Cloud Pro</strong> with an AI assistant and <strong>1,000 generative credits per month</strong>. Two AI capabilities matter most for this audience:</p>
+<ul>
+<li><strong>Acrobat AI Assistant</strong> — works inside a PDF to summarize it, answer questions about it, and generate text (a summary, an email, key points) with links back to the source passages.</li>
+<li><strong>Firefly / Adobe Express</strong> — generative image tools (text-to-image, generative fill and expand) and templates for flyers, infographics, social posts, and slide visuals. Generative actions draw down your monthly credits.</li>
+</ul>
+<p><strong>Data rule for these tools.</strong> Adobe’s tools are <strong>approved for moderate-risk data</strong> at Drexel. That covers internal and restricted material, but <strong>not high-risk regulated data</strong> (PHI, FERPA records, identifiable human-subjects data). Confirm the current classification on Drexel’s <a href="https://drexel.edu/provost/ai/tools">AI Tools page</a> before putting real documents into Acrobat AI Assistant.</p>
+<p><strong>“Commercially safe” generation.</strong> Adobe trains Firefly on licensed and public-domain content and positions its output as commercially safe to use. That matters when a graphic ends up in a published report, grant, or public campaign. Still review any generated image for accuracy and appropriateness—generative tools can produce misleading or off-tone visuals.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>The Split
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Reach for <strong>Acrobat AI Assistant</strong> when the work is trapped in a PDF. Reach for <strong>Firefly / Express</strong> when you need a visual and don’t have a designer. Both are about getting a usable draft fast, then applying your judgment.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="activity-1-acrobat-ai-assistant-on-a-real-pdf" class="level2 activity">
+<h2 class="activity anchored" data-anchor-id="activity-1-acrobat-ai-assistant-on-a-real-pdf">Activity 1: Acrobat AI Assistant on a Real PDF</h2>
+<section id="activity-1-acrobat-ai-assistant-on-a-real-pdf-1" class="level3 activity">
+<h3 class="anchored" data-anchor-id="activity-1-acrobat-ai-assistant-on-a-real-pdf-1">Activity 1: Acrobat AI Assistant on a Real PDF</h3>
+<div class="activity-meta">
+<p>Duration: ~22 minutes | Format: Individual, hands-on. Use a non-sensitive (or moderate-risk, approved) PDF.</p>
+</div>
+<p><strong>Goal:</strong> Turn a long document into something usable in minutes.</p>
+<section id="instructions" class="level4">
+<h4 class="anchored" data-anchor-id="instructions">Instructions</h4>
+<ol type="1">
+<li><p>Open a long PDF in Acrobat — a public report, an article, a grant guideline, or de-identified internal document. <strong>No high-risk data</strong> (no PHI, no FERPA records).</p></li>
+<li><p>Open <strong>AI Assistant</strong> and try each:</p>
+<ul>
+<li><strong>Summarize:</strong> “Give me a one-paragraph summary and then 5 key takeaways.”</li>
+<li><strong>Ask:</strong> Ask a specific question the document should answer (“What is the eligibility criteria?” / “What does it say about data sharing?”). Notice it cites the passage.</li>
+<li><strong>Extract:</strong> “List every deadline and requirement mentioned, as a table.”</li>
+<li><strong>Repurpose:</strong> “Draft a 4-sentence email to my team summarizing what they need to know from this.”</li>
+</ul></li>
+<li><p><strong>Verify</strong> one answer against the source passage it cites. Confirm it didn’t miss or misstate anything.</p></li>
+</ol>
+</section>
+<section id="reflection" class="level4">
+<h4 class="anchored" data-anchor-id="reflection">Reflection</h4>
+<ul>
+<li>How long would that summary or extraction have taken by hand?</li>
+<li>Where did it cite cleanly, and where would you double-check before trusting it?</li>
+</ul>
+</section>
+</section>
+<hr>
+</section>
+<section id="activity-2-a-communication-graphic-in-firefly-express" class="level2 activity">
+<h2 class="activity anchored" data-anchor-id="activity-2-a-communication-graphic-in-firefly-express">Activity 2: A Communication Graphic in Firefly / Express</h2>
+<section id="activity-2-a-communication-graphic-in-firefly-express-1" class="level3 activity">
+<h3 class="anchored" data-anchor-id="activity-2-a-communication-graphic-in-firefly-express-1">Activity 2: A Communication Graphic in Firefly / Express</h3>
+<div class="activity-meta">
+<p>Duration: ~23 minutes | Format: Individual, hands-on</p>
+</div>
+<p><strong>Goal:</strong> Produce a clean, shareable graphic for a real communication need.</p>
+<section id="instructions-1" class="level4">
+<h4 class="anchored" data-anchor-id="instructions-1">Instructions</h4>
+<ol type="1">
+<li><p>Pick a real need: a flyer for an event, a social post, a simple infographic, or a title visual for a slide or report.</p></li>
+<li><p>In <strong>Adobe Express</strong>, start from a template that fits the format (social, flyer, presentation).</p></li>
+<li><p>Use <strong>generative tools</strong> where they help:</p>
+<ul>
+<li><strong>Text-to-image</strong> for a background or illustration (“a diverse group of community members at an outdoor health fair, warm daylight, flat illustration style”).</li>
+<li><strong>Generative fill / expand</strong> to adjust an existing image to the frame.</li>
+<li>Express’s text and layout tools to add your headline and key message.</li>
+</ul></li>
+<li><p>Keep it readable: one clear message, legible text, accessible color contrast. Generative AI fills space; the communication discipline is still yours.</p></li>
+</ol>
+</section>
+<section id="reflection-1" class="level4">
+<h4 class="anchored" data-anchor-id="reflection-1">Reflection</h4>
+<ul>
+<li>Is this good enough to use, or a starting point for a designer?</li>
+<li>Did any generated image misrepresent the community or topic? (A real risk worth naming.)</li>
+</ul>
+</section>
+</section>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Check Before You Publish
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Generated images can include inaccurate or stereotyped depictions. For anything public-facing—especially representing communities you serve—review carefully and get a second set of eyes. Credit/disclose AI-generated visuals per Drexel and your unit’s norms.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="wrap-up-5-min" class="level2">
+<h2 class="anchored" data-anchor-id="wrap-up-5-min">Wrap-Up (5 min)</h2>
+<ul>
+<li><strong>Acrobat AI Assistant</strong> turns long PDFs into summaries, answers, and drafts—with sources to verify.</li>
+<li><strong>Firefly / Express</strong> makes communication graphics fast, using your monthly generative credits.</li>
+<li>Both are cleared for <strong>moderate-risk data</strong>, not high-risk regulated data.</li>
+<li>The tools produce drafts; accuracy, tone, and representation are your call.</li>
+</ul>
+<hr>
+</section>
+<section id="related" class="level2">
+<h2 class="anchored" data-anchor-id="related">Related</h2>
+<ul>
+<li><a href="./tools.html">Tools &amp; Access</a> — full data rules and the Adobe section</li>
+<li><a href="./workshop2.html">Workshop 2</a> — the document-summarizing patterns that pair with Acrobat AI Assistant</li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>AI Workshops for DSPH | Dornsife School of Public Health | Drexel University</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

@@ -1,0 +1,135 @@
+---
+title: "Tools & Access"
+---
+
+::: {.day-header}
+# Tools & Access
+::: {.day-subtitle}
+Which AI tools to use at DSPH, how to get them, and the data rules that come with each
+:::
+:::
+
+This page is the reference for the tools we use across all three workshops. The short version: **use Drexel-licensed tools for Drexel work, and never put regulated data into a consumer tool.**
+
+Drexel's official hub is **[AI at Drexel](https://drexel.edu/provost/ai)** (Office of the Provost). The **[AI Tools page](https://drexel.edu/provost/ai/tools)** lists each tool's availability and the **data classification level** it's approved for---treat that page as the authoritative source if anything here and Drexel's guidance differ.
+
+## At a Glance
+
+| Tool | Drexel access | OK for Drexel data? | Best for |
+|------|---------------|---------------------|----------|
+| **ChatGPT Edu** | University license | Yes --- within Drexel policy | Writing, summarizing, analysis, custom GPTs |
+| **Microsoft Copilot** | M365 with Drexel account | Yes --- in enterprise/protected mode | Office tasks (Word, Excel, Outlook, Teams) |
+| **Zoom AI Companion** | Included with Drexel Zoom | Yes --- within Drexel policy | Meeting summaries, recaps, action items |
+| **Adobe Creative Cloud Pro** (Acrobat AI Assistant, Firefly) | University license | Yes --- up to **moderate-risk** data | PDF summarizing & Q&A, graphics, infographics |
+| **Claude** | PI-purchased only | **No** | Personal/public tasks only; not Drexel data |
+| **ChatGPT (personal), Gemini, Perplexity** | Free/personal | **No** | Public or synthetic info only |
+
+:::{.callout-important}
+## The One Rule to Remember
+Regulated data --- PHI, FERPA-protected student records, identifiable human-subjects data, anything covered by a data use agreement --- goes **only** into a tool explicitly approved for it. When unsure, de-identify or use synthetic data first.
+:::
+
+## ChatGPT Edu (Primary Tool)
+
+ChatGPT Edu is the university-licensed version of ChatGPT. It is the default tool for most of what we do in these workshops.
+
+**What it gives you**
+
+- Access to current OpenAI models in a Drexel-managed workspace
+- Prompts and uploaded content are **not used to train OpenAI's models**
+- Higher message limits than the free tier
+- The ability to build and share **custom GPTs** (reusable assistants with your own instructions and files)
+
+**How to get access**
+
+ChatGPT Edu is **available now to Drexel faculty and professional staff** ([announcement](https://drexel.edu/provost/news-events/announcements/2026/May/faculty-and-professional-staff-access-to-chatgpt-edu)). Request access and read the feature details through the IT service catalog: **[ChatGPT Edu Features and Access](https://servicedesk.drexel.edu/TDClient/277/Portal/Requests/ServiceDet?ID=10760)**. Review the [ChatGPT Terms of Use](https://servicedesk.drexel.edu/TDClient/277/Portal/KB/ArticleDet?ID=20194) before you start. Bring any access questions to Workshop 1.
+
+**Data rules**
+
+Approved for Drexel data within university policy. Check the [AI Tools page](https://drexel.edu/provost/ai/tools) for the exact data classification level it's cleared for. Still avoid entering regulated data (PHI, FERPA records, identifiable research data) unless that specific use has been approved. The license protects your data from model training; it does not override IRB protocols, data use agreements, or HIPAA.
+
+## Microsoft Copilot (Office Workflows)
+
+Copilot is built into the Microsoft 365 apps you already use. It is strongest when the work lives in Word, Excel, Outlook, Teams, or PowerPoint.
+
+**What it gives you**
+
+- Draft and rewrite in Word; summarize long documents
+- Summarize email threads and draft replies in Outlook
+- Generate formulas, summarize, and analyze in Excel
+- Recap meetings and action items in Teams
+
+**How to get access**
+
+Sign in to Microsoft 365 with your Drexel account. Confirm you are in the protected ("enterprise data protection") mode --- look for the indicator showing your data is protected before using it with university content.
+
+**Data rules**
+
+In protected mode with your Drexel account, prompts and data stay within Drexel's Microsoft tenant and are not used for training. Confirm the protected-mode indicator is showing. Do not use a personal Microsoft account for Drexel work.
+
+## Zoom AI Companion (Meetings)
+
+Zoom AI Companion is built into Drexel's Zoom and is strongest for the work that happens in and around meetings.
+
+**What it gives you**
+
+- **Meeting summaries** with key points and next steps, generated automatically
+- **Smart recordings** with highlights and chapters
+- Catch-up summaries if you join a meeting late
+- In-meeting questions about what's been discussed so far
+
+**How to get access**
+
+It's included with Drexel's Zoom license at no extra cost. The meeting host turns it on for a given meeting; account and group settings (managed by Drexel IT) control availability. Participants are notified when it's active.
+
+**Data rules**
+
+Zoom states it does **not use your meeting audio, video, chat, or shared content to train Zoom's or third-party AI models**. As with any tool, follow Drexel policy: be mindful of recording and summarizing meetings that involve regulated or confidential information, and let participants know when AI Companion is on. Approved for Drexel use within policy.
+
+## Adobe Creative Cloud Pro (Documents & Visuals)
+
+Drexel provides **Adobe Creative Cloud Pro** with an AI assistant and **1,000 generative credits per month**. Two AI features are most useful here.
+
+**What it gives you**
+
+- **Acrobat AI Assistant** --- summarize long PDFs, ask questions about them, and draft text (summaries, emails, key points) with citations back to the source passages.
+- **Firefly / Adobe Express** --- generative image tools (text-to-image, generative fill and expand) and templates for flyers, infographics, social posts, and slide visuals. Generative actions use your monthly credits. Adobe trains Firefly on licensed and public-domain content and positions output as commercially safe.
+
+**How to get access**
+
+Included with your Drexel Adobe Creative Cloud Pro license. Sign in with your Drexel account.
+
+**Data rules**
+
+Approved for data **up to moderate risk** --- internal and restricted material, but **not high-risk regulated data** (PHI, FERPA records, identifiable human-subjects data). Confirm the current classification on the [AI Tools page](https://drexel.edu/provost/ai/tools) before putting real documents into Acrobat AI Assistant. Review generated images before publishing---they can be inaccurate or misrepresent people and communities.
+
+This tool is the focus of [Workshop 4](workshop4.qmd).
+
+## Claude (PI-Purchased, No Drexel Data)
+
+Claude (by Anthropic) is a capable assistant that some find strong for long-form writing and reasoning. **Drexel does not provide a Claude license**, and Claude is **not approved for Drexel data**.
+
+- Individual PIs may purchase their own Claude/Anthropic subscription with grant or personal funds.
+- Even with a paid subscription, **do not enter Drexel data** --- no PHI, no FERPA records, no identifiable research data, no internal documents covered by an agreement.
+- Use it only with public information or fully synthetic/de-identified material.
+
+We mention Claude so you know the option exists and know its limits. For Drexel work, reach for ChatGPT Edu or Copilot.
+
+## Other Consumer Tools
+
+Free ChatGPT, Gemini, Perplexity, and similar tools are fine for public, non-sensitive tasks (learning, brainstorming on public topics, drafting from non-confidential material). They are **not approved for Drexel data**. Assume anything you type may be retained or used for training unless a Drexel agreement says otherwise.
+
+## Drexel Policy & Support
+
+- **[AI at Drexel](https://drexel.edu/provost/ai)** --- the Provost's central hub for tools, guidance, and policy
+- **[AI Tools](https://drexel.edu/provost/ai/tools)** --- availability and **data classification level** for each approved tool (authoritative)
+- **[Guidance](https://drexel.edu/provost/ai/pedagogy-guidance)** and **[Policies](https://drexel.edu/provost/ai/pedagogy-guidance/policies)** --- university policy and best practices
+- **[Guidance for Staff](https://drexel.edu/provost/ai/pedagogy-guidance/staff)** --- staff-specific guidance
+- **[AI Trainings](https://drexel.edu/provost/ai/trainings)** --- workshops, professional development, and support
+- **[Standing Committee on AI (SCAI)](mailto:SCAI@drexel.edu)** --- questions about AI at Drexel
+- For research data governance and IRB questions, consult your IRB and any applicable data use agreements before using any AI tool.
+
+:::{.callout-tip}
+## Quick Self-Check Before You Paste
+Ask yourself three questions: (1) Is this data regulated or covered by an agreement? (2) Is the tool I'm using approved for that data? (3) Could I use a de-identified or synthetic version instead? If any answer gives you pause, stop and check.
+:::

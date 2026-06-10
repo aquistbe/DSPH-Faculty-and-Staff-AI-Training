@@ -1,0 +1,148 @@
+---
+title: "Workshop 3: Collaboration on Projects"
+---
+
+::: {.day-header}
+# Workshop 3: Collaboration on Projects
+::: {.day-subtitle}
+Use AI for meetings, project planning, shared prompts, and team documents
+:::
+::: {.day-time}
+Tuesday, July 14, 2026 | 1:00--2:00 PM | Bring a laptop; come with a team or project in mind
+:::
+:::
+
+## What You'll Leave With
+
+By the end of this hour, you will be able to:
+
+1. Turn meeting notes into recaps, decisions, and action items the team can use
+2. Use AI to draft and pressure-test a project plan
+3. Build a **custom GPT** in ChatGPT Edu that your team can reuse
+4. Start a shared prompt library so the whole group benefits from what works
+
+## Run of Show
+
+| Time | Segment |
+|------|---------|
+| 0:00--0:10 | Overview: from solo use to team use |
+| 0:10--0:28 | Activity 1: Meetings and project planning |
+| 0:28--0:53 | Activity 2: Build a custom GPT + shared prompt library |
+| 0:53--1:00 | Wrap-up and a team commitment |
+
+---
+
+## Overview (10 min)
+
+The first two workshops were about you and a tool. This one is about your **team**. AI helps most on shared work when it does three things: captures what happened (meeting recaps, decisions), structures what's next (plans, task lists), and standardizes how the group works (shared prompts and custom assistants so everyone gets the same quality, not just the early adopters).
+
+Two ideas carry the session:
+
+- **Custom GPTs** (in ChatGPT Edu) are reusable assistants you set up once with your own instructions and reference files, then share with colleagues---so a good prompt becomes a team tool.
+- A **shared prompt library** is just a running document of prompts that worked. It's the cheapest, highest-return habit a team can start.
+
+For meetings specifically, **Zoom AI Companion** (included with Drexel Zoom) can generate the summary and action items for you automatically---a natural starting point for the recap work below. Same data rules apply across all tools: ChatGPT Edu, Copilot, and Zoom AI Companion for Drexel work; nothing regulated unless approved. See [Tools & Access](tools.qmd).
+
+---
+
+## Activity 1: Meetings and Project Planning {.activity}
+
+::: {.activity}
+
+### Activity 1: Meetings and Project Planning
+::: {.activity-meta}
+Duration: ~18 minutes | Format: Hands-on, individual or in pairs
+:::
+
+**Goal:** Use AI to turn raw inputs into the artifacts a project actually runs on. Use non-sensitive content.
+
+#### Part A --- From Notes to a Usable Recap (~8 min)
+
+*Tip: if your meeting was on Zoom, **Zoom AI Companion** can produce a summary and action items automatically---start from that instead of raw notes.*
+
+1. Paste messy meeting notes (real but non-sensitive, or use the sample below) into ChatGPT Edu.
+2. Use this prompt:
+
+   > Turn these notes into three sections: (1) Summary in 3 bullets, (2) Decisions made, (3) Action items as a table with owner and due date. Flag anything that's unclear or unassigned.
+
+3. Notice it surfaces the gaps---unassigned tasks, vague deadlines---that are easy to miss live.
+
+*Sample notes if you don't have your own:* "talked about the survey rollout, Maria will check the IRB amendment, need final instrument by end of month, budget tight, someone should ask about the no-cost extension, next meeting in 2 weeks, recruitment slower than expected."
+
+#### Part B --- Draft and Stress-Test a Plan (~10 min)
+
+1. Describe a project in a sentence or two and ask:
+
+   > Draft a simple project plan for this with phases, key tasks, and a rough timeline. Then list the top 5 risks and what would reduce each one.
+
+2. Push back: *"What am I missing?"* or *"What would make this slip?"* Use it to find blind spots, not to write the final plan.
+
+#### Reflection
+
+- Did the recap catch anything you'd have forgotten?
+- Where was the AI's plan generic, and where did it add something useful?
+
+:::
+
+---
+
+## Activity 2: Build a Custom GPT + Shared Prompt Library {.activity}
+
+::: {.activity}
+
+### Activity 2: Build a Custom GPT + Shared Prompt Library
+::: {.activity-meta}
+Duration: ~25 minutes | Format: Hands-on; build something your team can reuse
+:::
+
+**Goal:** Create one reusable team tool and start the habit that keeps it going.
+
+#### Part A --- Build a Custom GPT (~15 min)
+
+In ChatGPT Edu, create a custom GPT for a task your team repeats. Examples: a "Meeting Recap Assistant," a "Plain-Language Rewriter," a "Grant Reminder Drafter," an "Onboarding Q&A" assistant.
+
+1. In ChatGPT Edu, start a new GPT and give it clear **instructions**---who it is, what it does, the format it should always use, and the tone.
+2. Optionally add **reference files** (non-sensitive): a style guide, a template, a list of standard sections.
+3. Test it with two different inputs. Refine the instructions where it drifts.
+4. Note how to **share** it with your team's workspace.
+
+Starter instruction template:
+
+> You are a [role] for the DSPH [team]. When given [input], always produce [output] in this format: [structure]. Use a [tone] tone. If key information is missing, ask for it before producing the output. Never include sensitive or identifying data.
+
+#### Part B --- Start a Shared Prompt Library (~10 min)
+
+1. Open a shared document (Teams/SharePoint/OneDrive) the team can all reach.
+2. Add 2--3 prompts that worked for you, each with: a title, the prompt (with placeholders), and a one-line "use this when..."
+3. Agree on one norm: where it lives, and that anyone can add to it.
+
+A library entry looks like:
+
+> **Title:** Monthly project update
+> **Prompt:** You are a research coordinator. Write a status update for [project] covering Done / In Progress / Needs Attention, under 150 words.
+> **Use when:** Prepping for the monthly team check-in.
+
+:::
+
+:::{.callout-tip}
+## Why Sharing Beats Solo Use
+When one person finds a prompt that works and keeps it to themselves, the team gets one faster worker. When they put it in a shared library or a custom GPT, the team gets a repeatable standard. The second is where the real return is.
+:::
+
+---
+
+## Wrap-Up (7 min)
+
+- AI helps teams most by capturing meetings, structuring plans, and standardizing how the group works.
+- **Custom GPTs** turn a good prompt into a shared tool.
+- A **shared prompt library** is the easiest high-value habit to start today.
+
+**Team commitment:** before you leave, name one thing your team will set up this month---a custom GPT, a prompt library, or an AI-assisted meeting recap habit.
+
+---
+
+## Where to Go Next
+
+This series is the shared foundation. **Specialized sessions for research staff** who code and analyze data are coming later in summer (AI for data cleaning, Stata/R/Python, debugging, and reproducible analysis). The series also repeats in fall.
+
+See the [Resources](resources.qmd) page for guides and further learning, and reach out to [daq26@drexel.edu](mailto:daq26@drexel.edu) with ideas for future topics.

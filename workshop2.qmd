@@ -1,0 +1,147 @@
+---
+title: "Workshop 2: Workflow Enhancement"
+---
+
+::: {.day-header}
+# Workshop 2: Workflow Enhancement
+::: {.day-subtitle}
+Use ChatGPT Edu and Microsoft Copilot to speed up the work you already do
+:::
+::: {.day-time}
+Tuesday, July 7, 2026 | 1:00--2:00 PM | Bring a laptop and a real (non-sensitive) task
+:::
+:::
+
+## What You'll Leave With
+
+By the end of this hour, you will be able to:
+
+1. Spot which of your recurring tasks are good candidates for AI help
+2. Use Microsoft Copilot inside Word, Outlook, and Excel for everyday tasks
+3. Use ChatGPT Edu to summarize, rewrite, and analyze faster
+4. Build a small "prompt recipe" you can reuse
+
+## Run of Show
+
+| Time | Segment |
+|------|---------|
+| 0:00--0:10 | Overview: where AI fits in a workflow; Copilot vs. ChatGPT Edu |
+| 0:10--0:30 | Activity 1: Copilot in Microsoft 365 |
+| 0:30--0:53 | Activity 2: ChatGPT Edu for your real task |
+| 0:53--1:00 | Wrap-up and save your prompt recipe |
+
+---
+
+## Overview (10 min)
+
+**Where AI fits.** The biggest time savings come from the repetitive middle of a task---the first draft, the summary, the reformat, the "make this clearer." AI handles that draft; you bring the judgment and the final word.
+
+**Copilot vs. ChatGPT Edu---when to use which.**
+
+- **Copilot** shines when the work is *already in a Microsoft file*: a Word doc to rewrite, an Outlook thread to summarize, an Excel sheet to analyze. It sees the document you're in.
+- **ChatGPT Edu** shines for *open-ended drafting, summarizing pasted text, and building reusable assistants*. You bring the content to it.
+
+Both are approved for Drexel data within policy. Confirm Copilot is in protected mode before using it with university content. See [Tools & Access](tools.qmd).
+
+:::{.callout-tip}
+## Find Your Candidates
+A task is a good AI candidate if it's (1) text-heavy, (2) something you do repeatedly, and (3) low-stakes enough that a draft-plus-review is fine. Think: status updates, meeting recaps, first drafts, summaries, reformatting.
+:::
+
+---
+
+## Activity 1: Copilot in Microsoft 365 {.activity}
+
+::: {.activity}
+
+### Activity 1: Copilot in Microsoft 365
+::: {.activity-meta}
+Duration: ~20 minutes | Format: Hands-on, choose by your role
+:::
+
+**Goal:** Use Copilot where your work already lives. Pick the track that fits you. Use non-sensitive content only.
+
+#### Track A --- Word (drafting & rewriting)
+
+1. Open a Word document with a few paragraphs of real (non-sensitive) text.
+2. Use Copilot to **summarize** it into key points.
+3. Ask Copilot to **rewrite** a paragraph for a specific audience ("rewrite for a non-technical reader").
+4. Ask it to **draft** a new section from a one-line instruction.
+
+#### Track B --- Outlook (email triage)
+
+1. Open a long email thread.
+2. Ask Copilot to **summarize the thread** and list any decisions or action items.
+3. Ask it to **draft a reply** with a tone you specify (e.g., "concise and friendly, confirm the meeting time").
+4. Edit and send (or save as draft).
+
+#### Track C --- Excel (quick analysis)
+
+1. Open a spreadsheet with non-sensitive tabular data (or use sample data).
+2. Ask Copilot to **summarize what's in the data**.
+3. Ask for a **formula** in plain language ("flag rows where the amount is over 5000").
+4. Ask it to **suggest a chart** or surface a trend.
+
+#### Reflection
+
+- Did Copilot save time versus doing it by hand? Where did you still need to correct it?
+- Which of your weekly tasks could this replace the first-draft step for?
+
+:::
+
+---
+
+## Activity 2: ChatGPT Edu for Your Real Task {.activity}
+
+::: {.activity}
+
+### Activity 2: ChatGPT Edu for Your Real Task
+::: {.activity-meta}
+Duration: ~23 minutes | Format: Individual, bring your own task
+:::
+
+**Goal:** Run one task you actually need to do this week, start to finish.
+
+#### Instructions
+
+1. Pick a real, **non-sensitive** task: a report section, a summary of a long document, a set of meeting notes to clean up, a draft announcement, a literature blurb on a public topic.
+2. Write a **PTCF prompt** (Persona, Task, Context, Format---from Workshop 1). Be specific about the format you want.
+3. Run it. Then **iterate**: shorten, change tone, add a section, ask for a table. Push it 2--3 rounds until it's close to usable.
+4. Do the final edit yourself. Note what you changed---that's the part that needs your expertise.
+
+#### Two Patterns Worth Knowing
+
+**Summarize-then-act.** Paste a long document and ask: *"Summarize the key points, then draft a 3-sentence email I can send to my team about what they need to do."* One step gets you from raw material to a usable product.
+
+**Make-it-a-table.** For anything with structure---options, pros and cons, a comparison, a schedule---add: *"Put this in a table."* It's faster to scan and easier to drop into a doc.
+
+#### Build a Reusable Recipe
+
+Once a prompt works, save it. Strip out the specifics and leave placeholders:
+
+> You are a [role]. [Task]. Context: [details]. Format: [structure, length, tone].
+
+Keep these in a running note. Next week you fill in the blanks instead of starting over.
+
+:::
+
+:::{.callout-warning}
+## Verify Before It Counts
+AI can invent facts, citations, and numbers. For anything that goes into a real document or decision, check it against the source. Never paste regulated data into any tool that isn't approved for it.
+:::
+
+---
+
+## Wrap-Up (7 min)
+
+- **Copilot** for work inside Office files; **ChatGPT Edu** for open drafting and reusable assistants.
+- The win is the first draft and the summary---you keep the judgment.
+- Save the prompts that work as **reusable recipes**.
+
+**Try this before Workshop 3:** save two prompt recipes you'd actually reuse. We'll turn shared recipes into team tools next session.
+
+---
+
+## Looking Ahead
+
+**Workshop 3: Collaboration on Projects** --- moving from solo use to team use: AI for meeting notes and follow-ups, project planning, shared prompt libraries, custom GPTs, and drafting documents together.

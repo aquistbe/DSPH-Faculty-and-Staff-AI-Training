@@ -1,0 +1,139 @@
+---
+title: "Workshop 4: AI for Documents & Visuals (Adobe)"
+---
+
+::: {.day-header}
+# Workshop 4: AI for Documents & Visuals
+::: {.day-subtitle}
+Adobe Creative Cloud Pro --- Acrobat AI Assistant for PDFs and Firefly for communication graphics
+:::
+::: {.day-time}
+Upcoming --- Fall 2026 | Date TBD | 1 hour | Bring a laptop
+:::
+:::
+
+:::{.callout-note}
+## Upcoming Workshop
+This session is planned for the **fall**. The date will be posted on the [home page](index.qmd#schedule) once scheduled. The agenda below is a draft.
+:::
+
+## What You'll Leave With
+
+By the end of this hour, you will be able to:
+
+1. Use **Acrobat AI Assistant** to summarize, query, and pull from long PDFs
+2. Use **Firefly / Adobe Express** to make a clean communication graphic without design software experience
+3. Know what the **moderate-risk data** approval does and doesn't allow
+4. Decide when an AI-generated visual is appropriate for published public health materials
+
+## Run of Show
+
+| Time | Segment |
+|------|---------|
+| 0:00--0:10 | Overview: Adobe at Drexel, the two AI tools, data and "commercially safe" generation |
+| 0:10--0:32 | Activity 1: Acrobat AI Assistant on a real PDF |
+| 0:32--0:55 | Activity 2: A communication graphic in Firefly / Express |
+| 0:55--1:00 | Wrap-up and where visuals fit your work |
+
+---
+
+## Overview (10 min)
+
+**What you have.** Drexel provides **Adobe Creative Cloud Pro** with an AI assistant and **1,000 generative credits per month**. Two AI capabilities matter most for this audience:
+
+- **Acrobat AI Assistant** --- works inside a PDF to summarize it, answer questions about it, and generate text (a summary, an email, key points) with links back to the source passages.
+- **Firefly / Adobe Express** --- generative image tools (text-to-image, generative fill and expand) and templates for flyers, infographics, social posts, and slide visuals. Generative actions draw down your monthly credits.
+
+**Data rule for these tools.** Adobe's tools are **approved for moderate-risk data** at Drexel. That covers internal and restricted material, but **not high-risk regulated data** (PHI, FERPA records, identifiable human-subjects data). Confirm the current classification on Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools) before putting real documents into Acrobat AI Assistant.
+
+**"Commercially safe" generation.** Adobe trains Firefly on licensed and public-domain content and positions its output as commercially safe to use. That matters when a graphic ends up in a published report, grant, or public campaign. Still review any generated image for accuracy and appropriateness---generative tools can produce misleading or off-tone visuals.
+
+:::{.callout-tip}
+## The Split
+Reach for **Acrobat AI Assistant** when the work is trapped in a PDF. Reach for **Firefly / Express** when you need a visual and don't have a designer. Both are about getting a usable draft fast, then applying your judgment.
+:::
+
+---
+
+## Activity 1: Acrobat AI Assistant on a Real PDF {.activity}
+
+::: {.activity}
+
+### Activity 1: Acrobat AI Assistant on a Real PDF
+::: {.activity-meta}
+Duration: ~22 minutes | Format: Individual, hands-on. Use a non-sensitive (or moderate-risk, approved) PDF.
+:::
+
+**Goal:** Turn a long document into something usable in minutes.
+
+#### Instructions
+
+1. Open a long PDF in Acrobat --- a public report, an article, a grant guideline, or de-identified internal document. **No high-risk data** (no PHI, no FERPA records).
+2. Open **AI Assistant** and try each:
+
+   - **Summarize:** "Give me a one-paragraph summary and then 5 key takeaways."
+   - **Ask:** Ask a specific question the document should answer ("What is the eligibility criteria?" / "What does it say about data sharing?"). Notice it cites the passage.
+   - **Extract:** "List every deadline and requirement mentioned, as a table."
+   - **Repurpose:** "Draft a 4-sentence email to my team summarizing what they need to know from this."
+
+3. **Verify** one answer against the source passage it cites. Confirm it didn't miss or misstate anything.
+
+#### Reflection
+
+- How long would that summary or extraction have taken by hand?
+- Where did it cite cleanly, and where would you double-check before trusting it?
+
+:::
+
+---
+
+## Activity 2: A Communication Graphic in Firefly / Express {.activity}
+
+::: {.activity}
+
+### Activity 2: A Communication Graphic in Firefly / Express
+::: {.activity-meta}
+Duration: ~23 minutes | Format: Individual, hands-on
+:::
+
+**Goal:** Produce a clean, shareable graphic for a real communication need.
+
+#### Instructions
+
+1. Pick a real need: a flyer for an event, a social post, a simple infographic, or a title visual for a slide or report.
+2. In **Adobe Express**, start from a template that fits the format (social, flyer, presentation).
+3. Use **generative tools** where they help:
+
+   - **Text-to-image** for a background or illustration ("a diverse group of community members at an outdoor health fair, warm daylight, flat illustration style").
+   - **Generative fill / expand** to adjust an existing image to the frame.
+   - Express's text and layout tools to add your headline and key message.
+
+4. Keep it readable: one clear message, legible text, accessible color contrast. Generative AI fills space; the communication discipline is still yours.
+
+#### Reflection
+
+- Is this good enough to use, or a starting point for a designer?
+- Did any generated image misrepresent the community or topic? (A real risk worth naming.)
+
+:::
+
+:::{.callout-warning}
+## Check Before You Publish
+Generated images can include inaccurate or stereotyped depictions. For anything public-facing---especially representing communities you serve---review carefully and get a second set of eyes. Credit/disclose AI-generated visuals per Drexel and your unit's norms.
+:::
+
+---
+
+## Wrap-Up (5 min)
+
+- **Acrobat AI Assistant** turns long PDFs into summaries, answers, and drafts---with sources to verify.
+- **Firefly / Express** makes communication graphics fast, using your monthly generative credits.
+- Both are cleared for **moderate-risk data**, not high-risk regulated data.
+- The tools produce drafts; accuracy, tone, and representation are your call.
+
+---
+
+## Related
+
+- [Tools & Access](tools.qmd) --- full data rules and the Adobe section
+- [Workshop 2](workshop2.qmd) --- the document-summarizing patterns that pair with Acrobat AI Assistant

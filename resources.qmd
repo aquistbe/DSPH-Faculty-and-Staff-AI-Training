@@ -1,0 +1,68 @@
+---
+title: "Resources"
+---
+
+::: {.day-header}
+# Resources
+::: {.day-subtitle}
+Guides, references, and where to go deeper after the workshops
+:::
+:::
+
+## Drexel Tools & Access
+
+- **[AI at Drexel](https://drexel.edu/provost/ai)** --- the university's central AI hub (start here).
+- **[AI Tools + data classification](https://drexel.edu/provost/ai/tools)** --- which tools are approved for which data (authoritative).
+- **ChatGPT Edu** --- university-licensed; primary tool for the workshops. [Request access](https://servicedesk.drexel.edu/TDClient/277/Portal/Requests/ServiceDet?ID=10760). See also [Tools & Access](tools.qmd).
+- **Microsoft Copilot** --- sign in with your Drexel M365 account; use protected mode.
+- **Zoom AI Companion** --- included with Drexel Zoom; meeting summaries, recaps, and action items.
+- **Adobe Creative Cloud Pro** --- Acrobat AI Assistant (PDFs) and Firefly (graphics); approved for **moderate-risk** data. Featured in [Workshop 4](workshop4.qmd).
+
+## Drexel Policy & Training
+
+- **[Guidance](https://drexel.edu/provost/ai/pedagogy-guidance)** and **[Policies](https://drexel.edu/provost/ai/pedagogy-guidance/policies)** --- university policy and best practices.
+- **[Guidance for Staff](https://drexel.edu/provost/ai/pedagogy-guidance/staff)** --- staff-specific guidance.
+- **[AI Trainings](https://drexel.edu/provost/ai/trainings)** --- Drexel workshops and professional development.
+- **[Standing Committee on AI (SCAI)](mailto:SCAI@drexel.edu)** --- questions about AI at Drexel.
+- For research data: consult your **IRB** and any **data use agreements** before entering data into any AI tool.
+
+## Quick Reference
+
+::: {.info-box}
+
+**PTCF prompt recipe** --- Persona, Task, Context, Format. Name who the AI should be, what to do, the background it needs, and the shape of the output.
+
+**Data self-check** --- Is the data regulated? Is the tool approved for it? Could I use a de-identified or synthetic version? If any answer gives you pause, stop and check.
+
+**Verify before it counts** --- AI can state wrong facts and invent citations. Check anything that goes into a real document or decision.
+
+:::
+
+## Good First Uses by Role
+
+| If you... | Try AI for... |
+|-----------|---------------|
+| Manage admin, schedules, grants | Drafting emails and reminders, summarizing long threads, cleaning up notes into agendas, reformatting documents |
+| Coordinate research | Meeting recaps with action items, drafting project updates, summarizing protocols and reports, first-draft plans |
+| Teach and run a lab / faculty | Drafting and revising materials, summarizing literature on public topics, generating practice questions, reformatting slides |
+
+## Public Health & AI --- Further Learning
+
+- **ASPPH --- AI for Public Health initiative** --- task force and framework on responsible, ethical AI use in public health research, practice, and education.
+- **Frontiers in Digital Health (2025)** --- "Embedding AI literacy in public health education" (the five-pillar framework).
+- **Mollick, E. (2024). _Co-Intelligence: Living and Working with AI._** --- accessible introduction to working with AI tools.
+
+## Research-Staff Sessions (Coming Later in Summer)
+
+For research staff who code and analyze data, specialized sessions will cover:
+
+- AI for **data cleaning** and reshaping
+- Writing and debugging code in **Stata, R, and Python**
+- Explaining and documenting analyses
+- Reproducibility and good practice when AI writes code
+
+Watch for announcements, or email [daq26@drexel.edu](mailto:daq26@drexel.edu) to suggest topics.
+
+## Suggest a Topic
+
+These workshops will repeat and expand. If there's a tool, task, or workflow you'd like covered, email [daq26@drexel.edu](mailto:daq26@drexel.edu).

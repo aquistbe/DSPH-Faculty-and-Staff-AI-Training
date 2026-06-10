@@ -1,0 +1,440 @@
+/* ============================================
+   AI for Urban Health — Course Website Styles
+   Drexel University | UHC Summer Institute 2026
+   ============================================ */
+
+/* --- Color Variables --- */
+:root {
+  --primary: #003366;
+  --primary-light: #004080;
+  --accent: #0066cc;
+  --accent-light: #e8f0fe;
+  --text-dark: #1a1a2e;
+  --text-muted: #555;
+  --bg-light: #f8f9fa;
+  --border-light: #dee2e6;
+  --success: #28a745;
+  --warning-bg: #fff3cd;
+  --activity-bg: #f0f7ff;
+  --activity-border: #0066cc;
+}
+
+/* --- Base Typography --- */
+body {
+  font-family: 'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: var(--text-dark);
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+h1 {
+  border-bottom: 3px solid var(--accent);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 0.4rem;
+}
+
+h3 {
+  margin-top: 1.8rem;
+  color: var(--primary-light);
+}
+
+/* --- Links --- */
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+/* --- Navbar Overrides --- */
+.navbar {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+/* --- Page Footer --- */
+.nav-footer {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* --- Hero / Banner Section --- */
+.hero-banner {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  color: white;
+  padding: 3rem 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.hero-banner h1 {
+  color: white;
+  border-bottom: none;
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-banner .subtitle {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  margin-bottom: 0.3rem;
+}
+
+.hero-banner .tagline {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+/* --- Day Header --- */
+.day-header {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  color: white;
+  padding: 2rem 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.day-header h1 {
+  color: white;
+  border-bottom: none;
+  margin-bottom: 0.3rem;
+}
+
+.day-header .day-subtitle {
+  font-size: 1.15rem;
+  opacity: 0.9;
+}
+
+.day-header .day-time {
+  font-size: 0.95rem;
+  opacity: 0.75;
+  margin-top: 0.5rem;
+}
+
+/* --- Activity Sections --- */
+.activity {
+  background: var(--activity-bg);
+  border-left: 4px solid var(--activity-border);
+  border-radius: 0 8px 8px 0;
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.activity h3 {
+  color: var(--accent);
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+.activity .activity-meta {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+/* --- Quick Links Grid --- */
+.quick-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.quick-link-card {
+  background: white;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 1.2rem;
+  text-align: center;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  color: var(--text-dark);
+}
+
+.quick-link-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.15);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.quick-link-card .card-day {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.quick-link-card .card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-top: 0.3rem;
+}
+
+/* --- Info Box --- */
+.info-box {
+  background: var(--accent-light);
+  border: 1px solid #b8d4f0;
+  border-radius: 8px;
+  padding: 1.2rem 1.5rem;
+  margin: 1.5rem 0;
+}
+
+/* --- Checklist --- */
+.checklist ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.checklist ul li {
+  padding: 0.4rem 0 0.4rem 2rem;
+  position: relative;
+}
+
+.checklist ul li::before {
+  content: "☐";
+  position: absolute;
+  left: 0;
+  font-size: 1.1rem;
+}
+
+/* --- Tables --- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+}
+
+th {
+  background: var(--primary);
+  color: white;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+td {
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+tr:nth-child(even) {
+  background: var(--bg-light);
+}
+
+tr:hover {
+  background: var(--accent-light);
+}
+
+/* --- Scenario Cards (Day 4) --- */
+.scenario-card {
+  background: white;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.scenario-card h4 {
+  color: var(--accent);
+  margin-top: 0;
+}
+
+/* --- Ethical Dilemma Cards (Day 5) --- */
+.dilemma-card {
+  background: #fff8f0;
+  border-left: 4px solid #e67e22;
+  border-radius: 0 8px 8px 0;
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+
+.dilemma-card h4 {
+  color: #d35400;
+  margin-top: 0;
+}
+
+/* --- Challenge Exercise Sections --- */
+.challenge-exercise {
+  background: #fffbf0;
+  border-left: 4px solid #d4a017;
+  border-radius: 0 8px 8px 0;
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.challenge-exercise h3 {
+  color: #b8860b;
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+.challenge-meta {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  font-style: italic;
+  padding: 0.4rem 0.8rem;
+  background: rgba(212, 160, 23, 0.08);
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.bonus-challenges-section {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 2px dashed #d4a017;
+}
+
+.bonus-challenges-section h2 {
+  color: #b8860b;
+  border-bottom: 1px solid #e8d48b;
+}
+
+.challenge-card {
+  background: #fffbf0;
+  border: 1px solid #e8d48b;
+  border-left: 4px solid #d4a017;
+  border-radius: 0 8px 8px 0;
+  padding: 1.2rem 1.5rem;
+  margin: 1rem 0;
+}
+
+.challenge-card h4 {
+  color: #b8860b;
+  margin-top: 0;
+}
+
+.challenge-card .challenge-meta {
+  margin-bottom: 0.5rem;
+}
+
+/* --- Code Blocks --- */
+pre {
+  background: #f5f5f5;
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+code {
+  font-size: 0.9em;
+}
+
+/* --- Callout Overrides --- */
+.callout {
+  border-radius: 8px;
+  margin: 1.5rem 0;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .hero-banner {
+    padding: 2rem 1rem;
+  }
+
+  .hero-banner h1 {
+    font-size: 1.8rem;
+  }
+
+  .quick-links {
+    grid-template-columns: 1fr;
+  }
+
+  .activity {
+    padding: 1rem;
+  }
+
+  .challenge-exercise,
+  .challenge-card {
+    padding: 1rem;
+  }
+}
+
+/* --- Print Styles --- */
+@media print {
+  .navbar, .nav-footer, .sidebar {
+    display: none !important;
+  }
+
+  body {
+    font-size: 11pt;
+    line-height: 1.5;
+    color: black;
+  }
+
+  h1, h2, h3 {
+    color: black;
+    page-break-after: avoid;
+  }
+
+  .hero-banner, .day-header {
+    background: white !important;
+    color: black !important;
+    border: 2px solid black;
+  }
+
+  .hero-banner h1, .day-header h1 {
+    color: black !important;
+  }
+
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #555;
+  }
+
+  .activity {
+    border-left: 3px solid black;
+    background: white;
+  }
+
+  .challenge-exercise,
+  .challenge-card {
+    border-left: 3px solid #999;
+    background: white;
+  }
+
+  .bonus-challenges-section {
+    border-top: 2px dashed #999;
+  }
+
+  table {
+    page-break-inside: avoid;
+  }
+
+  th {
+    background: #eee !important;
+    color: black !important;
+  }
+}

@@ -1,0 +1,401 @@
+[
+  {
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "Resources",
+    "section": "",
+    "text": "Guides, references, and where to go deeper after the workshops"
+  },
+  {
+    "objectID": "resources.html#drexel-tools-access",
+    "href": "resources.html#drexel-tools-access",
+    "title": "Resources",
+    "section": "Drexel Tools & Access",
+    "text": "Drexel Tools & Access\n\nAI at Drexel — the university’s central AI hub (start here).\nAI Tools + data classification — which tools are approved for which data (authoritative).\nChatGPT Edu — university-licensed; primary tool for the workshops. Request access. See also Tools & Access.\nMicrosoft Copilot — sign in with your Drexel M365 account; use protected mode.\nZoom AI Companion — included with Drexel Zoom; meeting summaries, recaps, and action items.\nAdobe Creative Cloud Pro — Acrobat AI Assistant (PDFs) and Firefly (graphics); approved for moderate-risk data. Featured in Workshop 4."
+  },
+  {
+    "objectID": "resources.html#drexel-policy-training",
+    "href": "resources.html#drexel-policy-training",
+    "title": "Resources",
+    "section": "Drexel Policy & Training",
+    "text": "Drexel Policy & Training\n\nGuidance and Policies — university policy and best practices.\nGuidance for Staff — staff-specific guidance.\nAI Trainings — Drexel workshops and professional development.\nStanding Committee on AI (SCAI) — questions about AI at Drexel.\nFor research data: consult your IRB and any data use agreements before entering data into any AI tool."
+  },
+  {
+    "objectID": "resources.html#quick-reference",
+    "href": "resources.html#quick-reference",
+    "title": "Resources",
+    "section": "Quick Reference",
+    "text": "Quick Reference\n\nPTCF prompt recipe — Persona, Task, Context, Format. Name who the AI should be, what to do, the background it needs, and the shape of the output.\nData self-check — Is the data regulated? Is the tool approved for it? Could I use a de-identified or synthetic version? If any answer gives you pause, stop and check.\nVerify before it counts — AI can state wrong facts and invent citations. Check anything that goes into a real document or decision."
+  },
+  {
+    "objectID": "resources.html#good-first-uses-by-role",
+    "href": "resources.html#good-first-uses-by-role",
+    "title": "Resources",
+    "section": "Good First Uses by Role",
+    "text": "Good First Uses by Role\n\n\n\n\n\n\n\nIf you…\nTry AI for…\n\n\n\n\nManage admin, schedules, grants\nDrafting emails and reminders, summarizing long threads, cleaning up notes into agendas, reformatting documents\n\n\nCoordinate research\nMeeting recaps with action items, drafting project updates, summarizing protocols and reports, first-draft plans\n\n\nTeach and run a lab / faculty\nDrafting and revising materials, summarizing literature on public topics, generating practice questions, reformatting slides"
+  },
+  {
+    "objectID": "resources.html#public-health-ai-further-learning",
+    "href": "resources.html#public-health-ai-further-learning",
+    "title": "Resources",
+    "section": "Public Health & AI — Further Learning",
+    "text": "Public Health & AI — Further Learning\n\nASPPH — AI for Public Health initiative — task force and framework on responsible, ethical AI use in public health research, practice, and education.\nFrontiers in Digital Health (2025) — “Embedding AI literacy in public health education” (the five-pillar framework).\nMollick, E. (2024). Co-Intelligence: Living and Working with AI. — accessible introduction to working with AI tools."
+  },
+  {
+    "objectID": "resources.html#research-staff-sessions-coming-later-in-summer",
+    "href": "resources.html#research-staff-sessions-coming-later-in-summer",
+    "title": "Resources",
+    "section": "Research-Staff Sessions (Coming Later in Summer)",
+    "text": "Research-Staff Sessions (Coming Later in Summer)\nFor research staff who code and analyze data, specialized sessions will cover:\n\nAI for data cleaning and reshaping\nWriting and debugging code in Stata, R, and Python\nExplaining and documenting analyses\nReproducibility and good practice when AI writes code\n\nWatch for announcements, or email daq26@drexel.edu to suggest topics."
+  },
+  {
+    "objectID": "resources.html#suggest-a-topic",
+    "href": "resources.html#suggest-a-topic",
+    "title": "Resources",
+    "section": "Suggest a Topic",
+    "text": "Suggest a Topic\nThese workshops will repeat and expand. If there’s a tool, task, or workflow you’d like covered, email daq26@drexel.edu."
+  },
+  {
+    "objectID": "workshop4.html",
+    "href": "workshop4.html",
+    "title": "Workshop 4: AI for Documents & Visuals (Adobe)",
+    "section": "",
+    "text": "Adobe Creative Cloud Pro — Acrobat AI Assistant for PDFs and Firefly for communication graphics\n\n\nUpcoming — Fall 2026 | Date TBD | 1 hour | Bring a laptop"
+  },
+  {
+    "objectID": "workshop4.html#what-youll-leave-with",
+    "href": "workshop4.html#what-youll-leave-with",
+    "title": "Workshop 4: AI for Documents & Visuals (Adobe)",
+    "section": "What You’ll Leave With",
+    "text": "What You’ll Leave With\nBy the end of this hour, you will be able to:\n\nUse Acrobat AI Assistant to summarize, query, and pull from long PDFs\nUse Firefly / Adobe Express to make a clean communication graphic without design software experience\nKnow what the moderate-risk data approval does and doesn’t allow\nDecide when an AI-generated visual is appropriate for published public health materials"
+  },
+  {
+    "objectID": "workshop4.html#run-of-show",
+    "href": "workshop4.html#run-of-show",
+    "title": "Workshop 4: AI for Documents & Visuals (Adobe)",
+    "section": "Run of Show",
+    "text": "Run of Show\n\n\n\n\n\n\n\nTime\nSegment\n\n\n\n\n0:00–0:10\nOverview: Adobe at Drexel, the two AI tools, data and “commercially safe” generation\n\n\n0:10–0:32\nActivity 1: Acrobat AI Assistant on a real PDF\n\n\n0:32–0:55\nActivity 2: A communication graphic in Firefly / Express\n\n\n0:55–1:00\nWrap-up and where visuals fit your work"
+  },
+  {
+    "objectID": "workshop4.html#overview-10-min",
+    "href": "workshop4.html#overview-10-min",
+    "title": "Workshop 4: AI for Documents & Visuals (Adobe)",
+    "section": "Overview (10 min)",
+    "text": "Overview (10 min)\nWhat you have. Drexel provides Adobe Creative Cloud Pro with an AI assistant and 1,000 generative credits per month. Two AI capabilities matter most for this audience:\n\nAcrobat AI Assistant — works inside a PDF to summarize it, answer questions about it, and generate text (a summary, an email, key points) with links back to the source passages.\nFirefly / Adobe Express — generative image tools (text-to-image, generative fill and expand) and templates for flyers, infographics, social posts, and slide visuals. Generative actions draw down your monthly credits.\n\nData rule for these tools. Adobe’s tools are approved for moderate-risk data at Drexel. That covers internal and restricted material, but not high-risk regulated data (PHI, FERPA records, identifiable human-subjects data). Confirm the current classification on Drexel’s AI Tools page before putting real documents into Acrobat AI Assistant.\n“Commercially safe” generation. Adobe trains Firefly on licensed and public-domain content and positions its output as commercially safe to use. That matters when a graphic ends up in a published report, grant, or public campaign. Still review any generated image for accuracy and appropriateness—generative tools can produce misleading or off-tone visuals.\n\n\n\n\n\n\nTipThe Split\n\n\n\nReach for Acrobat AI Assistant when the work is trapped in a PDF. Reach for Firefly / Express when you need a visual and don’t have a designer. Both are about getting a usable draft fast, then applying your judgment."
+  },
+  {
+    "objectID": "workshop4.html#activity-1-acrobat-ai-assistant-on-a-real-pdf",
+    "href": "workshop4.html#activity-1-acrobat-ai-assistant-on-a-real-pdf",
+    "title": "Workshop 4: AI for Documents & Visuals (Adobe)",
+    "section": "Activity 1: Acrobat AI Assistant on a Real PDF",
+    "text": "Activity 1: Acrobat AI Assistant on a Real PDF\n\nActivity 1: Acrobat AI Assistant on a Real PDF\n\nDuration: ~22 minutes | Format: Individual, hands-on. Use a non-sensitive (or moderate-risk, approved) PDF.\n\nGoal: Turn a long document into something usable in minutes.\n\nInstructions\n\nOpen a long PDF in Acrobat — a public report, an article, a grant guideline, or de-identified internal document. No high-risk data (no PHI, no FERPA records).\nOpen AI Assistant and try each:\n\nSummarize: “Give me a one-paragraph summary and then 5 key takeaways.”\nAsk: Ask a specific question the document should answer (“What is the eligibility criteria?” / “What does it say about data sharing?”). Notice it cites the passage.\nExtract: “List every deadline and requirement mentioned, as a table.”\nRepurpose: “Draft a 4-sentence email to my team summarizing what they need to know from this.”\n\nVerify one answer against the source passage it cites. Confirm it didn’t miss or misstate anything.\n\n\n\nReflection\n\nHow long would that summary or extraction have taken by hand?\nWhere did it cite cleanly, and where would you double-check before trusting it?"
+  },
+  {
+    "objectID": "workshop4.html#activity-2-a-communication-graphic-in-firefly-express",
+    "href": "workshop4.html#activity-2-a-communication-graphic-in-firefly-express",
+    "title": "Workshop 4: AI for Documents & Visuals (Adobe)",
+    "section": "Activity 2: A Communication Graphic in Firefly / Express",
+    "text": "Activity 2: A Communication Graphic in Firefly / Express\n\nActivity 2: A Communication Graphic in Firefly / Express\n\nDuration: ~23 minutes | Format: Individual, hands-on\n\nGoal: Produce a clean, shareable graphic for a real communication need.\n\nInstructions\n\nPick a real need: a flyer for an event, a social post, a simple infographic, or a title visual for a slide or report.\nIn Adobe Express, start from a template that fits the format (social, flyer, presentation).\nUse generative tools where they help:\n\nText-to-image for a background or illustration (“a diverse group of community members at an outdoor health fair, warm daylight, flat illustration style”).\nGenerative fill / expand to adjust an existing image to the frame.\nExpress’s text and layout tools to add your headline and key message.\n\nKeep it readable: one clear message, legible text, accessible color contrast. Generative AI fills space; the communication discipline is still yours.\n\n\n\nReflection\n\nIs this good enough to use, or a starting point for a designer?\nDid any generated image misrepresent the community or topic? (A real risk worth naming.)\n\n\n\n\n\n\n\n\n\nWarningCheck Before You Publish\n\n\n\nGenerated images can include inaccurate or stereotyped depictions. For anything public-facing—especially representing communities you serve—review carefully and get a second set of eyes. Credit/disclose AI-generated visuals per Drexel and your unit’s norms."
+  },
+  {
+    "objectID": "workshop4.html#wrap-up-5-min",
+    "href": "workshop4.html#wrap-up-5-min",
+    "title": "Workshop 4: AI for Documents & Visuals (Adobe)",
+    "section": "Wrap-Up (5 min)",
+    "text": "Wrap-Up (5 min)\n\nAcrobat AI Assistant turns long PDFs into summaries, answers, and drafts—with sources to verify.\nFirefly / Express makes communication graphics fast, using your monthly generative credits.\nBoth are cleared for moderate-risk data, not high-risk regulated data.\nThe tools produce drafts; accuracy, tone, and representation are your call."
+  },
+  {
+    "objectID": "workshop4.html#related",
+    "href": "workshop4.html#related",
+    "title": "Workshop 4: AI for Documents & Visuals (Adobe)",
+    "section": "Related",
+    "text": "Related\n\nTools & Access — full data rules and the Adobe section\nWorkshop 2 — the document-summarizing patterns that pair with Acrobat AI Assistant"
+  },
+  {
+    "objectID": "workshop3.html",
+    "href": "workshop3.html",
+    "title": "Workshop 3: Collaboration on Projects",
+    "section": "",
+    "text": "Use AI for meetings, project planning, shared prompts, and team documents\n\n\nTuesday, July 14, 2026 | 1:00–2:00 PM | Bring a laptop; come with a team or project in mind"
+  },
+  {
+    "objectID": "workshop3.html#what-youll-leave-with",
+    "href": "workshop3.html#what-youll-leave-with",
+    "title": "Workshop 3: Collaboration on Projects",
+    "section": "What You’ll Leave With",
+    "text": "What You’ll Leave With\nBy the end of this hour, you will be able to:\n\nTurn meeting notes into recaps, decisions, and action items the team can use\nUse AI to draft and pressure-test a project plan\nBuild a custom GPT in ChatGPT Edu that your team can reuse\nStart a shared prompt library so the whole group benefits from what works"
+  },
+  {
+    "objectID": "workshop3.html#run-of-show",
+    "href": "workshop3.html#run-of-show",
+    "title": "Workshop 3: Collaboration on Projects",
+    "section": "Run of Show",
+    "text": "Run of Show\n\n\n\nTime\nSegment\n\n\n\n\n0:00–0:10\nOverview: from solo use to team use\n\n\n0:10–0:28\nActivity 1: Meetings and project planning\n\n\n0:28–0:53\nActivity 2: Build a custom GPT + shared prompt library\n\n\n0:53–1:00\nWrap-up and a team commitment"
+  },
+  {
+    "objectID": "workshop3.html#overview-10-min",
+    "href": "workshop3.html#overview-10-min",
+    "title": "Workshop 3: Collaboration on Projects",
+    "section": "Overview (10 min)",
+    "text": "Overview (10 min)\nThe first two workshops were about you and a tool. This one is about your team. AI helps most on shared work when it does three things: captures what happened (meeting recaps, decisions), structures what’s next (plans, task lists), and standardizes how the group works (shared prompts and custom assistants so everyone gets the same quality, not just the early adopters).\nTwo ideas carry the session:\n\nCustom GPTs (in ChatGPT Edu) are reusable assistants you set up once with your own instructions and reference files, then share with colleagues—so a good prompt becomes a team tool.\nA shared prompt library is just a running document of prompts that worked. It’s the cheapest, highest-return habit a team can start.\n\nFor meetings specifically, Zoom AI Companion (included with Drexel Zoom) can generate the summary and action items for you automatically—a natural starting point for the recap work below. Same data rules apply across all tools: ChatGPT Edu, Copilot, and Zoom AI Companion for Drexel work; nothing regulated unless approved. See Tools & Access."
+  },
+  {
+    "objectID": "workshop3.html#activity-1-meetings-and-project-planning",
+    "href": "workshop3.html#activity-1-meetings-and-project-planning",
+    "title": "Workshop 3: Collaboration on Projects",
+    "section": "Activity 1: Meetings and Project Planning",
+    "text": "Activity 1: Meetings and Project Planning\n\nActivity 1: Meetings and Project Planning\n\nDuration: ~18 minutes | Format: Hands-on, individual or in pairs\n\nGoal: Use AI to turn raw inputs into the artifacts a project actually runs on. Use non-sensitive content.\n\nPart A — From Notes to a Usable Recap (~8 min)\nTip: if your meeting was on Zoom, Zoom AI Companion can produce a summary and action items automatically—start from that instead of raw notes.\n\nPaste messy meeting notes (real but non-sensitive, or use the sample below) into ChatGPT Edu.\nUse this prompt:\n\nTurn these notes into three sections: (1) Summary in 3 bullets, (2) Decisions made, (3) Action items as a table with owner and due date. Flag anything that’s unclear or unassigned.\n\nNotice it surfaces the gaps—unassigned tasks, vague deadlines—that are easy to miss live.\n\nSample notes if you don’t have your own: “talked about the survey rollout, Maria will check the IRB amendment, need final instrument by end of month, budget tight, someone should ask about the no-cost extension, next meeting in 2 weeks, recruitment slower than expected.”\n\n\nPart B — Draft and Stress-Test a Plan (~10 min)\n\nDescribe a project in a sentence or two and ask:\n\nDraft a simple project plan for this with phases, key tasks, and a rough timeline. Then list the top 5 risks and what would reduce each one.\n\nPush back: “What am I missing?” or “What would make this slip?” Use it to find blind spots, not to write the final plan.\n\n\n\nReflection\n\nDid the recap catch anything you’d have forgotten?\nWhere was the AI’s plan generic, and where did it add something useful?"
+  },
+  {
+    "objectID": "workshop3.html#activity-2-build-a-custom-gpt-shared-prompt-library",
+    "href": "workshop3.html#activity-2-build-a-custom-gpt-shared-prompt-library",
+    "title": "Workshop 3: Collaboration on Projects",
+    "section": "Activity 2: Build a Custom GPT + Shared Prompt Library",
+    "text": "Activity 2: Build a Custom GPT + Shared Prompt Library\n\nActivity 2: Build a Custom GPT + Shared Prompt Library\n\nDuration: ~25 minutes | Format: Hands-on; build something your team can reuse\n\nGoal: Create one reusable team tool and start the habit that keeps it going.\n\nPart A — Build a Custom GPT (~15 min)\nIn ChatGPT Edu, create a custom GPT for a task your team repeats. Examples: a “Meeting Recap Assistant,” a “Plain-Language Rewriter,” a “Grant Reminder Drafter,” an “Onboarding Q&A” assistant.\n\nIn ChatGPT Edu, start a new GPT and give it clear instructions—who it is, what it does, the format it should always use, and the tone.\nOptionally add reference files (non-sensitive): a style guide, a template, a list of standard sections.\nTest it with two different inputs. Refine the instructions where it drifts.\nNote how to share it with your team’s workspace.\n\nStarter instruction template:\n\nYou are a [role] for the DSPH [team]. When given [input], always produce [output] in this format: [structure]. Use a [tone] tone. If key information is missing, ask for it before producing the output. Never include sensitive or identifying data.\n\n\n\nPart B — Start a Shared Prompt Library (~10 min)\n\nOpen a shared document (Teams/SharePoint/OneDrive) the team can all reach.\nAdd 2–3 prompts that worked for you, each with: a title, the prompt (with placeholders), and a one-line “use this when…”\nAgree on one norm: where it lives, and that anyone can add to it.\n\nA library entry looks like:\n\nTitle: Monthly project update Prompt: You are a research coordinator. Write a status update for [project] covering Done / In Progress / Needs Attention, under 150 words. Use when: Prepping for the monthly team check-in.\n\n\n\n\n\n\n\n\n\nTipWhy Sharing Beats Solo Use\n\n\n\nWhen one person finds a prompt that works and keeps it to themselves, the team gets one faster worker. When they put it in a shared library or a custom GPT, the team gets a repeatable standard. The second is where the real return is."
+  },
+  {
+    "objectID": "workshop3.html#wrap-up-7-min",
+    "href": "workshop3.html#wrap-up-7-min",
+    "title": "Workshop 3: Collaboration on Projects",
+    "section": "Wrap-Up (7 min)",
+    "text": "Wrap-Up (7 min)\n\nAI helps teams most by capturing meetings, structuring plans, and standardizing how the group works.\nCustom GPTs turn a good prompt into a shared tool.\nA shared prompt library is the easiest high-value habit to start today.\n\nTeam commitment: before you leave, name one thing your team will set up this month—a custom GPT, a prompt library, or an AI-assisted meeting recap habit."
+  },
+  {
+    "objectID": "workshop3.html#where-to-go-next",
+    "href": "workshop3.html#where-to-go-next",
+    "title": "Workshop 3: Collaboration on Projects",
+    "section": "Where to Go Next",
+    "text": "Where to Go Next\nThis series is the shared foundation. Specialized sessions for research staff who code and analyze data are coming later in summer (AI for data cleaning, Stata/R/Python, debugging, and reproducible analysis). The series also repeats in fall.\nSee the Resources page for guides and further learning, and reach out to daq26@drexel.edu with ideas for future topics."
+  },
+  {
+    "objectID": "tools.html",
+    "href": "tools.html",
+    "title": "Tools & Access",
+    "section": "",
+    "text": "Which AI tools to use at DSPH, how to get them, and the data rules that come with each\nThis page is the reference for the tools we use across all three workshops. The short version: use Drexel-licensed tools for Drexel work, and never put regulated data into a consumer tool.\nDrexel’s official hub is AI at Drexel (Office of the Provost). The AI Tools page lists each tool’s availability and the data classification level it’s approved for—treat that page as the authoritative source if anything here and Drexel’s guidance differ."
+  },
+  {
+    "objectID": "tools.html#at-a-glance",
+    "href": "tools.html#at-a-glance",
+    "title": "Tools & Access",
+    "section": "At a Glance",
+    "text": "At a Glance\n\n\n\n\n\n\n\n\n\nTool\nDrexel access\nOK for Drexel data?\nBest for\n\n\n\n\nChatGPT Edu\nUniversity license\nYes — within Drexel policy\nWriting, summarizing, analysis, custom GPTs\n\n\nMicrosoft Copilot\nM365 with Drexel account\nYes — in enterprise/protected mode\nOffice tasks (Word, Excel, Outlook, Teams)\n\n\nZoom AI Companion\nIncluded with Drexel Zoom\nYes — within Drexel policy\nMeeting summaries, recaps, action items\n\n\nAdobe Creative Cloud Pro (Acrobat AI Assistant, Firefly)\nUniversity license\nYes — up to moderate-risk data\nPDF summarizing & Q&A, graphics, infographics\n\n\nClaude\nPI-purchased only\nNo\nPersonal/public tasks only; not Drexel data\n\n\nChatGPT (personal), Gemini, Perplexity\nFree/personal\nNo\nPublic or synthetic info only\n\n\n\n\n\n\n\n\n\nImportantThe One Rule to Remember\n\n\n\nRegulated data — PHI, FERPA-protected student records, identifiable human-subjects data, anything covered by a data use agreement — goes only into a tool explicitly approved for it. When unsure, de-identify or use synthetic data first."
+  },
+  {
+    "objectID": "tools.html#chatgpt-edu-primary-tool",
+    "href": "tools.html#chatgpt-edu-primary-tool",
+    "title": "Tools & Access",
+    "section": "ChatGPT Edu (Primary Tool)",
+    "text": "ChatGPT Edu (Primary Tool)\nChatGPT Edu is the university-licensed version of ChatGPT. It is the default tool for most of what we do in these workshops.\nWhat it gives you\n\nAccess to current OpenAI models in a Drexel-managed workspace\nPrompts and uploaded content are not used to train OpenAI’s models\nHigher message limits than the free tier\nThe ability to build and share custom GPTs (reusable assistants with your own instructions and files)\n\nHow to get access\nChatGPT Edu is available now to Drexel faculty and professional staff (announcement). Request access and read the feature details through the IT service catalog: ChatGPT Edu Features and Access. Review the ChatGPT Terms of Use before you start. Bring any access questions to Workshop 1.\nData rules\nApproved for Drexel data within university policy. Check the AI Tools page for the exact data classification level it’s cleared for. Still avoid entering regulated data (PHI, FERPA records, identifiable research data) unless that specific use has been approved. The license protects your data from model training; it does not override IRB protocols, data use agreements, or HIPAA."
+  },
+  {
+    "objectID": "tools.html#microsoft-copilot-office-workflows",
+    "href": "tools.html#microsoft-copilot-office-workflows",
+    "title": "Tools & Access",
+    "section": "Microsoft Copilot (Office Workflows)",
+    "text": "Microsoft Copilot (Office Workflows)\nCopilot is built into the Microsoft 365 apps you already use. It is strongest when the work lives in Word, Excel, Outlook, Teams, or PowerPoint.\nWhat it gives you\n\nDraft and rewrite in Word; summarize long documents\nSummarize email threads and draft replies in Outlook\nGenerate formulas, summarize, and analyze in Excel\nRecap meetings and action items in Teams\n\nHow to get access\nSign in to Microsoft 365 with your Drexel account. Confirm you are in the protected (“enterprise data protection”) mode — look for the indicator showing your data is protected before using it with university content.\nData rules\nIn protected mode with your Drexel account, prompts and data stay within Drexel’s Microsoft tenant and are not used for training. Confirm the protected-mode indicator is showing. Do not use a personal Microsoft account for Drexel work."
+  },
+  {
+    "objectID": "tools.html#zoom-ai-companion-meetings",
+    "href": "tools.html#zoom-ai-companion-meetings",
+    "title": "Tools & Access",
+    "section": "Zoom AI Companion (Meetings)",
+    "text": "Zoom AI Companion (Meetings)\nZoom AI Companion is built into Drexel’s Zoom and is strongest for the work that happens in and around meetings.\nWhat it gives you\n\nMeeting summaries with key points and next steps, generated automatically\nSmart recordings with highlights and chapters\nCatch-up summaries if you join a meeting late\nIn-meeting questions about what’s been discussed so far\n\nHow to get access\nIt’s included with Drexel’s Zoom license at no extra cost. The meeting host turns it on for a given meeting; account and group settings (managed by Drexel IT) control availability. Participants are notified when it’s active.\nData rules\nZoom states it does not use your meeting audio, video, chat, or shared content to train Zoom’s or third-party AI models. As with any tool, follow Drexel policy: be mindful of recording and summarizing meetings that involve regulated or confidential information, and let participants know when AI Companion is on. Approved for Drexel use within policy."
+  },
+  {
+    "objectID": "tools.html#adobe-creative-cloud-pro-documents-visuals",
+    "href": "tools.html#adobe-creative-cloud-pro-documents-visuals",
+    "title": "Tools & Access",
+    "section": "Adobe Creative Cloud Pro (Documents & Visuals)",
+    "text": "Adobe Creative Cloud Pro (Documents & Visuals)\nDrexel provides Adobe Creative Cloud Pro with an AI assistant and 1,000 generative credits per month. Two AI features are most useful here.\nWhat it gives you\n\nAcrobat AI Assistant — summarize long PDFs, ask questions about them, and draft text (summaries, emails, key points) with citations back to the source passages.\nFirefly / Adobe Express — generative image tools (text-to-image, generative fill and expand) and templates for flyers, infographics, social posts, and slide visuals. Generative actions use your monthly credits. Adobe trains Firefly on licensed and public-domain content and positions output as commercially safe.\n\nHow to get access\nIncluded with your Drexel Adobe Creative Cloud Pro license. Sign in with your Drexel account.\nData rules\nApproved for data up to moderate risk — internal and restricted material, but not high-risk regulated data (PHI, FERPA records, identifiable human-subjects data). Confirm the current classification on the AI Tools page before putting real documents into Acrobat AI Assistant. Review generated images before publishing—they can be inaccurate or misrepresent people and communities.\nThis tool is the focus of Workshop 4."
+  },
+  {
+    "objectID": "tools.html#claude-pi-purchased-no-drexel-data",
+    "href": "tools.html#claude-pi-purchased-no-drexel-data",
+    "title": "Tools & Access",
+    "section": "Claude (PI-Purchased, No Drexel Data)",
+    "text": "Claude (PI-Purchased, No Drexel Data)\nClaude (by Anthropic) is a capable assistant that some find strong for long-form writing and reasoning. Drexel does not provide a Claude license, and Claude is not approved for Drexel data.\n\nIndividual PIs may purchase their own Claude/Anthropic subscription with grant or personal funds.\nEven with a paid subscription, do not enter Drexel data — no PHI, no FERPA records, no identifiable research data, no internal documents covered by an agreement.\nUse it only with public information or fully synthetic/de-identified material.\n\nWe mention Claude so you know the option exists and know its limits. For Drexel work, reach for ChatGPT Edu or Copilot."
+  },
+  {
+    "objectID": "tools.html#other-consumer-tools",
+    "href": "tools.html#other-consumer-tools",
+    "title": "Tools & Access",
+    "section": "Other Consumer Tools",
+    "text": "Other Consumer Tools\nFree ChatGPT, Gemini, Perplexity, and similar tools are fine for public, non-sensitive tasks (learning, brainstorming on public topics, drafting from non-confidential material). They are not approved for Drexel data. Assume anything you type may be retained or used for training unless a Drexel agreement says otherwise."
+  },
+  {
+    "objectID": "tools.html#drexel-policy-support",
+    "href": "tools.html#drexel-policy-support",
+    "title": "Tools & Access",
+    "section": "Drexel Policy & Support",
+    "text": "Drexel Policy & Support\n\nAI at Drexel — the Provost’s central hub for tools, guidance, and policy\nAI Tools — availability and data classification level for each approved tool (authoritative)\nGuidance and Policies — university policy and best practices\nGuidance for Staff — staff-specific guidance\nAI Trainings — workshops, professional development, and support\nStanding Committee on AI (SCAI) — questions about AI at Drexel\nFor research data governance and IRB questions, consult your IRB and any applicable data use agreements before using any AI tool.\n\n\n\n\n\n\n\nTipQuick Self-Check Before You Paste\n\n\n\nAsk yourself three questions: (1) Is this data regulated or covered by an agreement? (2) Is the tool I’m using approved for that data? (3) Could I use a de-identified or synthetic version instead? If any answer gives you pause, stop and check."
+  },
+  {
+    "objectID": "workshop2.html",
+    "href": "workshop2.html",
+    "title": "Workshop 2: Workflow Enhancement",
+    "section": "",
+    "text": "Use ChatGPT Edu and Microsoft Copilot to speed up the work you already do\n\n\nTuesday, July 7, 2026 | 1:00–2:00 PM | Bring a laptop and a real (non-sensitive) task"
+  },
+  {
+    "objectID": "workshop2.html#what-youll-leave-with",
+    "href": "workshop2.html#what-youll-leave-with",
+    "title": "Workshop 2: Workflow Enhancement",
+    "section": "What You’ll Leave With",
+    "text": "What You’ll Leave With\nBy the end of this hour, you will be able to:\n\nSpot which of your recurring tasks are good candidates for AI help\nUse Microsoft Copilot inside Word, Outlook, and Excel for everyday tasks\nUse ChatGPT Edu to summarize, rewrite, and analyze faster\nBuild a small “prompt recipe” you can reuse"
+  },
+  {
+    "objectID": "workshop2.html#run-of-show",
+    "href": "workshop2.html#run-of-show",
+    "title": "Workshop 2: Workflow Enhancement",
+    "section": "Run of Show",
+    "text": "Run of Show\n\n\n\n\n\n\n\nTime\nSegment\n\n\n\n\n0:00–0:10\nOverview: where AI fits in a workflow; Copilot vs. ChatGPT Edu\n\n\n0:10–0:30\nActivity 1: Copilot in Microsoft 365\n\n\n0:30–0:53\nActivity 2: ChatGPT Edu for your real task\n\n\n0:53–1:00\nWrap-up and save your prompt recipe"
+  },
+  {
+    "objectID": "workshop2.html#overview-10-min",
+    "href": "workshop2.html#overview-10-min",
+    "title": "Workshop 2: Workflow Enhancement",
+    "section": "Overview (10 min)",
+    "text": "Overview (10 min)\nWhere AI fits. The biggest time savings come from the repetitive middle of a task—the first draft, the summary, the reformat, the “make this clearer.” AI handles that draft; you bring the judgment and the final word.\nCopilot vs. ChatGPT Edu—when to use which.\n\nCopilot shines when the work is already in a Microsoft file: a Word doc to rewrite, an Outlook thread to summarize, an Excel sheet to analyze. It sees the document you’re in.\nChatGPT Edu shines for open-ended drafting, summarizing pasted text, and building reusable assistants. You bring the content to it.\n\nBoth are approved for Drexel data within policy. Confirm Copilot is in protected mode before using it with university content. See Tools & Access.\n\n\n\n\n\n\nTipFind Your Candidates\n\n\n\nA task is a good AI candidate if it’s (1) text-heavy, (2) something you do repeatedly, and (3) low-stakes enough that a draft-plus-review is fine. Think: status updates, meeting recaps, first drafts, summaries, reformatting."
+  },
+  {
+    "objectID": "workshop2.html#activity-1-copilot-in-microsoft-365",
+    "href": "workshop2.html#activity-1-copilot-in-microsoft-365",
+    "title": "Workshop 2: Workflow Enhancement",
+    "section": "Activity 1: Copilot in Microsoft 365",
+    "text": "Activity 1: Copilot in Microsoft 365\n\nActivity 1: Copilot in Microsoft 365\n\nDuration: ~20 minutes | Format: Hands-on, choose by your role\n\nGoal: Use Copilot where your work already lives. Pick the track that fits you. Use non-sensitive content only.\n\nTrack A — Word (drafting & rewriting)\n\nOpen a Word document with a few paragraphs of real (non-sensitive) text.\nUse Copilot to summarize it into key points.\nAsk Copilot to rewrite a paragraph for a specific audience (“rewrite for a non-technical reader”).\nAsk it to draft a new section from a one-line instruction.\n\n\n\nTrack B — Outlook (email triage)\n\nOpen a long email thread.\nAsk Copilot to summarize the thread and list any decisions or action items.\nAsk it to draft a reply with a tone you specify (e.g., “concise and friendly, confirm the meeting time”).\nEdit and send (or save as draft).\n\n\n\nTrack C — Excel (quick analysis)\n\nOpen a spreadsheet with non-sensitive tabular data (or use sample data).\nAsk Copilot to summarize what’s in the data.\nAsk for a formula in plain language (“flag rows where the amount is over 5000”).\nAsk it to suggest a chart or surface a trend.\n\n\n\nReflection\n\nDid Copilot save time versus doing it by hand? Where did you still need to correct it?\nWhich of your weekly tasks could this replace the first-draft step for?"
+  },
+  {
+    "objectID": "workshop2.html#activity-2-chatgpt-edu-for-your-real-task",
+    "href": "workshop2.html#activity-2-chatgpt-edu-for-your-real-task",
+    "title": "Workshop 2: Workflow Enhancement",
+    "section": "Activity 2: ChatGPT Edu for Your Real Task",
+    "text": "Activity 2: ChatGPT Edu for Your Real Task\n\nActivity 2: ChatGPT Edu for Your Real Task\n\nDuration: ~23 minutes | Format: Individual, bring your own task\n\nGoal: Run one task you actually need to do this week, start to finish.\n\nInstructions\n\nPick a real, non-sensitive task: a report section, a summary of a long document, a set of meeting notes to clean up, a draft announcement, a literature blurb on a public topic.\nWrite a PTCF prompt (Persona, Task, Context, Format—from Workshop 1). Be specific about the format you want.\nRun it. Then iterate: shorten, change tone, add a section, ask for a table. Push it 2–3 rounds until it’s close to usable.\nDo the final edit yourself. Note what you changed—that’s the part that needs your expertise.\n\n\n\nTwo Patterns Worth Knowing\nSummarize-then-act. Paste a long document and ask: “Summarize the key points, then draft a 3-sentence email I can send to my team about what they need to do.” One step gets you from raw material to a usable product.\nMake-it-a-table. For anything with structure—options, pros and cons, a comparison, a schedule—add: “Put this in a table.” It’s faster to scan and easier to drop into a doc.\n\n\nBuild a Reusable Recipe\nOnce a prompt works, save it. Strip out the specifics and leave placeholders:\n\nYou are a [role]. [Task]. Context: [details]. Format: [structure, length, tone].\n\nKeep these in a running note. Next week you fill in the blanks instead of starting over.\n\n\n\n\n\n\n\n\nWarningVerify Before It Counts\n\n\n\nAI can invent facts, citations, and numbers. For anything that goes into a real document or decision, check it against the source. Never paste regulated data into any tool that isn’t approved for it."
+  },
+  {
+    "objectID": "workshop2.html#wrap-up-7-min",
+    "href": "workshop2.html#wrap-up-7-min",
+    "title": "Workshop 2: Workflow Enhancement",
+    "section": "Wrap-Up (7 min)",
+    "text": "Wrap-Up (7 min)\n\nCopilot for work inside Office files; ChatGPT Edu for open drafting and reusable assistants.\nThe win is the first draft and the summary—you keep the judgment.\nSave the prompts that work as reusable recipes.\n\nTry this before Workshop 3: save two prompt recipes you’d actually reuse. We’ll turn shared recipes into team tools next session."
+  },
+  {
+    "objectID": "workshop2.html#looking-ahead",
+    "href": "workshop2.html#looking-ahead",
+    "title": "Workshop 2: Workflow Enhancement",
+    "section": "Looking Ahead",
+    "text": "Looking Ahead\nWorkshop 3: Collaboration on Projects — moving from solo use to team use: AI for meeting notes and follow-ups, project planning, shared prompt libraries, custom GPTs, and drafting documents together."
+  },
+  {
+    "objectID": "workshop1.html",
+    "href": "workshop1.html",
+    "title": "Workshop 1: Foundations & Capabilities",
+    "section": "",
+    "text": "What generative AI is, which Drexel tools to use, and how to prompt for useful results\n\n\nMonday, June 29, 2026 | 1:00–2:00 PM | Bring a laptop"
+  },
+  {
+    "objectID": "workshop1.html#what-youll-leave-with",
+    "href": "workshop1.html#what-youll-leave-with",
+    "title": "Workshop 1: Foundations & Capabilities",
+    "section": "What You’ll Leave With",
+    "text": "What You’ll Leave With\nBy the end of this hour, you will be able to:\n\nExplain in plain terms what a large language model does—and what it doesn’t\nChoose the right Drexel-approved tool for a task and know the data rules\nSign in to ChatGPT Edu and run your first useful prompts\nUse a simple framework (PTCF) to get noticeably better outputs"
+  },
+  {
+    "objectID": "workshop1.html#run-of-show",
+    "href": "workshop1.html#run-of-show",
+    "title": "Workshop 1: Foundations & Capabilities",
+    "section": "Run of Show",
+    "text": "Run of Show\n\n\n\n\n\n\n\nTime\nSegment\n\n\n\n\n0:00–0:12\nOverview: what AI can and can’t do; the Drexel tools and data rules\n\n\n0:12–0:32\nActivity 1: First prompts in ChatGPT Edu\n\n\n0:32–0:55\nActivity 2: Better prompts with PTCF\n\n\n0:55–1:00\nWrap-up and what to try this week"
+  },
+  {
+    "objectID": "workshop1.html#overview-12-min",
+    "href": "workshop1.html#overview-12-min",
+    "title": "Workshop 1: Foundations & Capabilities",
+    "section": "Overview (12 min)",
+    "text": "Overview (12 min)\nWhat generative AI is. Tools like ChatGPT and Copilot are large language models—they predict likely text based on patterns learned from huge amounts of writing. They are very good at drafting, summarizing, rewriting, explaining, and brainstorming. They do not “know” facts the way a database does, and they can state wrong things confidently (a “hallucination”). You stay in the loop: AI drafts, you verify and decide.\nWhich tool, and the data rule. For Drexel work, use ChatGPT Edu (approved for university data, doesn’t train on your inputs) or Microsoft Copilot in protected mode for Office tasks. Claude and consumer tools are not approved for Drexel data. Never paste PHI, student records, or identifiable research data into a tool unless it’s approved for that use. Full details on the Tools & Access page.\nGood first uses at DSPH. Drafting and tightening emails, summarizing long documents and reports, turning notes into clean prose, explaining unfamiliar terms, brainstorming options, and reformatting content. We start there.\n\n\n\n\n\n\nTipThe Mental Model\n\n\n\nTreat AI like a fast, eager assistant who is widely read but sometimes wrong and never offended by edits. You give clear direction, it produces a draft, and you check the work before it counts."
+  },
+  {
+    "objectID": "workshop1.html#activity-1-first-prompts-in-chatgpt-edu",
+    "href": "workshop1.html#activity-1-first-prompts-in-chatgpt-edu",
+    "title": "Workshop 1: Foundations & Capabilities",
+    "section": "Activity 1: First Prompts in ChatGPT Edu",
+    "text": "Activity 1: First Prompts in ChatGPT Edu\n\nActivity 1: First Prompts in ChatGPT Edu\n\nDuration: ~20 minutes | Format: Individual, hands-on\n\nGoal: Get signed in and feel what the tool does well by running real tasks.\n\nInstructions\n\nSign in to ChatGPT Edu with your Drexel account.\nRun each of these prompts and look at how it responds. Use public or made-up details only—no sensitive data.\n\nPrompt A — Summarize\n\nSummarize the following text in 5 bullet points for a busy colleague, then give me a one-sentence “bottom line.” [paste a paragraph or two from a public report or article]\n\nPrompt B — Draft\n\nDraft a friendly but professional email reminding committee members that their meeting materials are due Friday at noon. Keep it under 120 words.\n\nPrompt C — Explain\n\nExplain what a “data use agreement” is to a new staff member, in plain language, in about 100 words.\n\nPrompt D — Reformat\n\nTurn these rough notes into a clean numbered agenda with time estimates: [paste a few messy lines of notes]\n\n\nPick the output you found most useful and ask one follow-up: “Make it shorter,” “More formal,” or “Add a sentence about X.” Notice that it remembers the conversation.\n\n\n\nQuick Reflection\n\nWhich task did it handle best? Which needed the most fixing?\nWhere did you have to add information it couldn’t have known?"
+  },
+  {
+    "objectID": "workshop1.html#activity-2-better-prompts-with-ptcf",
+    "href": "workshop1.html#activity-2-better-prompts-with-ptcf",
+    "title": "Workshop 1: Foundations & Capabilities",
+    "section": "Activity 2: Better Prompts with PTCF",
+    "text": "Activity 2: Better Prompts with PTCF\n\nActivity 2: Better Prompts with PTCF\n\nDuration: ~23 minutes | Format: Hands-on + pair share\n\nGoal: See how a little structure turns a generic answer into a usable one.\n\nThe PTCF Framework\n\n\n\n\n\n\n\n\nPart\nAsk yourself\nExample\n\n\n\n\nPersona\nWho should it act as?\n“You are an experienced grants administrator…”\n\n\nTask\nWhat exactly should it do?\n“Draft a 150-word reminder…”\n\n\nContext\nWhat background does it need?\n“…for faculty submitting NIH progress reports, due in two weeks.”\n\n\nFormat\nHow should the output look?\n“Bulleted, warm tone, with a clear deadline line at the top.”\n\n\n\n\n\nTry It\n\nStart with a bare prompt for a task from your own work (use non-sensitive details):\n\nWrite a project update.\n\nNow rewrite it using all four PTCF parts. For example:\n\nPersona: You are a research coordinator. Task: Write a short project status update. Context: For our study team’s monthly check-in; we finished participant recruitment, are behind on data cleaning, and have an IRB renewal due next month. Format: Three short sections—Done, In Progress, Needs Attention—under 150 words total.\n\nCompare the two outputs. Then refine once more: change the tone, the length, or the audience and rerun.\n\n\n\nPair Share\nTurn to a neighbor and trade one prompt each. Read the other person’s output and suggest one part of PTCF they could strengthen.\n\n\n\n\n\n\n\n\nNoteNote on Consistency\n\n\n\nThe same prompt can give slightly different answers each time. For anything you’ll reuse, save the prompt that worked. We’ll build reusable prompts and custom GPTs in Workshop 3."
+  },
+  {
+    "objectID": "workshop1.html#wrap-up-5-min",
+    "href": "workshop1.html#wrap-up-5-min",
+    "title": "Workshop 1: Foundations & Capabilities",
+    "section": "Wrap-Up (5 min)",
+    "text": "Wrap-Up (5 min)\n\nAI is a drafting and thinking assistant; you verify and decide.\nFor Drexel work: ChatGPT Edu or Copilot, and mind the data rules.\nPTCF (Persona, Task, Context, Format) is your default recipe for a good prompt.\n\nTry this before Workshop 2: pick one task you do every week—an email, a summary, a set of notes—and do it once with ChatGPT Edu using PTCF. Bring it to the next session."
+  },
+  {
+    "objectID": "workshop1.html#looking-ahead",
+    "href": "workshop1.html#looking-ahead",
+    "title": "Workshop 1: Foundations & Capabilities",
+    "section": "Looking Ahead",
+    "text": "Looking Ahead\nWorkshop 2: Workflow Enhancement — we move from single prompts to real workflows: drafting and summarizing in Word and Outlook with Copilot, and using ChatGPT Edu to speed up the writing and analysis tasks you do most."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "AI Workshops for DSPH",
+    "section": "",
+    "text": "Dornsife School of Public Health | Drexel University\n\n\nA hands-on workshop series for staff and faculty"
+  },
+  {
+    "objectID": "index.html#welcome",
+    "href": "index.html#welcome",
+    "title": "AI Workshops for DSPH",
+    "section": "Welcome",
+    "text": "Welcome\nThis is a growing series of short, hands-on workshops introducing AI tools for staff and faculty at the Dornsife School of Public Health. Each workshop runs one hour: a brief overview followed by hands-on activities you can complete in the session. Three workshops run this summer, with more—including an Adobe documents-and-visuals session—scheduled for fall.\nThe series is designed for everyone at DSPH—administrative staff, research staff, and faculty. No prior experience with AI is required. The focus is practical: what these tools can do, how to use them to save time on real work, and how to bring them into team projects.\n\n\n\n\n\n\nNoteSeries Details\n\n\n\n\nFormat: One-hour hands-on workshops (three this summer, more in fall), bring a laptop\nAudience: DSPH staff (administrative and research) and faculty\nDates: June 29, July 7, and July 14, 2026 — all 1:00–2:00 PM\nLocation: TBD\nRepeats: Additional sessions later in summer; series repeats in fall\nFacilitator: D. Alex Quistberg, PhD, MPH (daq26@drexel.edu)"
+  },
+  {
+    "objectID": "index.html#the-workshops",
+    "href": "index.html#the-workshops",
+    "title": "AI Workshops for DSPH",
+    "section": "The Workshops",
+    "text": "The Workshops\n\n\n\n#\nWorkshop\nWhat You’ll Do\n\n\n\n\n1\nFoundations & Capabilities\nWhat generative AI is, which Drexel-approved tools to use, and prompting that gets useful results\n\n\n2\nWorkflow Enhancement\nUse ChatGPT Edu and Copilot to speed up writing, email, summarizing, and Office tasks\n\n\n3\nCollaboration on Projects\nUse AI for meetings, project planning, shared prompts, and team documents\n\n\n4\nDocuments & Visuals (Adobe) (Fall)\nAcrobat AI Assistant for PDFs and Firefly for infographics and communication graphics\n\n\n\nThe summer workshops build on each other but each can stand alone—come to all three, or drop into the ones most relevant to your work. Workshop 4 is scheduled for fall."
+  },
+  {
+    "objectID": "index.html#quick-links",
+    "href": "index.html#quick-links",
+    "title": "AI Workshops for DSPH",
+    "section": "Quick Links",
+    "text": "Quick Links\n\n\nWorkshop 1Foundations & Capabilities\n\n\nWorkshop 2Workflow Enhancement\n\n\nWorkshop 3Collaboration on Projects\n\n\nWorkshop 4Documents & Visuals · Fall\n\n\nTools & AccessChatGPT Edu, Copilot, Adobe, more\n\n\nResourcesGuides & Further Learning"
+  },
+  {
+    "objectID": "index.html#who-this-is-for",
+    "href": "index.html#who-this-is-for",
+    "title": "AI Workshops for DSPH",
+    "section": "Who This Is For",
+    "text": "Who This Is For\nThis first series is one general track for the whole school. The activities are chosen to be useful whether you manage grants and schedules, coordinate research, or teach and run a lab.\nResearch staff who do statistical coding and analysis: we will run specialized sessions for you later in the summer (using AI for data cleaning, coding in Stata/R/Python, debugging, and reproducible analysis). The three workshops here are the shared foundation everyone starts from."
+  },
+  {
+    "objectID": "index.html#schedule",
+    "href": "index.html#schedule",
+    "title": "AI Workshops for DSPH",
+    "section": "Schedule",
+    "text": "Schedule\n\n\n\n\n\n\n\n\n\n\nWorkshop\nTopic\nDate\nTime\nLocation\n\n\n\n\n1\nFoundations & Capabilities\nMonday, June 29, 2026\n1:00–2:00 PM\nTBD\n\n\n2\nWorkflow Enhancement\nTuesday, July 7, 2026\n1:00–2:00 PM\nTBD\n\n\n3\nCollaboration on Projects\nTuesday, July 14, 2026\n1:00–2:00 PM\nTBD\n\n\n4\nDocuments & Visuals (Adobe)\nFall 2026 — TBD\n1:00–2:00 PM\nTBD"
+  },
+  {
+    "objectID": "index.html#before-you-come",
+    "href": "index.html#before-you-come",
+    "title": "AI Workshops for DSPH",
+    "section": "Before You Come",
+    "text": "Before You Come\n\nConfirm your access to ChatGPT Edu (now available to faculty and staff — request access; see Tools & Access)\nConfirm you can sign in to Microsoft Copilot with your Drexel account\nBring a laptop\nBring a real (non-sensitive) work task you’d like help with—an email to draft, a document to summarize, a report section to outline\nRead the one-page data privacy rules below\n\n\n\n\n\n\n\nWarningData Privacy — Read This First\n\n\n\nDrexel-approved tools are not all equal on data:\n\nChatGPT Edu is licensed by Drexel and approved for university data. Your prompts are not used to train models. Still follow Drexel data-handling policy and do not enter regulated data (PHI, FERPA-protected records, identifiable human-subjects data) unless it is explicitly approved for that use.\nMicrosoft Copilot (signed in with your Drexel account, “enterprise data protection” mode) keeps data within Drexel’s Microsoft tenant. Confirm you see the protected-mode indicator before using it with university data.\nZoom AI Companion (included with Drexel Zoom) is approved for university use within policy and does not use your meeting content to train AI models. Be mindful when summarizing meetings that involve regulated or confidential information, and notify participants when it’s on.\nClaude, ChatGPT (personal), Gemini, and other consumer tools are not approved for any Drexel data. Individual PIs may purchase their own Anthropic/Claude licenses, but must not enter Drexel data into them. Use these only with public or fully synthetic information.\n\nWhen in doubt, de-identify, use synthetic data, or ask before entering anything sensitive. Drexel’s AI Tools page lists the approved data classification level for each tool. We cover this in detail in Workshop 1."
+  },
+  {
+    "objectID": "index.html#questions",
+    "href": "index.html#questions",
+    "title": "AI Workshops for DSPH",
+    "section": "Questions?",
+    "text": "Questions?\nContact D. Alex Quistberg at daq26@drexel.edu."
+  }
+]

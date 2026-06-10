@@ -1,0 +1,150 @@
+---
+title: "Workshop 1: Foundations & Capabilities"
+---
+
+::: {.day-header}
+# Workshop 1: Foundations & Capabilities
+::: {.day-subtitle}
+What generative AI is, which Drexel tools to use, and how to prompt for useful results
+:::
+::: {.day-time}
+Monday, June 29, 2026 | 1:00--2:00 PM | Bring a laptop
+:::
+:::
+
+## What You'll Leave With
+
+By the end of this hour, you will be able to:
+
+1. Explain in plain terms what a large language model does---and what it doesn't
+2. Choose the right Drexel-approved tool for a task and know the data rules
+3. Sign in to ChatGPT Edu and run your first useful prompts
+4. Use a simple framework (PTCF) to get noticeably better outputs
+
+## Run of Show
+
+| Time | Segment |
+|------|---------|
+| 0:00--0:12 | Overview: what AI can and can't do; the Drexel tools and data rules |
+| 0:12--0:32 | Activity 1: First prompts in ChatGPT Edu |
+| 0:32--0:55 | Activity 2: Better prompts with PTCF |
+| 0:55--1:00 | Wrap-up and what to try this week |
+
+---
+
+## Overview (12 min)
+
+**What generative AI is.** Tools like ChatGPT and Copilot are *large language models*---they predict likely text based on patterns learned from huge amounts of writing. They are very good at drafting, summarizing, rewriting, explaining, and brainstorming. They do not "know" facts the way a database does, and they can state wrong things confidently (a "hallucination"). You stay in the loop: AI drafts, you verify and decide.
+
+**Which tool, and the data rule.** For Drexel work, use **ChatGPT Edu** (approved for university data, doesn't train on your inputs) or **Microsoft Copilot** in protected mode for Office tasks. **Claude and consumer tools are not approved for Drexel data.** Never paste PHI, student records, or identifiable research data into a tool unless it's approved for that use. Full details on the [Tools & Access](tools.qmd) page.
+
+**Good first uses at DSPH.** Drafting and tightening emails, summarizing long documents and reports, turning notes into clean prose, explaining unfamiliar terms, brainstorming options, and reformatting content. We start there.
+
+:::{.callout-tip}
+## The Mental Model
+Treat AI like a fast, eager assistant who is widely read but sometimes wrong and never offended by edits. You give clear direction, it produces a draft, and you check the work before it counts.
+:::
+
+---
+
+## Activity 1: First Prompts in ChatGPT Edu {.activity}
+
+::: {.activity}
+
+### Activity 1: First Prompts in ChatGPT Edu
+::: {.activity-meta}
+Duration: ~20 minutes | Format: Individual, hands-on
+:::
+
+**Goal:** Get signed in and feel what the tool does well by running real tasks.
+
+#### Instructions
+
+1. Sign in to **ChatGPT Edu** with your Drexel account.
+2. Run each of these prompts and look at how it responds. Use **public or made-up details only**---no sensitive data.
+
+**Prompt A --- Summarize**
+
+> Summarize the following text in 5 bullet points for a busy colleague, then give me a one-sentence "bottom line." [paste a paragraph or two from a public report or article]
+
+**Prompt B --- Draft**
+
+> Draft a friendly but professional email reminding committee members that their meeting materials are due Friday at noon. Keep it under 120 words.
+
+**Prompt C --- Explain**
+
+> Explain what a "data use agreement" is to a new staff member, in plain language, in about 100 words.
+
+**Prompt D --- Reformat**
+
+> Turn these rough notes into a clean numbered agenda with time estimates: [paste a few messy lines of notes]
+
+3. Pick the output you found most useful and ask one **follow-up**: "Make it shorter," "More formal," or "Add a sentence about X." Notice that it remembers the conversation.
+
+#### Quick Reflection
+
+- Which task did it handle best? Which needed the most fixing?
+- Where did you have to add information it couldn't have known?
+
+:::
+
+---
+
+## Activity 2: Better Prompts with PTCF {.activity}
+
+::: {.activity}
+
+### Activity 2: Better Prompts with PTCF
+::: {.activity-meta}
+Duration: ~23 minutes | Format: Hands-on + pair share
+:::
+
+**Goal:** See how a little structure turns a generic answer into a usable one.
+
+#### The PTCF Framework
+
+| Part | Ask yourself | Example |
+|------|--------------|---------|
+| **P**ersona | Who should it act as? | "You are an experienced grants administrator..." |
+| **T**ask | What exactly should it do? | "Draft a 150-word reminder..." |
+| **C**ontext | What background does it need? | "...for faculty submitting NIH progress reports, due in two weeks." |
+| **F**ormat | How should the output look? | "Bulleted, warm tone, with a clear deadline line at the top." |
+
+#### Try It
+
+1. Start with a **bare prompt** for a task from your own work (use non-sensitive details):
+
+   > Write a project update.
+
+2. Now rewrite it using all four PTCF parts. For example:
+
+   > **Persona:** You are a research coordinator. **Task:** Write a short project status update. **Context:** For our study team's monthly check-in; we finished participant recruitment, are behind on data cleaning, and have an IRB renewal due next month. **Format:** Three short sections---Done, In Progress, Needs Attention---under 150 words total.
+
+3. Compare the two outputs. Then refine once more: change the tone, the length, or the audience and rerun.
+
+#### Pair Share
+
+Turn to a neighbor and trade one prompt each. Read the other person's output and suggest one part of PTCF they could strengthen.
+
+:::
+
+:::{.callout-note}
+## Note on Consistency
+The same prompt can give slightly different answers each time. For anything you'll reuse, save the prompt that worked. We'll build reusable prompts and custom GPTs in Workshop 3.
+:::
+
+---
+
+## Wrap-Up (5 min)
+
+- AI is a drafting and thinking assistant; you verify and decide.
+- For Drexel work: **ChatGPT Edu or Copilot**, and mind the data rules.
+- **PTCF** (Persona, Task, Context, Format) is your default recipe for a good prompt.
+
+**Try this before Workshop 2:** pick one task you do every week---an email, a summary, a set of notes---and do it once with ChatGPT Edu using PTCF. Bring it to the next session.
+
+---
+
+## Looking Ahead
+
+**Workshop 2: Workflow Enhancement** --- we move from single prompts to real workflows: drafting and summarizing in Word and Outlook with Copilot, and using ChatGPT Edu to speed up the writing and analysis tasks you do most.

@@ -1,0 +1,45 @@
+project:
+  type: website
+  output-dir: docs
+  resources:
+    - robots.txt
+
+website:
+  title: "AI Workshops for DSPH"
+  description: "Hands-on AI workshops for Dornsife School of Public Health staff and faculty"
+  navbar:
+    background: "#003366"
+    foreground: white
+    left:
+      - href: index.qmd
+        text: Home
+      - href: workshop1.qmd
+        text: "Workshop 1"
+      - href: workshop2.qmd
+        text: "Workshop 2"
+      - href: workshop3.qmd
+        text: "Workshop 3"
+      - href: workshop4.qmd
+        text: "Workshop 4"
+      - href: tools.qmd
+        text: "Tools & Access"
+      - href: resources.qmd
+        text: Resources
+    right:
+      - icon: envelope
+        href: mailto:daq26@drexel.edu
+  page-footer:
+    center: "AI Workshops for DSPH | Dornsife School of Public Health | Drexel University"
+    background: "#003366"
+
+format:
+  html:
+    theme:
+      light: cosmo
+    css: styles.css
+    toc: true
+    toc-depth: 3
+    include-in-header:
+      text: |
+        <meta name="robots" content="noindex, nofollow">
+
