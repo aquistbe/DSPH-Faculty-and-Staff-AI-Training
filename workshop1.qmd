@@ -18,25 +18,27 @@ By the end of this hour, you will be able to:
 
 1. Explain in plain terms what a large language model does---and what it doesn't
 2. Choose the right Drexel-approved tool for a task and know the data rules
-3. Sign in to ChatGPT Edu and run your first useful prompts
+3. Sign in to ChatGPT Edu, select GPT-5.5 when available, and run your first useful prompts
 4. Use a simple framework (PTCF) to get noticeably better outputs
+5. Recognize how AI fails---confident errors and bias---and the basic accountability and governance rules at Drexel
 
 ## Run of Show
 
 | Time | Segment |
 |------|---------|
-| 0:00--0:12 | Overview: what AI can and can't do; the Drexel tools and data rules |
-| 0:12--0:32 | Activity 1: First prompts in ChatGPT Edu |
-| 0:32--0:55 | Activity 2: Better prompts with PTCF |
-| 0:55--1:00 | Wrap-up and what to try this week |
+| 0:00--0:10 | Overview: what AI can and can't do; the Drexel tools and data rules |
+| 0:10--0:25 | Ethics & Governance: how AI fails, and who's accountable |
+| 0:25--0:42 | Activity 1: First prompts in ChatGPT Edu |
+| 0:42--0:57 | Activity 2: Better prompts with PTCF |
+| 0:57--1:00 | Wrap-up and what to try this week |
 
 ---
 
-## Overview (12 min)
+## Overview (10 min)
 
 **What generative AI is.** Tools like ChatGPT and Copilot are *large language models*---they predict likely text based on patterns learned from huge amounts of writing. They are very good at drafting, summarizing, rewriting, explaining, and brainstorming. They do not "know" facts the way a database does, and they can state wrong things confidently (a "hallucination"). You stay in the loop: AI drafts, you verify and decide.
 
-**Which tool, and the data rule.** For Drexel work, use **ChatGPT Edu** (approved for university data, doesn't train on your inputs) or **Microsoft Copilot** in protected mode for Office tasks. **Claude and consumer tools are not approved for Drexel data.** Never paste PHI, student records, or identifiable research data into a tool unless it's approved for that use. Full details on the [Tools & Access](tools.qmd) page.
+**Which tool, and the data rule.** For Drexel work, use **ChatGPT Edu**, **Copilot Chat with Enterprise Data Protection**, **Microsoft 365 Copilot**, Zoom AI Companion, or Adobe tools according to Drexel's data classifications. **Claude, personal ChatGPT, Gemini, Perplexity, and other consumer tools are Low Risk Data only** unless separately approved by Drexel. Never paste PHI, sensitive PII, protected student records, or identifiable research data into a tool unless that tool and use case are explicitly approved. Full details are on the [Tools & Access](tools.qmd) page.
 
 **Good first uses at DSPH.** Drafting and tightening emails, summarizing long documents and reports, turning notes into clean prose, explaining unfamiliar terms, brainstorming options, and reformatting content. We start there.
 
@@ -47,20 +49,39 @@ Treat AI like a fast, eager assistant who is widely read but sometimes wrong and
 
 ---
 
+## Ethics & Governance: How AI Fails, and Who's Accountable (15 min)
+
+*This is the first piece of an ethics and governance thread that runs through every workshop. Today: the two ways AI gets things wrong, and the rules that decide who is responsible.*
+
+**Two failure modes to expect.** First, **confident errors ("hallucinations")**---an LLM predicts plausible text, so it can invent facts, statistics, and citations that look right and are wrong. Second, **bias**---models learn from internet-scale data that carries society's inequities, so outputs can reflect and amplify stereotypes about who belongs in which role and what communities "look like." Both matter more in public health than in most fields, because we work with diverse populations and our outputs can affect care and resources.
+
+**Where bias comes from.** It enters at several stages: training data that reflects historical inequities, populations that are over- or under-represented, and proxies that don't mean the same thing across groups. A landmark example: an algorithm used across US health systems used past **healthcare cost** as a proxy for health *need*; because less had historically been spent on Black patients, it rated them as healthier than equally sick White patients (Obermeyer et al., 2019). The lesson isn't "don't use AI"---it's that AI trained on historical data can encode inequity, so you check outputs, especially across groups.
+
+**Who is accountable.** The person who acts on AI output owns the result---not the tool, not the vendor. That is the governing principle for everything in this series: **AI drafts; a human verifies and decides.** Where AI informs a real decision or document, note that it was used and verify what matters.
+
+**The governance frame at Drexel.** Drexel sets the rules through its AI policy and the data-classification system on the [AI Tools page](https://drexel.edu/provost/ai/tools)---which tool may touch which data. Nationally, the [ASPPH AI for Public Health framework](resources.qmd) and the WHO's *Ethics and Governance of AI for Health* lay out the principles (equity, transparency, accountability, privacy) we'll apply throughout. See the [Resources](resources.qmd) page.
+
+:::{.callout-important}
+## The Accountability Rule
+If AI helped produce it and your name is on it, you are responsible for it---accuracy, fairness, and tone. "The AI wrote it" is never the answer.
+:::
+
+---
+
 ## Activity 1: First Prompts in ChatGPT Edu {.activity}
 
 ::: {.activity}
 
 ### Activity 1: First Prompts in ChatGPT Edu
 ::: {.activity-meta}
-Duration: ~20 minutes | Format: Individual, hands-on
+Duration: ~17 minutes | Format: Individual, hands-on
 :::
 
 **Goal:** Get signed in and feel what the tool does well by running real tasks.
 
 #### Instructions
 
-1. Sign in to **ChatGPT Edu** with your Drexel account.
+1. Sign in to **ChatGPT Edu** with your Drexel account. Use **GPT-5.5** if it appears in your model picker; otherwise use the current default/latest GPT model in the Drexel workspace.
 2. Run each of these prompts and look at how it responds. Use **public or made-up details only**---no sensitive data.
 
 **Prompt A --- Summarize**
@@ -96,7 +117,7 @@ Duration: ~20 minutes | Format: Individual, hands-on
 
 ### Activity 2: Better Prompts with PTCF
 ::: {.activity-meta}
-Duration: ~23 minutes | Format: Hands-on + pair share
+Duration: ~15 minutes | Format: Hands-on + pair share
 :::
 
 **Goal:** See how a little structure turns a generic answer into a usable one.

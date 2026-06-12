@@ -6,7 +6,7 @@ Source for the **AI Workshops for DSPH** website — a hands-on workshop series 
 
 ## About the series
 
-Short, hands-on, one-hour workshops. Each is a brief overview followed by activities that fit in the hour. One general track for administrative staff, research staff, and faculty; specialized research-coding sessions and additional topics follow later.
+Short, hands-on, one-hour workshops. Each is a brief overview followed by activities that fit in the hour. Sessions are recorded and shared afterward. One general track for administrative staff, research staff, and faculty; specialized research-coding sessions and additional topics follow later.
 
 | # | Workshop | Date |
 |---|----------|------|
@@ -15,7 +15,7 @@ Short, hands-on, one-hour workshops. Each is a brief overview followed by activi
 | 3 | Collaboration on Projects | July 14, 2026 |
 | 4 | Documents & Visuals (Adobe) | Fall 2026 (TBD) |
 
-The series repeats in fall. Focus is on Drexel-approved tools: **ChatGPT Edu**, **Microsoft Copilot**, **Zoom AI Companion**, and **Adobe Creative Cloud Pro**, with data-handling guidance throughout.
+The series repeats in fall. Focus is on Drexel-provided tools: **ChatGPT Edu** (using GPT-5.5 when available), **Microsoft Copilot Chat with Enterprise Data Protection**, **Microsoft 365 Copilot**, **Zoom AI Companion**, and **Adobe AI tools**, with Drexel data-classification guidance throughout.
 
 ## How it's built
 

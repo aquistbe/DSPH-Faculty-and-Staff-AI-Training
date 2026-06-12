@@ -14,18 +14,19 @@ A hands-on workshop series for staff and faculty
 
 ## Welcome
 
-This is a growing series of short, hands-on workshops introducing AI tools for staff and faculty at the Dornsife School of Public Health. Each workshop runs **one hour**: a brief overview followed by hands-on activities you can complete in the session. Three workshops run this summer, with more---including an Adobe documents-and-visuals session---scheduled for fall.
+This is a growing series of short, hands-on workshops introducing AI tools for staff and faculty at the Dornsife School of Public Health. Each workshop runs **one hour**: a brief overview followed by hands-on activities you can complete in the session. Three workshops run this summer, with more scheduled for fall---an Adobe documents-and-visuals session and an intro to agentic AI.
 
 The series is designed for everyone at DSPH---administrative staff, research staff, and faculty. No prior experience with AI is required. The focus is practical: what these tools can do, how to use them to save time on real work, and how to bring them into team projects.
 
 :::{.callout-note}
 ## Series Details
 
-- **Format:** One-hour hands-on workshops (three this summer, more in fall), bring a laptop
+- **Format:** Three one-hour hands-on workshops (one hour each), bring a laptop
 - **Audience:** DSPH staff (administrative and research) and faculty
 - **Dates:** June 29, July 7, and July 14, 2026 --- all **1:00--2:00 PM**
 - **Location:** TBD
-- **Repeats:** Additional sessions later in summer; series repeats in fall
+- **Recording:** Sessions will be recorded and shared after the workshops
+- **Repeats:** Additional sessions in summer or fall; series repeats in fall
 - **Facilitator:** D. Alex Quistberg, PhD, MPH ([daq26@drexel.edu](mailto:daq26@drexel.edu))
 :::
 
@@ -34,11 +35,17 @@ The series is designed for everyone at DSPH---administrative staff, research sta
 | # | Workshop | What You'll Do |
 |---|----------|----------------|
 | [1](workshop1.qmd) | **Foundations & Capabilities** | What generative AI is, which Drexel-approved tools to use, and prompting that gets useful results |
-| [2](workshop2.qmd) | **Workflow Enhancement** | Use ChatGPT Edu and Copilot to speed up writing, email, summarizing, and Office tasks |
+| [2](workshop2.qmd) | **Workflow Enhancement** | Use ChatGPT Edu, Copilot Chat, and Microsoft 365 Copilot to speed up writing, email, summarizing, and Office tasks |
 | [3](workshop3.qmd) | **Collaboration on Projects** | Use AI for meetings, project planning, shared prompts, and team documents |
 | [4](workshop4.qmd) | **Documents & Visuals (Adobe)** *(Fall)* | Acrobat AI Assistant for PDFs and Firefly for infographics and communication graphics |
+| [5](workshop5.qmd) | **Getting Started with Agentic AI** *(Fall)* | What "agentic" means, plus setting up assistants with instructions, knowledge, and reusable skills |
 
-The summer workshops build on each other but each can stand alone---come to all three, or drop into the ones most relevant to your work. Workshop 4 is scheduled for fall.
+The summer workshops build on each other but each can stand alone---come to all three, or drop into the ones most relevant to your work. Workshops 4 and 5 are scheduled for fall.
+
+:::{.callout-note}
+## A thread through every session: ethics & governance
+Every workshop opens with a short, themed **ethics and governance** segment---how AI fails and who's accountable (W1), verification and disclosure (W2), data and consent in team use (W3), representation and bias in AI media (W4), and oversight of agents (W5). Together they build a practical foundation for responsible AI use at DSPH, grounded in Drexel policy and the [ASPPH](resources.qmd) and WHO frameworks.
+:::
 
 ## Quick Links
 
@@ -61,6 +68,10 @@ The summer workshops build on each other but each can stand alone---come to all 
 :::
 
 ::: {.quick-link-card}
+[**Workshop 5**<br>Agentic AI · Fall](workshop5.qmd){.card-day}
+:::
+
+::: {.quick-link-card}
 [**Tools & Access**<br>ChatGPT Edu, Copilot, Adobe, more](tools.qmd){.card-day}
 :::
 
@@ -74,7 +85,7 @@ The summer workshops build on each other but each can stand alone---come to all 
 
 This first series is **one general track for the whole school**. The activities are chosen to be useful whether you manage grants and schedules, coordinate research, or teach and run a lab.
 
-Research staff who do statistical coding and analysis: we will run **specialized sessions** for you later in the summer (using AI for data cleaning, coding in Stata/R/Python, debugging, and reproducible analysis). The three workshops here are the shared foundation everyone starts from.
+Research staff who do statistical coding and analysis: we will run **specialized sessions** for you in summer or fall (using AI for data cleaning, coding in Stata/R/Python, debugging, and reproducible analysis). The three workshops here are the shared foundation everyone starts from.
 
 ## Schedule {#schedule}
 
@@ -84,11 +95,12 @@ Research staff who do statistical coding and analysis: we will run **specialized
 | 2 | Workflow Enhancement | Tuesday, July 7, 2026 | 1:00--2:00 PM | TBD |
 | 3 | Collaboration on Projects | Tuesday, July 14, 2026 | 1:00--2:00 PM | TBD |
 | 4 | Documents & Visuals (Adobe) | Fall 2026 --- TBD | 1:00--2:00 PM | TBD |
+| 5 | Getting Started with Agentic AI | Fall 2026 --- TBD | 1:00--2:00 PM | TBD |
 
 ## Before You Come {.checklist}
 
 - Confirm your access to **ChatGPT Edu** (now available to faculty and staff --- [request access](https://servicedesk.drexel.edu/TDClient/277/Portal/Requests/ServiceDet?ID=10760); see [Tools & Access](tools.qmd))
-- Confirm you can sign in to **Microsoft Copilot** with your Drexel account
+- Confirm you can sign in to **Microsoft Copilot Chat** and **Microsoft 365 Copilot** with your Drexel account
 - Bring a laptop
 - Bring a real (non-sensitive) work task you'd like help with---an email to draft, a document to summarize, a report section to outline
 - Read the one-page [data privacy rules](#data-privacy) below
@@ -98,10 +110,12 @@ Research staff who do statistical coding and analysis: we will run **specialized
 
 Drexel-approved tools are not all equal on data:
 
-- **ChatGPT Edu** is licensed by Drexel and approved for university data. Your prompts are not used to train models. Still follow Drexel data-handling policy and **do not enter regulated data (PHI, FERPA-protected records, identifiable human-subjects data)** unless it is explicitly approved for that use.
-- **Microsoft Copilot** (signed in with your Drexel account, "enterprise data protection" mode) keeps data within Drexel's Microsoft tenant. Confirm you see the protected-mode indicator before using it with university data.
-- **Zoom AI Companion** (included with Drexel Zoom) is approved for university use within policy and does not use your meeting content to train AI models. Be mindful when summarizing meetings that involve regulated or confidential information, and notify participants when it's on.
-- **Claude, ChatGPT (personal), Gemini, and other consumer tools** are **not approved for any Drexel data**. Individual PIs may purchase their own Anthropic/Claude licenses, but **must not enter Drexel data** into them. Use these only with public or fully synthetic information.
+- **ChatGPT Edu** is licensed by Drexel and governed by Drexel's ChatGPT Edu Terms of Use. Your prompts are not used to train OpenAI models. Use **GPT-5.5** when it appears in your model picker; otherwise use the current default/latest GPT model available in the Drexel workspace. Do **not** enter sensitive information that Drexel must protect by law, contract, or policy, including PHI.
+- **Microsoft Copilot Chat** with Enterprise Data Protection is listed by Drexel as usable with **High Risk Data** when signed in with a Drexel account, and **Low Risk Data** otherwise.
+- **Microsoft 365 Copilot** in Word, Excel, PowerPoint, Outlook, and Teams is listed by Drexel as usable with **High Risk Data** for licensed faculty and staff.
+- **Zoom AI Companion** is listed by Drexel as usable with **High Risk Data** when a meeting is not recorded or transcribed, and **Low Risk Data** when it is recorded or transcribed. Notify participants when it is active.
+- **Adobe Acrobat AI Assistant, PDF Spaces, Creative Cloud, and Express** are listed by Drexel as usable with **Moderate Risk Data**.
+- **Claude, ChatGPT personal, Gemini, Perplexity, and other consumer tools** are **Low Risk Data only** unless separately approved by Drexel. Use these only with public or fully synthetic information.
 
 When in doubt, de-identify, use synthetic data, or ask before entering anything sensitive. Drexel's **[AI Tools page](https://drexel.edu/provost/ai/tools)** lists the approved data classification level for each tool. We cover this in detail in Workshop 1.
 :::

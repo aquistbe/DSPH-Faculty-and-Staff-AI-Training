@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Workshop 3: Collaboration on Projects – AI Workshops for DSPH</title>
+<title>Workshop 5: Getting Started with Agentic AI – AI Workshops for DSPH</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -106,7 +106,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Workshop 2</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./workshop3.html" aria-current="page"> 
+    <a class="nav-link" href="./workshop3.html"> 
 <span class="menu-text">Workshop 3</span></a>
   </li>  
   <li class="nav-item">
@@ -114,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Workshop 4</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./workshop5.html"> 
+    <a class="nav-link active" href="./workshop5.html" aria-current="page"> 
 <span class="menu-text">Workshop 5</span></a>
   </li>  
   <li class="nav-item">
@@ -148,25 +148,21 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#workshop-3-collaboration-on-projects" id="toc-workshop-3-collaboration-on-projects" class="nav-link active" data-scroll-target="#workshop-3-collaboration-on-projects">Workshop 3: Collaboration on Projects</a></li>
+  <li><a href="#workshop-5-getting-started-with-agentic-ai" id="toc-workshop-5-getting-started-with-agentic-ai" class="nav-link active" data-scroll-target="#workshop-5-getting-started-with-agentic-ai">Workshop 5: Getting Started with Agentic AI</a></li>
   <li><a href="#what-youll-leave-with" id="toc-what-youll-leave-with" class="nav-link" data-scroll-target="#what-youll-leave-with">What You’ll Leave With</a></li>
   <li><a href="#run-of-show" id="toc-run-of-show" class="nav-link" data-scroll-target="#run-of-show">Run of Show</a></li>
-  <li><a href="#overview-8-min" id="toc-overview-8-min" class="nav-link" data-scroll-target="#overview-8-min">Overview (8 min)</a></li>
-  <li><a href="#ethics-governance-data-consent-and-equity-in-team-use-14-min" id="toc-ethics-governance-data-consent-and-equity-in-team-use-14-min" class="nav-link" data-scroll-target="#ethics-governance-data-consent-and-equity-in-team-use-14-min">Ethics &amp; Governance: Data, Consent, and Equity in Team Use (14 min)</a></li>
-  <li><a href="#activity-1-meetings-and-project-planning" id="toc-activity-1-meetings-and-project-planning" class="nav-link" data-scroll-target="#activity-1-meetings-and-project-planning">Activity 1: Meetings and Project Planning</a>
+  <li><a href="#overview-10-min" id="toc-overview-10-min" class="nav-link" data-scroll-target="#overview-10-min">Overview (10 min)</a></li>
+  <li><a href="#ethics-governance-automation-bias-oversight-and-when-not-to-automate-15-min" id="toc-ethics-governance-automation-bias-oversight-and-when-not-to-automate-15-min" class="nav-link" data-scroll-target="#ethics-governance-automation-bias-oversight-and-when-not-to-automate-15-min">Ethics &amp; Governance: Automation Bias, Oversight, and When Not to Automate (15 min)</a></li>
+  <li><a href="#activity-1-set-up-your-first-assistant" id="toc-activity-1-set-up-your-first-assistant" class="nav-link" data-scroll-target="#activity-1-set-up-your-first-assistant">Activity 1: Set Up Your First Assistant</a>
   <ul class="collapse">
-  <li><a href="#activity-1-meetings-and-project-planning-1" id="toc-activity-1-meetings-and-project-planning-1" class="nav-link" data-scroll-target="#activity-1-meetings-and-project-planning-1">Activity 1: Meetings and Project Planning</a></li>
+  <li><a href="#activity-1-set-up-your-first-assistant-1" id="toc-activity-1-set-up-your-first-assistant-1" class="nav-link" data-scroll-target="#activity-1-set-up-your-first-assistant-1">Activity 1: Set Up Your First Assistant</a></li>
   </ul></li>
-  <li><a href="#activity-2-create-and-share-a-project" id="toc-activity-2-create-and-share-a-project" class="nav-link" data-scroll-target="#activity-2-create-and-share-a-project">Activity 2: Create and Share a Project</a>
+  <li><a href="#activity-2-write-a-skill-and-run-a-multi-step-task" id="toc-activity-2-write-a-skill-and-run-a-multi-step-task" class="nav-link" data-scroll-target="#activity-2-write-a-skill-and-run-a-multi-step-task">Activity 2: Write a Skill and Run a Multi-Step Task</a>
   <ul class="collapse">
-  <li><a href="#activity-2-create-and-share-a-project-1" id="toc-activity-2-create-and-share-a-project-1" class="nav-link" data-scroll-target="#activity-2-create-and-share-a-project-1">Activity 2: Create and Share a Project</a></li>
+  <li><a href="#activity-2-write-a-skill-and-run-a-multi-step-task-1" id="toc-activity-2-write-a-skill-and-run-a-multi-step-task-1" class="nav-link" data-scroll-target="#activity-2-write-a-skill-and-run-a-multi-step-task-1">Activity 2: Write a Skill and Run a Multi-Step Task</a></li>
   </ul></li>
-  <li><a href="#activity-3-custom-gpt-shared-prompt-library" id="toc-activity-3-custom-gpt-shared-prompt-library" class="nav-link" data-scroll-target="#activity-3-custom-gpt-shared-prompt-library">Activity 3: Custom GPT + Shared Prompt Library</a>
-  <ul class="collapse">
-  <li><a href="#activity-3-custom-gpt-shared-prompt-library-1" id="toc-activity-3-custom-gpt-shared-prompt-library-1" class="nav-link" data-scroll-target="#activity-3-custom-gpt-shared-prompt-library-1">Activity 3: Custom GPT + Shared Prompt Library</a></li>
-  </ul></li>
-  <li><a href="#wrap-up-2-min" id="toc-wrap-up-2-min" class="nav-link" data-scroll-target="#wrap-up-2-min">Wrap-Up (2 min)</a></li>
-  <li><a href="#where-to-go-next" id="toc-where-to-go-next" class="nav-link" data-scroll-target="#where-to-go-next">Where to Go Next</a></li>
+  <li><a href="#wrap-up-5-min" id="toc-wrap-up-5-min" class="nav-link" data-scroll-target="#wrap-up-5-min">Wrap-Up (5 min)</a></li>
+  <li><a href="#related" id="toc-related" class="nav-link" data-scroll-target="#related">Related</a></li>
   </ul>
 </nav>
     </div>
@@ -175,7 +171,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Workshop 3: Collaboration on Projects</h1>
+<h1 class="title">Workshop 5: Getting Started with Agentic AI</h1>
 </div>
 
 
@@ -192,25 +188,38 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="workshop-3-collaboration-on-projects" class="level1 day-header">
-<h1>Workshop 3: Collaboration on Projects</h1>
+<section id="workshop-5-getting-started-with-agentic-ai" class="level1 day-header">
+<h1>Workshop 5: Getting Started with Agentic AI</h1>
 <div class="day-subtitle">
-<p>Use AI for meetings, project planning, shared prompts, and team documents</p>
+<p>From chatbots to assistants that take steps — agents, instructions, and skills</p>
 </div>
 <div class="day-time">
-<p>Tuesday, July 14, 2026 | 1:00–2:00 PM | Bring a laptop; come with a team or project in mind</p>
+<p>Upcoming — Fall 2026 | Date TBD | 1 hour | Bring a laptop</p>
 </div>
 </section>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Upcoming Workshop
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This is an <strong>intro-level</strong> session planned for the <strong>fall</strong>. No coding required. The date will be posted on the <a href="./index.html#schedule">home page</a> once scheduled. The agenda below is a draft. It builds on the shared Projects and custom GPTs from <a href="./workshop3.html">Workshop 3</a>.</p>
+</div>
+</div>
 <section id="what-youll-leave-with" class="level2">
 <h2 class="anchored" data-anchor-id="what-youll-leave-with">What You’ll Leave With</h2>
 <p>By the end of this hour, you will be able to:</p>
 <ol type="1">
-<li>Turn meeting notes into recaps, decisions, and action items the team can use</li>
-<li>Use AI to draft and pressure-test a project plan</li>
-<li>Set up a <strong>shared Project</strong> in ChatGPT Edu—files, instructions, and chats your team works in together</li>
-<li>Build a <strong>custom GPT</strong> in ChatGPT Edu that your team can reuse internally</li>
-<li>Start a shared prompt library so the whole group benefits from what works</li>
-<li>Apply data-governance and consent rules to shared and team AI use</li>
+<li>Explain in plain terms what “agentic” AI means and how it differs from a normal chat</li>
+<li>Name the building blocks of an AI assistant: <strong>instructions, knowledge, tools, and skills</strong></li>
+<li>Set up a simple assistant in ChatGPT Edu with clear instructions and a knowledge file</li>
+<li>Write a reusable <strong>“skill”</strong>—a packaged set of instructions for a task you repeat</li>
+<li>Apply basic guardrails: keep a human in the loop and know the data rules</li>
+<li>Recognize automation bias and decide when a task should <em>not</em> be handed to an agent</li>
 </ol>
 </section>
 <section id="run-of-show" class="level2">
@@ -228,249 +237,187 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td>0:00–0:08</td>
-<td>Overview: from solo use to team use</td>
+<td>0:00–0:10</td>
+<td>Overview: what “agentic” means and the four building blocks</td>
 </tr>
 <tr class="even">
-<td>0:08–0:22</td>
-<td>Ethics &amp; Governance: data, consent, and equity in team use</td>
+<td>0:10–0:25</td>
+<td>Ethics &amp; Governance: automation bias, oversight, and when not to automate</td>
 </tr>
 <tr class="odd">
-<td>0:22–0:35</td>
-<td>Activity 1: Meetings and project planning</td>
+<td>0:25–0:42</td>
+<td>Activity 1: Set up your first assistant (instructions + knowledge)</td>
 </tr>
 <tr class="even">
-<td>0:35–0:52</td>
-<td>Activity 2: Create and share a Project</td>
+<td>0:42–0:55</td>
+<td>Activity 2: Write a reusable skill and run a multi-step task</td>
 </tr>
 <tr class="odd">
-<td>0:52–0:58</td>
-<td>Activity 3: Custom GPT + shared prompt library (quick / optional)</td>
-</tr>
-<tr class="even">
-<td>0:58–1:00</td>
-<td>Wrap-up and a team commitment</td>
+<td>0:55–1:00</td>
+<td>Wrap-up: guardrails, data rules, and where to go next</td>
 </tr>
 </tbody>
 </table>
 <hr>
 </section>
-<section id="overview-8-min" class="level2">
-<h2 class="anchored" data-anchor-id="overview-8-min">Overview (8 min)</h2>
-<p>The first two workshops were about you and a tool. This one is about your <strong>team</strong>. AI helps most on shared work when it does three things: captures what happened (meeting recaps, decisions), structures what’s next (plans, task lists), and standardizes how the group works (shared prompts and custom assistants so everyone gets the same quality, not just the early adopters).</p>
-<p>Three ideas carry the session:</p>
+<section id="overview-10-min" class="level2">
+<h2 class="anchored" data-anchor-id="overview-10-min">Overview (10 min)</h2>
+<p><strong>From answering to doing.</strong> A normal chat answers one prompt at a time—you steer every step. An <strong>agentic</strong> workflow is one where you give the AI a goal and some standing guidance, and it plans and carries out several steps toward that goal, using files or tools along the way, checking in with you as needed. The difference is less “answer my question” and more “handle this task, and show me your work.”</p>
+<p><strong>The four building blocks.</strong> Every assistant or agent, in any tool, is some combination of:</p>
 <ul>
-<li><strong>Shared Projects</strong> (in ChatGPT Edu) are a team workspace: one place that holds related chats, uploaded files, and custom instructions. Everyone invited works in the same context, so ChatGPT’s answers draw on the group’s shared files and instructions and a teammate can pick up where you left off.</li>
-<li><strong>Custom GPTs</strong> (in ChatGPT Edu) are reusable assistants you set up once with your own instructions and reference files, then share with colleagues inside the Drexel workspace—so a good prompt becomes a team tool.</li>
-<li>A <strong>shared prompt library</strong> is just a running document of prompts that worked. It’s the cheapest, highest-return habit a team can start.</li>
+<li><strong>Instructions</strong> — the standing guidance: who it is, how it should behave, the format and tone it always uses. This is where most of the quality comes from.</li>
+<li><strong>Knowledge</strong> — files or context you give it to work from (a template, a style guide, a reference document).</li>
+<li><strong>Tools</strong> — things it can actually do beyond writing text: search the web, read a document, run a step. (In ChatGPT, “agent mode” and connected actions; admin-controlled in the Drexel workspace.)</li>
+<li><strong>Skills</strong> — reusable, packaged instructions for a specific repeatable task, so you don’t rebuild the same setup each time.</li>
 </ul>
-<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Project vs.&nbsp;Custom GPT — which is which?
+<span class="screen-reader-only">Tip</span>What is a “skill”?
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>A <strong>Project</strong> is a shared <em>workspace</em> you and colleagues work inside together (shared chats, files, and instructions). A <strong>custom GPT</strong> is a reusable <em>assistant</em> you configure once and call on for a repeated task. Use a Project when a team is collaborating on an ongoing body of work; use a custom GPT when you want a consistent tool for a specific job.</p>
+<p>A <strong>skill</strong> is a saved package of instructions (and sometimes example files) that tells an assistant how to do one job well—like “turn meeting notes into our standard recap format.” You write it once; the assistant uses it whenever that job comes up. <strong>Claude</strong> has a formal feature literally called <em>Skills</em>. In <strong>ChatGPT Edu</strong>, you get the same effect with <strong>custom GPTs</strong>, <strong>project instructions</strong>, and saved instruction blocks. The idea is the same everywhere: capture the know-how once, reuse it.</p>
 </div>
 </div>
-<p>For meetings specifically, <strong>Zoom AI Companion</strong> (included with Drexel Zoom) can generate the summary and action items for you automatically—a natural starting point for the recap work below. Drexel lists Zoom AI Companion as usable with High Risk Data when a meeting is not recorded or transcribed, and Low Risk Data when it is recorded or transcribed. Same principle across tools: match the tool and use case to Drexel’s data classification. See <a href="./tools.html">Tools &amp; Access</a>.</p>
+<p><strong>This works across tools.</strong> We’ll do hands-on in <strong>ChatGPT Edu</strong> because it’s approved for Drexel data. The concepts—instructions, knowledge, tools, skills—are the same in Copilot and Claude. For the most advanced agentic features and the formal Skills system, see the Claude note at the end (PI-paid, and <strong>not for Drexel data</strong>).</p>
 <hr>
 </section>
-<section id="ethics-governance-data-consent-and-equity-in-team-use-14-min" class="level2">
-<h2 class="anchored" data-anchor-id="ethics-governance-data-consent-and-equity-in-team-use-14-min">Ethics &amp; Governance: Data, Consent, and Equity in Team Use (14 min)</h2>
-<p><em>The thread continues. Workshops 1 and 2 covered individual use. The moment AI use becomes shared, new questions appear: whose data is this, who agreed to it, and who has access?</em></p>
-<p><strong>Shared means visible.</strong> When you upload a file to a shared Project or custom GPT, everyone invited can see it—and the file inherits the tool’s data classification. Before adding anything, ask two questions: <em>Is everyone in this space cleared to see this?</em> and <em>Is this tool approved for this data classification?</em> A shared workspace is convenient precisely because it pools information, which is exactly why it needs more care, not less. Institutional rules still apply: data use agreements, IRB protocols, and HR/contract confidentiality don’t pause because the work is in ChatGPT.</p>
-<p><strong>Consent and notification in meetings.</strong> AI meeting tools record, transcribe, and summarize what people say. Tell participants when AI Companion is on, and recognize that some conversations—personnel matters, sensitive community discussions, anything under a confidentiality expectation—should not be AI-summarized at all. Notification is a courtesy and, increasingly, an expectation.</p>
-<p><strong>“De-identified” is not always anonymous.</strong> When teams pool data into a shared space, remember that small cell sizes, unusual variable combinations, and geography plus demographics can re-identify people—“1 case of a rare condition in one ZIP code in adults over 85” is not anonymous. Strip or coarsen identifying detail before it goes into any tool, even an approved one.</p>
-<p><strong>Equity of access is part of governance.</strong> If only a few staff have access to these tools or know how to use them, you create a two-tier team—and, scaled up, a two-tier school. Sharing Projects, prompt libraries, and what you learn is not just efficiency; it’s how you keep capability from concentrating in a few early adopters. This is the equity pillar of the <a href="./resources.html">ASPPH framework</a> applied locally.</p>
+<section id="ethics-governance-automation-bias-oversight-and-when-not-to-automate-15-min" class="level2">
+<h2 class="anchored" data-anchor-id="ethics-governance-automation-bias-oversight-and-when-not-to-automate-15-min">Ethics &amp; Governance: Automation Bias, Oversight, and When Not to Automate (15 min)</h2>
+<p><em>The thread concludes here. Earlier workshops asked what AI writes and how teams share it. Once AI starts to <strong>act</strong>—taking steps on its own—the central question becomes oversight: how much do you hand off, and how do you stay responsible for it?</em></p>
+<p><strong>Responsibility doesn’t transfer.</strong> An agent can plan and carry out a series of steps, but you still own the outcome. More autonomy for the tool does not mean less responsibility for you—if anything, it means you have to be more deliberate about where you let it run.</p>
+<p><strong>Automation bias is the core risk.</strong> People over-trust automated output, especially when it’s fast and stated with confidence, and quietly stop checking. Agentic workflows make this sharper: when an agent chains several steps, a small error early on compounds through everything after it. The countermeasure is unglamorous—<strong>review each step</strong>, not just the final result, and stay skeptical exactly when the output looks polished.</p>
+<p><strong>The black-box problem.</strong> You often can’t see <em>why</em> an agent chose a step. If you can’t explain or justify what it did, don’t act on it for anything that matters. “The agent decided” is not a defensible reason for a consequential decision.</p>
+<p><strong>When <em>not</em> to automate.</strong> Keep agents on low-stakes, reversible, checkable work. Do <strong>not</strong> hand off high-stakes or irreversible decisions, anything affecting a person’s care, benefits, eligibility, or rights, anything involving regulated data, or anything you couldn’t verify afterward. Those stay with a human—full stop.</p>
+<p><strong>Oversight as governance.</strong> Start small, keep a human approval step before anything consequential happens, document where agents are used in real work, and confirm Drexel’s data classification before an agent touches real data. This is the same accountability principle from Workshop 1, now applied to a tool that can take action on its own.</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>The Shared-Space Test
+<span class="screen-reader-only">Important</span>Before You Let It Run
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Before anything goes into a shared Project or team tool: <em>Is everyone here cleared to see it? Is the tool approved for this data? Have the people in it consented to AI use?</em> All three, or it doesn’t go in.</p>
+<p>Three questions before handing a task to an agent: <strong>Reversible?</strong> (could I undo a wrong result). <strong>Verifiable?</strong> (can I check each step). <strong>Low-stakes?</strong> (no one’s care, rights, or benefits ride on it). If any answer is no, keep a human doing it.</p>
 </div>
 </div>
 <hr>
 </section>
-<section id="activity-1-meetings-and-project-planning" class="level2 activity">
-<h2 class="activity anchored" data-anchor-id="activity-1-meetings-and-project-planning">Activity 1: Meetings and Project Planning</h2>
-<section id="activity-1-meetings-and-project-planning-1" class="level3 activity">
-<h3 class="anchored" data-anchor-id="activity-1-meetings-and-project-planning-1">Activity 1: Meetings and Project Planning</h3>
+<section id="activity-1-set-up-your-first-assistant" class="level2 activity">
+<h2 class="activity anchored" data-anchor-id="activity-1-set-up-your-first-assistant">Activity 1: Set Up Your First Assistant</h2>
+<section id="activity-1-set-up-your-first-assistant-1" class="level3 activity">
+<h3 class="anchored" data-anchor-id="activity-1-set-up-your-first-assistant-1">Activity 1: Set Up Your First Assistant</h3>
 <div class="activity-meta">
-<p>Duration: ~13 minutes | Format: Hands-on, individual or in pairs</p>
+<p>Duration: ~17 minutes | Format: Individual, hands-on. Use non-sensitive content appropriate under Drexel’s ChatGPT Edu Terms of Use.</p>
 </div>
-<p><strong>Goal:</strong> Use AI to turn raw inputs into the artifacts a project actually runs on. Use non-sensitive content or content appropriate for the tool under Drexel’s classification.</p>
-<section id="part-a-from-notes-to-a-usable-recap-8-min" class="level4">
-<h4 class="anchored" data-anchor-id="part-a-from-notes-to-a-usable-recap-8-min">Part A — From Notes to a Usable Recap (~8 min)</h4>
-<p><em>Tip: if your meeting was on Zoom, <strong>Zoom AI Companion</strong> can produce a summary and action items automatically—start from that instead of raw notes.</em></p>
+<p><strong>Goal:</strong> Build a working assistant by writing good instructions and giving it knowledge—the core of every agent.</p>
+<section id="instructions" class="level4">
+<h4 class="anchored" data-anchor-id="instructions">Instructions</h4>
 <ol type="1">
-<li><p>Paste messy meeting notes (real but non-sensitive, or use the sample below) into ChatGPT Edu. Use <strong>GPT-5.5</strong> if it is available; otherwise use the current default/latest GPT model in the Drexel workspace.</p></li>
-<li><p>Use this prompt:</p>
-<blockquote class="blockquote">
-<p>Turn these notes into three sections: (1) Summary in 3 bullets, (2) Decisions made, (3) Action items as a table with owner and due date. Flag anything that’s unclear or unassigned.</p>
-</blockquote></li>
-<li><p>Notice it surfaces the gaps—unassigned tasks, vague deadlines—that are easy to miss live.</p></li>
-</ol>
-<p><em>Sample notes if you don’t have your own:</em> “talked about the survey rollout, Maria will check the IRB amendment, need final instrument by end of month, budget tight, someone should ask about the no-cost extension, next meeting in 2 weeks, recruitment slower than expected.”</p>
-</section>
-<section id="part-b-draft-and-stress-test-a-plan-10-min" class="level4">
-<h4 class="anchored" data-anchor-id="part-b-draft-and-stress-test-a-plan-10-min">Part B — Draft and Stress-Test a Plan (~10 min)</h4>
-<ol type="1">
-<li><p>Describe a project in a sentence or two and ask:</p>
-<blockquote class="blockquote">
-<p>Draft a simple project plan for this with phases, key tasks, and a rough timeline. Then list the top 5 risks and what would reduce each one.</p>
-</blockquote></li>
-<li><p>Push back: <em>“What am I missing?”</em> or <em>“What would make this slip?”</em> Use it to find blind spots, not to write the final plan.</p></li>
+<li>In ChatGPT Edu, create a <strong>custom GPT</strong> (or a Project, from Workshop 3) for a real task you repeat. Examples: “Plain-Language Rewriter,” “Grant Deadline Checker,” “Standard Meeting Recap.”</li>
+<li>Write clear <strong>instructions</strong>. Cover four things:
+<ul>
+<li><strong>Role:</strong> who it is (“You are a writing assistant for the DSPH [team]”).</li>
+<li><strong>Behavior:</strong> how it works (“Always ask for the audience before drafting”).</li>
+<li><strong>Format:</strong> what its output looks like (“Return a title, 3 bullets, and a one-line bottom line”).</li>
+<li><strong>Limits:</strong> what it must not do (“Never include identifying or sensitive data; flag anything that needs a human decision”).</li>
+</ul></li>
+<li>Add one <strong>knowledge file</strong> that is appropriate under Drexel’s Terms of Use—a template, a style guide, a sample of the format you want. No PHI, sensitive PII, confidential HR or contract material, or identifiable research data.</li>
+<li><strong>Test it</strong> with two different inputs. Where it drifts from what you wanted, tighten the instructions and try again. Notice that better instructions—not a longer prompt—fix most problems.</li>
 </ol>
 </section>
 <section id="reflection" class="level4">
 <h4 class="anchored" data-anchor-id="reflection">Reflection</h4>
 <ul>
-<li>Did the recap catch anything you’d have forgotten?</li>
-<li>Where was the AI’s plan generic, and where did it add something useful?</li>
+<li>Which instruction made the biggest difference to the output?</li>
+<li>What did you have to spell out that you assumed it would “just know”?</li>
 </ul>
 </section>
 </section>
 <hr>
 </section>
-<section id="activity-2-create-and-share-a-project" class="level2 activity">
-<h2 class="activity anchored" data-anchor-id="activity-2-create-and-share-a-project">Activity 2: Create and Share a Project</h2>
-<section id="activity-2-create-and-share-a-project-1" class="level3 activity">
-<h3 class="anchored" data-anchor-id="activity-2-create-and-share-a-project-1">Activity 2: Create and Share a Project</h3>
+<section id="activity-2-write-a-skill-and-run-a-multi-step-task" class="level2 activity">
+<h2 class="activity anchored" data-anchor-id="activity-2-write-a-skill-and-run-a-multi-step-task">Activity 2: Write a Skill and Run a Multi-Step Task</h2>
+<section id="activity-2-write-a-skill-and-run-a-multi-step-task-1" class="level3 activity">
+<h3 class="anchored" data-anchor-id="activity-2-write-a-skill-and-run-a-multi-step-task-1">Activity 2: Write a Skill and Run a Multi-Step Task</h3>
 <div class="activity-meta">
-<p>Duration: ~17 minutes | Format: Hands-on; pair up so you can share with someone in the room</p>
+<p>Duration: ~13 minutes | Format: Hands-on + discussion</p>
 </div>
-<p><strong>Goal:</strong> See how a Project gives a team one shared context—files, instructions, and chats—and how sharing actually works.</p>
-<section id="part-a-build-a-project-10-min" class="level4">
-<h4 class="anchored" data-anchor-id="part-a-build-a-project-10-min">Part A — Build a Project (~10 min)</h4>
-<ol type="1">
-<li><p>In ChatGPT Edu, create a new <strong>Project</strong> and name it for a real piece of team work (e.g., “Heat Response Brief,” “New Staff Onboarding,” “Grant XYZ Progress Report”).</p></li>
-<li><p>Add <strong>project instructions</strong>—the standing context everyone in the project should get automatically. For example:</p>
+<p><strong>Goal:</strong> Turn your setup into a reusable skill, and see an assistant carry out a task with more than one step.</p>
+<section id="part-a-write-a-reusable-skill-9-min" class="level4">
+<h4 class="anchored" data-anchor-id="part-a-write-a-reusable-skill-9-min">Part A — Write a Reusable Skill (~9 min)</h4>
+<p>Capture the instructions from Activity 1 as a standalone <strong>skill</strong> you could reuse or hand to a colleague. A good skill states the job, the steps, the output, and the guardrails:</p>
 <blockquote class="blockquote">
-<p>This project supports the DSPH [team] working on [goal]. Always write in plain, non-technical language. When asked for a summary, use bullets and a one-line bottom line. Flag anything that needs a human decision. Never include identifying or sensitive data.</p>
-</blockquote></li>
-<li><p>Upload one or two <strong>reference files</strong> that are appropriate under Drexel’s ChatGPT Edu Terms of Use—a template, a style guide, a public report. No PHI, sensitive PII, confidential HR or contract material, or identifiable research data.</p></li>
-<li><p>Start a chat <em>inside the project</em> and ask something that should draw on your files: <em>“Using the uploaded template, draft a project update for this month.”</em> Notice it uses the project’s files and instructions without you re-pasting them.</p></li>
-</ol>
+<p><strong>Skill: Standard Meeting Recap</strong> <strong>When to use:</strong> After any team meeting with notes. <strong>Steps:</strong> (1) Read the notes. (2) Produce a 3-bullet summary. (3) List decisions. (4) List action items as a table with owner and due date. (5) Flag anything unassigned or unclear. <strong>Output:</strong> Three labeled sections, plain language, under 250 words. <strong>Guardrails:</strong> No sensitive or identifying data. If notes are missing an owner or date, ask before finishing.</p>
+</blockquote>
+<p>Save it where your team can find it (a shared doc, a Project, or a custom GPT’s instructions). That’s the reusable part—next time, you don’t rebuild it.</p>
 </section>
-<section id="part-b-share-it-8-min" class="level4">
-<h4 class="anchored" data-anchor-id="part-b-share-it-8-min">Part B — Share It (~8 min)</h4>
+<section id="part-b-run-a-multi-step-task-9-min" class="level4">
+<h4 class="anchored" data-anchor-id="part-b-run-a-multi-step-task-9-min">Part B — Run a Multi-Step Task (~9 min)</h4>
 <ol type="1">
-<li>Open the project’s <strong>share</strong> settings. Invite your partner (or a colleague) using <strong>“Only those invited”</strong>—the right choice for Drexel work. Avoid “Anyone with a link” for anything involving Drexel content.</li>
-<li>Choose an access level:
-<ul>
-<li><strong>Can chat</strong> — they can use the project and its files, and see the chats.</li>
-<li><strong>Can edit</strong> — they can also change instructions and add or remove files.</li>
-</ul></li>
-<li>Have your partner open the shared project and continue <em>your</em> chat, or start a new one. See that they get the same context and can pick up where you left off.</li>
+<li>Give your assistant a small task that takes <strong>more than one step</strong>—for example: <em>“Read the uploaded report, pull out the three key findings, then draft a short email to my team about what they need to do.”</em></li>
+<li>If <strong>agent mode</strong> is enabled in your Drexel workspace, try a goal that involves the assistant looking something up or working through steps, and watch how it plans and pauses.</li>
+<li><strong>Review every step.</strong> Don’t accept the final output blind—check that each step did what you intended. The human-in-the-loop is the point.</li>
 </ol>
 </section>
-<section id="good-to-know" class="level4">
-<h4 class="anchored" data-anchor-id="good-to-know">Good to Know</h4>
+<section id="discussion" class="level4">
+<h4 class="anchored" data-anchor-id="discussion">Discussion</h4>
 <ul>
-<li>A shared project uses its <strong>own isolated memory</strong>—your personal ChatGPT memory is not used inside it, which keeps team work separate from your private chats.</li>
-<li>Teammates work by <strong>branching</strong> chats (remixing a thread to try a different direction), not editing the same message live at the same time.</li>
-<li>Keep sharing <strong>inside Drexel</strong>. Shared Projects are an Edu/Team/Enterprise feature—they’re built for exactly this kind of internal collaboration.</li>
-</ul>
-</section>
-<section id="reflection-1" class="level4">
-<h4 class="anchored" data-anchor-id="reflection-1">Reflection</h4>
-<ul>
-<li>What’s one ongoing team effort where a single shared context would save everyone re-explaining things?</li>
-<li>Who needs <strong>can edit</strong> versus <strong>can chat</strong>?</li>
+<li>Where would a reusable skill save your team the most repeated effort?</li>
+<li>For a multi-step task, where would you want the assistant to <strong>stop and check with you</strong> before continuing?</li>
 </ul>
 </section>
 </section>
-<div class="callout callout-style-default callout-tip callout-titled">
+<hr>
+</section>
+<section id="wrap-up-5-min" class="level2">
+<h2 class="anchored" data-anchor-id="wrap-up-5-min">Wrap-Up (5 min)</h2>
+<ul>
+<li><strong>Agentic</strong> means giving the AI a goal and standing guidance, and letting it carry out steps—with you reviewing.</li>
+<li>The building blocks are <strong>instructions, knowledge, tools, and skills</strong>. Most of the quality is in the instructions.</li>
+<li>A <strong>skill</strong> captures the know-how for a repeated task once, so you and your team reuse it.</li>
+<li><strong>Guardrails matter:</strong> keep a human in the loop, review each step, and never put data into a tool that isn’t approved for that classification.</li>
+</ul>
+<div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Project vs.&nbsp;Custom GPT, in practice
+<span class="screen-reader-only">Warning</span>Guardrails for Agentic Work
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If three people are co-writing a brief over several weeks, a <strong>Project</strong> holds the shared files, instructions, and history. If everyone separately needs to turn messy notes into a standard recap, a <strong>custom GPT</strong> (next activity) is the reusable tool for that one job. Many teams use both.</p>
+<p>The more an assistant does on its own, the more its mistakes can compound. Start small, review each step, and keep agentic tasks to low-stakes work until you trust the setup. Confirm data classification on Drexel’s <a href="https://drexel.edu/provost/ai/tools">AI Tools page</a> before any agent touches real documents.</p>
 </div>
 </div>
-<hr>
-</section>
-<section id="activity-3-custom-gpt-shared-prompt-library" class="level2 activity">
-<h2 class="activity anchored" data-anchor-id="activity-3-custom-gpt-shared-prompt-library">Activity 3: Custom GPT + Shared Prompt Library</h2>
-<section id="activity-3-custom-gpt-shared-prompt-library-1" class="level3 activity">
-<h3 class="anchored" data-anchor-id="activity-3-custom-gpt-shared-prompt-library-1">Activity 3: Custom GPT + Shared Prompt Library</h3>
-<div class="activity-meta">
-<p>Duration: ~6 minutes (quick demo / optional if time) | Format: Hands-on; build something your team can reuse</p>
-</div>
-<p><strong>Goal:</strong> Create one reusable internal team tool and start the habit that keeps it going.</p>
-<section id="part-a-build-a-custom-gpt-15-min" class="level4">
-<h4 class="anchored" data-anchor-id="part-a-build-a-custom-gpt-15-min">Part A — Build a Custom GPT (~15 min)</h4>
-<p>In ChatGPT Edu, create a custom GPT for a task your team repeats. Examples: a “Meeting Recap Assistant,” a “Plain-Language Rewriter,” a “Grant Reminder Drafter,” an “Onboarding Q&amp;A” assistant.</p>
-<ol type="1">
-<li>In ChatGPT Edu, start a new GPT and give it clear <strong>instructions</strong>—who it is, what it does, the format it should always use, and the tone.</li>
-<li>Optionally add <strong>reference files</strong> that are appropriate under Drexel’s ChatGPT Edu Terms of Use: a style guide, a template, a list of standard sections. Do not add PHI, sensitive PII, confidential HR material, protected contracts, or identifiable research data.</li>
-<li>Test it with two different inputs. Refine the instructions where it drifts.</li>
-<li>Note how to <strong>share</strong> it internally with your Drexel team or workspace. Do not share outside Drexel.</li>
-</ol>
-<p>Starter instruction template:</p>
-<blockquote class="blockquote">
-<p>You are a [role] for the DSPH [team]. When given [input], always produce [output] in this format: [structure]. Use a [tone] tone. If key information is missing, ask for it before producing the output. Never include sensitive or identifying data.</p>
-</blockquote>
-</section>
-<section id="part-b-start-a-shared-prompt-library-10-min" class="level4">
-<h4 class="anchored" data-anchor-id="part-b-start-a-shared-prompt-library-10-min">Part B — Start a Shared Prompt Library (~10 min)</h4>
-<ol type="1">
-<li>Open a shared document (Teams/SharePoint/OneDrive) the team can all reach.</li>
-<li>Add 2–3 prompts that worked for you, each with: a title, the prompt (with placeholders), and a one-line “use this when…”</li>
-<li>Agree on one norm: where it lives, and that anyone can add to it.</li>
-</ol>
-<p>A library entry looks like:</p>
-<blockquote class="blockquote">
-<p><strong>Title:</strong> Monthly project update <strong>Prompt:</strong> You are a research coordinator. Write a status update for [project] covering Done / In Progress / Needs Attention, under 150 words. <strong>Use when:</strong> Prepping for the monthly team check-in.</p>
-</blockquote>
-</section>
-</section>
-<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Why Sharing Beats Solo Use
+<span class="screen-reader-only">Note</span>Advanced option: Claude (PI-paid, not for Drexel data)
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>When one person finds a prompt that works and keeps it to themselves, the team gets one faster worker. When they put it in a shared library or a custom GPT, the team gets a repeatable standard. The second is where the real return is.</p>
+<p>For the most developed agentic features—a formal <strong>Skills</strong> system, <strong>Projects</strong>, and <strong>MCP</strong> connections to outside tools and data sources—<strong>Claude</strong> is the strongest option, and some PIs license it themselves. It is <strong>not approved for Drexel data</strong>: use it only with public or fully synthetic information. The concepts you practiced today transfer directly. See <a href="./tools.html">Tools &amp; Access</a>.</p>
 </div>
 </div>
 <hr>
 </section>
-<section id="wrap-up-2-min" class="level2">
-<h2 class="anchored" data-anchor-id="wrap-up-2-min">Wrap-Up (2 min)</h2>
+<section id="related" class="level2">
+<h2 class="anchored" data-anchor-id="related">Related</h2>
 <ul>
-<li>AI helps teams most by capturing meetings, structuring plans, and standardizing how the group works.</li>
-<li>A <strong>shared Project</strong> gives a team one context—files, instructions, and chats—so no one re-explains the basics.</li>
-<li><strong>Custom GPTs</strong> turn a good prompt into an internally shared tool.</li>
-<li>A <strong>shared prompt library</strong> is the easiest high-value habit to start today.</li>
+<li><a href="./workshop3.html">Workshop 3</a> — shared Projects and custom GPTs, the foundation this builds on</li>
+<li><a href="./tools.html">Tools &amp; Access</a> — data classification and the Claude caveat</li>
 </ul>
-<p><strong>Team commitment:</strong> before you leave, name one thing your team will set up this month—a shared Project, an internal custom GPT, a prompt library, or an AI-assisted meeting recap habit.</p>
-<hr>
-</section>
-<section id="where-to-go-next" class="level2">
-<h2 class="anchored" data-anchor-id="where-to-go-next">Where to Go Next</h2>
-<p>This series is the shared foundation. <strong>Specialized sessions for research staff</strong> who code and analyze data are coming in summer or fall (AI for data cleaning, Stata/R/Python, debugging, and reproducible analysis). The series also repeats in fall.</p>
-<p>See the <a href="./resources.html">Resources</a> page for guides and further learning, and reach out to <a href="mailto:daq26@drexel.edu">daq26@drexel.edu</a> with ideas for future topics.</p>
 
 
 </section>

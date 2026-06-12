@@ -13,10 +13,11 @@ Guides, references, and where to go deeper after the workshops
 
 - **[AI at Drexel](https://drexel.edu/provost/ai)** --- the university's central AI hub (start here).
 - **[AI Tools + data classification](https://drexel.edu/provost/ai/tools)** --- which tools are approved for which data (authoritative).
-- **ChatGPT Edu** --- university-licensed; primary tool for the workshops. [Request access](https://servicedesk.drexel.edu/TDClient/277/Portal/Requests/ServiceDet?ID=10760). See also [Tools & Access](tools.qmd).
-- **Microsoft Copilot** --- sign in with your Drexel M365 account; use protected mode.
-- **Zoom AI Companion** --- included with Drexel Zoom; meeting summaries, recaps, and action items.
-- **Adobe Creative Cloud Pro** --- Acrobat AI Assistant (PDFs) and Firefly (graphics); approved for **moderate-risk** data. Featured in [Workshop 4](workshop4.qmd).
+- **ChatGPT Edu** --- university-licensed; primary tool for the workshops. Use **GPT-5.5** when it appears in your model picker; otherwise use the current default/latest GPT model in the Drexel workspace. [Request access](https://servicedesk.drexel.edu/TDClient/277/Portal/Requests/ServiceDet?ID=10760). See also [Tools & Access](tools.qmd).
+- **Microsoft Copilot Chat with Enterprise Data Protection** --- sign in with your Drexel M365 account; Drexel lists it as usable with **High Risk Data** when Enterprise Data Protection is active.
+- **Microsoft 365 Copilot** --- integrated with Word, Excel, PowerPoint, Outlook, and Teams for licensed faculty and staff; Drexel lists it as usable with **High Risk Data**.
+- **Zoom AI Companion** --- included with Drexel Zoom; meeting summaries, recaps, and action items. Drexel lists it as **High Risk Data** when not recorded or transcribed and **Low Risk Data** when recorded or transcribed.
+- **Adobe Acrobat AI Assistant, PDF Spaces, Creative Cloud, and Express** --- document and visual tools; Drexel lists them as usable with **Moderate Risk Data**. Featured in [Workshop 4](workshop4.qmd).
 
 ## Drexel Policy & Training
 
@@ -32,7 +33,7 @@ Guides, references, and where to go deeper after the workshops
 
 **PTCF prompt recipe** --- Persona, Task, Context, Format. Name who the AI should be, what to do, the background it needs, and the shape of the output.
 
-**Data self-check** --- Is the data regulated? Is the tool approved for it? Could I use a de-identified or synthetic version? If any answer gives you pause, stop and check.
+**Data self-check** --- What is the data classification? Does Drexel list this tool and use case for that classification? Could I use a de-identified or synthetic version? If any answer gives you pause, stop and check.
 
 **Verify before it counts** --- AI can state wrong facts and invent citations. Check anything that goes into a real document or decision.
 
@@ -48,11 +49,11 @@ Guides, references, and where to go deeper after the workshops
 
 ## Public Health & AI --- Further Learning
 
-- **ASPPH --- AI for Public Health initiative** --- task force and framework on responsible, ethical AI use in public health research, practice, and education.
-- **Frontiers in Digital Health (2025)** --- "Embedding AI literacy in public health education" (the five-pillar framework).
-- **Mollick, E. (2024). _Co-Intelligence: Living and Working with AI._** --- accessible introduction to working with AI tools.
+- **[ASPPH --- AI for Public Health Framework Report](https://aspph.org/initiatives/ai-for-public-health/ai-framework-report/)** --- the association's framework for responsible, ethical AI use in public health research, practice, and education (the five-pillar framework).
+- **World Health Organization (2021). _Ethics and Governance of Artificial Intelligence for Health._** [Available online](https://www.who.int/publications/i/item/9789240029200) --- authoritative, freely available guidance; the executive summary (pp. 1--12) is a good starting point.
+- **Mollick, E. (2024). _Co-Intelligence: Living and Working with AI._** --- accessible introduction to working with AI tools. His blog, **[One Useful Thing](https://www.oneusefulthing.org/)**, has regular, practical updates on AI developments.
 
-## Research-Staff Sessions (Coming Later in Summer)
+## Research-Staff Sessions (Coming Summer or Fall)
 
 For research staff who code and analyze data, specialized sessions will cover:
 

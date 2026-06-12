@@ -23,28 +23,30 @@ By the end of this hour, you will be able to:
 
 1. Use **Acrobat AI Assistant** to summarize, query, and pull from long PDFs
 2. Use **Firefly / Adobe Express** to make a clean communication graphic without design software experience
-3. Know what the **moderate-risk data** approval does and doesn't allow
+3. Know what Drexel's **Moderate Risk Data** classification does and doesn't allow for Adobe tools
 4. Decide when an AI-generated visual is appropriate for published public health materials
+5. Spot representation bias in generated images and disclose AI-made visuals responsibly
 
 ## Run of Show
 
 | Time | Segment |
 |------|---------|
-| 0:00--0:10 | Overview: Adobe at Drexel, the two AI tools, data and "commercially safe" generation |
-| 0:10--0:32 | Activity 1: Acrobat AI Assistant on a real PDF |
-| 0:32--0:55 | Activity 2: A communication graphic in Firefly / Express |
-| 0:55--1:00 | Wrap-up and where visuals fit your work |
+| 0:00--0:08 | Overview: Adobe at Drexel, the two AI tools, data and "commercially safe" generation |
+| 0:08--0:23 | Ethics & Governance: representation, accuracy, and disclosure in AI media |
+| 0:23--0:42 | Activity 1: Acrobat AI Assistant on a real PDF |
+| 0:42--0:57 | Activity 2: A communication graphic in Firefly / Express |
+| 0:57--1:00 | Wrap-up and where visuals fit your work |
 
 ---
 
-## Overview (10 min)
+## Overview (8 min)
 
-**What you have.** Drexel provides **Adobe Creative Cloud Pro** with an AI assistant and **1,000 generative credits per month**. Two AI capabilities matter most for this audience:
+**What you have.** Drexel provides Adobe tools with AI features. Two AI capabilities matter most for this audience:
 
 - **Acrobat AI Assistant** --- works inside a PDF to summarize it, answer questions about it, and generate text (a summary, an email, key points) with links back to the source passages.
-- **Firefly / Adobe Express** --- generative image tools (text-to-image, generative fill and expand) and templates for flyers, infographics, social posts, and slide visuals. Generative actions draw down your monthly credits.
+- **Firefly / Adobe Express** --- generative image tools (text-to-image, generative fill and expand) and templates for flyers, infographics, social posts, and slide visuals. Drexel's tool page notes monthly generative-credit limits.
 
-**Data rule for these tools.** Adobe's tools are **approved for moderate-risk data** at Drexel. That covers internal and restricted material, but **not high-risk regulated data** (PHI, FERPA records, identifiable human-subjects data). Confirm the current classification on Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools) before putting real documents into Acrobat AI Assistant.
+**Data rule for these tools.** Drexel lists Acrobat AI Assistant, PDF Spaces, Creative Cloud, and Express as usable with **Moderate Risk Data**. Confirm the current classification on Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools) before putting real documents into Acrobat AI Assistant.
 
 **"Commercially safe" generation.** Adobe trains Firefly on licensed and public-domain content and positions its output as commercially safe to use. That matters when a graphic ends up in a published report, grant, or public campaign. Still review any generated image for accuracy and appropriateness---generative tools can produce misleading or off-tone visuals.
 
@@ -55,20 +57,41 @@ Reach for **Acrobat AI Assistant** when the work is trapped in a PDF. Reach for 
 
 ---
 
+## Ethics & Governance: Representation, Accuracy, and Disclosure in AI Media (15 min)
+
+*The thread continues. Earlier workshops dealt with AI text and team use. Making images and visuals adds a distinct set of risks, because pictures carry meaning---and bias---in ways that land fast and stick.*
+
+**Representation bias is the big one.** Image models learn from internet-scale pictures and reproduce the stereotypes in them. Ask for "a doctor," "an epidemiologist," "a health department director" and you'll often get the same narrow demographic; ask for "a low-income neighborhood" or "a person struggling with addiction" and you may get stigmatizing, stereotyped scenes. In public health this is not a small problem: biased visuals can misrepresent and stigmatize the very communities we serve, and signal who "belongs" in a profession. Generate a few of these in the activity and you'll see it directly.
+
+**Accuracy and misinformation.** A generated image can depict an event that never happened or a "chart" with invented numbers; Acrobat AI Assistant can misread a table or miss a caveat in a PDF. Never present AI-generated imagery as documentary evidence, and verify any figure or claim AI pulls from a document against the source.
+
+**Dignity and consent.** Avoid generating images that resemble identifiable real people or specific community members, and take extra care depicting vulnerable groups. The communities in your materials should be represented with accuracy and respect---ideally informed by the people themselves, the "nothing about us without us" principle.
+
+**Copyright and "commercially safe."** Adobe trains Firefly on licensed and public-domain content and positions output as commercially safe---a real advantage for published reports and campaigns. That is not a blank check: still review each image, don't prompt to mimic a living artist's style or real logos and brands, and confirm usage rights for anything consequential.
+
+**Disclosure.** Label AI-generated visuals according to Drexel and your unit's norms, especially for public-facing materials. Audiences increasingly expect to know when an image was AI-made.
+
+:::{.callout-important}
+## Quick Bias Self-Test
+Before using a generated image of people, ask: Would the community depicted recognize themselves with dignity, or as a stereotype? Generate the same prompt two or three times---if the demographics never vary, the model is showing you its bias, not reality.
+:::
+
+---
+
 ## Activity 1: Acrobat AI Assistant on a Real PDF {.activity}
 
 ::: {.activity}
 
 ### Activity 1: Acrobat AI Assistant on a Real PDF
 ::: {.activity-meta}
-Duration: ~22 minutes | Format: Individual, hands-on. Use a non-sensitive (or moderate-risk, approved) PDF.
+Duration: ~19 minutes | Format: Individual, hands-on. Use a non-sensitive PDF or a document appropriate for Adobe's Drexel-listed Moderate Risk Data classification.
 :::
 
 **Goal:** Turn a long document into something usable in minutes.
 
 #### Instructions
 
-1. Open a long PDF in Acrobat --- a public report, an article, a grant guideline, or de-identified internal document. **No high-risk data** (no PHI, no FERPA records).
+1. Open a long PDF in Acrobat --- a public report, an article, a grant guideline, or a document appropriate for Adobe's Moderate Risk Data classification. **No high-risk regulated data** unless Drexel explicitly approves that use case.
 2. Open **AI Assistant** and try each:
 
    - **Summarize:** "Give me a one-paragraph summary and then 5 key takeaways."
@@ -93,7 +116,7 @@ Duration: ~22 minutes | Format: Individual, hands-on. Use a non-sensitive (or mo
 
 ### Activity 2: A Communication Graphic in Firefly / Express
 ::: {.activity-meta}
-Duration: ~23 minutes | Format: Individual, hands-on
+Duration: ~15 minutes | Format: Individual, hands-on
 :::
 
 **Goal:** Produce a clean, shareable graphic for a real communication need.
@@ -124,11 +147,11 @@ Generated images can include inaccurate or stereotyped depictions. For anything 
 
 ---
 
-## Wrap-Up (5 min)
+## Wrap-Up (3 min)
 
 - **Acrobat AI Assistant** turns long PDFs into summaries, answers, and drafts---with sources to verify.
 - **Firefly / Express** makes communication graphics fast, using your monthly generative credits.
-- Both are cleared for **moderate-risk data**, not high-risk regulated data.
+- Drexel lists these tools as usable with **Moderate Risk Data**; confirm before using documents that contain confidential, regulated, or restricted information.
 - The tools produce drafts; accuracy, tone, and representation are your call.
 
 ---

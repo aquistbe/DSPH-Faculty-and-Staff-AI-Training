@@ -9,36 +9,37 @@ Which AI tools to use at DSPH, how to get them, and the data rules that come wit
 :::
 :::
 
-This page is the reference for the tools we use across all three workshops. The short version: **use Drexel-licensed tools for Drexel work, and never put regulated data into a consumer tool.**
+This page is the reference for the tools we use across all three workshops. The short version: **use Drexel-licensed tools for Drexel work, check the Drexel data classification for each tool, and never put regulated or sensitive data into a consumer tool.**
 
 Drexel's official hub is **[AI at Drexel](https://drexel.edu/provost/ai)** (Office of the Provost). The **[AI Tools page](https://drexel.edu/provost/ai/tools)** lists each tool's availability and the **data classification level** it's approved for---treat that page as the authoritative source if anything here and Drexel's guidance differ.
 
 ## At a Glance
 
-| Tool | Drexel access | OK for Drexel data? | Best for |
-|------|---------------|---------------------|----------|
-| **ChatGPT Edu** | University license | Yes --- within Drexel policy | Writing, summarizing, analysis, custom GPTs |
-| **Microsoft Copilot** | M365 with Drexel account | Yes --- in enterprise/protected mode | Office tasks (Word, Excel, Outlook, Teams) |
-| **Zoom AI Companion** | Included with Drexel Zoom | Yes --- within Drexel policy | Meeting summaries, recaps, action items |
-| **Adobe Creative Cloud Pro** (Acrobat AI Assistant, Firefly) | University license | Yes --- up to **moderate-risk** data | PDF summarizing & Q&A, graphics, infographics |
-| **Claude** | PI-purchased only | **No** | Personal/public tasks only; not Drexel data |
-| **ChatGPT (personal), Gemini, Perplexity** | Free/personal | **No** | Public or synthetic info only |
+| Tool | Drexel access | Drexel data classification | Best for |
+|------|---------------|----------------------------|----------|
+| **ChatGPT Edu** | Faculty and staff, Drexel workspace | Governed by **Drexel ChatGPT Edu Terms of Use** | Writing, summarizing, analysis, custom GPTs |
+| **Microsoft Copilot Chat with Enterprise Data Protection** | Students, faculty, and staff | **High Risk Data** when signed in with Drexel account; **Low Risk Data** otherwise | Web-based AI chat, drafting, summarizing |
+| **Microsoft 365 Copilot** | Faculty and staff, extra-cost license | **High Risk Data** | Word, Excel, PowerPoint, Outlook, Teams |
+| **Zoom AI Companion** | Faculty, staff, and students | **High Risk Data** when not recorded/transcribed; **Low Risk Data** when recorded/transcribed | Meeting summaries, recaps, action items |
+| **Adobe Acrobat AI Assistant / PDF Spaces** | Faculty, staff, and students | **Moderate Risk Data** | PDF summarizing, Q&A, cited answers |
+| **Adobe Creative Cloud / Express with Firefly** | Faculty, staff, and students; some licenses are extra cost | **Moderate Risk Data** | Graphics, infographics, communication visuals |
+| **ChatGPT personal, Claude, Gemini, Perplexity, other no-cost tools** | Personal or public access | **Low Risk Data only**; not Drexel-supported | Public or synthetic information only |
 
 :::{.callout-important}
 ## The One Rule to Remember
-Regulated data --- PHI, FERPA-protected student records, identifiable human-subjects data, anything covered by a data use agreement --- goes **only** into a tool explicitly approved for it. When unsure, de-identify or use synthetic data first.
+Regulated or sensitive information --- PHI, non-directory PII, confidential HR information, protected student records, identifiable human-subjects data, contract-protected data, or export-controlled data --- goes **only** into a tool and use case explicitly approved for it. When unsure, do not enter it. Use de-identified or synthetic data and ask for guidance.
 :::
 
 ## ChatGPT Edu (Primary Tool)
 
-ChatGPT Edu is the university-licensed version of ChatGPT. It is the default tool for most of what we do in these workshops.
+ChatGPT Edu is Drexel's institutionally supported version of ChatGPT. It is the default tool for most of what we do in these workshops.
 
 **What it gives you**
 
-- Access to current OpenAI models in a Drexel-managed workspace
+- Access to current OpenAI models in a Drexel-managed workspace. Use **GPT-5.5** when it appears in your model picker; otherwise use the current default/latest GPT model available in the Drexel workspace.
 - Prompts and uploaded content are **not used to train OpenAI's models**
 - Higher message limits than the free tier
-- The ability to build and share **custom GPTs** (reusable assistants with your own instructions and files)
+- The ability to build and share **custom GPTs** (reusable assistants with your own instructions and files) inside the Drexel workspace
 
 **How to get access**
 
@@ -46,14 +47,15 @@ ChatGPT Edu is **available now to Drexel faculty and professional staff** ([anno
 
 **Data rules**
 
-Approved for Drexel data within university policy. Check the [AI Tools page](https://drexel.edu/provost/ai/tools) for the exact data classification level it's cleared for. Still avoid entering regulated data (PHI, FERPA records, identifiable research data) unless that specific use has been approved. The license protects your data from model training; it does not override IRB protocols, data use agreements, or HIPAA.
+Use is governed by the [Drexel ChatGPT Edu Terms of Use](https://servicedesk.drexel.edu/TDClient/277/Portal/KB/ArticleDet?ID=20194). Drexel data is not used to train OpenAI models, but the Terms prohibit sensitive information that Drexel must protect by law, contract, or policy. Do **not** enter PHI, non-directory PII, confidential HR information, protected contracts, export-controlled data, or other restricted information. Student directory information may be used when not marked confidential, but use caution with student work and records. ChatGPT Edu does not override IRB protocols, data use agreements, HIPAA, FERPA, or University policy.
 
-## Microsoft Copilot (Office Workflows)
+## Microsoft Copilot
 
-Copilot is built into the Microsoft 365 apps you already use. It is strongest when the work lives in Word, Excel, Outlook, Teams, or PowerPoint.
+Drexel provides two Copilot experiences that matter for this training: **Copilot Chat with Enterprise Data Protection** and **Microsoft 365 Copilot** integrated into Word, Excel, PowerPoint, Outlook, and Teams. We will use both where available.
 
 **What it gives you**
 
+- Web-based Copilot Chat for secure drafting, summarizing, and brainstorming when signed in with a Drexel account
 - Draft and rewrite in Word; summarize long documents
 - Summarize email threads and draft replies in Outlook
 - Generate formulas, summarize, and analyze in Excel
@@ -61,11 +63,11 @@ Copilot is built into the Microsoft 365 apps you already use. It is strongest wh
 
 **How to get access**
 
-Sign in to Microsoft 365 with your Drexel account. Confirm you are in the protected ("enterprise data protection") mode --- look for the indicator showing your data is protected before using it with university content.
+Sign in with your Drexel account. For Copilot Chat, confirm that Enterprise Data Protection is active before using it with Drexel content. For Word, Excel, PowerPoint, Outlook, and Teams integration, confirm that you have the Microsoft 365 Copilot license enabled.
 
 **Data rules**
 
-In protected mode with your Drexel account, prompts and data stay within Drexel's Microsoft tenant and are not used for training. Confirm the protected-mode indicator is showing. Do not use a personal Microsoft account for Drexel work.
+Drexel's AI Tools page lists Copilot Chat with Enterprise Data Protection as usable with **High Risk Data** when signed in with a Drexel account, and **Low Risk Data** otherwise. Microsoft 365 Copilot is listed as usable with **High Risk Data** for faculty and staff with the extra-cost license. Do not use a personal Microsoft account for Drexel work.
 
 ## Zoom AI Companion (Meetings)
 
@@ -84,40 +86,32 @@ It's included with Drexel's Zoom license at no extra cost. The meeting host turn
 
 **Data rules**
 
-Zoom states it does **not use your meeting audio, video, chat, or shared content to train Zoom's or third-party AI models**. As with any tool, follow Drexel policy: be mindful of recording and summarizing meetings that involve regulated or confidential information, and let participants know when AI Companion is on. Approved for Drexel use within policy.
+Zoom states it does **not use your meeting audio, video, chat, or shared content to train Zoom's or third-party AI models**. Drexel lists Zoom AI Companion as usable with **High Risk Data** when a meeting is not recorded or transcribed, and **Low Risk Data** when it is recorded or transcribed. Notify participants when AI Companion is active and be careful with meetings that involve regulated or confidential information.
 
 ## Adobe Creative Cloud Pro (Documents & Visuals)
 
-Drexel provides **Adobe Creative Cloud Pro** with an AI assistant and **1,000 generative credits per month**. Two AI features are most useful here.
+Drexel provides Adobe tools with AI features. Acrobat AI Assistant and PDF Spaces are useful for document work; Creative Cloud and Express use Firefly for visuals.
 
 **What it gives you**
 
 - **Acrobat AI Assistant** --- summarize long PDFs, ask questions about them, and draft text (summaries, emails, key points) with citations back to the source passages.
-- **Firefly / Adobe Express** --- generative image tools (text-to-image, generative fill and expand) and templates for flyers, infographics, social posts, and slide visuals. Generative actions use your monthly credits. Adobe trains Firefly on licensed and public-domain content and positions output as commercially safe.
+- **Firefly / Adobe Express** --- generative image tools (text-to-image, generative fill and expand) and templates for flyers, infographics, social posts, and slide visuals. Drexel's tool page notes monthly generative-credit limits. Adobe trains Firefly on licensed and public-domain content and positions output as commercially safe.
 
 **How to get access**
 
-Included with your Drexel Adobe Creative Cloud Pro license. Sign in with your Drexel account.
+Sign in with your Drexel account. Some Adobe licenses or premium features may involve extra cost.
 
 **Data rules**
 
-Approved for data **up to moderate risk** --- internal and restricted material, but **not high-risk regulated data** (PHI, FERPA records, identifiable human-subjects data). Confirm the current classification on the [AI Tools page](https://drexel.edu/provost/ai/tools) before putting real documents into Acrobat AI Assistant. Review generated images before publishing---they can be inaccurate or misrepresent people and communities.
+Drexel lists Adobe Acrobat AI Assistant, PDF Spaces, Creative Cloud, and Express as usable with **Moderate Risk Data**. Confirm the current classification on the [AI Tools page](https://drexel.edu/provost/ai/tools) before putting real documents into Acrobat AI Assistant. Review generated images before publishing---they can be inaccurate or misrepresent people and communities.
 
 This tool is the focus of [Workshop 4](workshop4.qmd).
 
-## Claude (PI-Purchased, No Drexel Data)
+## Consumer and PI-Purchased Tools
 
-Claude (by Anthropic) is a capable assistant that some find strong for long-form writing and reasoning. **Drexel does not provide a Claude license**, and Claude is **not approved for Drexel data**.
+Claude, personal ChatGPT, Gemini, Perplexity, Consensus, OpenEvidence, Midjourney, and similar tools may be useful for public information, learning, and fully synthetic examples. They are **not Drexel-supported tools** unless separately approved through Drexel's review process.
 
-- Individual PIs may purchase their own Claude/Anthropic subscription with grant or personal funds.
-- Even with a paid subscription, **do not enter Drexel data** --- no PHI, no FERPA records, no identifiable research data, no internal documents covered by an agreement.
-- Use it only with public information or fully synthetic/de-identified material.
-
-We mention Claude so you know the option exists and know its limits. For Drexel work, reach for ChatGPT Edu or Copilot.
-
-## Other Consumer Tools
-
-Free ChatGPT, Gemini, Perplexity, and similar tools are fine for public, non-sensitive tasks (learning, brainstorming on public topics, drafting from non-confidential material). They are **not approved for Drexel data**. Assume anything you type may be retained or used for training unless a Drexel agreement says otherwise.
+Use these tools with **Low Risk Data only**. Drexel notes that data shared with no-cost tools may be used for model training. If you want to purchase or use a tool at a higher data classification level, complete Drexel's Third Party Risk Assessment process first.
 
 ## Drexel Policy & Support
 

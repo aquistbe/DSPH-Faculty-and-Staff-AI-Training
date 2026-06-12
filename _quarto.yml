@@ -23,6 +23,8 @@ website:
         text: "Workshop 3"
       - href: workshop4.qmd
         text: "Workshop 4"
+      - href: workshop5.qmd
+        text: "Workshop 5"
       - href: tools.qmd
         text: "Tools & Access"
       - href: resources.qmd

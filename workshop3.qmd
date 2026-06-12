@@ -18,30 +18,59 @@ By the end of this hour, you will be able to:
 
 1. Turn meeting notes into recaps, decisions, and action items the team can use
 2. Use AI to draft and pressure-test a project plan
-3. Build a **custom GPT** in ChatGPT Edu that your team can reuse
-4. Start a shared prompt library so the whole group benefits from what works
+3. Set up a **shared Project** in ChatGPT Edu---files, instructions, and chats your team works in together
+4. Build a **custom GPT** in ChatGPT Edu that your team can reuse internally
+5. Start a shared prompt library so the whole group benefits from what works
+6. Apply data-governance and consent rules to shared and team AI use
 
 ## Run of Show
 
 | Time | Segment |
 |------|---------|
-| 0:00--0:10 | Overview: from solo use to team use |
-| 0:10--0:28 | Activity 1: Meetings and project planning |
-| 0:28--0:53 | Activity 2: Build a custom GPT + shared prompt library |
-| 0:53--1:00 | Wrap-up and a team commitment |
+| 0:00--0:08 | Overview: from solo use to team use |
+| 0:08--0:22 | Ethics & Governance: data, consent, and equity in team use |
+| 0:22--0:35 | Activity 1: Meetings and project planning |
+| 0:35--0:52 | Activity 2: Create and share a Project |
+| 0:52--0:58 | Activity 3: Custom GPT + shared prompt library (quick / optional) |
+| 0:58--1:00 | Wrap-up and a team commitment |
 
 ---
 
-## Overview (10 min)
+## Overview (8 min)
 
 The first two workshops were about you and a tool. This one is about your **team**. AI helps most on shared work when it does three things: captures what happened (meeting recaps, decisions), structures what's next (plans, task lists), and standardizes how the group works (shared prompts and custom assistants so everyone gets the same quality, not just the early adopters).
 
-Two ideas carry the session:
+Three ideas carry the session:
 
-- **Custom GPTs** (in ChatGPT Edu) are reusable assistants you set up once with your own instructions and reference files, then share with colleagues---so a good prompt becomes a team tool.
+- **Shared Projects** (in ChatGPT Edu) are a team workspace: one place that holds related chats, uploaded files, and custom instructions. Everyone invited works in the same context, so ChatGPT's answers draw on the group's shared files and instructions and a teammate can pick up where you left off.
+- **Custom GPTs** (in ChatGPT Edu) are reusable assistants you set up once with your own instructions and reference files, then share with colleagues inside the Drexel workspace---so a good prompt becomes a team tool.
 - A **shared prompt library** is just a running document of prompts that worked. It's the cheapest, highest-return habit a team can start.
 
-For meetings specifically, **Zoom AI Companion** (included with Drexel Zoom) can generate the summary and action items for you automatically---a natural starting point for the recap work below. Same data rules apply across all tools: ChatGPT Edu, Copilot, and Zoom AI Companion for Drexel work; nothing regulated unless approved. See [Tools & Access](tools.qmd).
+:::{.callout-note}
+## Project vs. Custom GPT --- which is which?
+A **Project** is a shared *workspace* you and colleagues work inside together (shared chats, files, and instructions). A **custom GPT** is a reusable *assistant* you configure once and call on for a repeated task. Use a Project when a team is collaborating on an ongoing body of work; use a custom GPT when you want a consistent tool for a specific job.
+:::
+
+For meetings specifically, **Zoom AI Companion** (included with Drexel Zoom) can generate the summary and action items for you automatically---a natural starting point for the recap work below. Drexel lists Zoom AI Companion as usable with High Risk Data when a meeting is not recorded or transcribed, and Low Risk Data when it is recorded or transcribed. Same principle across tools: match the tool and use case to Drexel's data classification. See [Tools & Access](tools.qmd).
+
+---
+
+## Ethics & Governance: Data, Consent, and Equity in Team Use (14 min)
+
+*The thread continues. Workshops 1 and 2 covered individual use. The moment AI use becomes shared, new questions appear: whose data is this, who agreed to it, and who has access?*
+
+**Shared means visible.** When you upload a file to a shared Project or custom GPT, everyone invited can see it---and the file inherits the tool's data classification. Before adding anything, ask two questions: *Is everyone in this space cleared to see this?* and *Is this tool approved for this data classification?* A shared workspace is convenient precisely because it pools information, which is exactly why it needs more care, not less. Institutional rules still apply: data use agreements, IRB protocols, and HR/contract confidentiality don't pause because the work is in ChatGPT.
+
+**Consent and notification in meetings.** AI meeting tools record, transcribe, and summarize what people say. Tell participants when AI Companion is on, and recognize that some conversations---personnel matters, sensitive community discussions, anything under a confidentiality expectation---should not be AI-summarized at all. Notification is a courtesy and, increasingly, an expectation.
+
+**"De-identified" is not always anonymous.** When teams pool data into a shared space, remember that small cell sizes, unusual variable combinations, and geography plus demographics can re-identify people---"1 case of a rare condition in one ZIP code in adults over 85" is not anonymous. Strip or coarsen identifying detail before it goes into any tool, even an approved one.
+
+**Equity of access is part of governance.** If only a few staff have access to these tools or know how to use them, you create a two-tier team---and, scaled up, a two-tier school. Sharing Projects, prompt libraries, and what you learn is not just efficiency; it's how you keep capability from concentrating in a few early adopters. This is the equity pillar of the [ASPPH framework](resources.qmd) applied locally.
+
+:::{.callout-important}
+## The Shared-Space Test
+Before anything goes into a shared Project or team tool: *Is everyone here cleared to see it? Is the tool approved for this data? Have the people in it consented to AI use?* All three, or it doesn't go in.
+:::
 
 ---
 
@@ -51,16 +80,16 @@ For meetings specifically, **Zoom AI Companion** (included with Drexel Zoom) can
 
 ### Activity 1: Meetings and Project Planning
 ::: {.activity-meta}
-Duration: ~18 minutes | Format: Hands-on, individual or in pairs
+Duration: ~13 minutes | Format: Hands-on, individual or in pairs
 :::
 
-**Goal:** Use AI to turn raw inputs into the artifacts a project actually runs on. Use non-sensitive content.
+**Goal:** Use AI to turn raw inputs into the artifacts a project actually runs on. Use non-sensitive content or content appropriate for the tool under Drexel's classification.
 
 #### Part A --- From Notes to a Usable Recap (~8 min)
 
 *Tip: if your meeting was on Zoom, **Zoom AI Companion** can produce a summary and action items automatically---start from that instead of raw notes.*
 
-1. Paste messy meeting notes (real but non-sensitive, or use the sample below) into ChatGPT Edu.
+1. Paste messy meeting notes (real but non-sensitive, or use the sample below) into ChatGPT Edu. Use **GPT-5.5** if it is available; otherwise use the current default/latest GPT model in the Drexel workspace.
 2. Use this prompt:
 
    > Turn these notes into three sections: (1) Summary in 3 bullets, (2) Decisions made, (3) Action items as a table with owner and due date. Flag anything that's unclear or unassigned.
@@ -86,25 +115,74 @@ Duration: ~18 minutes | Format: Hands-on, individual or in pairs
 
 ---
 
-## Activity 2: Build a Custom GPT + Shared Prompt Library {.activity}
+## Activity 2: Create and Share a Project {.activity}
 
 ::: {.activity}
 
-### Activity 2: Build a Custom GPT + Shared Prompt Library
+### Activity 2: Create and Share a Project
 ::: {.activity-meta}
-Duration: ~25 minutes | Format: Hands-on; build something your team can reuse
+Duration: ~17 minutes | Format: Hands-on; pair up so you can share with someone in the room
 :::
 
-**Goal:** Create one reusable team tool and start the habit that keeps it going.
+**Goal:** See how a Project gives a team one shared context---files, instructions, and chats---and how sharing actually works.
+
+#### Part A --- Build a Project (~10 min)
+
+1. In ChatGPT Edu, create a new **Project** and name it for a real piece of team work (e.g., "Heat Response Brief," "New Staff Onboarding," "Grant XYZ Progress Report").
+2. Add **project instructions**---the standing context everyone in the project should get automatically. For example:
+
+   > This project supports the DSPH [team] working on [goal]. Always write in plain, non-technical language. When asked for a summary, use bullets and a one-line bottom line. Flag anything that needs a human decision. Never include identifying or sensitive data.
+
+3. Upload one or two **reference files** that are appropriate under Drexel's ChatGPT Edu Terms of Use---a template, a style guide, a public report. No PHI, sensitive PII, confidential HR or contract material, or identifiable research data.
+4. Start a chat *inside the project* and ask something that should draw on your files: *"Using the uploaded template, draft a project update for this month."* Notice it uses the project's files and instructions without you re-pasting them.
+
+#### Part B --- Share It (~8 min)
+
+1. Open the project's **share** settings. Invite your partner (or a colleague) using **"Only those invited"**---the right choice for Drexel work. Avoid "Anyone with a link" for anything involving Drexel content.
+2. Choose an access level:
+   - **Can chat** --- they can use the project and its files, and see the chats.
+   - **Can edit** --- they can also change instructions and add or remove files.
+3. Have your partner open the shared project and continue *your* chat, or start a new one. See that they get the same context and can pick up where you left off.
+
+#### Good to Know
+
+- A shared project uses its **own isolated memory**---your personal ChatGPT memory is not used inside it, which keeps team work separate from your private chats.
+- Teammates work by **branching** chats (remixing a thread to try a different direction), not editing the same message live at the same time.
+- Keep sharing **inside Drexel**. Shared Projects are an Edu/Team/Enterprise feature---they're built for exactly this kind of internal collaboration.
+
+#### Reflection
+
+- What's one ongoing team effort where a single shared context would save everyone re-explaining things?
+- Who needs **can edit** versus **can chat**?
+
+:::
+
+:::{.callout-tip}
+## Project vs. Custom GPT, in practice
+If three people are co-writing a brief over several weeks, a **Project** holds the shared files, instructions, and history. If everyone separately needs to turn messy notes into a standard recap, a **custom GPT** (next activity) is the reusable tool for that one job. Many teams use both.
+:::
+
+---
+
+## Activity 3: Custom GPT + Shared Prompt Library {.activity}
+
+::: {.activity}
+
+### Activity 3: Custom GPT + Shared Prompt Library
+::: {.activity-meta}
+Duration: ~6 minutes (quick demo / optional if time) | Format: Hands-on; build something your team can reuse
+:::
+
+**Goal:** Create one reusable internal team tool and start the habit that keeps it going.
 
 #### Part A --- Build a Custom GPT (~15 min)
 
 In ChatGPT Edu, create a custom GPT for a task your team repeats. Examples: a "Meeting Recap Assistant," a "Plain-Language Rewriter," a "Grant Reminder Drafter," an "Onboarding Q&A" assistant.
 
 1. In ChatGPT Edu, start a new GPT and give it clear **instructions**---who it is, what it does, the format it should always use, and the tone.
-2. Optionally add **reference files** (non-sensitive): a style guide, a template, a list of standard sections.
+2. Optionally add **reference files** that are appropriate under Drexel's ChatGPT Edu Terms of Use: a style guide, a template, a list of standard sections. Do not add PHI, sensitive PII, confidential HR material, protected contracts, or identifiable research data.
 3. Test it with two different inputs. Refine the instructions where it drifts.
-4. Note how to **share** it with your team's workspace.
+4. Note how to **share** it internally with your Drexel team or workspace. Do not share outside Drexel.
 
 Starter instruction template:
 
@@ -131,18 +209,19 @@ When one person finds a prompt that works and keeps it to themselves, the team g
 
 ---
 
-## Wrap-Up (7 min)
+## Wrap-Up (2 min)
 
 - AI helps teams most by capturing meetings, structuring plans, and standardizing how the group works.
-- **Custom GPTs** turn a good prompt into a shared tool.
+- A **shared Project** gives a team one context---files, instructions, and chats---so no one re-explains the basics.
+- **Custom GPTs** turn a good prompt into an internally shared tool.
 - A **shared prompt library** is the easiest high-value habit to start today.
 
-**Team commitment:** before you leave, name one thing your team will set up this month---a custom GPT, a prompt library, or an AI-assisted meeting recap habit.
+**Team commitment:** before you leave, name one thing your team will set up this month---a shared Project, an internal custom GPT, a prompt library, or an AI-assisted meeting recap habit.
 
 ---
 
 ## Where to Go Next
 
-This series is the shared foundation. **Specialized sessions for research staff** who code and analyze data are coming later in summer (AI for data cleaning, Stata/R/Python, debugging, and reproducible analysis). The series also repeats in fall.
+This series is the shared foundation. **Specialized sessions for research staff** who code and analyze data are coming in summer or fall (AI for data cleaning, Stata/R/Python, debugging, and reproducible analysis). The series also repeats in fall.
 
 See the [Resources](resources.qmd) page for guides and further learning, and reach out to [daq26@drexel.edu](mailto:daq26@drexel.edu) with ideas for future topics.
