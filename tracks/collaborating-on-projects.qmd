@@ -1,0 +1,117 @@
+---
+title: "Collaborating on Projects"
+---
+
+::: {.topic-badges}
+[Moderate]{.level-badge .level-moderate} · **Communication & Dissemination** track · ~1 hour, self-paced
+:::
+
+[← Back to the Communication & Dissemination track](communication.qmd){.track-back}
+
+*Give your team one shared AI context — files, instructions, and reusable tools — so no one re-explains the basics.*
+
+## What you'll be able to do
+
+- Set up a shared ChatGPT Edu **Project** (files, instructions, chats) for a team
+- Build a **custom GPT** your team reuses
+- Apply data, consent, and access rules to shared AI use
+
+## Overview
+
+A shared **Project** in ChatGPT Edu gives a team one place for related chats, files, and instructions, so everyone works from the same context and a colleague can pick up where you left off. **Custom GPTs** turn a good prompt into a reusable team tool, and a **shared prompt library** spreads what works. This is the self-paced companion to [Workshop 3 — Collaboration on Projects](../workshop3.qmd); do that workshop for the live, hands-on version.
+
+Shared use raises new questions: whose data is this, who agreed to it, and who has access. Keep sharing **inside Drexel** ("Only those invited"), keep PHI and sensitive or identifiable data out of shared files, and match the tool to Drexel's data classification.
+
+## Practice activities
+
+```{=html}
+<details class="activity"><summary>Activity 1 · Moderate — Build and share a Project</summary>
+```
+
+**Time** ~18 min · **Tools** ChatGPT Edu
+
+**Goal.** Create a shared team workspace a colleague can step into.
+
+**Setup.** A real team effort (a brief, a report, an onboarding guide). Use non-sensitive or approved files only.
+
+**Steps.**
+
+1. Create a **Project** and add **project instructions** — the standing context everyone should get automatically:
+
+   > This project supports the DSPH [team] working on [goal]. Always write in plain, non-technical language. For summaries, use bullets and a one-line bottom line. Flag anything that needs a human decision. Never include identifying or sensitive data.
+
+2. Upload one or two **approved** reference files (a template, a style guide, a public report). Start a chat *inside* the project: *“Using the uploaded template, draft a project update for this month.”*
+
+3. Open **share** settings and invite a colleague with **“Only those invited.”** Choose **Can chat** or **Can edit**, and have them continue your chat.
+
+**Expected result.** A shared Project your partner can pick up with the same context.
+
+**Check your work.** Does the partner get your files and instructions without re-pasting anything?
+
+**Common pitfalls.** Use **“Only those invited,”** never “Anyone with a link,” for Drexel work. No PHI or sensitive data in shared files. Keep sharing inside Drexel.
+
+**Stretch (optional).** Add a second reference file and watch how the project's answers change.
+
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 2 · Moderate — Build a reusable custom GPT</summary>
+```
+
+**Time** ~15 min · **Tools** ChatGPT Edu
+
+**Goal.** Turn a repeated team task into a shared tool.
+
+**Setup.** A task your team does over and over — a standard recap, a plain-language rewriter, a grant-deadline checker.
+
+**Steps.**
+
+1. Create a **custom GPT** with clear instructions:
+
+   > You are a [role] for the DSPH [team]. When given [input], always produce [output] in this format: [structure]. Use a [tone] tone. If key information is missing, ask for it first. Never include sensitive or identifying data.
+
+2. Optionally add an **approved** reference file (a style guide or template). Test with two different inputs; refine where it drifts.
+
+3. Note how to share it **inside your Drexel workspace** — and don't share outside Drexel.
+
+**Expected result.** A working custom GPT your team can reuse.
+
+**Check your work.** Does it hold the format and tone across two very different inputs?
+
+**Common pitfalls.** Don't add PHI, sensitive PII, or confidential material to GPT files. Share inside Drexel only.
+
+**Stretch (optional).** Start a shared prompt library with 2–3 entries (title, prompt with placeholders, "use when").
+
+```{=html}
+</details>
+```
+
+## Check your readiness
+
+Answer these, then check — your score suggests whether to dive in or skim the readings first.
+
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions":[{"q":"A shared Project gives a team…","options":["One context (files, instructions, chats) everyone shares","A private chatbot","A spreadsheet","Nothing new"],"answer":0,"explain":"A Project holds the team's shared chats, files, and instructions in one place."},{"q":"When sharing Drexel work, you should choose…","options":["\"Only those invited\"","\"Anyone with a link\"","Public","Email it to everyone"],"answer":0,"explain":"Invite-only sharing is the right choice for Drexel content."},{"q":"What stays out of shared Project and custom-GPT files?","options":["PHI and sensitive or identifiable data","Templates","Style guides","Public reports"],"answer":0,"explain":"Keep protected and identifiable data out of shared AI files."}]}
+</script>
+</div>
+
+## Recommended readings
+
+From the AI readings library (ask the facilitator for access):
+
+- **Introducing Workspace Agents in ChatGPT (OpenAI)** — where shared, team-oriented AI features are heading.
+- **Interaction Models: A Scalable Approach to Human-AI Collaboration** — how to structure people-plus-AI work.
+- **CoPaper.AI — Your AI Research Co-Author** — AI as a collaborator on shared writing.
+
+## Useful resources
+
+- [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with the data rules.
+- [Workshop 3 — Collaboration on Projects](../workshop3.qmd) — the live workshop this builds on.
+
+::: {.callout-warning}
+## Data rules
+Keep sharing **inside Drexel** and keep PHI or sensitive/identifiable data out of shared Projects and custom-GPT files. Match the tool to Drexel's data classification. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+:::

@@ -3,7 +3,7 @@ title: "Communication & Dissemination Track"
 ---
 
 ::: {.topic-badges}
-Self-paced track · 5 topics · novice → advanced
+Self-paced track · 7 topics · novice → advanced
 :::
 
 [← All self-paced tracks](../tracks.qmd){.track-back}
@@ -25,6 +25,8 @@ Use AI to write, translate, and disseminate public-health work — from grants a
 | 3 | [Literature Review & Evidence Synthesis](literature-review.qmd) | [Moderate]{.level-badge .level-moderate} | Build searches, screen abstracts, and summarize — verifying every citation |
 | 4 | [Multilingual & Culturally-Adapted Materials](multilingual-materials.qmd) | [Moderate]{.level-badge .level-moderate} | Translate and culturally adapt outreach, with back-translation QA |
 | 5 | [Manuscript Preparation & Peer Review](manuscript-peer-review.qmd) | [Advanced]{.level-badge .level-advanced} | Draft sections and reviewer responses; respect peer-review confidentiality |
+| 6 | [AI for Design & Visual Communication](design-visual-communication.qmd) | [Moderate]{.level-badge .level-moderate} | Make graphics with Claude, Canva, Figma, and Adobe — matched to the data level |
+| 7 | [Collaborating on Projects](collaborating-on-projects.qmd) | [Moderate]{.level-badge .level-moderate} | Set up shared Projects and custom GPTs for a team (companion to Workshop 3) |
 
 ::: {.callout-warning}
 ## Data rules apply throughout

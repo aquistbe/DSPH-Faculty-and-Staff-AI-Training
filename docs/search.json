@@ -672,200 +672,298 @@
     "text": "Useful resources\n\nML CO2 Impact — estimate the carbon of compute.\n\n\n\n\n\n\n\nWarningData rules\n\n\n\nNo sensitive data needed here; this topic is about awareness and proportionate use. See Tools & Access and Drexel’s AI Tools page."
   },
   {
-    "objectID": "tracks/data-security-classification.html",
-    "href": "tracks/data-security-classification.html",
-    "title": "Data Security & Classification Deep-Dive",
+    "objectID": "tracks/de-identification-synthetic-data.html",
+    "href": "tracks/de-identification-synthetic-data.html",
+    "title": "De-identification & Synthetic Data",
     "section": "",
-    "text": "Novice · Governance, Ethics & Equity track · ~1 hour, self-paced\n← Back to the Governance, Ethics & Equity track\nThe rule under every other topic: the right tool for the data’s sensitivity."
+    "text": "Moderate · Methods & Study Design track · ~1 hour, self-paced\n← Back to the Methods & Study Design track\nTwo ways to work safely with sensitive data: remove identifiers, or generate realistic fakes."
   },
   {
-    "objectID": "tracks/data-security-classification.html#what-youll-be-able-to-do",
-    "href": "tracks/data-security-classification.html#what-youll-be-able-to-do",
-    "title": "Data Security & Classification Deep-Dive",
+    "objectID": "tracks/de-identification-synthetic-data.html#what-youll-be-able-to-do",
+    "href": "tracks/de-identification-synthetic-data.html#what-youll-be-able-to-do",
+    "title": "De-identification & Synthetic Data",
     "section": "What you’ll be able to do",
-    "text": "What you’ll be able to do\n\nClassify data by sensitivity (public → high-risk)\nMatch each tool to Drexel’s approved classification\nDe-identify or substitute when a tool isn’t cleared"
+    "text": "What you’ll be able to do\n\nApply de-identification standards (e.g., HIPAA Safe Harbor)\nGenerate synthetic data for sharing and teaching\nRecognize re-identification and fidelity limits"
   },
   {
-    "objectID": "tracks/data-security-classification.html#overview",
-    "href": "tracks/data-security-classification.html#overview",
-    "title": "Data Security & Classification Deep-Dive",
+    "objectID": "tracks/de-identification-synthetic-data.html#overview",
+    "href": "tracks/de-identification-synthetic-data.html#overview",
+    "title": "De-identification & Synthetic Data",
     "section": "Overview",
-    "text": "Overview\nEvery AI decision starts with one question: how sensitive is this data, and is this tool approved for it? Drexel publishes which tools may be used with which data levels. Identifiable records, PHI, protected student data, and contract material have strict limits.\nWhen a tool isn’t cleared for your data, the move is to de-identify, use synthetic data, or switch to an approved tool — not to make an exception."
+    "text": "Overview\nDe-identification removes identifiers so data can be used more freely; synthetic data generates realistic but fake records. Both let you teach, demo, and prototype without exposing real people — your course already uses synthetic crash data this way.\nNeither is magic. De-identified data can sometimes be re-identified by combining fields, and synthetic data can leak patterns or miss real structure. Check both before relying on them."
   },
   {
-    "objectID": "tracks/data-security-classification.html#practice-activities",
-    "href": "tracks/data-security-classification.html#practice-activities",
-    "title": "Data Security & Classification Deep-Dive",
+    "objectID": "tracks/de-identification-synthetic-data.html#practice-activities",
+    "href": "tracks/de-identification-synthetic-data.html#practice-activities",
+    "title": "De-identification & Synthetic Data",
     "section": "Practice activities",
-    "text": "Practice activities\nActivity 1 · Novice — Classify and match\nTime ~15 min · Tools Drexel AI Tools page + ChatGPT Edu\nGoal. Map your data to the right tools.\nSetup. List three data types you actually work with.\nSteps.\n\nFor each, note its sensitivity (public → high-risk) and which Drexel-approved tools allow it (check the AI Tools page).\nSanity-check with AI:\n\nI have these data types and these tools available. Which uses are appropriate and which aren’t, based on data sensitivity? [types] [tools]\n\nFlag any current habit that doesn’t match.\n\nExpected result. A data-to-tool matrix and a list of habits to change.\nCheck your work. Verify against Drexel’s official AI Tools page, not the AI’s guess.\nCommon pitfalls. “It’s probably fine” isn’t a classification. When unsure, treat data as more sensitive.\nStretch (optional). Write your team’s one-page “what goes where” cheat sheet.\n\nActivity 2 · Novice — Substitute safely\nTime ~12 min · Tools ChatGPT Edu (fabricated data only)\nGoal. Make sensitive data safe for a given tool.\nSetup. A fabricated sensitive example.\nSteps.\n\nDe-identify it:\n\nHere is a record with identifiers. Produce a de-identified version safe for a Low-Risk tool, and list what you removed or generalized. [fabricated record]\n\nCheck: could the remaining fields still identify someone in combination?\nDecide whether de-identification is enough or you need an approved tool.\n\nExpected result. A de-identified version plus a re-identification check.\nCheck your work. Quasi-identifiers (age + ZIP + date) can re-identify — scrutinize them.\nCommon pitfalls. Removing names isn’t de-identification; combinations matter.\nStretch (optional). Try generating fully synthetic data instead (see the Methods track)."
+    "text": "Practice activities\nActivity 1 · Moderate — De-identify a sample\nTime ~15 min · Tools ChatGPT Edu (fabricated data only)\nGoal. Apply Safe Harbor-style de-identification and test re-identification risk.\nSetup. A small fabricated sample with quasi-identifiers (age, ZIP, admission date, sex).\nSteps.\n\nDe-identify:\n\nApply HIPAA Safe Harbor-style de-identification to this fabricated dataset (remove or generalize identifiers). Explain each change. [sample]\n\nAttack it:\n\nNow act as an adversary: could you re-identify anyone by combining the remaining fields with public data? Where’s the risk?\n\nDecide whether it’s safe enough or needs more generalization.\n\nExpected result. A de-identified sample and an adversarial risk assessment.\nCheck your work. Age + ZIP + date is a classic re-identification combination — scrutinize it.\nCommon pitfalls. Removing direct identifiers isn’t enough; quasi-identifiers re-identify. Use fabricated data here.\nStretch (optional). Generalize further (age bands, 3-digit ZIP) and re-assess.\n\nActivity 2 · Moderate — Generate and stress-test synthetic data\nTime ~13 min · Tools ChatGPT Edu + R/Python\nGoal. Make realistic synthetic data and check its fidelity.\nSetup. Describe a dataset’s structure (columns, ranges, relationships). You can mirror the Philadelphia crash data structure.\nSteps.\n\nGenerate it reproducibly:\n\nGenerate a synthetic dataset with these columns, realistic distributions, and plausible relationships. Give me R or Python code so it’s reproducible. [structure]\n\nCompare the synthetic distributions to what you’d expect (or to a public summary).\nCritique fidelity:\n\nWhere is this synthetic data likely unrealistic or missing real structure?\n\n\nExpected result. A reproducible synthetic dataset and a fidelity critique.\nCheck your work. Synthetic data can miss real correlations — don’t draw substantive conclusions from it.\nCommon pitfalls. Synthetic data is for teaching, prototyping, and sharing — not a substitute for real analysis. It can also leak patterns if generated from real data.\nStretch (optional). Use the synthetic set to test an analysis script before touching real data."
   },
   {
-    "objectID": "tracks/data-security-classification.html#check-your-readiness",
-    "href": "tracks/data-security-classification.html#check-your-readiness",
-    "title": "Data Security & Classification Deep-Dive",
+    "objectID": "tracks/de-identification-synthetic-data.html#check-your-readiness",
+    "href": "tracks/de-identification-synthetic-data.html#check-your-readiness",
+    "title": "De-identification & Synthetic Data",
     "section": "Check your readiness",
     "text": "Check your readiness\nAnswer these, then check — your score suggests whether to dive in or skim the readings first."
   },
   {
-    "objectID": "tracks/data-security-classification.html#recommended-readings",
-    "href": "tracks/data-security-classification.html#recommended-readings",
-    "title": "Data Security & Classification Deep-Dive",
+    "objectID": "tracks/de-identification-synthetic-data.html#recommended-readings",
+    "href": "tracks/de-identification-synthetic-data.html#recommended-readings",
+    "title": "De-identification & Synthetic Data",
     "section": "Recommended readings",
-    "text": "Recommended readings\nFrom the AI readings library (ask the facilitator for access):\n\nLLMs Can Unmask Pseudonymous Users at Scale (Ars Technica) — why de-identification is harder than it looks.\nAI and Humans: Making the Relationship Work (Schneier on Security) — security thinking for AI use."
+    "text": "Recommended readings\nFrom the AI readings library (ask the facilitator for access):\n\nLLMs Can Unmask Pseudonymous Users at Scale (Ars Technica) — re-identification risk made concrete.\nAI and Humans: Making the Relationship Work (Schneier on Security) — security mindset for data handling."
   },
   {
-    "objectID": "tracks/data-security-classification.html#useful-resources",
-    "href": "tracks/data-security-classification.html#useful-resources",
-    "title": "Data Security & Classification Deep-Dive",
+    "objectID": "tracks/de-identification-synthetic-data.html#useful-resources",
+    "href": "tracks/de-identification-synthetic-data.html#useful-resources",
+    "title": "De-identification & Synthetic Data",
     "section": "Useful resources",
-    "text": "Useful resources\n\nDrexel AI Tools page — approved tools by data classification.\nHHS De-identification Guidance — HIPAA de-identification standards.\n\n\n\n\n\n\n\nWarningData rules\n\n\n\nThis is the data-rules topic: never exceed a tool’s approved classification. See Tools & Access and Drexel’s AI Tools page."
+    "text": "Useful resources\n\nHHS De-identification Guidance — HIPAA Safe Harbor and Expert Determination.\nChatGPT Edu (Drexel AI Tools) — the approved tool, with data rules.\n\n\n\n\n\n\n\nWarningData rules\n\n\n\nGenerate/transform on non-sensitive samples in unapproved tools; real PHI needs an approved tool and method. See Tools & Access and Drexel’s AI Tools page."
   },
   {
-    "objectID": "tracks/data-analysis.html",
-    "href": "tracks/data-analysis.html",
-    "title": "Data & Analysis Track",
+    "objectID": "tracks/data-cleaning.html",
+    "href": "tracks/data-cleaning.html",
+    "title": "Data Cleaning, Recoding & Codebooks",
     "section": "",
-    "text": "Self-paced track · 8 topics · novice → advanced\n← All self-paced tracks\nWork through these on your own, in order or by the topic you need. Each page has a short overview, two hands-on practice activities, a readiness quiz, recommended readings, and useful resources. Everything assumes you’ve done Workshop 1 (prompting and the Drexel data rules)."
+    "text": "Novice · Data & Analysis track · ~1 hour, self-paced\n← Back to the Data & Analysis track\nMost analysis time is cleaning — let AI speed it up while you keep control."
   },
   {
-    "objectID": "tracks/data-analysis.html#difficulty-levels",
-    "href": "tracks/data-analysis.html#difficulty-levels",
-    "title": "Data & Analysis Track",
-    "section": "Difficulty levels",
-    "text": "Difficulty levels\nNovice   getting started — no prior AI-for-data experience needed. Moderate   comfortable with some coding or analysis. Advanced   experienced analysts auditing AI-built work."
-  },
-  {
-    "objectID": "tracks/data-analysis.html#suggested-path",
-    "href": "tracks/data-analysis.html#suggested-path",
-    "title": "Data & Analysis Track",
-    "section": "Suggested path",
-    "text": "Suggested path\n\n\n\n#\nTopic\nLevel\nYou’ll be able to…\n\n\n\n\n1\nData Analysis Basics\nNovice\nAsk questions of a dataset and get a checkable first answer\n\n\n2\nData Cleaning, Recoding & Codebooks\nNovice\nClean messy data and document it with AI help\n\n\n3\nCoding with AI\nModerate\nGenerate, explain, and debug R/Python/Stata code you review\n\n\n4\nStatistical Interpretation across Stata, R & Python\nModerate\nRead output and translate models between languages\n\n\n5\nAI-Assisted Web & Dashboards\nModerate\nTurn data into a shareable dashboard or web page\n\n\n6\nImage Generation & Annotation\nModerate\nMake graphics responsibly and label images for analysis\n\n\n7\nQualitative Data Analysis\nModerate\nAssist coding and theming without outsourcing interpretation\n\n\n8\nData Analysis Advanced\nAdvanced\nScaffold pipelines and audit their subtle failure modes"
-  },
-  {
-    "objectID": "tracks/data-analysis.html#where-should-you-start",
-    "href": "tracks/data-analysis.html#where-should-you-start",
-    "title": "Data & Analysis Track",
-    "section": "Where should you start?",
-    "text": "Where should you start?\nAnswer these to find your entry point.\n\n\n\n\n\n\n\n\n\nWarningData rules apply throughout\n\n\n\nUse public or non-sensitive data for every activity, and match any tool to Drexel’s data classification. See Tools & Access and Drexel’s AI Tools page."
-  },
-  {
-    "objectID": "tracks/data-analysis-advanced.html",
-    "href": "tracks/data-analysis-advanced.html",
-    "title": "Data Analysis Advanced",
-    "section": "",
-    "text": "Advanced · Data & Analysis track · ~1 hour, self-paced\n← Back to the Data & Analysis track\nScaffold full pipelines with AI — then audit the subtle failure modes."
-  },
-  {
-    "objectID": "tracks/data-analysis-advanced.html#what-youll-be-able-to-do",
-    "href": "tracks/data-analysis-advanced.html#what-youll-be-able-to-do",
-    "title": "Data Analysis Advanced",
+    "objectID": "tracks/data-cleaning.html#what-youll-be-able-to-do",
+    "href": "tracks/data-cleaning.html#what-youll-be-able-to-do",
+    "title": "Data Cleaning, Recoding & Codebooks",
     "section": "What you’ll be able to do",
-    "text": "What you’ll be able to do\n\nUse AI to scaffold a multistep modeling pipeline\nAudit AI-built pipelines for leakage, validation, and metric choice\nKnow the limits of AI on tabular and time-series data"
+    "text": "What you’ll be able to do\n\nHave AI flag data-quality issues and propose fixes\nRecode variables consistently and document the change\nAuto-draft a codebook and validate transformations"
   },
   {
-    "objectID": "tracks/data-analysis-advanced.html#overview",
-    "href": "tracks/data-analysis-advanced.html#overview",
-    "title": "Data Analysis Advanced",
+    "objectID": "tracks/data-cleaning.html#overview",
+    "href": "tracks/data-cleaning.html#overview",
+    "title": "Data Cleaning, Recoding & Codebooks",
     "section": "Overview",
-    "text": "Overview\nFor advanced work, AI can scaffold a full pipeline — feature prep, modeling, evaluation. The failure modes get subtler: data leakage, the wrong validation strategy, overconfident metrics. Your job is to audit each step and the assumptions behind it.\nRecent work cautions that “foundation models” don’t automatically win on tabular or time-series data — classic methods often match or beat them. Skepticism is part of the method."
+    "text": "Overview\nMost of analysis is cleaning. AI can propose recodes, spot inconsistencies, and draft documentation — but every transformation needs a check that it did what you meant.\nA codebook (what each variable means and how it’s coded) is easy to skip and painful to lack. AI can draft one straight from your data, which you then correct."
   },
   {
-    "objectID": "tracks/data-analysis-advanced.html#practice-activities",
-    "href": "tracks/data-analysis-advanced.html#practice-activities",
-    "title": "Data Analysis Advanced",
+    "objectID": "tracks/data-cleaning.html#practice-activities",
+    "href": "tracks/data-cleaning.html#practice-activities",
+    "title": "Data Cleaning, Recoding & Codebooks",
     "section": "Practice activities",
-    "text": "Practice activities\nActivity 1 · Advanced — Audit a modeling pipeline\nTime ~25 min · Tools ChatGPT Edu (or Claude) + R or Python\nGoal. Build a pipeline, then rigorously audit it for the errors that scale.\nSetup. Download the Crash Data 2020–2024 (CSV). Outcome: a serious-crash indicator (fatal or suspected-serious injury). Use only fields known at the time of the crash.\nSteps.\n\nScaffold it:\n\nBuild a complete R or Python pipeline that predicts a serious-crash indicator (fatal or major injury) from crash characteristics in this Philadelphia data: load, clean, split, fit a logistic model, and report performance. Use only fields known before or at the time of the crash.\n\nAudit it, point by point:\n\nLeakage — are any predictors really the outcome in disguise (injury counts, fatality flags)? Remove them.\nValidation — is the split appropriate? Prefer a temporal split (train on earlier years, test on later).\nMetric — serious crashes are rare, so accuracy misleads. Look at recall, precision, and PR-AUC.\n\n\nAudit this pipeline for data leakage, an inappropriate validation split, and a misleading metric given class imbalance. Show me exactly where each problem is and the minimal fix.\n\nFix one real flaw and re-run.\n\nExpected result. A pipeline with at least one substantive flaw found and corrected, and honest metrics.\nCheck your work. Confirm no predictor encodes the outcome, and that the test set is genuinely held out (ideally later years).\nCommon pitfalls. Leakage inflates performance and hides easily. High accuracy on a rare outcome is meaningless. This is observational data — don’t imply causation.\nStretch (optional). Add calibration (are the predicted probabilities trustworthy?) and report it.\n\nActivity 2 · Advanced — Compare a baseline to a complex model\nTime ~20 min · Tools ChatGPT Edu (or Claude) + R or Python\nGoal. Decide whether model complexity actually earns its place.\nSetup. Same outcome and temporal split as Activity 1.\nSteps.\n\nCompare:\n\nCompare a simple logistic-regression baseline to a gradient-boosted model on the same temporal split, reporting PR-AUC and calibration. Tell me whether the complex model is justified.\n\nInspect the comparison yourself — don’t accept the verdict blindly.\nWrite one paragraph justifying your choice, weighing interpretability, performance, and maintenance.\n\nExpected result. A side-by-side comparison and your reasoned decision.\nCheck your work. Is the performance gap real and meaningful, or within noise? Would you trust the complex model in practice?\nCommon pitfalls. A higher AUC doesn’t automatically justify complexity. Recent evidence shows classic methods often match boosting and “foundation” models on tabular data.\nStretch (optional). Log your prompts, package versions, and a random seed so a colleague could reproduce the comparison (see the Reproducible AI topic)."
+    "text": "Practice activities\nActivity 1 · Novice — Diagnose the mess (Philadelphia 311)\nTime ~18 min · Tools ChatGPT Edu + a browser\nGoal. Find data-quality problems before you analyze.\nSetup. Open 311 Service & Information Requests. The full set is millions of rows, so grab a slice: download one recent year, or use the dataset’s API with a date filter. Paste ~20 rows plus the full column list into ChatGPT Edu. Public data.\nSteps.\n\nAsk for a diagnosis (no changes yet):\n\nHere is a sample of Philadelphia 311 service requests. List the data-quality issues you can see — inconsistent categories, missing values, suspicious dates, duplicate-looking rows — and propose a fix for each. Don’t change anything yet.\n\nReview its list and mark which fixes you agree with. You make the call.\nProbe one field:\n\nFor the service-type field, show the distinct values with counts, and group near-duplicates (different spellings or casing) into clean categories.\n\n\nExpected result. A list of issues (missing ZIPs, mixed-case categories, placeholder dates) and a proposed cleaning plan.\nCheck your work. Pick one proposed fix and verify the issue is real in the raw rows before accepting it.\nCommon pitfalls. AI may “fix” data by inventing values — only accept fixes you can verify. Keep the raw file untouched; never overwrite it.\nStretch (optional). Ask for the cleaning steps as a documented, re-runnable R/Python script you could apply to next year’s data.\n\nActivity 2 · Novice — Recode and document (Philadelphia crime categories)\nTime ~18 min · Tools ChatGPT Edu + R or Python\nGoal. Standardize a messy category field and produce a codebook.\nSetup. Open Crime Incidents and grab a slice (one police district, or one recent month). The offense field has many specific categories — perfect for recoding.\nSteps.\n\nRecode:\n\nHere are the distinct values of the crime offense field. Propose a recode into 4–6 analysis groups (e.g., violent, property, quality-of-life, other) and write R/Python code mapping each original value to a group. Leave anything ambiguous as “review”.\n\nGenerate documentation:\n\nGenerate a codebook entry for the new grouped variable: its name, definition, the full mapping table, and how missing/ambiguous values are handled.\n\nVerify counts before and after.\n\nExpected result. A grouped variable plus a codebook table; counts reconcile.\nCheck your work. The grouped counts must sum to the original total — confirm nothing was dropped. Inspect the “review” bucket by hand.\nCommon pitfalls. Don’t let AI silently bucket ambiguous offenses. Grouping choices are substantive decisions — they’re yours, not the model’s.\nStretch (optional). Ask AI to flag any offense whose grouping is genuinely debatable and explain the tradeoff."
   },
   {
-    "objectID": "tracks/data-analysis-advanced.html#check-your-readiness",
-    "href": "tracks/data-analysis-advanced.html#check-your-readiness",
-    "title": "Data Analysis Advanced",
+    "objectID": "tracks/data-cleaning.html#check-your-readiness",
+    "href": "tracks/data-cleaning.html#check-your-readiness",
+    "title": "Data Cleaning, Recoding & Codebooks",
     "section": "Check your readiness",
     "text": "Check your readiness\nAnswer these, then check — your score suggests whether to dive in or skim the readings first."
   },
   {
-    "objectID": "tracks/data-analysis-advanced.html#recommended-readings",
-    "href": "tracks/data-analysis-advanced.html#recommended-readings",
-    "title": "Data Analysis Advanced",
+    "objectID": "tracks/data-cleaning.html#recommended-readings",
+    "href": "tracks/data-cleaning.html#recommended-readings",
+    "title": "Data Cleaning, Recoding & Codebooks",
     "section": "Recommended readings",
-    "text": "Recommended readings\nFrom the AI readings library (ask the facilitator for access):\n\nAre Foundation Models Ready for Your Production Tabular Data? — limits of large models on tabular tasks.\nIs Boosting Still All You Need for Tabular Data? — a modeling reality check.\nAgainst Time-Series Foundation Models — skepticism on forecasting hype.\nImplementing Statistical Guardrails for Non-Deterministic Agents — keeping AI pipelines reliable."
+    "text": "Recommended readings\nFrom the AI readings library (ask the facilitator for access):\n\nAI-Ready Data vs. Analytics-Ready Data — why preparation determines whether analysis works.\nStop Learning Excel (Ruben Hassid) — a provocative reframe of spreadsheet work with AI — read critically."
   },
   {
-    "objectID": "tracks/data-analysis-advanced.html#useful-resources",
-    "href": "tracks/data-analysis-advanced.html#useful-resources",
-    "title": "Data Analysis Advanced",
+    "objectID": "tracks/data-cleaning.html#useful-resources",
+    "href": "tracks/data-cleaning.html#useful-resources",
+    "title": "Data Cleaning, Recoding & Codebooks",
     "section": "Useful resources",
-    "text": "Useful resources\n\ntidymodels — modeling and validation framework in R.\nscikit-learn — machine learning in Python.\nQuarto — reproducible analysis documents.\n\n\n\n\n\n\n\nWarningData rules\n\n\n\nAudit on public data first; document prompts, versions, and seeds for reproducibility. See Tools & Access and Drexel’s AI Tools page."
+    "text": "Useful resources\n\ntidyverse / dplyr — recoding and cleaning verbs in R.\nOpenRefine — a free tool for cleaning messy tabular data.\nQuarto — document your cleaning steps reproducibly.\n\n\n\n\n\n\n\nWarningData rules\n\n\n\nPractice on non-sensitive data; de-identify before any tool sees real records. See Tools & Access and Drexel’s AI Tools page."
   },
   {
-    "objectID": "tracks/creating-loops.html",
-    "href": "tracks/creating-loops.html",
-    "title": "Creating & Using Loops",
+    "objectID": "tracks/data-analysis-basics.html",
+    "href": "tracks/data-analysis-basics.html",
+    "title": "Data Analysis Basics",
     "section": "",
-    "text": "Advanced · Technical & Agentic track · ~1 hour, self-paced\n← Back to the Technical & Agentic track\nRun the same step over a batch — the power and the risk of compounding errors."
+    "text": "Novice · Data & Analysis track · ~1 hour, self-paced\n← Back to the Data & Analysis track\nAsk clear questions of a dataset and get a first, checkable answer with AI."
   },
   {
-    "objectID": "tracks/creating-loops.html#what-youll-be-able-to-do",
-    "href": "tracks/creating-loops.html#what-youll-be-able-to-do",
-    "title": "Creating & Using Loops",
+    "objectID": "tracks/data-analysis-basics.html#what-youll-be-able-to-do",
+    "href": "tracks/data-analysis-basics.html#what-youll-be-able-to-do",
+    "title": "Data Analysis Basics",
     "section": "What you’ll be able to do",
-    "text": "What you’ll be able to do\n\nSet up an iterative loop over many items\nAdd checks so a small early error doesn’t compound\nDecide when a loop should be supervised vs. fully manual"
+    "text": "What you’ll be able to do\n\nAsk clear questions of a dataset and get a first answer with AI help\nHave AI generate and explain simple summaries and a chart (R or Python)\nSpot when an AI answer needs checking against the data"
   },
   {
-    "objectID": "tracks/creating-loops.html#overview",
-    "href": "tracks/creating-loops.html#overview",
-    "title": "Creating & Using Loops",
+    "objectID": "tracks/data-analysis-basics.html#overview",
+    "href": "tracks/data-analysis-basics.html#overview",
+    "title": "Data Analysis Basics",
     "section": "Overview",
-    "text": "Overview\nA loop applies the same step across many items — summarize each of 50 documents, code each of 200 responses. It’s where AI saves the most time and where errors scale fastest: one flawed step repeats everywhere.\nThe discipline is sampling and spot-checking: validate the loop on a few items, run it, then audit a random sample of the output."
+    "text": "Overview\nAI can read a dataset’s description and draft the steps or code to answer a question — loading it, summarizing it, making a quick chart. You stay in charge of whether the question is sensible and whether the answer is right.\nStart small and verifiable: one dataset, one question, one chart. Confirm a number or two against what you already know before you trust anything."
   },
   {
-    "objectID": "tracks/creating-loops.html#practice-activities",
-    "href": "tracks/creating-loops.html#practice-activities",
-    "title": "Creating & Using Loops",
+    "objectID": "tracks/data-analysis-basics.html#practice-activities",
+    "href": "tracks/data-analysis-basics.html#practice-activities",
+    "title": "Data Analysis Basics",
     "section": "Practice activities",
-    "text": "Practice activities\nActivity 1 · Advanced — Loop with a checkpoint\nTime ~20 min · Tools ChatGPT Edu/Claude (+ R/Python if scripting)\nGoal. Apply one task across many items, then audit the results.\nSetup. About 10 non-sensitive items and one task. You can use 10 short 311 Service & Information Requests descriptions and classify each by issue type.\nSteps.\n\nDefine the task for a single item and confirm it’s right.\nRun the loop over all 10 (in the tool, or with a script that calls the model).\nAudit a sample:\n\nAudit a random sample of 3 of these outputs for errors and tell me what’s likely systematically wrong.\n\nFix the instruction and re-run only the failures.\n\nExpected result. 10 processed items plus an audit of a random sample.\nCheck your work. A small early error repeats across the whole batch — sampling catches it.\nCommon pitfalls. Don’t trust a loop just because it ran. Higher stakes mean reviewing every item, not a sample.\nStretch (optional). Add a confidence flag so low-certainty items get human review.\n\nActivity 2 · Advanced — Decide the guardrail for scale\nTime ~12 min · Tools ChatGPT Edu/Claude\nGoal. Set the rule for when a loop needs full human review.\nSetup. A real task you’d loop.\nSteps.\n\nWrite the rule: review every item vs. a sample, tied to stakes and reversibility.\nPressure-test it:\n\nGive me a scenario where sampling would be dangerous for this task.\n\nDecide and document.\n\nExpected result. A documented review rule for looped tasks.\nCheck your work. Would you defend this rule if one bad output reached a real decision?\nCommon pitfalls. Sampling is fine for low-stakes work; never for irreversible or rights-affecting outputs.\nStretch (optional). Add logging so you can reconstruct what the loop did (see Reproducible AI)."
+    "text": "Practice activities\nActivity 1 · Novice — Interview a dataset (Philadelphia crashes)\nTime ~20 min · Tools ChatGPT Edu + a web browser\nGoal. Get oriented to a real public dataset and pull a first answer you can check.\nSetup. Open the Philadelphia Crashes data page and download the Crash Data 2020–2024 (CSV) — PennDOT crash records inside Philadelphia (~50k rows). Open it in Excel/Sheets, or paste the header row + first 5 data rows into ChatGPT Edu. This is public data, so it’s fine to use.\nSteps.\n\nCopy the column names and first 5 rows into ChatGPT Edu:\n\nHere are the columns and first rows of a Philadelphia crash dataset (PennDOT). In a short table, tell me what each column likely means and its data type. Flag any columns you’re unsure about.\n\nAsk for question ideas:\n\nBased on these columns, list five questions this data can answer about pedestrian safety, from simple to harder. For each, name the columns you’d use.\n\nPick one (e.g., “How many crashes involved a pedestrian each year?”) and ask for code + steps:\n\nUsing the pedestrian-count and crash-year fields, write R (tidyverse) or Python (pandas) code to count crashes involving at least one pedestrian, by year. Show the code and explain each line. First confirm the exact field names from my column list.\n\nRun the code.\n\nExpected result. A small table of pedestrian-involved crashes per year (roughly a few thousand per year).\nCheck your work. Spot-check one year yourself — in Excel, count rows where the pedestrian field is greater than 0. It should match the AI’s number.\nCommon pitfalls. Field names in the file often differ from what AI guesses — always confirm against the real columns. Missing values may be blank or coded as 0; decide how to treat them before counting.\nStretch (optional). Ask for the same count broken out by hour of day, and note when pedestrian crashes peak.\n\nActivity 2 · Novice — From question to chart\nTime ~15 min · Tools ChatGPT Edu + R or Python\nGoal. Turn one question into a clear, defensible chart.\nSetup. Same crashes CSV from Activity 1.\nSteps.\n\nAsk for a chart:\n\nWrite R (ggplot2) or Python (matplotlib) code to make a bar chart of pedestrian-involved crashes by year, with axis labels and a title, using this dataset.\n\nRun it, then ask it to explain each line in plain language.\nChange one thing:\n\nNow show counts by hour of day instead of year, and shade the three highest hours darker.\n\n\nExpected result. A labeled bar chart; the hour version typically shows an afternoon/evening peak.\nCheck your work. The chart’s yearly totals should match your Activity 1 table exactly.\nCommon pitfalls. Don’t let AI invent a year that isn’t in the data — confirm the year range. Reject any chart with an unlabeled axis.\nStretch (optional). Ask AI to add a one-sentence, plain-language caption summarizing the takeaway for a community audience."
   },
   {
-    "objectID": "tracks/creating-loops.html#check-your-readiness",
-    "href": "tracks/creating-loops.html#check-your-readiness",
-    "title": "Creating & Using Loops",
+    "objectID": "tracks/data-analysis-basics.html#check-your-readiness",
+    "href": "tracks/data-analysis-basics.html#check-your-readiness",
+    "title": "Data Analysis Basics",
     "section": "Check your readiness",
     "text": "Check your readiness\nAnswer these, then check — your score suggests whether to dive in or skim the readings first."
   },
   {
-    "objectID": "tracks/creating-loops.html#recommended-readings",
-    "href": "tracks/creating-loops.html#recommended-readings",
-    "title": "Creating & Using Loops",
+    "objectID": "tracks/data-analysis-basics.html#recommended-readings",
+    "href": "tracks/data-analysis-basics.html#recommended-readings",
+    "title": "Data Analysis Basics",
     "section": "Recommended readings",
-    "text": "Recommended readings\nFrom the AI readings library (ask the facilitator for access):\n\nLoop Library: Repeatable AI Agent Workflows (Forward Future) — patterns for reliable loops.\nThe Coming Loop (Armin Ronacher) — where looped automation is heading."
+    "text": "Recommended readings\nFrom the AI readings library (ask the facilitator for access):\n\nAI Agents for Data Scientists: Automations vs Agents — when AI should assist vs. when to keep manual control.\nHow to Do Agentic Data Science (Eric J. Ma) — a practical workflow for AI-assisted analysis.\nMastering the Data Science Human Skills AI Can’t Touch — the judgment you still own."
   },
   {
-    "objectID": "tracks/creating-loops.html#useful-resources",
-    "href": "tracks/creating-loops.html#useful-resources",
-    "title": "Creating & Using Loops",
+    "objectID": "tracks/data-analysis-basics.html#useful-resources",
+    "href": "tracks/data-analysis-basics.html#useful-resources",
+    "title": "Data Analysis Basics",
     "section": "Useful resources",
-    "text": "Useful resources\n\nOpenAI: Building Agents — loop and workflow patterns.\nChatGPT Edu (Drexel AI Tools) — the approved tool, with data rules.\n\n\n\n\n\n\n\nWarningData rules\n\n\n\nLoop over non-sensitive items; audit a sample before acting on the results. See Tools & Access and Drexel’s AI Tools page."
+    "text": "Useful resources\n\nChatGPT Edu (Drexel AI Tools) — the approved tool for this work, with data rules.\nPosit / RStudio — the standard environment for R analysis.\ntidyverse — R packages for reading, summarizing, and plotting data.\n\n\n\n\n\n\n\nWarningData rules\n\n\n\nUse public or non-sensitive data for practice; never paste identifiable records into an unapproved tool. See Tools & Access and Drexel’s AI Tools page."
   },
   {
-    "objectID": "tracks/communication.html",
-    "href": "tracks/communication.html",
-    "title": "Communication & Dissemination Track",
+    "objectID": "tracks/creating-skills.html",
+    "href": "tracks/creating-skills.html",
+    "title": "Creating & Using Skills",
     "section": "",
-    "text": "Self-paced track · 5 topics · novice → advanced\n← All self-paced tracks\nUse AI to write, translate, and disseminate public-health work — from grants and manuscripts to plain-language and multilingual materials. Every page assumes you’ve done Workshop 1 (prompting and the Drexel data rules). The throughline: AI drafts; you verify and own every fact, citation, and claim."
+    "text": "Moderate · Technical & Agentic track · ~1 hour, self-paced\n← Back to the Technical & Agentic track\nTurn a prompt that works into a reusable, shareable skill your team can run again and again."
   },
   {
-    "objectID": "tracks/communication.html#difficulty-levels",
-    "href": "tracks/communication.html#difficulty-levels",
-    "title": "Communication & Dissemination Track",
-    "section": "Difficulty levels",
-    "text": "Difficulty levels\nNovice   getting started — no prior experience needed. Moderate   comfortable with some AI use. Advanced   experienced users going deep."
+    "objectID": "tracks/creating-skills.html#what-youll-be-able-to-do",
+    "href": "tracks/creating-skills.html#what-youll-be-able-to-do",
+    "title": "Creating & Using Skills",
+    "section": "What you’ll be able to do",
+    "text": "What you’ll be able to do\n\nWrite a reusable skill: job, steps, output, and guardrails\nReuse it across tasks and share it with colleagues\nKnow when a skill beats a one-off prompt"
   },
   {
-    "objectID": "tracks/communication.html#topics",
-    "href": "tracks/communication.html#topics",
-    "title": "Communication & Dissemination Track",
-    "section": "Topics",
-    "text": "Topics\n\n\n\n#\nTopic\nLevel\nYou’ll be able to…\n\n\n\n\n1\nScience Communication & Plain-Language Translation\nNovice\nTurn findings into briefs, fact sheets, and posts at the right reading level\n\n\n2\nGrant & Proposal Development\nModerate\nDraft aims, biosketches, and justifications, then tighten to funder rules\n\n\n3\nLiterature Review & Evidence Synthesis\nModerate\nBuild searches, screen abstracts, and summarize — verifying every citation\n\n\n4\nMultilingual & Culturally-Adapted Materials\nModerate\nTranslate and culturally adapt outreach, with back-translation QA\n\n\n5\nManuscript Preparation & Peer Review\nAdvanced\nDraft sections and reviewer responses; respect peer-review confidentiality\n\n\n\n\n\n\n\n\n\nWarningData rules apply throughout\n\n\n\nUse public or non-sensitive data for every activity, and match any tool to Drexel’s data classification. See Tools & Access and Drexel’s AI Tools page."
+    "objectID": "tracks/creating-skills.html#overview",
+    "href": "tracks/creating-skills.html#overview",
+    "title": "Creating & Using Skills",
+    "section": "Overview",
+    "text": "Overview\nA skill is a saved package of instructions for one job done well — “turn notes into our standard recap.” Write it once; the assistant applies it whenever that job comes up. Claude has a formal Skills feature; in ChatGPT Edu, custom GPTs and project instructions do the same.\nMost quality lives in the instructions, not the model. A good skill names the job, the steps, the output format, and the guardrails."
+  },
+  {
+    "objectID": "tracks/creating-skills.html#practice-activities",
+    "href": "tracks/creating-skills.html#practice-activities",
+    "title": "Creating & Using Skills",
+    "section": "Practice activities",
+    "text": "Practice activities\nActivity 1 · Moderate — Write a reusable skill\nTime ~18 min · Tools ChatGPT Edu (custom GPT) or Claude\nGoal. Package a repeated task as a shareable, reliable skill.\nSetup. Pick a task you repeat — e.g., “turn messy meeting notes into our standard recap.”\nSteps.\n\nDraft the skill:\n\nHelp me write a reusable “skill” for this task. Include the job, step-by-step instructions, the exact output format, and guardrails (what it must never do). Task: [task].\n\nSave it as a custom GPT’s instructions (or a Claude skill).\nTest on two different inputs; tighten wherever it drifts.\n\nExpected result. A documented skill that produces consistent output across different inputs.\nCheck your work. Run it on a deliberately tricky input — does it hold the format and the guardrails?\nCommon pitfalls. Most of the quality is in the instructions, not the model. Keep sensitive data out of skill files; share inside Drexel only.\nStretch (optional). Add a one-line “use this when…” and have a colleague test it cold.\n\nActivity 2 · Moderate — Start a small skill library\nTime ~12 min · Tools a shared doc (Teams/SharePoint)\nGoal. Begin a reusable team library so good prompts become shared tools.\nSetup. A shared document the team can reach.\nSteps.\n\nAdd 2–3 skills, each with a title, the instructions, an example input/output, and “use when.”\nReview the set:\n\nReview my skill library for overlap or gaps, and suggest one more skill this set implies we need.\n\nAgree where it lives and that anyone can add.\n\nExpected result. A starter library of 2–3 skills plus one suggested addition.\nCheck your work. Have a colleague run one skill cold — if they can’t, the instructions need work.\nCommon pitfalls. A skill only its author can run isn’t reusable. Document clearly.\nStretch (optional). Convert your best prompt from another workshop into a skill."
+  },
+  {
+    "objectID": "tracks/creating-skills.html#check-your-readiness",
+    "href": "tracks/creating-skills.html#check-your-readiness",
+    "title": "Creating & Using Skills",
+    "section": "Check your readiness",
+    "text": "Check your readiness\nAnswer these, then check — your score suggests whether to dive in or skim the readings first."
+  },
+  {
+    "objectID": "tracks/creating-skills.html#recommended-readings",
+    "href": "tracks/creating-skills.html#recommended-readings",
+    "title": "Creating & Using Skills",
+    "section": "Recommended readings",
+    "text": "Recommended readings\nFrom the AI readings library (ask the facilitator for access):\n\nThe Complete Guide to Building Skills for Claude — how to structure a reusable skill.\nAI Agent Skills: Why Skill Curation Is the Next Bottleneck — keeping a useful library of skills."
+  },
+  {
+    "objectID": "tracks/creating-skills.html#useful-resources",
+    "href": "tracks/creating-skills.html#useful-resources",
+    "title": "Creating & Using Skills",
+    "section": "Useful resources",
+    "text": "Useful resources\n\nClaude Skills (docs) — Claude’s formal Skills feature.\nChatGPT Edu (Drexel AI Tools) — the approved tool, with data rules.\n\n\n\n\n\n\n\nWarningData rules\n\n\n\nKeep sensitive data out of skill instructions and example files; share inside Drexel only. See Tools & Access and Drexel’s AI Tools page."
+  },
+  {
+    "objectID": "tracks/context-engineering.html",
+    "href": "tracks/context-engineering.html",
+    "title": "Context Engineering",
+    "section": "",
+    "text": "Moderate · Technical & Agentic track · ~1 hour, self-paced\n← Back to the Technical & Agentic track\nThe quiet skill behind good AI output: structuring what the model sees."
+  },
+  {
+    "objectID": "tracks/context-engineering.html#what-youll-be-able-to-do",
+    "href": "tracks/context-engineering.html#what-youll-be-able-to-do",
+    "title": "Context Engineering",
+    "section": "What you’ll be able to do",
+    "text": "What you’ll be able to do\n\nStructure system prompts, instructions, and reference files\nDecide what context to include — and what to leave out\nDiagnose failures as context problems, not model problems"
+  },
+  {
+    "objectID": "tracks/context-engineering.html#overview",
+    "href": "tracks/context-engineering.html#overview",
+    "title": "Context Engineering",
+    "section": "Overview",
+    "text": "Overview\nWhen AI drifts, the fix is usually better context, not a bigger model. Context engineering is choosing what the model sees: the role, the standing instructions, the reference files, the examples — and what to leave out so the signal isn’t buried.\nMore context is not always better. Too much dilutes attention; the skill is picking the few things that matter for the task."
+  },
+  {
+    "objectID": "tracks/context-engineering.html#practice-activities",
+    "href": "tracks/context-engineering.html#practice-activities",
+    "title": "Context Engineering",
+    "section": "Practice activities",
+    "text": "Practice activities\nActivity 1 · Moderate — Fix a drift with better context\nTime ~15 min · Tools ChatGPT Edu or Claude\nGoal. Improve output by improving context, not by writing a longer prompt.\nSetup. A task where AI keeps missing what you want (e.g., it won’t match your report’s tone).\nSteps.\n\nAdd a short system instruction and one reference example:\n\nYou are [role]. Always [2–3 standing rules]. Here is an example of the output I want: [example]. Now do [task].\n\nRe-run and compare to your earlier attempts.\nNotice that the example and rules — not extra length — fixed it.\n\nExpected result. Noticeably better, on-spec output.\nCheck your work. Remove the example and re-run — quality should drop, confirming the example carried the weight.\nCommon pitfalls. More text isn’t better context; one sharp example beats paragraphs of description.\nStretch (optional). Turn the working context into a reusable skill.\n\nActivity 2 · Moderate — Trim the context\nTime ~12 min · Tools ChatGPT Edu or Claude\nGoal. Cut noise so the signal lands.\nSetup. A prompt with a lot of background.\nSteps.\n\nRemove everything non-essential; keep only what the task needs.\nRe-run and confirm quality held or improved.\nDiagnose:\n\nWhat in my context is actually doing work here, and what’s noise?\n\n\nExpected result. A leaner prompt with equal or better output.\nCheck your work. If cutting something degrades the output, it was signal — put it back.\nCommon pitfalls. Over-trimming removes needed constraints; iterate one cut at a time.\nStretch (optional). Build a minimal reusable context template for this task type."
+  },
+  {
+    "objectID": "tracks/context-engineering.html#check-your-readiness",
+    "href": "tracks/context-engineering.html#check-your-readiness",
+    "title": "Context Engineering",
+    "section": "Check your readiness",
+    "text": "Check your readiness\nAnswer these, then check — your score suggests whether to dive in or skim the readings first."
+  },
+  {
+    "objectID": "tracks/context-engineering.html#recommended-readings",
+    "href": "tracks/context-engineering.html#recommended-readings",
+    "title": "Context Engineering",
+    "section": "Recommended readings",
+    "text": "Recommended readings\nFrom the AI readings library (ask the facilitator for access):\n\nEffective Context Engineering for AI Agents (Anthropic) — practical principles for context.\nState of Context Engineering in 2026 (Aurimas Griciūnas) — the current landscape.\nContext Engineering for AI Agents: Lessons from Building Manus — field lessons."
+  },
+  {
+    "objectID": "tracks/context-engineering.html#useful-resources",
+    "href": "tracks/context-engineering.html#useful-resources",
+    "title": "Context Engineering",
+    "section": "Useful resources",
+    "text": "Useful resources\n\nAnthropic Prompt Library — worked prompt/context examples.\nChatGPT Edu (Drexel AI Tools) — the approved tool, with data rules.\n\n\n\n\n\n\n\nWarningData rules\n\n\n\nOnly put approved data into context; reference files follow the same data rules as prompts. See Tools & Access and Drexel’s AI Tools page."
+  },
+  {
+    "objectID": "tracks/collaborating-on-projects.html",
+    "href": "tracks/collaborating-on-projects.html",
+    "title": "Collaborating on Projects",
+    "section": "",
+    "text": "Moderate · Communication & Dissemination track · ~1 hour, self-paced\n← Back to the Communication & Dissemination track\nGive your team one shared AI context — files, instructions, and reusable tools — so no one re-explains the basics."
+  },
+  {
+    "objectID": "tracks/collaborating-on-projects.html#what-youll-be-able-to-do",
+    "href": "tracks/collaborating-on-projects.html#what-youll-be-able-to-do",
+    "title": "Collaborating on Projects",
+    "section": "What you’ll be able to do",
+    "text": "What you’ll be able to do\n\nSet up a shared ChatGPT Edu Project (files, instructions, chats) for a team\nBuild a custom GPT your team reuses\nApply data, consent, and access rules to shared AI use"
+  },
+  {
+    "objectID": "tracks/collaborating-on-projects.html#overview",
+    "href": "tracks/collaborating-on-projects.html#overview",
+    "title": "Collaborating on Projects",
+    "section": "Overview",
+    "text": "Overview\nA shared Project in ChatGPT Edu gives a team one place for related chats, files, and instructions, so everyone works from the same context and a colleague can pick up where you left off. Custom GPTs turn a good prompt into a reusable team tool, and a shared prompt library spreads what works. This is the self-paced companion to Workshop 3 — Collaboration on Projects; do that workshop for the live, hands-on version.\nShared use raises new questions: whose data is this, who agreed to it, and who has access. Keep sharing inside Drexel (“Only those invited”), keep PHI and sensitive or identifiable data out of shared files, and match the tool to Drexel’s data classification."
+  },
+  {
+    "objectID": "tracks/collaborating-on-projects.html#practice-activities",
+    "href": "tracks/collaborating-on-projects.html#practice-activities",
+    "title": "Collaborating on Projects",
+    "section": "Practice activities",
+    "text": "Practice activities\nActivity 1 · Moderate — Build and share a Project\nTime ~18 min · Tools ChatGPT Edu\nGoal. Create a shared team workspace a colleague can step into.\nSetup. A real team effort (a brief, a report, an onboarding guide). Use non-sensitive or approved files only.\nSteps.\n\nCreate a Project and add project instructions — the standing context everyone should get automatically:\n\nThis project supports the DSPH [team] working on [goal]. Always write in plain, non-technical language. For summaries, use bullets and a one-line bottom line. Flag anything that needs a human decision. Never include identifying or sensitive data.\n\nUpload one or two approved reference files (a template, a style guide, a public report). Start a chat inside the project: “Using the uploaded template, draft a project update for this month.”\nOpen share settings and invite a colleague with “Only those invited.” Choose Can chat or Can edit, and have them continue your chat.\n\nExpected result. A shared Project your partner can pick up with the same context.\nCheck your work. Does the partner get your files and instructions without re-pasting anything?\nCommon pitfalls. Use “Only those invited,” never “Anyone with a link,” for Drexel work. No PHI or sensitive data in shared files. Keep sharing inside Drexel.\nStretch (optional). Add a second reference file and watch how the project’s answers change.\n\nActivity 2 · Moderate — Build a reusable custom GPT\nTime ~15 min · Tools ChatGPT Edu\nGoal. Turn a repeated team task into a shared tool.\nSetup. A task your team does over and over — a standard recap, a plain-language rewriter, a grant-deadline checker.\nSteps.\n\nCreate a custom GPT with clear instructions:\n\nYou are a [role] for the DSPH [team]. When given [input], always produce [output] in this format: [structure]. Use a [tone] tone. If key information is missing, ask for it first. Never include sensitive or identifying data.\n\nOptionally add an approved reference file (a style guide or template). Test with two different inputs; refine where it drifts.\nNote how to share it inside your Drexel workspace — and don’t share outside Drexel.\n\nExpected result. A working custom GPT your team can reuse.\nCheck your work. Does it hold the format and tone across two very different inputs?\nCommon pitfalls. Don’t add PHI, sensitive PII, or confidential material to GPT files. Share inside Drexel only.\nStretch (optional). Start a shared prompt library with 2–3 entries (title, prompt with placeholders, “use when”)."
+  },
+  {
+    "objectID": "tracks/collaborating-on-projects.html#check-your-readiness",
+    "href": "tracks/collaborating-on-projects.html#check-your-readiness",
+    "title": "Collaborating on Projects",
+    "section": "Check your readiness",
+    "text": "Check your readiness\nAnswer these, then check — your score suggests whether to dive in or skim the readings first."
+  },
+  {
+    "objectID": "tracks/collaborating-on-projects.html#recommended-readings",
+    "href": "tracks/collaborating-on-projects.html#recommended-readings",
+    "title": "Collaborating on Projects",
+    "section": "Recommended readings",
+    "text": "Recommended readings\nFrom the AI readings library (ask the facilitator for access):\n\nIntroducing Workspace Agents in ChatGPT (OpenAI) — where shared, team-oriented AI features are heading.\nInteraction Models: A Scalable Approach to Human-AI Collaboration — how to structure people-plus-AI work.\nCoPaper.AI — Your AI Research Co-Author — AI as a collaborator on shared writing."
+  },
+  {
+    "objectID": "tracks/collaborating-on-projects.html#useful-resources",
+    "href": "tracks/collaborating-on-projects.html#useful-resources",
+    "title": "Collaborating on Projects",
+    "section": "Useful resources",
+    "text": "Useful resources\n\nChatGPT Edu (Drexel AI Tools) — the approved tool, with the data rules.\nWorkshop 3 — Collaboration on Projects — the live workshop this builds on.\n\n\n\n\n\n\n\nWarningData rules\n\n\n\nKeep sharing inside Drexel and keep PHI or sensitive/identifiable data out of shared Projects and custom-GPT files. Match the tool to Drexel’s data classification. See Tools & Access and Drexel’s AI Tools page."
   },
   {
     "objectID": "tracks/building-agents.html",
@@ -935,7 +1033,7 @@
     "href": "tracks.html#tracks",
     "title": "Self-Paced Tracks",
     "section": "Tracks",
-    "text": "Tracks\n\n\n\nTrack\nTopics\nLevel range\n\n\n\n\nData & Analysis\nBasics, cleaning, coding, statistics, dashboards, image annotation, qualitative, advanced (8)\nnovice → advanced\n\n\nCommunication & Dissemination\nScience communication, grant writing, literature review, multilingual materials, manuscripts (5)\nnovice → advanced\n\n\nTechnical & Agentic\nSkills, context engineering, agents, loops, local models, RAG, MCP (7)\nmoderate → advanced\n\n\nGovernance, Ethics & Equity\nVerifying output, sustainability, data security, responsible AI, bias & equity audit (5)\nnovice → moderate\n\n\nMethods & Study Design\nSurvey design, program evaluation, de-identification & synthetic data, geospatial (4)\nmoderate → advanced\n\n\n\nThat’s 29 self-paced topics across five tracks. Pick the track that fits your work, start at your level, and go at your own pace.\n\n\n\n\n\n\nNoteHave a topic to prioritize or refine?\n\n\n\nThese tracks are drawn from the workshop topic catalog and will keep growing. If you want a new topic added — or have feedback on one — email daq26@drexel.edu."
+    "text": "Tracks\n\n\n\nTrack\nTopics\nLevel range\n\n\n\n\nData & Analysis\nBasics, cleaning, coding, statistics, dashboards, image annotation, qualitative, advanced (8)\nnovice → advanced\n\n\nCommunication & Dissemination\nScience communication, grant writing, literature review, multilingual materials, manuscripts, design & visual tools, collaborating on projects (7)\nnovice → advanced\n\n\nTechnical & Agentic\nSkills, context engineering, agents, loops, local models, RAG, MCP (7)\nmoderate → advanced\n\n\nGovernance, Ethics & Equity\nVerifying output, sustainability, data security, responsible AI, bias & equity audit (5)\nnovice → moderate\n\n\nMethods & Study Design\nSurvey design, program evaluation, de-identification & synthetic data, geospatial (4)\nmoderate → advanced\n\n\n\nThat’s 31 self-paced topics across five tracks. Pick the track that fits your work, start at your level, and go at your own pace.\n\n\n\n\n\n\nNoteHave a topic to prioritize or refine?\n\n\n\nThese tracks are drawn from the workshop topic catalog and will keep growing. If you want a new topic added — or have feedback on one — email daq26@drexel.edu."
   },
   {
     "objectID": "resources.html",
@@ -1204,249 +1302,249 @@
     "text": "Useful resources\n\nGitHub Copilot — in-editor code assistance.\nPosit / RStudio — R/Python environment with AI integrations.\nVisual Studio Code — editor with AI coding extensions.\n\n\n\n\n\n\n\nWarningData rules\n\n\n\nNever paste credentials or sensitive data into prompts; run AI code on non-sensitive samples first. See Tools & Access and Drexel’s AI Tools page."
   },
   {
-    "objectID": "tracks/context-engineering.html",
-    "href": "tracks/context-engineering.html",
-    "title": "Context Engineering",
+    "objectID": "tracks/communication.html",
+    "href": "tracks/communication.html",
+    "title": "Communication & Dissemination Track",
     "section": "",
-    "text": "Moderate · Technical & Agentic track · ~1 hour, self-paced\n← Back to the Technical & Agentic track\nThe quiet skill behind good AI output: structuring what the model sees."
+    "text": "Self-paced track · 7 topics · novice → advanced\n← All self-paced tracks\nUse AI to write, translate, and disseminate public-health work — from grants and manuscripts to plain-language and multilingual materials. Every page assumes you’ve done Workshop 1 (prompting and the Drexel data rules). The throughline: AI drafts; you verify and own every fact, citation, and claim."
   },
   {
-    "objectID": "tracks/context-engineering.html#what-youll-be-able-to-do",
-    "href": "tracks/context-engineering.html#what-youll-be-able-to-do",
-    "title": "Context Engineering",
+    "objectID": "tracks/communication.html#difficulty-levels",
+    "href": "tracks/communication.html#difficulty-levels",
+    "title": "Communication & Dissemination Track",
+    "section": "Difficulty levels",
+    "text": "Difficulty levels\nNovice   getting started — no prior experience needed. Moderate   comfortable with some AI use. Advanced   experienced users going deep."
+  },
+  {
+    "objectID": "tracks/communication.html#topics",
+    "href": "tracks/communication.html#topics",
+    "title": "Communication & Dissemination Track",
+    "section": "Topics",
+    "text": "Topics\n\n\n\n#\nTopic\nLevel\nYou’ll be able to…\n\n\n\n\n1\nScience Communication & Plain-Language Translation\nNovice\nTurn findings into briefs, fact sheets, and posts at the right reading level\n\n\n2\nGrant & Proposal Development\nModerate\nDraft aims, biosketches, and justifications, then tighten to funder rules\n\n\n3\nLiterature Review & Evidence Synthesis\nModerate\nBuild searches, screen abstracts, and summarize — verifying every citation\n\n\n4\nMultilingual & Culturally-Adapted Materials\nModerate\nTranslate and culturally adapt outreach, with back-translation QA\n\n\n5\nManuscript Preparation & Peer Review\nAdvanced\nDraft sections and reviewer responses; respect peer-review confidentiality\n\n\n6\nAI for Design & Visual Communication\nModerate\nMake graphics with Claude, Canva, Figma, and Adobe — matched to the data level\n\n\n7\nCollaborating on Projects\nModerate\nSet up shared Projects and custom GPTs for a team (companion to Workshop 3)\n\n\n\n\n\n\n\n\n\nWarningData rules apply throughout\n\n\n\nUse public or non-sensitive data for every activity, and match any tool to Drexel’s data classification. See Tools & Access and Drexel’s AI Tools page."
+  },
+  {
+    "objectID": "tracks/creating-loops.html",
+    "href": "tracks/creating-loops.html",
+    "title": "Creating & Using Loops",
+    "section": "",
+    "text": "Advanced · Technical & Agentic track · ~1 hour, self-paced\n← Back to the Technical & Agentic track\nRun the same step over a batch — the power and the risk of compounding errors."
+  },
+  {
+    "objectID": "tracks/creating-loops.html#what-youll-be-able-to-do",
+    "href": "tracks/creating-loops.html#what-youll-be-able-to-do",
+    "title": "Creating & Using Loops",
     "section": "What you’ll be able to do",
-    "text": "What you’ll be able to do\n\nStructure system prompts, instructions, and reference files\nDecide what context to include — and what to leave out\nDiagnose failures as context problems, not model problems"
+    "text": "What you’ll be able to do\n\nSet up an iterative loop over many items\nAdd checks so a small early error doesn’t compound\nDecide when a loop should be supervised vs. fully manual"
   },
   {
-    "objectID": "tracks/context-engineering.html#overview",
-    "href": "tracks/context-engineering.html#overview",
-    "title": "Context Engineering",
+    "objectID": "tracks/creating-loops.html#overview",
+    "href": "tracks/creating-loops.html#overview",
+    "title": "Creating & Using Loops",
     "section": "Overview",
-    "text": "Overview\nWhen AI drifts, the fix is usually better context, not a bigger model. Context engineering is choosing what the model sees: the role, the standing instructions, the reference files, the examples — and what to leave out so the signal isn’t buried.\nMore context is not always better. Too much dilutes attention; the skill is picking the few things that matter for the task."
+    "text": "Overview\nA loop applies the same step across many items — summarize each of 50 documents, code each of 200 responses. It’s where AI saves the most time and where errors scale fastest: one flawed step repeats everywhere.\nThe discipline is sampling and spot-checking: validate the loop on a few items, run it, then audit a random sample of the output."
   },
   {
-    "objectID": "tracks/context-engineering.html#practice-activities",
-    "href": "tracks/context-engineering.html#practice-activities",
-    "title": "Context Engineering",
+    "objectID": "tracks/creating-loops.html#practice-activities",
+    "href": "tracks/creating-loops.html#practice-activities",
+    "title": "Creating & Using Loops",
     "section": "Practice activities",
-    "text": "Practice activities\nActivity 1 · Moderate — Fix a drift with better context\nTime ~15 min · Tools ChatGPT Edu or Claude\nGoal. Improve output by improving context, not by writing a longer prompt.\nSetup. A task where AI keeps missing what you want (e.g., it won’t match your report’s tone).\nSteps.\n\nAdd a short system instruction and one reference example:\n\nYou are [role]. Always [2–3 standing rules]. Here is an example of the output I want: [example]. Now do [task].\n\nRe-run and compare to your earlier attempts.\nNotice that the example and rules — not extra length — fixed it.\n\nExpected result. Noticeably better, on-spec output.\nCheck your work. Remove the example and re-run — quality should drop, confirming the example carried the weight.\nCommon pitfalls. More text isn’t better context; one sharp example beats paragraphs of description.\nStretch (optional). Turn the working context into a reusable skill.\n\nActivity 2 · Moderate — Trim the context\nTime ~12 min · Tools ChatGPT Edu or Claude\nGoal. Cut noise so the signal lands.\nSetup. A prompt with a lot of background.\nSteps.\n\nRemove everything non-essential; keep only what the task needs.\nRe-run and confirm quality held or improved.\nDiagnose:\n\nWhat in my context is actually doing work here, and what’s noise?\n\n\nExpected result. A leaner prompt with equal or better output.\nCheck your work. If cutting something degrades the output, it was signal — put it back.\nCommon pitfalls. Over-trimming removes needed constraints; iterate one cut at a time.\nStretch (optional). Build a minimal reusable context template for this task type."
+    "text": "Practice activities\nActivity 1 · Advanced — Loop with a checkpoint\nTime ~20 min · Tools ChatGPT Edu/Claude (+ R/Python if scripting)\nGoal. Apply one task across many items, then audit the results.\nSetup. About 10 non-sensitive items and one task. You can use 10 short 311 Service & Information Requests descriptions and classify each by issue type.\nSteps.\n\nDefine the task for a single item and confirm it’s right.\nRun the loop over all 10 (in the tool, or with a script that calls the model).\nAudit a sample:\n\nAudit a random sample of 3 of these outputs for errors and tell me what’s likely systematically wrong.\n\nFix the instruction and re-run only the failures.\n\nExpected result. 10 processed items plus an audit of a random sample.\nCheck your work. A small early error repeats across the whole batch — sampling catches it.\nCommon pitfalls. Don’t trust a loop just because it ran. Higher stakes mean reviewing every item, not a sample.\nStretch (optional). Add a confidence flag so low-certainty items get human review.\n\nActivity 2 · Advanced — Decide the guardrail for scale\nTime ~12 min · Tools ChatGPT Edu/Claude\nGoal. Set the rule for when a loop needs full human review.\nSetup. A real task you’d loop.\nSteps.\n\nWrite the rule: review every item vs. a sample, tied to stakes and reversibility.\nPressure-test it:\n\nGive me a scenario where sampling would be dangerous for this task.\n\nDecide and document.\n\nExpected result. A documented review rule for looped tasks.\nCheck your work. Would you defend this rule if one bad output reached a real decision?\nCommon pitfalls. Sampling is fine for low-stakes work; never for irreversible or rights-affecting outputs.\nStretch (optional). Add logging so you can reconstruct what the loop did (see Reproducible AI)."
   },
   {
-    "objectID": "tracks/context-engineering.html#check-your-readiness",
-    "href": "tracks/context-engineering.html#check-your-readiness",
-    "title": "Context Engineering",
+    "objectID": "tracks/creating-loops.html#check-your-readiness",
+    "href": "tracks/creating-loops.html#check-your-readiness",
+    "title": "Creating & Using Loops",
     "section": "Check your readiness",
     "text": "Check your readiness\nAnswer these, then check — your score suggests whether to dive in or skim the readings first."
   },
   {
-    "objectID": "tracks/context-engineering.html#recommended-readings",
-    "href": "tracks/context-engineering.html#recommended-readings",
-    "title": "Context Engineering",
+    "objectID": "tracks/creating-loops.html#recommended-readings",
+    "href": "tracks/creating-loops.html#recommended-readings",
+    "title": "Creating & Using Loops",
     "section": "Recommended readings",
-    "text": "Recommended readings\nFrom the AI readings library (ask the facilitator for access):\n\nEffective Context Engineering for AI Agents (Anthropic) — practical principles for context.\nState of Context Engineering in 2026 (Aurimas Griciūnas) — the current landscape.\nContext Engineering for AI Agents: Lessons from Building Manus — field lessons."
+    "text": "Recommended readings\nFrom the AI readings library (ask the facilitator for access):\n\nLoop Library: Repeatable AI Agent Workflows (Forward Future) — patterns for reliable loops.\nThe Coming Loop (Armin Ronacher) — where looped automation is heading."
   },
   {
-    "objectID": "tracks/context-engineering.html#useful-resources",
-    "href": "tracks/context-engineering.html#useful-resources",
-    "title": "Context Engineering",
+    "objectID": "tracks/creating-loops.html#useful-resources",
+    "href": "tracks/creating-loops.html#useful-resources",
+    "title": "Creating & Using Loops",
     "section": "Useful resources",
-    "text": "Useful resources\n\nAnthropic Prompt Library — worked prompt/context examples.\nChatGPT Edu (Drexel AI Tools) — the approved tool, with data rules.\n\n\n\n\n\n\n\nWarningData rules\n\n\n\nOnly put approved data into context; reference files follow the same data rules as prompts. See Tools & Access and Drexel’s AI Tools page."
+    "text": "Useful resources\n\nOpenAI: Building Agents — loop and workflow patterns.\nChatGPT Edu (Drexel AI Tools) — the approved tool, with data rules.\n\n\n\n\n\n\n\nWarningData rules\n\n\n\nLoop over non-sensitive items; audit a sample before acting on the results. See Tools & Access and Drexel’s AI Tools page."
   },
   {
-    "objectID": "tracks/creating-skills.html",
-    "href": "tracks/creating-skills.html",
-    "title": "Creating & Using Skills",
+    "objectID": "tracks/data-analysis-advanced.html",
+    "href": "tracks/data-analysis-advanced.html",
+    "title": "Data Analysis Advanced",
     "section": "",
-    "text": "Moderate · Technical & Agentic track · ~1 hour, self-paced\n← Back to the Technical & Agentic track\nTurn a prompt that works into a reusable, shareable skill your team can run again and again."
+    "text": "Advanced · Data & Analysis track · ~1 hour, self-paced\n← Back to the Data & Analysis track\nScaffold full pipelines with AI — then audit the subtle failure modes."
   },
   {
-    "objectID": "tracks/creating-skills.html#what-youll-be-able-to-do",
-    "href": "tracks/creating-skills.html#what-youll-be-able-to-do",
-    "title": "Creating & Using Skills",
+    "objectID": "tracks/data-analysis-advanced.html#what-youll-be-able-to-do",
+    "href": "tracks/data-analysis-advanced.html#what-youll-be-able-to-do",
+    "title": "Data Analysis Advanced",
     "section": "What you’ll be able to do",
-    "text": "What you’ll be able to do\n\nWrite a reusable skill: job, steps, output, and guardrails\nReuse it across tasks and share it with colleagues\nKnow when a skill beats a one-off prompt"
+    "text": "What you’ll be able to do\n\nUse AI to scaffold a multistep modeling pipeline\nAudit AI-built pipelines for leakage, validation, and metric choice\nKnow the limits of AI on tabular and time-series data"
   },
   {
-    "objectID": "tracks/creating-skills.html#overview",
-    "href": "tracks/creating-skills.html#overview",
-    "title": "Creating & Using Skills",
+    "objectID": "tracks/data-analysis-advanced.html#overview",
+    "href": "tracks/data-analysis-advanced.html#overview",
+    "title": "Data Analysis Advanced",
     "section": "Overview",
-    "text": "Overview\nA skill is a saved package of instructions for one job done well — “turn notes into our standard recap.” Write it once; the assistant applies it whenever that job comes up. Claude has a formal Skills feature; in ChatGPT Edu, custom GPTs and project instructions do the same.\nMost quality lives in the instructions, not the model. A good skill names the job, the steps, the output format, and the guardrails."
+    "text": "Overview\nFor advanced work, AI can scaffold a full pipeline — feature prep, modeling, evaluation. The failure modes get subtler: data leakage, the wrong validation strategy, overconfident metrics. Your job is to audit each step and the assumptions behind it.\nRecent work cautions that “foundation models” don’t automatically win on tabular or time-series data — classic methods often match or beat them. Skepticism is part of the method."
   },
   {
-    "objectID": "tracks/creating-skills.html#practice-activities",
-    "href": "tracks/creating-skills.html#practice-activities",
-    "title": "Creating & Using Skills",
+    "objectID": "tracks/data-analysis-advanced.html#practice-activities",
+    "href": "tracks/data-analysis-advanced.html#practice-activities",
+    "title": "Data Analysis Advanced",
     "section": "Practice activities",
-    "text": "Practice activities\nActivity 1 · Moderate — Write a reusable skill\nTime ~18 min · Tools ChatGPT Edu (custom GPT) or Claude\nGoal. Package a repeated task as a shareable, reliable skill.\nSetup. Pick a task you repeat — e.g., “turn messy meeting notes into our standard recap.”\nSteps.\n\nDraft the skill:\n\nHelp me write a reusable “skill” for this task. Include the job, step-by-step instructions, the exact output format, and guardrails (what it must never do). Task: [task].\n\nSave it as a custom GPT’s instructions (or a Claude skill).\nTest on two different inputs; tighten wherever it drifts.\n\nExpected result. A documented skill that produces consistent output across different inputs.\nCheck your work. Run it on a deliberately tricky input — does it hold the format and the guardrails?\nCommon pitfalls. Most of the quality is in the instructions, not the model. Keep sensitive data out of skill files; share inside Drexel only.\nStretch (optional). Add a one-line “use this when…” and have a colleague test it cold.\n\nActivity 2 · Moderate — Start a small skill library\nTime ~12 min · Tools a shared doc (Teams/SharePoint)\nGoal. Begin a reusable team library so good prompts become shared tools.\nSetup. A shared document the team can reach.\nSteps.\n\nAdd 2–3 skills, each with a title, the instructions, an example input/output, and “use when.”\nReview the set:\n\nReview my skill library for overlap or gaps, and suggest one more skill this set implies we need.\n\nAgree where it lives and that anyone can add.\n\nExpected result. A starter library of 2–3 skills plus one suggested addition.\nCheck your work. Have a colleague run one skill cold — if they can’t, the instructions need work.\nCommon pitfalls. A skill only its author can run isn’t reusable. Document clearly.\nStretch (optional). Convert your best prompt from another workshop into a skill."
+    "text": "Practice activities\nActivity 1 · Advanced — Audit a modeling pipeline\nTime ~25 min · Tools ChatGPT Edu (or Claude) + R or Python\nGoal. Build a pipeline, then rigorously audit it for the errors that scale.\nSetup. Download the Crash Data 2020–2024 (CSV). Outcome: a serious-crash indicator (fatal or suspected-serious injury). Use only fields known at the time of the crash.\nSteps.\n\nScaffold it:\n\nBuild a complete R or Python pipeline that predicts a serious-crash indicator (fatal or major injury) from crash characteristics in this Philadelphia data: load, clean, split, fit a logistic model, and report performance. Use only fields known before or at the time of the crash.\n\nAudit it, point by point:\n\nLeakage — are any predictors really the outcome in disguise (injury counts, fatality flags)? Remove them.\nValidation — is the split appropriate? Prefer a temporal split (train on earlier years, test on later).\nMetric — serious crashes are rare, so accuracy misleads. Look at recall, precision, and PR-AUC.\n\n\nAudit this pipeline for data leakage, an inappropriate validation split, and a misleading metric given class imbalance. Show me exactly where each problem is and the minimal fix.\n\nFix one real flaw and re-run.\n\nExpected result. A pipeline with at least one substantive flaw found and corrected, and honest metrics.\nCheck your work. Confirm no predictor encodes the outcome, and that the test set is genuinely held out (ideally later years).\nCommon pitfalls. Leakage inflates performance and hides easily. High accuracy on a rare outcome is meaningless. This is observational data — don’t imply causation.\nStretch (optional). Add calibration (are the predicted probabilities trustworthy?) and report it.\n\nActivity 2 · Advanced — Compare a baseline to a complex model\nTime ~20 min · Tools ChatGPT Edu (or Claude) + R or Python\nGoal. Decide whether model complexity actually earns its place.\nSetup. Same outcome and temporal split as Activity 1.\nSteps.\n\nCompare:\n\nCompare a simple logistic-regression baseline to a gradient-boosted model on the same temporal split, reporting PR-AUC and calibration. Tell me whether the complex model is justified.\n\nInspect the comparison yourself — don’t accept the verdict blindly.\nWrite one paragraph justifying your choice, weighing interpretability, performance, and maintenance.\n\nExpected result. A side-by-side comparison and your reasoned decision.\nCheck your work. Is the performance gap real and meaningful, or within noise? Would you trust the complex model in practice?\nCommon pitfalls. A higher AUC doesn’t automatically justify complexity. Recent evidence shows classic methods often match boosting and “foundation” models on tabular data.\nStretch (optional). Log your prompts, package versions, and a random seed so a colleague could reproduce the comparison (see the Reproducible AI topic)."
   },
   {
-    "objectID": "tracks/creating-skills.html#check-your-readiness",
-    "href": "tracks/creating-skills.html#check-your-readiness",
-    "title": "Creating & Using Skills",
+    "objectID": "tracks/data-analysis-advanced.html#check-your-readiness",
+    "href": "tracks/data-analysis-advanced.html#check-your-readiness",
+    "title": "Data Analysis Advanced",
     "section": "Check your readiness",
     "text": "Check your readiness\nAnswer these, then check — your score suggests whether to dive in or skim the readings first."
   },
   {
-    "objectID": "tracks/creating-skills.html#recommended-readings",
-    "href": "tracks/creating-skills.html#recommended-readings",
-    "title": "Creating & Using Skills",
+    "objectID": "tracks/data-analysis-advanced.html#recommended-readings",
+    "href": "tracks/data-analysis-advanced.html#recommended-readings",
+    "title": "Data Analysis Advanced",
     "section": "Recommended readings",
-    "text": "Recommended readings\nFrom the AI readings library (ask the facilitator for access):\n\nThe Complete Guide to Building Skills for Claude — how to structure a reusable skill.\nAI Agent Skills: Why Skill Curation Is the Next Bottleneck — keeping a useful library of skills."
+    "text": "Recommended readings\nFrom the AI readings library (ask the facilitator for access):\n\nAre Foundation Models Ready for Your Production Tabular Data? — limits of large models on tabular tasks.\nIs Boosting Still All You Need for Tabular Data? — a modeling reality check.\nAgainst Time-Series Foundation Models — skepticism on forecasting hype.\nImplementing Statistical Guardrails for Non-Deterministic Agents — keeping AI pipelines reliable."
   },
   {
-    "objectID": "tracks/creating-skills.html#useful-resources",
-    "href": "tracks/creating-skills.html#useful-resources",
-    "title": "Creating & Using Skills",
+    "objectID": "tracks/data-analysis-advanced.html#useful-resources",
+    "href": "tracks/data-analysis-advanced.html#useful-resources",
+    "title": "Data Analysis Advanced",
     "section": "Useful resources",
-    "text": "Useful resources\n\nClaude Skills (docs) — Claude’s formal Skills feature.\nChatGPT Edu (Drexel AI Tools) — the approved tool, with data rules.\n\n\n\n\n\n\n\nWarningData rules\n\n\n\nKeep sensitive data out of skill instructions and example files; share inside Drexel only. See Tools & Access and Drexel’s AI Tools page."
+    "text": "Useful resources\n\ntidymodels — modeling and validation framework in R.\nscikit-learn — machine learning in Python.\nQuarto — reproducible analysis documents.\n\n\n\n\n\n\n\nWarningData rules\n\n\n\nAudit on public data first; document prompts, versions, and seeds for reproducibility. See Tools & Access and Drexel’s AI Tools page."
   },
   {
-    "objectID": "tracks/data-analysis-basics.html",
-    "href": "tracks/data-analysis-basics.html",
-    "title": "Data Analysis Basics",
+    "objectID": "tracks/data-analysis.html",
+    "href": "tracks/data-analysis.html",
+    "title": "Data & Analysis Track",
     "section": "",
-    "text": "Novice · Data & Analysis track · ~1 hour, self-paced\n← Back to the Data & Analysis track\nAsk clear questions of a dataset and get a first, checkable answer with AI."
+    "text": "Self-paced track · 8 topics · novice → advanced\n← All self-paced tracks\nWork through these on your own, in order or by the topic you need. Each page has a short overview, two hands-on practice activities, a readiness quiz, recommended readings, and useful resources. Everything assumes you’ve done Workshop 1 (prompting and the Drexel data rules)."
   },
   {
-    "objectID": "tracks/data-analysis-basics.html#what-youll-be-able-to-do",
-    "href": "tracks/data-analysis-basics.html#what-youll-be-able-to-do",
-    "title": "Data Analysis Basics",
+    "objectID": "tracks/data-analysis.html#difficulty-levels",
+    "href": "tracks/data-analysis.html#difficulty-levels",
+    "title": "Data & Analysis Track",
+    "section": "Difficulty levels",
+    "text": "Difficulty levels\nNovice   getting started — no prior AI-for-data experience needed. Moderate   comfortable with some coding or analysis. Advanced   experienced analysts auditing AI-built work."
+  },
+  {
+    "objectID": "tracks/data-analysis.html#suggested-path",
+    "href": "tracks/data-analysis.html#suggested-path",
+    "title": "Data & Analysis Track",
+    "section": "Suggested path",
+    "text": "Suggested path\n\n\n\n#\nTopic\nLevel\nYou’ll be able to…\n\n\n\n\n1\nData Analysis Basics\nNovice\nAsk questions of a dataset and get a checkable first answer\n\n\n2\nData Cleaning, Recoding & Codebooks\nNovice\nClean messy data and document it with AI help\n\n\n3\nCoding with AI\nModerate\nGenerate, explain, and debug R/Python/Stata code you review\n\n\n4\nStatistical Interpretation across Stata, R & Python\nModerate\nRead output and translate models between languages\n\n\n5\nAI-Assisted Web & Dashboards\nModerate\nTurn data into a shareable dashboard or web page\n\n\n6\nImage Generation & Annotation\nModerate\nMake graphics responsibly and label images for analysis\n\n\n7\nQualitative Data Analysis\nModerate\nAssist coding and theming without outsourcing interpretation\n\n\n8\nData Analysis Advanced\nAdvanced\nScaffold pipelines and audit their subtle failure modes"
+  },
+  {
+    "objectID": "tracks/data-analysis.html#where-should-you-start",
+    "href": "tracks/data-analysis.html#where-should-you-start",
+    "title": "Data & Analysis Track",
+    "section": "Where should you start?",
+    "text": "Where should you start?\nAnswer these to find your entry point.\n\n\n\n\n\n\n\n\n\nWarningData rules apply throughout\n\n\n\nUse public or non-sensitive data for every activity, and match any tool to Drexel’s data classification. See Tools & Access and Drexel’s AI Tools page."
+  },
+  {
+    "objectID": "tracks/data-security-classification.html",
+    "href": "tracks/data-security-classification.html",
+    "title": "Data Security & Classification Deep-Dive",
+    "section": "",
+    "text": "Novice · Governance, Ethics & Equity track · ~1 hour, self-paced\n← Back to the Governance, Ethics & Equity track\nThe rule under every other topic: the right tool for the data’s sensitivity."
+  },
+  {
+    "objectID": "tracks/data-security-classification.html#what-youll-be-able-to-do",
+    "href": "tracks/data-security-classification.html#what-youll-be-able-to-do",
+    "title": "Data Security & Classification Deep-Dive",
     "section": "What you’ll be able to do",
-    "text": "What you’ll be able to do\n\nAsk clear questions of a dataset and get a first answer with AI help\nHave AI generate and explain simple summaries and a chart (R or Python)\nSpot when an AI answer needs checking against the data"
+    "text": "What you’ll be able to do\n\nClassify data by sensitivity (public → high-risk)\nMatch each tool to Drexel’s approved classification\nDe-identify or substitute when a tool isn’t cleared"
   },
   {
-    "objectID": "tracks/data-analysis-basics.html#overview",
-    "href": "tracks/data-analysis-basics.html#overview",
-    "title": "Data Analysis Basics",
+    "objectID": "tracks/data-security-classification.html#overview",
+    "href": "tracks/data-security-classification.html#overview",
+    "title": "Data Security & Classification Deep-Dive",
     "section": "Overview",
-    "text": "Overview\nAI can read a dataset’s description and draft the steps or code to answer a question — loading it, summarizing it, making a quick chart. You stay in charge of whether the question is sensible and whether the answer is right.\nStart small and verifiable: one dataset, one question, one chart. Confirm a number or two against what you already know before you trust anything."
+    "text": "Overview\nEvery AI decision starts with one question: how sensitive is this data, and is this tool approved for it? Drexel publishes which tools may be used with which data levels. Identifiable records, PHI, protected student data, and contract material have strict limits.\nWhen a tool isn’t cleared for your data, the move is to de-identify, use synthetic data, or switch to an approved tool — not to make an exception."
   },
   {
-    "objectID": "tracks/data-analysis-basics.html#practice-activities",
-    "href": "tracks/data-analysis-basics.html#practice-activities",
-    "title": "Data Analysis Basics",
+    "objectID": "tracks/data-security-classification.html#practice-activities",
+    "href": "tracks/data-security-classification.html#practice-activities",
+    "title": "Data Security & Classification Deep-Dive",
     "section": "Practice activities",
-    "text": "Practice activities\nActivity 1 · Novice — Interview a dataset (Philadelphia crashes)\nTime ~20 min · Tools ChatGPT Edu + a web browser\nGoal. Get oriented to a real public dataset and pull a first answer you can check.\nSetup. Open the Philadelphia Crashes data page and download the Crash Data 2020–2024 (CSV) — PennDOT crash records inside Philadelphia (~50k rows). Open it in Excel/Sheets, or paste the header row + first 5 data rows into ChatGPT Edu. This is public data, so it’s fine to use.\nSteps.\n\nCopy the column names and first 5 rows into ChatGPT Edu:\n\nHere are the columns and first rows of a Philadelphia crash dataset (PennDOT). In a short table, tell me what each column likely means and its data type. Flag any columns you’re unsure about.\n\nAsk for question ideas:\n\nBased on these columns, list five questions this data can answer about pedestrian safety, from simple to harder. For each, name the columns you’d use.\n\nPick one (e.g., “How many crashes involved a pedestrian each year?”) and ask for code + steps:\n\nUsing the pedestrian-count and crash-year fields, write R (tidyverse) or Python (pandas) code to count crashes involving at least one pedestrian, by year. Show the code and explain each line. First confirm the exact field names from my column list.\n\nRun the code.\n\nExpected result. A small table of pedestrian-involved crashes per year (roughly a few thousand per year).\nCheck your work. Spot-check one year yourself — in Excel, count rows where the pedestrian field is greater than 0. It should match the AI’s number.\nCommon pitfalls. Field names in the file often differ from what AI guesses — always confirm against the real columns. Missing values may be blank or coded as 0; decide how to treat them before counting.\nStretch (optional). Ask for the same count broken out by hour of day, and note when pedestrian crashes peak.\n\nActivity 2 · Novice — From question to chart\nTime ~15 min · Tools ChatGPT Edu + R or Python\nGoal. Turn one question into a clear, defensible chart.\nSetup. Same crashes CSV from Activity 1.\nSteps.\n\nAsk for a chart:\n\nWrite R (ggplot2) or Python (matplotlib) code to make a bar chart of pedestrian-involved crashes by year, with axis labels and a title, using this dataset.\n\nRun it, then ask it to explain each line in plain language.\nChange one thing:\n\nNow show counts by hour of day instead of year, and shade the three highest hours darker.\n\n\nExpected result. A labeled bar chart; the hour version typically shows an afternoon/evening peak.\nCheck your work. The chart’s yearly totals should match your Activity 1 table exactly.\nCommon pitfalls. Don’t let AI invent a year that isn’t in the data — confirm the year range. Reject any chart with an unlabeled axis.\nStretch (optional). Ask AI to add a one-sentence, plain-language caption summarizing the takeaway for a community audience."
+    "text": "Practice activities\nActivity 1 · Novice — Classify and match\nTime ~15 min · Tools Drexel AI Tools page + ChatGPT Edu\nGoal. Map your data to the right tools.\nSetup. List three data types you actually work with.\nSteps.\n\nFor each, note its sensitivity (public → high-risk) and which Drexel-approved tools allow it (check the AI Tools page).\nSanity-check with AI:\n\nI have these data types and these tools available. Which uses are appropriate and which aren’t, based on data sensitivity? [types] [tools]\n\nFlag any current habit that doesn’t match.\n\nExpected result. A data-to-tool matrix and a list of habits to change.\nCheck your work. Verify against Drexel’s official AI Tools page, not the AI’s guess.\nCommon pitfalls. “It’s probably fine” isn’t a classification. When unsure, treat data as more sensitive.\nStretch (optional). Write your team’s one-page “what goes where” cheat sheet.\n\nActivity 2 · Novice — Substitute safely\nTime ~12 min · Tools ChatGPT Edu (fabricated data only)\nGoal. Make sensitive data safe for a given tool.\nSetup. A fabricated sensitive example.\nSteps.\n\nDe-identify it:\n\nHere is a record with identifiers. Produce a de-identified version safe for a Low-Risk tool, and list what you removed or generalized. [fabricated record]\n\nCheck: could the remaining fields still identify someone in combination?\nDecide whether de-identification is enough or you need an approved tool.\n\nExpected result. A de-identified version plus a re-identification check.\nCheck your work. Quasi-identifiers (age + ZIP + date) can re-identify — scrutinize them.\nCommon pitfalls. Removing names isn’t de-identification; combinations matter.\nStretch (optional). Try generating fully synthetic data instead (see the Methods track)."
   },
   {
-    "objectID": "tracks/data-analysis-basics.html#check-your-readiness",
-    "href": "tracks/data-analysis-basics.html#check-your-readiness",
-    "title": "Data Analysis Basics",
+    "objectID": "tracks/data-security-classification.html#check-your-readiness",
+    "href": "tracks/data-security-classification.html#check-your-readiness",
+    "title": "Data Security & Classification Deep-Dive",
     "section": "Check your readiness",
     "text": "Check your readiness\nAnswer these, then check — your score suggests whether to dive in or skim the readings first."
   },
   {
-    "objectID": "tracks/data-analysis-basics.html#recommended-readings",
-    "href": "tracks/data-analysis-basics.html#recommended-readings",
-    "title": "Data Analysis Basics",
+    "objectID": "tracks/data-security-classification.html#recommended-readings",
+    "href": "tracks/data-security-classification.html#recommended-readings",
+    "title": "Data Security & Classification Deep-Dive",
     "section": "Recommended readings",
-    "text": "Recommended readings\nFrom the AI readings library (ask the facilitator for access):\n\nAI Agents for Data Scientists: Automations vs Agents — when AI should assist vs. when to keep manual control.\nHow to Do Agentic Data Science (Eric J. Ma) — a practical workflow for AI-assisted analysis.\nMastering the Data Science Human Skills AI Can’t Touch — the judgment you still own."
+    "text": "Recommended readings\nFrom the AI readings library (ask the facilitator for access):\n\nLLMs Can Unmask Pseudonymous Users at Scale (Ars Technica) — why de-identification is harder than it looks.\nAI and Humans: Making the Relationship Work (Schneier on Security) — security thinking for AI use."
   },
   {
-    "objectID": "tracks/data-analysis-basics.html#useful-resources",
-    "href": "tracks/data-analysis-basics.html#useful-resources",
-    "title": "Data Analysis Basics",
+    "objectID": "tracks/data-security-classification.html#useful-resources",
+    "href": "tracks/data-security-classification.html#useful-resources",
+    "title": "Data Security & Classification Deep-Dive",
     "section": "Useful resources",
-    "text": "Useful resources\n\nChatGPT Edu (Drexel AI Tools) — the approved tool for this work, with data rules.\nPosit / RStudio — the standard environment for R analysis.\ntidyverse — R packages for reading, summarizing, and plotting data.\n\n\n\n\n\n\n\nWarningData rules\n\n\n\nUse public or non-sensitive data for practice; never paste identifiable records into an unapproved tool. See Tools & Access and Drexel’s AI Tools page."
+    "text": "Useful resources\n\nDrexel AI Tools page — approved tools by data classification.\nHHS De-identification Guidance — HIPAA de-identification standards.\n\n\n\n\n\n\n\nWarningData rules\n\n\n\nThis is the data-rules topic: never exceed a tool’s approved classification. See Tools & Access and Drexel’s AI Tools page."
   },
   {
-    "objectID": "tracks/data-cleaning.html",
-    "href": "tracks/data-cleaning.html",
-    "title": "Data Cleaning, Recoding & Codebooks",
+    "objectID": "tracks/design-visual-communication.html",
+    "href": "tracks/design-visual-communication.html",
+    "title": "AI for Design & Visual Communication",
     "section": "",
-    "text": "Novice · Data & Analysis track · ~1 hour, self-paced\n← Back to the Data & Analysis track\nMost analysis time is cleaning — let AI speed it up while you keep control."
+    "text": "Moderate · Communication & Dissemination track · ~1 hour, self-paced\n← Back to the Communication & Dissemination track\nMake clear, accurate communication graphics with AI design tools — and pick the right tool for the data."
   },
   {
-    "objectID": "tracks/data-cleaning.html#what-youll-be-able-to-do",
-    "href": "tracks/data-cleaning.html#what-youll-be-able-to-do",
-    "title": "Data Cleaning, Recoding & Codebooks",
+    "objectID": "tracks/design-visual-communication.html#what-youll-be-able-to-do",
+    "href": "tracks/design-visual-communication.html#what-youll-be-able-to-do",
+    "title": "AI for Design & Visual Communication",
     "section": "What you’ll be able to do",
-    "text": "What you’ll be able to do\n\nHave AI flag data-quality issues and propose fixes\nRecode variables consistently and document the change\nAuto-draft a codebook and validate transformations"
+    "text": "What you’ll be able to do\n\nGenerate communication graphics (infographics, social posts, slides) with AI design tools\nChoose the right tool — Claude, Canva, Figma, or Adobe Express/Firefly — for the job and the data level\nApply accuracy, accessibility, representation, and disclosure standards to AI-made visuals"
   },
   {
-    "objectID": "tracks/data-cleaning.html#overview",
-    "href": "tracks/data-cleaning.html#overview",
-    "title": "Data Cleaning, Recoding & Codebooks",
+    "objectID": "tracks/design-visual-communication.html#overview",
+    "href": "tracks/design-visual-communication.html#overview",
+    "title": "AI for Design & Visual Communication",
     "section": "Overview",
-    "text": "Overview\nMost of analysis is cleaning. AI can propose recodes, spot inconsistencies, and draft documentation — but every transformation needs a check that it did what you meant.\nA codebook (what each variable means and how it’s coded) is easy to skip and painful to lack. AI can draft one straight from your data, which you then correct."
+    "text": "Overview\nSeveral AI tools now produce usable visuals fast. Claude can generate interactive infographics and web pages (“artifacts”); Canva and Figma have AI design features; Adobe Express with Firefly makes commercially-safe images and templates. You bring the message, the accuracy, and the design judgment. This is the self-paced companion to Workshop 4, which focuses on the Adobe tools.\nThe data rules differ by tool. Adobe Express, Firefly, and Acrobat are Drexel-approved for Moderate Risk data; Canva, Figma, and Claude are consumer tools — Low Risk Data only unless Drexel approves them. Use public, non-sensitive content, disclose AI-generated visuals, and check representation and accessibility before anything is published."
   },
   {
-    "objectID": "tracks/data-cleaning.html#practice-activities",
-    "href": "tracks/data-cleaning.html#practice-activities",
-    "title": "Data Cleaning, Recoding & Codebooks",
+    "objectID": "tracks/design-visual-communication.html#practice-activities",
+    "href": "tracks/design-visual-communication.html#practice-activities",
+    "title": "AI for Design & Visual Communication",
     "section": "Practice activities",
-    "text": "Practice activities\nActivity 1 · Novice — Diagnose the mess (Philadelphia 311)\nTime ~18 min · Tools ChatGPT Edu + a browser\nGoal. Find data-quality problems before you analyze.\nSetup. Open 311 Service & Information Requests. The full set is millions of rows, so grab a slice: download one recent year, or use the dataset’s API with a date filter. Paste ~20 rows plus the full column list into ChatGPT Edu. Public data.\nSteps.\n\nAsk for a diagnosis (no changes yet):\n\nHere is a sample of Philadelphia 311 service requests. List the data-quality issues you can see — inconsistent categories, missing values, suspicious dates, duplicate-looking rows — and propose a fix for each. Don’t change anything yet.\n\nReview its list and mark which fixes you agree with. You make the call.\nProbe one field:\n\nFor the service-type field, show the distinct values with counts, and group near-duplicates (different spellings or casing) into clean categories.\n\n\nExpected result. A list of issues (missing ZIPs, mixed-case categories, placeholder dates) and a proposed cleaning plan.\nCheck your work. Pick one proposed fix and verify the issue is real in the raw rows before accepting it.\nCommon pitfalls. AI may “fix” data by inventing values — only accept fixes you can verify. Keep the raw file untouched; never overwrite it.\nStretch (optional). Ask for the cleaning steps as a documented, re-runnable R/Python script you could apply to next year’s data.\n\nActivity 2 · Novice — Recode and document (Philadelphia crime categories)\nTime ~18 min · Tools ChatGPT Edu + R or Python\nGoal. Standardize a messy category field and produce a codebook.\nSetup. Open Crime Incidents and grab a slice (one police district, or one recent month). The offense field has many specific categories — perfect for recoding.\nSteps.\n\nRecode:\n\nHere are the distinct values of the crime offense field. Propose a recode into 4–6 analysis groups (e.g., violent, property, quality-of-life, other) and write R/Python code mapping each original value to a group. Leave anything ambiguous as “review”.\n\nGenerate documentation:\n\nGenerate a codebook entry for the new grouped variable: its name, definition, the full mapping table, and how missing/ambiguous values are handled.\n\nVerify counts before and after.\n\nExpected result. A grouped variable plus a codebook table; counts reconcile.\nCheck your work. The grouped counts must sum to the original total — confirm nothing was dropped. Inspect the “review” bucket by hand.\nCommon pitfalls. Don’t let AI silently bucket ambiguous offenses. Grouping choices are substantive decisions — they’re yours, not the model’s.\nStretch (optional). Ask AI to flag any offense whose grouping is genuinely debatable and explain the tradeoff."
+    "text": "Practice activities\nActivity 1 · Moderate — Build a one-page infographic\nTime ~20 min · Tools Claude (or Canva)\nGoal. Turn a finding into a clean, accessible visual you can share.\nSetup. One public finding — e.g., “In Philadelphia, pedestrian-involved crashes peak between 4–7 PM and are more common on wide arterial roads.” Use public, non-sensitive content only.\nSteps.\n\nDescribe the infographic (in Claude, ask for an artifact):\n\nCreate a clean, accessible one-page infographic (HTML) for this public-health finding: [finding]. Include a headline, one simple chart, and three takeaways. Use high-contrast colors and large text. Public data only.\n\n(In Canva, use Magic Design / Magic Media with a similar prompt.)\nReview for accuracy and accessibility — correct chart type, no fake precision, strong contrast, a caption or alt text.\nIterate one change at a time (simplify the chart, fix a label, adjust contrast).\n\nExpected result. A shareable infographic draft.\nCheck your work. Is every number accurate, the text high-contrast, and a caption/alt text provided?\nCommon pitfalls. AI visuals can misrepresent data (wrong chart, invented precision) — verify against the source. Consumer design tools are Low Risk data only; use public content.\nStretch (optional). Export it and confirm it meets accessibility basics (color contrast, alt text) for publication.\n\nActivity 2 · Moderate — Match the tool to the job and the data\nTime ~15 min · Tools Claude + Canva or Figma + Adobe Express\nGoal. Pick the right design tool for the task and the data sensitivity.\nSetup. A real visual need — a flyer, a social post, or a slide.\nSteps.\n\nMake a quick draft in two tools (e.g., a flyer in Adobe Express, an interactive chart in Claude).\nCompare speed, control, output quality, and the data classification each tool allows.\nGet a recommendation:\n\nThis is [data sensitivity] content for [use]. Which tool fits best and why? List the Drexel data-rule consideration for each of Adobe Express, Canva, Figma, and Claude.\n\n\nExpected result. A reasoned tool choice with the data-rule rationale.\nCheck your work. Did you match the tool to Drexel’s classification — Adobe Express/Firefly (Moderate Risk approved) vs. Canva/Figma/Claude (Low Risk only)?\nCommon pitfalls. The flashiest tool isn’t always approved for your data. Always disclose AI-generated visuals.\nStretch (optional). Decide which tool you’d standardize on for routine team graphics, and why."
   },
   {
-    "objectID": "tracks/data-cleaning.html#check-your-readiness",
-    "href": "tracks/data-cleaning.html#check-your-readiness",
-    "title": "Data Cleaning, Recoding & Codebooks",
+    "objectID": "tracks/design-visual-communication.html#check-your-readiness",
+    "href": "tracks/design-visual-communication.html#check-your-readiness",
+    "title": "AI for Design & Visual Communication",
     "section": "Check your readiness",
     "text": "Check your readiness\nAnswer these, then check — your score suggests whether to dive in or skim the readings first."
   },
   {
-    "objectID": "tracks/data-cleaning.html#recommended-readings",
-    "href": "tracks/data-cleaning.html#recommended-readings",
-    "title": "Data Cleaning, Recoding & Codebooks",
+    "objectID": "tracks/design-visual-communication.html#recommended-readings",
+    "href": "tracks/design-visual-communication.html#recommended-readings",
+    "title": "AI for Design & Visual Communication",
     "section": "Recommended readings",
-    "text": "Recommended readings\nFrom the AI readings library (ask the facilitator for access):\n\nAI-Ready Data vs. Analytics-Ready Data — why preparation determines whether analysis works.\nStop Learning Excel (Ruben Hassid) — a provocative reframe of spreadsheet work with AI — read critically."
+    "text": "Recommended readings\nFrom the AI readings library (ask the facilitator for access):\n\nAnthropic Has Caught Up to OpenAI in Image Understanding — what multimodal tools can do with images.\nThese New Tools Could Make AI Vision Systems Less Biased (MIT Tech Review) — representation and bias in AI-generated visuals.\nClaude Code Now Supports Artifacts — generating interactive, shareable visual outputs."
   },
   {
-    "objectID": "tracks/data-cleaning.html#useful-resources",
-    "href": "tracks/data-cleaning.html#useful-resources",
-    "title": "Data Cleaning, Recoding & Codebooks",
+    "objectID": "tracks/design-visual-communication.html#useful-resources",
+    "href": "tracks/design-visual-communication.html#useful-resources",
+    "title": "AI for Design & Visual Communication",
     "section": "Useful resources",
-    "text": "Useful resources\n\ntidyverse / dplyr — recoding and cleaning verbs in R.\nOpenRefine — a free tool for cleaning messy tabular data.\nQuarto — document your cleaning steps reproducibly.\n\n\n\n\n\n\n\nWarningData rules\n\n\n\nPractice on non-sensitive data; de-identify before any tool sees real records. See Tools & Access and Drexel’s AI Tools page."
-  },
-  {
-    "objectID": "tracks/de-identification-synthetic-data.html",
-    "href": "tracks/de-identification-synthetic-data.html",
-    "title": "De-identification & Synthetic Data",
-    "section": "",
-    "text": "Moderate · Methods & Study Design track · ~1 hour, self-paced\n← Back to the Methods & Study Design track\nTwo ways to work safely with sensitive data: remove identifiers, or generate realistic fakes."
-  },
-  {
-    "objectID": "tracks/de-identification-synthetic-data.html#what-youll-be-able-to-do",
-    "href": "tracks/de-identification-synthetic-data.html#what-youll-be-able-to-do",
-    "title": "De-identification & Synthetic Data",
-    "section": "What you’ll be able to do",
-    "text": "What you’ll be able to do\n\nApply de-identification standards (e.g., HIPAA Safe Harbor)\nGenerate synthetic data for sharing and teaching\nRecognize re-identification and fidelity limits"
-  },
-  {
-    "objectID": "tracks/de-identification-synthetic-data.html#overview",
-    "href": "tracks/de-identification-synthetic-data.html#overview",
-    "title": "De-identification & Synthetic Data",
-    "section": "Overview",
-    "text": "Overview\nDe-identification removes identifiers so data can be used more freely; synthetic data generates realistic but fake records. Both let you teach, demo, and prototype without exposing real people — your course already uses synthetic crash data this way.\nNeither is magic. De-identified data can sometimes be re-identified by combining fields, and synthetic data can leak patterns or miss real structure. Check both before relying on them."
-  },
-  {
-    "objectID": "tracks/de-identification-synthetic-data.html#practice-activities",
-    "href": "tracks/de-identification-synthetic-data.html#practice-activities",
-    "title": "De-identification & Synthetic Data",
-    "section": "Practice activities",
-    "text": "Practice activities\nActivity 1 · Moderate — De-identify a sample\nTime ~15 min · Tools ChatGPT Edu (fabricated data only)\nGoal. Apply Safe Harbor-style de-identification and test re-identification risk.\nSetup. A small fabricated sample with quasi-identifiers (age, ZIP, admission date, sex).\nSteps.\n\nDe-identify:\n\nApply HIPAA Safe Harbor-style de-identification to this fabricated dataset (remove or generalize identifiers). Explain each change. [sample]\n\nAttack it:\n\nNow act as an adversary: could you re-identify anyone by combining the remaining fields with public data? Where’s the risk?\n\nDecide whether it’s safe enough or needs more generalization.\n\nExpected result. A de-identified sample and an adversarial risk assessment.\nCheck your work. Age + ZIP + date is a classic re-identification combination — scrutinize it.\nCommon pitfalls. Removing direct identifiers isn’t enough; quasi-identifiers re-identify. Use fabricated data here.\nStretch (optional). Generalize further (age bands, 3-digit ZIP) and re-assess.\n\nActivity 2 · Moderate — Generate and stress-test synthetic data\nTime ~13 min · Tools ChatGPT Edu + R/Python\nGoal. Make realistic synthetic data and check its fidelity.\nSetup. Describe a dataset’s structure (columns, ranges, relationships). You can mirror the Philadelphia crash data structure.\nSteps.\n\nGenerate it reproducibly:\n\nGenerate a synthetic dataset with these columns, realistic distributions, and plausible relationships. Give me R or Python code so it’s reproducible. [structure]\n\nCompare the synthetic distributions to what you’d expect (or to a public summary).\nCritique fidelity:\n\nWhere is this synthetic data likely unrealistic or missing real structure?\n\n\nExpected result. A reproducible synthetic dataset and a fidelity critique.\nCheck your work. Synthetic data can miss real correlations — don’t draw substantive conclusions from it.\nCommon pitfalls. Synthetic data is for teaching, prototyping, and sharing — not a substitute for real analysis. It can also leak patterns if generated from real data.\nStretch (optional). Use the synthetic set to test an analysis script before touching real data."
-  },
-  {
-    "objectID": "tracks/de-identification-synthetic-data.html#check-your-readiness",
-    "href": "tracks/de-identification-synthetic-data.html#check-your-readiness",
-    "title": "De-identification & Synthetic Data",
-    "section": "Check your readiness",
-    "text": "Check your readiness\nAnswer these, then check — your score suggests whether to dive in or skim the readings first."
-  },
-  {
-    "objectID": "tracks/de-identification-synthetic-data.html#recommended-readings",
-    "href": "tracks/de-identification-synthetic-data.html#recommended-readings",
-    "title": "De-identification & Synthetic Data",
-    "section": "Recommended readings",
-    "text": "Recommended readings\nFrom the AI readings library (ask the facilitator for access):\n\nLLMs Can Unmask Pseudonymous Users at Scale (Ars Technica) — re-identification risk made concrete.\nAI and Humans: Making the Relationship Work (Schneier on Security) — security mindset for data handling."
-  },
-  {
-    "objectID": "tracks/de-identification-synthetic-data.html#useful-resources",
-    "href": "tracks/de-identification-synthetic-data.html#useful-resources",
-    "title": "De-identification & Synthetic Data",
-    "section": "Useful resources",
-    "text": "Useful resources\n\nHHS De-identification Guidance — HIPAA Safe Harbor and Expert Determination.\nChatGPT Edu (Drexel AI Tools) — the approved tool, with data rules.\n\n\n\n\n\n\n\nWarningData rules\n\n\n\nGenerate/transform on non-sensitive samples in unapproved tools; real PHI needs an approved tool and method. See Tools & Access and Drexel’s AI Tools page."
+    "text": "Useful resources\n\nAdobe Firefly — commercially-safe image generation (Drexel Moderate-Risk data).\nCanva — AI design (Magic Studio); Low Risk data only unless approved.\nFigma — collaborative design with AI features; Low Risk data only.\nClaude — generate infographics and artifacts; Low Risk data only at Drexel.\nDrexel AI Tools — approved tools by data classification.\n\n\n\n\n\n\n\nWarningData rules\n\n\n\nAdobe Express/Firefly are approved for Moderate Risk data; Canva, Figma, and Claude are Low Risk Data only unless Drexel approves them. Use public/non-sensitive content and disclose AI-generated visuals. See Tools & Access and Drexel’s AI Tools page."
   },
   {
     "objectID": "tracks/geospatial-gis.html",

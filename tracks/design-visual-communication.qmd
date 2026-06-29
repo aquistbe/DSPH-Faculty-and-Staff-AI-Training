@@ -1,0 +1,122 @@
+---
+title: "AI for Design & Visual Communication"
+---
+
+::: {.topic-badges}
+[Moderate]{.level-badge .level-moderate} · **Communication & Dissemination** track · ~1 hour, self-paced
+:::
+
+[← Back to the Communication & Dissemination track](communication.qmd){.track-back}
+
+*Make clear, accurate communication graphics with AI design tools — and pick the right tool for the data.*
+
+## What you'll be able to do
+
+- Generate communication graphics (infographics, social posts, slides) with AI design tools
+- Choose the right tool — Claude, Canva, Figma, or Adobe Express/Firefly — for the job and the data level
+- Apply accuracy, accessibility, representation, and disclosure standards to AI-made visuals
+
+## Overview
+
+Several AI tools now produce usable visuals fast. **Claude** can generate interactive infographics and web pages ("artifacts"); **Canva** and **Figma** have AI design features; **Adobe Express** with **Firefly** makes commercially-safe images and templates. You bring the message, the accuracy, and the design judgment. This is the self-paced companion to [Workshop 4](../workshop4.qmd), which focuses on the Adobe tools.
+
+The data rules differ by tool. Adobe Express, Firefly, and Acrobat are Drexel-approved for **Moderate Risk** data; **Canva, Figma, and Claude are consumer tools — Low Risk Data only** unless Drexel approves them. Use public, non-sensitive content, disclose AI-generated visuals, and check representation and accessibility before anything is published.
+
+## Practice activities
+
+```{=html}
+<details class="activity"><summary>Activity 1 · Moderate — Build a one-page infographic</summary>
+```
+
+**Time** ~20 min · **Tools** Claude (or Canva)
+
+**Goal.** Turn a finding into a clean, accessible visual you can share.
+
+**Setup.** One public finding — e.g., *“In Philadelphia, pedestrian-involved crashes peak between 4–7 PM and are more common on wide arterial roads.”* Use public, non-sensitive content only.
+
+**Steps.**
+
+1. Describe the infographic (in Claude, ask for an artifact):
+
+   > Create a clean, accessible one-page infographic (HTML) for this public-health finding: [finding]. Include a headline, one simple chart, and three takeaways. Use high-contrast colors and large text. Public data only.
+
+   (In Canva, use Magic Design / Magic Media with a similar prompt.)
+
+2. Review for accuracy and accessibility — correct chart type, no fake precision, strong contrast, a caption or alt text.
+
+3. Iterate one change at a time (simplify the chart, fix a label, adjust contrast).
+
+**Expected result.** A shareable infographic draft.
+
+**Check your work.** Is every number accurate, the text high-contrast, and a caption/alt text provided?
+
+**Common pitfalls.** AI visuals can misrepresent data (wrong chart, invented precision) — verify against the source. Consumer design tools are Low Risk data only; use public content.
+
+**Stretch (optional).** Export it and confirm it meets accessibility basics (color contrast, alt text) for publication.
+
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 2 · Moderate — Match the tool to the job and the data</summary>
+```
+
+**Time** ~15 min · **Tools** Claude + Canva or Figma + Adobe Express
+
+**Goal.** Pick the right design tool for the task *and* the data sensitivity.
+
+**Setup.** A real visual need — a flyer, a social post, or a slide.
+
+**Steps.**
+
+1. Make a quick draft in two tools (e.g., a flyer in Adobe Express, an interactive chart in Claude).
+
+2. Compare speed, control, output quality, and the data classification each tool allows.
+
+3. Get a recommendation:
+
+   > This is [data sensitivity] content for [use]. Which tool fits best and why? List the Drexel data-rule consideration for each of Adobe Express, Canva, Figma, and Claude.
+
+**Expected result.** A reasoned tool choice with the data-rule rationale.
+
+**Check your work.** Did you match the tool to Drexel’s classification — Adobe Express/Firefly (Moderate Risk approved) vs. Canva/Figma/Claude (Low Risk only)?
+
+**Common pitfalls.** The flashiest tool isn’t always approved for your data. Always disclose AI-generated visuals.
+
+**Stretch (optional).** Decide which tool you’d standardize on for routine team graphics, and why.
+
+```{=html}
+</details>
+```
+
+## Check your readiness
+
+Answer these, then check — your score suggests whether to dive in or skim the readings first.
+
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions":[{"q":"Which design tools are Drexel-approved for Moderate Risk data?","options":["Adobe Express/Firefly (approved); Canva, Figma, and Claude are Low Risk only","All of them equally","None of them","Only Claude"],"answer":0,"explain":"Adobe Express/Firefly are approved for Moderate Risk; Canva, Figma, and Claude are Low Risk Data only unless Drexel approves them."},{"q":"Before publishing an AI-generated chart, you must verify…","options":["Every number, and that it's accessible (contrast, alt text)","Only the colors","Nothing","The file size"],"answer":0,"explain":"Accuracy and accessibility both matter for anything that reaches an audience."},{"q":"AI-generated visuals in public materials should be…","options":["Checked for accuracy and representation, and disclosed","Used as-is","Never used","Hidden"],"answer":0,"explain":"Review for accuracy and representation, and disclose AI-made visuals."}]}
+</script>
+</div>
+
+## Recommended readings
+
+From the AI readings library (ask the facilitator for access):
+
+- **Anthropic Has Caught Up to OpenAI in Image Understanding** — what multimodal tools can do with images.
+- **These New Tools Could Make AI Vision Systems Less Biased (MIT Tech Review)** — representation and bias in AI-generated visuals.
+- **Claude Code Now Supports Artifacts** — generating interactive, shareable visual outputs.
+
+## Useful resources
+
+- [Adobe Firefly](https://www.adobe.com/products/firefly.html) — commercially-safe image generation (Drexel Moderate-Risk data).
+- [Canva](https://www.canva.com) — AI design (Magic Studio); Low Risk data only unless approved.
+- [Figma](https://www.figma.com) — collaborative design with AI features; Low Risk data only.
+- [Claude](https://claude.ai) — generate infographics and artifacts; Low Risk data only at Drexel.
+- [Drexel AI Tools](https://drexel.edu/provost/ai/tools) — approved tools by data classification.
+
+::: {.callout-warning}
+## Data rules
+Adobe Express/Firefly are approved for **Moderate Risk** data; **Canva, Figma, and Claude are Low Risk Data only** unless Drexel approves them. Use public/non-sensitive content and disclose AI-generated visuals. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+:::
