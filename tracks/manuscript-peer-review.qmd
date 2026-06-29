@@ -25,28 +25,73 @@ Peer review has a hard rule: a manuscript you're reviewing is **confidential**. 
 ## Practice activities
 
 ```{=html}
-<details class="activity"><summary>Activity 1 · Advanced — Tighten with a checklist</summary>
+<details class="activity"><summary>Activity 1 · Advanced — Tighten a section against a reporting checklist</summary>
 ```
 
-1. Paste your own draft methods section and the relevant **reporting checklist** (e.g., STROBE).
-2. Ask AI which checklist items are missing or unclear.
-3. Revise; confirm each change is accurate to what you actually did.
+**Time** ~18 min · **Tools** ChatGPT Edu
+
+**Goal.** Use a reporting guideline to strengthen your own methods section.
+
+**Setup.** Your own draft methods section (non-sensitive) and the relevant checklist (e.g., STROBE for observational studies).
+
+**Steps.**
+
+1. Find the gaps:
+
+   > Here is my methods section and the STROBE checklist. Which checklist items are missing, unclear, or under-reported? Be specific. [methods] [checklist]
+
+2. Revise to address them; confirm each change is true to what you actually did.
+
+3. Improve reproducibility:
+
+   > Suggest where I should add detail to make this reproducible, without padding.
+
+**Expected result.** A checklist-aligned methods section.
+
+**Check your work.** Every added detail must match your real methods — don’t let AI invent procedures you didn’t use.
+
+**Common pitfalls.** AI “improves” by adding things you didn’t do. You own accuracy. Use an approved tool for unpublished work.
+
+**Stretch (optional).** Generate a STROBE/CONSORT compliance table to submit with the paper.
 
 ```{=html}
 </details>
 ```
 
 ```{=html}
-<details class="activity"><summary>Activity 2 · Advanced — Structure a reviewer response</summary>
+<details class="activity"><summary>Activity 2 · Advanced — Structure a response to reviewers</summary>
 ```
 
-1. Paste **your own** reviewer comments and your planned replies (not someone else's manuscript).
-2. Ask AI to organize a clear, point-by-point response letter.
-3. Verify every claim about what you changed is true.
+**Time** ~15 min · **Tools** ChatGPT Edu
+
+**Goal.** Organize a clear, point-by-point reviewer response — while respecting confidentiality.
+
+**Setup.** Your own reviewer comments on your paper and your planned replies. **Never paste a manuscript you are reviewing for a journal.**
+
+**Steps.**
+
+1. Organize the letter:
+
+   > Organize these reviewer comments and my planned responses into a professional, point-by-point response letter grouped by reviewer, with polite framing. [comments + your replies]
+
+2. Verify every “we have revised…” statement is actually done in the manuscript.
+
+3. Soften where needed:
+
+   > Flag any response that sounds defensive and suggest a more constructive phrasing.
+
+**Expected result.** A clean response-to-reviewers letter.
+
+**Check your work.** Confirm each claim of a change matches the revised manuscript.
+
+**Common pitfalls.** Hard rule: never put a manuscript you’re peer-reviewing into an AI tool — it’s confidential and many journals prohibit it. Disclose AI use in your own writing.
+
+**Stretch (optional).** Draft a short cover letter to the editor summarizing the major changes.
 
 ```{=html}
 </details>
 ```
+
 
 ## Check your readiness
 

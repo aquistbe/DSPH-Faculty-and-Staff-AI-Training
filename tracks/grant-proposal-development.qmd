@@ -25,28 +25,73 @@ Funders increasingly expect disclosure of AI assistance and prohibit fabricated 
 ## Practice activities
 
 ```{=html}
-<details class="activity"><summary>Activity 1 · Moderate — Draft a specific-aims page</summary>
+<details class="activity"><summary>Activity 1 · Moderate — Draft a Specific Aims page</summary>
 ```
 
-1. Give AI your project's goal, gap, and approach (non-sensitive).
-2. Ask for a **one-page specific-aims draft** with a hook, long-term goal, and 2–3 aims.
-3. Rewrite the science yourself; verify every cited claim against the source.
+**Time** ~20 min · **Tools** ChatGPT Edu
+
+**Goal.** Go from rough notes to a structured Aims draft you then make your own.
+
+**Setup.** Your project’s goal, gap, and approach (non-sensitive). Example topic: *reducing pedestrian injuries near Philadelphia schools through built-environment changes.*
+
+**Steps.**
+
+1. Ask for a structured draft:
+
+   > You are an experienced NIH grant writer. From these notes, draft a one-page Specific Aims: an opening hook, the gap, long-term goal, central hypothesis, and 2–3 aims with brief sub-aims. Notes: [goal, gap, approach].
+
+2. Rewrite the science in your own words — the hypothesis and aims must be yours, not the model’s.
+
+3. Get a reviewer’s-eye critique:
+
+   > Critique my revised Aims as a study-section reviewer would: what’s underdeveloped, what’s overreaching, what’s missing?
+
+**Expected result.** A one-page Aims draft plus a reviewer-style critique.
+
+**Check your work.** Verify every citation and statistic you add against the actual source.
+
+**Common pitfalls.** AI invents plausible citations and overpromises feasibility. You own the science and the claims; disclose AI assistance per funder policy.
+
+**Stretch (optional).** Ask for a 3-sentence project summary derived from the Aims.
 
 ```{=html}
 </details>
 ```
 
 ```{=html}
-<details class="activity"><summary>Activity 2 · Moderate — Fit the guidelines</summary>
+<details class="activity"><summary>Activity 2 · Moderate — Fit a section to the funder’s rules</summary>
 ```
 
-1. Paste a draft section and the funder's instructions.
-2. Ask AI to flag where you don't meet the guidance and to tighten to the page limit.
-3. Confirm nothing required was dropped.
+**Time** ~15 min · **Tools** ChatGPT Edu
+
+**Goal.** Tighten text to guidelines and page limits without dropping required content.
+
+**Setup.** A draft section (e.g., a significance paragraph or budget justification) plus the funder’s instructions.
+
+**Steps.**
+
+1. Ask it to check compliance and tighten:
+
+   > Here is my draft and the funder’s formatting and length rules. Flag where I don’t meet the guidance and tighten the text to fit — without dropping anything required. [draft] [rules]
+
+2. Confirm nothing required was cut.
+
+3. Surface gaps:
+
+   > List anything the guidelines require that my draft is still missing.
+
+**Expected result.** A tightened, compliant section plus a gap checklist.
+
+**Check your work.** Re-read against the funder’s actual instructions yourself — AI can miss a requirement.
+
+**Common pitfalls.** Trimming can quietly remove mandatory elements; verify.
+
+**Stretch (optional).** Draft a cover-letter paragraph on the proposal’s fit to the funding opportunity.
 
 ```{=html}
 </details>
 ```
+
 
 ## Check your readiness
 

@@ -214,18 +214,41 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="practice-activities" class="level2">
 <h2 class="anchored" data-anchor-id="practice-activities">Practice activities</h2>
-<details class="activity"><summary>Activity 1 · Advanced — Map a connection</summary>
+<details class="activity"><summary>Activity 1 · Advanced — Map a connection with least privilege</summary>
+<p><strong>Time</strong> ~15 min · <strong>Tools</strong> conceptual + the connector’s docs</p>
+<p><strong>Goal.</strong> Plan a safe AI-to-tool connection.</p>
+<p><strong>Setup.</strong> Pick a task that would need AI to reach a tool or data source (e.g., read a shared folder of public reports).</p>
+<p><strong>Steps.</strong></p>
 <ol type="1">
-<li>Pick a task that would need AI to reach a tool or data source.</li>
-<li>Write what access it truly needs — and the <strong>narrowest</strong> version that works.</li>
-<li>Decide read-only vs.&nbsp;write, and what stays off-limits.</li>
+<li><p>Write exactly what access the task needs — then the narrowest version that still works (read-only? one folder?).</p></li>
+<li><p>Get a second opinion:</p>
+<blockquote class="blockquote">
+<p>Here’s the task and the access I’m considering. What’s the least-privilege version, and what could go wrong if it’s over-scoped? [task]</p>
+</blockquote></li>
+<li><p>Decide read-only vs.&nbsp;write, and what stays off-limits.</p></li>
 </ol>
+<p><strong>Expected result.</strong> A least-privilege access plan.</p>
+<p><strong>Check your work.</strong> Could a misbehaving connection do damage with this access? If so, narrow it.</p>
+<p><strong>Common pitfalls.</strong> Convenience tempts over-permissioning. Prefer read-only; confirm Drexel rules before connecting any real or sensitive system.</p>
+<p><strong>Stretch (optional).</strong> Decide whether the connection is even worth the risk versus a manual copy-paste.</p>
 </details>
-<details class="activity"><summary>Activity 2 · Advanced — Risk-check it</summary>
+<details class="activity"><summary>Activity 2 · Advanced — Risk-check the connection</summary>
+<p><strong>Time</strong> ~12 min · <strong>Tools</strong> conceptual</p>
+<p><strong>Goal.</strong> Put a human approval step before consequential actions.</p>
+<p><strong>Setup.</strong> Your plan from Activity 1.</p>
+<p><strong>Steps.</strong></p>
 <ol type="1">
-<li>List what could go wrong if the connection misbehaves.</li>
-<li>Add a human-approval step before any write or send action.</li>
+<li><p>List what could go wrong if the connection misbehaves or the AI is misled by content it reads.</p></li>
+<li><p>Add a human-approval step before any write, send, or delete action.</p></li>
+<li><p>Find the worst case:</p>
+<blockquote class="blockquote">
+<p>Given this connection, what’s the single highest-risk action, and how do I gate it?</p>
+</blockquote></li>
 </ol>
+<p><strong>Expected result.</strong> A risk list plus an approval gate on the riskiest action.</p>
+<p><strong>Check your work.</strong> Is there any path where the AI acts irreversibly without a human? Close it.</p>
+<p><strong>Common pitfalls.</strong> Connected agents can be misled by malicious content (prompt injection) — keep humans on consequential steps.</p>
+<p><strong>Stretch (optional).</strong> Note which actions you’d never connect to AI at all.</p>
 </details>
 </section>
 <section id="check-your-readiness" class="level2">

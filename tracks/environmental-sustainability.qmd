@@ -28,24 +28,64 @@ Right-sizing is the practical lever: use the smallest model that does the job, a
 <details class="activity"><summary>Activity 1 · Novice — Right-size a task</summary>
 ```
 
-1. Pick a simple task you'd normally send to a large model.
-2. Try it on a **smaller/faster** model; judge whether quality held.
-3. Note where a smaller model is good enough.
+**Time** ~12 min · **Tools** ChatGPT Edu (model picker)
+
+**Goal.** Use the smallest model that does the job.
+
+**Setup.** A simple task you’d normally send to a large model.
+
+**Steps.**
+
+1. Run it on a smaller/faster model and judge whether quality held.
+
+2. Run it on the large model and compare.
+
+3. Note where the smaller model is good enough.
+
+**Expected result.** A sense of where “smaller is fine.”
+
+**Check your work.** Did the big model actually add value here, or just cost more energy and money?
+
+**Common pitfalls.** Defaulting to the biggest model for everything is wasteful.
+
+**Stretch (optional).** Estimate how often your typical tasks really need the largest model.
 
 ```{=html}
 </details>
 ```
 
 ```{=html}
-<details class="activity"><summary>Activity 2 · Novice — Map the footprint</summary>
+<details class="activity"><summary>Activity 2 · Novice — Connect AI’s footprint to environmental health</summary>
 ```
 
-1. Read one source on data-center energy or water use.
-2. Write two sentences connecting it to environmental health and equity (who lives near data centers?).
+**Time** ~13 min · **Tools** a reading + ChatGPT Edu
+
+**Goal.** Frame AI’s resource use as a DSPH-relevant issue.
+
+**Setup.** Read one source on data-center energy or water use (in your DSPH Readings folder).
+
+**Steps.**
+
+1. Note the key figures (energy, water).
+
+2. Draft a framing:
+
+   > Summarize the environmental-health and equity concerns of data-center siting in two sentences for a public audience.
+
+3. Verify the figures against the reading.
+
+**Expected result.** A short, accurate framing connecting AI to environmental health.
+
+**Check your work.** Confirm the numbers — don’t repeat an AI-stated figure unchecked.
+
+**Common pitfalls.** This is a real tradeoff, not a reason to abstain; aim for proportion.
+
+**Stretch (optional).** Draft a one-line “responsible use” norm for your team.
 
 ```{=html}
 </details>
 ```
+
 
 ## Check your readiness
 

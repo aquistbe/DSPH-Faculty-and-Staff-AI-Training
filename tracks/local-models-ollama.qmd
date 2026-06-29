@@ -28,24 +28,66 @@ Local is not automatically "approved" for sensitive data — confirm with Drexel
 <details class="activity"><summary>Activity 1 · Advanced — Run a model locally</summary>
 ```
 
-1. Install **Ollama** and pull a small open model.
-2. Run a basic task (summarize a public document) entirely offline.
-3. Compare quality to a cloud model; note the gap.
+**Time** ~20 min · **Tools** Ollama + a capable laptop
+
+**Goal.** Run an open model offline and judge the tradeoff.
+
+**Setup.** Install Ollama (ollama.com) and pull a small model (e.g., a 7–8B model).
+
+**Steps.**
+
+1. Run a basic task entirely offline — summarize a public document:
+
+   `ollama run <model>` then paste the text.
+
+2. Run the same task on a cloud model (ChatGPT Edu) and compare quality and speed.
+
+3. Note where the local model is good enough and where it falls short.
+
+**Expected result.** A working local run plus a quality/speed comparison.
+
+**Check your work.** Confirm nothing left your machine (that’s the point) — and that Drexel rules still apply for any sensitive data.
+
+**Common pitfalls.** Local is not automatically approved for sensitive data. Local models are smaller and weaker — set expectations.
+
+**Stretch (optional).** Write the conditions under which you’d choose local over cloud.
 
 ```{=html}
 </details>
 ```
 
 ```{=html}
-<details class="activity"><summary>Activity 2 · Advanced — Decide local vs cloud</summary>
+<details class="activity"><summary>Activity 2 · Advanced — Decide local vs. cloud for a real task</summary>
 ```
 
-1. List a task where local would help (privacy, cost, offline).
-2. Write the conditions under which you'd choose local — and confirm Drexel's data rules still apply.
+**Time** ~12 min · **Tools** ChatGPT Edu
+
+**Goal.** Make a defensible tool choice.
+
+**Setup.** A task where privacy, cost, or offline use matters.
+
+**Steps.**
+
+1. List the task’s constraints: privacy, cost, connectivity, capability needed.
+
+2. Argue both sides:
+
+   > Given these constraints, argue local vs. cloud for this task. What would change the decision?
+
+3. Decide, and note the data-rule check.
+
+**Expected result.** A reasoned local-vs-cloud decision.
+
+**Check your work.** Did you confirm the data classification regardless of where the model runs?
+
+**Common pitfalls.** “It’s local, so it’s fine” is not a data-rule exemption.
+
+**Stretch (optional).** Estimate the capability gap for your specific task by testing both.
 
 ```{=html}
 </details>
 ```
+
 
 ## Check your readiness
 

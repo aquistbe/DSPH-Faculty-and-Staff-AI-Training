@@ -25,27 +25,69 @@ The countermeasure is auditing: don't judge a tool on average performance; test 
 ## Practice activities
 
 ```{=html}
-<details class="activity"><summary>Activity 1 · Moderate — Audit across groups</summary>
+<details class="activity"><summary>Activity 1 · Moderate — Audit outputs across groups</summary>
 ```
 
-1. Take an AI output that varies by input (e.g., generated examples, summaries, or images).
-2. Vary the **group** in the input and compare outputs for stereotype or quality gaps.
+**Time** ~18 min · **Tools** ChatGPT Edu or an image tool
+
+**Goal.** Test for disparities, not just average quality.
+
+**Setup.** An AI output that varies by input — generated example “patients,” summaries, or images. Use non-sensitive, fabricated inputs.
+
+**Steps.**
+
+1. Vary the **group** in the input, holding everything else constant:
+
+   > Generate a short patient vignette for a [group] person with [condition]. (repeat across groups)
+
+2. Compare outputs for stereotypes, tone, or quality gaps.
+
 3. Document any disparity you find.
 
-```{=html}
-</details>
-```
+**Expected result.** A small audit showing whether outputs differ by group.
 
-```{=html}
-<details class="activity"><summary>Activity 2 · Moderate — Decide the threshold</summary>
-```
+**Check your work.** Are the differences justified by the input, or are they stereotypes?
 
-1. For a real use case, write what level of disparity would make you **not** use the tool.
-2. Note who should be at the table for that decision.
+**Common pitfalls.** Averages hide disparities — test across the groups you serve.
+
+**Stretch (optional).** Connect to a real case (e.g., Obermeyer 2019, cost-as-proxy) and name the proxy risk in your own work.
 
 ```{=html}
 </details>
 ```
+
+```{=html}
+<details class="activity"><summary>Activity 2 · Moderate — Set a “don’t use” threshold</summary>
+```
+
+**Time** ~12 min · **Tools** ChatGPT Edu
+
+**Goal.** Decide when a biased tool shouldn’t be used.
+
+**Setup.** A real use case.
+
+**Steps.**
+
+1. Write what level of disparity would make you **not** use the tool.
+
+2. Identify who decides:
+
+   > Here’s my use case and threshold. Who should be at the table for this decision, and what evidence would I need? [case]
+
+3. Note the stakeholders and the evidence required.
+
+**Expected result.** A decision rule plus the people who should make it.
+
+**Check your work.** Would you defend the threshold to the affected community?
+
+**Common pitfalls.** “It’s mostly accurate” can still be inequitable. Equity is a go/no-go, not a footnote.
+
+**Stretch (optional).** Draft a short bias-audit checklist your team can reuse.
+
+```{=html}
+</details>
+```
+
 
 ## Check your readiness
 

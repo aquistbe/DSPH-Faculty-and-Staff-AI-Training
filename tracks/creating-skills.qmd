@@ -25,27 +25,69 @@ Most quality lives in the instructions, not the model. A good skill names the jo
 ## Practice activities
 
 ```{=html}
-<details class="activity"><summary>Activity 1 · Moderate — Write a skill</summary>
+<details class="activity"><summary>Activity 1 · Moderate — Write a reusable skill</summary>
 ```
 
-1. Pick a repeated task (a recap, a rewrite, a checklist).
-2. Write a skill with **job, steps, output format, and guardrails** (no sensitive data).
-3. Test it on two different inputs; tighten where it drifts.
+**Time** ~18 min · **Tools** ChatGPT Edu (custom GPT) or Claude
+
+**Goal.** Package a repeated task as a shareable, reliable skill.
+
+**Setup.** Pick a task you repeat — e.g., *“turn messy meeting notes into our standard recap.”*
+
+**Steps.**
+
+1. Draft the skill:
+
+   > Help me write a reusable “skill” for this task. Include the job, step-by-step instructions, the exact output format, and guardrails (what it must never do). Task: [task].
+
+2. Save it as a custom GPT’s instructions (or a Claude skill).
+
+3. Test on two different inputs; tighten wherever it drifts.
+
+**Expected result.** A documented skill that produces consistent output across different inputs.
+
+**Check your work.** Run it on a deliberately tricky input — does it hold the format and the guardrails?
+
+**Common pitfalls.** Most of the quality is in the instructions, not the model. Keep sensitive data out of skill files; share inside Drexel only.
+
+**Stretch (optional).** Add a one-line “use this when…” and have a colleague test it cold.
 
 ```{=html}
 </details>
 ```
 
 ```{=html}
-<details class="activity"><summary>Activity 2 · Moderate — Share and reuse</summary>
+<details class="activity"><summary>Activity 2 · Moderate — Start a small skill library</summary>
 ```
 
-1. Save the skill as a custom GPT or shared doc your team can reach.
-2. Have a colleague run it and note where the instructions need to be clearer.
+**Time** ~12 min · **Tools** a shared doc (Teams/SharePoint)
+
+**Goal.** Begin a reusable team library so good prompts become shared tools.
+
+**Setup.** A shared document the team can reach.
+
+**Steps.**
+
+1. Add 2–3 skills, each with a title, the instructions, an example input/output, and “use when.”
+
+2. Review the set:
+
+   > Review my skill library for overlap or gaps, and suggest one more skill this set implies we need.
+
+3. Agree where it lives and that anyone can add.
+
+**Expected result.** A starter library of 2–3 skills plus one suggested addition.
+
+**Check your work.** Have a colleague run one skill cold — if they can’t, the instructions need work.
+
+**Common pitfalls.** A skill only its author can run isn’t reusable. Document clearly.
+
+**Stretch (optional).** Convert your best prompt from another workshop into a skill.
 
 ```{=html}
 </details>
 ```
+
 
 ## Check your readiness
 

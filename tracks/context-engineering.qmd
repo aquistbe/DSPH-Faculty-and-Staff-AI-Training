@@ -25,12 +25,32 @@ More context is not always better. Too much dilutes attention; the skill is pick
 ## Practice activities
 
 ```{=html}
-<details class="activity"><summary>Activity 1 · Moderate — Fix a drift with context</summary>
+<details class="activity"><summary>Activity 1 · Moderate — Fix a drift with better context</summary>
 ```
 
-1. Find a task where AI keeps missing what you want.
-2. Add a short **system instruction** and one **reference example** of the right output.
-3. Re-run; note that better context — not a longer prompt — fixed it.
+**Time** ~15 min · **Tools** ChatGPT Edu or Claude
+
+**Goal.** Improve output by improving context, not by writing a longer prompt.
+
+**Setup.** A task where AI keeps missing what you want (e.g., it won’t match your report’s tone).
+
+**Steps.**
+
+1. Add a short system instruction and one reference example:
+
+   > You are [role]. Always [2–3 standing rules]. Here is an example of the output I want: [example]. Now do [task].
+
+2. Re-run and compare to your earlier attempts.
+
+3. Notice that the example and rules — not extra length — fixed it.
+
+**Expected result.** Noticeably better, on-spec output.
+
+**Check your work.** Remove the example and re-run — quality should drop, confirming the example carried the weight.
+
+**Common pitfalls.** More text isn’t better context; one sharp example beats paragraphs of description.
+
+**Stretch (optional).** Turn the working context into a reusable skill.
 
 ```{=html}
 </details>
@@ -40,12 +60,34 @@ More context is not always better. Too much dilutes attention; the skill is pick
 <details class="activity"><summary>Activity 2 · Moderate — Trim the context</summary>
 ```
 
-1. Take a prompt with lots of background and remove everything non-essential.
-2. Re-run; confirm quality held or improved with less noise.
+**Time** ~12 min · **Tools** ChatGPT Edu or Claude
+
+**Goal.** Cut noise so the signal lands.
+
+**Setup.** A prompt with a lot of background.
+
+**Steps.**
+
+1. Remove everything non-essential; keep only what the task needs.
+
+2. Re-run and confirm quality held or improved.
+
+3. Diagnose:
+
+   > What in my context is actually doing work here, and what’s noise?
+
+**Expected result.** A leaner prompt with equal or better output.
+
+**Check your work.** If cutting something degrades the output, it was signal — put it back.
+
+**Common pitfalls.** Over-trimming removes needed constraints; iterate one cut at a time.
+
+**Stretch (optional).** Build a minimal reusable context template for this task type.
 
 ```{=html}
 </details>
 ```
+
 
 ## Check your readiness
 

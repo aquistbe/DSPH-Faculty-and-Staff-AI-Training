@@ -28,25 +28,66 @@ Right-size the effort. A throwaway brainstorm needs little checking; a number in
 <details class="activity"><summary>Activity 1 · Novice — Catch a hallucination</summary>
 ```
 
-1. Ask AI for **five citations** on a topic you know.
-2. Try to **open and confirm** each one.
-3. Note how many were wrong, mis-attributed, or invented.
+**Time** ~15 min · **Tools** ChatGPT Edu
+
+**Goal.** See how confidently AI invents sources, and build the checking habit.
+
+**Setup.** A topic you know well.
+
+**Steps.**
+
+1. Ask for citations:
+
+   > Give me five citations (authors, year, journal, title) on [topic].
+
+2. Try to open and confirm each one (Google Scholar or the journal site).
+
+3. Count how many were real, mis-attributed, or invented.
+
+**Expected result.** A tally showing some are wrong — vivid, first-hand proof.
+
+**Check your work.** A formatted citation is not a real one. If you can’t open it, you can’t cite it.
+
+**Common pitfalls.** The confident, plausible errors are the dangerous ones. Verify before anything counts.
+
+**Stretch (optional).** Ask for a statistic with a source and trace the number to the original.
 
 ```{=html}
 </details>
 ```
 
 ```{=html}
-<details class="activity"><summary>Activity 2 · Novice — Verify a number</summary>
+<details class="activity"><summary>Activity 2 · Novice — Verify a number under time pressure</summary>
 ```
 
-1. Ask AI for a statistic with a source.
-2. Trace the number to the original source and confirm it.
-3. Decide: would you have caught this if you were rushing?
+**Time** ~12 min · **Tools** ChatGPT Edu
+
+**Goal.** Build a quick verification routine you’ll actually use.
+
+**Setup.** A claim with a statistic (from AI or a draft).
+
+**Steps.**
+
+1. Ask for a sourced figure:
+
+   > State a public-health statistic about [topic] and give the original source.
+
+2. Trace the number to the primary source and confirm it — exact figure, year, population.
+
+3. Ask yourself: would you have caught this if you were rushing?
+
+**Expected result.** A verified (or debunked) statistic.
+
+**Check your work.** Match effort to stakes — a number going into a report gets full verification.
+
+**Common pitfalls.** Secondary sources drift from primaries; go to the original.
+
+**Stretch (optional).** Write a 3-step personal “verify before it counts” checklist.
 
 ```{=html}
 </details>
 ```
+
 
 ## Check your readiness
 

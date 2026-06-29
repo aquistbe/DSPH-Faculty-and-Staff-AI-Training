@@ -25,27 +25,69 @@ Quality depends on retrieval: if the right passage isn't found, the answer is wr
 ## Practice activities
 
 ```{=html}
-<details class="activity"><summary>Activity 1 · Advanced — Ground answers in your docs</summary>
+<details class="activity"><summary>Activity 1 · Advanced — Ground answers in your documents</summary>
 ```
 
-1. In **NotebookLM**, load 3–5 **public** sources.
-2. Ask a question and check that each cited passage **actually supports** the answer.
-3. Ask something the sources don't cover — see whether it admits the gap.
+**Time** ~18 min · **Tools** NotebookLM (public sources only)
+
+**Goal.** Make AI answer from your sources, with citations you verify.
+
+**Setup.** In NotebookLM, load 3–5 **public** sources (e.g., open-access pedestrian-safety papers, a public city report).
+
+**Steps.**
+
+1. Ask a question the sources can answer; for each cited passage, confirm it actually supports the answer.
+
+2. Probe a gap — ask something the sources don’t cover. Does it admit the gap or fabricate?
+
+3. Synthesize:
+
+   > Summarize what these sources agree and disagree on, with citations.
+
+**Expected result.** Grounded answers with verifiable citations and a tested “gap” case.
+
+**Check your work.** A citation marker isn’t proof — open the cited passage and read it.
+
+**Common pitfalls.** RAG reduces but doesn’t eliminate hallucination; bad retrieval means a wrong answer. Public data only unless the tool is approved.
+
+**Stretch (optional).** Add a source that contradicts the others and see how it handles the conflict.
 
 ```{=html}
 </details>
 ```
 
 ```{=html}
-<details class="activity"><summary>Activity 2 · Advanced — Probe retrieval</summary>
+<details class="activity"><summary>Activity 2 · Advanced — Probe retrieval quality</summary>
 ```
 
-1. Ask the same question two ways and compare which passages it retrieves.
-2. Note where retrieval missed an obviously relevant source.
+**Time** ~12 min · **Tools** NotebookLM
+
+**Goal.** Understand when retrieval misses relevant material.
+
+**Setup.** The same notebook.
+
+**Steps.**
+
+1. Ask the same question two different ways and compare which passages it retrieves.
+
+2. Note any obviously relevant source it missed.
+
+3. Diagnose:
+
+   > Why might you have missed [source] for this question, and how should I phrase it to retrieve it?
+
+**Expected result.** Insight into how phrasing changes retrieval.
+
+**Check your work.** If rephrasing changes the cited sources, the system is retrieval-sensitive — design questions accordingly.
+
+**Common pitfalls.** Users assume RAG “read everything”; it retrieves only a few passages. Verify coverage.
+
+**Stretch (optional).** Organize the sources (clear titles, sections) and see if answers improve.
 
 ```{=html}
 </details>
 ```
+
 
 ## Check your readiness
 

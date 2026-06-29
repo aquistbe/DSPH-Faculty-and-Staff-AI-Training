@@ -25,27 +25,67 @@ Autonomy raises the stakes. Keep agents on low-stakes, reversible, checkable wor
 ## Practice activities
 
 ```{=html}
-<details class="activity"><summary>Activity 1 · Moderate — Build a simple agent</summary>
+<details class="activity"><summary>Activity 1 · Moderate — Build a simple assistant</summary>
 ```
 
-1. In ChatGPT Edu, create an assistant with clear **instructions** and one **knowledge file** (non-sensitive).
+**Time** ~18 min · **Tools** ChatGPT Edu
+
+**Goal.** Assemble a working assistant from instructions plus knowledge.
+
+**Setup.** A repeated task and one non-sensitive reference file (a template or style guide).
+
+**Steps.**
+
+1. Create a custom GPT/assistant with clear instructions — role, behavior, output format, limits — and upload the reference file.
+
 2. Give it a small multi-step task and watch how it plans.
-3. **Review each step**, not just the final output.
+
+3. Review **each step**, not just the final output.
+
+**Expected result.** An assistant that completes a multi-step task with your review at each step.
+
+**Check your work.** Did it follow the limits you set? Try an input that should make it stop and ask.
+
+**Common pitfalls.** Errors compound across steps. Keep it on low-stakes, reversible work. You own the outcome.
+
+**Stretch (optional).** Add a knowledge file and see how it changes the assistant’s answers.
 
 ```{=html}
 </details>
 ```
 
 ```{=html}
-<details class="activity"><summary>Activity 2 · Moderate — Set the guardrails</summary>
+<details class="activity"><summary>Activity 2 · Moderate — Set and test the guardrails</summary>
 ```
 
-1. Write the agent's limits: what it must never do, when to stop and ask.
-2. Test a case that should trigger a stop; confirm it does.
+**Time** ~12 min · **Tools** ChatGPT Edu
+
+**Goal.** Define limits and confirm they hold.
+
+**Setup.** Your assistant from Activity 1.
+
+**Steps.**
+
+1. Write its guardrails: what it must never do, and when to stop and ask a human.
+
+2. Find blind spots:
+
+   > Given these guardrails, what edge cases might I be missing?
+
+3. Test a case that should trigger a stop — confirm it does.
+
+**Expected result.** A guardrail list and a passed stop-test.
+
+**Check your work.** If it proceeds when it should stop, tighten the instructions.
+
+**Common pitfalls.** Vague guardrails fail silently. Be explicit about high-stakes triggers.
+
+**Stretch (optional).** Write the one rule that, if it applied, would mean the task should never be automated.
 
 ```{=html}
 </details>
 ```
+
 
 ## Check your readiness
 

@@ -215,17 +215,46 @@ ul.task-list li input[type="checkbox"] {
 <section id="practice-activities" class="level2">
 <h2 class="anchored" data-anchor-id="practice-activities">Practice activities</h2>
 <details class="activity"><summary>Activity 1 · Moderate — De-identify a sample</summary>
+<p><strong>Time</strong> ~15 min · <strong>Tools</strong> ChatGPT Edu (fabricated data only)</p>
+<p><strong>Goal.</strong> Apply Safe Harbor-style de-identification and test re-identification risk.</p>
+<p><strong>Setup.</strong> A small <strong>fabricated</strong> sample with quasi-identifiers (age, ZIP, admission date, sex).</p>
+<p><strong>Steps.</strong></p>
 <ol type="1">
-<li>Take a small sample with quasi-identifiers (age, ZIP, date).</li>
-<li>Apply <strong>Safe Harbor-style</strong> removal/generalization with AI’s help.</li>
-<li>Ask: could remaining fields still re-identify someone in combination?</li>
+<li><p>De-identify:</p>
+<blockquote class="blockquote">
+<p>Apply HIPAA Safe Harbor-style de-identification to this fabricated dataset (remove or generalize identifiers). Explain each change. [sample]</p>
+</blockquote></li>
+<li><p>Attack it:</p>
+<blockquote class="blockquote">
+<p>Now act as an adversary: could you re-identify anyone by combining the remaining fields with public data? Where’s the risk?</p>
+</blockquote></li>
+<li><p>Decide whether it’s safe enough or needs more generalization.</p></li>
 </ol>
+<p><strong>Expected result.</strong> A de-identified sample and an adversarial risk assessment.</p>
+<p><strong>Check your work.</strong> Age + ZIP + date is a classic re-identification combination — scrutinize it.</p>
+<p><strong>Common pitfalls.</strong> Removing direct identifiers isn’t enough; quasi-identifiers re-identify. Use fabricated data here.</p>
+<p><strong>Stretch (optional).</strong> Generalize further (age bands, 3-digit ZIP) and re-assess.</p>
 </details>
-<details class="activity"><summary>Activity 2 · Moderate — Generate synthetic data</summary>
+<details class="activity"><summary>Activity 2 · Moderate — Generate and stress-test synthetic data</summary>
+<p><strong>Time</strong> ~13 min · <strong>Tools</strong> ChatGPT Edu + R/Python</p>
+<p><strong>Goal.</strong> Make realistic synthetic data and check its fidelity.</p>
+<p><strong>Setup.</strong> Describe a dataset’s structure (columns, ranges, relationships). You can mirror the Philadelphia crash data structure.</p>
+<p><strong>Steps.</strong></p>
 <ol type="1">
-<li>Describe a dataset’s structure and ask AI to generate a <strong>synthetic</strong> version.</li>
-<li>Compare distributions to the real structure; note what’s off.</li>
+<li><p>Generate it reproducibly:</p>
+<blockquote class="blockquote">
+<p>Generate a synthetic dataset with these columns, realistic distributions, and plausible relationships. Give me R or Python code so it’s reproducible. [structure]</p>
+</blockquote></li>
+<li><p>Compare the synthetic distributions to what you’d expect (or to a public summary).</p></li>
+<li><p>Critique fidelity:</p>
+<blockquote class="blockquote">
+<p>Where is this synthetic data likely unrealistic or missing real structure?</p>
+</blockquote></li>
 </ol>
+<p><strong>Expected result.</strong> A reproducible synthetic dataset and a fidelity critique.</p>
+<p><strong>Check your work.</strong> Synthetic data can miss real correlations — don’t draw substantive conclusions from it.</p>
+<p><strong>Common pitfalls.</strong> Synthetic data is for teaching, prototyping, and sharing — not a substitute for real analysis. It can also leak patterns if generated from real data.</p>
+<p><strong>Stretch (optional).</strong> Use the synthetic set to test an analysis script before touching real data.</p>
 </details>
 </section>
 <section id="check-your-readiness" class="level2">

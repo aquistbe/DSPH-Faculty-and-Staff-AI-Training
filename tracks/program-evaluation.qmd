@@ -28,24 +28,70 @@ Evaluation frameworks (e.g., CDC's) give structure; AI fills in drafts you refin
 <details class="activity"><summary>Activity 1 · Moderate — Draft a logic model</summary>
 ```
 
-1. Describe a program (inputs, activities, intended outcomes).
-2. Ask AI for a **logic model and 5 candidate indicators**.
-3. Check each indicator: is it measurable with data you can get?
+**Time** ~18 min · **Tools** ChatGPT Edu
+
+**Goal.** Turn a program into a logic model with measurable indicators.
+
+**Setup.** Describe a real program (e.g., a Philadelphia Vision Zero intervention, or a clinic outreach effort): inputs, activities, intended outcomes.
+
+**Steps.**
+
+1. Draft the model:
+
+   > From this program description, draft a logic model (inputs, activities, outputs, short- and long-term outcomes) and propose 5 candidate indicators. [description]
+
+2. For each indicator, ask: can I measure this with data I can actually get?
+
+3. Replace the weak ones:
+
+   > Which of these indicators aren’t realistically measurable, and what would I use instead?
+
+**Expected result.** A logic model and a vetted indicator list.
+
+**Check your work.** An indicator you can’t measure is decoration — replace it.
+
+**Common pitfalls.** AI proposes impressive-but-unmeasurable indicators. Alignment and measurability beat sophistication.
+
+**Stretch (optional).** Map each indicator to a data source and collection method.
 
 ```{=html}
 </details>
 ```
 
 ```{=html}
-<details class="activity"><summary>Activity 2 · Moderate — Outline the plan</summary>
+<details class="activity"><summary>Activity 2 · Moderate — Outline an evaluation plan</summary>
 ```
 
-1. Ask AI for an evaluation plan aligned to the CDC framework steps.
+**Time** ~13 min · **Tools** ChatGPT Edu + the CDC evaluation framework
+
+**Goal.** Structure a plan against a recognized standard.
+
+**Setup.** Your logic model and the CDC program-evaluation framework steps.
+
+**Steps.**
+
+1. Outline the plan:
+
+   > Outline an evaluation plan for this program aligned to the CDC framework steps. [logic model]
+
 2. Mark which parts need a real data source vs. a placeholder.
 
+3. Find the weak point:
+
+   > What’s the biggest threat to a credible evaluation here?
+
+**Expected result.** A framework-aligned plan with a flagged risk.
+
+**Check your work.** Does the plan actually answer the program’s key question?
+
+**Common pitfalls.** A plan that measures what’s easy instead of what matters fails. Keep the question central.
+
+**Stretch (optional).** Draft the single evaluation question that most needs answering.
+
 ```{=html}
 </details>
 ```
+
 
 ## Check your readiness
 

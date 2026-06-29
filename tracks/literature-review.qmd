@@ -25,28 +25,73 @@ For a defensible review, keep AI in an assisting role: it speeds screening and s
 ## Practice activities
 
 ```{=html}
-<details class="activity"><summary>Activity 1 · Moderate — Draft a search strategy</summary>
+<details class="activity"><summary>Activity 1 · Moderate — Build and refine a search strategy</summary>
 ```
 
-1. Describe your question (PICO-style) to AI.
-2. Ask for **search terms and a Boolean strategy** for one database.
-3. Run it in the real database; refine the terms based on what returns.
+**Time** ~18 min · **Tools** ChatGPT Edu + PubMed
+
+**Goal.** Draft a reproducible search, then refine it against real results.
+
+**Setup.** A focused question in PICO form, e.g., *Among urban pedestrians (P), does improved street lighting (I) vs. none (C) reduce nighttime crashes (O)?*
+
+**Steps.**
+
+1. Turn it into a search:
+
+   > Turn this PICO question into a PubMed search strategy: key concepts, synonyms and likely MeSH terms, and a Boolean string. Note where I’ll need to adjust. [PICO]
+
+2. Run it in PubMed and record the result count.
+
+3. Refine against reality:
+
+   > My search returned [N] results — too many / too few. Suggest specific changes to tighten or broaden it.
+
+**Expected result.** A working search string and a refined version, with the exact final string saved.
+
+**Check your work.** A search you can’t reproduce isn’t usable — save the final string and the date you ran it.
+
+**Common pitfalls.** AI may invent MeSH terms — confirm each in PubMed. Don’t trust predicted result counts; run the search.
+
+**Stretch (optional).** Ask for inclusion/exclusion criteria suited to your question.
 
 ```{=html}
 </details>
 ```
 
 ```{=html}
-<details class="activity"><summary>Activity 2 · Moderate — Summarize and verify</summary>
+<details class="activity"><summary>Activity 2 · Moderate — Summarize and verify the evidence</summary>
 ```
 
-1. Paste 2–3 **open-access** abstracts and ask AI to compare findings in a table.
-2. Open each paper and confirm the summary is faithful — especially numbers.
-3. Note any place the AI overstated or blurred a finding.
+**Time** ~15 min · **Tools** ChatGPT Edu + open-access papers
+
+**Goal.** Synthesize a few studies while checking every claim.
+
+**Setup.** Two or three open-access abstracts on your topic.
+
+**Steps.**
+
+1. Build a comparison:
+
+   > Compare these abstracts in a table: design, population, key finding, and main limitation. Quote the exact effect sizes. [abstracts]
+
+2. Open each paper and confirm the numbers and the framing.
+
+3. Synthesize cautiously:
+
+   > Write a 3-sentence synthesis, flagging where the evidence conflicts or is thin.
+
+**Expected result.** A comparison table plus a careful synthesis paragraph.
+
+**Check your work.** Verify every effect size against the source; reject any number the abstract doesn’t actually state.
+
+**Common pitfalls.** AI smooths over conflicting findings and fabricates citations. If you can’t open it, you can’t cite it.
+
+**Stretch (optional).** Ask what study design would best fill the gap you found.
 
 ```{=html}
 </details>
 ```
+
 
 ## Check your readiness
 

@@ -25,28 +25,73 @@ Plain language is an equity tool: clearer materials reach more people. But overs
 ## Practice activities
 
 ```{=html}
-<details class="activity"><summary>Activity 1 · Novice — One finding, three audiences</summary>
+<details class="activity"><summary>Activity 1 · Novice — Translate one finding for three audiences</summary>
 ```
 
-1. Take one finding from your work (public/non-sensitive).
-2. Ask AI to write it three ways: for **community members (8th-grade level)**, for **policymakers**, and as a **social post**.
-3. Check each for accuracy — did any version overstate the result?
+**Time** ~18 min · **Tools** ChatGPT Edu
+
+**Goal.** Turn a technical finding into clear materials for three different readers without distorting it.
+
+**Setup.** Pick one public finding from your work, or use this example: *“In Philadelphia, pedestrian-involved crashes peak between 4–7 PM and are more common on wide arterial roads.”* Use public, non-sensitive content only.
+
+**Steps.**
+
+1. Paste the finding and ask for three versions:
+
+   > Rewrite this public-health finding three ways: (a) for community members at an 8th-grade reading level, (b) for city policymakers, (c) as a social post under 280 characters. Keep every number accurate. [finding]
+
+2. Check each version against the original — did any overstate the result or drop a caveat?
+
+3. Push one further:
+
+   > The community version is still a little technical. Simplify to a 6th-grade level, under 60 words, without losing the “4–7 PM” detail.
+
+**Expected result.** Three audience-tailored versions, all factually faithful.
+
+**Check your work.** Read the social post: could a reader screenshot it as a stronger claim than the data support? If so, tighten it.
+
+**Common pitfalls.** Simplifying often turns “associated with” into “causes” — guard against it. Public data only.
+
+**Stretch (optional).** Ask for a flyer-ready headline plus one supporting sentence.
 
 ```{=html}
 </details>
 ```
 
 ```{=html}
-<details class="activity"><summary>Activity 2 · Novice — Set a reading level</summary>
+<details class="activity"><summary>Activity 2 · Novice — Set and verify reading level</summary>
 ```
 
-1. Paste a paragraph of your writing and ask AI to rewrite it at a **6th–8th grade** reading level.
-2. Ask what it changed and why.
-3. Confirm the meaning is intact, then keep the version that fits your audience.
+**Time** ~12 min · **Tools** ChatGPT Edu + a readability check
+
+**Goal.** Deliberately set reading level and tone, then verify it independently.
+
+**Setup.** A paragraph of your own writing (a non-sensitive report excerpt).
+
+**Steps.**
+
+1. Ask for a leveled rewrite:
+
+   > Rewrite this at a 6th–8th grade reading level, warm and direct. Then tell me the approximate reading level of your rewrite and what you changed.
+
+2. Verify with a real tool — paste into the Hemingway editor or check Word’s readability stats — and compare to the AI’s claim.
+
+3. Get a contrasting version:
+
+   > Now a more formal version for a stakeholder briefing, same facts.
+
+**Expected result.** Two versions at different levels, plus a readability check that roughly matches.
+
+**Check your work.** Don’t trust the AI’s self-reported grade level — confirm it with a real readability metric.
+
+**Common pitfalls.** Plain language is not “dumbed down” — keep the accuracy. AI reading-level estimates are approximate.
+
+**Stretch (optional).** Add a one-line “bottom line” a busy reader could act on.
 
 ```{=html}
 </details>
 ```
+
 
 ## Check your readiness
 

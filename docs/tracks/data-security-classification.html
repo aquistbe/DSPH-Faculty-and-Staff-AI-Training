@@ -215,17 +215,40 @@ ul.task-list li input[type="checkbox"] {
 <section id="practice-activities" class="level2">
 <h2 class="anchored" data-anchor-id="practice-activities">Practice activities</h2>
 <details class="activity"><summary>Activity 1 · Novice — Classify and match</summary>
+<p><strong>Time</strong> ~15 min · <strong>Tools</strong> Drexel AI Tools page + ChatGPT Edu</p>
+<p><strong>Goal.</strong> Map your data to the right tools.</p>
+<p><strong>Setup.</strong> List three data types you actually work with.</p>
+<p><strong>Steps.</strong></p>
 <ol type="1">
-<li>List three data types you work with.</li>
-<li>For each, note Drexel’s classification and which tools are approved (check the AI Tools page).</li>
-<li>Flag any current habit that doesn’t match.</li>
+<li><p>For each, note its sensitivity (public → high-risk) and which Drexel-approved tools allow it (check the AI Tools page).</p></li>
+<li><p>Sanity-check with AI:</p>
+<blockquote class="blockquote">
+<p>I have these data types and these tools available. Which uses are appropriate and which aren’t, based on data sensitivity? [types] [tools]</p>
+</blockquote></li>
+<li><p>Flag any current habit that doesn’t match.</p></li>
 </ol>
+<p><strong>Expected result.</strong> A data-to-tool matrix and a list of habits to change.</p>
+<p><strong>Check your work.</strong> Verify against Drexel’s official AI Tools page, not the AI’s guess.</p>
+<p><strong>Common pitfalls.</strong> “It’s probably fine” isn’t a classification. When unsure, treat data as more sensitive.</p>
+<p><strong>Stretch (optional).</strong> Write your team’s one-page “what goes where” cheat sheet.</p>
 </details>
 <details class="activity"><summary>Activity 2 · Novice — Substitute safely</summary>
+<p><strong>Time</strong> ~12 min · <strong>Tools</strong> ChatGPT Edu (fabricated data only)</p>
+<p><strong>Goal.</strong> Make sensitive data safe for a given tool.</p>
+<p><strong>Setup.</strong> A fabricated sensitive example.</p>
+<p><strong>Steps.</strong></p>
 <ol type="1">
-<li>Take a sensitive example and write a <strong>de-identified or synthetic</strong> version.</li>
-<li>Confirm the substitute is safe for the tool you want to use.</li>
+<li><p>De-identify it:</p>
+<blockquote class="blockquote">
+<p>Here is a record with identifiers. Produce a de-identified version safe for a Low-Risk tool, and list what you removed or generalized. [fabricated record]</p>
+</blockquote></li>
+<li><p>Check: could the remaining fields still identify someone in combination?</p></li>
+<li><p>Decide whether de-identification is enough or you need an approved tool.</p></li>
 </ol>
+<p><strong>Expected result.</strong> A de-identified version plus a re-identification check.</p>
+<p><strong>Check your work.</strong> Quasi-identifiers (age + ZIP + date) can re-identify — scrutinize them.</p>
+<p><strong>Common pitfalls.</strong> Removing names isn’t de-identification; combinations matter.</p>
+<p><strong>Stretch (optional).</strong> Try generating fully synthetic data instead (see the Methods track).</p>
 </details>
 </section>
 <section id="check-your-readiness" class="level2">

@@ -215,17 +215,41 @@ ul.task-list li input[type="checkbox"] {
 <section id="practice-activities" class="level2">
 <h2 class="anchored" data-anchor-id="practice-activities">Practice activities</h2>
 <details class="activity"><summary>Activity 1 · Advanced — Loop with a checkpoint</summary>
+<p><strong>Time</strong> ~20 min · <strong>Tools</strong> ChatGPT Edu/Claude (+ R/Python if scripting)</p>
+<p><strong>Goal.</strong> Apply one task across many items, then audit the results.</p>
+<p><strong>Setup.</strong> About 10 non-sensitive items and one task. You can use 10 short <a href="https://opendataphilly.org/datasets/311-service-and-information-requests/">311 Service &amp; Information Requests</a> descriptions and classify each by issue type.</p>
+<p><strong>Steps.</strong></p>
 <ol type="1">
-<li>Take ~10 <strong>non-sensitive</strong> items and one task (e.g., extract a field from each).</li>
-<li>Run the loop, then <strong>audit a random sample</strong> for errors.</li>
-<li>Fix the instruction and re-run only the failures.</li>
+<li><p>Define the task for a single item and confirm it’s right.</p></li>
+<li><p>Run the loop over all 10 (in the tool, or with a script that calls the model).</p></li>
+<li><p>Audit a sample:</p>
+<blockquote class="blockquote">
+<p>Audit a random sample of 3 of these outputs for errors and tell me what’s likely systematically wrong.</p>
+</blockquote></li>
+<li><p>Fix the instruction and re-run only the failures.</p></li>
 </ol>
+<p><strong>Expected result.</strong> 10 processed items plus an audit of a random sample.</p>
+<p><strong>Check your work.</strong> A small early error repeats across the whole batch — sampling catches it.</p>
+<p><strong>Common pitfalls.</strong> Don’t trust a loop just because it ran. Higher stakes mean reviewing every item, not a sample.</p>
+<p><strong>Stretch (optional).</strong> Add a confidence flag so low-certainty items get human review.</p>
 </details>
-<details class="activity"><summary>Activity 2 · Advanced — Decide the guardrail</summary>
+<details class="activity"><summary>Activity 2 · Advanced — Decide the guardrail for scale</summary>
+<p><strong>Time</strong> ~12 min · <strong>Tools</strong> ChatGPT Edu/Claude</p>
+<p><strong>Goal.</strong> Set the rule for when a loop needs full human review.</p>
+<p><strong>Setup.</strong> A real task you’d loop.</p>
+<p><strong>Steps.</strong></p>
 <ol type="1">
-<li>Write the rule for when this loop needs human review of every item vs.&nbsp;a sample.</li>
-<li>Tie it to stakes and reversibility.</li>
+<li><p>Write the rule: review every item vs.&nbsp;a sample, tied to stakes and reversibility.</p></li>
+<li><p>Pressure-test it:</p>
+<blockquote class="blockquote">
+<p>Give me a scenario where sampling would be dangerous for this task.</p>
+</blockquote></li>
+<li><p>Decide and document.</p></li>
 </ol>
+<p><strong>Expected result.</strong> A documented review rule for looped tasks.</p>
+<p><strong>Check your work.</strong> Would you defend this rule if one bad output reached a real decision?</p>
+<p><strong>Common pitfalls.</strong> Sampling is fine for low-stakes work; never for irreversible or rights-affecting outputs.</p>
+<p><strong>Stretch (optional).</strong> Add logging so you can reconstruct what the loop did (see Reproducible AI).</p>
 </details>
 </section>
 <section id="check-your-readiness" class="level2">

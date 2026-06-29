@@ -214,18 +214,41 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="practice-activities" class="level2">
 <h2 class="anchored" data-anchor-id="practice-activities">Practice activities</h2>
-<details class="activity"><summary>Activity 1 · Moderate — Fix a drift with context</summary>
+<details class="activity"><summary>Activity 1 · Moderate — Fix a drift with better context</summary>
+<p><strong>Time</strong> ~15 min · <strong>Tools</strong> ChatGPT Edu or Claude</p>
+<p><strong>Goal.</strong> Improve output by improving context, not by writing a longer prompt.</p>
+<p><strong>Setup.</strong> A task where AI keeps missing what you want (e.g., it won’t match your report’s tone).</p>
+<p><strong>Steps.</strong></p>
 <ol type="1">
-<li>Find a task where AI keeps missing what you want.</li>
-<li>Add a short <strong>system instruction</strong> and one <strong>reference example</strong> of the right output.</li>
-<li>Re-run; note that better context — not a longer prompt — fixed it.</li>
+<li><p>Add a short system instruction and one reference example:</p>
+<blockquote class="blockquote">
+<p>You are [role]. Always [2–3 standing rules]. Here is an example of the output I want: [example]. Now do [task].</p>
+</blockquote></li>
+<li><p>Re-run and compare to your earlier attempts.</p></li>
+<li><p>Notice that the example and rules — not extra length — fixed it.</p></li>
 </ol>
+<p><strong>Expected result.</strong> Noticeably better, on-spec output.</p>
+<p><strong>Check your work.</strong> Remove the example and re-run — quality should drop, confirming the example carried the weight.</p>
+<p><strong>Common pitfalls.</strong> More text isn’t better context; one sharp example beats paragraphs of description.</p>
+<p><strong>Stretch (optional).</strong> Turn the working context into a reusable skill.</p>
 </details>
 <details class="activity"><summary>Activity 2 · Moderate — Trim the context</summary>
+<p><strong>Time</strong> ~12 min · <strong>Tools</strong> ChatGPT Edu or Claude</p>
+<p><strong>Goal.</strong> Cut noise so the signal lands.</p>
+<p><strong>Setup.</strong> A prompt with a lot of background.</p>
+<p><strong>Steps.</strong></p>
 <ol type="1">
-<li>Take a prompt with lots of background and remove everything non-essential.</li>
-<li>Re-run; confirm quality held or improved with less noise.</li>
+<li><p>Remove everything non-essential; keep only what the task needs.</p></li>
+<li><p>Re-run and confirm quality held or improved.</p></li>
+<li><p>Diagnose:</p>
+<blockquote class="blockquote">
+<p>What in my context is actually doing work here, and what’s noise?</p>
+</blockquote></li>
 </ol>
+<p><strong>Expected result.</strong> A leaner prompt with equal or better output.</p>
+<p><strong>Check your work.</strong> If cutting something degrades the output, it was signal — put it back.</p>
+<p><strong>Common pitfalls.</strong> Over-trimming removes needed constraints; iterate one cut at a time.</p>
+<p><strong>Stretch (optional).</strong> Build a minimal reusable context template for this task type.</p>
 </details>
 </section>
 <section id="check-your-readiness" class="level2">

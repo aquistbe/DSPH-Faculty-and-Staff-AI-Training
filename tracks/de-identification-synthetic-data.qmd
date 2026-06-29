@@ -28,24 +28,70 @@ Neither is magic. De-identified data can sometimes be re-identified by combining
 <details class="activity"><summary>Activity 1 · Moderate — De-identify a sample</summary>
 ```
 
-1. Take a small sample with quasi-identifiers (age, ZIP, date).
-2. Apply **Safe Harbor-style** removal/generalization with AI's help.
-3. Ask: could remaining fields still re-identify someone in combination?
+**Time** ~15 min · **Tools** ChatGPT Edu (fabricated data only)
+
+**Goal.** Apply Safe Harbor-style de-identification and test re-identification risk.
+
+**Setup.** A small **fabricated** sample with quasi-identifiers (age, ZIP, admission date, sex).
+
+**Steps.**
+
+1. De-identify:
+
+   > Apply HIPAA Safe Harbor-style de-identification to this fabricated dataset (remove or generalize identifiers). Explain each change. [sample]
+
+2. Attack it:
+
+   > Now act as an adversary: could you re-identify anyone by combining the remaining fields with public data? Where’s the risk?
+
+3. Decide whether it’s safe enough or needs more generalization.
+
+**Expected result.** A de-identified sample and an adversarial risk assessment.
+
+**Check your work.** Age + ZIP + date is a classic re-identification combination — scrutinize it.
+
+**Common pitfalls.** Removing direct identifiers isn’t enough; quasi-identifiers re-identify. Use fabricated data here.
+
+**Stretch (optional).** Generalize further (age bands, 3-digit ZIP) and re-assess.
 
 ```{=html}
 </details>
 ```
 
 ```{=html}
-<details class="activity"><summary>Activity 2 · Moderate — Generate synthetic data</summary>
+<details class="activity"><summary>Activity 2 · Moderate — Generate and stress-test synthetic data</summary>
 ```
 
-1. Describe a dataset's structure and ask AI to generate a **synthetic** version.
-2. Compare distributions to the real structure; note what's off.
+**Time** ~13 min · **Tools** ChatGPT Edu + R/Python
+
+**Goal.** Make realistic synthetic data and check its fidelity.
+
+**Setup.** Describe a dataset’s structure (columns, ranges, relationships). You can mirror the Philadelphia crash data structure.
+
+**Steps.**
+
+1. Generate it reproducibly:
+
+   > Generate a synthetic dataset with these columns, realistic distributions, and plausible relationships. Give me R or Python code so it’s reproducible. [structure]
+
+2. Compare the synthetic distributions to what you’d expect (or to a public summary).
+
+3. Critique fidelity:
+
+   > Where is this synthetic data likely unrealistic or missing real structure?
+
+**Expected result.** A reproducible synthetic dataset and a fidelity critique.
+
+**Check your work.** Synthetic data can miss real correlations — don’t draw substantive conclusions from it.
+
+**Common pitfalls.** Synthetic data is for teaching, prototyping, and sharing — not a substitute for real analysis. It can also leak patterns if generated from real data.
+
+**Stretch (optional).** Use the synthetic set to test an analysis script before touching real data.
 
 ```{=html}
 </details>
 ```
+
 
 ## Check your readiness
 

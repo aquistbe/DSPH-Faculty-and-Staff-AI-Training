@@ -25,27 +25,69 @@ Public-health bodies (WHO, ASPPH) offer frameworks for AI ethics and governance.
 ## Practice activities
 
 ```{=html}
-<details class="activity"><summary>Activity 1 · Moderate — Write a disclosure rule</summary>
+<details class="activity"><summary>Activity 1 · Moderate — Write a disclosure norm</summary>
 ```
 
-1. List three places AI shows up in your work.
-2. For each, decide whether and how you'd disclose AI use.
-3. Draft a one-line norm you could share with your team.
+**Time** ~15 min · **Tools** ChatGPT Edu
+
+**Goal.** Decide where and how to disclose AI use.
+
+**Setup.** List three places AI shows up in your work.
+
+**Steps.**
+
+1. For each, decide whether and how you’d disclose AI assistance.
+
+2. Draft a norm:
+
+   > Draft a one-paragraph AI-use disclosure norm for our team covering these cases — balanced and practical. [cases]
+
+3. Refine to fit your context.
+
+**Expected result.** A short, shareable disclosure norm.
+
+**Check your work.** Is it specific enough to act on, or just aspirational?
+
+**Common pitfalls.** Over-disclosing trivial use is noise; under-disclosing consequential use is a problem. Aim for “where it matters.”
+
+**Stretch (optional).** Add a line on who’s accountable when AI informs a decision.
 
 ```{=html}
 </details>
 ```
 
 ```{=html}
-<details class="activity"><summary>Activity 2 · Moderate — Apply a framework</summary>
+<details class="activity"><summary>Activity 2 · Moderate — Apply a governance framework</summary>
 ```
 
-1. Skim one governance framework (WHO or ASPPH).
-2. Pick two principles and write how you'd act on each in a real task.
+**Time** ~15 min · **Tools** WHO or ASPPH framework + ChatGPT Edu
+
+**Goal.** Turn principles into practice.
+
+**Setup.** Skim one framework (e.g., WHO ethics and governance of AI for health).
+
+**Steps.**
+
+1. Pick two principles (e.g., transparency, equity).
+
+2. Make them concrete:
+
+   > For each principle, give two concrete actions a public-health team could take in everyday AI use. [principles]
+
+3. Adapt the actions to a real task you do.
+
+**Expected result.** Two principles turned into actions you’d actually take.
+
+**Check your work.** Could you tell whether you’re following the action, or is it vague?
+
+**Common pitfalls.** Frameworks become wallpaper if not operationalized. Make them checkable.
+
+**Stretch (optional).** Identify one current practice that violates a principle and fix it.
 
 ```{=html}
 </details>
 ```
+
 
 ## Check your readiness
 

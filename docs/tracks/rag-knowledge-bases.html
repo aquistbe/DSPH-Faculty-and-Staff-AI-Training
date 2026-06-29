@@ -214,18 +214,41 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="practice-activities" class="level2">
 <h2 class="anchored" data-anchor-id="practice-activities">Practice activities</h2>
-<details class="activity"><summary>Activity 1 · Advanced — Ground answers in your docs</summary>
+<details class="activity"><summary>Activity 1 · Advanced — Ground answers in your documents</summary>
+<p><strong>Time</strong> ~18 min · <strong>Tools</strong> NotebookLM (public sources only)</p>
+<p><strong>Goal.</strong> Make AI answer from your sources, with citations you verify.</p>
+<p><strong>Setup.</strong> In NotebookLM, load 3–5 <strong>public</strong> sources (e.g., open-access pedestrian-safety papers, a public city report).</p>
+<p><strong>Steps.</strong></p>
 <ol type="1">
-<li>In <strong>NotebookLM</strong>, load 3–5 <strong>public</strong> sources.</li>
-<li>Ask a question and check that each cited passage <strong>actually supports</strong> the answer.</li>
-<li>Ask something the sources don’t cover — see whether it admits the gap.</li>
+<li><p>Ask a question the sources can answer; for each cited passage, confirm it actually supports the answer.</p></li>
+<li><p>Probe a gap — ask something the sources don’t cover. Does it admit the gap or fabricate?</p></li>
+<li><p>Synthesize:</p>
+<blockquote class="blockquote">
+<p>Summarize what these sources agree and disagree on, with citations.</p>
+</blockquote></li>
 </ol>
+<p><strong>Expected result.</strong> Grounded answers with verifiable citations and a tested “gap” case.</p>
+<p><strong>Check your work.</strong> A citation marker isn’t proof — open the cited passage and read it.</p>
+<p><strong>Common pitfalls.</strong> RAG reduces but doesn’t eliminate hallucination; bad retrieval means a wrong answer. Public data only unless the tool is approved.</p>
+<p><strong>Stretch (optional).</strong> Add a source that contradicts the others and see how it handles the conflict.</p>
 </details>
-<details class="activity"><summary>Activity 2 · Advanced — Probe retrieval</summary>
+<details class="activity"><summary>Activity 2 · Advanced — Probe retrieval quality</summary>
+<p><strong>Time</strong> ~12 min · <strong>Tools</strong> NotebookLM</p>
+<p><strong>Goal.</strong> Understand when retrieval misses relevant material.</p>
+<p><strong>Setup.</strong> The same notebook.</p>
+<p><strong>Steps.</strong></p>
 <ol type="1">
-<li>Ask the same question two ways and compare which passages it retrieves.</li>
-<li>Note where retrieval missed an obviously relevant source.</li>
+<li><p>Ask the same question two different ways and compare which passages it retrieves.</p></li>
+<li><p>Note any obviously relevant source it missed.</p></li>
+<li><p>Diagnose:</p>
+<blockquote class="blockquote">
+<p>Why might you have missed [source] for this question, and how should I phrase it to retrieve it?</p>
+</blockquote></li>
 </ol>
+<p><strong>Expected result.</strong> Insight into how phrasing changes retrieval.</p>
+<p><strong>Check your work.</strong> If rephrasing changes the cited sources, the system is retrieval-sensitive — design questions accordingly.</p>
+<p><strong>Common pitfalls.</strong> Users assume RAG “read everything”; it retrieves only a few passages. Verify coverage.</p>
+<p><strong>Stretch (optional).</strong> Organize the sources (clear titles, sections) and see if answers improve.</p>
 </details>
 </section>
 <section id="check-your-readiness" class="level2">

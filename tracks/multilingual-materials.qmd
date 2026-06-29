@@ -25,27 +25,73 @@ Cultural adaptation is more than translation: examples, framing, and imagery may
 ## Practice activities
 
 ```{=html}
-<details class="activity"><summary>Activity 1 · Moderate — Translate and back-translate</summary>
+<details class="activity"><summary>Activity 1 · Moderate — Translate with back-translation QA</summary>
 ```
 
-1. Translate a short outreach message into a target language with AI.
-2. Ask a **fresh AI session (or person)** to translate it back to English.
-3. Compare to the original — investigate any drift in meaning.
+**Time** ~15 min · **Tools** ChatGPT Edu (or an approved translation tool)
+
+**Goal.** Translate an outreach message and catch errors before it goes public.
+
+**Setup.** A short, non-sensitive outreach message (e.g., a crosswalk-safety reminder) and a target language relevant to your community.
+
+**Steps.**
+
+1. Translate:
+
+   > Translate this community health message into [language], keeping a warm, plain-language tone. [message]
+
+2. In a fresh chat, back-translate:
+
+   > Translate this [language] text back into English, literally. [translation]
+
+3. Compare the back-translation to your original and investigate any drift in meaning.
+
+**Expected result.** A translation plus a back-translation you’ve compared.
+
+**Check your work.** A bilingual colleague should review anything published — machine translation of health terms is error-prone.
+
+**Common pitfalls.** Idioms and clinical terms mistranslate confidently. Never publish machine translation of health materials unreviewed.
+
+**Stretch (optional).** Ask which sentences are most likely to be misunderstood in the target language.
 
 ```{=html}
 </details>
 ```
 
 ```{=html}
-<details class="activity"><summary>Activity 2 · Moderate — Adapt, don't just translate</summary>
+<details class="activity"><summary>Activity 2 · Moderate — Culturally adapt, not just translate</summary>
 ```
 
-1. Ask AI how the message's **examples or framing** might land differently in the target community.
-2. Draft an adapted version; flag what a community reviewer must confirm.
+**Time** ~13 min · **Tools** ChatGPT Edu
+
+**Goal.** Adapt framing and examples for a specific community, not just the words.
+
+**Setup.** Your translated message plus a brief description of the target community.
+
+**Steps.**
+
+1. Surface adaptation needs:
+
+   > For [community], how might the examples, framing, or imagery in this message land differently? Suggest culturally appropriate adaptations. [message + community]
+
+2. Draft an adapted version; mark what a community reviewer must confirm.
+
+3. Check for harm:
+
+   > Flag anything in my adaptation that could unintentionally stereotype or exclude.
+
+**Expected result.** An adapted draft plus a list to verify with community members.
+
+**Check your work.** Cultural knowledge belongs to the community — AI suggestions are hypotheses to confirm, not facts.
+
+**Common pitfalls.** AI can introduce stereotypes while “adapting.” Review with people from the community.
+
+**Stretch (optional).** Make two variants and plan a quick community feedback check.
 
 ```{=html}
 </details>
 ```
+
 
 ## Check your readiness
 

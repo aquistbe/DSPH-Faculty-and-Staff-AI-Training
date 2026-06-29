@@ -214,18 +214,44 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="practice-activities" class="level2">
 <h2 class="anchored" data-anchor-id="practice-activities">Practice activities</h2>
-<details class="activity"><summary>Activity 1 · Advanced — Scaffold a spatial join</summary>
+<details class="activity"><summary>Activity 1 · Advanced — Scaffold and validate a spatial join</summary>
+<p><strong>Time</strong> ~22 min · <strong>Tools</strong> ChatGPT Edu/Claude + R (sf) or Python (geopandas)</p>
+<p><strong>Goal.</strong> Build and validate a spatial analysis with AI help.</p>
+<p><strong>Setup.</strong> Two <strong>public</strong> spatial layers — e.g., Philadelphia crash points (the <a href="https://opendataphilly.org/datasets/crashes/">Philadelphia Crashes data</a> GeoJSON) and a neighborhood or Census-tract boundary file.</p>
+<p><strong>Steps.</strong></p>
 <ol type="1">
-<li>Describe two <strong>public</strong> spatial datasets and the join you want.</li>
-<li>Ask AI for the code (e.g., R sf or Python geopandas) and <strong>explain each step</strong>.</li>
-<li>Run it; validate against a known case.</li>
+<li><p>Scaffold the code:</p>
+<blockquote class="blockquote">
+<p>Write R (sf) or Python (geopandas) code to load these two layers, ensure a matching CRS, and count pedestrian crashes per neighborhood. Explain each step and the CRS handling. [datasets]</p>
+</blockquote></li>
+<li><p>Run it and validate against a known case — does a high-crash corridor show up where you’d expect?</p></li>
+<li><p>Check spatial traps:</p>
+<blockquote class="blockquote">
+<p>What projection or edge-effect issues should I check here?</p>
+</blockquote></li>
 </ol>
+<p><strong>Expected result.</strong> A crashes-per-area count and a validation against a known pattern.</p>
+<p><strong>Check your work.</strong> CRS mismatches silently produce wrong joins — confirm both layers share a projection.</p>
+<p><strong>Common pitfalls.</strong> Don’t infer individual risk from area rates (the ecological fallacy). AI won’t catch spatial traps for you.</p>
+<p><strong>Stretch (optional).</strong> Map the result and sanity-check a few points against the source.</p>
 </details>
-<details class="activity"><summary>Activity 2 · Advanced — Interpret imagery carefully</summary>
+<details class="activity"><summary>Activity 2 · Advanced — Interpret street imagery carefully</summary>
+<p><strong>Time</strong> ~15 min · <strong>Tools</strong> a multimodal AI + public Street View</p>
+<p><strong>Goal.</strong> Use AI on street imagery while respecting its limits.</p>
+<p><strong>Setup.</strong> A few <strong>public</strong> Google Street View images of Philadelphia intersections (faces and plates are already blurred).</p>
+<p><strong>Steps.</strong></p>
 <ol type="1">
-<li>Use AI to describe features in a <strong>public</strong> street/satellite image.</li>
-<li>Note where it guessed, and what a human rater must confirm.</li>
+<li><p>Ask for a description:</p>
+<blockquote class="blockquote">
+<p>Describe the pedestrian-safety features visible in this street image: crosswalks, signals, curb ramps, obstructions.</p>
+</blockquote></li>
+<li><p>Note where it guessed or hedged.</p></li>
+<li><p>Mark what a human rater must confirm before the labels are usable.</p></li>
 </ol>
+<p><strong>Expected result.</strong> AI-described features and a list needing human confirmation.</p>
+<p><strong>Check your work.</strong> Vision models guess confidently — verify each safety-relevant call.</p>
+<p><strong>Common pitfalls.</strong> Don’t treat AI image descriptions as measurements. Avoid images with identifiable people in unapproved tools.</p>
+<p><strong>Stretch (optional).</strong> Compare the AI’s description to a quick manual audit of the same image.</p>
 </details>
 </section>
 <section id="check-your-readiness" class="level2">

@@ -28,24 +28,68 @@ The discipline is sampling and spot-checking: validate the loop on a few items, 
 <details class="activity"><summary>Activity 1 · Advanced — Loop with a checkpoint</summary>
 ```
 
-1. Take ~10 **non-sensitive** items and one task (e.g., extract a field from each).
-2. Run the loop, then **audit a random sample** for errors.
-3. Fix the instruction and re-run only the failures.
+**Time** ~20 min · **Tools** ChatGPT Edu/Claude (+ R/Python if scripting)
+
+**Goal.** Apply one task across many items, then audit the results.
+
+**Setup.** About 10 non-sensitive items and one task. You can use 10 short [311 Service & Information Requests](https://opendataphilly.org/datasets/311-service-and-information-requests/) descriptions and classify each by issue type.
+
+**Steps.**
+
+1. Define the task for a single item and confirm it’s right.
+
+2. Run the loop over all 10 (in the tool, or with a script that calls the model).
+
+3. Audit a sample:
+
+   > Audit a random sample of 3 of these outputs for errors and tell me what’s likely systematically wrong.
+
+4. Fix the instruction and re-run only the failures.
+
+**Expected result.** 10 processed items plus an audit of a random sample.
+
+**Check your work.** A small early error repeats across the whole batch — sampling catches it.
+
+**Common pitfalls.** Don’t trust a loop just because it ran. Higher stakes mean reviewing every item, not a sample.
+
+**Stretch (optional).** Add a confidence flag so low-certainty items get human review.
 
 ```{=html}
 </details>
 ```
 
 ```{=html}
-<details class="activity"><summary>Activity 2 · Advanced — Decide the guardrail</summary>
+<details class="activity"><summary>Activity 2 · Advanced — Decide the guardrail for scale</summary>
 ```
 
-1. Write the rule for when this loop needs human review of every item vs. a sample.
-2. Tie it to stakes and reversibility.
+**Time** ~12 min · **Tools** ChatGPT Edu/Claude
+
+**Goal.** Set the rule for when a loop needs full human review.
+
+**Setup.** A real task you’d loop.
+
+**Steps.**
+
+1. Write the rule: review every item vs. a sample, tied to stakes and reversibility.
+
+2. Pressure-test it:
+
+   > Give me a scenario where sampling would be dangerous for this task.
+
+3. Decide and document.
+
+**Expected result.** A documented review rule for looped tasks.
+
+**Check your work.** Would you defend this rule if one bad output reached a real decision?
+
+**Common pitfalls.** Sampling is fine for low-stakes work; never for irreversible or rights-affecting outputs.
+
+**Stretch (optional).** Add logging so you can reconstruct what the loop did (see Reproducible AI).
 
 ```{=html}
 </details>
 ```
+
 
 ## Check your readiness
 

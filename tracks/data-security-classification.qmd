@@ -28,9 +28,29 @@ When a tool isn't cleared for your data, the move is to de-identify, use synthet
 <details class="activity"><summary>Activity 1 · Novice — Classify and match</summary>
 ```
 
-1. List three data types you work with.
-2. For each, note Drexel's classification and which tools are approved (check the AI Tools page).
-3. Flag any current habit that doesn't match.
+**Time** ~15 min · **Tools** Drexel AI Tools page + ChatGPT Edu
+
+**Goal.** Map your data to the right tools.
+
+**Setup.** List three data types you actually work with.
+
+**Steps.**
+
+1. For each, note its sensitivity (public → high-risk) and which Drexel-approved tools allow it (check the AI Tools page).
+
+2. Sanity-check with AI:
+
+   > I have these data types and these tools available. Which uses are appropriate and which aren’t, based on data sensitivity? [types] [tools]
+
+3. Flag any current habit that doesn’t match.
+
+**Expected result.** A data-to-tool matrix and a list of habits to change.
+
+**Check your work.** Verify against Drexel’s official AI Tools page, not the AI’s guess.
+
+**Common pitfalls.** “It’s probably fine” isn’t a classification. When unsure, treat data as more sensitive.
+
+**Stretch (optional).** Write your team’s one-page “what goes where” cheat sheet.
 
 ```{=html}
 </details>
@@ -40,12 +60,34 @@ When a tool isn't cleared for your data, the move is to de-identify, use synthet
 <details class="activity"><summary>Activity 2 · Novice — Substitute safely</summary>
 ```
 
-1. Take a sensitive example and write a **de-identified or synthetic** version.
-2. Confirm the substitute is safe for the tool you want to use.
+**Time** ~12 min · **Tools** ChatGPT Edu (fabricated data only)
+
+**Goal.** Make sensitive data safe for a given tool.
+
+**Setup.** A fabricated sensitive example.
+
+**Steps.**
+
+1. De-identify it:
+
+   > Here is a record with identifiers. Produce a de-identified version safe for a Low-Risk tool, and list what you removed or generalized. [fabricated record]
+
+2. Check: could the remaining fields still identify someone in combination?
+
+3. Decide whether de-identification is enough or you need an approved tool.
+
+**Expected result.** A de-identified version plus a re-identification check.
+
+**Check your work.** Quasi-identifiers (age + ZIP + date) can re-identify — scrutinize them.
+
+**Common pitfalls.** Removing names isn’t de-identification; combinations matter.
+
+**Stretch (optional).** Try generating fully synthetic data instead (see the Methods track).
 
 ```{=html}
 </details>
 ```
+
 
 ## Check your readiness
 

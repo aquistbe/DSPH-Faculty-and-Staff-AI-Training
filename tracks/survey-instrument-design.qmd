@@ -28,24 +28,70 @@ Good instruments are validated, not just written. AI accelerates drafting; pilot
 <details class="activity"><summary>Activity 1 · Moderate — Draft and critique items</summary>
 ```
 
-1. Describe a construct you want to measure.
-2. Ask AI for **6 candidate items** plus a response scale.
-3. Critique each for bias, ambiguity, and double-barreling; cut or fix.
+**Time** ~18 min · **Tools** ChatGPT Edu
+
+**Goal.** Generate candidate items, then pressure-test them.
+
+**Setup.** A construct to measure — e.g., *perceived pedestrian safety in your neighborhood.*
+
+**Steps.**
+
+1. Draft items:
+
+   > Draft 6 candidate survey items measuring [construct], with a response scale. Keep them concrete and answerable. [construct]
+
+2. Critique them:
+
+   > Critique each item for bias, ambiguity, double-barreling, and reading level.
+
+3. Cut or fix based on the critique — your judgment, not the model’s.
+
+**Expected result.** A vetted short item set with a response scale.
+
+**Check your work.** Does each item measure the construct, or something adjacent?
+
+**Common pitfalls.** AI produces leading and double-barreled items confidently. You own measurement quality.
+
+**Stretch (optional).** Ask for two items at different reading levels and keep the clearer.
 
 ```{=html}
 </details>
 ```
 
 ```{=html}
-<details class="activity"><summary>Activity 2 · Moderate — Write cognitive probes</summary>
+<details class="activity"><summary>Activity 2 · Moderate — Write cognitive-interview probes</summary>
 ```
 
-1. Ask AI for **cognitive-interview probes** for two items.
-2. Decide which you'd actually use to test comprehension.
+**Time** ~12 min · **Tools** ChatGPT Edu
+
+**Goal.** Plan to test whether respondents understand your items.
+
+**Setup.** Two of your items.
+
+**Steps.**
+
+1. Draft probes:
+
+   > Write cognitive-interview probes for these two items (comprehension, retrieval, judgment). [items]
+
+2. Decide which probes you’d actually use.
+
+3. Predict failure:
+
+   > What’s the most likely way a respondent could misunderstand item 1?
+
+**Expected result.** Usable probes and a predicted misunderstanding.
+
+**Check your work.** Real piloting validates items — drafting doesn’t.
+
+**Common pitfalls.** Skipping cognitive testing ships ambiguous items. AI helps draft, not validate.
+
+**Stretch (optional).** Plan a 3-person cognitive pretest.
 
 ```{=html}
 </details>
 ```
+
 
 ## Check your readiness
 

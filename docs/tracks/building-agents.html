@@ -214,18 +214,38 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="practice-activities" class="level2">
 <h2 class="anchored" data-anchor-id="practice-activities">Practice activities</h2>
-<details class="activity"><summary>Activity 1 · Moderate — Build a simple agent</summary>
+<details class="activity"><summary>Activity 1 · Moderate — Build a simple assistant</summary>
+<p><strong>Time</strong> ~18 min · <strong>Tools</strong> ChatGPT Edu</p>
+<p><strong>Goal.</strong> Assemble a working assistant from instructions plus knowledge.</p>
+<p><strong>Setup.</strong> A repeated task and one non-sensitive reference file (a template or style guide).</p>
+<p><strong>Steps.</strong></p>
 <ol type="1">
-<li>In ChatGPT Edu, create an assistant with clear <strong>instructions</strong> and one <strong>knowledge file</strong> (non-sensitive).</li>
-<li>Give it a small multi-step task and watch how it plans.</li>
-<li><strong>Review each step</strong>, not just the final output.</li>
+<li><p>Create a custom GPT/assistant with clear instructions — role, behavior, output format, limits — and upload the reference file.</p></li>
+<li><p>Give it a small multi-step task and watch how it plans.</p></li>
+<li><p>Review <strong>each step</strong>, not just the final output.</p></li>
 </ol>
+<p><strong>Expected result.</strong> An assistant that completes a multi-step task with your review at each step.</p>
+<p><strong>Check your work.</strong> Did it follow the limits you set? Try an input that should make it stop and ask.</p>
+<p><strong>Common pitfalls.</strong> Errors compound across steps. Keep it on low-stakes, reversible work. You own the outcome.</p>
+<p><strong>Stretch (optional).</strong> Add a knowledge file and see how it changes the assistant’s answers.</p>
 </details>
-<details class="activity"><summary>Activity 2 · Moderate — Set the guardrails</summary>
+<details class="activity"><summary>Activity 2 · Moderate — Set and test the guardrails</summary>
+<p><strong>Time</strong> ~12 min · <strong>Tools</strong> ChatGPT Edu</p>
+<p><strong>Goal.</strong> Define limits and confirm they hold.</p>
+<p><strong>Setup.</strong> Your assistant from Activity 1.</p>
+<p><strong>Steps.</strong></p>
 <ol type="1">
-<li>Write the agent’s limits: what it must never do, when to stop and ask.</li>
-<li>Test a case that should trigger a stop; confirm it does.</li>
+<li><p>Write its guardrails: what it must never do, and when to stop and ask a human.</p></li>
+<li><p>Find blind spots:</p>
+<blockquote class="blockquote">
+<p>Given these guardrails, what edge cases might I be missing?</p>
+</blockquote></li>
+<li><p>Test a case that should trigger a stop — confirm it does.</p></li>
 </ol>
+<p><strong>Expected result.</strong> A guardrail list and a passed stop-test.</p>
+<p><strong>Check your work.</strong> If it proceeds when it should stop, tighten the instructions.</p>
+<p><strong>Common pitfalls.</strong> Vague guardrails fail silently. Be explicit about high-stakes triggers.</p>
+<p><strong>Stretch (optional).</strong> Write the one rule that, if it applied, would mean the task should never be automated.</p>
 </details>
 </section>
 <section id="check-your-readiness" class="level2">

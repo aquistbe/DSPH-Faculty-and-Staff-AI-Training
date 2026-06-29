@@ -214,18 +214,41 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="practice-activities" class="level2">
 <h2 class="anchored" data-anchor-id="practice-activities">Practice activities</h2>
-<details class="activity"><summary>Activity 1 · Moderate — Write a skill</summary>
+<details class="activity"><summary>Activity 1 · Moderate — Write a reusable skill</summary>
+<p><strong>Time</strong> ~18 min · <strong>Tools</strong> ChatGPT Edu (custom GPT) or Claude</p>
+<p><strong>Goal.</strong> Package a repeated task as a shareable, reliable skill.</p>
+<p><strong>Setup.</strong> Pick a task you repeat — e.g., <em>“turn messy meeting notes into our standard recap.”</em></p>
+<p><strong>Steps.</strong></p>
 <ol type="1">
-<li>Pick a repeated task (a recap, a rewrite, a checklist).</li>
-<li>Write a skill with <strong>job, steps, output format, and guardrails</strong> (no sensitive data).</li>
-<li>Test it on two different inputs; tighten where it drifts.</li>
+<li><p>Draft the skill:</p>
+<blockquote class="blockquote">
+<p>Help me write a reusable “skill” for this task. Include the job, step-by-step instructions, the exact output format, and guardrails (what it must never do). Task: [task].</p>
+</blockquote></li>
+<li><p>Save it as a custom GPT’s instructions (or a Claude skill).</p></li>
+<li><p>Test on two different inputs; tighten wherever it drifts.</p></li>
 </ol>
+<p><strong>Expected result.</strong> A documented skill that produces consistent output across different inputs.</p>
+<p><strong>Check your work.</strong> Run it on a deliberately tricky input — does it hold the format and the guardrails?</p>
+<p><strong>Common pitfalls.</strong> Most of the quality is in the instructions, not the model. Keep sensitive data out of skill files; share inside Drexel only.</p>
+<p><strong>Stretch (optional).</strong> Add a one-line “use this when…” and have a colleague test it cold.</p>
 </details>
-<details class="activity"><summary>Activity 2 · Moderate — Share and reuse</summary>
+<details class="activity"><summary>Activity 2 · Moderate — Start a small skill library</summary>
+<p><strong>Time</strong> ~12 min · <strong>Tools</strong> a shared doc (Teams/SharePoint)</p>
+<p><strong>Goal.</strong> Begin a reusable team library so good prompts become shared tools.</p>
+<p><strong>Setup.</strong> A shared document the team can reach.</p>
+<p><strong>Steps.</strong></p>
 <ol type="1">
-<li>Save the skill as a custom GPT or shared doc your team can reach.</li>
-<li>Have a colleague run it and note where the instructions need to be clearer.</li>
+<li><p>Add 2–3 skills, each with a title, the instructions, an example input/output, and “use when.”</p></li>
+<li><p>Review the set:</p>
+<blockquote class="blockquote">
+<p>Review my skill library for overlap or gaps, and suggest one more skill this set implies we need.</p>
+</blockquote></li>
+<li><p>Agree where it lives and that anyone can add.</p></li>
 </ol>
+<p><strong>Expected result.</strong> A starter library of 2–3 skills plus one suggested addition.</p>
+<p><strong>Check your work.</strong> Have a colleague run one skill cold — if they can’t, the instructions need work.</p>
+<p><strong>Common pitfalls.</strong> A skill only its author can run isn’t reusable. Document clearly.</p>
+<p><strong>Stretch (optional).</strong> Convert your best prompt from another workshop into a skill.</p>
 </details>
 </section>
 <section id="check-your-readiness" class="level2">
