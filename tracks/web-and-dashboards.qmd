@@ -101,11 +101,11 @@ Answer these, then check — your score suggests whether to dive in or skim the 
 
 ## Recommended readings
 
-From the AI readings library (ask the facilitator for access):
+Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings**, and online where linked:
 
-- **Claude Code Now Supports Artifacts** — generating interactive, shareable outputs.
-- **How to Do Agentic Data Science (Eric J. Ma)** — building analysis products end-to-end.
-- **AI Agents for Data Scientists: Automations vs Agents** — where automation helps in delivery.
+- [**Claude Code Now Supports Artifacts**](https://claude.com/blog/artifacts-in-claude-code) — generating interactive, shareable outputs.
+- [**How to Do Agentic Data Science (Eric J. Ma)**](https://ericmjl.github.io/blog/2026/2/1/how-to-do-agentic-data-science/) — building analysis products end-to-end.
+- [**AI Agents for Data Scientists: Automations vs Agents**](https://datascienceweekly.substack.com/p/ai-agents-for-data-scientists-automations) — where automation helps in delivery.
 
 ## Useful resources
 

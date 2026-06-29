@@ -20,6 +20,11 @@ The series is designed for everyone at DSPH---administrative staff, research sta
 
 Prefer to learn at your own pace? The new **[Self-Paced Tracks](tracks.qmd)** turn these topics into self-guided pages with practice activities, readiness quizzes, and curated readings---starting with a full **Data & Analysis** track.
 
+:::{.callout-important}
+## Use AI to amplify your judgment, not replace it
+The throughline across every workshop and track is the same: **AI is a productivity tool, not a substitute for your expertise.** Use it to get past the blank page, draft, summarize, and pressure-test your thinking---then bring your own judgment, taste, and accountability to the result. The goal is to *develop the judgment* for where AI needs **close scrutiny** (high-stakes, irreversible, or hard-to-verify work) and where it doesn't---and to watch for **cognitive offloading**, handing over so much thinking that your own skills and voice quietly erode. More in [Keeping Your Judgment: Cognitive Offloading & When to Scrutinize AI](tracks/judgment-and-offloading.qmd).
+:::
+
 :::{.callout-note}
 ## Series Details
 
@@ -135,3 +140,7 @@ When in doubt, de-identify, use synthetic data, or ask before entering anything 
 ## Questions?
 
 Contact D. Alex Quistberg at [daq26@drexel.edu](mailto:daq26@drexel.edu).
+
+## About this site
+
+This site and its materials were developed by D. Alex Quistberg **with the assistance of Claude (Anthropic)** --- used as a drafting and design partner for the workshop content, self-paced tracks, and activities. In keeping with the series' own guidance, AI helped accelerate the work, and the author reviewed, verified, and is accountable for what's published here. Built with [Quarto](https://quarto.org).

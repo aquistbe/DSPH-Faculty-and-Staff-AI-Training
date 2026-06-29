@@ -107,10 +107,10 @@ Answer these, then check — your score suggests whether to dive in or skim the 
 
 ## Recommended readings
 
-From the AI readings library (ask the facilitator for access):
+Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings**, and online where linked:
 
-- **Exploring Agent-Assisted Qualitative Analysis** — what AI can do in coding and theming.
-- **Jowsey et al. (2025): We Reject the Use of Generative AI for Reflexive Qualitative Research** — a strong counterpoint — read it for balance.
+- [**Exploring Agent-Assisted Qualitative Analysis**](https://www.sh-reya.com/blog/ai-qual-analysis/) — what AI can do in coding and theming.
+- [**Jowsey et al. (2025): We Reject the Use of Generative AI for Reflexive Qualitative Research**](https://doi.org/10.1177/10778004251401851) — a strong counterpoint — read it for balance.
 
 ## Useful resources
 

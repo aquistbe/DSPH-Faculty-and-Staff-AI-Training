@@ -101,11 +101,11 @@ Answer these, then check — your score suggests whether to dive in or skim the 
 
 ## Recommended readings
 
-From the AI readings library (ask the facilitator for access):
+Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings**, and online where linked:
 
-- **Effective Context Engineering for AI Agents (Anthropic)** — practical principles for context.
-- **State of Context Engineering in 2026 (Aurimas Griciūnas)** — the current landscape.
-- **Context Engineering for AI Agents: Lessons from Building Manus** — field lessons.
+- [**Effective Context Engineering for AI Agents (Anthropic)**](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents) — practical principles for context.
+- [**State of Context Engineering in 2026 (Aurimas Griciūnas)**](https://www.newsletter.swirlai.com/p/state-of-context-engineering-in-2026) — the current landscape.
+- [**Context Engineering for AI Agents: Lessons from Building Manus**](https://manus.im/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus) — field lessons.
 
 ## Useful resources
 

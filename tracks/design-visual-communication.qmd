@@ -102,11 +102,11 @@ Answer these, then check — your score suggests whether to dive in or skim the 
 
 ## Recommended readings
 
-From the AI readings library (ask the facilitator for access):
+Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings**, and online where linked:
 
-- **Anthropic Has Caught Up to OpenAI in Image Understanding** — what multimodal tools can do with images.
-- **These New Tools Could Make AI Vision Systems Less Biased (MIT Tech Review)** — representation and bias in AI-generated visuals.
-- **Claude Code Now Supports Artifacts** — generating interactive, shareable visual outputs.
+- [**Anthropic Has Caught Up to OpenAI in Image Understanding**](https://www.understandingai.org/p/anthropic-has-caught-up-to-openai) — what multimodal tools can do with images.
+- [**These New Tools Could Make AI Vision Systems Less Biased (MIT Tech Review)**](https://www.technologyreview.com/2023/09/25/1080191/these-new-tools-could-make-ai-vision-systems-less-biased/) — representation and bias in AI-generated visuals.
+- [**Claude Code Now Supports Artifacts**](https://claude.com/blog/artifacts-in-claude-code) — generating interactive, shareable visual outputs.
 
 ## Useful resources
 

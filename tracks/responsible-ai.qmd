@@ -101,10 +101,10 @@ Answer these, then check — your score suggests whether to dive in or skim the 
 
 ## Recommended readings
 
-From the AI readings library (ask the facilitator for access):
+Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings**, and online where linked:
 
-- **How Responsible AI Changes in the Agent Era** — responsibility as AI gains autonomy.
-- **Prioritizing the Risks from Artificial Intelligence** — a framework for weighing AI risks.
+- [**How Responsible AI Changes in the Agent Era**](https://www.turingpost.com/p/how-responsible-ai-changes-in-the-agent-era) — responsibility as AI gains autonomy.
+- [**Prioritizing the Risks from Artificial Intelligence**](https://osf.io/pj2qr) — a framework for weighing AI risks.
 
 ## Useful resources
 

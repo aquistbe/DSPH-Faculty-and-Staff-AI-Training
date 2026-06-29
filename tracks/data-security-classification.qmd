@@ -101,10 +101,10 @@ Answer these, then check — your score suggests whether to dive in or skim the 
 
 ## Recommended readings
 
-From the AI readings library (ask the facilitator for access):
+Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings**, and online where linked:
 
-- **LLMs Can Unmask Pseudonymous Users at Scale (Ars Technica)** — why de-identification is harder than it looks.
-- **AI and Humans: Making the Relationship Work (Schneier on Security)** — security thinking for AI use.
+- [**LLMs Can Unmask Pseudonymous Users at Scale (Ars Technica)**](https://arstechnica.com/security/2026/03/llms-can-unmask-pseudonymous-users-at-scale-with-surprising-accuracy/) — why de-identification is harder than it looks.
+- [**AI and Humans: Making the Relationship Work (Schneier on Security)**](https://www.schneier.com/blog/archives/2026/01/ai-humans-making-the-relationship-work.html) — security thinking for AI use.
 
 ## Useful resources
 

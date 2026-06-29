@@ -101,10 +101,10 @@ Answer these, then check — your score suggests whether to dive in or skim the 
 
 ## Recommended readings
 
-From the AI readings library (ask the facilitator for access):
+Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings**, and online where linked:
 
-- **Effective Context Engineering for AI Agents (Anthropic)** — retrieval and context principles.
-- **Beyond the Semantic Layer: Building a Context Layer for the Agentic Era** — architecting knowledge for AI.
+- [**Effective Context Engineering for AI Agents (Anthropic)**](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents) — retrieval and context principles.
+- [**Beyond the Semantic Layer: Building a Context Layer for the Agentic Era**](https://www.kaelio.com/blog/building-a-context-layer-for-the-agentic-era) — architecting knowledge for AI.
 
 ## Useful resources
 

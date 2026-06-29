@@ -103,10 +103,10 @@ Answer these, then check — your score suggests whether to dive in or skim the 
 
 ## Recommended readings
 
-From the AI readings library (ask the facilitator for access):
+Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings**, and online where linked:
 
-- **New Earth Observation Tech Is Boosting Climate Intelligence (WEF)** — satellite data for environmental health.
-- **Charting the Future of Earth Observation (WEF, 2024)** — where geospatial AI is heading.
+- [**New Earth Observation Tech Is Boosting Climate Intelligence (WEF)**](https://www.weforum.org/stories/2024/09/10-ways-tech-is-transforming-earth-observation-and-boosting-climate-intelligence/) — satellite data for environmental health.
+- [**Charting the Future of Earth Observation (WEF, 2024)**](https://www.weforum.org/publications/charting-the-future-of-earth-observation/) — where geospatial AI is heading.
 
 ## Useful resources
 

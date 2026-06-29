@@ -101,9 +101,9 @@ Answer these, then check — your score suggests whether to dive in or skim the 
 
 ## Recommended readings
 
-From the AI readings library (ask the facilitator for access):
+Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings**, and online where linked:
 
-- **Running Local Models Is Good Now (Vicki Boykis)** — a practical look at the current state of local models.
+- [**Running Local Models Is Good Now (Vicki Boykis)**](https://vickiboykis.com/2026/06/15/running-local-models-is-good-now/) — a practical look at the current state of local models.
 
 ## Useful resources
 

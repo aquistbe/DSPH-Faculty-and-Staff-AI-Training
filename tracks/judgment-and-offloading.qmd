@@ -1,0 +1,129 @@
+---
+title: "Keeping Your Judgment: Cognitive Offloading & When to Scrutinize AI"
+---
+
+::: {.topic-badges}
+[Moderate]{.level-badge .level-moderate} · **Governance, Ethics & Equity** track · ~1 hour, self-paced
+:::
+
+[← Back to the Governance, Ethics & Equity track](governance-ethics.qmd){.track-back}
+
+*Use AI to amplify your judgment, not replace it — and know where it needs closer scrutiny.*
+
+## What you'll be able to do
+
+- Explain **cognitive offloading** and the risks of skill atrophy and automation bias
+- Decide where AI needs **close scrutiny** versus where it's low-stakes
+- Build habits that use AI for productivity while keeping your judgment, taste, and voice sharp
+
+## Overview
+
+These tools are for **productivity** — getting past the blank page, drafting, summarizing, pressure-testing your thinking, accelerating the repetitive middle of a task. They are not a substitute for your expertise. The skill that matters most in the AI era is **judgment**: knowing what's right, what's worth questioning, and what only a human should decide. The rule from across this series holds — *AI drafts; you verify and decide.* Use it as a first draft and a thought partner, never the final word.
+
+**Cognitive offloading** is handing your thinking to a tool. Some is healthy — we offload arithmetic to calculators. Too much erodes the very skill and judgment you need to *catch the tool's mistakes*, and your voice drifts toward a generic sameness. The goal is **calibrated reliance**: lean on AI for low-stakes, reversible, checkable work, and keep your hands on the high-stakes, novel, and nuanced. Taste — knowing when an output is good, off, or subtly wrong — is something you keep by staying in the work, not by outsourcing all of it.
+
+:::{.callout-tip}
+## A quick test for any task
+Before you hand something to AI, ask: **Reversible?** (could I undo a wrong result) · **Verifiable?** (can I check it) · **Low-stakes?** (no one's care, rights, or resources ride on it). The more "no" answers, the more scrutiny it needs — or the more it should stay human.
+:::
+
+## Practice activities
+
+```{=html}
+<details class="activity"><summary>Activity 1 · Moderate — Map where AI needs scrutiny</summary>
+```
+
+**Time** ~18 min · **Tools** a doc or paper + ChatGPT Edu
+
+**Goal.** Build a personal map of where to lean on AI and where to scrutinize it closely.
+
+**Setup.** List 8–10 tasks you do regularly.
+
+**Steps.**
+
+1. Rate each task 1–5 on three things: **stakes** (who's harmed if it's wrong), **reversibility** (can you undo it), and **verifiability** (can you check it easily).
+
+2. Sort them into two columns — *lean on AI* (low-stakes, reversible, checkable) vs. *keep human / scrutinize closely* (high-stakes, irreversible, hard to verify).
+
+3. Pressure-test your map:
+
+   > Here are my tasks and how I rated their stakes, reversibility, and verifiability. Which did I likely mis-rate, and which deserve closer human scrutiny than I gave them?
+
+4. Assign each task a scrutiny level: *skim, spot-check, verify everything,* or *don't automate.*
+
+**Expected result.** A personal task map with a scrutiny level for each.
+
+**Check your work.** Would you defend your "lean on AI" calls if one went wrong in public?
+
+**Common pitfalls.** The riskiest tasks often feel routine. High stakes + irreversible + hard to verify means scrutinize closely or keep it human.
+
+**Stretch (optional).** Pick one "keep human" task and write *why* it needs your judgment specifically — that sentence is your taste, made explicit.
+
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 2 · Moderate — Do it yourself first, then compare</summary>
+```
+
+**Time** ~15 min · **Tools** ChatGPT Edu
+
+**Goal.** Use AI in a way that sharpens your skill instead of eroding it.
+
+**Setup.** A task you'd normally hand straight to AI — a short analysis, a paragraph, a plan.
+
+**Steps.**
+
+1. Do a rough version **yourself first** (about 5 minutes, no AI).
+
+2. Then ask AI for its version of the same task.
+
+3. Compare honestly:
+
+   > Here's my draft and your draft. What did you do better, what did I do better, and what did I catch that you missed?
+
+4. Build the final from the best of both, and note what you learned.
+
+**Expected result.** A stronger final product plus a note on what you'd have missed by offloading entirely.
+
+**Check your work.** Did doing it yourself first surface something the AI got wrong, generic, or bland?
+
+**Common pitfalls.** Always starting from AI's draft anchors you to its framing and quietly erodes your skill and voice. Do the thinking first, at least sometimes.
+
+**Stretch (optional).** Name one skill you don't want to lose and protect it — keep doing that one unaided on a regular basis.
+
+```{=html}
+</details>
+```
+
+## Check your readiness
+
+Answer these, then check — your score suggests whether to dive in or skim the readings first.
+
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions":[{"q":"Cognitive offloading becomes a problem when…","options":["It erodes the skill and judgment you need to catch AI's mistakes","You use a calculator","You ever use AI at all","Never — offloading is always fine"],"answer":0,"explain":"A little offloading is healthy; too much erodes the judgment you need to oversee the tool."},{"q":"Where should AI get the closest human scrutiny?","options":["High-stakes, irreversible, hard-to-verify tasks","Low-stakes formatting","Spell-check","It never needs scrutiny"],"answer":0,"explain":"Scrutiny should scale with stakes, irreversibility, and how hard the work is to verify."},{"q":"The best framing for AI in this series is…","options":["A productivity tool and thought partner, with you keeping the judgment","A replacement for your expertise","The final word on decisions","An autonomous decider"],"answer":0,"explain":"AI drafts and accelerates; you keep the judgment, taste, and accountability."}]}
+</script>
+</div>
+
+## Recommended readings
+
+Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings**, and online where linked:
+
+- [**How to Outsource Everything to AI and Get Dumb**](https://ruben.substack.com/p/how-to-rot-your-brain-with-ai) — the cognitive-offloading risk, bluntly put.
+- [**Judgment Is the Skill That Matters Most in the AI Era**](https://dev.jimgrey.net/2026/05/27/judgment-is-the-skill-that-matters-most-in-the-ai-era/) — why your judgment is the real differentiator.
+- [**Mastering the Data Science Human Skills AI Can't Touch**](https://aitransformer.online/data-science-human-skills-ai-cant-touch/) — the human skills worth keeping sharp.
+- [**The Displacement of Cognitive Labor and What Comes After**](https://sahajgarg.github.io/blog/cognitive-labor/) — the bigger picture on what we hand off.
+
+## Useful resources
+
+- [Workshop 2 — Workflow Enhancement](../workshop2.qmd) — the "don't over-rely" segment this builds on.
+- [Workshop 5 — Getting Started with Agentic AI](../workshop5.qmd) — automation bias and oversight.
+- [Verifying AI Output](verifying-output.qmd) — the hands-on companion habit.
+- [Drexel AI Tools](https://drexel.edu/provost/ai/tools) — approved tools and data rules.
+
+::: {.callout-warning}
+## Data rules
+No sensitive data is needed for this topic — it's about *how* you work with AI. Keep the data rules from the rest of the series in place whenever real data is involved. See [Tools & Access](../tools.qmd).
+:::

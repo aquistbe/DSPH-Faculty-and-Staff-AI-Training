@@ -105,10 +105,10 @@ Answer these, then check — your score suggests whether to dive in or skim the 
 
 ## Recommended readings
 
-From the AI readings library (ask the facilitator for access):
+Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings**, and online where linked:
 
-- **AI-Slop, GrantaGate and Bad Writing (Tuhin Chakrabarty)** — the risks of AI-generated proposal text.
-- **A Framework for Technical Writing in the Age of LLMs** — writing faster without losing rigor.
+- [**AI-Slop, GrantaGate and Bad Writing (Tuhin Chakrabarty)**](https://tuhinchakrabarty.substack.com/p/ai-slop-grantagate-and-bad-writing) — the risks of AI-generated proposal text.
+- [**A Framework for Technical Writing in the Age of LLMs**](https://thedataquarry.com/blog/a-framework-for-reading-and-writing/) — writing faster without losing rigor.
 
 ## Useful resources
 

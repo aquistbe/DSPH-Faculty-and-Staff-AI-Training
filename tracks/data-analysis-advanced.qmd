@@ -107,12 +107,12 @@ Answer these, then check — your score suggests whether to dive in or skim the 
 
 ## Recommended readings
 
-From the AI readings library (ask the facilitator for access):
+Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings**, and online where linked:
 
-- **Are Foundation Models Ready for Your Production Tabular Data?** — limits of large models on tabular tasks.
-- **Is Boosting Still All You Need for Tabular Data?** — a modeling reality check.
-- **Against Time-Series Foundation Models** — skepticism on forecasting hype.
-- **Implementing Statistical Guardrails for Non-Deterministic Agents** — keeping AI pipelines reliable.
+- [**Are Foundation Models Ready for Your Production Tabular Data?**](https://towardsdatascience.com/foundation-models-in-tabular-data/) — limits of large models on tabular tasks.
+- [**Is Boosting Still All You Need for Tabular Data?**](https://m-clark.github.io/posts/2026-03-01-dl-for-tabular-foundational/) — a modeling reality check.
+- [**Against Time-Series Foundation Models**](https://shakoist.substack.com/p/against-time-series-foundation-models) — skepticism on forecasting hype.
+- [**Implementing Statistical Guardrails for Non-Deterministic Agents**](https://machinelearningmastery.com/implementing-statistical-guardrails-for-non-deterministic-agents/) — keeping AI pipelines reliable.
 
 ## Useful resources
 

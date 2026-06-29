@@ -99,11 +99,11 @@ Answer these, then check — your score suggests whether to dive in or skim the 
 
 ## Recommended readings
 
-From the AI readings library (ask the facilitator for access):
+Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings**, and online where linked:
 
-- **Data Centers and Water Consumption (EESI)** — the water footprint of AI infrastructure.
-- **Are Data Centers Bad for the Environment? (Deseret News)** — a balanced look at the impacts.
-- **AI Data Centers Create Fury From Mexico to Ireland (NYT)** — community and equity dimensions.
+- [**Data Centers and Water Consumption (EESI)**](https://www.eesi.org/articles/view/data-centers-and-water-consumption) — the water footprint of AI infrastructure.
+- [**Are Data Centers Bad for the Environment? (Deseret News)**](https://www.deseret.com/u-s-world/2026/06/21/what-environmental-costs-do-data-centers-have/) — a balanced look at the impacts.
+- [**AI Data Centers Create Fury From Mexico to Ireland (NYT)**](https://www.realclearmarkets.com/2025/10/25/from_mexico_to_ireland_fury_mounts_over_a_global_ai_frenzy_1143206.html) — community and equity dimensions.
 
 ## Useful resources
 

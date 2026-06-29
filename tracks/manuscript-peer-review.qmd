@@ -105,10 +105,10 @@ Answer these, then check — your score suggests whether to dive in or skim the 
 
 ## Recommended readings
 
-From the AI readings library (ask the facilitator for access):
+Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings**, and online where linked:
 
-- **Peer Review Is Dead; Long Live Peer Review!** — how AI is reshaping the review system.
-- **AI-Slop, GrantaGate and Bad Writing** — cautionary view of AI-generated academic text.
+- [**Peer Review Is Dead; Long Live Peer Review!**](https://daafguide.substack.com/p/a-better-ai-future-for-peer-review) — how AI is reshaping the review system.
+- [**AI-Slop, GrantaGate and Bad Writing**](https://tuhinchakrabarty.substack.com/p/ai-slop-grantagate-and-bad-writing) — cautionary view of AI-generated academic text.
 
 ## Useful resources
 

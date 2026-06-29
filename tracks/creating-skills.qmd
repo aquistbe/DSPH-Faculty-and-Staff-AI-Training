@@ -101,10 +101,10 @@ Answer these, then check — your score suggests whether to dive in or skim the 
 
 ## Recommended readings
 
-From the AI readings library (ask the facilitator for access):
+Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings**, and online where linked:
 
-- **The Complete Guide to Building Skills for Claude** — how to structure a reusable skill.
-- **AI Agent Skills: Why Skill Curation Is the Next Bottleneck** — keeping a useful library of skills.
+- [**The Complete Guide to Building Skills for Claude**](https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf) — how to structure a reusable skill.
+- [**AI Agent Skills: Why Skill Curation Is the Next Bottleneck**](https://turingpost.substack.com/p/fod152-ai-agent-skills-why-skill) — keeping a useful library of skills.
 
 ## Useful resources
 

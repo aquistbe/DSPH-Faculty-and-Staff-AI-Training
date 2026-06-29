@@ -105,11 +105,11 @@ Answer these, then check — your score suggests whether to dive in or skim the 
 
 ## Recommended readings
 
-From the AI readings library (ask the facilitator for access):
+Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings**, and online where linked:
 
-- **Thoughts About the Roles of AI for Statistics** — where AI fits — and doesn't — in statistical work.
-- **AI and Survey Sampling Problems (Sharon Lohr)** — caution on sampling and inference.
-- **When Is Detecting AI-Generated Text Worthwhile? (Gelman)** — statistical thinking applied to AI.
+- [**Thoughts About the Roles of AI for Statistics**](https://hbiostat.org/talks/ai.html) — where AI fits — and doesn't — in statistical work.
+- [**AI and Survey Sampling Problems (Sharon Lohr)**](https://www.sharonlohr.com/blog/2026/6/10/ai-and-sampling-problems) — caution on sampling and inference.
+- [**When Is Detecting AI-Generated Text Worthwhile? (Gelman)**](https://statmodeling.stat.columbia.edu/2026/06/06/when-is-detecting-ai-generated-text-worthwhile/) — statistical thinking applied to AI.
 
 ## Useful resources
 

@@ -3,7 +3,7 @@ title: "Governance, Ethics & Equity Track"
 ---
 
 ::: {.topic-badges}
-Self-paced track · 5 topics · novice → moderate
+Self-paced track · 6 topics · novice → moderate
 :::
 
 [← All self-paced tracks](../tracks.qmd){.track-back}
@@ -25,6 +25,7 @@ The judgment layer: how to verify AI output, protect data, weigh environmental c
 | 3 | [Data Security & Classification Deep-Dive](data-security-classification.qmd) | [Novice]{.level-badge .level-novice} | Match every tool to Drexel's data classification |
 | 4 | [Responsible AI](responsible-ai.qmd) | [Moderate]{.level-badge .level-moderate} | Accountability, transparency, and governance in practice |
 | 5 | [AI Bias & Health Equity Audit](bias-equity-audit.qmd) | [Moderate]{.level-badge .level-moderate} | Test AI outputs across populations, not just on average |
+| 6 | [Keeping Your Judgment: Cognitive Offloading](judgment-and-offloading.qmd) | [Moderate]{.level-badge .level-moderate} | Use AI to amplify judgment, not replace it; know where to scrutinize |
 
 ::: {.callout-warning}
 ## Data rules apply throughout

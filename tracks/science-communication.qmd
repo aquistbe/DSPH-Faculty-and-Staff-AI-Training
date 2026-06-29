@@ -105,10 +105,10 @@ Answer these, then check — your score suggests whether to dive in or skim the 
 
 ## Recommended readings
 
-From the AI readings library (ask the facilitator for access):
+Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings**, and online where linked:
 
-- **Watch Your Tone: Language Machines as Writing Technology** — how AI shapes voice and clarity in writing.
-- **A Framework for Technical Writing in the Age of LLMs (The Data Quarry)** — keeping accuracy while writing faster.
+- [**Watch Your Tone: Language Machines as Writing Technology**](https://www.ailog.blog/p/watch-your-tone-language-machines) — how AI shapes voice and clarity in writing.
+- [**A Framework for Technical Writing in the Age of LLMs (The Data Quarry)**](https://thedataquarry.com/blog/a-framework-for-reading-and-writing/) — keeping accuracy while writing faster.
 
 ## Useful resources
 

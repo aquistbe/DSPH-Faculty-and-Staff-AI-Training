@@ -105,10 +105,10 @@ Answer these, then check — your score suggests whether to dive in or skim the 
 
 ## Recommended readings
 
-From the AI readings library (ask the facilitator for access):
+Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings**, and online where linked:
 
-- **AI-Ready Data vs. Analytics-Ready Data** — why preparation determines whether analysis works.
-- **Stop Learning Excel (Ruben Hassid)** — a provocative reframe of spreadsheet work with AI — read critically.
+- [**AI-Ready Data vs. Analytics-Ready Data**](https://medium.com/@community_md101/ai-ready-data-vs-analytics-ready-data-f67ef0804341) — why preparation determines whether analysis works.
+- [**Stop Learning Excel (Ruben Hassid)**](https://ruben.substack.com/p/how-to-make-perfect-spreadsheets) — a provocative reframe of spreadsheet work with AI — read critically.
 
 ## Useful resources
 

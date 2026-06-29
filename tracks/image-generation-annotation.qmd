@@ -107,10 +107,10 @@ Answer these, then check — your score suggests whether to dive in or skim the 
 
 ## Recommended readings
 
-From the AI readings library (ask the facilitator for access):
+Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings**, and online where linked:
 
-- **Anthropic Has Caught Up to OpenAI in Image Understanding** — the state of multimodal image analysis.
-- **These New Tools Could Make AI Vision Systems Less Biased (MIT Tech Review)** — bias in computer vision and how it's addressed.
+- [**Anthropic Has Caught Up to OpenAI in Image Understanding**](https://www.understandingai.org/p/anthropic-has-caught-up-to-openai) — the state of multimodal image analysis.
+- [**These New Tools Could Make AI Vision Systems Less Biased (MIT Tech Review)**](https://www.technologyreview.com/2023/09/25/1080191/these-new-tools-could-make-ai-vision-systems-less-biased/) — bias in computer vision and how it's addressed.
 
 ## Useful resources
 

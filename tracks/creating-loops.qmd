@@ -103,10 +103,10 @@ Answer these, then check — your score suggests whether to dive in or skim the 
 
 ## Recommended readings
 
-From the AI readings library (ask the facilitator for access):
+Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings**, and online where linked:
 
-- **Loop Library: Repeatable AI Agent Workflows (Forward Future)** — patterns for reliable loops.
-- **The Coming Loop (Armin Ronacher)** — where looped automation is heading.
+- [**Loop Library: Repeatable AI Agent Workflows (Forward Future)**](https://signals.forwardfuture.ai/loop-library/) — patterns for reliable loops.
+- [**The Coming Loop (Armin Ronacher)**](https://lucumr.pocoo.org/2026/6/23/the-coming-loop/) — where looped automation is heading.
 
 ## Useful resources
 

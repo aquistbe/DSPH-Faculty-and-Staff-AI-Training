@@ -108,12 +108,12 @@ Answer these, then check — your score suggests whether to dive in or skim the 
 
 ## Recommended readings
 
-From the AI readings library (ask the facilitator for access):
+Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings**, and online where linked:
 
-- **Coding agents for data analysis** — using coding agents on real analysis tasks.
-- **Coding agents in the social sciences (Anthropic)** — directly relevant to research workflows.
-- **Judgment Is the Skill That Matters Most in the AI Era** — why reviewing AI code is the real skill.
-- **A Toolkit for Connecting R and Large Language Models (btw)** — calling LLMs from within R.
+- [**Coding agents for data analysis**](https://simonw.github.io/nicar-2026-coding-agents/) — using coding agents on real analysis tasks.
+- [**Coding agents in the social sciences (Anthropic)**](https://www.anthropic.com/research/coding-agents-social-sciences) — directly relevant to research workflows.
+- [**Judgment Is the Skill That Matters Most in the AI Era**](https://dev.jimgrey.net/2026/05/27/judgment-is-the-skill-that-matters-most-in-the-ai-era/) — why reviewing AI code is the real skill.
+- [**A Toolkit for Connecting R and Large Language Models (btw)**](https://posit-dev.github.io/btw/) — calling LLMs from within R.
 
 ## Useful resources
 

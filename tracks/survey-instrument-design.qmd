@@ -105,10 +105,10 @@ Answer these, then check — your score suggests whether to dive in or skim the 
 
 ## Recommended readings
 
-From the AI readings library (ask the facilitator for access):
+Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings**, and online where linked:
 
-- **AI and Survey Sampling Problems (Sharon Lohr)** — sampling and representativeness cautions.
-- **A Framework for Technical Writing in the Age of LLMs** — precision in wording.
+- [**AI and Survey Sampling Problems (Sharon Lohr)**](https://www.sharonlohr.com/blog/2026/6/10/ai-and-sampling-problems) — sampling and representativeness cautions.
+- [**A Framework for Technical Writing in the Age of LLMs**](https://thedataquarry.com/blog/a-framework-for-reading-and-writing/) — precision in wording.
 
 ## Useful resources
 

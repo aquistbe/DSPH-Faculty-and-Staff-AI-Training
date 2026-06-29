@@ -42,7 +42,8 @@ website:
       - icon: envelope
         href: mailto:daq26@drexel.edu
   page-footer:
-    center: "AI Workshops for DSPH | Dornsife School of Public Health | Drexel University"
+    left: "AI Workshops for DSPH | Dornsife School of Public Health | Drexel University"
+    right: "Developed with the assistance of Claude (Anthropic); reviewed and owned by the author. Built with Quarto."
     background: "#003366"
 
 format:

@@ -99,10 +99,10 @@ Answer these, then check — your score suggests whether to dive in or skim the 
 
 ## Recommended readings
 
-From the AI readings library (ask the facilitator for access):
+Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings**, and online where linked:
 
-- **A Practical Guide to Building Agents (OpenAI)** — a clear primer on agent design.
-- **How Agents Use Systems Differently (Davis Treybig)** — what changes when AI acts, not just answers.
+- [**A Practical Guide to Building Agents (OpenAI)**](https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf) — a clear primer on agent design.
+- [**How Agents Use Systems Differently (Davis Treybig)**](https://davistreybig.substack.com/p/how-agents-use-systems-differently) — what changes when AI acts, not just answers.
 
 ## Useful resources
 

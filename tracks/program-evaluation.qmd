@@ -105,10 +105,10 @@ Answer these, then check — your score suggests whether to dive in or skim the 
 
 ## Recommended readings
 
-From the AI readings library (ask the facilitator for access):
+Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings**, and online where linked:
 
-- **Beyond Vibes: How to Actually Evaluate AI Agents (Simon Wisdom)** — rigor in evaluation thinking (transferable).
-- **Making Classifier Evaluation Less Confusing** — clear thinking about metrics.
+- [**Beyond Vibes: How to Actually Evaluate AI Agents (Simon Wisdom)**](https://medium.com/data-analytics-at-nesta/how-to-evaluate-ai-agents-from-ground-truth-to-llm-as-judge-part-1-426de60f4710) — rigor in evaluation thinking (transferable).
+- [**Making Classifier Evaluation Less Confusing**](https://mindfulmodeler.substack.com/p/making-classifier-evaluation-less) — clear thinking about metrics.
 
 ## Useful resources
 

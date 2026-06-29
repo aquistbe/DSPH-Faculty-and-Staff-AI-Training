@@ -100,11 +100,11 @@ Answer these, then check — your score suggests whether to dive in or skim the 
 
 ## Recommended readings
 
-From the AI readings library (ask the facilitator for access):
+Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings**, and online where linked:
 
-- **Introducing Workspace Agents in ChatGPT (OpenAI)** — where shared, team-oriented AI features are heading.
-- **Interaction Models: A Scalable Approach to Human-AI Collaboration** — how to structure people-plus-AI work.
-- **CoPaper.AI — Your AI Research Co-Author** — AI as a collaborator on shared writing.
+- [**Introducing Workspace Agents in ChatGPT (OpenAI)**](https://openai.com/index/introducing-workspace-agents-in-chatgpt/) — where shared, team-oriented AI features are heading.
+- [**Interaction Models: A Scalable Approach to Human-AI Collaboration**](https://thinkingmachines.ai/blog/interaction-models/) — how to structure people-plus-AI work.
+- [**CoPaper.AI — Your AI Research Co-Author**](https://www.copaper.ai/landing) — AI as a collaborator on shared writing.
 
 ## Useful resources
 

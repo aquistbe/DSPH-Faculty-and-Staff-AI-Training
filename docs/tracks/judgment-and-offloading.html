@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>MCP &amp; Connecting AI to Data &amp; Tools – AI Workshops for DSPH</title>
+<title>Keeping Your Judgment: Cognitive Offloading &amp; When to Scrutinize AI – AI Workshops for DSPH</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -177,7 +177,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">MCP &amp; Connecting AI to Data &amp; Tools</h1>
+<h1 class="title">Keeping Your Judgment: Cognitive Offloading &amp; When to Scrutinize AI</h1>
 </div>
 
 
@@ -195,60 +195,75 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="topic-badges">
-<p><span class="level-badge level-advanced">Advanced</span> · <strong>Technical &amp; Agentic</strong> track · ~1 hour, self-paced</p>
+<p><span class="level-badge level-moderate">Moderate</span> · <strong>Governance, Ethics &amp; Equity</strong> track · ~1 hour, self-paced</p>
 </div>
-<p><a href="../tracks/technical-agentic.html" class="track-back">← Back to the Technical &amp; Agentic track</a></p>
-<p><em>Understand how assistants connect to real systems — and the access risks that come with it.</em></p>
+<p><a href="../tracks/governance-ethics.html" class="track-back">← Back to the Governance, Ethics &amp; Equity track</a></p>
+<p><em>Use AI to amplify your judgment, not replace it — and know where it needs closer scrutiny.</em></p>
 <section id="what-youll-be-able-to-do" class="level2">
 <h2 class="anchored" data-anchor-id="what-youll-be-able-to-do">What you’ll be able to do</h2>
 <ul>
-<li>Explain what MCP (Model Context Protocol) does</li>
-<li>Recognize when connecting AI to a tool helps vs.&nbsp;adds risk</li>
-<li>Apply least-privilege and approval before connecting to data</li>
+<li>Explain <strong>cognitive offloading</strong> and the risks of skill atrophy and automation bias</li>
+<li>Decide where AI needs <strong>close scrutiny</strong> versus where it’s low-stakes</li>
+<li>Build habits that use AI for productivity while keeping your judgment, taste, and voice sharp</li>
 </ul>
 </section>
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>The Model Context Protocol (MCP) is a standard way to connect an assistant to outside data sources and tools — a file store, a database, a calendar. It’s the plumbing behind agents that do more than chat. Powerful, and a new surface for mistakes and access risk.</p>
-<p>Connect with least privilege: give the narrowest access that does the job, prefer read-only, and confirm Drexel’s rules before connecting to any real or sensitive system.</p>
+<p>These tools are for <strong>productivity</strong> — getting past the blank page, drafting, summarizing, pressure-testing your thinking, accelerating the repetitive middle of a task. They are not a substitute for your expertise. The skill that matters most in the AI era is <strong>judgment</strong>: knowing what’s right, what’s worth questioning, and what only a human should decide. The rule from across this series holds — <em>AI drafts; you verify and decide.</em> Use it as a first draft and a thought partner, never the final word.</p>
+<p><strong>Cognitive offloading</strong> is handing your thinking to a tool. Some is healthy — we offload arithmetic to calculators. Too much erodes the very skill and judgment you need to <em>catch the tool’s mistakes</em>, and your voice drifts toward a generic sameness. The goal is <strong>calibrated reliance</strong>: lean on AI for low-stakes, reversible, checkable work, and keep your hands on the high-stakes, novel, and nuanced. Taste — knowing when an output is good, off, or subtly wrong — is something you keep by staying in the work, not by outsourcing all of it.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>A quick test for any task
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Before you hand something to AI, ask: <strong>Reversible?</strong> (could I undo a wrong result) · <strong>Verifiable?</strong> (can I check it) · <strong>Low-stakes?</strong> (no one’s care, rights, or resources ride on it). The more “no” answers, the more scrutiny it needs — or the more it should stay human.</p>
+</div>
+</div>
 </section>
 <section id="practice-activities" class="level2">
 <h2 class="anchored" data-anchor-id="practice-activities">Practice activities</h2>
-<details class="activity"><summary>Activity 1 · Advanced — Map a connection with least privilege</summary>
-<p><strong>Time</strong> ~15 min · <strong>Tools</strong> conceptual + the connector’s docs</p>
-<p><strong>Goal.</strong> Plan a safe AI-to-tool connection.</p>
-<p><strong>Setup.</strong> Pick a task that would need AI to reach a tool or data source (e.g., read a shared folder of public reports).</p>
+<details class="activity"><summary>Activity 1 · Moderate — Map where AI needs scrutiny</summary>
+<p><strong>Time</strong> ~18 min · <strong>Tools</strong> a doc or paper + ChatGPT Edu</p>
+<p><strong>Goal.</strong> Build a personal map of where to lean on AI and where to scrutinize it closely.</p>
+<p><strong>Setup.</strong> List 8–10 tasks you do regularly.</p>
 <p><strong>Steps.</strong></p>
 <ol type="1">
-<li><p>Write exactly what access the task needs — then the narrowest version that still works (read-only? one folder?).</p></li>
-<li><p>Get a second opinion:</p>
+<li><p>Rate each task 1–5 on three things: <strong>stakes</strong> (who’s harmed if it’s wrong), <strong>reversibility</strong> (can you undo it), and <strong>verifiability</strong> (can you check it easily).</p></li>
+<li><p>Sort them into two columns — <em>lean on AI</em> (low-stakes, reversible, checkable) vs.&nbsp;<em>keep human / scrutinize closely</em> (high-stakes, irreversible, hard to verify).</p></li>
+<li><p>Pressure-test your map:</p>
 <blockquote class="blockquote">
-<p>Here’s the task and the access I’m considering. What’s the least-privilege version, and what could go wrong if it’s over-scoped? [task]</p>
+<p>Here are my tasks and how I rated their stakes, reversibility, and verifiability. Which did I likely mis-rate, and which deserve closer human scrutiny than I gave them?</p>
 </blockquote></li>
-<li><p>Decide read-only vs.&nbsp;write, and what stays off-limits.</p></li>
+<li><p>Assign each task a scrutiny level: <em>skim, spot-check, verify everything,</em> or <em>don’t automate.</em></p></li>
 </ol>
-<p><strong>Expected result.</strong> A least-privilege access plan.</p>
-<p><strong>Check your work.</strong> Could a misbehaving connection do damage with this access? If so, narrow it.</p>
-<p><strong>Common pitfalls.</strong> Convenience tempts over-permissioning. Prefer read-only; confirm Drexel rules before connecting any real or sensitive system.</p>
-<p><strong>Stretch (optional).</strong> Decide whether the connection is even worth the risk versus a manual copy-paste.</p>
+<p><strong>Expected result.</strong> A personal task map with a scrutiny level for each.</p>
+<p><strong>Check your work.</strong> Would you defend your “lean on AI” calls if one went wrong in public?</p>
+<p><strong>Common pitfalls.</strong> The riskiest tasks often feel routine. High stakes + irreversible + hard to verify means scrutinize closely or keep it human.</p>
+<p><strong>Stretch (optional).</strong> Pick one “keep human” task and write <em>why</em> it needs your judgment specifically — that sentence is your taste, made explicit.</p>
 </details>
-<details class="activity"><summary>Activity 2 · Advanced — Risk-check the connection</summary>
-<p><strong>Time</strong> ~12 min · <strong>Tools</strong> conceptual</p>
-<p><strong>Goal.</strong> Put a human approval step before consequential actions.</p>
-<p><strong>Setup.</strong> Your plan from Activity 1.</p>
+<details class="activity"><summary>Activity 2 · Moderate — Do it yourself first, then compare</summary>
+<p><strong>Time</strong> ~15 min · <strong>Tools</strong> ChatGPT Edu</p>
+<p><strong>Goal.</strong> Use AI in a way that sharpens your skill instead of eroding it.</p>
+<p><strong>Setup.</strong> A task you’d normally hand straight to AI — a short analysis, a paragraph, a plan.</p>
 <p><strong>Steps.</strong></p>
 <ol type="1">
-<li><p>List what could go wrong if the connection misbehaves or the AI is misled by content it reads.</p></li>
-<li><p>Add a human-approval step before any write, send, or delete action.</p></li>
-<li><p>Find the worst case:</p>
+<li><p>Do a rough version <strong>yourself first</strong> (about 5 minutes, no AI).</p></li>
+<li><p>Then ask AI for its version of the same task.</p></li>
+<li><p>Compare honestly:</p>
 <blockquote class="blockquote">
-<p>Given this connection, what’s the single highest-risk action, and how do I gate it?</p>
+<p>Here’s my draft and your draft. What did you do better, what did I do better, and what did I catch that you missed?</p>
 </blockquote></li>
+<li><p>Build the final from the best of both, and note what you learned.</p></li>
 </ol>
-<p><strong>Expected result.</strong> A risk list plus an approval gate on the riskiest action.</p>
-<p><strong>Check your work.</strong> Is there any path where the AI acts irreversibly without a human? Close it.</p>
-<p><strong>Common pitfalls.</strong> Connected agents can be misled by malicious content (prompt injection) — keep humans on consequential steps.</p>
-<p><strong>Stretch (optional).</strong> Note which actions you’d never connect to AI at all.</p>
+<p><strong>Expected result.</strong> A stronger final product plus a note on what you’d have missed by offloading entirely.</p>
+<p><strong>Check your work.</strong> Did doing it yourself first surface something the AI got wrong, generic, or bland?</p>
+<p><strong>Common pitfalls.</strong> Always starting from AI’s draft anchors you to its framing and quietly erodes your skill and voice. Do the thinking first, at least sometimes.</p>
+<p><strong>Stretch (optional).</strong> Name one skill you don’t want to lose and protect it — keep doing that one unaided on a regular basis.</p>
 </details>
 </section>
 <section id="check-your-readiness" class="level2">
@@ -256,7 +271,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Answer these, then check — your score suggests whether to dive in or skim the readings first.</p>
 <div class="readiness-quiz">
 <script type="application/json" class="quiz-data">
-{"questions": [{"q": "MCP is, in plain terms…", "options": ["A standard way to connect AI to data and tools", "A chatbot", "A statistic", "A file format"], "answer": 0, "explain": "It's the connection layer for agents."}, {"q": "The right access posture is…", "options": ["Least privilege — narrowest access, prefer read-only", "Full admin", "Whatever's easiest", "No limits"], "answer": 0, "explain": "Minimize the blast radius."}, {"q": "Before connecting AI to a real system you should…", "options": ["Confirm Drexel's data rules and approvals", "Just connect it", "Disable logging", "Share credentials"], "answer": 0, "explain": "Approval and data classification come first."}]}
+{"questions":[{"q":"Cognitive offloading becomes a problem when…","options":["It erodes the skill and judgment you need to catch AI's mistakes","You use a calculator","You ever use AI at all","Never — offloading is always fine"],"answer":0,"explain":"A little offloading is healthy; too much erodes the judgment you need to oversee the tool."},{"q":"Where should AI get the closest human scrutiny?","options":["High-stakes, irreversible, hard-to-verify tasks","Low-stakes formatting","Spell-check","It never needs scrutiny"],"answer":0,"explain":"Scrutiny should scale with stakes, irreversibility, and how hard the work is to verify."},{"q":"The best framing for AI in this series is…","options":["A productivity tool and thought partner, with you keeping the judgment","A replacement for your expertise","The final word on decisions","An autonomous decider"],"answer":0,"explain":"AI drafts and accelerates; you keep the judgment, taste, and accountability."}]}
 </script>
 </div>
 </section>
@@ -264,15 +279,19 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="recommended-readings">Recommended readings</h2>
 <p>Available in the shared OneDrive folder <strong>Staff Faculty AI Workshop → Readings</strong>, and online where linked:</p>
 <ul>
-<li><a href="https://davistreybig.substack.com/p/how-agents-use-systems-differently"><strong>How Agents Use Systems Differently (Davis Treybig)</strong></a> — what changes when AI connects to systems.</li>
-<li><a href="https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf"><strong>A Practical Guide to Building Agents (OpenAI)</strong></a> — tools and connections in agent design.</li>
+<li><a href="https://ruben.substack.com/p/how-to-rot-your-brain-with-ai"><strong>How to Outsource Everything to AI and Get Dumb</strong></a> — the cognitive-offloading risk, bluntly put.</li>
+<li><a href="https://dev.jimgrey.net/2026/05/27/judgment-is-the-skill-that-matters-most-in-the-ai-era/"><strong>Judgment Is the Skill That Matters Most in the AI Era</strong></a> — why your judgment is the real differentiator.</li>
+<li><a href="https://aitransformer.online/data-science-human-skills-ai-cant-touch/"><strong>Mastering the Data Science Human Skills AI Can’t Touch</strong></a> — the human skills worth keeping sharp.</li>
+<li><a href="https://sahajgarg.github.io/blog/cognitive-labor/"><strong>The Displacement of Cognitive Labor and What Comes After</strong></a> — the bigger picture on what we hand off.</li>
 </ul>
 </section>
 <section id="useful-resources" class="level2">
 <h2 class="anchored" data-anchor-id="useful-resources">Useful resources</h2>
 <ul>
-<li><a href="https://modelcontextprotocol.io">Model Context Protocol</a> — the open MCP standard.</li>
-<li><a href="https://drexel.edu/provost/ai/tools">ChatGPT Edu (Drexel AI Tools)</a> — the approved tool, with data rules.</li>
+<li><a href="../workshop2.html">Workshop 2 — Workflow Enhancement</a> — the “don’t over-rely” segment this builds on.</li>
+<li><a href="../workshop5.html">Workshop 5 — Getting Started with Agentic AI</a> — automation bias and oversight.</li>
+<li><a href="../tracks/verifying-output.html">Verifying AI Output</a> — the hands-on companion habit.</li>
+<li><a href="https://drexel.edu/provost/ai/tools">Drexel AI Tools</a> — approved tools and data rules.</li>
 </ul>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -284,7 +303,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Connect with <strong>least privilege</strong>; get approval before any connection to real or sensitive data. See <a href="../tools.html">Tools &amp; Access</a> and Drexel’s <a href="https://drexel.edu/provost/ai/tools">AI Tools page</a>.</p>
+<p>No sensitive data is needed for this topic — it’s about <em>how</em> you work with AI. Keep the data rules from the rest of the series in place whenever real data is involved. See <a href="../tools.html">Tools &amp; Access</a>.</p>
 </div>
 </div>
 

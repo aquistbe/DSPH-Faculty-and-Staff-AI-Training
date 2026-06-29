@@ -101,10 +101,10 @@ Answer these, then check — your score suggests whether to dive in or skim the 
 
 ## Recommended readings
 
-From the AI readings library (ask the facilitator for access):
+Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings**, and online where linked:
 
-- **These New Tools Could Make AI Vision Systems Less Biased (MIT Tech Review)** — measuring and reducing bias.
-- **AI and Survey Sampling Problems (Sharon Lohr)** — representativeness and who gets left out.
+- [**These New Tools Could Make AI Vision Systems Less Biased (MIT Tech Review)**](https://www.technologyreview.com/2023/09/25/1080191/these-new-tools-could-make-ai-vision-systems-less-biased/) — measuring and reducing bias.
+- [**AI and Survey Sampling Problems (Sharon Lohr)**](https://www.sharonlohr.com/blog/2026/6/10/ai-and-sampling-problems) — representativeness and who gets left out.
 
 ## Useful resources
 
