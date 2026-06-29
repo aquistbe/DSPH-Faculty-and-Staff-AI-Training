@@ -5,6 +5,7 @@ project:
     - "*.qmd"
   resources:
     - robots.txt
+    - slides/
 
 website:
   title: "AI Workshops for DSPH"

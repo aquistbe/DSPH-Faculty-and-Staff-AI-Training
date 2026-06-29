@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Workshop 2 — Workflow Enhancement — AI Workshops for DSPH</title>
+<style>
+:root{
+ --navy:#07294D; --navy2:#1C2530; --gold:#FFC600; --teal:#006699; --crimson:#971B2F;
+ --slate:#1C2530; --gray:#5A6571; --line:#D0D3D4; --off:#F5F6F7;
+ --sans:"Futura","Century Gothic","Trebuchet MS","Avenir Next",Segoe UI,sans-serif;
+ --serif:Georgia,"Times New Roman",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:#11151c;font-family:var(--sans)}
+#stagewrap{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;overflow:hidden}
+#stage{width:1280px;height:720px;position:relative;transform-origin:center center;background:#fff;
+  box-shadow:0 10px 50px rgba(0,0,0,.5)}
+.slide{position:absolute;inset:0;display:none;padding:64px 72px;background:#fff}
+.slide.active{display:block}
+.serif{font-family:var(--serif)}
+.eyebrow{font-size:14px;font-weight:700;letter-spacing:3px;text-transform:uppercase}
+.eyebrow.gold{color:var(--gold)} .eyebrow.teal{color:var(--teal)}
+.rule{width:54px;height:5px;background:var(--gold);margin:14px 0 0}
+.head{color:var(--navy);font-size:46px;line-height:1.05;font-weight:700;margin-top:6px}
+.footer{position:absolute;left:72px;right:72px;bottom:34px;border-top:1px solid var(--line);
+  padding-top:12px;display:flex;justify-content:space-between;font-size:13px}
+.footer .f-left{color:var(--navy);font-weight:700} .footer .f-right{color:var(--gray)}
+/* content */
+.s-content .eyebrow{margin-bottom:4px}
+.lead{color:var(--slate);font-size:23px;line-height:1.5;margin:34px 0 22px;max-width:1040px}
+.bullets{list-style:none;margin-left:2px} .bullets li{position:relative;color:var(--slate);
+  font-size:20px;line-height:1.5;padding-left:24px;margin-bottom:12px;max-width:1040px}
+.bullets li:before{content:"";position:absolute;left:4px;top:11px;width:7px;height:7px;border-radius:50%;background:var(--teal)}
+/* agenda */
+.agenda{list-style:none;margin-top:54px} .agenda li{display:flex;align-items:center;gap:20px;margin-bottom:22px}
+.agenda .num{flex:0 0 auto;width:34px;height:34px;border-radius:50%;background:var(--gold);color:var(--navy);
+  font-weight:700;font-size:17px;display:flex;align-items:center;justify-content:center}
+.agenda .atext{color:var(--slate);font-size:22px}
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:40px}
+.card{background:#fff;border:1px solid var(--line);border-top:5px solid var(--navy);border-radius:3px;padding:26px 24px;min-height:280px}
+.card h3{color:var(--navy);font-size:25px;margin-bottom:12px} .card p{color:var(--gray);font-size:18px;line-height:1.5}
+/* comparison */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:40px}
+.col{border:1px solid var(--line);border-radius:3px;overflow:hidden}
+.col-head{color:#fff;font-family:var(--serif);font-weight:700;font-size:24px;padding:14px 22px}
+.col-head.crimson{background:var(--crimson)} .col-head.teal-bg{background:var(--teal)}
+.col .bullets{padding:22px 24px 26px} .col .bullets li{font-size:19px}
+/* title + closing (navy) */
+.s-title,.s-closing{background:var(--navy);color:#fff;padding:60px 72px}
+.brandcard{position:absolute;top:60px;left:72px;background:#fff;border-radius:8px;padding:14px 22px;
+  display:flex;flex-direction:column;line-height:1.25}
+.bc-1{color:var(--navy);font-family:var(--serif);font-weight:700;font-size:20px}
+.bc-2{color:var(--teal);font-weight:700;font-size:15px}
+.t-dept{position:absolute;top:64px;right:72px;text-align:right;color:#9FB3CC;font-size:15px;line-height:1.4}
+.t-body{position:absolute;left:72px;top:300px;right:72px}
+.s-title h1,.s-closing h1{font-size:74px;line-height:1.02;font-weight:700;color:#fff;margin-top:6px}
+.t-sub{color:#C7D2DF;font-size:22px;margin-top:26px;max-width:980px}
+.t-foot{position:absolute;left:72px;right:72px;bottom:54px;display:flex;justify-content:space-between;align-items:flex-end}
+.t-pres{display:flex;flex-direction:column}
+.pres-name{color:#fff;font-weight:700;font-size:19px} .pres-role{color:#9FB3CC;font-size:16px;margin-top:3px}
+.t-event{color:#9FB3CC;font-size:16px}
+/* section divider */
+.s-section{background:var(--navy);color:#fff;padding:0}
+.sec-inner{position:absolute;top:50%;transform:translateY(-50%);left:0;right:0;padding:0 72px}
+.s-section h2{font-size:62px;color:#fff;font-weight:700;line-height:1.04;margin-top:8px}
+.s-section .rule{margin-top:18px}
+.sec-desc{color:#C7D2DF;font-size:23px;line-height:1.45;margin-top:26px;max-width:920px}
+/* quote */
+.s-quote{background:var(--off);padding:0}
+.q-inner{position:absolute;left:120px;right:120px;top:50%;transform:translateY(-50%)}
+.q-mark{font-size:120px;color:var(--gold);line-height:.6;height:60px}
+.s-quote blockquote{color:var(--navy);font-size:46px;line-height:1.22;font-weight:700;margin:18px 0 30px;max-width:1000px}
+.q-attr{display:flex;flex-direction:column;border-left:4px solid var(--gold);padding-left:18px}
+.q-name{color:var(--navy);font-weight:700;font-size:20px} .q-role{color:var(--gray);font-size:17px;margin-top:3px}
+/* chrome */
+#bar{position:fixed;left:0;right:0;bottom:0;height:5px;background:rgba(255,255,255,.12);z-index:20}
+#barfill{height:100%;background:var(--gold);width:0;transition:width .2s}
+#hud{position:fixed;bottom:16px;right:20px;color:#cdd6e4;font:13px var(--sans);z-index:20;
+  background:rgba(0,0,0,.35);padding:6px 12px;border-radius:20px}
+.nav{position:fixed;top:0;bottom:0;width:14%;z-index:15;cursor:pointer}
+#prev{left:0} #next{right:0}
+#hint{position:fixed;top:16px;left:50%;transform:translateX(-50%);color:#9aa6bb;font:12px var(--sans);
+  z-index:20;letter-spacing:.5px;opacity:.85}
+</style></head>
+<body>
+<div id="hint">← → or click edges to navigate · F for fullscreen</div>
+<div id="stagewrap"><div id="stage">
+<section class="slide s-title">
+  <div class="brandcard"><span class="bc-1">Drexel University</span><span class="bc-2">Dornsife School of Public Health</span></div>
+  <div class="t-dept">Department of Environmental<br>&amp; Occupational Health</div>
+  <div class="t-body">
+    <div class="eyebrow gold">AI WORKSHOPS FOR DSPH</div>
+    <h1 class="serif">Workflow Enhancement</h1>
+    <div class="rule"></div>
+    <p class="t-sub">Use ChatGPT Edu, Copilot Chat, and Microsoft 365 Copilot to speed up the work you already do</p>
+  </div>
+  <div class="t-foot">
+    <div class="t-pres"><span class="pres-name">Alex Quistberg, PhD, MPH</span><span class="pres-role">Associate Research Professor · Department of Environmental &amp; Occupational Health</span></div>
+    <div class="t-event">Workshop 2 · July 7, 2026</div>
+  </div>
+</section>
+<section class="slide s-content">
+  <div class="eyebrow teal">WHAT YOU&#x27;LL LEAVE WITH</div>
+  <h2 class="serif head">Agenda &amp; Objectives</h2><div class="rule"></div>
+  <ol class="agenda"><li><span class="num">1</span><span class="atext">Spot which recurring tasks are good candidates for AI.</span></li><li><span class="num">2</span><span class="atext">Use Microsoft 365 Copilot in Word, Outlook, and Excel.</span></li><li><span class="num">3</span><span class="atext">Use ChatGPT Edu and Copilot Chat to work faster.</span></li><li><span class="num">4</span><span class="atext">Build a small prompt recipe you can reuse.</span></li><li><span class="num">5</span><span class="atext">Verify, disclose, and avoid over-reliance on AI.</span></li></ol>
+  <div class="footer"><span class="f-left">Environmental &amp; Occupational Health</span><span class="f-right">Dornsife School of Public Health</span></div>
+</section>
+<section class="slide s-section">
+  <div class="sec-inner">
+    <div class="eyebrow gold">SECTION 01</div>
+    <h2 class="serif">Where AI Fits</h2>
+    <div class="rule"></div>
+    <p class="sec-desc">The biggest time savings come from the repetitive middle of a task.</p>
+  </div>
+</section>
+<section class="slide s-content">
+  <div class="eyebrow teal">WHICH TOOL, WHEN</div>
+  <h2 class="serif head">Three Tools, Three Jobs</h2><div class="rule"></div>
+  <div class="cards"><div class="card" style="border-top-color:var(--navy)"><h3 class="serif">Microsoft 365 Copilot</h3><p>Best when the work is already in a Microsoft file — a Word doc to rewrite, an Outlook thread to summarize, an Excel sheet to analyze.</p></div><div class="card" style="border-top-color:var(--teal)"><h3 class="serif">Copilot Chat (EDP)</h3><p>Useful for protected web-based drafting, summarizing, and brainstorming when you don’t need a reusable GPT.</p></div><div class="card" style="border-top-color:var(--gold)"><h3 class="serif">ChatGPT Edu</h3><p>Best for open-ended drafting, summarizing pasted text, file analysis, and reusable assistants. Use GPT-5.5 when available.</p></div></div>
+  <div class="footer"><span class="f-left">Environmental &amp; Occupational Health</span><span class="f-right">Dornsife School of Public Health</span></div>
+</section>
+<section class="slide s-content">
+  <div class="eyebrow teal">FIND YOUR CANDIDATES</div>
+  <h2 class="serif head">What Makes a Good AI Task</h2><div class="rule"></div>
+  <p class="lead">AI handles the first draft, the summary, the reformat, the “make this clearer.” You bring the judgment and the final word.</p>
+  <ul class="bullets"><li>Text-heavy — the work is mostly writing or reading.</li><li>Repeated — something you do over and over.</li><li>Low-stakes enough that a draft-plus-review is fine: status updates, recaps, first drafts.</li></ul>
+  <div class="footer"><span class="f-left">Environmental &amp; Occupational Health</span><span class="f-right">Dornsife School of Public Health</span></div>
+</section>
+<section class="slide s-section">
+  <div class="sec-inner">
+    <div class="eyebrow gold">SECTION 02</div>
+    <h2 class="serif">Ethics &amp; Governance</h2>
+    <div class="rule"></div>
+    <p class="sec-desc">Verification, disclosure, and over-reliance — what accountability means in daily work.</p>
+  </div>
+</section>
+<section class="slide s-content">
+  <div class="eyebrow teal">WORKFLOW ETHICS</div>
+  <h2 class="serif head">Three Habits That Keep You Safe</h2><div class="rule"></div>
+  <div class="cards"><div class="card" style="border-top-color:var(--navy)"><h3 class="serif">Verify Before It Counts</h3><p>AI can fabricate facts, stats, and citations. Check anything going into a real document or decision against the source.</p></div><div class="card" style="border-top-color:var(--teal)"><h3 class="serif">Disclose Appropriately</h3><p>Where AI informs a real decision or document, note that it was used and verify what matters.</p></div><div class="card" style="border-top-color:var(--gold)"><h3 class="serif">Avoid Over-Reliance</h3><p>Speed is the selling point and the trap. Keep your own judgment in the loop; don’t outsource the thinking.</p></div></div>
+  <div class="footer"><span class="f-left">Environmental &amp; Occupational Health</span><span class="f-right">Dornsife School of Public Health</span></div>
+</section>
+<section class="slide s-quote">
+  <div class="q-inner">
+    <div class="q-mark serif">&ldquo;</div>
+    <blockquote class="serif">If you can’t open it, you can’t cite it.</blockquote>
+    <div class="q-attr"><span class="q-name">A rule worth keeping</span><span class="q-role">Treat every AI-supplied figure as unverified until you’ve confirmed it</span></div>
+  </div>
+</section>
+<section class="slide s-section">
+  <div class="sec-inner">
+    <div class="eyebrow gold">SECTION 03</div>
+    <h2 class="serif">Hands-On</h2>
+    <div class="rule"></div>
+    <p class="sec-desc">Use Copilot where your work lives, then run one real task in ChatGPT Edu.</p>
+  </div>
+</section>
+<section class="slide s-content">
+  <div class="eyebrow teal">ACTIVITY 1 · ~19 MIN</div>
+  <h2 class="serif head">Microsoft 365 Copilot in Office</h2><div class="rule"></div>
+  <div class="cards"><div class="card" style="border-top-color:var(--navy)"><h3 class="serif">Track A — Word</h3><p>Summarize a document into key points, rewrite a paragraph for a specific audience, and draft a new section from one line.</p></div><div class="card" style="border-top-color:var(--teal)"><h3 class="serif">Track B — Outlook</h3><p>Summarize a long thread and list decisions and action items, then draft a reply in a tone you specify.</p></div><div class="card" style="border-top-color:var(--gold)"><h3 class="serif">Track C — Excel</h3><p>Summarize what’s in the data, ask for a formula in plain language, and surface a trend or suggested chart.</p></div></div>
+  <div class="footer"><span class="f-left">Environmental &amp; Occupational Health</span><span class="f-right">Dornsife School of Public Health</span></div>
+</section>
+<section class="slide s-content">
+  <div class="eyebrow teal">ACTIVITY 2 · ~13 MIN</div>
+  <h2 class="serif head">ChatGPT Edu for Your Real Task</h2><div class="rule"></div>
+  <p class="lead">Run one task you actually need this week, start to finish. Write a PTCF prompt, iterate 2–3 rounds, then do the final edit yourself.</p>
+  <ul class="bullets"><li>Summarize-then-act — “Summarize this, then draft a 3-sentence email about what the team needs to do.”</li><li>Make-it-a-table — for options, pros and cons, or a schedule, add “Put this in a table.”</li><li>Build a reusable recipe — strip the specifics, leave placeholders, and save what worked.</li></ul>
+  <div class="footer"><span class="f-left">Environmental &amp; Occupational Health</span><span class="f-right">Dornsife School of Public Health</span></div>
+</section>
+<section class="slide s-content">
+  <div class="eyebrow teal">WRAP-UP</div>
+  <h2 class="serif head">What to Take Away</h2><div class="rule"></div>
+  <p class="lead">Microsoft 365 Copilot for work inside Office files; Copilot Chat for protected web chat; ChatGPT Edu for open drafting and reusable assistants.</p>
+  <ul class="bullets"><li>The win is the first draft and the summary — you keep the judgment.</li><li>Save the prompts that work as reusable recipes.</li><li>Before Workshop 3: save two prompt recipes you’d actually reuse.</li></ul>
+  <div class="footer"><span class="f-left">Environmental &amp; Occupational Health</span><span class="f-right">Dornsife School of Public Health</span></div>
+</section>
+<section class="slide s-closing">
+  <div class="brandcard"><span class="bc-1">Drexel University</span><span class="bc-2">Dornsife School of Public Health</span></div>
+  <div class="t-body">
+    <div class="eyebrow gold">THANK YOU</div>
+    <h1 class="serif">Questions &amp; Discussion</h1>
+    <div class="rule"></div>
+    <p class="t-sub">Next: Workshop 3 — Collaboration on Projects. Shared Projects, custom GPTs, and a team prompt library.</p>
+  </div>
+  <div class="t-foot">
+    <div class="t-pres"><span class="pres-name">Alex Quistberg, PhD, MPH</span><span class="pres-role">daq26@drexel.edu</span></div>
+    <div class="t-event">Department of Environmental &amp; Occupational Health</div>
+  </div>
+</section>
+</div></div>
+<div id="prev" class="nav"></div><div id="next" class="nav"></div>
+<div id="bar"><div id="barfill"></div></div>
+<div id="hud"></div>
+<script>
+const slides=[...document.querySelectorAll('.slide')];let i=0;
+function fit(){const s=document.getElementById('stage');
+ const k=Math.min(innerWidth/1280,innerHeight/720);s.style.transform='scale('+k+')';}
+function show(n){i=Math.max(0,Math.min(slides.length-1,n));
+ slides.forEach((s,x)=>s.classList.toggle('active',x===i));
+ document.getElementById('barfill').style.width=((i+1)/slides.length*100)+'%';
+ document.getElementById('hud').textContent=(i+1)+' / '+slides.length;
+ location.hash=i+1;}
+function nx(){show(i+1)}function pv(){show(i-1)}
+addEventListener('keydown',e=>{
+ if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();nx();}
+ else if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();pv();}
+ else if(e.key==='Home')show(0);else if(e.key==='End')show(slides.length-1);
+ else if(e.key==='f'){if(!document.fullscreenElement)document.documentElement.requestFullscreen();else document.exitFullscreen();}});
+addEventListener('resize',fit);
+document.getElementById('next').onclick=nx;document.getElementById('prev').onclick=pv;
+const h=parseInt(location.hash.slice(1));fit();show(h?h-1:0);
+setTimeout(()=>{const el=document.getElementById('hint');if(el)el.style.display='none';},4000);
+</script>
+</body></html>

@@ -438,3 +438,7 @@ code {
     color: black !important;
   }
 }
+
+/* Slides call-to-action buttons (workshop decks) */
+.slides-cta { display: flex; flex-wrap: wrap; gap: .6rem; margin: 1.2rem 0 1.6rem; }
+.slides-cta .btn { font-weight: 600; }

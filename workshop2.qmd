@@ -12,6 +12,11 @@ Tuesday, July 7, 2026 | 1:00--2:00 PM | Bring a laptop and a real (non-sensitive
 :::
 :::
 
+::: {.slides-cta}
+[📊 Open the slides ↗](slides/workshop2.html){.btn .btn-primary target="_blank" role="button"}
+[⬇ Editable PowerPoint](slides/DSPH_Workshop2_Workflow_Enhancement.pptx){.btn .btn-outline-primary role="button"}
+:::
+
 ## What You'll Leave With
 
 By the end of this hour, you will be able to:

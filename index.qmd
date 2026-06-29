@@ -89,13 +89,13 @@ Research staff who do statistical coding and analysis: we will run **specialized
 
 ## Schedule {#schedule}
 
-| Workshop | Topic | Date | Time | Location |
-|----------|-------|------|------|----------|
-| 1 | Foundations & Capabilities | Monday, June 29, 2026 | 1:00--2:00 PM | TBD |
-| 2 | Workflow Enhancement | Tuesday, July 7, 2026 | 1:00--2:00 PM | TBD |
-| 3 | Collaboration on Projects | Tuesday, July 14, 2026 | 1:00--2:00 PM | TBD |
-| 4 | Documents & Visuals (Adobe) | Fall 2026 --- TBD | 1:00--2:00 PM | TBD |
-| 5 | Getting Started with Agentic AI | Fall 2026 --- TBD | 1:00--2:00 PM | TBD |
+| Workshop | Topic | Date | Time | Location | Slides |
+|----------|-------|------|------|----------|--------|
+| 1 | Foundations & Capabilities | Monday, June 29, 2026 | 1:00--2:00 PM | TBD | [Open ↗](slides/workshop1.html){target="_blank"} · [PPTX](slides/DSPH_Workshop1_Foundations_and_Capabilities.pptx) |
+| 2 | Workflow Enhancement | Tuesday, July 7, 2026 | 1:00--2:00 PM | TBD | [Open ↗](slides/workshop2.html){target="_blank"} · [PPTX](slides/DSPH_Workshop2_Workflow_Enhancement.pptx) |
+| 3 | Collaboration on Projects | Tuesday, July 14, 2026 | 1:00--2:00 PM | TBD | [Open ↗](slides/workshop3.html){target="_blank"} · [PPTX](slides/DSPH_Workshop3_Collaboration_on_Projects.pptx) |
+| 4 | Documents & Visuals (Adobe) | Fall 2026 --- TBD | 1:00--2:00 PM | TBD | --- |
+| 5 | Getting Started with Agentic AI | Fall 2026 --- TBD | 1:00--2:00 PM | TBD | --- |
 
 ## Before You Come {.checklist}
 
