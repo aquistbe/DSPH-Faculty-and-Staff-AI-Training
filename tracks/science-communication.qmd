@@ -1,0 +1,69 @@
+---
+title: "Science Communication & Plain-Language Translation"
+---
+
+::: {.topic-badges}
+[Novice]{.level-badge .level-novice} · **Communication & Dissemination** track · ~1 hour, self-paced
+:::
+
+[← Back to the Communication & Dissemination track](communication.qmd){.track-back}
+
+*Turn dense findings into clear public-facing materials, at a reading level your audience can use.*
+
+## What you'll be able to do
+
+- Translate technical findings into plain language for a specific audience
+- Control reading level, tone, and format for fact sheets, briefs, and social posts
+- Check that simplification didn't distort the science
+
+## Overview
+
+AI is fast at turning a result into a brief, a fact sheet, or a social post — and at adjusting reading level on request. You decide the audience and confirm the simplified version is still accurate.
+
+Plain language is an equity tool: clearer materials reach more people. But oversimplification can mislead, so you check that nothing important was lost or overstated.
+
+## Practice activities
+
+::: {.callout-note collapse="true"}
+## Activity 1 · Novice — One finding, three audiences
+
+1. Take one finding from your work (public/non-sensitive).
+2. Ask AI to write it three ways: for **community members (8th-grade level)**, for **policymakers**, and as a **social post**.
+3. Check each for accuracy — did any version overstate the result?
+:::
+
+::: {.callout-note collapse="true"}
+## Activity 2 · Novice — Set a reading level
+
+1. Paste a paragraph of your writing and ask AI to rewrite it at a **6th–8th grade** reading level.
+2. Ask what it changed and why.
+3. Confirm the meaning is intact, then keep the version that fits your audience.
+:::
+
+## Check your readiness
+
+Answer these, then check — your score suggests whether to dive in or skim the readings first.
+
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions": [{"q": "Plain-language rewriting is mainly an issue of…", "options": ["Equity — reaching more people", "Saving space", "Looking modern", "Avoiding citations"], "answer": 0, "explain": "Clearer materials are more accessible; that's the public-health value."}, {"q": "After AI simplifies a finding, you should check that…", "options": ["Nothing important was lost or overstated", "The font is larger", "It's shorter", "It uses synonyms"], "answer": 0, "explain": "Simplification can distort meaning — verify accuracy."}, {"q": "Which content is safe to use here?", "options": ["Public or non-sensitive findings", "Identifiable patient stories", "Unpublished embargoed results", "A private roster"], "answer": 0, "explain": "Keep practice and published material non-sensitive."}]}
+</script>
+</div>
+
+## Recommended readings
+
+From the AI readings library (ask the facilitator for access):
+
+- **Watch Your Tone: Language Machines as Writing Technology** — how AI shapes voice and clarity in writing.
+- **A Framework for Technical Writing in the Age of LLMs (The Data Quarry)** — keeping accuracy while writing faster.
+
+## Useful resources
+
+- [plainlanguage.gov](https://www.plainlanguage.gov) — federal plain-language guidelines.
+- [CDC Health Literacy](https://www.cdc.gov/healthliteracy/) — clear-communication guidance for health audiences.
+- [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with data rules.
+
+::: {.callout-warning}
+## Data rules
+Use **public or non-sensitive** findings; never include identifiable patient details. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+:::

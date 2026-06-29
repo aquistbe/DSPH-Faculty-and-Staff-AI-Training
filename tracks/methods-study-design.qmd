@@ -1,0 +1,31 @@
+---
+title: "Methods & Study Design Track"
+---
+
+::: {.topic-badges}
+Self-paced track · 4 topics · moderate → advanced
+:::
+
+[← All self-paced tracks](../tracks.qmd){.track-back}
+
+AI support for the research methods public-health staff use most — designing instruments, evaluating programs, working with geospatial data, and protecting participants through de-identification and synthetic data. Start from **[Workshop 1](../workshop1.qmd)**; keep data rules central, since this track touches real study data.
+
+## Difficulty levels
+
+[Novice]{.level-badge .level-novice} &nbsp; getting started — no prior experience needed.
+[Moderate]{.level-badge .level-moderate} &nbsp; comfortable with some AI use.
+[Advanced]{.level-badge .level-advanced} &nbsp; experienced users going deep.
+
+## Topics
+
+| # | Topic | Level | You'll be able to… |
+|---|-------|-------|--------------------|
+| 1 | [Survey & Instrument Design](survey-instrument-design.qmd) | [Moderate]{.level-badge .level-moderate} | Draft items and scales, then pressure-test them |
+| 2 | [Program Evaluation](program-evaluation.qmd) | [Moderate]{.level-badge .level-moderate} | Logic models, indicators, and evaluation plans, drafted with AI |
+| 3 | [De-identification & Synthetic Data](de-identification-synthetic-data.qmd) | [Moderate]{.level-badge .level-moderate} | Make data safe to share or teach with — and know the limits |
+| 4 | [Geospatial / GIS & Built Environment](geospatial-gis.qmd) | [Advanced]{.level-badge .level-advanced} | Mapping, spatial joins, and imagery for environmental health |
+
+::: {.callout-warning}
+## Data rules apply throughout
+Use **public or non-sensitive** data for every activity, and match any tool to Drexel's data classification. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+:::

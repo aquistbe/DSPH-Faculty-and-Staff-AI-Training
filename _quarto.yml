@@ -3,6 +3,7 @@ project:
   output-dir: docs
   render:
     - "*.qmd"
+    - "tracks/*.qmd"
   resources:
     - robots.txt
     - slides/
@@ -16,16 +17,22 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: workshop1.qmd
-        text: "Workshop 1"
-      - href: workshop2.qmd
-        text: "Workshop 2"
-      - href: workshop3.qmd
-        text: "Workshop 3"
-      - href: workshop4.qmd
-        text: "Workshop 4"
-      - href: workshop5.qmd
-        text: "Workshop 5"
+      - text: "Workshops"
+        menu:
+          - href: workshop1.qmd
+            text: "1 · Foundations & Capabilities"
+          - href: workshop2.qmd
+            text: "2 · Workflow Enhancement"
+          - href: workshop3.qmd
+            text: "3 · Collaboration on Projects"
+          - href: workshop4.qmd
+            text: "4 · Documents & Visuals (Adobe)"
+          - href: workshop5.qmd
+            text: "5 · Getting Started with Agentic AI"
+          - href: workshop6.qmd
+            text: "6 · AI for Curriculum Development"
+      - href: tracks.qmd
+        text: "Self-Paced Tracks"
       - href: tools.qmd
         text: "Tools & Access"
       - href: resources.qmd
@@ -47,4 +54,5 @@ format:
     include-in-header:
       text: |
         <meta name="robots" content="noindex, nofollow">
+    include-after-body: _tracks-quiz.html
 

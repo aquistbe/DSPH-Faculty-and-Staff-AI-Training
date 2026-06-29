@@ -1,0 +1,34 @@
+---
+title: "Technical & Agentic Track"
+---
+
+::: {.topic-badges}
+Self-paced track · 7 topics · moderate → advanced
+:::
+
+[← All self-paced tracks](../tracks.qmd){.track-back}
+
+Go beyond chat: package reusable instructions, run multi-step and looped tasks, and build assistants that connect to your files and tools. Start from **[Workshop 5](../workshop5.qmd)** (agentic basics) and keep **Workshop 1**'s data rules in view. The throughline: more autonomy for the tool means more deliberate oversight from you.
+
+## Difficulty levels
+
+[Novice]{.level-badge .level-novice} &nbsp; getting started — no prior experience needed.
+[Moderate]{.level-badge .level-moderate} &nbsp; comfortable with some AI use.
+[Advanced]{.level-badge .level-advanced} &nbsp; experienced users going deep.
+
+## Topics
+
+| # | Topic | Level | You'll be able to… |
+|---|-------|-------|--------------------|
+| 1 | [Creating & Using Skills](creating-skills.qmd) | [Moderate]{.level-badge .level-moderate} | Package a repeated task once and reuse or share it |
+| 2 | [Context Engineering](context-engineering.qmd) | [Moderate]{.level-badge .level-moderate} | Give a model the right context so it stays on task |
+| 3 | [Building AI Agents with Natural Language](building-agents.qmd) | [Moderate]{.level-badge .level-moderate} | Assemble an assistant from instructions and tools — no coding |
+| 4 | [Creating & Using Loops](creating-loops.qmd) | [Advanced]{.level-badge .level-advanced} | Repeat a task across many items, reviewing each pass |
+| 5 | [Local Models via Ollama](local-models-ollama.qmd) | [Advanced]{.level-badge .level-advanced} | Run open models on your own machine for privacy and cost |
+| 6 | [RAG & Knowledge Bases over Your Documents](rag-knowledge-bases.qmd) | [Advanced]{.level-badge .level-advanced} | Ground answers in your own document set, with citations |
+| 7 | [MCP & Connecting AI to Data & Tools](mcp-connecting-tools.qmd) | [Advanced]{.level-badge .level-advanced} | The plumbing that lets agents reach data sources and tools |
+
+::: {.callout-warning}
+## Data rules apply throughout
+Use **public or non-sensitive** data for every activity, and match any tool to Drexel's data classification. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+:::

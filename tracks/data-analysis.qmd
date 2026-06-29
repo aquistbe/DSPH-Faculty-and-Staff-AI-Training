@@ -1,0 +1,45 @@
+---
+title: "Data & Analysis Track"
+---
+
+::: {.topic-badges}
+Self-paced track · 8 topics · novice → advanced
+:::
+
+[← All self-paced tracks](../tracks.qmd){.track-back}
+
+Work through these on your own, in order or by the topic you need. Each page has a short overview, two hands-on practice activities, a readiness quiz, recommended readings, and useful resources. Everything assumes you've done **[Workshop 1](../workshop1.qmd)** (prompting and the Drexel data rules).
+
+## Difficulty levels
+
+[Novice]{.level-badge .level-novice} &nbsp; getting started — no prior AI-for-data experience needed.
+[Moderate]{.level-badge .level-moderate} &nbsp; comfortable with some coding or analysis.
+[Advanced]{.level-badge .level-advanced} &nbsp; experienced analysts auditing AI-built work.
+
+## Suggested path
+
+| # | Topic | Level | You'll be able to… |
+|---|-------|-------|--------------------|
+| 1 | [Data Analysis Basics](data-analysis-basics.qmd) | [Novice]{.level-badge .level-novice} | Ask questions of a dataset and get a checkable first answer |
+| 2 | [Data Cleaning, Recoding & Codebooks](data-cleaning.qmd) | [Novice]{.level-badge .level-novice} | Clean messy data and document it with AI help |
+| 3 | [Coding with AI](coding-with-ai.qmd) | [Moderate]{.level-badge .level-moderate} | Generate, explain, and debug R/Python/Stata code you review |
+| 4 | [Statistical Interpretation across Stata, R & Python](statistical-interpretation.qmd) | [Moderate]{.level-badge .level-moderate} | Read output and translate models between languages |
+| 5 | [AI-Assisted Web & Dashboards](web-and-dashboards.qmd) | [Moderate]{.level-badge .level-moderate} | Turn data into a shareable dashboard or web page |
+| 6 | [Image Generation & Annotation](image-generation-annotation.qmd) | [Moderate]{.level-badge .level-moderate} | Make graphics responsibly and label images for analysis |
+| 7 | [Qualitative Data Analysis](qualitative-analysis.qmd) | [Moderate]{.level-badge .level-moderate} | Assist coding and theming without outsourcing interpretation |
+| 8 | [Data Analysis Advanced](data-analysis-advanced.qmd) | [Advanced]{.level-badge .level-advanced} | Scaffold pipelines and audit their subtle failure modes |
+
+## Where should you start?
+
+Answer these to find your entry point.
+
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions":[{"q":"Have you used R, Python, or Stata for data analysis before?","options":["Not really","A little","Regularly"],"answer":2,"explain":"If you code regularly, you can skip ahead to Coding with AI (3) or the Advanced topic (8). If not, start at topic 1."},{"q":"What's the safest way to trust an AI-computed number?","options":["Check it against the data or a known value","Ask the AI if it's sure","Use a bigger model"],"answer":0,"explain":"Verification against the source is the core habit across every topic here."},{"q":"Which data is fine to practice with?","options":["Public or synthetic","Identifiable patient records","A private roster"],"answer":0,"explain":"Always practice on non-sensitive data."}]}
+</script>
+</div>
+
+::: {.callout-warning}
+## Data rules apply throughout
+Use **public or non-sensitive** data for every activity, and match any tool to Drexel's data classification. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+:::

@@ -1,0 +1,66 @@
+---
+title: "Survey & Instrument Design"
+---
+
+::: {.topic-badges}
+[Moderate]{.level-badge .level-moderate} · **Methods & Study Design** track · ~1 hour, self-paced
+:::
+
+[← Back to the Methods & Study Design track](methods-study-design.qmd){.track-back}
+
+*Use AI to draft and critique survey items — while guarding against bias and bad measurement.*
+
+## What you'll be able to do
+
+- Draft survey items, scales, and skip logic with AI
+- Critique items for bias, ambiguity, and double-barrels
+- Plan cognitive testing and a codebook
+
+## Overview
+
+AI can draft candidate items, suggest response scales, and write cognitive-interview probes. It can also produce leading or double-barreled items, so you critique every one against measurement principles.
+
+Good instruments are validated, not just written. AI accelerates drafting; piloting and cognitive testing with real respondents still decide what works.
+
+## Practice activities
+
+::: {.callout-note collapse="true"}
+## Activity 1 · Moderate — Draft and critique items
+
+1. Describe a construct you want to measure.
+2. Ask AI for **6 candidate items** plus a response scale.
+3. Critique each for bias, ambiguity, and double-barreling; cut or fix.
+:::
+
+::: {.callout-note collapse="true"}
+## Activity 2 · Moderate — Write cognitive probes
+
+1. Ask AI for **cognitive-interview probes** for two items.
+2. Decide which you'd actually use to test comprehension.
+:::
+
+## Check your readiness
+
+Answer these, then check — your score suggests whether to dive in or skim the readings first.
+
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions": [{"q": "AI-drafted survey items must be checked for…", "options": ["Bias, ambiguity, and double-barreling", "Spelling only", "Length only", "Font"], "answer": 0, "explain": "Measurement quality is the point."}, {"q": "What validates an instrument?", "options": ["Piloting and cognitive testing with respondents", "A fluent AI draft", "A long item list", "A big model"], "answer": 0, "explain": "Real testing, not drafting, validates."}, {"q": "AI's role in instrument design is to…", "options": ["Accelerate drafting and critique", "Replace validation", "Pick the sample", "Run the study"], "answer": 0, "explain": "It assists; you validate."}]}
+</script>
+</div>
+
+## Recommended readings
+
+From the AI readings library (ask the facilitator for access):
+
+- **AI and Survey Sampling Problems (Sharon Lohr)** — sampling and representativeness cautions.
+- **A Framework for Technical Writing in the Age of LLMs** — precision in wording.
+
+## Useful resources
+
+- [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with data rules.
+
+::: {.callout-warning}
+## Data rules
+Draft with **non-sensitive** content; respondent data later requires an approved tool. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+:::

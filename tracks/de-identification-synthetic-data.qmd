@@ -1,0 +1,67 @@
+---
+title: "De-identification & Synthetic Data"
+---
+
+::: {.topic-badges}
+[Moderate]{.level-badge .level-moderate} · **Methods & Study Design** track · ~1 hour, self-paced
+:::
+
+[← Back to the Methods & Study Design track](methods-study-design.qmd){.track-back}
+
+*Two ways to work safely with sensitive data: remove identifiers, or generate realistic fakes.*
+
+## What you'll be able to do
+
+- Apply de-identification standards (e.g., HIPAA Safe Harbor)
+- Generate synthetic data for sharing and teaching
+- Recognize re-identification and fidelity limits
+
+## Overview
+
+De-identification removes identifiers so data can be used more freely; synthetic data generates realistic but fake records. Both let you teach, demo, and prototype without exposing real people — your course already uses synthetic crash data this way.
+
+Neither is magic. De-identified data can sometimes be re-identified by combining fields, and synthetic data can leak patterns or miss real structure. Check both before relying on them.
+
+## Practice activities
+
+::: {.callout-note collapse="true"}
+## Activity 1 · Moderate — De-identify a sample
+
+1. Take a small sample with quasi-identifiers (age, ZIP, date).
+2. Apply **Safe Harbor-style** removal/generalization with AI's help.
+3. Ask: could remaining fields still re-identify someone in combination?
+:::
+
+::: {.callout-note collapse="true"}
+## Activity 2 · Moderate — Generate synthetic data
+
+1. Describe a dataset's structure and ask AI to generate a **synthetic** version.
+2. Compare distributions to the real structure; note what's off.
+:::
+
+## Check your readiness
+
+Answer these, then check — your score suggests whether to dive in or skim the readings first.
+
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions": [{"q": "De-identified data can still be risky because…", "options": ["Combined fields can re-identify people", "It's always safe", "It's encrypted", "It's synthetic"], "answer": 0, "explain": "Quasi-identifiers can re-identify in combination."}, {"q": "Synthetic data is useful for…", "options": ["Teaching, demos, and prototyping", "Replacing real analysis", "Hiding results", "Avoiding all rules"], "answer": 0, "explain": "It's safe for teaching and prototyping, with limits."}, {"q": "Before relying on either, you should…", "options": ["Check re-identification risk and fidelity", "Assume it's fine", "Publish immediately", "Skip review"], "answer": 0, "explain": "Both have limits worth checking."}]}
+</script>
+</div>
+
+## Recommended readings
+
+From the AI readings library (ask the facilitator for access):
+
+- **LLMs Can Unmask Pseudonymous Users at Scale (Ars Technica)** — re-identification risk made concrete.
+- **AI and Humans: Making the Relationship Work (Schneier on Security)** — security mindset for data handling.
+
+## Useful resources
+
+- [HHS De-identification Guidance](https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/index.html) — HIPAA Safe Harbor and Expert Determination.
+- [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with data rules.
+
+::: {.callout-warning}
+## Data rules
+Generate/transform on **non-sensitive** samples in unapproved tools; real PHI needs an approved tool and method. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+:::

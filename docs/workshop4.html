@@ -97,25 +97,40 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./workshop1.html"> 
-<span class="menu-text">Workshop 1</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-workshops" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Workshops</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-workshops">    
+        <li>
+    <a class="dropdown-item" href="./workshop1.html">
+ <span class="dropdown-text">1 · Foundations &amp; Capabilities</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./workshop2.html"> 
-<span class="menu-text">Workshop 2</span></a>
+        <li>
+    <a class="dropdown-item" href="./workshop2.html">
+ <span class="dropdown-text">2 · Workflow Enhancement</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./workshop3.html"> 
-<span class="menu-text">Workshop 3</span></a>
+        <li>
+    <a class="dropdown-item" href="./workshop3.html">
+ <span class="dropdown-text">3 · Collaboration on Projects</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="./workshop4.html" aria-current="page"> 
-<span class="menu-text">Workshop 4</span></a>
+        <li>
+    <a class="dropdown-item" href="./workshop4.html">
+ <span class="dropdown-text">4 · Documents &amp; Visuals (Adobe)</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./workshop5.html">
+ <span class="dropdown-text">5 · Getting Started with Agentic AI</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./workshop6.html">
+ <span class="dropdown-text">6 · AI for Curriculum Development</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
-    <a class="nav-link" href="./workshop5.html"> 
-<span class="menu-text">Workshop 5</span></a>
+    <a class="nav-link" href="./tracks.html"> 
+<span class="menu-text">Self-Paced Tracks</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./tools.html"> 
@@ -404,6 +419,83 @@ ul.task-list li input[type="checkbox"] {
 </section>
 
 </main> <!-- /main -->
+<!-- Self-paced track styles + readiness-quiz engine (included after body) -->
+<style>
+/* Difficulty badges */
+.level-badge{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.04em;
+  text-transform:uppercase;padding:.15em .6em;border-radius:1em;vertical-align:middle}
+.level-novice{background:#e3f3e8;color:#1d6b3b;border:1px solid #9fd3b2}
+.level-moderate{background:#fdf0d6;color:#8a5a00;border:1px solid #f0cf86}
+.level-advanced{background:#e7ecf5;color:#07294d;border:1px solid #9fb3cc}
+.topic-badges{margin:.2rem 0 .4rem;color:#5a6571;font-size:.95rem}
+.topic-meta{color:#5a6571;font-size:.95rem;margin-bottom:1rem}
+.track-back{display:inline-block;margin:.2rem 0 1rem;font-size:.95rem}
+
+/* Track / topic tables */
+.topic-list td:first-child{white-space:nowrap}
+
+/* Readiness quiz */
+.readiness-quiz{border:1px solid #d2dae8;border-radius:8px;padding:1.1rem 1.25rem;margin:1rem 0;
+  background:#f7f9fb}
+.rq-q{margin:0 0 1rem;padding:.6rem .8rem;border-radius:6px;border:1px solid transparent}
+.rq-qtext{font-weight:600;margin:0 0 .5rem}
+.rq-opt{display:block;margin:.25rem 0;cursor:pointer;line-height:1.4}
+.rq-opt input{margin-right:.5rem}
+.rq-fb{margin-top:.45rem;font-size:.9rem;display:none}
+.rq-fb.rq-fb-ok,.rq-fb.rq-fb-no,.rq-fb.rq-fb-none{display:block}
+.rq-fb-ok{color:#1d6b3b}
+.rq-fb-no{color:#a12a2a}
+.rq-fb-none{color:#8a5a00}
+.rq-correct{background:#f0f9f3;border-color:#bfe3cd}
+.rq-wrong{background:#fcf1f1;border-color:#eccccc}
+.rq-btn{background:#07294d;color:#fff;border:none;border-radius:6px;padding:.5rem 1.1rem;
+  font-weight:600;cursor:pointer}
+.rq-btn:hover{background:#0a3a6b}
+.rq-score{margin-top:.8rem;font-weight:600;color:#07294d}
+</style>
+<script>
+(function(){
+  function init(){
+    var boxes=document.querySelectorAll('.readiness-quiz');
+    boxes.forEach(function(box,bi){
+      var dataEl=box.querySelector('script.quiz-data');
+      if(!dataEl) return;
+      var data; try{data=JSON.parse(dataEl.textContent);}catch(e){return;}
+      var qs=(data&&data.questions)||[];
+      if(!qs.length) return;
+      var wrap=document.createElement('div');
+      qs.forEach(function(q,qi){
+        var qd=document.createElement('div'); qd.className='rq-q';
+        var p=document.createElement('p'); p.className='rq-qtext'; p.textContent=(qi+1)+'. '+q.q; qd.appendChild(p);
+        (q.options||[]).forEach(function(opt,oi){
+          var lab=document.createElement('label'); lab.className='rq-opt';
+          var inp=document.createElement('input'); inp.type='radio'; inp.name='rq_'+bi+'_'+qi; inp.value=oi;
+          lab.appendChild(inp); lab.appendChild(document.createTextNode(' '+opt)); qd.appendChild(lab);
+        });
+        var fb=document.createElement('div'); fb.className='rq-fb'; qd.appendChild(fb);
+        wrap.appendChild(qd);
+      });
+      var btn=document.createElement('button'); btn.type='button'; btn.className='rq-btn'; btn.textContent='Check my answers';
+      var score=document.createElement('div'); score.className='rq-score';
+      btn.addEventListener('click',function(){
+        var correct=0;
+        qs.forEach(function(q,qi){
+          var qd=wrap.children[qi]; var sel=qd.querySelector('input:checked'); var fb=qd.querySelector('.rq-fb');
+          qd.classList.remove('rq-correct','rq-wrong');
+          if(!sel){ fb.textContent='Select an answer.'; fb.className='rq-fb rq-fb-none'; return; }
+          if(parseInt(sel.value,10)===q.answer){ correct++; qd.classList.add('rq-correct'); fb.textContent='Correct. '+(q.explain||''); fb.className='rq-fb rq-fb-ok'; }
+          else { qd.classList.add('rq-wrong'); fb.textContent='Not quite. '+(q.explain||''); fb.className='rq-fb rq-fb-no'; }
+        });
+        var pct=Math.round(correct/qs.length*100);
+        var verdict=pct>=80?"You're ready — dive in.":(pct>=50?"Close — skim the readings first, then start Activity 1.":"Start with the readings and Activity 1, then retry.");
+        score.textContent='You scored '+correct+'/'+qs.length+' ('+pct+'%). '+verdict;
+      });
+      box.innerHTML=''; box.appendChild(wrap); box.appendChild(btn); box.appendChild(score);
+    });
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}
+})();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

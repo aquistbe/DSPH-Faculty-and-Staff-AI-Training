@@ -1,0 +1,67 @@
+---
+title: "Local Models via Ollama"
+---
+
+::: {.topic-badges}
+[Advanced]{.level-badge .level-advanced} · **Technical & Agentic** track · ~1 hour, self-paced
+:::
+
+[← Back to the Technical & Agentic track](technical-agentic.qmd){.track-back}
+
+*When privacy, cost, or offline use matter, a local model on your machine can be the right tool.*
+
+## What you'll be able to do
+
+- Run an open model locally with Ollama
+- Judge when local beats cloud (privacy, cost, offline)
+- Know the trade-offs in capability and setup
+
+## Overview
+
+Tools like Ollama run open-weight models on your own computer — nothing leaves the machine. That's attractive for sensitive-adjacent work, cost control, or offline settings. The trade-off is capability and setup: local models are smaller and need a capable machine.
+
+Local is not automatically "approved" for sensitive data — confirm with Drexel before using any tool, local or cloud, with protected information.
+
+## Practice activities
+
+::: {.callout-note collapse="true"}
+## Activity 1 · Advanced — Run a model locally
+
+1. Install **Ollama** and pull a small open model.
+2. Run a basic task (summarize a public document) entirely offline.
+3. Compare quality to a cloud model; note the gap.
+:::
+
+::: {.callout-note collapse="true"}
+## Activity 2 · Advanced — Decide local vs cloud
+
+1. List a task where local would help (privacy, cost, offline).
+2. Write the conditions under which you'd choose local — and confirm Drexel's data rules still apply.
+:::
+
+## Check your readiness
+
+Answer these, then check — your score suggests whether to dive in or skim the readings first.
+
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions": [{"q": "The main appeal of a local model is…", "options": ["Data stays on your machine", "It's always smarter", "It needs no hardware", "It's free of rules"], "answer": 0, "explain": "Local keeps data on-device, but rules still apply."}, {"q": "Running locally means Drexel data rules…", "options": ["Still apply — confirm before using sensitive data", "No longer apply", "Are stricter only", "Are irrelevant"], "answer": 0, "explain": "Approval is about the use case, not just where it runs."}, {"q": "The trade-off with local models is…", "options": ["Lower capability and more setup", "Nothing", "Higher cost always", "No privacy"], "answer": 0, "explain": "Local models are smaller and need a capable machine."}]}
+</script>
+</div>
+
+## Recommended readings
+
+From the AI readings library (ask the facilitator for access):
+
+- **Running Local Models Is Good Now (Vicki Boykis)** — a practical look at the current state of local models.
+
+## Useful resources
+
+- [Ollama](https://ollama.com) — run open models locally.
+- [Hugging Face](https://huggingface.co) — open models and tools.
+- [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with data rules.
+
+::: {.callout-warning}
+## Data rules
+Local ≠ automatically approved — confirm Drexel's classification before any sensitive use. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+:::

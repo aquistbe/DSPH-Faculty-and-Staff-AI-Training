@@ -1,0 +1,68 @@
+---
+title: "Qualitative Data Analysis"
+---
+
+::: {.topic-badges}
+[Moderate]{.level-badge .level-moderate} · **Data & Analysis** track · ~1 hour, self-paced
+:::
+
+[← Back to the Data & Analysis track](data-analysis.qmd){.track-back}
+
+*Use AI to assist coding and themes — without outsourcing your interpretation.*
+
+## What you'll be able to do
+
+- Use AI to propose codes and group themes in open-text data
+- Build and apply a codebook, then verify agreement
+- Weigh the debate over AI in qualitative work and protect confidentiality
+
+## Overview
+
+AI can suggest codes, group themes, and summarize patterns in interview or open-text data quickly. But qualitative scholars warn that outsourcing interpretation strips out the reflexivity that gives the method its meaning. Use AI to **assist** your reading, not replace it.
+
+Transcripts are often sensitive. De-identify them and use an approved tool — confidentiality comes first.
+
+## Practice activities
+
+::: {.callout-note collapse="true"}
+## Activity 1 · Moderate — Draft a codebook
+
+1. Paste **de-identified** open-text responses into an approved tool.
+2. Ask AI to propose a **codebook** (codes, definitions, examples).
+3. Revise it with your own judgment — you decide what the codes mean.
+:::
+
+::: {.callout-note collapse="true"}
+## Activity 2 · Moderate — Code and verify
+
+1. Apply the codebook to a new batch with AI assistance.
+2. **Hand-check a sample** for agreement; note where you and the AI disagree, and why.
+:::
+
+## Check your readiness
+
+Answer these, then check — your score suggests whether to dive in or skim the readings first.
+
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions": [{"q": "The main critique of AI in reflexive qualitative work is that it…", "options": ["Removes the researcher's interpretive engagement", "Is too slow", "Costs too much", "Can't read text"], "answer": 0, "explain": "Critics argue AI strips the reflexivity central to the method (see Jowsey et al.)."}, {"q": "Interview transcripts should be…", "options": ["De-identified and used in an approved tool", "Pasted into any chatbot", "Shared publicly", "Ignored"], "answer": 0, "explain": "Confidentiality requires de-identification and an approved tool."}, {"q": "The best role for AI here is to…", "options": ["Assist your reading, not replace it", "Make all decisions", "Write the paper", "Pick the sample"], "answer": 0, "explain": "AI assists; interpretation stays with the researcher."}]}
+</script>
+</div>
+
+## Recommended readings
+
+From the AI readings library (ask the facilitator for access):
+
+- **Exploring Agent-Assisted Qualitative Analysis** — what AI can do in coding and theming.
+- **Jowsey et al. (2025): We Reject the Use of Generative AI for Reflexive Qualitative Research** — a strong counterpoint — read it for balance.
+
+## Useful resources
+
+- [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with data rules.
+- [Dedoose](https://www.dedoose.com) — qualitative analysis platform (check data rules before use).
+- [NVivo](https://lumivero.com/products/nvivo/) — qualitative analysis software.
+
+::: {.callout-warning}
+## Data rules
+De-identify transcripts and use an **approved** tool; qualitative data is frequently sensitive. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+:::

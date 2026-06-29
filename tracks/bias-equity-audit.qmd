@@ -1,0 +1,67 @@
+---
+title: "AI Bias & Health Equity Audit"
+---
+
+::: {.topic-badges}
+[Moderate]{.level-badge .level-moderate} · **Governance, Ethics & Equity** track · ~1 hour, self-paced
+:::
+
+[← Back to the Governance, Ethics & Equity track](governance-ethics.qmd){.track-back}
+
+*Bias in AI becomes inequity in health. Learn to test for it, not assume it away.*
+
+## What you'll be able to do
+
+- Explain where bias enters AI systems
+- Test outputs across groups, not just overall
+- Decide when a biased tool shouldn't be used
+
+## Overview
+
+AI learns from data that carries society's inequities, so outputs can reflect and amplify them — and in health, that becomes unequal care. A landmark case: an algorithm used healthcare cost as a proxy for need, rating Black patients as healthier than equally sick White patients (Obermeyer et al., 2019).
+
+The countermeasure is auditing: don't judge a tool on average performance; test it across the groups you serve, and be willing to not use it.
+
+## Practice activities
+
+::: {.callout-note collapse="true"}
+## Activity 1 · Moderate — Audit across groups
+
+1. Take an AI output that varies by input (e.g., generated examples, summaries, or images).
+2. Vary the **group** in the input and compare outputs for stereotype or quality gaps.
+3. Document any disparity you find.
+:::
+
+::: {.callout-note collapse="true"}
+## Activity 2 · Moderate — Decide the threshold
+
+1. For a real use case, write what level of disparity would make you **not** use the tool.
+2. Note who should be at the table for that decision.
+:::
+
+## Check your readiness
+
+Answer these, then check — your score suggests whether to dive in or skim the readings first.
+
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions": [{"q": "Bias enters AI mainly through…", "options": ["Training data and proxies that differ across groups", "Random chance", "The user's mood", "The font"], "answer": 0, "explain": "Historical data and bad proxies encode inequity."}, {"q": "You should evaluate a tool by…", "options": ["Performance across groups, not just on average", "Average accuracy only", "Speed", "Popularity"], "answer": 0, "explain": "Averages hide disparities."}, {"q": "The Obermeyer (2019) case shows…", "options": ["A cost proxy under-served sicker Black patients", "AI is unbiased", "Bias is rare", "Proxies are always fine"], "answer": 0, "explain": "A flawed proxy produced inequitable results."}]}
+</script>
+</div>
+
+## Recommended readings
+
+From the AI readings library (ask the facilitator for access):
+
+- **These New Tools Could Make AI Vision Systems Less Biased (MIT Tech Review)** — measuring and reducing bias.
+- **AI and Survey Sampling Problems (Sharon Lohr)** — representativeness and who gets left out.
+
+## Useful resources
+
+- [WHO: Ethics & Governance of AI for Health](https://www.who.int/publications/i/item/9789240029200) — equity in health AI.
+- [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with data rules.
+
+::: {.callout-warning}
+## Data rules
+Use **non-sensitive** examples to audit; document disparities and escalate decisions. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+:::

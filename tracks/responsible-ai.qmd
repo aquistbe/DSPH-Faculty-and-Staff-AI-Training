@@ -1,0 +1,67 @@
+---
+title: "Responsible AI"
+---
+
+::: {.topic-badges}
+[Moderate]{.level-badge .level-moderate} · **Governance, Ethics & Equity** track · ~1 hour, self-paced
+:::
+
+[← Back to the Governance, Ethics & Equity track](governance-ethics.qmd){.track-back}
+
+*Pull the ethics thread together: who's accountable, what to disclose, and how to govern AI use.*
+
+## What you'll be able to do
+
+- Apply the accountability principle: AI drafts, a human decides
+- Decide when to disclose AI use
+- Use a governance framework (WHO, ASPPH) to guide decisions
+
+## Overview
+
+Responsible AI isn't a separate task — it's how you do every task. The governing principle from Workshop 1 holds: the person who acts on AI output owns the result. Disclosure, verification, and human oversight are the operational habits.
+
+Public-health bodies (WHO, ASPPH) offer frameworks for AI ethics and governance. They translate values — accountability, transparency, equity, safety — into checkable practices.
+
+## Practice activities
+
+::: {.callout-note collapse="true"}
+## Activity 1 · Moderate — Write a disclosure rule
+
+1. List three places AI shows up in your work.
+2. For each, decide whether and how you'd disclose AI use.
+3. Draft a one-line norm you could share with your team.
+:::
+
+::: {.callout-note collapse="true"}
+## Activity 2 · Moderate — Apply a framework
+
+1. Skim one governance framework (WHO or ASPPH).
+2. Pick two principles and write how you'd act on each in a real task.
+:::
+
+## Check your readiness
+
+Answer these, then check — your score suggests whether to dive in or skim the readings first.
+
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions": [{"q": "The governing accountability principle is…", "options": ["The person who acts on AI output owns the result", "The vendor is liable", "The tool decides", "No one is responsible"], "answer": 0, "explain": "Responsibility stays with the human."}, {"q": "Disclosure of AI use should be…", "options": ["Where it informs a real decision or document", "Never", "Always, for everything", "Only if asked"], "answer": 0, "explain": "Disclose where it matters to the decision."}, {"q": "Governance frameworks help by…", "options": ["Turning values into checkable practices", "Banning AI", "Replacing judgment", "Adding paperwork only"], "answer": 0, "explain": "They operationalize principles."}]}
+</script>
+</div>
+
+## Recommended readings
+
+From the AI readings library (ask the facilitator for access):
+
+- **How Responsible AI Changes in the Agent Era** — responsibility as AI gains autonomy.
+- **Prioritizing the Risks from Artificial Intelligence** — a framework for weighing AI risks.
+
+## Useful resources
+
+- [WHO: Ethics & Governance of AI for Health](https://www.who.int/publications/i/item/9789240029200) — the leading health-sector framework.
+- [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with data rules.
+
+::: {.callout-warning}
+## Data rules
+Responsible use includes the data rules — confirm classification before any real data. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+:::

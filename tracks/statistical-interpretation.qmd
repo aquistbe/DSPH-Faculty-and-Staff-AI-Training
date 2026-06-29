@@ -1,0 +1,68 @@
+---
+title: "Statistical Interpretation across Stata, R & Python"
+---
+
+::: {.topic-badges}
+[Moderate]{.level-badge .level-moderate} · **Data & Analysis** track · ~1 hour, self-paced
+:::
+
+[← Back to the Data & Analysis track](data-analysis.qmd){.track-back}
+
+*Read output, translate between languages, and sanity-check what AI tells you.*
+
+## What you'll be able to do
+
+- Have AI explain model output in plain language
+- Translate a model or command between Stata, R, and Python
+- Sanity-check estimates and the assumptions behind them
+
+## Overview
+
+AI can explain output, translate a Stata command into R or Python, and suggest diagnostics. It can also be confidently wrong about methods — treat its statistical claims as drafts to verify against a text or a statistician.
+
+Interpretation and assumptions are exactly where your expertise matters most; that part doesn't transfer to the tool.
+
+## Practice activities
+
+::: {.callout-note collapse="true"}
+## Activity 1 · Moderate — Translate a model
+
+1. Give AI a regression command in your language and ask for the **equivalent in another** (Stata ↔ R ↔ Python), with the output interpreted plainly.
+2. Run both. Confirm the **estimates and sample sizes match** before trusting the translation.
+:::
+
+::: {.callout-note collapse="true"}
+## Activity 2 · Moderate — Interrogate the output
+
+1. Paste model output and ask AI **which assumptions to check and how**.
+2. Run the checks. Decide which assumptions hold and what that means for your conclusion.
+:::
+
+## Check your readiness
+
+Answer these, then check — your score suggests whether to dive in or skim the readings first.
+
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions": [{"q": "AI's interpretation of a p-value should be treated as…", "options": ["A draft to verify", "Authoritative", "Irrelevant", "The final answer"], "answer": 0, "explain": "Verify statistical claims against a trusted source."}, {"q": "Translating Stata to R with AI, you must verify…", "options": ["That estimates and Ns match", "The font", "The file name", "Nothing"], "answer": 0, "explain": "Matching estimates and sample sizes confirms the translation is faithful."}, {"q": "Where does your expertise matter most?", "options": ["Assumptions and interpretation", "Typing speed", "Tool choice", "Token count"], "answer": 0, "explain": "Judgment about assumptions and meaning is irreplaceable."}]}
+</script>
+</div>
+
+## Recommended readings
+
+From the AI readings library (ask the facilitator for access):
+
+- **Thoughts About the Roles of AI for Statistics** — where AI fits — and doesn't — in statistical work.
+- **AI and Survey Sampling Problems (Sharon Lohr)** — caution on sampling and inference.
+- **When Is Detecting AI-Generated Text Worthwhile? (Gelman)** — statistical thinking applied to AI.
+
+## Useful resources
+
+- [Stata](https://www.stata.com) — your primary statistical environment.
+- [R Project](https://www.r-project.org) — open-source statistics and graphics.
+- [statsmodels (Python)](https://www.statsmodels.org) — statistical models in Python.
+
+::: {.callout-warning}
+## Data rules
+Keep model data **non-sensitive** unless using an approved tool cleared for it. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+:::

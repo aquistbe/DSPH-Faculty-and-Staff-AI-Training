@@ -1,0 +1,69 @@
+---
+title: "Grant & Proposal Development"
+---
+
+::: {.topic-badges}
+[Moderate]{.level-badge .level-moderate} · **Communication & Dissemination** track · ~1 hour, self-paced
+:::
+
+[← Back to the Communication & Dissemination track](communication.qmd){.track-back}
+
+*Draft and tighten the recurring pieces of a proposal — with your science and your verification.*
+
+## What you'll be able to do
+
+- Draft specific aims, summaries, and budget justifications with AI
+- Tighten language to a funder's guidelines and page limits
+- Verify every claim, citation, and number before it goes in
+
+## Overview
+
+AI can draft a specific-aims page, a summary, or a budget justification from your notes, and reshape text to a funder's format. The science, the feasibility, and the citations are yours to get right.
+
+Funders increasingly expect disclosure of AI assistance and prohibit fabricated content. Treat AI output as a first draft you verify line by line.
+
+## Practice activities
+
+::: {.callout-note collapse="true"}
+## Activity 1 · Moderate — Draft a specific-aims page
+
+1. Give AI your project's goal, gap, and approach (non-sensitive).
+2. Ask for a **one-page specific-aims draft** with a hook, long-term goal, and 2–3 aims.
+3. Rewrite the science yourself; verify every cited claim against the source.
+:::
+
+::: {.callout-note collapse="true"}
+## Activity 2 · Moderate — Fit the guidelines
+
+1. Paste a draft section and the funder's instructions.
+2. Ask AI to flag where you don't meet the guidance and to tighten to the page limit.
+3. Confirm nothing required was dropped.
+:::
+
+## Check your readiness
+
+Answer these, then check — your score suggests whether to dive in or skim the readings first.
+
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions": [{"q": "Citations in an AI-drafted aims page should be…", "options": ["Verified against the actual source", "Trusted if formatted correctly", "Left as-is", "Removed"], "answer": 0, "explain": "AI invents plausible citations — open and confirm each one."}, {"q": "Many funders now expect you to…", "options": ["Disclose AI assistance and avoid fabricated content", "Use AI for everything", "Never use AI", "Hide AI use"], "answer": 0, "explain": "Disclosure norms are emerging; fabrication is prohibited."}, {"q": "What stays your responsibility?", "options": ["The science, feasibility, and accuracy", "The font", "The file name", "The submission portal"], "answer": 0, "explain": "You own the substance and the claims."}]}
+</script>
+</div>
+
+## Recommended readings
+
+From the AI readings library (ask the facilitator for access):
+
+- **AI-Slop, GrantaGate and Bad Writing (Tuhin Chakrabarty)** — the risks of AI-generated proposal text.
+- **A Framework for Technical Writing in the Age of LLMs** — writing faster without losing rigor.
+
+## Useful resources
+
+- [NIH How to Apply — Application Guide](https://grants.nih.gov/grants/how-to-apply-application-guide.html) — official NIH proposal guidance.
+- [NIH RePORTER](https://reporter.nih.gov) — find funded examples and language.
+- [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with data rules.
+
+::: {.callout-warning}
+## Data rules
+Keep unpublished ideas in an **approved** tool; verify all claims and citations before submission. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+:::

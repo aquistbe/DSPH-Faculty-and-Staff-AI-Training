@@ -1,0 +1,69 @@
+---
+title: "Data Cleaning, Recoding & Codebooks"
+---
+
+::: {.topic-badges}
+[Novice]{.level-badge .level-novice} · **Data & Analysis** track · ~1 hour, self-paced
+:::
+
+[← Back to the Data & Analysis track](data-analysis.qmd){.track-back}
+
+*Most analysis time is cleaning — let AI speed it up while you keep control.*
+
+## What you'll be able to do
+
+- Have AI flag data-quality issues and propose fixes
+- Recode variables consistently and document the change
+- Auto-draft a codebook and validate transformations
+
+## Overview
+
+Most of analysis is cleaning. AI can propose recodes, spot inconsistencies, and draft documentation — but every transformation needs a check that it did what you meant.
+
+A **codebook** (what each variable means and how it's coded) is easy to skip and painful to lack. AI can draft one straight from your data, which you then correct.
+
+## Practice activities
+
+::: {.callout-note collapse="true"}
+## Activity 1 · Novice — Diagnose the mess
+
+1. Paste a messy sample (inconsistent category labels, odd missing-value codes) into ChatGPT Edu.
+2. Ask it to **list the data-quality issues** and propose a fix for each.
+3. Decide which fixes to accept — you make the call, not the model.
+:::
+
+::: {.callout-note collapse="true"}
+## Activity 2 · Novice — Recode and document
+
+1. Ask AI to write code that **standardizes one variable** (e.g., unify category spellings).
+2. Ask it to generate a **codebook entry** for that variable.
+3. Run it, then **compare counts before and after** to confirm nothing was lost or mislabeled.
+:::
+
+## Check your readiness
+
+Answer these, then check — your score suggests whether to dive in or skim the readings first.
+
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions": [{"q": "After an AI recode, what should you always check?", "options": ["The before/after counts and a few rows", "Nothing — AI is reliable", "The file size", "The chart colors"], "answer": 0, "explain": "Comparing counts and spot-checking rows confirms the recode did what you intended."}, {"q": "A codebook documents…", "options": ["What each variable means and how it's coded", "Your password", "The AI model version", "The file path"], "answer": 0, "explain": "A codebook is the map others (and future-you) need to use the data."}, {"q": "What data should you use for this practice?", "options": ["Public or synthetic", "Your real PHI dataset", "A colleague's grades", "IRB-protected records"], "answer": 0, "explain": "Keep practice data non-sensitive."}]}
+</script>
+</div>
+
+## Recommended readings
+
+From the AI readings library (ask the facilitator for access):
+
+- **AI-Ready Data vs. Analytics-Ready Data** — why preparation determines whether analysis works.
+- **Stop Learning Excel (Ruben Hassid)** — a provocative reframe of spreadsheet work with AI — read critically.
+
+## Useful resources
+
+- [tidyverse / dplyr](https://dplyr.tidyverse.org) — recoding and cleaning verbs in R.
+- [OpenRefine](https://openrefine.org) — a free tool for cleaning messy tabular data.
+- [Quarto](https://quarto.org) — document your cleaning steps reproducibly.
+
+::: {.callout-warning}
+## Data rules
+Practice on **non-sensitive** data; de-identify before any tool sees real records. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+:::

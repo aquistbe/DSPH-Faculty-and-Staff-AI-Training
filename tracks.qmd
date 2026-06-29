@@ -1,0 +1,37 @@
+---
+title: "Self-Paced Tracks"
+---
+
+::: {.day-header}
+# Self-Paced Tracks
+::: {.day-subtitle}
+Work through AI topics on your own — organized by theme, with practice activities, readings, and a readiness check on every page
+:::
+:::
+
+These tracks turn the workshop catalog into self-paced learning. Each topic page has a short overview, **two hands-on practice activities**, a **readiness quiz** with instant feedback, **recommended readings**, and **useful resources**. Pick a track, start at your level, and go at your own pace.
+
+Everything builds on **[Workshop 1](workshop1.qmd)** — prompting and the Drexel data rules. Keep practice data **non-sensitive**; see [Tools & Access](tools.qmd).
+
+## Difficulty levels
+
+[Novice]{.level-badge .level-novice} &nbsp; getting started — no prior experience needed.
+[Moderate]{.level-badge .level-moderate} &nbsp; comfortable with some coding or analysis.
+[Advanced]{.level-badge .level-advanced} &nbsp; experienced users auditing AI-built work.
+
+## Tracks
+
+| Track | Topics | Level range |
+|-------|--------|-------------|
+| [**Data & Analysis**](tracks/data-analysis.qmd) | Basics, cleaning, coding, statistics, dashboards, image annotation, qualitative, advanced (8) | novice → advanced |
+| [**Communication & Dissemination**](tracks/communication.qmd) | Science communication, grant writing, literature review, multilingual materials, manuscripts (5) | novice → advanced |
+| [**Technical & Agentic**](tracks/technical-agentic.qmd) | Skills, context engineering, agents, loops, local models, RAG, MCP (7) | moderate → advanced |
+| [**Governance, Ethics & Equity**](tracks/governance-ethics.qmd) | Verifying output, sustainability, data security, responsible AI, bias & equity audit (5) | novice → moderate |
+| [**Methods & Study Design**](tracks/methods-study-design.qmd) | Survey design, program evaluation, de-identification & synthetic data, geospatial (4) | moderate → advanced |
+
+That's **29 self-paced topics** across five tracks. Pick the track that fits your work, start at your level, and go at your own pace.
+
+::: {.callout-note}
+## Have a topic to prioritize or refine?
+These tracks are drawn from the workshop topic catalog and will keep growing. If you want a new topic added — or have feedback on one — email [daq26@drexel.edu](mailto:daq26@drexel.edu).
+:::

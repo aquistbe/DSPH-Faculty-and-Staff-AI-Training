@@ -1,0 +1,164 @@
+---
+title: "Workshop 6: AI for Curriculum Development"
+---
+
+::: {.day-header}
+# Workshop 6: AI for Curriculum Development
+::: {.day-subtitle}
+Design courses, build teaching materials, and create student resources with AI
+:::
+::: {.day-time}
+Upcoming --- Fall 2026 | Date TBD | 1 hour | Bring a laptop and a course or session you teach
+:::
+:::
+
+:::{.callout-note}
+## Upcoming Workshop
+This session is planned for the **fall** and is aimed at **faculty and instructors** who design courses and teaching materials. The date will be posted on the [home page](index.qmd#schedule) once scheduled. The agenda below is a draft. It builds on the prompting framework (PTCF) from [Workshop 1](workshop1.qmd) and the custom GPTs and shared Projects from [Workshop 3](workshop3.qmd).
+:::
+
+## What You'll Leave With
+
+By the end of this hour, you will be able to:
+
+1. Use **ChatGPT Edu** to draft and refine course materials---learning objectives, session outlines, active-learning activities, and assessments
+2. Use **Microsoft 365 Copilot** (including the new **Teach** experience) to turn an outline into a structured plan, slides, and a rubric inside Word, PowerPoint, and Excel
+3. Use **NotebookLM** to turn your own readings into student study guides, quizzes, and audio overviews---grounded in your sources
+4. Apply **backward design**: start from learning objectives and let AI help build aligned activities and assessments
+5. Apply the teaching-specific ethics: academic integrity and disclosure, accuracy, accessibility, and student-data privacy (FERPA)
+
+## Run of Show
+
+| Time | Segment |
+|------|---------|
+| 0:00--0:08 | Overview: where AI fits in course design; the three tools and what each does best |
+| 0:08--0:23 | Ethics & Governance: integrity, accuracy, accessibility, and FERPA |
+| 0:23--0:42 | Activity 1: From objectives to an aligned session (ChatGPT Edu + Copilot) |
+| 0:42--0:57 | Activity 2: Turn your readings into student materials (NotebookLM) |
+| 0:57--1:00 | Wrap-up and what to build next |
+
+---
+
+## Overview (8 min)
+
+**Start from the objective, not the slide.** Good course design works *backward*: decide what students should be able to do, then design the assessment that measures it, then build the activities and materials that get them there. AI is fast at drafting at every step---but you bring the disciplinary judgment about what is correct, current, and worth teaching.
+
+**Three tools, and what each is best at.**
+
+- **ChatGPT Edu** (Drexel-approved) --- open-ended drafting and refining: learning objectives, session outlines, case studies, discussion prompts, and rubrics. Build a **custom GPT** (from Workshop 3)---a "Lesson Planner" or "Rubric Builder"---once, and reuse and share it with colleagues. Use **GPT-5.5** when it appears in your model picker.
+- **Microsoft 365 Copilot** --- works *inside the files you already use*: turn an outline into a Word syllabus, a PowerPoint deck, or an Excel grading rubric. The new **Teach** experience builds structured, standards-aligned unit and lesson plans from a topic. (Teach is rolling out and is oriented toward K--12 education licenses; check what is available in your Drexel Microsoft 365 account. The build-from-a-topic structure still applies to course units.)
+- **NotebookLM** (Google) --- *source-grounded*: upload your own readings, lecture notes, or a chapter and generate study guides, quizzes, briefing docs, and **Audio Overviews**, all with inline citations to your sources. Excellent for student-facing materials---but a consumer/Google tool, so treat it as **Low Risk Data only** unless Drexel has approved it, and use public or non-sensitive sources. Confirm on Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+
+:::{.callout-tip}
+## The Mental Model: Backward Design
+Objectives → assessment → activities → materials. Ask AI to help at each step, in that order. If you start by generating slides, you get content with no target. If you start from the objective, everything you build has something to align to---and something to check it against.
+:::
+
+---
+
+## Ethics & Governance: Integrity, Accuracy, Accessibility, and Student Data (15 min)
+
+*The thread continues, now in the classroom. Earlier workshops covered how AI fails (W1), verification and disclosure (W2), and data and consent in team use (W3). Teaching adds its own duties: you are handing materials to students who will trust them, and you are handling student data.*
+
+**Model the integrity you ask of students.** Set a clear AI policy for your course, and be transparent with students about where and how you used AI to build it. The standard you hold students to is more credible when your own use is open and intentional.
+
+**Verify everything you hand to students.** AI invents facts, citations, statistics, and can misstate disciplinary content with confidence. Every figure, citation, and claim in a teaching material needs to be checked against the source---students will not catch errors you miss. The rule from Workshop 2 applies: *if you can't open it, you can't cite it.*
+
+**Design for accessibility and equity.** AI can help here---alt text for images, plain-language versions, adjusting reading level, drafting captions. It can also bake in bias or produce materials that don't meet accessibility standards. Check that examples and images are inclusive and that what you publish is accessible to every student.
+
+**Protect student data (FERPA).** Protected student records---grades, rosters, identifiable student work---must not go into a tool that isn't approved for that data. Grading or giving feedback on identifiable student work requires an approved tool *and* an approved use case; otherwise de-identify first. For NotebookLM and other consumer tools, use **public or synthetic content only**.
+
+:::{.callout-important}
+## Before You Publish a Teaching Material
+Four checks before it reaches students: **Accurate?** (every fact and citation verified against the source). **Accessible?** (readable, captioned, alt-text where needed). **Inclusive?** (examples and images represent your students). **Compliant?** (no protected student data went into an unapproved tool). If any answer is no, fix it before you hand it out.
+:::
+
+---
+
+## Activity 1: From Objectives to an Aligned Session {.activity}
+
+::: {.activity}
+
+### Activity 1: From Objectives to an Aligned Session
+::: {.activity-meta}
+Duration: ~19 minutes | Format: Hands-on, choose your track. Use non-sensitive content appropriate under Drexel's Terms of Use.
+:::
+
+**Goal:** Go from a learning objective to an aligned session plan, an activity, and a draft assessment---backward design, with AI doing the drafting.
+
+#### Track A --- ChatGPT Edu (drafting and refining)
+
+1. Write **one or two learning objectives** for a session you teach (non-sensitive).
+2. Use a **PTCF prompt** (from Workshop 1):
+
+   > **Persona:** You are an instructional designer for graduate public health courses. **Task:** Draft a 50-minute session plan aligned to these objectives, with one active-learning activity and a short formative assessment (a check for understanding). **Context:** [your objectives; the audience; any constraints]. **Format:** Objectives, timed outline, activity instructions, and the assessment, in plain language.
+
+3. **Iterate:** ask for a rubric for the assessment, a short case study, or three discussion questions. Push it: *"Make this more active,"* *"Does the assessment actually measure objective 2?"*
+
+#### Track B --- Microsoft 365 Copilot (build it in your files)
+
+1. Drop your outline into **Word** and ask Copilot to format it as a session plan or syllabus section.
+2. In **PowerPoint**, ask Copilot to draft a slide deck from the outline; in **Excel**, ask it to build a grading rubric as a table.
+3. If the **Teach** experience is available in your account, generate a structured unit or lesson plan from your topic, then refine it.
+
+#### Reflection
+
+- Where did the AI's draft need your disciplinary judgment to be correct or current?
+- Did the assessment actually measure the objective---or just stay on the topic?
+
+:::
+
+---
+
+## Activity 2: Turn Your Readings into Student Materials {.activity}
+
+::: {.activity}
+
+### Activity 2: Turn Your Readings into Student Materials
+::: {.activity-meta}
+Duration: ~13 minutes | Format: Hands-on, individual. **Use public or non-sensitive sources only.**
+:::
+
+**Goal:** Turn your own sources into student-facing study materials that are grounded in---and cite back to---those sources.
+
+:::{.callout-warning}
+## Data Note --- Read First
+NotebookLM is a Google tool. Treat it as **Low Risk Data only** unless Drexel has approved it for higher classifications. For this activity, use **public or fully non-sensitive** sources---an open-access article, your own published slides, a public report. No student data, no unpublished or sensitive material. Confirm the current status on Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+:::
+
+#### Instructions
+
+1. In **NotebookLM**, create a notebook and upload **one to three public sources** (an open-access paper, your own slides, a public dataset summary).
+2. Generate a **study guide** and a set of **quiz questions** from the sources. Ask for a **glossary** of key terms.
+3. Generate an **Audio Overview**---a short, conversational summary students could listen to before class.
+4. **Check every output against the sources.** NotebookLM cites where each point came from; you confirm the accuracy, emphasis, and tone before anything reaches a student.
+
+#### Discussion
+
+- Which student material saved you the most time to produce?
+- Where did *grounding in your own sources* beat a general chatbot's answer?
+
+:::
+
+---
+
+## Wrap-Up (3 min)
+
+- Start from **objectives**; let AI help build aligned activities, assessments, and materials---you keep the disciplinary judgment.
+- **ChatGPT Edu** for open drafting and reusable custom GPTs; **Microsoft 365 Copilot** for building inside Office files; **NotebookLM** for source-grounded student materials (public data only).
+- Teaching ethics: **integrity and disclosure, verified accuracy, accessibility, and FERPA**.
+
+**Try this before the term:** pick one session you teach, write its objectives, and use ChatGPT Edu to draft an aligned activity and a quick formative assessment. Verify it, then teach it.
+
+:::{.callout-warning}
+## Data Classification and Student Records
+Confirm the approved data level for each tool on Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools) before putting real material into it. Never enter protected student records (grades, rosters, identifiable student work) into a tool that isn't approved for that data. NotebookLM and other consumer tools: public or synthetic content only.
+:::
+
+---
+
+## Related
+
+- [Workshop 1](workshop1.qmd) --- prompting with PTCF and the Drexel data rules
+- [Workshop 3](workshop3.qmd) --- custom GPTs and shared Projects, reusable here as a "Lesson Planner"
+- [Tools & Access](tools.qmd) --- data classification for ChatGPT Edu, Copilot, and consumer tools

@@ -1,0 +1,67 @@
+---
+title: "RAG & Knowledge Bases over Your Documents"
+---
+
+::: {.topic-badges}
+[Advanced]{.level-badge .level-advanced} · **Technical & Agentic** track · ~1 hour, self-paced
+:::
+
+[← Back to the Technical & Agentic track](technical-agentic.qmd){.track-back}
+
+*Make AI answer from your documents — not its training data — and cite where each point came from.*
+
+## What you'll be able to do
+
+- Build a searchable knowledge base over your own documents
+- Ground answers in sources with citations
+- Check retrieval quality and handle gaps
+
+## Overview
+
+Retrieval-augmented generation (RAG) connects a model to your document set: it retrieves relevant passages and answers from them, citing sources. NotebookLM is a friendly entry point; the same idea powers custom knowledge bases. It reduces hallucination but doesn't eliminate it.
+
+Quality depends on retrieval: if the right passage isn't found, the answer is wrong or guessed. You check that citations actually support the claim.
+
+## Practice activities
+
+::: {.callout-note collapse="true"}
+## Activity 1 · Advanced — Ground answers in your docs
+
+1. In **NotebookLM**, load 3–5 **public** sources.
+2. Ask a question and check that each cited passage **actually supports** the answer.
+3. Ask something the sources don't cover — see whether it admits the gap.
+:::
+
+::: {.callout-note collapse="true"}
+## Activity 2 · Advanced — Probe retrieval
+
+1. Ask the same question two ways and compare which passages it retrieves.
+2. Note where retrieval missed an obviously relevant source.
+:::
+
+## Check your readiness
+
+Answer these, then check — your score suggests whether to dive in or skim the readings first.
+
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions": [{"q": "RAG reduces hallucination by…", "options": ["Answering from retrieved sources with citations", "Using a bigger model", "Banning questions", "Hiding sources"], "answer": 0, "explain": "Grounding in sources curbs (but doesn't end) hallucination."}, {"q": "RAG answer quality depends most on…", "options": ["Whether the right passage was retrieved", "The font", "The number of sources", "The time of day"], "answer": 0, "explain": "Bad retrieval yields bad answers."}, {"q": "You verify a RAG answer by…", "options": ["Checking the cited passage supports the claim", "Trusting the citation marker", "Counting sources", "Reading the title"], "answer": 0, "explain": "A citation marker isn't proof — read it."}]}
+</script>
+</div>
+
+## Recommended readings
+
+From the AI readings library (ask the facilitator for access):
+
+- **Effective Context Engineering for AI Agents (Anthropic)** — retrieval and context principles.
+- **Beyond the Semantic Layer: Building a Context Layer for the Agentic Era** — architecting knowledge for AI.
+
+## Useful resources
+
+- [NotebookLM](https://notebooklm.google.com) — source-grounded notebooks (use public data).
+- [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with data rules.
+
+::: {.callout-warning}
+## Data rules
+Use **public or non-sensitive** documents unless the tool is approved for the data; verify cited passages. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+:::

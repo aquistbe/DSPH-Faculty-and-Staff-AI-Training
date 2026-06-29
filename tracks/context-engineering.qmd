@@ -1,0 +1,68 @@
+---
+title: "Context Engineering"
+---
+
+::: {.topic-badges}
+[Moderate]{.level-badge .level-moderate} · **Technical & Agentic** track · ~1 hour, self-paced
+:::
+
+[← Back to the Technical & Agentic track](technical-agentic.qmd){.track-back}
+
+*The quiet skill behind good AI output: structuring what the model sees.*
+
+## What you'll be able to do
+
+- Structure system prompts, instructions, and reference files
+- Decide what context to include — and what to leave out
+- Diagnose failures as context problems, not model problems
+
+## Overview
+
+When AI drifts, the fix is usually better context, not a bigger model. Context engineering is choosing what the model sees: the role, the standing instructions, the reference files, the examples — and what to leave out so the signal isn't buried.
+
+More context is not always better. Too much dilutes attention; the skill is picking the few things that matter for the task.
+
+## Practice activities
+
+::: {.callout-note collapse="true"}
+## Activity 1 · Moderate — Fix a drift with context
+
+1. Find a task where AI keeps missing what you want.
+2. Add a short **system instruction** and one **reference example** of the right output.
+3. Re-run; note that better context — not a longer prompt — fixed it.
+:::
+
+::: {.callout-note collapse="true"}
+## Activity 2 · Moderate — Trim the context
+
+1. Take a prompt with lots of background and remove everything non-essential.
+2. Re-run; confirm quality held or improved with less noise.
+:::
+
+## Check your readiness
+
+Answer these, then check — your score suggests whether to dive in or skim the readings first.
+
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions": [{"q": "When AI keeps drifting, the first fix is usually…", "options": ["Better context", "A bigger model", "A longer prompt", "Giving up"], "answer": 0, "explain": "Context shapes most of the quality."}, {"q": "More context is…", "options": ["Not always better — it can dilute focus", "Always better", "Irrelevant", "Only about length"], "answer": 0, "explain": "Signal beats volume."}, {"q": "Context engineering includes deciding…", "options": ["What to include and what to leave out", "The model's price", "The font", "The output file type"], "answer": 0, "explain": "Selection is the core skill."}]}
+</script>
+</div>
+
+## Recommended readings
+
+From the AI readings library (ask the facilitator for access):
+
+- **Effective Context Engineering for AI Agents (Anthropic)** — practical principles for context.
+- **State of Context Engineering in 2026 (Aurimas Griciūnas)** — the current landscape.
+- **Context Engineering for AI Agents: Lessons from Building Manus** — field lessons.
+
+## Useful resources
+
+- [Anthropic Prompt Library](https://docs.anthropic.com/en/resources/prompt-library/library) — worked prompt/context examples.
+- [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with data rules.
+
+::: {.callout-warning}
+## Data rules
+Only put **approved** data into context; reference files follow the same data rules as prompts. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+:::

@@ -1,0 +1,70 @@
+---
+title: "Data Analysis Advanced"
+---
+
+::: {.topic-badges}
+[Advanced]{.level-badge .level-advanced} · **Data & Analysis** track · ~1 hour, self-paced
+:::
+
+[← Back to the Data & Analysis track](data-analysis.qmd){.track-back}
+
+*Scaffold full pipelines with AI — then audit the subtle failure modes.*
+
+## What you'll be able to do
+
+- Use AI to scaffold a multistep modeling pipeline
+- Audit AI-built pipelines for leakage, validation, and metric choice
+- Know the limits of AI on tabular and time-series data
+
+## Overview
+
+For advanced work, AI can scaffold a full pipeline — feature prep, modeling, evaluation. The failure modes get subtler: data leakage, the wrong validation strategy, overconfident metrics. Your job is to audit each step and the assumptions behind it.
+
+Recent work cautions that "foundation models" don't automatically win on tabular or time-series data — classic methods often match or beat them. Skepticism is part of the method.
+
+## Practice activities
+
+::: {.callout-note collapse="true"}
+## Activity 1 · Advanced — Audit a pipeline
+
+1. Have AI build a small modeling pipeline on **public** data.
+2. Audit it for **data leakage, validation strategy, and metric choice**.
+3. Fix one real flaw and document what you changed.
+:::
+
+::: {.callout-note collapse="true"}
+## Activity 2 · Advanced — Compare approaches
+
+1. Ask AI to compare a **simple baseline** against a **complex model** on your task.
+2. Decide which is justified and why — complexity should earn its place.
+:::
+
+## Check your readiness
+
+Answer these, then check — your score suggests whether to dive in or skim the readings first.
+
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions": [{"q": "A subtle, high-impact error in AI-built pipelines is…", "options": ["Data leakage", "A typo in a label", "Slow runtime", "A missing chart"], "answer": 0, "explain": "Leakage inflates performance and is easy to miss — audit for it."}, {"q": "On tabular data, foundation models…", "options": ["Don't automatically beat classic methods", "Always win", "Can't be used", "Are required"], "answer": 0, "explain": "Evidence shows classic methods often match or beat them on tabular data."}, {"q": "Reproducibility for an AI-assisted analysis means…", "options": ["Logging prompts, versions, and seeds", "Saving a screenshot", "Trusting the output", "Nothing extra"], "answer": 0, "explain": "Record prompts, tool versions, and random seeds so others can reproduce it."}]}
+</script>
+</div>
+
+## Recommended readings
+
+From the AI readings library (ask the facilitator for access):
+
+- **Are Foundation Models Ready for Your Production Tabular Data?** — limits of large models on tabular tasks.
+- **Is Boosting Still All You Need for Tabular Data?** — a modeling reality check.
+- **Against Time-Series Foundation Models** — skepticism on forecasting hype.
+- **Implementing Statistical Guardrails for Non-Deterministic Agents** — keeping AI pipelines reliable.
+
+## Useful resources
+
+- [tidymodels](https://www.tidymodels.org) — modeling and validation framework in R.
+- [scikit-learn](https://scikit-learn.org) — machine learning in Python.
+- [Quarto](https://quarto.org) — reproducible analysis documents.
+
+::: {.callout-warning}
+## Data rules
+Audit on **public** data first; document prompts, versions, and seeds for reproducibility. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+:::

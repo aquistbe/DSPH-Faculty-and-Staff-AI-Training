@@ -1,0 +1,67 @@
+---
+title: "Creating & Using Loops"
+---
+
+::: {.topic-badges}
+[Advanced]{.level-badge .level-advanced} · **Technical & Agentic** track · ~1 hour, self-paced
+:::
+
+[← Back to the Technical & Agentic track](technical-agentic.qmd){.track-back}
+
+*Run the same step over a batch — the power and the risk of compounding errors.*
+
+## What you'll be able to do
+
+- Set up an iterative loop over many items
+- Add checks so a small early error doesn't compound
+- Decide when a loop should be supervised vs. fully manual
+
+## Overview
+
+A loop applies the same step across many items — summarize each of 50 documents, code each of 200 responses. It's where AI saves the most time and where errors scale fastest: one flawed step repeats everywhere.
+
+The discipline is sampling and spot-checking: validate the loop on a few items, run it, then audit a random sample of the output.
+
+## Practice activities
+
+::: {.callout-note collapse="true"}
+## Activity 1 · Advanced — Loop with a checkpoint
+
+1. Take ~10 **non-sensitive** items and one task (e.g., extract a field from each).
+2. Run the loop, then **audit a random sample** for errors.
+3. Fix the instruction and re-run only the failures.
+:::
+
+::: {.callout-note collapse="true"}
+## Activity 2 · Advanced — Decide the guardrail
+
+1. Write the rule for when this loop needs human review of every item vs. a sample.
+2. Tie it to stakes and reversibility.
+:::
+
+## Check your readiness
+
+Answer these, then check — your score suggests whether to dive in or skim the readings first.
+
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions": [{"q": "The main risk of looping AI over many items is…", "options": ["A small error repeats at scale", "It's too slow", "It uses tabs", "It's boring"], "answer": 0, "explain": "Errors compound across the batch."}, {"q": "Before trusting a loop's output, you should…", "options": ["Audit a random sample", "Trust it if it ran", "Check the title", "Count the items"], "answer": 0, "explain": "Sampling catches systematic errors."}, {"q": "Higher-stakes loops need…", "options": ["More human review per item", "Less review", "No review", "A bigger model"], "answer": 0, "explain": "Oversight scales with stakes."}]}
+</script>
+</div>
+
+## Recommended readings
+
+From the AI readings library (ask the facilitator for access):
+
+- **Loop Library: Repeatable AI Agent Workflows (Forward Future)** — patterns for reliable loops.
+- **The Coming Loop (Armin Ronacher)** — where looped automation is heading.
+
+## Useful resources
+
+- [OpenAI: Building Agents](https://platform.openai.com/docs/guides/agents) — loop and workflow patterns.
+- [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with data rules.
+
+::: {.callout-warning}
+## Data rules
+Loop over **non-sensitive** items; audit a sample before acting on the results. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+:::

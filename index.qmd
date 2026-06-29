@@ -14,9 +14,11 @@ A hands-on workshop series for staff and faculty
 
 ## Welcome
 
-This is a growing series of short, hands-on workshops introducing AI tools for staff and faculty at the Dornsife School of Public Health. Each workshop runs **one hour**: a brief overview followed by hands-on activities you can complete in the session. Three workshops run this summer, with more scheduled for fall---an Adobe documents-and-visuals session and an intro to agentic AI.
+This is a growing series of short, hands-on workshops introducing AI tools for staff and faculty at the Dornsife School of Public Health. Each workshop runs **one hour**: a brief overview followed by hands-on activities you can complete in the session. Three workshops run this summer, with more scheduled for fall---an Adobe documents-and-visuals session, an intro to agentic AI, and a session on AI for curriculum development.
 
 The series is designed for everyone at DSPH---administrative staff, research staff, and faculty. No prior experience with AI is required. The focus is practical: what these tools can do, how to use them to save time on real work, and how to bring them into team projects.
+
+Prefer to learn at your own pace? The new **[Self-Paced Tracks](tracks.qmd)** turn these topics into self-guided pages with practice activities, readiness quizzes, and curated readings---starting with a full **Data & Analysis** track.
 
 :::{.callout-note}
 ## Series Details
@@ -39,12 +41,13 @@ The series is designed for everyone at DSPH---administrative staff, research sta
 | [3](workshop3.qmd) | **Collaboration on Projects** | Use AI for meetings, project planning, shared prompts, and team documents |
 | [4](workshop4.qmd) | **Documents & Visuals (Adobe)** *(Fall)* | Acrobat AI Assistant for PDFs and Firefly for infographics and communication graphics |
 | [5](workshop5.qmd) | **Getting Started with Agentic AI** *(Fall)* | What "agentic" means, plus setting up assistants with instructions, knowledge, and reusable skills |
+| [6](workshop6.qmd) | **AI for Curriculum Development** *(Fall)* | Design courses and build teaching materials with ChatGPT Edu, Microsoft 365 Copilot (Teach), and NotebookLM |
 
-The summer workshops build on each other but each can stand alone---come to all three, or drop into the ones most relevant to your work. Workshops 4 and 5 are scheduled for fall.
+The summer workshops build on each other but each can stand alone---come to all three, or drop into the ones most relevant to your work. Workshops 4, 5, and 6 are scheduled for fall.
 
 :::{.callout-note}
 ## A thread through every session: ethics & governance
-Every workshop opens with a short, themed **ethics and governance** segment---how AI fails and who's accountable (W1), verification and disclosure (W2), data and consent in team use (W3), representation and bias in AI media (W4), and oversight of agents (W5). Together they build a practical foundation for responsible AI use at DSPH, grounded in Drexel policy and the [ASPPH](resources.qmd) and WHO frameworks.
+Every workshop opens with a short, themed **ethics and governance** segment---how AI fails and who's accountable (W1), verification and disclosure (W2), data and consent in team use (W3), representation and bias in AI media (W4), oversight of agents (W5), and academic integrity, accuracy, accessibility, and student-data privacy in teaching (W6). Together they build a practical foundation for responsible AI use at DSPH, grounded in Drexel policy and the [ASPPH](resources.qmd) and WHO frameworks.
 :::
 
 ## Quick Links
@@ -72,6 +75,14 @@ Every workshop opens with a short, themed **ethics and governance** segment---ho
 :::
 
 ::: {.quick-link-card}
+[**Workshop 6**<br>Curriculum Development · Fall](workshop6.qmd){.card-day}
+:::
+
+::: {.quick-link-card}
+[**Self-Paced Tracks**<br>Learn topics on your own, at your level](tracks.qmd){.card-day}
+:::
+
+::: {.quick-link-card}
 [**Tools & Access**<br>ChatGPT Edu, Copilot, Adobe, more](tools.qmd){.card-day}
 :::
 
@@ -96,6 +107,7 @@ Research staff who do statistical coding and analysis: we will run **specialized
 | 3 | Collaboration on Projects | Tuesday, July 14, 2026 | 1:00--2:00 PM | TBD | [Open ↗](slides/workshop3.html){target="_blank"} · [PPTX](slides/DSPH_Workshop3_Collaboration_on_Projects.pptx) |
 | 4 | Documents & Visuals (Adobe) | Fall 2026 --- TBD | 1:00--2:00 PM | TBD | --- |
 | 5 | Getting Started with Agentic AI | Fall 2026 --- TBD | 1:00--2:00 PM | TBD | --- |
+| 6 | AI for Curriculum Development | Fall 2026 --- TBD | 1:00--2:00 PM | TBD | --- |
 
 ## Before You Come {.checklist}
 

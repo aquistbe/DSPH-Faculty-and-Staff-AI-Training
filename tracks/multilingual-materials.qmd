@@ -1,0 +1,67 @@
+---
+title: "Multilingual & Culturally-Adapted Materials"
+---
+
+::: {.topic-badges}
+[Moderate]{.level-badge .level-moderate} · **Communication & Dissemination** track · ~1 hour, self-paced
+:::
+
+[← Back to the Communication & Dissemination track](communication.qmd){.track-back}
+
+*Reach more communities by translating and adapting materials — with a quality check, not blind trust.*
+
+## What you'll be able to do
+
+- Translate outreach materials into another language with AI
+- Adapt for cultural context, not just words
+- Quality-check with back-translation and a human reviewer
+
+## Overview
+
+AI translates quickly and can adapt tone for a community, but machine translation makes confident errors — especially with idioms, health terms, and culturally specific concepts. A human speaker should review anything that reaches the public.
+
+Cultural adaptation is more than translation: examples, framing, and imagery may need to change. AI can propose options; community knowledge decides.
+
+## Practice activities
+
+::: {.callout-note collapse="true"}
+## Activity 1 · Moderate — Translate and back-translate
+
+1. Translate a short outreach message into a target language with AI.
+2. Ask a **fresh AI session (or person)** to translate it back to English.
+3. Compare to the original — investigate any drift in meaning.
+:::
+
+::: {.callout-note collapse="true"}
+## Activity 2 · Moderate — Adapt, don't just translate
+
+1. Ask AI how the message's **examples or framing** might land differently in the target community.
+2. Draft an adapted version; flag what a community reviewer must confirm.
+:::
+
+## Check your readiness
+
+Answer these, then check — your score suggests whether to dive in or skim the readings first.
+
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions": [{"q": "Machine translation of health materials should be…", "options": ["Reviewed by a human speaker before public use", "Published as-is if fluent", "Avoided entirely", "Trusted for idioms"], "answer": 0, "explain": "Confident translation errors are common; a human review is essential."}, {"q": "Back-translation helps you…", "options": ["Catch meaning that drifted in translation", "Make it shorter", "Add citations", "Change the font"], "answer": 0, "explain": "Translating back surfaces distortions."}, {"q": "Cultural adaptation means…", "options": ["Adjusting examples and framing, not just words", "Only swapping words", "Using a bigger model", "Nothing extra"], "answer": 0, "explain": "Adaptation goes beyond literal translation."}]}
+</script>
+</div>
+
+## Recommended readings
+
+From the AI readings library (ask the facilitator for access):
+
+- **Watch Your Tone: Language Machines as Writing Technology** — how language models handle voice and nuance.
+- **A Framework for Technical Writing in the Age of LLMs** — accuracy discipline that applies across languages.
+
+## Useful resources
+
+- [CDC Health Literacy](https://www.cdc.gov/healthliteracy/) — clear-communication and audience guidance.
+- [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with data rules.
+
+::: {.callout-warning}
+## Data rules
+Use **non-sensitive** outreach content; have a human speaker verify before publishing. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+:::

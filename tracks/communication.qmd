@@ -1,0 +1,32 @@
+---
+title: "Communication & Dissemination Track"
+---
+
+::: {.topic-badges}
+Self-paced track · 5 topics · novice → advanced
+:::
+
+[← All self-paced tracks](../tracks.qmd){.track-back}
+
+Use AI to write, translate, and disseminate public-health work — from grants and manuscripts to plain-language and multilingual materials. Every page assumes you've done **[Workshop 1](../workshop1.qmd)** (prompting and the Drexel data rules). The throughline: AI drafts; you verify and own every fact, citation, and claim.
+
+## Difficulty levels
+
+[Novice]{.level-badge .level-novice} &nbsp; getting started — no prior experience needed.
+[Moderate]{.level-badge .level-moderate} &nbsp; comfortable with some AI use.
+[Advanced]{.level-badge .level-advanced} &nbsp; experienced users going deep.
+
+## Topics
+
+| # | Topic | Level | You'll be able to… |
+|---|-------|-------|--------------------|
+| 1 | [Science Communication & Plain-Language Translation](science-communication.qmd) | [Novice]{.level-badge .level-novice} | Turn findings into briefs, fact sheets, and posts at the right reading level |
+| 2 | [Grant & Proposal Development](grant-proposal-development.qmd) | [Moderate]{.level-badge .level-moderate} | Draft aims, biosketches, and justifications, then tighten to funder rules |
+| 3 | [Literature Review & Evidence Synthesis](literature-review.qmd) | [Moderate]{.level-badge .level-moderate} | Build searches, screen abstracts, and summarize — verifying every citation |
+| 4 | [Multilingual & Culturally-Adapted Materials](multilingual-materials.qmd) | [Moderate]{.level-badge .level-moderate} | Translate and culturally adapt outreach, with back-translation QA |
+| 5 | [Manuscript Preparation & Peer Review](manuscript-peer-review.qmd) | [Advanced]{.level-badge .level-advanced} | Draft sections and reviewer responses; respect peer-review confidentiality |
+
+::: {.callout-warning}
+## Data rules apply throughout
+Use **public or non-sensitive** data for every activity, and match any tool to Drexel's data classification. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+:::

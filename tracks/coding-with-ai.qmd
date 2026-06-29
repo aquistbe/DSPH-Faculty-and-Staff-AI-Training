@@ -1,0 +1,69 @@
+---
+title: "Coding with AI"
+---
+
+::: {.topic-badges}
+[Moderate]{.level-badge .level-moderate} · **Data & Analysis** track · ~1 hour, self-paced
+:::
+
+[← Back to the Data & Analysis track](data-analysis.qmd){.track-back}
+
+*A strong pair-programmer for R, Python, and Stata — that you always review.*
+
+## What you'll be able to do
+
+- Generate, explain, debug, and refactor code with AI
+- Review AI-written code critically before running it
+- Know what must never go into a code prompt
+
+## Overview
+
+AI is a capable pair-programmer: it drafts, explains, and fixes code fast. The risk is running code you don't understand. Read it, test it on a small case, and keep the parts that matter under your eye.
+
+Use approved tools, and never paste sensitive data, credentials, or API keys into a prompt.
+
+## Practice activities
+
+::: {.callout-note collapse="true"}
+## Activity 1 · Moderate — Explain and fix
+
+1. Take a script that errors (yours or a sample). Ask AI to **explain the error** and propose a fix.
+2. Apply it, run, and confirm the fix actually solved the problem — not just silenced it.
+:::
+
+::: {.callout-note collapse="true"}
+## Activity 2 · Moderate — Refactor with a test
+
+1. Ask AI to **refactor a function** for clarity and to write a small **sanity-check test**.
+2. Run the test. Note exactly what changed and why you accepted it.
+:::
+
+## Check your readiness
+
+Answer these, then check — your score suggests whether to dive in or skim the readings first.
+
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions": [{"q": "Before running AI-written code on real data, you should…", "options": ["Read it and test it on a small/sample case", "Run it immediately", "Trust it if it looks clean", "Email it to IT"], "answer": 0, "explain": "Reading and small-scale testing is how you catch subtle errors."}, {"q": "What should never go into a code prompt?", "options": ["Credentials, keys, or sensitive data", "Comments", "Variable names", "A sample of public data"], "answer": 0, "explain": "Secrets and sensitive data don't belong in prompts."}, {"q": "AI works best in coding as…", "options": ["A pair-programmer you review", "An autonomous replacement", "A compiler", "A database"], "answer": 0, "explain": "You stay the reviewer and decision-maker."}]}
+</script>
+</div>
+
+## Recommended readings
+
+From the AI readings library (ask the facilitator for access):
+
+- **Coding agents for data analysis** — using coding agents on real analysis tasks.
+- **Coding agents in the social sciences (Anthropic)** — directly relevant to research workflows.
+- **Judgment Is the Skill That Matters Most in the AI Era** — why reviewing AI code is the real skill.
+- **A Toolkit for Connecting R and Large Language Models (btw)** — calling LLMs from within R.
+
+## Useful resources
+
+- [GitHub Copilot](https://github.com/features/copilot) — in-editor code assistance.
+- [Posit / RStudio](https://posit.co) — R/Python environment with AI integrations.
+- [Visual Studio Code](https://code.visualstudio.com) — editor with AI coding extensions.
+
+::: {.callout-warning}
+## Data rules
+Never paste credentials or sensitive data into prompts; run AI code on **non-sensitive** samples first. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+:::

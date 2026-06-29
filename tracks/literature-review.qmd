@@ -1,0 +1,69 @@
+---
+title: "Literature Review & Evidence Synthesis"
+---
+
+::: {.topic-badges}
+[Moderate]{.level-badge .level-moderate} · **Communication & Dissemination** track · ~1 hour, self-paced
+:::
+
+[← Back to the Communication & Dissemination track](communication.qmd){.track-back}
+
+*Speed the mechanical parts of a review while keeping the judgment and the citations yours.*
+
+## What you'll be able to do
+
+- Use AI to draft search strategies and screening criteria
+- Summarize and compare studies with verification
+- Avoid fabricated citations and keep a defensible record
+
+## Overview
+
+AI can draft a search strategy, suggest inclusion criteria, and summarize what a set of papers says. It can also invent references that look real, so every citation must be checked against the actual paper.
+
+For a defensible review, keep AI in an assisting role: it speeds screening and summarizing, but you decide what's included and confirm what each source actually says.
+
+## Practice activities
+
+::: {.callout-note collapse="true"}
+## Activity 1 · Moderate — Draft a search strategy
+
+1. Describe your question (PICO-style) to AI.
+2. Ask for **search terms and a Boolean strategy** for one database.
+3. Run it in the real database; refine the terms based on what returns.
+:::
+
+::: {.callout-note collapse="true"}
+## Activity 2 · Moderate — Summarize and verify
+
+1. Paste 2–3 **open-access** abstracts and ask AI to compare findings in a table.
+2. Open each paper and confirm the summary is faithful — especially numbers.
+3. Note any place the AI overstated or blurred a finding.
+:::
+
+## Check your readiness
+
+Answer these, then check — your score suggests whether to dive in or skim the readings first.
+
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions": [{"q": "The single biggest risk in AI-assisted reviews is…", "options": ["Fabricated or misattributed citations", "Slow searches", "Too many results", "Boring summaries"], "answer": 0, "explain": "If you can't open it, you can't cite it — verify every reference."}, {"q": "Who decides what's included in the review?", "options": ["You, against explicit criteria", "The AI", "The database", "Whoever has the login"], "answer": 0, "explain": "Inclusion is a judgment call you own and document."}, {"q": "AI summaries of papers should be…", "options": ["Checked against the source, especially numbers", "Trusted if fluent", "Pasted directly", "Ignored"], "answer": 0, "explain": "Fluency is not accuracy."}]}
+</script>
+</div>
+
+## Recommended readings
+
+From the AI readings library (ask the facilitator for access):
+
+- **CoPaper.AI — Your AI Research Co-Author** — what AI research assistants can and can't do.
+- **Read-Paper-Write-Code: Agentic Reproduction of Social-Science Results (Kohler et al.)** — AI reproducing analyses — promise and limits.
+
+## Useful resources
+
+- [PRISMA](https://www.prisma-statement.org) — reporting standard for systematic reviews.
+- [Rayyan](https://www.rayyan.ai) — screening tool for reviews.
+- [Covidence](https://www.covidence.org) — systematic-review management.
+
+::: {.callout-warning}
+## Data rules
+Use **public/open-access** sources for practice; verify every citation against the original. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+:::

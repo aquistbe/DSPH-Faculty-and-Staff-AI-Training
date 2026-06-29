@@ -1,0 +1,68 @@
+---
+title: "Geospatial / GIS & Built Environment"
+---
+
+::: {.topic-badges}
+[Advanced]{.level-badge .level-advanced} · **Methods & Study Design** track · ~1 hour, self-paced
+:::
+
+[← Back to the Methods & Study Design track](methods-study-design.qmd){.track-back}
+
+*AI support for the spatial methods behind built-environment and environmental-health research.*
+
+## What you'll be able to do
+
+- Use AI to scaffold mapping and spatial-join code
+- Work with street-level and satellite imagery responsibly
+- Validate spatial results and watch for ecological fallacy
+
+## Overview
+
+AI can scaffold geospatial code (mapping, buffers, spatial joins) and help interpret street-level or satellite imagery — directly useful for built-environment and environmental-health work. As with all coding, you read and validate what it produces.
+
+Spatial work has its own traps: projection errors, edge effects, and the ecological fallacy. AI won't catch these for you; methodological judgment does.
+
+## Practice activities
+
+::: {.callout-note collapse="true"}
+## Activity 1 · Advanced — Scaffold a spatial join
+
+1. Describe two **public** spatial datasets and the join you want.
+2. Ask AI for the code (e.g., R sf or Python geopandas) and **explain each step**.
+3. Run it; validate against a known case.
+:::
+
+::: {.callout-note collapse="true"}
+## Activity 2 · Advanced — Interpret imagery carefully
+
+1. Use AI to describe features in a **public** street/satellite image.
+2. Note where it guessed, and what a human rater must confirm.
+:::
+
+## Check your readiness
+
+Answer these, then check — your score suggests whether to dive in or skim the readings first.
+
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions": [{"q": "AI-written geospatial code should be…", "options": ["Read and validated against a known case", "Trusted if it runs", "Published immediately", "Ignored"], "answer": 0, "explain": "Validation catches projection and join errors."}, {"q": "The ecological fallacy is…", "options": ["Inferring individual traits from area-level data", "A mapping bug", "A file format", "A model type"], "answer": 0, "explain": "A classic spatial-analysis trap AI won't catch for you."}, {"q": "Imagery interpretation by AI needs…", "options": ["Human confirmation of what it guessed", "No review", "A bigger model only", "Nothing"], "answer": 0, "explain": "Vision models guess; you verify."}]}
+</script>
+</div>
+
+## Recommended readings
+
+From the AI readings library (ask the facilitator for access):
+
+- **New Earth Observation Tech Is Boosting Climate Intelligence (WEF)** — satellite data for environmental health.
+- **Charting the Future of Earth Observation (WEF, 2024)** — where geospatial AI is heading.
+
+## Useful resources
+
+- [QGIS](https://qgis.org) — free, open-source GIS.
+- [geopandas](https://geopandas.org) — spatial analysis in Python.
+- [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with data rules.
+
+::: {.callout-warning}
+## Data rules
+Use **public** spatial data and imagery; avoid uploading images with identifiable people to unapproved tools. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+:::

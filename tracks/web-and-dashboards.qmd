@@ -1,0 +1,69 @@
+---
+title: "AI-Assisted Web & Dashboards"
+---
+
+::: {.topic-badges}
+[Moderate]{.level-badge .level-moderate} · **Data & Analysis** track · ~1 hour, self-paced
+:::
+
+[← Back to the Data & Analysis track](data-analysis.qmd){.track-back}
+
+*Turn data into a shareable dashboard or web page — and verify every number.*
+
+## What you'll be able to do
+
+- Generate a working dashboard or simple web page from your data
+- Iterate on layout and visuals with AI, one change at a time
+- Verify figures and keep published data non-sensitive
+
+## Overview
+
+AI can generate a working dashboard or HTML page from your data and a description — charts, filters, tables — in minutes. You guide the design and verify the numbers.
+
+Anything you publish should use non-sensitive data, and every displayed figure should be checked against the source before sharing.
+
+## Practice activities
+
+::: {.callout-note collapse="true"}
+## Activity 1 · Moderate — Describe a dashboard
+
+1. Describe your data and the **2–3 views** you want (e.g., a trend, a map, a summary table).
+2. Have AI generate a **self-contained HTML dashboard** (like the crash-data explorers in your course).
+3. Open it and **check one figure** against the underlying data.
+:::
+
+::: {.callout-note collapse="true"}
+## Activity 2 · Moderate — Iterate the design
+
+1. Ask for **one change at a time** — add a filter, change a chart type, fix a label.
+2. Keep the prompts that worked in a short note for next time.
+:::
+
+## Check your readiness
+
+Answer these, then check — your score suggests whether to dive in or skim the readings first.
+
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions": [{"q": "Before publishing an AI-built dashboard, verify…", "options": ["Every displayed figure against the data", "Only the title", "The color theme", "Nothing"], "answer": 0, "explain": "Published figures must match the source data."}, {"q": "Data appropriate for a published dashboard is…", "options": ["Non-sensitive or public", "Identifiable records", "PHI", "A private roster"], "answer": 0, "explain": "Only non-sensitive data belongs in something you share."}, {"q": "The best way to iterate with AI on a layout is…", "options": ["One change at a time", "Rewrite everything each time", "Never iterate", "Change ten things at once"], "answer": 0, "explain": "Small iterations are easier to evaluate and debug."}]}
+</script>
+</div>
+
+## Recommended readings
+
+From the AI readings library (ask the facilitator for access):
+
+- **Claude Code Now Supports Artifacts** — generating interactive, shareable outputs.
+- **How to Do Agentic Data Science (Eric J. Ma)** — building analysis products end-to-end.
+- **AI Agents for Data Scientists: Automations vs Agents** — where automation helps in delivery.
+
+## Useful resources
+
+- [Quarto Dashboards](https://quarto.org/docs/dashboards/) — build dashboards from R/Python.
+- [Shiny](https://shiny.posit.co) — interactive web apps from R or Python.
+- [Plotly](https://plotly.com/graphing-libraries/) — interactive charts for web output.
+
+::: {.callout-warning}
+## Data rules
+Publish only **non-sensitive** data; verify every figure before sharing externally. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+:::

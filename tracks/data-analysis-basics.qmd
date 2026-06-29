@@ -1,0 +1,71 @@
+---
+title: "Data Analysis Basics"
+---
+
+::: {.topic-badges}
+[Novice]{.level-badge .level-novice} · **Data & Analysis** track · ~1 hour, self-paced
+:::
+
+[← Back to the Data & Analysis track](data-analysis.qmd){.track-back}
+
+*Ask clear questions of a dataset and get a first, checkable answer with AI.*
+
+## What you'll be able to do
+
+- Ask clear questions of a dataset and get a first answer with AI help
+- Have AI generate and explain simple summaries and a chart (R or Python)
+- Spot when an AI answer needs checking against the data
+
+## Overview
+
+AI can read a dataset's description and draft the steps or code to answer a question — loading it, summarizing it, making a quick chart. You stay in charge of whether the question is sensible and whether the answer is right.
+
+Start small and verifiable: one dataset, one question, one chart. Confirm a number or two against what you already know before you trust anything.
+
+## Practice activities
+
+::: {.callout-note collapse="true"}
+## Activity 1 · Novice — Interview a dataset
+
+1. Take a **public or synthetic** CSV (e.g., a de-identified sample). Paste the column names and 5 sample rows into ChatGPT Edu.
+2. Ask: *“What questions could this dataset answer? List five, from simple to harder.”*
+3. Pick one question and ask it to compute the answer **and show the steps**.
+4. Verify one number by hand or against a value you already know.
+:::
+
+::: {.callout-note collapse="true"}
+## Activity 2 · Novice — From question to chart
+
+1. Ask AI to write **R (or Python)** code that makes one chart answering your question.
+2. Run it, then ask it to **explain each line** in plain language.
+3. Change one thing — a filter or a grouping — and re-run. Note what changed and why.
+:::
+
+## Check your readiness
+
+Answer these, then check — your score suggests whether to dive in or skim the readings first.
+
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions": [{"q": "What's the safest first step before trusting an AI-computed statistic?", "options": ["Run it twice", "Check it against the raw data or a known value", "Ask the AI if it's sure", "Use a bigger model"], "answer": 1, "explain": "Verification against the source is the habit that catches confident errors."}, {"q": "You have a spreadsheet of identifiable patient records. Which tool is appropriate?", "options": ["A Drexel-approved tool cleared for that data level", "Any chatbot you trust", "NotebookLM", "A personal ChatGPT account"], "answer": 0, "explain": "Match the tool to Drexel's data classification; identifiable records need an approved tool."}, {"q": "Why start with one question and one chart?", "options": ["It's faster to verify and learn from", "Charts are required", "AI can only do one thing", "It saves tokens"], "answer": 0, "explain": "Small, verifiable steps build judgment and catch errors early."}]}
+</script>
+</div>
+
+## Recommended readings
+
+From the AI readings library (ask the facilitator for access):
+
+- **AI Agents for Data Scientists: Automations vs Agents** — when AI should assist vs. when to keep manual control.
+- **How to Do Agentic Data Science (Eric J. Ma)** — a practical workflow for AI-assisted analysis.
+- **Mastering the Data Science Human Skills AI Can't Touch** — the judgment you still own.
+
+## Useful resources
+
+- [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool for this work, with data rules.
+- [Posit / RStudio](https://posit.co) — the standard environment for R analysis.
+- [tidyverse](https://www.tidyverse.org) — R packages for reading, summarizing, and plotting data.
+
+::: {.callout-warning}
+## Data rules
+Use **public or non-sensitive** data for practice; never paste identifiable records into an unapproved tool. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+:::

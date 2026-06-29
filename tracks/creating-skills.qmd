@@ -1,0 +1,67 @@
+---
+title: "Creating & Using Skills"
+---
+
+::: {.topic-badges}
+[Moderate]{.level-badge .level-moderate} · **Technical & Agentic** track · ~1 hour, self-paced
+:::
+
+[← Back to the Technical & Agentic track](technical-agentic.qmd){.track-back}
+
+*Turn a prompt that works into a reusable, shareable skill your team can run again and again.*
+
+## What you'll be able to do
+
+- Write a reusable skill: job, steps, output, and guardrails
+- Reuse it across tasks and share it with colleagues
+- Know when a skill beats a one-off prompt
+
+## Overview
+
+A skill is a saved package of instructions for one job done well — "turn notes into our standard recap." Write it once; the assistant applies it whenever that job comes up. Claude has a formal Skills feature; in ChatGPT Edu, custom GPTs and project instructions do the same.
+
+Most quality lives in the instructions, not the model. A good skill names the job, the steps, the output format, and the guardrails.
+
+## Practice activities
+
+::: {.callout-note collapse="true"}
+## Activity 1 · Moderate — Write a skill
+
+1. Pick a repeated task (a recap, a rewrite, a checklist).
+2. Write a skill with **job, steps, output format, and guardrails** (no sensitive data).
+3. Test it on two different inputs; tighten where it drifts.
+:::
+
+::: {.callout-note collapse="true"}
+## Activity 2 · Moderate — Share and reuse
+
+1. Save the skill as a custom GPT or shared doc your team can reach.
+2. Have a colleague run it and note where the instructions need to be clearer.
+:::
+
+## Check your readiness
+
+Answer these, then check — your score suggests whether to dive in or skim the readings first.
+
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions": [{"q": "Most of a skill's quality comes from…", "options": ["Clear instructions", "A bigger model", "More examples", "Longer prompts"], "answer": 0, "explain": "Instructions carry the quality."}, {"q": "A skill is worth writing when a task is…", "options": ["Repeated and worth standardizing", "One-off", "Trivial", "Secret"], "answer": 0, "explain": "Reuse is the payoff."}, {"q": "A good skill includes…", "options": ["Job, steps, output, and guardrails", "Just a title", "Only an example", "A password"], "answer": 0, "explain": "Those four parts make it reliable and shareable."}]}
+</script>
+</div>
+
+## Recommended readings
+
+From the AI readings library (ask the facilitator for access):
+
+- **The Complete Guide to Building Skills for Claude** — how to structure a reusable skill.
+- **AI Agent Skills: Why Skill Curation Is the Next Bottleneck** — keeping a useful library of skills.
+
+## Useful resources
+
+- [Claude Skills (docs)](https://docs.claude.com) — Claude's formal Skills feature.
+- [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with data rules.
+
+::: {.callout-warning}
+## Data rules
+Keep sensitive data out of skill instructions and example files; share **inside Drexel** only. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+:::

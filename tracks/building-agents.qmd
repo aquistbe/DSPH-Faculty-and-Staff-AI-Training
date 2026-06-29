@@ -1,0 +1,67 @@
+---
+title: "Building AI Agents with Natural Language"
+---
+
+::: {.topic-badges}
+[Moderate]{.level-badge .level-moderate} · **Technical & Agentic** track · ~1 hour, self-paced
+:::
+
+[← Back to the Technical & Agentic track](technical-agentic.qmd){.track-back}
+
+*Build an assistant that takes steps toward a goal, with guardrails you set in plain language.*
+
+## What you'll be able to do
+
+- Assemble an agent from instructions, knowledge, and tools
+- Set guardrails and human-approval points
+- Decide what should — and shouldn't — be handed to an agent
+
+## Overview
+
+An agent takes a goal and carries out several steps toward it, checking in as needed. In ChatGPT Edu you can build one from instructions plus a knowledge file — no code. The building blocks are the same everywhere: instructions, knowledge, tools, skills.
+
+Autonomy raises the stakes. Keep agents on low-stakes, reversible, checkable work, and keep a human approval step before anything consequential.
+
+## Practice activities
+
+::: {.callout-note collapse="true"}
+## Activity 1 · Moderate — Build a simple agent
+
+1. In ChatGPT Edu, create an assistant with clear **instructions** and one **knowledge file** (non-sensitive).
+2. Give it a small multi-step task and watch how it plans.
+3. **Review each step**, not just the final output.
+:::
+
+::: {.callout-note collapse="true"}
+## Activity 2 · Moderate — Set the guardrails
+
+1. Write the agent's limits: what it must never do, when to stop and ask.
+2. Test a case that should trigger a stop; confirm it does.
+:::
+
+## Check your readiness
+
+Answer these, then check — your score suggests whether to dive in or skim the readings first.
+
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions": [{"q": "With an agent, you should review…", "options": ["Each step, not just the final output", "Only the final output", "Nothing", "Just the prompt"], "answer": 0, "explain": "Errors compound across steps."}, {"q": "Agents belong on tasks that are…", "options": ["Low-stakes, reversible, and checkable", "High-stakes and irreversible", "About someone's benefits", "Regulated by default"], "answer": 0, "explain": "Keep consequential decisions with a human."}, {"q": "Responsibility for an agent's output…", "options": ["Stays with you", "Transfers to the tool", "Transfers to the vendor", "Disappears"], "answer": 0, "explain": "You own the outcome."}]}
+</script>
+</div>
+
+## Recommended readings
+
+From the AI readings library (ask the facilitator for access):
+
+- **A Practical Guide to Building Agents (OpenAI)** — a clear primer on agent design.
+- **How Agents Use Systems Differently (Davis Treybig)** — what changes when AI acts, not just answers.
+
+## Useful resources
+
+- [OpenAI: Building Agents](https://platform.openai.com/docs/guides/agents) — agent-building documentation.
+- [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with data rules.
+
+::: {.callout-warning}
+## Data rules
+Keep agents on **non-sensitive**, reversible tasks; require human approval before anything consequential. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+:::

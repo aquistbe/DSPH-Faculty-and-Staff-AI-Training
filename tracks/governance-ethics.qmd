@@ -1,0 +1,32 @@
+---
+title: "Governance, Ethics & Equity Track"
+---
+
+::: {.topic-badges}
+Self-paced track · 5 topics · novice → moderate
+:::
+
+[← All self-paced tracks](../tracks.qmd){.track-back}
+
+The judgment layer: how to verify AI output, protect data, weigh environmental cost, and keep AI use fair and accountable in public-health work. These pages deepen the ethics thread that runs through every workshop. Start from **[Workshop 1](../workshop1.qmd)**.
+
+## Difficulty levels
+
+[Novice]{.level-badge .level-novice} &nbsp; getting started — no prior experience needed.
+[Moderate]{.level-badge .level-moderate} &nbsp; comfortable with some AI use.
+[Advanced]{.level-badge .level-advanced} &nbsp; experienced users going deep.
+
+## Topics
+
+| # | Topic | Level | You'll be able to… |
+|---|-------|-------|--------------------|
+| 1 | [Verifying AI Output](verifying-output.qmd) | [Novice]{.level-badge .level-novice} | A repeatable workflow to catch hallucinations and bad citations |
+| 2 | [AI & Environmental Sustainability](environmental-sustainability.qmd) | [Novice]{.level-badge .level-novice} | The energy and water cost of AI, and how to right-size use |
+| 3 | [Data Security & Classification Deep-Dive](data-security-classification.qmd) | [Novice]{.level-badge .level-novice} | Match every tool to Drexel's data classification |
+| 4 | [Responsible AI](responsible-ai.qmd) | [Moderate]{.level-badge .level-moderate} | Accountability, transparency, and governance in practice |
+| 5 | [AI Bias & Health Equity Audit](bias-equity-audit.qmd) | [Moderate]{.level-badge .level-moderate} | Test AI outputs across populations, not just on average |
+
+::: {.callout-warning}
+## Data rules apply throughout
+Use **public or non-sensitive** data for every activity, and match any tool to Drexel's data classification. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+:::

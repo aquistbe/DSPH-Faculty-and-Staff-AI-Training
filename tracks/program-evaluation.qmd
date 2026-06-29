@@ -1,0 +1,67 @@
+---
+title: "Program Evaluation"
+---
+
+::: {.topic-badges}
+[Moderate]{.level-badge .level-moderate} · **Methods & Study Design** track · ~1 hour, self-paced
+:::
+
+[← Back to the Methods & Study Design track](methods-study-design.qmd){.track-back}
+
+*Speed the scaffolding of an evaluation — logic models, indicators, plans — with expert review.*
+
+## What you'll be able to do
+
+- Draft a logic model and indicators with AI
+- Build an evaluation plan aligned to program goals
+- Verify indicators are measurable and meaningful
+
+## Overview
+
+AI can turn a program description into a logic model, propose indicators, and outline an evaluation plan. You confirm the indicators are actually measurable, aligned to goals, and not just plausible-sounding.
+
+Evaluation frameworks (e.g., CDC's) give structure; AI fills in drafts you refine. The judgment about what to measure — and what counts as success — stays yours.
+
+## Practice activities
+
+::: {.callout-note collapse="true"}
+## Activity 1 · Moderate — Draft a logic model
+
+1. Describe a program (inputs, activities, intended outcomes).
+2. Ask AI for a **logic model and 5 candidate indicators**.
+3. Check each indicator: is it measurable with data you can get?
+:::
+
+::: {.callout-note collapse="true"}
+## Activity 2 · Moderate — Outline the plan
+
+1. Ask AI for an evaluation plan aligned to the CDC framework steps.
+2. Mark which parts need a real data source vs. a placeholder.
+:::
+
+## Check your readiness
+
+Answer these, then check — your score suggests whether to dive in or skim the readings first.
+
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions": [{"q": "AI-proposed indicators should be checked for…", "options": ["Being measurable and aligned to goals", "Sounding impressive", "Quantity", "Novelty"], "answer": 0, "explain": "Measurable and aligned beats plausible."}, {"q": "What stays your judgment in evaluation?", "options": ["What to measure and what counts as success", "The font", "The export format", "Nothing"], "answer": 0, "explain": "Defining success is a substantive call."}, {"q": "Frameworks like CDC's provide…", "options": ["Structure that AI drafts can fill in", "A finished evaluation", "A data source", "A funder"], "answer": 0, "explain": "Structure plus AI drafting, refined by you."}]}
+</script>
+</div>
+
+## Recommended readings
+
+From the AI readings library (ask the facilitator for access):
+
+- **Beyond Vibes: How to Actually Evaluate AI Agents (Simon Wisdom)** — rigor in evaluation thinking (transferable).
+- **Making Classifier Evaluation Less Confusing** — clear thinking about metrics.
+
+## Useful resources
+
+- [CDC Program Evaluation Framework](https://www.cdc.gov/evaluation/) — the standard PH evaluation framework.
+- [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with data rules.
+
+::: {.callout-warning}
+## Data rules
+Use **non-sensitive** program details; participant data requires an approved tool. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+:::

@@ -1,0 +1,67 @@
+---
+title: "Image Generation & Annotation"
+---
+
+::: {.topic-badges}
+[Moderate]{.level-badge .level-moderate} · **Data & Analysis** track · ~1 hour, self-paced
+:::
+
+[← Back to the Data & Analysis track](data-analysis.qmd){.track-back}
+
+*Make communication graphics responsibly, and turn images into labeled data.*
+
+## What you'll be able to do
+
+- Generate communication graphics and critique them for accuracy and representation
+- Annotate images (bounding boxes, COCO) for analysis
+- Disclose AI-generated visuals and apply consistent labels
+
+## Overview
+
+Generative tools make graphics fast; annotation tools turn images into labeled data you can measure (street features, hazards, conditions). Both need judgment — generated images can mislead or misrepresent, and labels need consistent definitions.
+
+Disclose AI-generated visuals in published materials, and check that people and places are represented fairly.
+
+## Practice activities
+
+::: {.callout-note collapse="true"}
+## Activity 1 · Moderate — Generate and critique
+
+1. Use **Firefly / Adobe Express** to make one communication graphic for a public-health message.
+2. Critique it for **accuracy and representation**; note what you would disclose when publishing it.
+:::
+
+::: {.callout-note collapse="true"}
+## Activity 2 · Moderate — Annotate a handful
+
+1. In **Label Studio** (or similar), label ~10 images for one feature using **bounding boxes**.
+2. Export to **COCO** format and check your labels for **consistent definitions**.
+:::
+
+## Check your readiness
+
+Answer these, then check — your score suggests whether to dive in or skim the readings first.
+
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions": [{"q": "An AI-generated image used in a public health flyer should be…", "options": ["Checked for accuracy/representation and disclosed", "Used as-is", "Always avoided", "Never disclosed"], "answer": 0, "explain": "Review for accuracy and representation, and disclose AI-made visuals."}, {"q": "Good annotation labels need…", "options": ["Clear, consistent definitions", "Pretty colors", "A big model", "No review"], "answer": 0, "explain": "Consistent label definitions are what make annotations usable."}, {"q": "COCO is…", "options": ["A common format for image annotations", "A chatbot", "A chart type", "A statistic"], "answer": 0, "explain": "COCO is a widely used annotation/label format."}]}
+</script>
+</div>
+
+## Recommended readings
+
+From the AI readings library (ask the facilitator for access):
+
+- **Anthropic Has Caught Up to OpenAI in Image Understanding** — the state of multimodal image analysis.
+- **These New Tools Could Make AI Vision Systems Less Biased (MIT Tech Review)** — bias in computer vision and how it's addressed.
+
+## Useful resources
+
+- [Adobe Firefly](https://www.adobe.com/products/firefly.html) — commercially-safe image generation (Drexel Moderate-Risk data).
+- [Label Studio](https://labelstud.io) — open-source image and text annotation.
+- [CVAT](https://www.cvat.ai) — computer-vision annotation tool.
+
+::: {.callout-warning}
+## Data rules
+Don't upload images containing identifiable people or protected settings to unapproved tools; disclose AI-generated visuals. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+:::

@@ -1,0 +1,69 @@
+---
+title: "Manuscript Preparation & Peer Review"
+---
+
+::: {.topic-badges}
+[Advanced]{.level-badge .level-advanced} · **Communication & Dissemination** track · ~1 hour, self-paced
+:::
+
+[← Back to the Communication & Dissemination track](communication.qmd){.track-back}
+
+*Use AI to prepare manuscripts and assist review — within strict confidentiality and disclosure rules.*
+
+## What you'll be able to do
+
+- Draft and tighten manuscript sections, abstracts, and reviewer responses
+- Apply reporting checklists (STROBE/CONSORT) with AI help
+- Respect confidentiality and journal AI policies in peer review
+
+## Overview
+
+AI can draft a methods paragraph, tighten a results narrative, structure a cover letter, and organize point-by-point reviewer responses. The analysis, interpretation, and authorship remain yours, and AI use is typically disclosed.
+
+Peer review has a hard rule: a manuscript you're reviewing is **confidential**. Do not paste an unpublished manuscript into an AI tool, and follow each journal's policy on AI in review — many prohibit it outright.
+
+## Practice activities
+
+::: {.callout-note collapse="true"}
+## Activity 1 · Advanced — Tighten with a checklist
+
+1. Paste your own draft methods section and the relevant **reporting checklist** (e.g., STROBE).
+2. Ask AI which checklist items are missing or unclear.
+3. Revise; confirm each change is accurate to what you actually did.
+:::
+
+::: {.callout-note collapse="true"}
+## Activity 2 · Advanced — Structure a reviewer response
+
+1. Paste **your own** reviewer comments and your planned replies (not someone else's manuscript).
+2. Ask AI to organize a clear, point-by-point response letter.
+3. Verify every claim about what you changed is true.
+:::
+
+## Check your readiness
+
+Answer these, then check — your score suggests whether to dive in or skim the readings first.
+
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions": [{"q": "A manuscript you're peer-reviewing is…", "options": ["Confidential — don't put it in an AI tool", "Fine to paste anywhere", "Public", "Yours to share"], "answer": 0, "explain": "Review confidentiality is a firm rule; many journals prohibit AI in review."}, {"q": "In your own manuscript, AI use is typically…", "options": ["Disclosed per journal/ICMJE guidance", "Hidden", "Required", "Irrelevant"], "answer": 0, "explain": "Disclose AI assistance; AI can't be an author."}, {"q": "What does AI not do for you here?", "options": ["Own the analysis, interpretation, and authorship", "Draft text", "Tighten language", "Format a letter"], "answer": 0, "explain": "Substance and authorship stay with you."}]}
+</script>
+</div>
+
+## Recommended readings
+
+From the AI readings library (ask the facilitator for access):
+
+- **Peer Review Is Dead; Long Live Peer Review!** — how AI is reshaping the review system.
+- **AI-Slop, GrantaGate and Bad Writing** — cautionary view of AI-generated academic text.
+
+## Useful resources
+
+- [ICMJE Recommendations](https://www.icmje.org) — authorship and AI-disclosure guidance.
+- [EQUATOR Network](https://www.equator-network.org) — reporting guidelines (STROBE, CONSORT, etc.).
+- [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with data rules.
+
+::: {.callout-warning}
+## Data rules
+**Never** paste a manuscript you're reviewing into any AI tool; use approved tools for your own drafts and disclose AI use. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+:::
