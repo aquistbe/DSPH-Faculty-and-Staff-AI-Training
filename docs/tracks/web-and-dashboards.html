@@ -220,17 +220,28 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Activity 1 · Moderate — Describe a dashboard
+<span class="screen-reader-only">Note</span>Activity 1 · Moderate — Describe a crash dashboard
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
+<p><strong>Time</strong> ~20 min · <strong>Tools</strong> ChatGPT Edu (or Claude) + a browser</p>
+<p><strong>Goal.</strong> Turn data into a shareable, self-contained dashboard.</p>
+<p><strong>Setup.</strong> Download the <a href="https://hub.arcgis.com/api/v3/datasets/21154a8f1894449f839d2288726e9837_0/downloads/data?format=csv&amp;spatialRefId=3857&amp;where=1%3D1">Crash Data 2020–2024 (CSV)</a> — it includes crash coordinates.</p>
+<p><strong>Steps.</strong></p>
 <ol type="1">
-<li>Describe your data and the <strong>2–3 views</strong> you want (e.g., a trend, a map, a summary table).</li>
-<li>Have AI generate a <strong>self-contained HTML dashboard</strong> (like the crash-data explorers in your course).</li>
-<li>Open it and <strong>check one figure</strong> against the underlying data.</li>
+<li><p>Describe exactly what you want:</p>
+<blockquote class="blockquote">
+<p>Build a self-contained HTML dashboard from this Philadelphia crash CSV with three views: (1) a map of pedestrian-involved crashes, (2) a bar chart of crashes by year, (3) a table of the top collision types. Use only public libraries from a CDN, and keep all data processing inside the file.</p>
+</blockquote></li>
+<li><p>Open the produced HTML file in a browser.</p></li>
+<li><p>Check one number on the dashboard against the raw data.</p></li>
 </ol>
+<p><strong>Expected result.</strong> A working local dashboard (map + chart + table), much like the crash-data explorers already in your course.</p>
+<p><strong>Check your work.</strong> The “by year” totals should match your earlier counts, and all map points should fall within Philadelphia.</p>
+<p><strong>Common pitfalls.</strong> Verify every displayed figure. Only use public data in anything you’ll share. Watch for points at (0,0) caused by missing coordinates.</p>
+<p><strong>Stretch (optional).</strong> Ask AI to add a year filter that updates all three views at once.</p>
 </div>
 </div>
 </div>
@@ -246,10 +257,26 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
+<p><strong>Time</strong> ~13 min · <strong>Tools</strong> same as Activity 1</p>
+<p><strong>Goal.</strong> Improve a dashboard with small, controlled changes.</p>
+<p><strong>Steps.</strong></p>
 <ol type="1">
-<li>Ask for <strong>one change at a time</strong> — add a filter, change a chart type, fix a label.</li>
-<li>Keep the prompts that worked in a short note for next time.</li>
+<li><p>Make <strong>one change at a time</strong>:</p>
+<blockquote class="blockquote">
+<p>Change the map to a heatmap of pedestrian crashes.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Add a dropdown to filter by year.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Fix the chart’s axis labels and add a title.</p>
+</blockquote></li>
+<li><p>Keep the prompts that worked in a short note for reuse.</p></li>
 </ol>
+<p><strong>Expected result.</strong> A cleaner dashboard with a working filter.</p>
+<p><strong>Check your work.</strong> After each change, confirm the underlying numbers didn’t shift unexpectedly.</p>
+<p><strong>Common pitfalls.</strong> Changing many things at once makes failures hard to localize — iterate singly.</p>
+<p><strong>Stretch (optional).</strong> Ask AI to add a short methods note: data source, years covered, and what “pedestrian-involved” means.</p>
 </div>
 </div>
 </div>

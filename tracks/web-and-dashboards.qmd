@@ -25,19 +25,61 @@ Anything you publish should use non-sensitive data, and every displayed figure s
 ## Practice activities
 
 ::: {.callout-note collapse="true"}
-## Activity 1 · Moderate — Describe a dashboard
+## Activity 1 · Moderate — Describe a crash dashboard
 
-1. Describe your data and the **2–3 views** you want (e.g., a trend, a map, a summary table).
-2. Have AI generate a **self-contained HTML dashboard** (like the crash-data explorers in your course).
-3. Open it and **check one figure** against the underlying data.
+**Time** ~20 min · **Tools** ChatGPT Edu (or Claude) + a browser
+
+**Goal.** Turn data into a shareable, self-contained dashboard.
+
+**Setup.** Download the [Crash Data 2020–2024 (CSV)](https://hub.arcgis.com/api/v3/datasets/21154a8f1894449f839d2288726e9837_0/downloads/data?format=csv&spatialRefId=3857&where=1%3D1) — it includes crash coordinates.
+
+**Steps.**
+
+1. Describe exactly what you want:
+
+   > Build a self-contained HTML dashboard from this Philadelphia crash CSV with three views: (1) a map of pedestrian-involved crashes, (2) a bar chart of crashes by year, (3) a table of the top collision types. Use only public libraries from a CDN, and keep all data processing inside the file.
+
+2. Open the produced HTML file in a browser.
+
+3. Check one number on the dashboard against the raw data.
+
+**Expected result.** A working local dashboard (map + chart + table), much like the crash-data explorers already in your course.
+
+**Check your work.** The "by year" totals should match your earlier counts, and all map points should fall within Philadelphia.
+
+**Common pitfalls.** Verify every displayed figure. Only use public data in anything you'll share. Watch for points at (0,0) caused by missing coordinates.
+
+**Stretch (optional).** Ask AI to add a year filter that updates all three views at once.
 :::
 
 ::: {.callout-note collapse="true"}
 ## Activity 2 · Moderate — Iterate the design
 
-1. Ask for **one change at a time** — add a filter, change a chart type, fix a label.
-2. Keep the prompts that worked in a short note for next time.
+**Time** ~13 min · **Tools** same as Activity 1
+
+**Goal.** Improve a dashboard with small, controlled changes.
+
+**Steps.**
+
+1. Make **one change at a time**:
+
+   > Change the map to a heatmap of pedestrian crashes.
+
+   > Add a dropdown to filter by year.
+
+   > Fix the chart's axis labels and add a title.
+
+2. Keep the prompts that worked in a short note for reuse.
+
+**Expected result.** A cleaner dashboard with a working filter.
+
+**Check your work.** After each change, confirm the underlying numbers didn't shift unexpectedly.
+
+**Common pitfalls.** Changing many things at once makes failures hard to localize — iterate singly.
+
+**Stretch (optional).** Ask AI to add a short methods note: data source, years covered, and what "pedestrian-involved" means.
 :::
+
 
 ## Check your readiness
 

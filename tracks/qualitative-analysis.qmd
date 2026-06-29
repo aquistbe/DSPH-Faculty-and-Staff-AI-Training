@@ -25,19 +25,67 @@ Transcripts are often sensitive. De-identify them and use an approved tool — c
 ## Practice activities
 
 ::: {.callout-note collapse="true"}
-## Activity 1 · Moderate — Draft a codebook
+## Activity 1 · Moderate — Draft a codebook from open-text
 
-1. Paste **de-identified** open-text responses into an approved tool.
-2. Ask AI to propose a **codebook** (codes, definitions, examples).
-3. Revise it with your own judgment — you decide what the codes mean.
+**Time** ~18 min · **Tools** ChatGPT Edu (approved tool for this content)
+
+**Goal.** Build a codebook from qualitative responses while keeping your interpretation central.
+
+**Setup.** Use a small, **non-sensitive** set of open-ended responses. You can use the free-text "description" field from a [311 Service & Information Requests](https://opendataphilly.org/datasets/311-service-and-information-requests/) slice, or the eight sample walkability comments below:
+
+> "Cars fly down our street, no stop signs." · "Sidewalks are cracked and hard with a stroller." · "I feel safe walking to the train in the morning." · "No crosswalk near the school, kids dart across." · "Too dark at night, the lights are out." · "Love the new bump-outs, easier to cross." · "Trash and parked cars block the corner." · "The bus stop has nowhere to sit or shelter."
+
+**Steps.**
+
+1. Draft a codebook:
+
+   > Propose an initial qualitative codebook for these walkability comments: 5–7 codes, each with a name, a one-sentence definition, and an example quote. Note any response that could fit more than one code.
+
+2. Revise with your own judgment — rename, merge, or split codes. You own the meaning.
+
+3. Apply it back:
+
+   > Using my revised codebook, code each comment and show your reasoning for each.
+
+**Expected result.** A codebook (codes + definitions + examples) that you have revised.
+
+**Check your work.** Do the codes capture what respondents *meant*, or just what was easy to label? Adjust accordingly.
+
+**Common pitfalls.** AI flattens nuance and imposes its own frame — treat it as a first pass, not the analysis. De-identify any real transcripts and use an approved tool.
+
+**Stretch (optional).** Ask AI to surface a theme across codes, then find a quote that complicates that theme.
 :::
 
 ::: {.callout-note collapse="true"}
-## Activity 2 · Moderate — Code and verify
+## Activity 2 · Moderate — Code a new batch and check agreement
 
-1. Apply the codebook to a new batch with AI assistance.
-2. **Hand-check a sample** for agreement; note where you and the AI disagree, and why.
+**Time** ~13 min · **Tools** ChatGPT Edu
+
+**Goal.** Apply the codebook and check reliability against your own coding.
+
+**Setup.** A second small batch of ~8 responses (real and de-identified, or another sample set).
+
+**Steps.**
+
+1. Have AI code them:
+
+   > Using this codebook, code each of these new responses and show which code(s) apply and why.
+
+2. Independently code the same eight yourself.
+
+3. Compare:
+
+   > Here is the AI's coding and mine. Where do we disagree, and what's the likely reason?
+
+**Expected result.** A coded batch plus a short list of disagreements.
+
+**Check your work.** Disagreements should point to fuzzy code definitions — tighten them.
+
+**Common pitfalls.** High agreement can be false comfort if the codebook is shallow. Your reading is the standard, not the AI's.
+
+**Stretch (optional).** Refine the codebook from the disagreements and re-run the batch.
 :::
+
 
 ## Check your readiness
 

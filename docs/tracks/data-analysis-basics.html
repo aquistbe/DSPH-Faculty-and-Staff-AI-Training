@@ -220,18 +220,35 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Activity 1 · Novice — Interview a dataset
+<span class="screen-reader-only">Note</span>Activity 1 · Novice — Interview a dataset (Philadelphia crashes)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
+<p><strong>Time</strong> ~20 min · <strong>Tools</strong> ChatGPT Edu + a web browser</p>
+<p><strong>Goal.</strong> Get oriented to a real public dataset and pull a first answer you can check.</p>
+<p><strong>Setup.</strong> Open the <a href="https://opendataphilly.org/datasets/crashes/">Philadelphia Crashes data</a> page and download the <a href="https://hub.arcgis.com/api/v3/datasets/21154a8f1894449f839d2288726e9837_0/downloads/data?format=csv&amp;spatialRefId=3857&amp;where=1%3D1">Crash Data 2020–2024 (CSV)</a> — PennDOT crash records inside Philadelphia (~50k rows). Open it in Excel/Sheets, or paste the header row + first 5 data rows into ChatGPT Edu. This is <strong>public</strong> data, so it’s fine to use.</p>
+<p><strong>Steps.</strong></p>
 <ol type="1">
-<li>Take a <strong>public or synthetic</strong> CSV (e.g., a de-identified sample). Paste the column names and 5 sample rows into ChatGPT Edu.</li>
-<li>Ask: <em>“What questions could this dataset answer? List five, from simple to harder.”</em></li>
-<li>Pick one question and ask it to compute the answer <strong>and show the steps</strong>.</li>
-<li>Verify one number by hand or against a value you already know.</li>
+<li><p>Copy the column names and first 5 rows into ChatGPT Edu:</p>
+<blockquote class="blockquote">
+<p>Here are the columns and first rows of a Philadelphia crash dataset (PennDOT). In a short table, tell me what each column likely means and its data type. Flag any columns you’re unsure about.</p>
+</blockquote></li>
+<li><p>Ask for question ideas:</p>
+<blockquote class="blockquote">
+<p>Based on these columns, list five questions this data can answer about pedestrian safety, from simple to harder. For each, name the columns you’d use.</p>
+</blockquote></li>
+<li><p>Pick one (e.g., “How many crashes involved a pedestrian each year?”) and ask for code + steps:</p>
+<blockquote class="blockquote">
+<p>Using the pedestrian-count and crash-year fields, write R (tidyverse) <strong>or</strong> Python (pandas) code to count crashes involving at least one pedestrian, by year. Show the code and explain each line. First confirm the exact field names from my column list.</p>
+</blockquote></li>
+<li><p>Run the code.</p></li>
 </ol>
+<p><strong>Expected result.</strong> A small table of pedestrian-involved crashes per year (roughly a few thousand per year).</p>
+<p><strong>Check your work.</strong> Spot-check one year yourself — in Excel, count rows where the pedestrian field is greater than 0. It should match the AI’s number.</p>
+<p><strong>Common pitfalls.</strong> Field names in the file often differ from what AI guesses — always confirm against the real columns. Missing values may be blank or coded as 0; decide how to treat them before counting.</p>
+<p><strong>Stretch (optional).</strong> Ask for the same count broken out by hour of day, and note when pedestrian crashes peak.</p>
 </div>
 </div>
 </div>
@@ -247,11 +264,25 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
+<p><strong>Time</strong> ~15 min · <strong>Tools</strong> ChatGPT Edu + R or Python</p>
+<p><strong>Goal.</strong> Turn one question into a clear, defensible chart.</p>
+<p><strong>Setup.</strong> Same crashes CSV from Activity 1.</p>
+<p><strong>Steps.</strong></p>
 <ol type="1">
-<li>Ask AI to write <strong>R (or Python)</strong> code that makes one chart answering your question.</li>
-<li>Run it, then ask it to <strong>explain each line</strong> in plain language.</li>
-<li>Change one thing — a filter or a grouping — and re-run. Note what changed and why.</li>
+<li><p>Ask for a chart:</p>
+<blockquote class="blockquote">
+<p>Write R (ggplot2) or Python (matplotlib) code to make a bar chart of pedestrian-involved crashes by year, with axis labels and a title, using this dataset.</p>
+</blockquote></li>
+<li><p>Run it, then ask it to explain each line in plain language.</p></li>
+<li><p>Change one thing:</p>
+<blockquote class="blockquote">
+<p>Now show counts by hour of day instead of year, and shade the three highest hours darker.</p>
+</blockquote></li>
 </ol>
+<p><strong>Expected result.</strong> A labeled bar chart; the hour version typically shows an afternoon/evening peak.</p>
+<p><strong>Check your work.</strong> The chart’s yearly totals should match your Activity 1 table exactly.</p>
+<p><strong>Common pitfalls.</strong> Don’t let AI invent a year that isn’t in the data — confirm the year range. Reject any chart with an unlabeled axis.</p>
+<p><strong>Stretch (optional).</strong> Ask AI to add a one-sentence, plain-language caption summarizing the takeaway for a community audience.</p>
 </div>
 </div>
 </div>

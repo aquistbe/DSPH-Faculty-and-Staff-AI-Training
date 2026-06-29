@@ -220,17 +220,36 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Activity 1 · Advanced — Audit a pipeline
+<span class="screen-reader-only">Note</span>Activity 1 · Advanced — Audit a modeling pipeline
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
+<p><strong>Time</strong> ~25 min · <strong>Tools</strong> ChatGPT Edu (or Claude) + R or Python</p>
+<p><strong>Goal.</strong> Build a pipeline, then rigorously audit it for the errors that scale.</p>
+<p><strong>Setup.</strong> Download the <a href="https://hub.arcgis.com/api/v3/datasets/21154a8f1894449f839d2288726e9837_0/downloads/data?format=csv&amp;spatialRefId=3857&amp;where=1%3D1">Crash Data 2020–2024 (CSV)</a>. Outcome: a <strong>serious-crash indicator</strong> (fatal or suspected-serious injury). Use only fields known at the time of the crash.</p>
+<p><strong>Steps.</strong></p>
 <ol type="1">
-<li>Have AI build a small modeling pipeline on <strong>public</strong> data.</li>
-<li>Audit it for <strong>data leakage, validation strategy, and metric choice</strong>.</li>
-<li>Fix one real flaw and document what you changed.</li>
+<li><p>Scaffold it:</p>
+<blockquote class="blockquote">
+<p>Build a complete R or Python pipeline that predicts a serious-crash indicator (fatal or major injury) from crash characteristics in this Philadelphia data: load, clean, split, fit a logistic model, and report performance. Use only fields known before or at the time of the crash.</p>
+</blockquote></li>
+<li><p>Audit it, point by point:</p>
+<ul>
+<li><strong>Leakage</strong> — are any predictors really the outcome in disguise (injury counts, fatality flags)? Remove them.</li>
+<li><strong>Validation</strong> — is the split appropriate? Prefer a <strong>temporal split</strong> (train on earlier years, test on later).</li>
+<li><strong>Metric</strong> — serious crashes are rare, so accuracy misleads. Look at recall, precision, and PR-AUC.</li>
+</ul>
+<blockquote class="blockquote">
+<p>Audit this pipeline for data leakage, an inappropriate validation split, and a misleading metric given class imbalance. Show me exactly where each problem is and the minimal fix.</p>
+</blockquote></li>
+<li><p>Fix one real flaw and re-run.</p></li>
 </ol>
+<p><strong>Expected result.</strong> A pipeline with at least one substantive flaw found and corrected, and honest metrics.</p>
+<p><strong>Check your work.</strong> Confirm no predictor encodes the outcome, and that the test set is genuinely held out (ideally later years).</p>
+<p><strong>Common pitfalls.</strong> Leakage inflates performance and hides easily. High accuracy on a rare outcome is meaningless. This is observational data — don’t imply causation.</p>
+<p><strong>Stretch (optional).</strong> Add calibration (are the predicted probabilities trustworthy?) and report it.</p>
 </div>
 </div>
 </div>
@@ -240,16 +259,28 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Activity 2 · Advanced — Compare approaches
+<span class="screen-reader-only">Note</span>Activity 2 · Advanced — Compare a baseline to a complex model
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
+<p><strong>Time</strong> ~20 min · <strong>Tools</strong> ChatGPT Edu (or Claude) + R or Python</p>
+<p><strong>Goal.</strong> Decide whether model complexity actually earns its place.</p>
+<p><strong>Setup.</strong> Same outcome and temporal split as Activity 1.</p>
+<p><strong>Steps.</strong></p>
 <ol type="1">
-<li>Ask AI to compare a <strong>simple baseline</strong> against a <strong>complex model</strong> on your task.</li>
-<li>Decide which is justified and why — complexity should earn its place.</li>
+<li><p>Compare:</p>
+<blockquote class="blockquote">
+<p>Compare a simple logistic-regression baseline to a gradient-boosted model on the same temporal split, reporting PR-AUC and calibration. Tell me whether the complex model is justified.</p>
+</blockquote></li>
+<li><p>Inspect the comparison yourself — don’t accept the verdict blindly.</p></li>
+<li><p>Write one paragraph justifying your choice, weighing interpretability, performance, and maintenance.</p></li>
 </ol>
+<p><strong>Expected result.</strong> A side-by-side comparison and your reasoned decision.</p>
+<p><strong>Check your work.</strong> Is the performance gap real and meaningful, or within noise? Would you trust the complex model in practice?</p>
+<p><strong>Common pitfalls.</strong> A higher AUC doesn’t automatically justify complexity. Recent evidence shows classic methods often match boosting and “foundation” models on tabular data.</p>
+<p><strong>Stretch (optional).</strong> Log your prompts, package versions, and a random seed so a colleague could reproduce the comparison (see the Reproducible AI topic).</p>
 </div>
 </div>
 </div>

@@ -220,16 +220,33 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Activity 1 · Moderate — Generate and critique
+<span class="screen-reader-only">Note</span>Activity 1 · Moderate — Generate and critique a safety graphic
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
+<p><strong>Time</strong> ~17 min · <strong>Tools</strong> Adobe Firefly / Express (Drexel Moderate-Risk data)</p>
+<p><strong>Goal.</strong> Make a communication graphic responsibly.</p>
+<p><strong>Setup.</strong> No dataset needed. Open Firefly or Adobe Express.</p>
+<p><strong>Steps.</strong></p>
 <ol type="1">
-<li>Use <strong>Firefly / Adobe Express</strong> to make one communication graphic for a public-health message.</li>
-<li>Critique it for <strong>accuracy and representation</strong>; note what you would disclose when publishing it.</li>
+<li><p>Generate an image:</p>
+<blockquote class="blockquote">
+<p>Create a clean, inclusive illustration for a pedestrian-safety campaign: people of varied ages and abilities crossing safely at a marked crosswalk in a city. Flat, friendly style, with space for a headline.</p>
+</blockquote></li>
+<li><p>Critique what comes back:</p>
+<ul>
+<li>Is anything inaccurate or unsafe (e.g., people crossing against the signal)?</li>
+<li>Who is represented, and who isn’t?</li>
+<li>What would you disclose when publishing it?</li>
+</ul></li>
+<li><p>Regenerate to fix one issue.</p></li>
 </ol>
+<p><strong>Expected result.</strong> A usable draft graphic plus notes on accuracy, representation, and disclosure.</p>
+<p><strong>Check your work.</strong> Ask yourself: could this image mislead anyone about safe behavior? If so, fix it before using it.</p>
+<p><strong>Common pitfalls.</strong> Generated scenes can show unsafe or unrealistic situations — review carefully. Always disclose AI-generated visuals in published materials.</p>
+<p><strong>Stretch (optional).</strong> Make a second version adapted for a different neighborhood or audience.</p>
 </div>
 </div>
 </div>
@@ -239,16 +256,29 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Activity 2 · Moderate — Annotate a handful
+<span class="screen-reader-only">Note</span>Activity 2 · Moderate — Annotate street images
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
+<p><strong>Time</strong> ~20 min · <strong>Tools</strong> Label Studio (free) + a browser</p>
+<p><strong>Goal.</strong> Turn images into labeled data you could measure.</p>
+<p><strong>Setup.</strong> Collect ~10 public Google Street View images of Philadelphia intersections (Google already blurs faces and plates). Install or open <strong>Label Studio</strong>.</p>
+<p><strong>Steps.</strong></p>
 <ol type="1">
-<li>In <strong>Label Studio</strong> (or similar), label ~10 images for one feature using <strong>bounding boxes</strong>.</li>
-<li>Export to <strong>COCO</strong> format and check your labels for <strong>consistent definitions</strong>.</li>
+<li><p>Set up a bounding-box project with two labels: <strong>marked crosswalk</strong> and <strong>curb ramp</strong>. Write a one-line definition for each <em>before</em> you start.</p></li>
+<li><p>Label all ~10 images.</p></li>
+<li><p>Export to <strong>COCO</strong> format.</p></li>
+<li><p>Sanity-check consistency with AI:</p>
+<blockquote class="blockquote">
+<p>Here is my labeling guide and a sample of my annotations. Point out where my label definitions are ambiguous or applied inconsistently.</p>
+</blockquote></li>
 </ol>
+<p><strong>Expected result.</strong> Ten annotated images exported as COCO, plus a tightened labeling guide.</p>
+<p><strong>Check your work.</strong> Re-label 2 images without looking at your first pass. If you disagree with yourself, the definitions need work.</p>
+<p><strong>Common pitfalls.</strong> Vague definitions wreck any downstream analysis. Never upload images with identifiable people to an unapproved tool.</p>
+<p><strong>Stretch (optional).</strong> Add a third label (e.g., “missing curb ramp”) and note how it changes how consistently you can annotate.</p>
 </div>
 </div>
 </div>

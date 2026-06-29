@@ -25,18 +25,68 @@ Use approved tools, and never paste sensitive data, credentials, or API keys int
 ## Practice activities
 
 ::: {.callout-note collapse="true"}
-## Activity 1 · Moderate — Explain and fix
+## Activity 1 · Moderate — Explain and fix a broken script
 
-1. Take a script that errors (yours or a sample). Ask AI to **explain the error** and propose a fix.
-2. Apply it, run, and confirm the fix actually solved the problem — not just silenced it.
+**Time** ~18 min · **Tools** ChatGPT Edu + R (or Python)
+
+**Goal.** Use AI to debug code you actually understand before trusting it.
+
+**Setup.** Download the [Crash Data 2020–2024 (CSV)](https://hub.arcgis.com/api/v3/datasets/21154a8f1894449f839d2288726e9837_0/downloads/data?format=csv&spatialRefId=3857&where=1%3D1). Below is a short R script with a deliberate bug — it should count pedestrian-involved crashes but returns 0 (wrong column name, and NAs not handled):
+
+```r
+library(tidyverse)
+crashes <- read_csv("crashes.csv")
+ped <- crashes %>% filter(PEDESTRIAN > 0)   # column may be named differently; NAs ignored
+nrow(ped)
+```
+
+**Steps.**
+
+1. Paste the script, the column names, and the wrong result into ChatGPT Edu:
+
+   > This R script should count Philadelphia crashes involving a pedestrian, but it returns 0. Here are the script and the actual column names. Explain what's wrong and show the **minimal** change — don't rewrite the whole thing.
+
+2. Apply the fix (likely the correct field name + NA handling) and run it.
+
+3. Confirm the fix is actually correct:
+
+   > How do I confirm this fix is right, not just non-erroring?
+
+**Expected result.** A correct pedestrian-crash count that matches the number from the Data Analysis Basics page.
+
+**Check your work.** Compare against your earlier count. "No error" is not the same as "correct."
+
+**Common pitfalls.** Never paste credentials or non-public data into a prompt. Always verify the output number, not just that the code ran.
+
+**Stretch (optional).** Ask AI to add a guard that warns if the pedestrian field contains unexpected values.
 :::
 
 ::: {.callout-note collapse="true"}
-## Activity 2 · Moderate — Refactor with a test
+## Activity 2 · Moderate — Refactor with a sanity check
 
-1. Ask AI to **refactor a function** for clarity and to write a small **sanity-check test**.
-2. Run the test. Note exactly what changed and why you accepted it.
+**Time** ~15 min · **Tools** ChatGPT Edu + R or Python
+
+**Goal.** Improve working code and add a test that would actually catch a mistake.
+
+**Steps.**
+
+1. Refactor:
+
+   > Refactor this into a function `crashes_by_year(df, count_field)` that returns a tidy yearly count, with input checks. Also write a small sanity-check test using a tiny fake data frame with known values.
+
+2. Run the test and confirm it passes.
+
+3. Note exactly what changed and why you accepted it.
+
+**Expected result.** A reusable function plus a passing test.
+
+**Check your work.** Run the function on the real crash data — totals should match prior results. Then break the function on purpose; the test should fail. If it still passes, the test is too weak.
+
+**Common pitfalls.** A test that can't fail is useless. Read the refactored code; don't run what you don't understand.
+
+**Stretch (optional).** Ask for the same function in the other language (R↔Python) and confirm both return identical counts.
 :::
+
 
 ## Check your readiness
 

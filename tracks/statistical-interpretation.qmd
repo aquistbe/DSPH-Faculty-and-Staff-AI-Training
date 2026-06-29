@@ -25,18 +25,65 @@ Interpretation and assumptions are exactly where your expertise matters most; th
 ## Practice activities
 
 ::: {.callout-note collapse="true"}
-## Activity 1 · Moderate — Translate a model
+## Activity 1 · Moderate — Translate a model across Stata, R, and Python
 
-1. Give AI a regression command in your language and ask for the **equivalent in another** (Stata ↔ R ↔ Python), with the output interpreted plainly.
-2. Run both. Confirm the **estimates and sample sizes match** before trusting the translation.
+**Time** ~20 min · **Tools** ChatGPT Edu + Stata and/or R/Python
+
+**Goal.** Move a model between languages and confirm the translation is faithful.
+
+**Setup.** Download the [Crash Data 2020–2024 (CSV)](https://hub.arcgis.com/api/v3/datasets/21154a8f1894449f839d2288726e9837_0/downloads/data?format=csv&spatialRefId=3857&where=1%3D1). Outcome: a **fatal-crash indicator** (fatal count > 0). Predictors: a few crash characteristics such as speeding-related, intersection, and a light/dark indicator (use the exact field names from the dataset's metadata).
+
+**Steps.**
+
+1. Start in your home language (Stata, if that's yours):
+
+   > Write Stata code for a logistic regression of a fatal-crash indicator on speeding, intersection, and a light/dark indicator using this Philadelphia crash data. Then give the exact equivalent in R (`glm`) and Python (`statsmodels`), and interpret the output in plain language.
+
+2. Run at least two of the three.
+
+3. Compare:
+
+   > The R and Stata results should match. Confirm the coefficients, odds ratios, and sample sizes are the same; if they differ, explain why.
+
+**Expected result.** Matching estimates across languages, plus an odds-ratio interpretation.
+
+**Check your work.** Ns and coefficients should match across languages (only tiny differences from default options).
+
+**Common pitfalls.** Different default reference categories or NA handling cause mismatches — check those first. Treat any statistical claim from AI as a draft to verify.
+
+**Stretch (optional).** Ask which model assumptions matter most here and how to check each.
 :::
 
 ::: {.callout-note collapse="true"}
 ## Activity 2 · Moderate — Interrogate the output
 
-1. Paste model output and ask AI **which assumptions to check and how**.
-2. Run the checks. Decide which assumptions hold and what that means for your conclusion.
+**Time** ~15 min · **Tools** ChatGPT Edu + R or Stata
+
+**Goal.** Decide what the model actually supports — and what it doesn't.
+
+**Setup.** Use the model you fit in Activity 1.
+
+**Steps.**
+
+1. Paste the output:
+
+   > Here is my logistic regression output. What assumptions should I check, and how (in R or Stata)? Flag any sign of separation, sparse cells, or multicollinearity.
+
+2. Run the suggested checks.
+
+3. Ask for a careful interpretation:
+
+   > Write a two-sentence, accurate interpretation of the speeding odds ratio for a non-statistical audience — without overclaiming causality.
+
+**Expected result.** A list of checks you ran, plus an honest, non-causal interpretation.
+
+**Check your work.** Confirm every claim against the output; reject anything the data don't support.
+
+**Common pitfalls.** AI often slips into causal language ("speeding causes…"). This is observational data — keep it associational.
+
+**Stretch (optional).** Ask AI to name the single biggest threat to validity in this analysis.
 :::
+
 
 ## Check your readiness
 

@@ -220,17 +220,31 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Activity 1 · Novice — Diagnose the mess
+<span class="screen-reader-only">Note</span>Activity 1 · Novice — Diagnose the mess (Philadelphia 311)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
+<p><strong>Time</strong> ~18 min · <strong>Tools</strong> ChatGPT Edu + a browser</p>
+<p><strong>Goal.</strong> Find data-quality problems <em>before</em> you analyze.</p>
+<p><strong>Setup.</strong> Open <a href="https://opendataphilly.org/datasets/311-service-and-information-requests/">311 Service &amp; Information Requests</a>. The full set is millions of rows, so grab a slice: download one recent year, or use the dataset’s API with a date filter. Paste ~20 rows plus the full column list into ChatGPT Edu. Public data.</p>
+<p><strong>Steps.</strong></p>
 <ol type="1">
-<li>Paste a messy sample (inconsistent category labels, odd missing-value codes) into ChatGPT Edu.</li>
-<li>Ask it to <strong>list the data-quality issues</strong> and propose a fix for each.</li>
-<li>Decide which fixes to accept — you make the call, not the model.</li>
+<li><p>Ask for a diagnosis (no changes yet):</p>
+<blockquote class="blockquote">
+<p>Here is a sample of Philadelphia 311 service requests. List the data-quality issues you can see — inconsistent categories, missing values, suspicious dates, duplicate-looking rows — and propose a fix for each. Don’t change anything yet.</p>
+</blockquote></li>
+<li><p>Review its list and mark which fixes you agree with. You make the call.</p></li>
+<li><p>Probe one field:</p>
+<blockquote class="blockquote">
+<p>For the service-type field, show the distinct values with counts, and group near-duplicates (different spellings or casing) into clean categories.</p>
+</blockquote></li>
 </ol>
+<p><strong>Expected result.</strong> A list of issues (missing ZIPs, mixed-case categories, placeholder dates) and a proposed cleaning plan.</p>
+<p><strong>Check your work.</strong> Pick one proposed fix and verify the issue is real in the raw rows before accepting it.</p>
+<p><strong>Common pitfalls.</strong> AI may “fix” data by inventing values — only accept fixes you can verify. Keep the raw file untouched; never overwrite it.</p>
+<p><strong>Stretch (optional).</strong> Ask for the cleaning steps as a documented, re-runnable R/Python script you could apply to next year’s data.</p>
 </div>
 </div>
 </div>
@@ -240,17 +254,31 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Activity 2 · Novice — Recode and document
+<span class="screen-reader-only">Note</span>Activity 2 · Novice — Recode and document (Philadelphia crime categories)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
+<p><strong>Time</strong> ~18 min · <strong>Tools</strong> ChatGPT Edu + R or Python</p>
+<p><strong>Goal.</strong> Standardize a messy category field and produce a codebook.</p>
+<p><strong>Setup.</strong> Open <a href="https://opendataphilly.org/datasets/crime-incidents/">Crime Incidents</a> and grab a slice (one police district, or one recent month). The offense field has many specific categories — perfect for recoding.</p>
+<p><strong>Steps.</strong></p>
 <ol type="1">
-<li>Ask AI to write code that <strong>standardizes one variable</strong> (e.g., unify category spellings).</li>
-<li>Ask it to generate a <strong>codebook entry</strong> for that variable.</li>
-<li>Run it, then <strong>compare counts before and after</strong> to confirm nothing was lost or mislabeled.</li>
+<li><p>Recode:</p>
+<blockquote class="blockquote">
+<p>Here are the distinct values of the crime offense field. Propose a recode into 4–6 analysis groups (e.g., violent, property, quality-of-life, other) and write R/Python code mapping each original value to a group. Leave anything ambiguous as “review”.</p>
+</blockquote></li>
+<li><p>Generate documentation:</p>
+<blockquote class="blockquote">
+<p>Generate a codebook entry for the new grouped variable: its name, definition, the full mapping table, and how missing/ambiguous values are handled.</p>
+</blockquote></li>
+<li><p>Verify counts before and after.</p></li>
 </ol>
+<p><strong>Expected result.</strong> A grouped variable plus a codebook table; counts reconcile.</p>
+<p><strong>Check your work.</strong> The grouped counts must sum to the original total — confirm nothing was dropped. Inspect the “review” bucket by hand.</p>
+<p><strong>Common pitfalls.</strong> Don’t let AI silently bucket ambiguous offenses. Grouping choices are substantive decisions — they’re yours, not the model’s.</p>
+<p><strong>Stretch (optional).</strong> Ask AI to flag any offense whose grouping is genuinely debatable and explain the tradeoff.</p>
 </div>
 </div>
 </div>

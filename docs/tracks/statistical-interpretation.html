@@ -220,16 +220,31 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Activity 1 · Moderate — Translate a model
+<span class="screen-reader-only">Note</span>Activity 1 · Moderate — Translate a model across Stata, R, and Python
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
+<p><strong>Time</strong> ~20 min · <strong>Tools</strong> ChatGPT Edu + Stata and/or R/Python</p>
+<p><strong>Goal.</strong> Move a model between languages and confirm the translation is faithful.</p>
+<p><strong>Setup.</strong> Download the <a href="https://hub.arcgis.com/api/v3/datasets/21154a8f1894449f839d2288726e9837_0/downloads/data?format=csv&amp;spatialRefId=3857&amp;where=1%3D1">Crash Data 2020–2024 (CSV)</a>. Outcome: a <strong>fatal-crash indicator</strong> (fatal count &gt; 0). Predictors: a few crash characteristics such as speeding-related, intersection, and a light/dark indicator (use the exact field names from the dataset’s metadata).</p>
+<p><strong>Steps.</strong></p>
 <ol type="1">
-<li>Give AI a regression command in your language and ask for the <strong>equivalent in another</strong> (Stata ↔︎ R ↔︎ Python), with the output interpreted plainly.</li>
-<li>Run both. Confirm the <strong>estimates and sample sizes match</strong> before trusting the translation.</li>
+<li><p>Start in your home language (Stata, if that’s yours):</p>
+<blockquote class="blockquote">
+<p>Write Stata code for a logistic regression of a fatal-crash indicator on speeding, intersection, and a light/dark indicator using this Philadelphia crash data. Then give the exact equivalent in R (<code>glm</code>) and Python (<code>statsmodels</code>), and interpret the output in plain language.</p>
+</blockquote></li>
+<li><p>Run at least two of the three.</p></li>
+<li><p>Compare:</p>
+<blockquote class="blockquote">
+<p>The R and Stata results should match. Confirm the coefficients, odds ratios, and sample sizes are the same; if they differ, explain why.</p>
+</blockquote></li>
 </ol>
+<p><strong>Expected result.</strong> Matching estimates across languages, plus an odds-ratio interpretation.</p>
+<p><strong>Check your work.</strong> Ns and coefficients should match across languages (only tiny differences from default options).</p>
+<p><strong>Common pitfalls.</strong> Different default reference categories or NA handling cause mismatches — check those first. Treat any statistical claim from AI as a draft to verify.</p>
+<p><strong>Stretch (optional).</strong> Ask which model assumptions matter most here and how to check each.</p>
 </div>
 </div>
 </div>
@@ -245,10 +260,25 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
+<p><strong>Time</strong> ~15 min · <strong>Tools</strong> ChatGPT Edu + R or Stata</p>
+<p><strong>Goal.</strong> Decide what the model actually supports — and what it doesn’t.</p>
+<p><strong>Setup.</strong> Use the model you fit in Activity 1.</p>
+<p><strong>Steps.</strong></p>
 <ol type="1">
-<li>Paste model output and ask AI <strong>which assumptions to check and how</strong>.</li>
-<li>Run the checks. Decide which assumptions hold and what that means for your conclusion.</li>
+<li><p>Paste the output:</p>
+<blockquote class="blockquote">
+<p>Here is my logistic regression output. What assumptions should I check, and how (in R or Stata)? Flag any sign of separation, sparse cells, or multicollinearity.</p>
+</blockquote></li>
+<li><p>Run the suggested checks.</p></li>
+<li><p>Ask for a careful interpretation:</p>
+<blockquote class="blockquote">
+<p>Write a two-sentence, accurate interpretation of the speeding odds ratio for a non-statistical audience — without overclaiming causality.</p>
+</blockquote></li>
 </ol>
+<p><strong>Expected result.</strong> A list of checks you ran, plus an honest, non-causal interpretation.</p>
+<p><strong>Check your work.</strong> Confirm every claim against the output; reject anything the data don’t support.</p>
+<p><strong>Common pitfalls.</strong> AI often slips into causal language (“speeding causes…”). This is observational data — keep it associational.</p>
+<p><strong>Stretch (optional).</strong> Ask AI to name the single biggest threat to validity in this analysis.</p>
 </div>
 </div>
 </div>

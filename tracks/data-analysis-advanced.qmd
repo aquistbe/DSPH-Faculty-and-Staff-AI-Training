@@ -25,19 +25,67 @@ Recent work cautions that "foundation models" don't automatically win on tabular
 ## Practice activities
 
 ::: {.callout-note collapse="true"}
-## Activity 1 · Advanced — Audit a pipeline
+## Activity 1 · Advanced — Audit a modeling pipeline
 
-1. Have AI build a small modeling pipeline on **public** data.
-2. Audit it for **data leakage, validation strategy, and metric choice**.
-3. Fix one real flaw and document what you changed.
+**Time** ~25 min · **Tools** ChatGPT Edu (or Claude) + R or Python
+
+**Goal.** Build a pipeline, then rigorously audit it for the errors that scale.
+
+**Setup.** Download the [Crash Data 2020–2024 (CSV)](https://hub.arcgis.com/api/v3/datasets/21154a8f1894449f839d2288726e9837_0/downloads/data?format=csv&spatialRefId=3857&where=1%3D1). Outcome: a **serious-crash indicator** (fatal or suspected-serious injury). Use only fields known at the time of the crash.
+
+**Steps.**
+
+1. Scaffold it:
+
+   > Build a complete R or Python pipeline that predicts a serious-crash indicator (fatal or major injury) from crash characteristics in this Philadelphia data: load, clean, split, fit a logistic model, and report performance. Use only fields known before or at the time of the crash.
+
+2. Audit it, point by point:
+
+   - **Leakage** — are any predictors really the outcome in disguise (injury counts, fatality flags)? Remove them.
+   - **Validation** — is the split appropriate? Prefer a **temporal split** (train on earlier years, test on later).
+   - **Metric** — serious crashes are rare, so accuracy misleads. Look at recall, precision, and PR-AUC.
+
+   > Audit this pipeline for data leakage, an inappropriate validation split, and a misleading metric given class imbalance. Show me exactly where each problem is and the minimal fix.
+
+3. Fix one real flaw and re-run.
+
+**Expected result.** A pipeline with at least one substantive flaw found and corrected, and honest metrics.
+
+**Check your work.** Confirm no predictor encodes the outcome, and that the test set is genuinely held out (ideally later years).
+
+**Common pitfalls.** Leakage inflates performance and hides easily. High accuracy on a rare outcome is meaningless. This is observational data — don't imply causation.
+
+**Stretch (optional).** Add calibration (are the predicted probabilities trustworthy?) and report it.
 :::
 
 ::: {.callout-note collapse="true"}
-## Activity 2 · Advanced — Compare approaches
+## Activity 2 · Advanced — Compare a baseline to a complex model
 
-1. Ask AI to compare a **simple baseline** against a **complex model** on your task.
-2. Decide which is justified and why — complexity should earn its place.
+**Time** ~20 min · **Tools** ChatGPT Edu (or Claude) + R or Python
+
+**Goal.** Decide whether model complexity actually earns its place.
+
+**Setup.** Same outcome and temporal split as Activity 1.
+
+**Steps.**
+
+1. Compare:
+
+   > Compare a simple logistic-regression baseline to a gradient-boosted model on the same temporal split, reporting PR-AUC and calibration. Tell me whether the complex model is justified.
+
+2. Inspect the comparison yourself — don't accept the verdict blindly.
+
+3. Write one paragraph justifying your choice, weighing interpretability, performance, and maintenance.
+
+**Expected result.** A side-by-side comparison and your reasoned decision.
+
+**Check your work.** Is the performance gap real and meaningful, or within noise? Would you trust the complex model in practice?
+
+**Common pitfalls.** A higher AUC doesn't automatically justify complexity. Recent evidence shows classic methods often match boosting and "foundation" models on tabular data.
+
+**Stretch (optional).** Log your prompts, package versions, and a random seed so a colleague could reproduce the comparison (see the Reproducible AI topic).
 :::
+
 
 ## Check your readiness
 

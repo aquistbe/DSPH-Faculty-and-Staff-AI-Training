@@ -25,20 +25,65 @@ A **codebook** (what each variable means and how it's coded) is easy to skip and
 ## Practice activities
 
 ::: {.callout-note collapse="true"}
-## Activity 1 · Novice — Diagnose the mess
+## Activity 1 · Novice — Diagnose the mess (Philadelphia 311)
 
-1. Paste a messy sample (inconsistent category labels, odd missing-value codes) into ChatGPT Edu.
-2. Ask it to **list the data-quality issues** and propose a fix for each.
-3. Decide which fixes to accept — you make the call, not the model.
+**Time** ~18 min · **Tools** ChatGPT Edu + a browser
+
+**Goal.** Find data-quality problems *before* you analyze.
+
+**Setup.** Open [311 Service & Information Requests](https://opendataphilly.org/datasets/311-service-and-information-requests/). The full set is millions of rows, so grab a slice: download one recent year, or use the dataset's API with a date filter. Paste ~20 rows plus the full column list into ChatGPT Edu. Public data.
+
+**Steps.**
+
+1. Ask for a diagnosis (no changes yet):
+
+   > Here is a sample of Philadelphia 311 service requests. List the data-quality issues you can see — inconsistent categories, missing values, suspicious dates, duplicate-looking rows — and propose a fix for each. Don't change anything yet.
+
+2. Review its list and mark which fixes you agree with. You make the call.
+
+3. Probe one field:
+
+   > For the service-type field, show the distinct values with counts, and group near-duplicates (different spellings or casing) into clean categories.
+
+**Expected result.** A list of issues (missing ZIPs, mixed-case categories, placeholder dates) and a proposed cleaning plan.
+
+**Check your work.** Pick one proposed fix and verify the issue is real in the raw rows before accepting it.
+
+**Common pitfalls.** AI may "fix" data by inventing values — only accept fixes you can verify. Keep the raw file untouched; never overwrite it.
+
+**Stretch (optional).** Ask for the cleaning steps as a documented, re-runnable R/Python script you could apply to next year's data.
 :::
 
 ::: {.callout-note collapse="true"}
-## Activity 2 · Novice — Recode and document
+## Activity 2 · Novice — Recode and document (Philadelphia crime categories)
 
-1. Ask AI to write code that **standardizes one variable** (e.g., unify category spellings).
-2. Ask it to generate a **codebook entry** for that variable.
-3. Run it, then **compare counts before and after** to confirm nothing was lost or mislabeled.
+**Time** ~18 min · **Tools** ChatGPT Edu + R or Python
+
+**Goal.** Standardize a messy category field and produce a codebook.
+
+**Setup.** Open [Crime Incidents](https://opendataphilly.org/datasets/crime-incidents/) and grab a slice (one police district, or one recent month). The offense field has many specific categories — perfect for recoding.
+
+**Steps.**
+
+1. Recode:
+
+   > Here are the distinct values of the crime offense field. Propose a recode into 4–6 analysis groups (e.g., violent, property, quality-of-life, other) and write R/Python code mapping each original value to a group. Leave anything ambiguous as "review".
+
+2. Generate documentation:
+
+   > Generate a codebook entry for the new grouped variable: its name, definition, the full mapping table, and how missing/ambiguous values are handled.
+
+3. Verify counts before and after.
+
+**Expected result.** A grouped variable plus a codebook table; counts reconcile.
+
+**Check your work.** The grouped counts must sum to the original total — confirm nothing was dropped. Inspect the "review" bucket by hand.
+
+**Common pitfalls.** Don't let AI silently bucket ambiguous offenses. Grouping choices are substantive decisions — they're yours, not the model's.
+
+**Stretch (optional).** Ask AI to flag any offense whose grouping is genuinely debatable and explain the tradeoff.
 :::
+
 
 ## Check your readiness
 

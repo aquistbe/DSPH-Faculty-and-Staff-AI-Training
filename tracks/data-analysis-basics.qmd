@@ -25,21 +25,69 @@ Start small and verifiable: one dataset, one question, one chart. Confirm a numb
 ## Practice activities
 
 ::: {.callout-note collapse="true"}
-## Activity 1 · Novice — Interview a dataset
+## Activity 1 · Novice — Interview a dataset (Philadelphia crashes)
 
-1. Take a **public or synthetic** CSV (e.g., a de-identified sample). Paste the column names and 5 sample rows into ChatGPT Edu.
-2. Ask: *“What questions could this dataset answer? List five, from simple to harder.”*
-3. Pick one question and ask it to compute the answer **and show the steps**.
-4. Verify one number by hand or against a value you already know.
+**Time** ~20 min · **Tools** ChatGPT Edu + a web browser
+
+**Goal.** Get oriented to a real public dataset and pull a first answer you can check.
+
+**Setup.** Open the [Philadelphia Crashes data](https://opendataphilly.org/datasets/crashes/) page and download the [Crash Data 2020–2024 (CSV)](https://hub.arcgis.com/api/v3/datasets/21154a8f1894449f839d2288726e9837_0/downloads/data?format=csv&spatialRefId=3857&where=1%3D1) — PennDOT crash records inside Philadelphia (~50k rows). Open it in Excel/Sheets, or paste the header row + first 5 data rows into ChatGPT Edu. This is **public** data, so it's fine to use.
+
+**Steps.**
+
+1. Copy the column names and first 5 rows into ChatGPT Edu:
+
+   > Here are the columns and first rows of a Philadelphia crash dataset (PennDOT). In a short table, tell me what each column likely means and its data type. Flag any columns you're unsure about.
+
+2. Ask for question ideas:
+
+   > Based on these columns, list five questions this data can answer about pedestrian safety, from simple to harder. For each, name the columns you'd use.
+
+3. Pick one (e.g., "How many crashes involved a pedestrian each year?") and ask for code + steps:
+
+   > Using the pedestrian-count and crash-year fields, write R (tidyverse) **or** Python (pandas) code to count crashes involving at least one pedestrian, by year. Show the code and explain each line. First confirm the exact field names from my column list.
+
+4. Run the code.
+
+**Expected result.** A small table of pedestrian-involved crashes per year (roughly a few thousand per year).
+
+**Check your work.** Spot-check one year yourself — in Excel, count rows where the pedestrian field is greater than 0. It should match the AI's number.
+
+**Common pitfalls.** Field names in the file often differ from what AI guesses — always confirm against the real columns. Missing values may be blank or coded as 0; decide how to treat them before counting.
+
+**Stretch (optional).** Ask for the same count broken out by hour of day, and note when pedestrian crashes peak.
 :::
 
 ::: {.callout-note collapse="true"}
 ## Activity 2 · Novice — From question to chart
 
-1. Ask AI to write **R (or Python)** code that makes one chart answering your question.
-2. Run it, then ask it to **explain each line** in plain language.
-3. Change one thing — a filter or a grouping — and re-run. Note what changed and why.
+**Time** ~15 min · **Tools** ChatGPT Edu + R or Python
+
+**Goal.** Turn one question into a clear, defensible chart.
+
+**Setup.** Same crashes CSV from Activity 1.
+
+**Steps.**
+
+1. Ask for a chart:
+
+   > Write R (ggplot2) or Python (matplotlib) code to make a bar chart of pedestrian-involved crashes by year, with axis labels and a title, using this dataset.
+
+2. Run it, then ask it to explain each line in plain language.
+
+3. Change one thing:
+
+   > Now show counts by hour of day instead of year, and shade the three highest hours darker.
+
+**Expected result.** A labeled bar chart; the hour version typically shows an afternoon/evening peak.
+
+**Check your work.** The chart's yearly totals should match your Activity 1 table exactly.
+
+**Common pitfalls.** Don't let AI invent a year that isn't in the data — confirm the year range. Reject any chart with an unlabeled axis.
+
+**Stretch (optional).** Ask AI to add a one-sentence, plain-language caption summarizing the takeaway for a community audience.
 :::
+
 
 ## Check your readiness
 

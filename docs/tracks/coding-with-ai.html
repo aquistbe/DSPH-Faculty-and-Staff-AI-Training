@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -220,16 +255,35 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Activity 1 · Moderate — Explain and fix
+<span class="screen-reader-only">Note</span>Activity 1 · Moderate — Explain and fix a broken script
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
+<p><strong>Time</strong> ~18 min · <strong>Tools</strong> ChatGPT Edu + R (or Python)</p>
+<p><strong>Goal.</strong> Use AI to debug code you actually understand before trusting it.</p>
+<p><strong>Setup.</strong> Download the <a href="https://hub.arcgis.com/api/v3/datasets/21154a8f1894449f839d2288726e9837_0/downloads/data?format=csv&amp;spatialRefId=3857&amp;where=1%3D1">Crash Data 2020–2024 (CSV)</a>. Below is a short R script with a deliberate bug — it should count pedestrian-involved crashes but returns 0 (wrong column name, and NAs not handled):</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>crashes <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"crashes.csv"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>ped <span class="ot">&lt;-</span> crashes <span class="sc">%&gt;%</span> <span class="fu">filter</span>(PEDESTRIAN <span class="sc">&gt;</span> <span class="dv">0</span>)   <span class="co"># column may be named differently; NAs ignored</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(ped)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Steps.</strong></p>
 <ol type="1">
-<li>Take a script that errors (yours or a sample). Ask AI to <strong>explain the error</strong> and propose a fix.</li>
-<li>Apply it, run, and confirm the fix actually solved the problem — not just silenced it.</li>
+<li><p>Paste the script, the column names, and the wrong result into ChatGPT Edu:</p>
+<blockquote class="blockquote">
+<p>This R script should count Philadelphia crashes involving a pedestrian, but it returns 0. Here are the script and the actual column names. Explain what’s wrong and show the <strong>minimal</strong> change — don’t rewrite the whole thing.</p>
+</blockquote></li>
+<li><p>Apply the fix (likely the correct field name + NA handling) and run it.</p></li>
+<li><p>Confirm the fix is actually correct:</p>
+<blockquote class="blockquote">
+<p>How do I confirm this fix is right, not just non-erroring?</p>
+</blockquote></li>
 </ol>
+<p><strong>Expected result.</strong> A correct pedestrian-crash count that matches the number from the Data Analysis Basics page.</p>
+<p><strong>Check your work.</strong> Compare against your earlier count. “No error” is not the same as “correct.”</p>
+<p><strong>Common pitfalls.</strong> Never paste credentials or non-public data into a prompt. Always verify the output number, not just that the code ran.</p>
+<p><strong>Stretch (optional).</strong> Ask AI to add a guard that warns if the pedestrian field contains unexpected values.</p>
 </div>
 </div>
 </div>
@@ -239,16 +293,27 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Activity 2 · Moderate — Refactor with a test
+<span class="screen-reader-only">Note</span>Activity 2 · Moderate — Refactor with a sanity check
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
+<p><strong>Time</strong> ~15 min · <strong>Tools</strong> ChatGPT Edu + R or Python</p>
+<p><strong>Goal.</strong> Improve working code and add a test that would actually catch a mistake.</p>
+<p><strong>Steps.</strong></p>
 <ol type="1">
-<li>Ask AI to <strong>refactor a function</strong> for clarity and to write a small <strong>sanity-check test</strong>.</li>
-<li>Run the test. Note exactly what changed and why you accepted it.</li>
+<li><p>Refactor:</p>
+<blockquote class="blockquote">
+<p>Refactor this into a function <code>crashes_by_year(df, count_field)</code> that returns a tidy yearly count, with input checks. Also write a small sanity-check test using a tiny fake data frame with known values.</p>
+</blockquote></li>
+<li><p>Run the test and confirm it passes.</p></li>
+<li><p>Note exactly what changed and why you accepted it.</p></li>
 </ol>
+<p><strong>Expected result.</strong> A reusable function plus a passing test.</p>
+<p><strong>Check your work.</strong> Run the function on the real crash data — totals should match prior results. Then break the function on purpose; the test should fail. If it still passes, the test is too weak.</p>
+<p><strong>Common pitfalls.</strong> A test that can’t fail is useless. Read the refactored code; don’t run what you don’t understand.</p>
+<p><strong>Stretch (optional).</strong> Ask for the same function in the other language (R↔︎Python) and confirm both return identical counts.</p>
 </div>
 </div>
 </div>

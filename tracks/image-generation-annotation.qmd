@@ -25,18 +25,67 @@ Disclose AI-generated visuals in published materials, and check that people and 
 ## Practice activities
 
 ::: {.callout-note collapse="true"}
-## Activity 1 · Moderate — Generate and critique
+## Activity 1 · Moderate — Generate and critique a safety graphic
 
-1. Use **Firefly / Adobe Express** to make one communication graphic for a public-health message.
-2. Critique it for **accuracy and representation**; note what you would disclose when publishing it.
+**Time** ~17 min · **Tools** Adobe Firefly / Express (Drexel Moderate-Risk data)
+
+**Goal.** Make a communication graphic responsibly.
+
+**Setup.** No dataset needed. Open Firefly or Adobe Express.
+
+**Steps.**
+
+1. Generate an image:
+
+   > Create a clean, inclusive illustration for a pedestrian-safety campaign: people of varied ages and abilities crossing safely at a marked crosswalk in a city. Flat, friendly style, with space for a headline.
+
+2. Critique what comes back:
+
+   - Is anything inaccurate or unsafe (e.g., people crossing against the signal)?
+   - Who is represented, and who isn't?
+   - What would you disclose when publishing it?
+
+3. Regenerate to fix one issue.
+
+**Expected result.** A usable draft graphic plus notes on accuracy, representation, and disclosure.
+
+**Check your work.** Ask yourself: could this image mislead anyone about safe behavior? If so, fix it before using it.
+
+**Common pitfalls.** Generated scenes can show unsafe or unrealistic situations — review carefully. Always disclose AI-generated visuals in published materials.
+
+**Stretch (optional).** Make a second version adapted for a different neighborhood or audience.
 :::
 
 ::: {.callout-note collapse="true"}
-## Activity 2 · Moderate — Annotate a handful
+## Activity 2 · Moderate — Annotate street images
 
-1. In **Label Studio** (or similar), label ~10 images for one feature using **bounding boxes**.
-2. Export to **COCO** format and check your labels for **consistent definitions**.
+**Time** ~20 min · **Tools** Label Studio (free) + a browser
+
+**Goal.** Turn images into labeled data you could measure.
+
+**Setup.** Collect ~10 public Google Street View images of Philadelphia intersections (Google already blurs faces and plates). Install or open **Label Studio**.
+
+**Steps.**
+
+1. Set up a bounding-box project with two labels: **marked crosswalk** and **curb ramp**. Write a one-line definition for each *before* you start.
+
+2. Label all ~10 images.
+
+3. Export to **COCO** format.
+
+4. Sanity-check consistency with AI:
+
+   > Here is my labeling guide and a sample of my annotations. Point out where my label definitions are ambiguous or applied inconsistently.
+
+**Expected result.** Ten annotated images exported as COCO, plus a tightened labeling guide.
+
+**Check your work.** Re-label 2 images without looking at your first pass. If you disagree with yourself, the definitions need work.
+
+**Common pitfalls.** Vague definitions wreck any downstream analysis. Never upload images with identifiable people to an unapproved tool.
+
+**Stretch (optional).** Add a third label (e.g., "missing curb ramp") and note how it changes how consistently you can annotate.
 :::
+
 
 ## Check your readiness
 
