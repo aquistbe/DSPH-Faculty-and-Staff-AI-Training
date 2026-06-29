@@ -24,20 +24,28 @@ Local is not automatically "approved" for sensitive data — confirm with Drexel
 
 ## Practice activities
 
-::: {.callout-note collapse="true"}
-## Activity 1 · Advanced — Run a model locally
+```{=html}
+<details class="activity"><summary>Activity 1 · Advanced — Run a model locally</summary>
+```
 
 1. Install **Ollama** and pull a small open model.
 2. Run a basic task (summarize a public document) entirely offline.
 3. Compare quality to a cloud model; note the gap.
-:::
 
-::: {.callout-note collapse="true"}
-## Activity 2 · Advanced — Decide local vs cloud
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 2 · Advanced — Decide local vs cloud</summary>
+```
 
 1. List a task where local would help (privacy, cost, offline).
 2. Write the conditions under which you'd choose local — and confirm Drexel's data rules still apply.
-:::
+
+```{=html}
+</details>
+```
 
 ## Check your readiness
 

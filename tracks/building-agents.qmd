@@ -24,20 +24,28 @@ Autonomy raises the stakes. Keep agents on low-stakes, reversible, checkable wor
 
 ## Practice activities
 
-::: {.callout-note collapse="true"}
-## Activity 1 · Moderate — Build a simple agent
+```{=html}
+<details class="activity"><summary>Activity 1 · Moderate — Build a simple agent</summary>
+```
 
 1. In ChatGPT Edu, create an assistant with clear **instructions** and one **knowledge file** (non-sensitive).
 2. Give it a small multi-step task and watch how it plans.
 3. **Review each step**, not just the final output.
-:::
 
-::: {.callout-note collapse="true"}
-## Activity 2 · Moderate — Set the guardrails
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 2 · Moderate — Set the guardrails</summary>
+```
 
 1. Write the agent's limits: what it must never do, when to stop and ask.
 2. Test a case that should trigger a stop; confirm it does.
-:::
+
+```{=html}
+</details>
+```
 
 ## Check your readiness
 

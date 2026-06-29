@@ -24,8 +24,9 @@ Anything you publish should use non-sensitive data, and every displayed figure s
 
 ## Practice activities
 
-::: {.callout-note collapse="true"}
-## Activity 1 · Moderate — Describe a crash dashboard
+```{=html}
+<details class="activity"><summary>Activity 1 · Moderate — Describe a crash dashboard</summary>
+```
 
 **Time** ~20 min · **Tools** ChatGPT Edu (or Claude) + a browser
 
@@ -50,10 +51,14 @@ Anything you publish should use non-sensitive data, and every displayed figure s
 **Common pitfalls.** Verify every displayed figure. Only use public data in anything you'll share. Watch for points at (0,0) caused by missing coordinates.
 
 **Stretch (optional).** Ask AI to add a year filter that updates all three views at once.
-:::
 
-::: {.callout-note collapse="true"}
-## Activity 2 · Moderate — Iterate the design
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 2 · Moderate — Iterate the design</summary>
+```
 
 **Time** ~13 min · **Tools** same as Activity 1
 
@@ -78,7 +83,10 @@ Anything you publish should use non-sensitive data, and every displayed figure s
 **Common pitfalls.** Changing many things at once makes failures hard to localize — iterate singly.
 
 **Stretch (optional).** Ask AI to add a short methods note: data source, years covered, and what "pedestrian-involved" means.
-:::
+
+```{=html}
+</details>
+```
 
 
 ## Check your readiness

@@ -24,21 +24,29 @@ For a defensible review, keep AI in an assisting role: it speeds screening and s
 
 ## Practice activities
 
-::: {.callout-note collapse="true"}
-## Activity 1 · Moderate — Draft a search strategy
+```{=html}
+<details class="activity"><summary>Activity 1 · Moderate — Draft a search strategy</summary>
+```
 
 1. Describe your question (PICO-style) to AI.
 2. Ask for **search terms and a Boolean strategy** for one database.
 3. Run it in the real database; refine the terms based on what returns.
-:::
 
-::: {.callout-note collapse="true"}
-## Activity 2 · Moderate — Summarize and verify
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 2 · Moderate — Summarize and verify</summary>
+```
 
 1. Paste 2–3 **open-access** abstracts and ask AI to compare findings in a table.
 2. Open each paper and confirm the summary is faithful — especially numbers.
 3. Note any place the AI overstated or blurred a finding.
-:::
+
+```{=html}
+</details>
+```
 
 ## Check your readiness
 

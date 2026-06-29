@@ -24,20 +24,28 @@ Quality depends on retrieval: if the right passage isn't found, the answer is wr
 
 ## Practice activities
 
-::: {.callout-note collapse="true"}
-## Activity 1 · Advanced — Ground answers in your docs
+```{=html}
+<details class="activity"><summary>Activity 1 · Advanced — Ground answers in your docs</summary>
+```
 
 1. In **NotebookLM**, load 3–5 **public** sources.
 2. Ask a question and check that each cited passage **actually supports** the answer.
 3. Ask something the sources don't cover — see whether it admits the gap.
-:::
 
-::: {.callout-note collapse="true"}
-## Activity 2 · Advanced — Probe retrieval
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 2 · Advanced — Probe retrieval</summary>
+```
 
 1. Ask the same question two ways and compare which passages it retrieves.
 2. Note where retrieval missed an obviously relevant source.
-:::
+
+```{=html}
+</details>
+```
 
 ## Check your readiness
 

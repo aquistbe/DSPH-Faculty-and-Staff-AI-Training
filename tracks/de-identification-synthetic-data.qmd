@@ -24,20 +24,28 @@ Neither is magic. De-identified data can sometimes be re-identified by combining
 
 ## Practice activities
 
-::: {.callout-note collapse="true"}
-## Activity 1 · Moderate — De-identify a sample
+```{=html}
+<details class="activity"><summary>Activity 1 · Moderate — De-identify a sample</summary>
+```
 
 1. Take a small sample with quasi-identifiers (age, ZIP, date).
 2. Apply **Safe Harbor-style** removal/generalization with AI's help.
 3. Ask: could remaining fields still re-identify someone in combination?
-:::
 
-::: {.callout-note collapse="true"}
-## Activity 2 · Moderate — Generate synthetic data
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 2 · Moderate — Generate synthetic data</summary>
+```
 
 1. Describe a dataset's structure and ask AI to generate a **synthetic** version.
 2. Compare distributions to the real structure; note what's off.
-:::
+
+```{=html}
+</details>
+```
 
 ## Check your readiness
 

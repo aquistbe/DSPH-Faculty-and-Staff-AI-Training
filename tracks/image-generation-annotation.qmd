@@ -24,8 +24,9 @@ Disclose AI-generated visuals in published materials, and check that people and 
 
 ## Practice activities
 
-::: {.callout-note collapse="true"}
-## Activity 1 · Moderate — Generate and critique a safety graphic
+```{=html}
+<details class="activity"><summary>Activity 1 · Moderate — Generate and critique a safety graphic</summary>
+```
 
 **Time** ~17 min · **Tools** Adobe Firefly / Express (Drexel Moderate-Risk data)
 
@@ -54,10 +55,14 @@ Disclose AI-generated visuals in published materials, and check that people and 
 **Common pitfalls.** Generated scenes can show unsafe or unrealistic situations — review carefully. Always disclose AI-generated visuals in published materials.
 
 **Stretch (optional).** Make a second version adapted for a different neighborhood or audience.
-:::
 
-::: {.callout-note collapse="true"}
-## Activity 2 · Moderate — Annotate street images
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 2 · Moderate — Annotate street images</summary>
+```
 
 **Time** ~20 min · **Tools** Label Studio (free) + a browser
 
@@ -84,7 +89,10 @@ Disclose AI-generated visuals in published materials, and check that people and 
 **Common pitfalls.** Vague definitions wreck any downstream analysis. Never upload images with identifiable people to an unapproved tool.
 
 **Stretch (optional).** Add a third label (e.g., "missing curb ramp") and note how it changes how consistently you can annotate.
-:::
+
+```{=html}
+</details>
+```
 
 
 ## Check your readiness

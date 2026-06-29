@@ -24,21 +24,29 @@ Right-size the effort. A throwaway brainstorm needs little checking; a number in
 
 ## Practice activities
 
-::: {.callout-note collapse="true"}
-## Activity 1 · Novice — Catch a hallucination
+```{=html}
+<details class="activity"><summary>Activity 1 · Novice — Catch a hallucination</summary>
+```
 
 1. Ask AI for **five citations** on a topic you know.
 2. Try to **open and confirm** each one.
 3. Note how many were wrong, mis-attributed, or invented.
-:::
 
-::: {.callout-note collapse="true"}
-## Activity 2 · Novice — Verify a number
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 2 · Novice — Verify a number</summary>
+```
 
 1. Ask AI for a statistic with a source.
 2. Trace the number to the original source and confirm it.
 3. Decide: would you have caught this if you were rushing?
-:::
+
+```{=html}
+</details>
+```
 
 ## Check your readiness
 

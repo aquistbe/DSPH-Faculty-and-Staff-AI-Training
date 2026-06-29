@@ -214,18 +214,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="practice-activities" class="level2">
 <h2 class="anchored" data-anchor-id="practice-activities">Practice activities</h2>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Activity 1 · Moderate — Draft a codebook from open-text
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
+<details class="activity"><summary>Activity 1 · Moderate — Draft a codebook from open-text</summary>
 <p><strong>Time</strong> ~18 min · <strong>Tools</strong> ChatGPT Edu (approved tool for this content)</p>
 <p><strong>Goal.</strong> Build a codebook from qualitative responses while keeping your interpretation central.</p>
 <p><strong>Setup.</strong> Use a small, <strong>non-sensitive</strong> set of open-ended responses. You can use the free-text “description” field from a <a href="https://opendataphilly.org/datasets/311-service-and-information-requests/">311 Service &amp; Information Requests</a> slice, or the eight sample walkability comments below:</p>
@@ -248,21 +237,8 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Check your work.</strong> Do the codes capture what respondents <em>meant</em>, or just what was easy to label? Adjust accordingly.</p>
 <p><strong>Common pitfalls.</strong> AI flattens nuance and imposes its own frame — treat it as a first pass, not the analysis. De-identify any real transcripts and use an approved tool.</p>
 <p><strong>Stretch (optional).</strong> Ask AI to surface a theme across codes, then find a quote that complicates that theme.</p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Activity 2 · Moderate — Code a new batch and check agreement
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
+</details>
+<details class="activity"><summary>Activity 2 · Moderate — Code a new batch and check agreement</summary>
 <p><strong>Time</strong> ~13 min · <strong>Tools</strong> ChatGPT Edu</p>
 <p><strong>Goal.</strong> Apply the codebook and check reliability against your own coding.</p>
 <p><strong>Setup.</strong> A second small batch of ~8 responses (real and de-identified, or another sample set).</p>
@@ -282,9 +258,7 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Check your work.</strong> Disagreements should point to fuzzy code definitions — tighten them.</p>
 <p><strong>Common pitfalls.</strong> High agreement can be false comfort if the codebook is shallow. Your reading is the standard, not the AI’s.</p>
 <p><strong>Stretch (optional).</strong> Refine the codebook from the disagreements and re-run the batch.</p>
-</div>
-</div>
-</div>
+</details>
 </section>
 <section id="check-your-readiness" class="level2">
 <h2 class="anchored" data-anchor-id="check-your-readiness">Check your readiness</h2>
@@ -342,6 +316,19 @@ ul.task-list li input[type="checkbox"] {
 
 /* Track / topic tables */
 .topic-list td:first-child{white-space:nowrap}
+
+/* Collapsible activities (native <details>, no JS needed) */
+details.activity{border:1px solid #d2dae8;border-left:4px solid #006699;border-radius:6px;
+  margin:.8rem 0;background:#f7f9fb;padding:0 1.15rem}
+details.activity > summary{cursor:pointer;font-weight:700;color:#07294d;padding:.7rem 0;
+  list-style:none;font-size:1.02rem;outline:none}
+details.activity > summary::-webkit-details-marker{display:none}
+details.activity > summary::before{content:"\25B8\00a0";color:#006699;font-weight:700}
+details.activity[open] > summary::before{content:"\25BE\00a0"}
+details.activity[open]{padding-bottom:.7rem}
+details.activity[open] > summary{border-bottom:1px solid #e3e9f2;margin-bottom:.5rem}
+details.activity > summary:hover{color:#006699}
+details.activity > *:not(summary):first-of-type{margin-top:.4rem}
 
 /* Readiness quiz */
 .readiness-quiz{border:1px solid #d2dae8;border-radius:8px;padding:1.1rem 1.25rem;margin:1rem 0;

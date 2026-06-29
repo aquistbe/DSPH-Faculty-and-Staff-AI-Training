@@ -24,8 +24,9 @@ A **codebook** (what each variable means and how it's coded) is easy to skip and
 
 ## Practice activities
 
-::: {.callout-note collapse="true"}
-## Activity 1 · Novice — Diagnose the mess (Philadelphia 311)
+```{=html}
+<details class="activity"><summary>Activity 1 · Novice — Diagnose the mess (Philadelphia 311)</summary>
+```
 
 **Time** ~18 min · **Tools** ChatGPT Edu + a browser
 
@@ -52,10 +53,14 @@ A **codebook** (what each variable means and how it's coded) is easy to skip and
 **Common pitfalls.** AI may "fix" data by inventing values — only accept fixes you can verify. Keep the raw file untouched; never overwrite it.
 
 **Stretch (optional).** Ask for the cleaning steps as a documented, re-runnable R/Python script you could apply to next year's data.
-:::
 
-::: {.callout-note collapse="true"}
-## Activity 2 · Novice — Recode and document (Philadelphia crime categories)
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 2 · Novice — Recode and document (Philadelphia crime categories)</summary>
+```
 
 **Time** ~18 min · **Tools** ChatGPT Edu + R or Python
 
@@ -82,7 +87,10 @@ A **codebook** (what each variable means and how it's coded) is easy to skip and
 **Common pitfalls.** Don't let AI silently bucket ambiguous offenses. Grouping choices are substantive decisions — they're yours, not the model's.
 
 **Stretch (optional).** Ask AI to flag any offense whose grouping is genuinely debatable and explain the tradeoff.
-:::
+
+```{=html}
+</details>
+```
 
 
 ## Check your readiness

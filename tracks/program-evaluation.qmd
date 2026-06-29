@@ -24,20 +24,28 @@ Evaluation frameworks (e.g., CDC's) give structure; AI fills in drafts you refin
 
 ## Practice activities
 
-::: {.callout-note collapse="true"}
-## Activity 1 · Moderate — Draft a logic model
+```{=html}
+<details class="activity"><summary>Activity 1 · Moderate — Draft a logic model</summary>
+```
 
 1. Describe a program (inputs, activities, intended outcomes).
 2. Ask AI for a **logic model and 5 candidate indicators**.
 3. Check each indicator: is it measurable with data you can get?
-:::
 
-::: {.callout-note collapse="true"}
-## Activity 2 · Moderate — Outline the plan
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 2 · Moderate — Outline the plan</summary>
+```
 
 1. Ask AI for an evaluation plan aligned to the CDC framework steps.
 2. Mark which parts need a real data source vs. a placeholder.
-:::
+
+```{=html}
+</details>
+```
 
 ## Check your readiness
 

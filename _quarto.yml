@@ -7,6 +7,7 @@ project:
   resources:
     - robots.txt
     - slides/
+    - .nojekyll
 
 website:
   title: "AI Workshops for DSPH"

@@ -270,6 +270,19 @@ ul.task-list li input[type="checkbox"] {
 /* Track / topic tables */
 .topic-list td:first-child{white-space:nowrap}
 
+/* Collapsible activities (native <details>, no JS needed) */
+details.activity{border:1px solid #d2dae8;border-left:4px solid #006699;border-radius:6px;
+  margin:.8rem 0;background:#f7f9fb;padding:0 1.15rem}
+details.activity > summary{cursor:pointer;font-weight:700;color:#07294d;padding:.7rem 0;
+  list-style:none;font-size:1.02rem;outline:none}
+details.activity > summary::-webkit-details-marker{display:none}
+details.activity > summary::before{content:"\25B8\00a0";color:#006699;font-weight:700}
+details.activity[open] > summary::before{content:"\25BE\00a0"}
+details.activity[open]{padding-bottom:.7rem}
+details.activity[open] > summary{border-bottom:1px solid #e3e9f2;margin-bottom:.5rem}
+details.activity > summary:hover{color:#006699}
+details.activity > *:not(summary):first-of-type{margin-top:.4rem}
+
 /* Readiness quiz */
 .readiness-quiz{border:1px solid #d2dae8;border-radius:8px;padding:1.1rem 1.25rem;margin:1rem 0;
   background:#f7f9fb}

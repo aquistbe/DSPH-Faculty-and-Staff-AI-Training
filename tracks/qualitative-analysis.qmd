@@ -24,8 +24,9 @@ Transcripts are often sensitive. De-identify them and use an approved tool — c
 
 ## Practice activities
 
-::: {.callout-note collapse="true"}
-## Activity 1 · Moderate — Draft a codebook from open-text
+```{=html}
+<details class="activity"><summary>Activity 1 · Moderate — Draft a codebook from open-text</summary>
+```
 
 **Time** ~18 min · **Tools** ChatGPT Edu (approved tool for this content)
 
@@ -54,10 +55,14 @@ Transcripts are often sensitive. De-identify them and use an approved tool — c
 **Common pitfalls.** AI flattens nuance and imposes its own frame — treat it as a first pass, not the analysis. De-identify any real transcripts and use an approved tool.
 
 **Stretch (optional).** Ask AI to surface a theme across codes, then find a quote that complicates that theme.
-:::
 
-::: {.callout-note collapse="true"}
-## Activity 2 · Moderate — Code a new batch and check agreement
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 2 · Moderate — Code a new batch and check agreement</summary>
+```
 
 **Time** ~13 min · **Tools** ChatGPT Edu
 
@@ -84,7 +89,10 @@ Transcripts are often sensitive. De-identify them and use an approved tool — c
 **Common pitfalls.** High agreement can be false comfort if the codebook is shallow. Your reading is the standard, not the AI's.
 
 **Stretch (optional).** Refine the codebook from the disagreements and re-run the batch.
-:::
+
+```{=html}
+</details>
+```
 
 
 ## Check your readiness

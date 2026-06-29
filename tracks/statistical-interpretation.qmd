@@ -24,8 +24,9 @@ Interpretation and assumptions are exactly where your expertise matters most; th
 
 ## Practice activities
 
-::: {.callout-note collapse="true"}
-## Activity 1 · Moderate — Translate a model across Stata, R, and Python
+```{=html}
+<details class="activity"><summary>Activity 1 · Moderate — Translate a model across Stata, R, and Python</summary>
+```
 
 **Time** ~20 min · **Tools** ChatGPT Edu + Stata and/or R/Python
 
@@ -52,10 +53,14 @@ Interpretation and assumptions are exactly where your expertise matters most; th
 **Common pitfalls.** Different default reference categories or NA handling cause mismatches — check those first. Treat any statistical claim from AI as a draft to verify.
 
 **Stretch (optional).** Ask which model assumptions matter most here and how to check each.
-:::
 
-::: {.callout-note collapse="true"}
-## Activity 2 · Moderate — Interrogate the output
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 2 · Moderate — Interrogate the output</summary>
+```
 
 **Time** ~15 min · **Tools** ChatGPT Edu + R or Stata
 
@@ -82,7 +87,10 @@ Interpretation and assumptions are exactly where your expertise matters most; th
 **Common pitfalls.** AI often slips into causal language ("speeding causes…"). This is observational data — keep it associational.
 
 **Stretch (optional).** Ask AI to name the single biggest threat to validity in this analysis.
-:::
+
+```{=html}
+</details>
+```
 
 
 ## Check your readiness

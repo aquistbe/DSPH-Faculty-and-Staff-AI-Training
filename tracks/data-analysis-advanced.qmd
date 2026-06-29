@@ -24,8 +24,9 @@ Recent work cautions that "foundation models" don't automatically win on tabular
 
 ## Practice activities
 
-::: {.callout-note collapse="true"}
-## Activity 1 · Advanced — Audit a modeling pipeline
+```{=html}
+<details class="activity"><summary>Activity 1 · Advanced — Audit a modeling pipeline</summary>
+```
 
 **Time** ~25 min · **Tools** ChatGPT Edu (or Claude) + R or Python
 
@@ -56,10 +57,14 @@ Recent work cautions that "foundation models" don't automatically win on tabular
 **Common pitfalls.** Leakage inflates performance and hides easily. High accuracy on a rare outcome is meaningless. This is observational data — don't imply causation.
 
 **Stretch (optional).** Add calibration (are the predicted probabilities trustworthy?) and report it.
-:::
 
-::: {.callout-note collapse="true"}
-## Activity 2 · Advanced — Compare a baseline to a complex model
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 2 · Advanced — Compare a baseline to a complex model</summary>
+```
 
 **Time** ~20 min · **Tools** ChatGPT Edu (or Claude) + R or Python
 
@@ -84,7 +89,10 @@ Recent work cautions that "foundation models" don't automatically win on tabular
 **Common pitfalls.** A higher AUC doesn't automatically justify complexity. Recent evidence shows classic methods often match boosting and "foundation" models on tabular data.
 
 **Stretch (optional).** Log your prompts, package versions, and a random seed so a colleague could reproduce the comparison (see the Reproducible AI topic).
-:::
+
+```{=html}
+</details>
+```
 
 
 ## Check your readiness

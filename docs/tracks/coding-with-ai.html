@@ -249,18 +249,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="practice-activities" class="level2">
 <h2 class="anchored" data-anchor-id="practice-activities">Practice activities</h2>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Activity 1 · Moderate — Explain and fix a broken script
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
+<details class="activity"><summary>Activity 1 · Moderate — Explain and fix a broken script</summary>
 <p><strong>Time</strong> ~18 min · <strong>Tools</strong> ChatGPT Edu + R (or Python)</p>
 <p><strong>Goal.</strong> Use AI to debug code you actually understand before trusting it.</p>
 <p><strong>Setup.</strong> Download the <a href="https://hub.arcgis.com/api/v3/datasets/21154a8f1894449f839d2288726e9837_0/downloads/data?format=csv&amp;spatialRefId=3857&amp;where=1%3D1">Crash Data 2020–2024 (CSV)</a>. Below is a short R script with a deliberate bug — it should count pedestrian-involved crashes but returns 0 (wrong column name, and NAs not handled):</p>
@@ -284,21 +273,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>Check your work.</strong> Compare against your earlier count. “No error” is not the same as “correct.”</p>
 <p><strong>Common pitfalls.</strong> Never paste credentials or non-public data into a prompt. Always verify the output number, not just that the code ran.</p>
 <p><strong>Stretch (optional).</strong> Ask AI to add a guard that warns if the pedestrian field contains unexpected values.</p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Activity 2 · Moderate — Refactor with a sanity check
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
+</details>
+<details class="activity"><summary>Activity 2 · Moderate — Refactor with a sanity check</summary>
 <p><strong>Time</strong> ~15 min · <strong>Tools</strong> ChatGPT Edu + R or Python</p>
 <p><strong>Goal.</strong> Improve working code and add a test that would actually catch a mistake.</p>
 <p><strong>Steps.</strong></p>
@@ -314,9 +290,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>Check your work.</strong> Run the function on the real crash data — totals should match prior results. Then break the function on purpose; the test should fail. If it still passes, the test is too weak.</p>
 <p><strong>Common pitfalls.</strong> A test that can’t fail is useless. Read the refactored code; don’t run what you don’t understand.</p>
 <p><strong>Stretch (optional).</strong> Ask for the same function in the other language (R↔︎Python) and confirm both return identical counts.</p>
-</div>
-</div>
-</div>
+</details>
 </section>
 <section id="check-your-readiness" class="level2">
 <h2 class="anchored" data-anchor-id="check-your-readiness">Check your readiness</h2>
@@ -376,6 +350,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 /* Track / topic tables */
 .topic-list td:first-child{white-space:nowrap}
+
+/* Collapsible activities (native <details>, no JS needed) */
+details.activity{border:1px solid #d2dae8;border-left:4px solid #006699;border-radius:6px;
+  margin:.8rem 0;background:#f7f9fb;padding:0 1.15rem}
+details.activity > summary{cursor:pointer;font-weight:700;color:#07294d;padding:.7rem 0;
+  list-style:none;font-size:1.02rem;outline:none}
+details.activity > summary::-webkit-details-marker{display:none}
+details.activity > summary::before{content:"\25B8\00a0";color:#006699;font-weight:700}
+details.activity[open] > summary::before{content:"\25BE\00a0"}
+details.activity[open]{padding-bottom:.7rem}
+details.activity[open] > summary{border-bottom:1px solid #e3e9f2;margin-bottom:.5rem}
+details.activity > summary:hover{color:#006699}
+details.activity > *:not(summary):first-of-type{margin-top:.4rem}
 
 /* Readiness quiz */
 .readiness-quiz{border:1px solid #d2dae8;border-radius:8px;padding:1.1rem 1.25rem;margin:1rem 0;

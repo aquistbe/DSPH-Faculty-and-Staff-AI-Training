@@ -24,20 +24,28 @@ The discipline is sampling and spot-checking: validate the loop on a few items, 
 
 ## Practice activities
 
-::: {.callout-note collapse="true"}
-## Activity 1 · Advanced — Loop with a checkpoint
+```{=html}
+<details class="activity"><summary>Activity 1 · Advanced — Loop with a checkpoint</summary>
+```
 
 1. Take ~10 **non-sensitive** items and one task (e.g., extract a field from each).
 2. Run the loop, then **audit a random sample** for errors.
 3. Fix the instruction and re-run only the failures.
-:::
 
-::: {.callout-note collapse="true"}
-## Activity 2 · Advanced — Decide the guardrail
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 2 · Advanced — Decide the guardrail</summary>
+```
 
 1. Write the rule for when this loop needs human review of every item vs. a sample.
 2. Tie it to stakes and reversibility.
-:::
+
+```{=html}
+</details>
+```
 
 ## Check your readiness
 

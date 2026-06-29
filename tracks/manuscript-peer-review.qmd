@@ -24,21 +24,29 @@ Peer review has a hard rule: a manuscript you're reviewing is **confidential**. 
 
 ## Practice activities
 
-::: {.callout-note collapse="true"}
-## Activity 1 · Advanced — Tighten with a checklist
+```{=html}
+<details class="activity"><summary>Activity 1 · Advanced — Tighten with a checklist</summary>
+```
 
 1. Paste your own draft methods section and the relevant **reporting checklist** (e.g., STROBE).
 2. Ask AI which checklist items are missing or unclear.
 3. Revise; confirm each change is accurate to what you actually did.
-:::
 
-::: {.callout-note collapse="true"}
-## Activity 2 · Advanced — Structure a reviewer response
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 2 · Advanced — Structure a reviewer response</summary>
+```
 
 1. Paste **your own** reviewer comments and your planned replies (not someone else's manuscript).
 2. Ask AI to organize a clear, point-by-point response letter.
 3. Verify every claim about what you changed is true.
-:::
+
+```{=html}
+</details>
+```
 
 ## Check your readiness
 

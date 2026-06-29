@@ -24,20 +24,28 @@ Cultural adaptation is more than translation: examples, framing, and imagery may
 
 ## Practice activities
 
-::: {.callout-note collapse="true"}
-## Activity 1 · Moderate — Translate and back-translate
+```{=html}
+<details class="activity"><summary>Activity 1 · Moderate — Translate and back-translate</summary>
+```
 
 1. Translate a short outreach message into a target language with AI.
 2. Ask a **fresh AI session (or person)** to translate it back to English.
 3. Compare to the original — investigate any drift in meaning.
-:::
 
-::: {.callout-note collapse="true"}
-## Activity 2 · Moderate — Adapt, don't just translate
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 2 · Moderate — Adapt, don't just translate</summary>
+```
 
 1. Ask AI how the message's **examples or framing** might land differently in the target community.
 2. Draft an adapted version; flag what a community reviewer must confirm.
-:::
+
+```{=html}
+</details>
+```
 
 ## Check your readiness
 

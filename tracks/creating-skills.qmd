@@ -24,20 +24,28 @@ Most quality lives in the instructions, not the model. A good skill names the jo
 
 ## Practice activities
 
-::: {.callout-note collapse="true"}
-## Activity 1 · Moderate — Write a skill
+```{=html}
+<details class="activity"><summary>Activity 1 · Moderate — Write a skill</summary>
+```
 
 1. Pick a repeated task (a recap, a rewrite, a checklist).
 2. Write a skill with **job, steps, output format, and guardrails** (no sensitive data).
 3. Test it on two different inputs; tighten where it drifts.
-:::
 
-::: {.callout-note collapse="true"}
-## Activity 2 · Moderate — Share and reuse
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 2 · Moderate — Share and reuse</summary>
+```
 
 1. Save the skill as a custom GPT or shared doc your team can reach.
 2. Have a colleague run it and note where the instructions need to be clearer.
-:::
+
+```{=html}
+</details>
+```
 
 ## Check your readiness
 

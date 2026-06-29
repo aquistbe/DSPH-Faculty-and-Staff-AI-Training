@@ -24,21 +24,29 @@ Plain language is an equity tool: clearer materials reach more people. But overs
 
 ## Practice activities
 
-::: {.callout-note collapse="true"}
-## Activity 1 · Novice — One finding, three audiences
+```{=html}
+<details class="activity"><summary>Activity 1 · Novice — One finding, three audiences</summary>
+```
 
 1. Take one finding from your work (public/non-sensitive).
 2. Ask AI to write it three ways: for **community members (8th-grade level)**, for **policymakers**, and as a **social post**.
 3. Check each for accuracy — did any version overstate the result?
-:::
 
-::: {.callout-note collapse="true"}
-## Activity 2 · Novice — Set a reading level
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 2 · Novice — Set a reading level</summary>
+```
 
 1. Paste a paragraph of your writing and ask AI to rewrite it at a **6th–8th grade** reading level.
 2. Ask what it changed and why.
 3. Confirm the meaning is intact, then keep the version that fits your audience.
-:::
+
+```{=html}
+</details>
+```
 
 ## Check your readiness
 

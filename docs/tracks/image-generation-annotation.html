@@ -214,18 +214,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="practice-activities" class="level2">
 <h2 class="anchored" data-anchor-id="practice-activities">Practice activities</h2>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Activity 1 · Moderate — Generate and critique a safety graphic
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
+<details class="activity"><summary>Activity 1 · Moderate — Generate and critique a safety graphic</summary>
 <p><strong>Time</strong> ~17 min · <strong>Tools</strong> Adobe Firefly / Express (Drexel Moderate-Risk data)</p>
 <p><strong>Goal.</strong> Make a communication graphic responsibly.</p>
 <p><strong>Setup.</strong> No dataset needed. Open Firefly or Adobe Express.</p>
@@ -247,21 +236,8 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Check your work.</strong> Ask yourself: could this image mislead anyone about safe behavior? If so, fix it before using it.</p>
 <p><strong>Common pitfalls.</strong> Generated scenes can show unsafe or unrealistic situations — review carefully. Always disclose AI-generated visuals in published materials.</p>
 <p><strong>Stretch (optional).</strong> Make a second version adapted for a different neighborhood or audience.</p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Activity 2 · Moderate — Annotate street images
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
+</details>
+<details class="activity"><summary>Activity 2 · Moderate — Annotate street images</summary>
 <p><strong>Time</strong> ~20 min · <strong>Tools</strong> Label Studio (free) + a browser</p>
 <p><strong>Goal.</strong> Turn images into labeled data you could measure.</p>
 <p><strong>Setup.</strong> Collect ~10 public Google Street View images of Philadelphia intersections (Google already blurs faces and plates). Install or open <strong>Label Studio</strong>.</p>
@@ -279,9 +255,7 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Check your work.</strong> Re-label 2 images without looking at your first pass. If you disagree with yourself, the definitions need work.</p>
 <p><strong>Common pitfalls.</strong> Vague definitions wreck any downstream analysis. Never upload images with identifiable people to an unapproved tool.</p>
 <p><strong>Stretch (optional).</strong> Add a third label (e.g., “missing curb ramp”) and note how it changes how consistently you can annotate.</p>
-</div>
-</div>
-</div>
+</details>
 </section>
 <section id="check-your-readiness" class="level2">
 <h2 class="anchored" data-anchor-id="check-your-readiness">Check your readiness</h2>
@@ -339,6 +313,19 @@ ul.task-list li input[type="checkbox"] {
 
 /* Track / topic tables */
 .topic-list td:first-child{white-space:nowrap}
+
+/* Collapsible activities (native <details>, no JS needed) */
+details.activity{border:1px solid #d2dae8;border-left:4px solid #006699;border-radius:6px;
+  margin:.8rem 0;background:#f7f9fb;padding:0 1.15rem}
+details.activity > summary{cursor:pointer;font-weight:700;color:#07294d;padding:.7rem 0;
+  list-style:none;font-size:1.02rem;outline:none}
+details.activity > summary::-webkit-details-marker{display:none}
+details.activity > summary::before{content:"\25B8\00a0";color:#006699;font-weight:700}
+details.activity[open] > summary::before{content:"\25BE\00a0"}
+details.activity[open]{padding-bottom:.7rem}
+details.activity[open] > summary{border-bottom:1px solid #e3e9f2;margin-bottom:.5rem}
+details.activity > summary:hover{color:#006699}
+details.activity > *:not(summary):first-of-type{margin-top:.4rem}
 
 /* Readiness quiz */
 .readiness-quiz{border:1px solid #d2dae8;border-radius:8px;padding:1.1rem 1.25rem;margin:1rem 0;

@@ -24,21 +24,29 @@ Funders increasingly expect disclosure of AI assistance and prohibit fabricated 
 
 ## Practice activities
 
-::: {.callout-note collapse="true"}
-## Activity 1 · Moderate — Draft a specific-aims page
+```{=html}
+<details class="activity"><summary>Activity 1 · Moderate — Draft a specific-aims page</summary>
+```
 
 1. Give AI your project's goal, gap, and approach (non-sensitive).
 2. Ask for a **one-page specific-aims draft** with a hook, long-term goal, and 2–3 aims.
 3. Rewrite the science yourself; verify every cited claim against the source.
-:::
 
-::: {.callout-note collapse="true"}
-## Activity 2 · Moderate — Fit the guidelines
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 2 · Moderate — Fit the guidelines</summary>
+```
 
 1. Paste a draft section and the funder's instructions.
 2. Ask AI to flag where you don't meet the guidance and to tighten to the page limit.
 3. Confirm nothing required was dropped.
-:::
+
+```{=html}
+</details>
+```
 
 ## Check your readiness
 

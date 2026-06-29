@@ -24,20 +24,28 @@ More context is not always better. Too much dilutes attention; the skill is pick
 
 ## Practice activities
 
-::: {.callout-note collapse="true"}
-## Activity 1 · Moderate — Fix a drift with context
+```{=html}
+<details class="activity"><summary>Activity 1 · Moderate — Fix a drift with context</summary>
+```
 
 1. Find a task where AI keeps missing what you want.
 2. Add a short **system instruction** and one **reference example** of the right output.
 3. Re-run; note that better context — not a longer prompt — fixed it.
-:::
 
-::: {.callout-note collapse="true"}
-## Activity 2 · Moderate — Trim the context
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 2 · Moderate — Trim the context</summary>
+```
 
 1. Take a prompt with lots of background and remove everything non-essential.
 2. Re-run; confirm quality held or improved with less noise.
-:::
+
+```{=html}
+</details>
+```
 
 ## Check your readiness
 

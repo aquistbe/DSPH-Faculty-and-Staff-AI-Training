@@ -24,8 +24,9 @@ Start small and verifiable: one dataset, one question, one chart. Confirm a numb
 
 ## Practice activities
 
-::: {.callout-note collapse="true"}
-## Activity 1 · Novice — Interview a dataset (Philadelphia crashes)
+```{=html}
+<details class="activity"><summary>Activity 1 · Novice — Interview a dataset (Philadelphia crashes)</summary>
+```
 
 **Time** ~20 min · **Tools** ChatGPT Edu + a web browser
 
@@ -56,10 +57,14 @@ Start small and verifiable: one dataset, one question, one chart. Confirm a numb
 **Common pitfalls.** Field names in the file often differ from what AI guesses — always confirm against the real columns. Missing values may be blank or coded as 0; decide how to treat them before counting.
 
 **Stretch (optional).** Ask for the same count broken out by hour of day, and note when pedestrian crashes peak.
-:::
 
-::: {.callout-note collapse="true"}
-## Activity 2 · Novice — From question to chart
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 2 · Novice — From question to chart</summary>
+```
 
 **Time** ~15 min · **Tools** ChatGPT Edu + R or Python
 
@@ -86,7 +91,10 @@ Start small and verifiable: one dataset, one question, one chart. Confirm a numb
 **Common pitfalls.** Don't let AI invent a year that isn't in the data — confirm the year range. Reject any chart with an unlabeled axis.
 
 **Stretch (optional).** Ask AI to add a one-sentence, plain-language caption summarizing the takeaway for a community audience.
-:::
+
+```{=html}
+</details>
+```
 
 
 ## Check your readiness

@@ -24,20 +24,28 @@ Connect with least privilege: give the narrowest access that does the job, prefe
 
 ## Practice activities
 
-::: {.callout-note collapse="true"}
-## Activity 1 · Advanced — Map a connection
+```{=html}
+<details class="activity"><summary>Activity 1 · Advanced — Map a connection</summary>
+```
 
 1. Pick a task that would need AI to reach a tool or data source.
 2. Write what access it truly needs — and the **narrowest** version that works.
 3. Decide read-only vs. write, and what stays off-limits.
-:::
 
-::: {.callout-note collapse="true"}
-## Activity 2 · Advanced — Risk-check it
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 2 · Advanced — Risk-check it</summary>
+```
 
 1. List what could go wrong if the connection misbehaves.
 2. Add a human-approval step before any write or send action.
-:::
+
+```{=html}
+</details>
+```
 
 ## Check your readiness
 

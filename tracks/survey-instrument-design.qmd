@@ -24,20 +24,28 @@ Good instruments are validated, not just written. AI accelerates drafting; pilot
 
 ## Practice activities
 
-::: {.callout-note collapse="true"}
-## Activity 1 · Moderate — Draft and critique items
+```{=html}
+<details class="activity"><summary>Activity 1 · Moderate — Draft and critique items</summary>
+```
 
 1. Describe a construct you want to measure.
 2. Ask AI for **6 candidate items** plus a response scale.
 3. Critique each for bias, ambiguity, and double-barreling; cut or fix.
-:::
 
-::: {.callout-note collapse="true"}
-## Activity 2 · Moderate — Write cognitive probes
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 2 · Moderate — Write cognitive probes</summary>
+```
 
 1. Ask AI for **cognitive-interview probes** for two items.
 2. Decide which you'd actually use to test comprehension.
-:::
+
+```{=html}
+</details>
+```
 
 ## Check your readiness
 

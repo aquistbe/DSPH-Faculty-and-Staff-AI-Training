@@ -24,20 +24,28 @@ Spatial work has its own traps: projection errors, edge effects, and the ecologi
 
 ## Practice activities
 
-::: {.callout-note collapse="true"}
-## Activity 1 · Advanced — Scaffold a spatial join
+```{=html}
+<details class="activity"><summary>Activity 1 · Advanced — Scaffold a spatial join</summary>
+```
 
 1. Describe two **public** spatial datasets and the join you want.
 2. Ask AI for the code (e.g., R sf or Python geopandas) and **explain each step**.
 3. Run it; validate against a known case.
-:::
 
-::: {.callout-note collapse="true"}
-## Activity 2 · Advanced — Interpret imagery carefully
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 2 · Advanced — Interpret imagery carefully</summary>
+```
 
 1. Use AI to describe features in a **public** street/satellite image.
 2. Note where it guessed, and what a human rater must confirm.
-:::
+
+```{=html}
+</details>
+```
 
 ## Check your readiness
 

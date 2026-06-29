@@ -24,8 +24,9 @@ Use approved tools, and never paste sensitive data, credentials, or API keys int
 
 ## Practice activities
 
-::: {.callout-note collapse="true"}
-## Activity 1 · Moderate — Explain and fix a broken script
+```{=html}
+<details class="activity"><summary>Activity 1 · Moderate — Explain and fix a broken script</summary>
+```
 
 **Time** ~18 min · **Tools** ChatGPT Edu + R (or Python)
 
@@ -59,10 +60,14 @@ nrow(ped)
 **Common pitfalls.** Never paste credentials or non-public data into a prompt. Always verify the output number, not just that the code ran.
 
 **Stretch (optional).** Ask AI to add a guard that warns if the pedestrian field contains unexpected values.
-:::
 
-::: {.callout-note collapse="true"}
-## Activity 2 · Moderate — Refactor with a sanity check
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 2 · Moderate — Refactor with a sanity check</summary>
+```
 
 **Time** ~15 min · **Tools** ChatGPT Edu + R or Python
 
@@ -85,7 +90,10 @@ nrow(ped)
 **Common pitfalls.** A test that can't fail is useless. Read the refactored code; don't run what you don't understand.
 
 **Stretch (optional).** Ask for the same function in the other language (R↔Python) and confirm both return identical counts.
-:::
+
+```{=html}
+</details>
+```
 
 
 ## Check your readiness

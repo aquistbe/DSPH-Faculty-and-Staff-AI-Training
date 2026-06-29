@@ -24,20 +24,28 @@ When a tool isn't cleared for your data, the move is to de-identify, use synthet
 
 ## Practice activities
 
-::: {.callout-note collapse="true"}
-## Activity 1 · Novice — Classify and match
+```{=html}
+<details class="activity"><summary>Activity 1 · Novice — Classify and match</summary>
+```
 
 1. List three data types you work with.
 2. For each, note Drexel's classification and which tools are approved (check the AI Tools page).
 3. Flag any current habit that doesn't match.
-:::
 
-::: {.callout-note collapse="true"}
-## Activity 2 · Novice — Substitute safely
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 2 · Novice — Substitute safely</summary>
+```
 
 1. Take a sensitive example and write a **de-identified or synthetic** version.
 2. Confirm the substitute is safe for the tool you want to use.
-:::
+
+```{=html}
+</details>
+```
 
 ## Check your readiness
 

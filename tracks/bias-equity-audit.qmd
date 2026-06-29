@@ -24,20 +24,28 @@ The countermeasure is auditing: don't judge a tool on average performance; test 
 
 ## Practice activities
 
-::: {.callout-note collapse="true"}
-## Activity 1 · Moderate — Audit across groups
+```{=html}
+<details class="activity"><summary>Activity 1 · Moderate — Audit across groups</summary>
+```
 
 1. Take an AI output that varies by input (e.g., generated examples, summaries, or images).
 2. Vary the **group** in the input and compare outputs for stereotype or quality gaps.
 3. Document any disparity you find.
-:::
 
-::: {.callout-note collapse="true"}
-## Activity 2 · Moderate — Decide the threshold
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 2 · Moderate — Decide the threshold</summary>
+```
 
 1. For a real use case, write what level of disparity would make you **not** use the tool.
 2. Note who should be at the table for that decision.
-:::
+
+```{=html}
+</details>
+```
 
 ## Check your readiness
 

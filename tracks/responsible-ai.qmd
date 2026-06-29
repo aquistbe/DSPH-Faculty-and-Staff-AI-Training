@@ -24,20 +24,28 @@ Public-health bodies (WHO, ASPPH) offer frameworks for AI ethics and governance.
 
 ## Practice activities
 
-::: {.callout-note collapse="true"}
-## Activity 1 · Moderate — Write a disclosure rule
+```{=html}
+<details class="activity"><summary>Activity 1 · Moderate — Write a disclosure rule</summary>
+```
 
 1. List three places AI shows up in your work.
 2. For each, decide whether and how you'd disclose AI use.
 3. Draft a one-line norm you could share with your team.
-:::
 
-::: {.callout-note collapse="true"}
-## Activity 2 · Moderate — Apply a framework
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 2 · Moderate — Apply a framework</summary>
+```
 
 1. Skim one governance framework (WHO or ASPPH).
 2. Pick two principles and write how you'd act on each in a real task.
-:::
+
+```{=html}
+</details>
+```
 
 ## Check your readiness
 
