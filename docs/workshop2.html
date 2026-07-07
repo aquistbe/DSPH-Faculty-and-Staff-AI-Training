@@ -215,6 +215,19 @@ ul.task-list li input[type="checkbox"] {
 <div class="slides-cta">
 <p><a href="slides/workshop2.html" class="btn btn-primary" target="_blank" role="button">📊 Open the slides ↗</a> <a href="slides/DSPH_Workshop2_Workflow_Enhancement.pptx" class="btn btn-outline-primary" role="button">⬇ Editable PowerPoint</a></p>
 </div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Demo Files
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Didn’t bring a task? Download a synthetic demo file (all content fictional and non-sensitive): <a href="demo-materials/Workshop2_Demo_StudyDescription.docx">Study description (Word)</a> · <a href="demo-materials/Workshop2_Demo_EmailThread.docx">Committee email thread (Word)</a> · <a href="demo-materials/Workshop2_Demo_SeminarAttendance.xlsx">Seminar attendance data (Excel)</a> · <a href="demo-materials/Workshop2_Demo_Abstracts.docx">Three abstracts (Word)</a></p>
+</div>
+</div>
 <section id="what-youll-leave-with" class="level2">
 <h2 class="anchored" data-anchor-id="what-youll-leave-with">What You’ll Leave With</h2>
 <p>By the end of this hour, you will be able to:</p>
@@ -318,33 +331,36 @@ ul.task-list li input[type="checkbox"] {
 <div class="activity-meta">
 <p>Duration: ~19 minutes | Format: Hands-on, choose by your role</p>
 </div>
-<p><strong>Goal:</strong> Use Microsoft 365 Copilot where your work already lives. Pick the track that fits you. Use non-sensitive or appropriately classified content only.</p>
+<p><strong>Goal:</strong> Use Microsoft 365 Copilot where your work already lives. Pick the track that fits you. Use non-sensitive or appropriately classified content only. Each track has a worked example with a demo file — use it as-is, or substitute your own material and run the same three prompts.</p>
 <section id="track-a-word-drafting-rewriting" class="level4">
 <h4 class="anchored" data-anchor-id="track-a-word-drafting-rewriting">Track A — Word (drafting &amp; rewriting)</h4>
+<p><strong>Worked example: from study aims to lay summary.</strong> Open <a href="demo-materials/Workshop2_Demo_StudyDescription.docx">Workshop2_Demo_StudyDescription.docx</a> (a synthetic pedestrian-safety study description) or your own document, then run:</p>
 <ol type="1">
-<li>Open a Word document with a few paragraphs of real (non-sensitive) text.</li>
-<li>Use Copilot to <strong>summarize</strong> it into key points.</li>
-<li>Ask Copilot to <strong>rewrite</strong> a paragraph for a specific audience (“rewrite for a non-technical reader”).</li>
-<li>Ask it to <strong>draft</strong> a new section from a one-line instruction.</li>
+<li><em>“Summarize this document in 5 bullet points for a project status update.”</em></li>
+<li><em>“Rewrite the first paragraph for a community advisory board — no jargon, 8th-grade reading level, keep it to 4 sentences.”</em></li>
+<li><em>“Draft a short ‘Next Steps’ section: one paragraph, three concrete steps, active voice.”</em></li>
 </ol>
+<p><strong>Watch for:</strong> does the lay version keep the facts accurate? Did anything get invented? That’s your verify step.</p>
 </section>
 <section id="track-b-outlook-email-triage" class="level4">
 <h4 class="anchored" data-anchor-id="track-b-outlook-email-triage">Track B — Outlook (email triage)</h4>
+<p><strong>Worked example: find the decisions, draft the reply.</strong> Open a long thread of your own, or use the mock 6-message curriculum-committee thread in <a href="demo-materials/Workshop2_Demo_EmailThread.docx">Workshop2_Demo_EmailThread.docx</a> (paste it into Copilot Chat if you’re not working in Outlook), then run:</p>
 <ol type="1">
-<li>Open a long email thread.</li>
-<li>Ask Copilot to <strong>summarize the thread</strong> and list any decisions or action items.</li>
-<li>Ask it to <strong>draft a reply</strong> with a tone you specify (e.g., “concise and friendly, confirm the meeting time”).</li>
-<li>Edit and send (or save as draft).</li>
+<li><em>“Summarize this thread. List every decision made and every open question.”</em></li>
+<li><em>“List the action items as a table: owner, task, due date.”</em></li>
+<li><em>“Draft a reply confirming I’ll have the syllabus draft ready by July 20 — concise and friendly, two sentences.”</em></li>
 </ol>
+<p><strong>Watch for:</strong> did it invent a decision that was never actually made? Threads are where AI over-summarizes — in the demo thread, is the accreditation crosswalk a decision, an action item, or an open question?</p>
 </section>
 <section id="track-c-excel-quick-analysis" class="level4">
 <h4 class="anchored" data-anchor-id="track-c-excel-quick-analysis">Track C — Excel (quick analysis)</h4>
+<p><strong>Worked example: seminar attendance and spend.</strong> Open <a href="demo-materials/Workshop2_Demo_SeminarAttendance.xlsx">Workshop2_Demo_SeminarAttendance.xlsx</a> (synthetic monthly attendance and catering cost for three departments) or your own sheet, then run:</p>
 <ol type="1">
-<li>Open a spreadsheet with non-sensitive tabular data (or use sample data).</li>
-<li>Ask Copilot to <strong>summarize what’s in the data</strong>.</li>
-<li>Ask for a <strong>formula</strong> in plain language (“flag rows where the amount is over 5000”).</li>
-<li>Ask it to <strong>suggest a chart</strong> or surface a trend.</li>
+<li><em>“Summarize this data. What stands out?”</em></li>
+<li><em>“Add a column that flags rows where cost per attendee is over $12.”</em></li>
+<li><em>“Suggest a chart showing the attendance trend by department across the year.”</em></li>
 </ol>
+<p><strong>Watch for:</strong> check the flag formula against one row by hand before you trust the column.</p>
 </section>
 <section id="reflection" class="level4">
 <h4 class="anchored" data-anchor-id="reflection">Reflection</h4>
@@ -372,6 +388,19 @@ ul.task-list li input[type="checkbox"] {
 <li>Run it. Then <strong>iterate</strong>: shorten, change tone, add a section, ask for a table. Push it 2–3 rounds until it’s close to usable.</li>
 <li>Do the final edit yourself. Note what you changed—that’s the part that needs your expertise.</li>
 </ol>
+</section>
+<section id="worked-example-summarize-then-act" class="level4">
+<h4 class="anchored" data-anchor-id="worked-example-summarize-then-act">Worked Example: Summarize-Then-Act</h4>
+<p>No task of your own? Use <a href="demo-materials/Workshop2_Demo_Abstracts.docx">Workshop2_Demo_Abstracts.docx</a> — three short synthetic abstracts on pedestrian safety. Paste them into ChatGPT Edu with:</p>
+<blockquote class="blockquote">
+<p><em>“Summarize each abstract as one row of a table: population, method, key finding. Then draft a 3-sentence email to my research team on what these mean for our streetlight and injury analysis.”</em></p>
+</blockquote>
+<p>Then iterate:</p>
+<ul>
+<li><strong>Round 2:</strong> <em>“Cut it to half the length. Make the findings column quantitative — effect sizes, not adjectives.”</em></li>
+<li><strong>Round 3:</strong> <em>“Add a column rating each study’s relevance to our project, 1–3, with a one-phrase justification.”</em></li>
+</ul>
+<p><strong>Verify:</strong> check every number in the table against the abstracts — confidence intervals are the easiest thing for AI to mangle.</p>
 </section>
 <section id="two-patterns-worth-knowing" class="level4">
 <h4 class="anchored" data-anchor-id="two-patterns-worth-knowing">Two Patterns Worth Knowing</h4>

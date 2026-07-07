@@ -8,6 +8,7 @@
  --slate:#1C2530; --gray:#5A6571; --line:#D0D3D4; --off:#F5F6F7;
  --sans:"Futura","Century Gothic","Trebuchet MS","Avenir Next",Segoe UI,sans-serif;
  --serif:Georgia,"Times New Roman",serif;
+ --mono:"SF Mono","Consolas","Menlo",monospace;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%;background:#11151c;font-family:var(--sans)}
@@ -45,6 +46,42 @@ html,body{height:100%;background:#11151c;font-family:var(--sans)}
 .col-head{color:#fff;font-family:var(--serif);font-weight:700;font-size:24px;padding:14px 22px}
 .col-head.crimson{background:var(--crimson)} .col-head.teal-bg{background:var(--teal)}
 .col .bullets{padding:22px 24px 26px} .col .bullets li{font-size:19px}
+/* figures */
+.fig{margin-top:26px;display:flex;justify-content:center}
+.fig svg{max-width:1136px}
+.figcap{text-align:center;color:var(--gray);font-size:17px;margin-top:14px;font-style:italic}
+/* two-column worked examples */
+.duo{display:grid;grid-template-columns:1.08fr 1fr;gap:30px;margin-top:28px;align-items:start}
+.snippet{background:var(--off);border:1px solid var(--line);border-left:5px solid var(--navy);border-radius:3px;
+  padding:20px 22px;font-family:var(--serif);color:var(--slate);font-size:16.5px;line-height:1.5}
+.snippet .sn-label{font-family:var(--sans);font-weight:700;font-size:12.5px;letter-spacing:2px;text-transform:uppercase;
+  color:var(--teal);margin-bottom:10px}
+.snippet p{margin-bottom:9px} .snippet p:last-child{margin-bottom:0}
+.snippet .from{font-family:var(--sans);font-weight:700;color:var(--navy);font-size:15px}
+.prompts{display:flex;flex-direction:column;gap:14px}
+.prompt{background:#fff;border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:3px;
+  padding:13px 16px;font-family:var(--mono);font-size:15.5px;line-height:1.45;color:var(--slate)}
+.prompt .p-step{font-family:var(--sans);font-weight:700;color:var(--teal);font-size:12.5px;letter-spacing:1.5px;
+  text-transform:uppercase;display:block;margin-bottom:5px}
+/* tables */
+.xtable{width:100%;border-collapse:collapse;margin-top:30px}
+.xtable th{background:var(--navy);color:#fff;font-size:17px;text-align:left;padding:11px 16px;font-weight:700}
+.xtable td{border-bottom:1px solid var(--line);color:var(--slate);font-size:17px;line-height:1.4;padding:11px 16px;vertical-align:top}
+.xtable tr:nth-child(even) td{background:var(--off)}
+.xtable .rowlab{font-weight:700;color:var(--navy);white-space:nowrap}
+.mini{font-size:14.5px} .mini th{font-size:14px;padding:8px 12px} .mini td{font-size:14.5px;padding:7px 12px}
+/* PTCF rows */
+.ptcf{display:flex;flex-direction:column;gap:14px;margin-top:30px}
+.ptcf-row{display:grid;grid-template-columns:210px 1fr;border:1px solid var(--line);border-radius:3px;overflow:hidden}
+.ptcf-key{color:#fff;font-weight:700;font-size:20px;padding:14px 20px;display:flex;align-items:center}
+.ptcf-val{padding:14px 20px;color:var(--slate);font-size:17.5px;line-height:1.45;background:#fff;font-family:var(--mono)}
+/* iteration rounds */
+.rounds{display:flex;flex-direction:column;gap:16px;margin-top:28px}
+.round{display:grid;grid-template-columns:150px 1fr 330px;gap:0;border:1px solid var(--line);border-radius:3px;overflow:hidden;align-items:stretch}
+.round .r-tag{background:var(--navy);color:#fff;font-weight:700;font-size:17px;display:flex;align-items:center;justify-content:center;padding:12px}
+.round .r-prompt{font-family:var(--mono);font-size:15px;line-height:1.45;color:var(--slate);padding:13px 16px;display:flex;align-items:center}
+.round .r-note{background:var(--off);border-left:1px solid var(--line);color:var(--gray);font-size:14.5px;line-height:1.4;
+  padding:13px 16px;display:flex;align-items:center;font-style:italic}
 /* title + closing (navy) */
 .s-title,.s-closing{background:var(--navy);color:#fff;padding:60px 72px}
 .brandcard{position:absolute;top:60px;left:72px;background:#fff;border-radius:8px;padding:14px 22px;
@@ -85,6 +122,8 @@ html,body{height:100%;background:#11151c;font-family:var(--sans)}
 <body>
 <div id="hint">← → or click edges to navigate · F for fullscreen</div>
 <div id="stagewrap"><div id="stage">
+
+<!-- 1 · TITLE -->
 <section class="slide s-title">
   <div class="brandcard"><span class="bc-1">Drexel University</span><span class="bc-2">Dornsife School of Public Health</span></div>
   <div class="t-dept">Department of Environmental<br>&amp; Occupational Health</div>
@@ -99,12 +138,16 @@ html,body{height:100%;background:#11151c;font-family:var(--sans)}
     <div class="t-event">Workshop 2 · July 7, 2026</div>
   </div>
 </section>
+
+<!-- 2 · AGENDA -->
 <section class="slide s-content">
   <div class="eyebrow teal">WHAT YOU&#x27;LL LEAVE WITH</div>
   <h2 class="serif head">Agenda &amp; Objectives</h2><div class="rule"></div>
-  <ol class="agenda"><li><span class="num">1</span><span class="atext">Spot which recurring tasks are good candidates for AI.</span></li><li><span class="num">2</span><span class="atext">Use Microsoft 365 Copilot in Word, Outlook, and Excel.</span></li><li><span class="num">3</span><span class="atext">Use ChatGPT Edu and Copilot Chat to work faster.</span></li><li><span class="num">4</span><span class="atext">Build a small prompt recipe you can reuse.</span></li><li><span class="num">5</span><span class="atext">Verify, disclose, and avoid over-reliance on AI.</span></li></ol>
+  <ol class="agenda"><li><span class="num">1</span><span class="atext">Spot which recurring tasks are good candidates for AI.</span></li><li><span class="num">2</span><span class="atext">Use Microsoft 365 Copilot in Word, Outlook, and Excel — with three worked examples.</span></li><li><span class="num">3</span><span class="atext">Use ChatGPT Edu and Copilot Chat to work faster.</span></li><li><span class="num">4</span><span class="atext">Build a small prompt recipe you can reuse.</span></li><li><span class="num">5</span><span class="atext">Verify, disclose, and avoid over-reliance on AI.</span></li></ol>
   <div class="footer"><span class="f-left">Environmental &amp; Occupational Health</span><span class="f-right">Dornsife School of Public Health</span></div>
 </section>
+
+<!-- 3 · SECTION 01 -->
 <section class="slide s-section">
   <div class="sec-inner">
     <div class="eyebrow gold">SECTION 01</div>
@@ -113,19 +156,175 @@ html,body{height:100%;background:#11151c;font-family:var(--sans)}
     <p class="sec-desc">The biggest time savings come from the repetitive middle of a task.</p>
   </div>
 </section>
+
+<!-- 4 · FIGURE: ANATOMY OF A TASK -->
+<section class="slide s-content">
+  <div class="eyebrow teal">THE SHAPE OF A TASK</div>
+  <h2 class="serif head">AI Takes the Middle — You Keep Both Ends</h2><div class="rule"></div>
+  <div class="fig">
+  <svg viewBox="0 0 1136 400" xmlns="http://www.w3.org/2000/svg" width="1136" height="400" role="img" aria-label="Task anatomy: you frame, AI drafts the repetitive middle, you verify and finalize">
+    <defs>
+      <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+        <path d="M0 0 L10 5 L0 10 z" fill="#5A6571"/>
+      </marker>
+    </defs>
+    <!-- left: you frame -->
+    <rect x="8" y="90" width="270" height="200" rx="8" fill="#fff" stroke="#07294D" stroke-width="3"/>
+    <text x="143" y="132" text-anchor="middle" font-family="Georgia,serif" font-size="24" font-weight="bold" fill="#07294D">You frame it</text>
+    <text x="143" y="170" text-anchor="middle" font-size="17" fill="#5A6571">what's the task?</text>
+    <text x="143" y="198" text-anchor="middle" font-size="17" fill="#5A6571">who's the audience?</text>
+    <text x="143" y="226" text-anchor="middle" font-size="17" fill="#5A6571">what does "done" look like?</text>
+    <text x="143" y="264" text-anchor="middle" font-size="15" font-weight="bold" fill="#006699" letter-spacing="1">YOUR JUDGMENT</text>
+    <!-- arrow -->
+    <line x1="286" y1="190" x2="336" y2="190" stroke="#5A6571" stroke-width="3" marker-end="url(#arr)"/>
+    <!-- middle: AI -->
+    <rect x="344" y="52" width="448" height="276" rx="8" fill="#FFF7DC" stroke="#FFC600" stroke-width="4"/>
+    <text x="568" y="100" text-anchor="middle" font-family="Georgia,serif" font-size="26" font-weight="bold" fill="#07294D">AI drafts the repetitive middle</text>
+    <text x="568" y="148" text-anchor="middle" font-size="18" fill="#1C2530">first draft &#183; summary &#183; recap</text>
+    <text x="568" y="180" text-anchor="middle" font-size="18" fill="#1C2530">reformat &#183; restructure &#183; "make this clearer"</text>
+    <text x="568" y="212" text-anchor="middle" font-size="18" fill="#1C2530">table from text &#183; plain-language rewrite</text>
+    <text x="568" y="258" text-anchor="middle" font-size="15" font-weight="bold" fill="#971B2F" letter-spacing="1">FAST, TIRELESS — AND UNVERIFIED</text>
+    <text x="568" y="300" text-anchor="middle" font-size="16" font-style="italic" fill="#5A6571">this is where the hours go every week</text>
+    <!-- arrow -->
+    <line x1="800" y1="190" x2="850" y2="190" stroke="#5A6571" stroke-width="3" marker-end="url(#arr)"/>
+    <!-- right: you verify -->
+    <rect x="858" y="90" width="270" height="200" rx="8" fill="#fff" stroke="#07294D" stroke-width="3"/>
+    <text x="993" y="132" text-anchor="middle" font-family="Georgia,serif" font-size="24" font-weight="bold" fill="#07294D">You finish it</text>
+    <text x="993" y="170" text-anchor="middle" font-size="17" fill="#5A6571">verify facts &amp; numbers</text>
+    <text x="993" y="198" text-anchor="middle" font-size="17" fill="#5A6571">restore your voice</text>
+    <text x="993" y="226" text-anchor="middle" font-size="17" fill="#5A6571">sign your name to it</text>
+    <text x="993" y="264" text-anchor="middle" font-size="15" font-weight="bold" fill="#006699" letter-spacing="1">YOUR ACCOUNTABILITY</text>
+    <!-- bottom label -->
+    <text x="568" y="382" text-anchor="middle" font-size="18" font-style="italic" fill="#5A6571">The target is not automation — it's a faster first draft that you review.</text>
+  </svg>
+  </div>
+  <div class="footer"><span class="f-left">Environmental &amp; Occupational Health</span><span class="f-right">Dornsife School of Public Health</span></div>
+</section>
+
+<!-- 5 · THREE TOOLS -->
 <section class="slide s-content">
   <div class="eyebrow teal">WHICH TOOL, WHEN</div>
   <h2 class="serif head">Three Tools, Three Jobs</h2><div class="rule"></div>
-  <div class="cards"><div class="card" style="border-top-color:var(--navy)"><h3 class="serif">Microsoft 365 Copilot</h3><p>Best when the work is already in a Microsoft file — a Word doc to rewrite, an Outlook thread to summarize, an Excel sheet to analyze.</p></div><div class="card" style="border-top-color:var(--teal)"><h3 class="serif">Copilot Chat (EDP)</h3><p>Useful for protected web-based drafting, summarizing, and brainstorming when you don’t need a reusable GPT.</p></div><div class="card" style="border-top-color:var(--gold)"><h3 class="serif">ChatGPT Edu</h3><p>Best for open-ended drafting, summarizing pasted text, file analysis, and reusable assistants. Use GPT-5.5 when available.</p></div></div>
+  <div class="cards"><div class="card" style="border-top-color:var(--navy)"><h3 class="serif">Microsoft 365 Copilot</h3><p>Best when the work is already in a Microsoft file — a Word doc to rewrite, an Outlook thread to summarize, an Excel sheet to analyze. Sees the file you're in; respects Microsoft 365 permissions.</p></div><div class="card" style="border-top-color:var(--teal)"><h3 class="serif">Copilot Chat (EDP)</h3><p>Protected web-based drafting, summarizing, and brainstorming with Enterprise Data Protection — when you don't need a reusable GPT.</p></div><div class="card" style="border-top-color:var(--gold)"><h3 class="serif">ChatGPT Edu</h3><p>Open-ended drafting, summarizing pasted text, file analysis, and reusable assistants. Use GPT-5.5 when it appears in your model picker; otherwise the current default.</p></div></div>
   <div class="footer"><span class="f-left">Environmental &amp; Occupational Health</span><span class="f-right">Dornsife School of Public Health</span></div>
 </section>
+
+<!-- 6 · FIGURE: TOOL DECISION FLOW -->
+<section class="slide s-content">
+  <div class="eyebrow teal">A BORING, PRACTICAL CHOICE</div>
+  <h2 class="serif head">Pick the Tool by Where the Work Lives</h2><div class="rule"></div>
+  <div class="fig">
+  <svg viewBox="0 0 1136 410" xmlns="http://www.w3.org/2000/svg" width="1136" height="410" role="img" aria-label="Decision flow for choosing between Microsoft 365 Copilot, Copilot Chat, and ChatGPT Edu">
+    <defs>
+      <marker id="arr2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+        <path d="M0 0 L10 5 L0 10 z" fill="#5A6571"/>
+      </marker>
+    </defs>
+    <!-- start -->
+    <rect x="418" y="10" width="300" height="62" rx="31" fill="#07294D"/>
+    <text x="568" y="48" text-anchor="middle" font-size="21" font-weight="bold" fill="#fff">Where does the work live?</text>
+    <!-- branch lines -->
+    <path d="M 568 72 L 568 100 L 190 100 L 190 128" fill="none" stroke="#5A6571" stroke-width="2.5" marker-end="url(#arr2)"/>
+    <path d="M 568 72 L 568 128" fill="none" stroke="#5A6571" stroke-width="2.5" marker-end="url(#arr2)"/>
+    <path d="M 568 72 L 568 100 L 946 100 L 946 128" fill="none" stroke="#5A6571" stroke-width="2.5" marker-end="url(#arr2)"/>
+    <!-- branch labels -->
+    <rect x="60" y="134" width="260" height="52" rx="4" fill="#F5F6F7" stroke="#D0D3D4"/>
+    <text x="190" y="157" text-anchor="middle" font-size="15.5" fill="#1C2530">Already in an Office file:</text>
+    <text x="190" y="177" text-anchor="middle" font-size="15.5" fill="#1C2530">Word &#183; Outlook &#183; Excel &#183; Teams</text>
+    <rect x="438" y="134" width="260" height="52" rx="4" fill="#F5F6F7" stroke="#D0D3D4"/>
+    <text x="568" y="157" text-anchor="middle" font-size="15.5" fill="#1C2530">Quick protected web chat —</text>
+    <text x="568" y="177" text-anchor="middle" font-size="15.5" fill="#1C2530">draft, summarize, brainstorm</text>
+    <rect x="816" y="134" width="260" height="52" rx="4" fill="#F5F6F7" stroke="#D0D3D4"/>
+    <text x="946" y="157" text-anchor="middle" font-size="15.5" fill="#1C2530">Open drafting &#183; file analysis &#183;</text>
+    <text x="946" y="177" text-anchor="middle" font-size="15.5" fill="#1C2530">a reusable assistant</text>
+    <!-- arrows to tools -->
+    <line x1="190" y1="186" x2="190" y2="216" stroke="#5A6571" stroke-width="2.5" marker-end="url(#arr2)"/>
+    <line x1="568" y1="186" x2="568" y2="216" stroke="#5A6571" stroke-width="2.5" marker-end="url(#arr2)"/>
+    <line x1="946" y1="186" x2="946" y2="216" stroke="#5A6571" stroke-width="2.5" marker-end="url(#arr2)"/>
+    <!-- tool boxes -->
+    <rect x="40" y="222" width="300" height="106" rx="8" fill="#07294D"/>
+    <text x="190" y="264" text-anchor="middle" font-family="Georgia,serif" font-size="22" font-weight="bold" fill="#fff">Microsoft 365 Copilot</text>
+    <text x="190" y="296" text-anchor="middle" font-size="15.5" fill="#C7D2DF">works inside the file you have open</text>
+    <rect x="418" y="222" width="300" height="106" rx="8" fill="#006699"/>
+    <text x="568" y="264" text-anchor="middle" font-family="Georgia,serif" font-size="22" font-weight="bold" fill="#fff">Copilot Chat (EDP)</text>
+    <text x="568" y="296" text-anchor="middle" font-size="15.5" fill="#D2E4EE">enterprise data protection, no setup</text>
+    <rect x="796" y="222" width="300" height="106" rx="8" fill="#B78900"/>
+    <text x="946" y="264" text-anchor="middle" font-family="Georgia,serif" font-size="22" font-weight="bold" fill="#fff">ChatGPT Edu</text>
+    <text x="946" y="296" text-anchor="middle" font-size="15.5" fill="#FFEBB0">GPT-5.5 &#183; files &#183; projects &#183; custom GPTs</text>
+    <!-- footer rule -->
+    <rect x="40" y="360" width="1056" height="42" rx="4" fill="#F9EDEF" stroke="#971B2F" stroke-width="1.5"/>
+    <text x="568" y="387" text-anchor="middle" font-size="17" font-weight="bold" fill="#971B2F">All three: match the task to Drexel's data classification before you paste anything.</text>
+  </svg>
+  </div>
+  <div class="footer"><span class="f-left">Environmental &amp; Occupational Health</span><span class="f-right">Dornsife School of Public Health</span></div>
+</section>
+
+<!-- 7 · FIGURE: GOOD AI TASK QUADRANT -->
 <section class="slide s-content">
   <div class="eyebrow teal">FIND YOUR CANDIDATES</div>
   <h2 class="serif head">What Makes a Good AI Task</h2><div class="rule"></div>
-  <p class="lead">AI handles the first draft, the summary, the reformat, the “make this clearer.” You bring the judgment and the final word.</p>
-  <ul class="bullets"><li>Text-heavy — the work is mostly writing or reading.</li><li>Repeated — something you do over and over.</li><li>Low-stakes enough that a draft-plus-review is fine: status updates, recaps, first drafts.</li></ul>
+  <div class="fig">
+  <svg viewBox="0 0 1136 430" xmlns="http://www.w3.org/2000/svg" width="1136" height="430" role="img" aria-label="Quadrant chart: task frequency versus cost of an error">
+    <!-- quadrant fills -->
+    <rect x="150" y="30" width="440" height="170" fill="#F5F6F7"/>
+    <rect x="590" y="30" width="440" height="170" fill="#E9F1F6"/>
+    <rect x="150" y="200" width="440" height="170" fill="#F5F6F7"/>
+    <rect x="590" y="200" width="440" height="170" fill="#FFF7DC"/>
+    <!-- axes -->
+    <line x1="150" y1="370" x2="1050" y2="370" stroke="#1C2530" stroke-width="2.5"/>
+    <line x1="150" y1="370" x2="150" y2="20" stroke="#1C2530" stroke-width="2.5"/>
+    <line x1="590" y1="30" x2="590" y2="370" stroke="#D0D3D4" stroke-width="1.5" stroke-dasharray="6 5"/>
+    <line x1="150" y1="200" x2="1030" y2="200" stroke="#D0D3D4" stroke-width="1.5" stroke-dasharray="6 5"/>
+    <text x="590" y="408" text-anchor="middle" font-size="17" font-weight="bold" fill="#1C2530">How often you do it &#8594;</text>
+    <text x="60" y="200" text-anchor="middle" font-size="17" font-weight="bold" fill="#1C2530" transform="rotate(-90 60 200)">Cost of an error &#8594;</text>
+    <text x="200" y="392" font-size="14" fill="#5A6571">once a year</text>
+    <text x="950" y="392" font-size="14" fill="#5A6571">every week</text>
+    <!-- quadrant labels -->
+    <text x="370" y="62" text-anchor="middle" font-size="16" font-weight="bold" fill="#5A6571">RARE + HIGH STAKES</text>
+    <text x="370" y="86" text-anchor="middle" font-size="14.5" font-style="italic" fill="#5A6571">do it yourself</text>
+    <text x="810" y="62" text-anchor="middle" font-size="16" font-weight="bold" fill="#006699">FREQUENT + HIGH STAKES</text>
+    <text x="810" y="86" text-anchor="middle" font-size="14.5" font-style="italic" fill="#006699">AI assists — verify every claim</text>
+    <text x="370" y="232" text-anchor="middle" font-size="16" font-weight="bold" fill="#5A6571">RARE + LOW STAKES</text>
+    <text x="370" y="256" text-anchor="middle" font-size="14.5" font-style="italic" fill="#5A6571">fine, but small payoff</text>
+    <text x="810" y="232" text-anchor="middle" font-size="16" font-weight="bold" fill="#B78900">FREQUENT + LOW STAKES</text>
+    <text x="810" y="256" text-anchor="middle" font-size="14.5" font-style="italic" fill="#B78900">the sweet spot — AI first drafts</text>
+    <!-- example dots -->
+    <circle cx="880" cy="300" r="7" fill="#FFC600" stroke="#B78900" stroke-width="2"/>
+    <text x="896" y="305" font-size="14.5" fill="#1C2530">meeting recaps</text>
+    <circle cx="750" cy="330" r="7" fill="#FFC600" stroke="#B78900" stroke-width="2"/>
+    <text x="766" y="335" font-size="14.5" fill="#1C2530">status updates &amp; announcements</text>
+    <circle cx="670" cy="285" r="7" fill="#FFC600" stroke="#B78900" stroke-width="2"/>
+    <text x="686" y="290" font-size="14.5" fill="#1C2530">reformatting notes</text>
+    <circle cx="820" cy="120" r="7" fill="#006699"/>
+    <text x="836" y="125" font-size="14.5" fill="#1C2530">manuscript &amp; report drafts</text>
+    <circle cx="680" cy="160" r="7" fill="#006699"/>
+    <text x="696" y="165" font-size="14.5" fill="#1C2530">grant budget checks</text>
+    <circle cx="280" cy="110" r="7" fill="#971B2F"/>
+    <text x="296" y="115" font-size="14.5" fill="#1C2530">final IRB determinations, personnel decisions</text>
+    <circle cx="330" cy="150" r="7" fill="#971B2F"/>
+    <text x="346" y="155" font-size="14.5" fill="#1C2530">anything you can't verify</text>
+  </svg>
+  </div>
   <div class="footer"><span class="f-left">Environmental &amp; Occupational Health</span><span class="f-right">Dornsife School of Public Health</span></div>
 </section>
+
+<!-- 8 · A WEEK OF DSPH WORK -->
+<section class="slide s-content">
+  <div class="eyebrow teal">CONCRETE CANDIDATES</div>
+  <h2 class="serif head">A Week of DSPH Work, Mapped to a Tool</h2><div class="rule"></div>
+  <table class="xtable">
+    <tr><th style="width:130px">Role</th><th>Task you already do</th><th style="width:330px">Where AI helps</th></tr>
+    <tr><td class="rowlab">Research</td><td>Turn a specific aims paragraph into a lay summary for a community board; summarize reviewer comments into a response checklist</td><td>Word Copilot · ChatGPT Edu</td></tr>
+    <tr><td class="rowlab">Research</td><td>First-pass summary of 3–5 abstracts into a comparison table for a team meeting</td><td>ChatGPT Edu (paste text)</td></tr>
+    <tr><td class="rowlab">Teaching</td><td>Draft a course announcement from bullet points; turn lecture notes into a study guide; tighten rubric language</td><td>Word Copilot · Copilot Chat</td></tr>
+    <tr><td class="rowlab">Admin</td><td>Summarize a 12-message committee thread into decisions and action items; draft the reply</td><td>Outlook Copilot</td></tr>
+    <tr><td class="rowlab">Admin</td><td>Sanity-check a small spreadsheet: totals, flags, a quick trend chart</td><td>Excel Copilot</td></tr>
+  </table>
+  <p class="figcap">All five show up as worked examples in today's hands-on segments.</p>
+  <div class="footer"><span class="f-left">Environmental &amp; Occupational Health</span><span class="f-right">Dornsife School of Public Health</span></div>
+</section>
+
+<!-- 9 · SECTION 02 -->
 <section class="slide s-section">
   <div class="sec-inner">
     <div class="eyebrow gold">SECTION 02</div>
@@ -134,12 +333,69 @@ html,body{height:100%;background:#11151c;font-family:var(--sans)}
     <p class="sec-desc">Verification, disclosure, and over-reliance — what accountability means in daily work.</p>
   </div>
 </section>
+
+<!-- 10 · THREE HABITS -->
 <section class="slide s-content">
   <div class="eyebrow teal">WORKFLOW ETHICS</div>
   <h2 class="serif head">Three Habits That Keep You Safe</h2><div class="rule"></div>
-  <div class="cards"><div class="card" style="border-top-color:var(--navy)"><h3 class="serif">Verify Before It Counts</h3><p>AI can fabricate facts, stats, and citations. Check anything going into a real document or decision against the source.</p></div><div class="card" style="border-top-color:var(--teal)"><h3 class="serif">Disclose Appropriately</h3><p>Where AI informs a real decision or document, note that it was used and verify what matters.</p></div><div class="card" style="border-top-color:var(--gold)"><h3 class="serif">Avoid Over-Reliance</h3><p>Speed is the selling point and the trap. Keep your own judgment in the loop; don’t outsource the thinking.</p></div></div>
+  <div class="cards"><div class="card" style="border-top-color:var(--navy)"><h3 class="serif">Verify Before It Counts</h3><p>AI can fabricate facts, stats, and citations that read as authoritative. Check anything going into a real document or decision against the source — especially numbers and references.</p></div><div class="card" style="border-top-color:var(--teal)"><h3 class="serif">Disclose Appropriately</h3><p>For official work products, external communications, and anything research-related, note that AI assisted — per Drexel's AI policy and your unit's expectations.</p></div><div class="card" style="border-top-color:var(--gold)"><h3 class="serif">Avoid Over-Reliance</h3><p>Speed is the selling point and the trap. If AI does all the drafting and thinking, your skill and your voice both erode. Keep your judgment in the loop.</p></div></div>
   <div class="footer"><span class="f-left">Environmental &amp; Occupational Health</span><span class="f-right">Dornsife School of Public Health</span></div>
 </section>
+
+<!-- 11 · FIGURE: BEFORE YOU HIT SEND -->
+<section class="slide s-content">
+  <div class="eyebrow teal">A CHECK YOU CAN RUN IN 60 SECONDS</div>
+  <h2 class="serif head">Before You Hit Send</h2><div class="rule"></div>
+  <div class="fig">
+  <svg viewBox="0 0 1136 380" xmlns="http://www.w3.org/2000/svg" width="1136" height="380" role="img" aria-label="Verification loop: AI draft passes through three checks — verified, disclosed, yours — before sending">
+    <defs>
+      <marker id="arr3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+        <path d="M0 0 L10 5 L0 10 z" fill="#5A6571"/>
+      </marker>
+      <marker id="arr3r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+        <path d="M0 0 L10 5 L0 10 z" fill="#971B2F"/>
+      </marker>
+    </defs>
+    <!-- draft box -->
+    <rect x="10" y="120" width="190" height="90" rx="8" fill="#F5F6F7" stroke="#07294D" stroke-width="3"/>
+    <text x="105" y="158" text-anchor="middle" font-family="Georgia,serif" font-size="21" font-weight="bold" fill="#07294D">AI draft</text>
+    <text x="105" y="188" text-anchor="middle" font-size="15" fill="#5A6571">plus your edits</text>
+    <line x1="200" y1="165" x2="248" y2="165" stroke="#5A6571" stroke-width="3" marker-end="url(#arr3)"/>
+    <!-- check 1 -->
+    <polygon points="345,80 460,165 345,250 230,165" fill="#fff" stroke="#006699" stroke-width="3"/>
+    <text x="345" y="152" text-anchor="middle" font-size="19" font-weight="bold" fill="#07294D">Verified?</text>
+    <text x="345" y="180" text-anchor="middle" font-size="13.5" fill="#5A6571">facts, numbers,</text>
+    <text x="345" y="198" text-anchor="middle" font-size="13.5" fill="#5A6571">citations confirmed</text>
+    <line x1="460" y1="165" x2="510" y2="165" stroke="#5A6571" stroke-width="3" marker-end="url(#arr3)"/>
+    <text x="485" y="150" text-anchor="middle" font-size="14" font-weight="bold" fill="#006699">yes</text>
+    <!-- check 2 -->
+    <polygon points="607,80 722,165 607,250 492,165" fill="#fff" stroke="#006699" stroke-width="3"/>
+    <text x="607" y="152" text-anchor="middle" font-size="19" font-weight="bold" fill="#07294D">Disclosed?</text>
+    <text x="607" y="180" text-anchor="middle" font-size="13.5" fill="#5A6571">AI use noted</text>
+    <text x="607" y="198" text-anchor="middle" font-size="13.5" fill="#5A6571">where expected</text>
+    <line x1="722" y1="165" x2="772" y2="165" stroke="#5A6571" stroke-width="3" marker-end="url(#arr3)"/>
+    <text x="747" y="150" text-anchor="middle" font-size="14" font-weight="bold" fill="#006699">yes</text>
+    <!-- check 3 -->
+    <polygon points="869,80 984,165 869,250 754,165" fill="#fff" stroke="#006699" stroke-width="3"/>
+    <text x="869" y="152" text-anchor="middle" font-size="19" font-weight="bold" fill="#07294D">Yours?</text>
+    <text x="869" y="180" text-anchor="middle" font-size="13.5" fill="#5A6571">says what you mean,</text>
+    <text x="869" y="198" text-anchor="middle" font-size="13.5" fill="#5A6571">in your voice</text>
+    <line x1="984" y1="165" x2="1034" y2="165" stroke="#5A6571" stroke-width="3" marker-end="url(#arr3)"/>
+    <text x="1009" y="150" text-anchor="middle" font-size="14" font-weight="bold" fill="#006699">yes</text>
+    <!-- send -->
+    <rect x="1040" y="120" width="90" height="90" rx="45" fill="#FFC600"/>
+    <text x="1085" y="172" text-anchor="middle" font-size="19" font-weight="bold" fill="#07294D">Send</text>
+    <!-- no loop back -->
+    <path d="M 345 250 L 345 310 L 105 310 L 105 214" fill="none" stroke="#971B2F" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#arr3r)"/>
+    <path d="M 607 250 L 607 310 L 345 310" fill="none" stroke="#971B2F" stroke-width="2.5" stroke-dasharray="7 5"/>
+    <path d="M 869 250 L 869 310 L 607 310" fill="none" stroke="#971B2F" stroke-width="2.5" stroke-dasharray="7 5"/>
+    <text x="480" y="336" text-anchor="middle" font-size="15.5" font-weight="bold" fill="#971B2F">any "no" &#8594; it goes back — it's not ready</text>
+  </svg>
+  </div>
+  <div class="footer"><span class="f-left">Environmental &amp; Occupational Health</span><span class="f-right">Dornsife School of Public Health</span></div>
+</section>
+
+<!-- 12 · QUOTE -->
 <section class="slide s-quote">
   <div class="q-inner">
     <div class="q-mark serif">&ldquo;</div>
@@ -147,34 +403,163 @@ html,body{height:100%;background:#11151c;font-family:var(--sans)}
     <div class="q-attr"><span class="q-name">A rule worth keeping</span><span class="q-role">Treat every AI-supplied figure as unverified until you’ve confirmed it</span></div>
   </div>
 </section>
+
+<!-- 13 · SECTION 03 -->
 <section class="slide s-section">
   <div class="sec-inner">
     <div class="eyebrow gold">SECTION 03</div>
     <h2 class="serif">Hands-On</h2>
     <div class="rule"></div>
-    <p class="sec-desc">Use Copilot where your work lives, then run one real task in ChatGPT Edu.</p>
+    <p class="sec-desc">Three worked examples in Office, then one real task in ChatGPT Edu. Demo files are on the workshop page.</p>
   </div>
 </section>
+
+<!-- 14 · ACTIVITY 1 OVERVIEW -->
 <section class="slide s-content">
   <div class="eyebrow teal">ACTIVITY 1 · ~19 MIN</div>
   <h2 class="serif head">Microsoft 365 Copilot in Office</h2><div class="rule"></div>
-  <div class="cards"><div class="card" style="border-top-color:var(--navy)"><h3 class="serif">Track A — Word</h3><p>Summarize a document into key points, rewrite a paragraph for a specific audience, and draft a new section from one line.</p></div><div class="card" style="border-top-color:var(--teal)"><h3 class="serif">Track B — Outlook</h3><p>Summarize a long thread and list decisions and action items, then draft a reply in a tone you specify.</p></div><div class="card" style="border-top-color:var(--gold)"><h3 class="serif">Track C — Excel</h3><p>Summarize what’s in the data, ask for a formula in plain language, and surface a trend or suggested chart.</p></div></div>
+  <p class="lead">Pick the track that matches your week. Each has a demo file if you didn't bring your own — the next three slides walk through one worked example per track.</p>
+  <div class="cards" style="margin-top:14px"><div class="card" style="border-top-color:var(--navy);min-height:220px"><h3 class="serif">Track A — Word</h3><p><strong>Research:</strong> turn a study description into a lay summary for a community advisory board, then draft a next-steps section.</p></div><div class="card" style="border-top-color:var(--teal);min-height:220px"><h3 class="serif">Track B — Outlook</h3><p><strong>Teaching/committee:</strong> pull the decisions and action items out of a 6-message curriculum-committee thread, then draft the reply.</p></div><div class="card" style="border-top-color:var(--gold);min-height:220px"><h3 class="serif">Track C — Excel</h3><p><strong>Admin:</strong> summarize a seminar-attendance sheet, flag high cost-per-attendee rows with a formula, chart the trend.</p></div></div>
   <div class="footer"><span class="f-left">Environmental &amp; Occupational Health</span><span class="f-right">Dornsife School of Public Health</span></div>
 </section>
+
+<!-- 15 · WORKED EXAMPLE A -->
+<section class="slide s-content">
+  <div class="eyebrow teal">WORKED EXAMPLE · TRACK A · WORD</div>
+  <h2 class="serif head">Research: From Study Aims to Lay Summary</h2><div class="rule"></div>
+  <div class="duo">
+    <div class="snippet">
+      <div class="sn-label">Demo file · Workshop2_Demo_StudyDescription.docx</div>
+      <p>Pedestrian injuries remain a leading cause of traffic death in U.S. cities, and risk is concentrated at a small share of intersections. This study will link citywide crash records with street-level imagery to identify built-environment features — crossing distance, vehicle speeds, lighting, signal timing — associated with severe pedestrian injury at signalized intersections. Results will produce a ranked list of modifiable intersection features for city transportation partners…</p>
+    </div>
+    <div class="prompts">
+      <div class="prompt"><span class="p-step">Step 1 · Summarize</span>Summarize this document in 5 bullet points for a project status update.</div>
+      <div class="prompt"><span class="p-step">Step 2 · Rewrite for an audience</span>Rewrite the first paragraph for a community advisory board — no jargon, 8th-grade reading level, keep it to 4 sentences.</div>
+      <div class="prompt"><span class="p-step">Step 3 · Draft new content</span>Draft a short "Next Steps" section: one paragraph, three concrete steps, active voice.</div>
+    </div>
+  </div>
+  <p class="figcap">Watch for: does the lay version keep the numbers accurate? That's your verify step.</p>
+  <div class="footer"><span class="f-left">Environmental &amp; Occupational Health</span><span class="f-right">Dornsife School of Public Health</span></div>
+</section>
+
+<!-- 16 · WORKED EXAMPLE B -->
+<section class="slide s-content">
+  <div class="eyebrow teal">WORKED EXAMPLE · TRACK B · OUTLOOK</div>
+  <h2 class="serif head">Committee Thread: Find the Decisions, Draft the Reply</h2><div class="rule"></div>
+  <div class="duo">
+    <div class="snippet">
+      <div class="sn-label">Demo file · Workshop2_Demo_EmailThread.docx (6 messages, excerpt)</div>
+      <p><span class="from">M. Rivera:</span> …proposing we move EPI 570 to fall and add the data-visualization module. Thoughts before Friday?</p>
+      <p><span class="from">J. Chen:</span> Fall works if the lab sections don't collide with BST 555. Also — who owns the syllabus update?</p>
+      <p><span class="from">M. Rivera:</span> Agreed on fall, pending the registrar check. Syllabus update: can you take it, with a July 20 draft?</p>
+      <p><span class="from">+ 3 more messages…</span></p>
+    </div>
+    <div class="prompts">
+      <div class="prompt"><span class="p-step">Step 1 · Summarize</span>Summarize this thread. List every decision made and every open question.</div>
+      <div class="prompt"><span class="p-step">Step 2 · Structure it</span>List the action items as a table: owner, task, due date.</div>
+      <div class="prompt"><span class="p-step">Step 3 · Draft the reply</span>Draft a reply confirming I'll have the syllabus draft ready by July 20 — concise and friendly, two sentences.</div>
+    </div>
+  </div>
+  <p class="figcap">Watch for: did it invent a decision that was never actually made? Threads are where AI over-summarizes.</p>
+  <div class="footer"><span class="f-left">Environmental &amp; Occupational Health</span><span class="f-right">Dornsife School of Public Health</span></div>
+</section>
+
+<!-- 17 · WORKED EXAMPLE C -->
+<section class="slide s-content">
+  <div class="eyebrow teal">WORKED EXAMPLE · TRACK C · EXCEL</div>
+  <h2 class="serif head">Admin: Seminar Attendance &amp; Spend</h2><div class="rule"></div>
+  <div class="duo">
+    <div class="snippet" style="padding:16px 18px">
+      <div class="sn-label">Demo file · Workshop2_Demo_SeminarAttendance.xlsx (30 rows, excerpt)</div>
+      <table class="xtable mini" style="margin-top:6px">
+        <tr><th>Month</th><th>Department</th><th>Attendees</th><th>Cost ($)</th></tr>
+        <tr><td>Sep 2025</td><td>EOH</td><td>34</td><td>310</td></tr>
+        <tr><td>Sep 2025</td><td>Epi &amp; Biostat</td><td>51</td><td>445</td></tr>
+        <tr><td>Oct 2025</td><td>EOH</td><td>29</td><td>402</td></tr>
+        <tr><td>Oct 2025</td><td>HMP</td><td>22</td><td>295</td></tr>
+        <tr><td colspan="4" style="font-style:italic;color:var(--gray)">… Sep–Jun, three departments</td></tr>
+      </table>
+    </div>
+    <div class="prompts">
+      <div class="prompt"><span class="p-step">Step 1 · Summarize</span>Summarize this data. What stands out?</div>
+      <div class="prompt"><span class="p-step">Step 2 · Formula in plain language</span>Add a column that flags rows where cost per attendee is over $12.</div>
+      <div class="prompt"><span class="p-step">Step 3 · Chart it</span>Suggest a chart showing the attendance trend by department across the year.</div>
+    </div>
+  </div>
+  <p class="figcap">Watch for: check the flag formula against one row by hand before you trust the column.</p>
+  <div class="footer"><span class="f-left">Environmental &amp; Occupational Health</span><span class="f-right">Dornsife School of Public Health</span></div>
+</section>
+
+<!-- 18 · ACTIVITY 2 + PTCF -->
 <section class="slide s-content">
   <div class="eyebrow teal">ACTIVITY 2 · ~13 MIN</div>
-  <h2 class="serif head">ChatGPT Edu for Your Real Task</h2><div class="rule"></div>
-  <p class="lead">Run one task you actually need this week, start to finish. Write a PTCF prompt, iterate 2–3 rounds, then do the final edit yourself.</p>
-  <ul class="bullets"><li>Summarize-then-act — “Summarize this, then draft a 3-sentence email about what the team needs to do.”</li><li>Make-it-a-table — for options, pros and cons, or a schedule, add “Put this in a table.”</li><li>Build a reusable recipe — strip the specifics, leave placeholders, and save what worked.</li></ul>
+  <h2 class="serif head">ChatGPT Edu: Anatomy of a Working Prompt</h2><div class="rule"></div>
+  <p class="lead" style="margin:22px 0 4px">Run one task you actually need this week. Structure the prompt with PTCF — here it is filled in for the lay-summary task:</p>
+  <div class="ptcf">
+    <div class="ptcf-row"><div class="ptcf-key" style="background:var(--navy)">Persona</div><div class="ptcf-val">You are a research coordinator at a school of public health.</div></div>
+    <div class="ptcf-row"><div class="ptcf-key" style="background:var(--teal)">Task</div><div class="ptcf-val">Write a 150-word lay summary of the study description below.</div></div>
+    <div class="ptcf-row"><div class="ptcf-key" style="background:#B78900">Context</div><div class="ptcf-val">Audience: a community advisory board. No jargon; they care about what changes in their neighborhood.</div></div>
+    <div class="ptcf-row"><div class="ptcf-key" style="background:var(--crimson)">Format</div><div class="ptcf-val">One paragraph, 8th-grade reading level, end with a one-sentence takeaway.</div></div>
+  </div>
   <div class="footer"><span class="f-left">Environmental &amp; Occupational Health</span><span class="f-right">Dornsife School of Public Health</span></div>
 </section>
+
+<!-- 19 · WORKED EXAMPLE: SUMMARIZE-THEN-ACT -->
+<section class="slide s-content">
+  <div class="eyebrow teal">WORKED EXAMPLE · CHATGPT EDU</div>
+  <h2 class="serif head">Summarize-Then-Act: Abstracts to Team Email</h2><div class="rule"></div>
+  <div class="duo">
+    <div class="snippet">
+      <div class="sn-label">Demo file · Workshop2_Demo_Abstracts.docx (3 short abstracts, excerpt)</div>
+      <p><strong>Abstract 1.</strong> A citywide study of nighttime pedestrian crashes and street lighting upgrades…</p>
+      <p><strong>Abstract 2.</strong> Speed-limit reductions on urban arterials and severe-injury rates…</p>
+      <p><strong>Abstract 3.</strong> Computer-vision audit of crosswalk quality across 2,000 intersections…</p>
+    </div>
+    <div class="prompts">
+      <div class="prompt"><span class="p-step">One prompt, two products</span>Summarize each abstract as one row of a table: population, method, key finding. Then draft a 3-sentence email to my research team on what these mean for our streetlight and injury analysis.</div>
+      <div class="prompt"><span class="p-step">The pattern</span>Summarize [material], then [the thing you'd do next with it].</div>
+    </div>
+  </div>
+  <p class="figcap">One step takes you from raw material to a product you can nearly send. The "make it a table" move works on anything with structure.</p>
+  <div class="footer"><span class="f-left">Environmental &amp; Occupational Health</span><span class="f-right">Dornsife School of Public Health</span></div>
+</section>
+
+<!-- 20 · ITERATION -->
+<section class="slide s-content">
+  <div class="eyebrow teal">DON&#x27;T SETTLE FOR DRAFT ONE</div>
+  <h2 class="serif head">Iterate: Three Rounds Beats One Perfect Prompt</h2><div class="rule"></div>
+  <div class="rounds">
+    <div class="round"><div class="r-tag">Round 1</div><div class="r-prompt">[the PTCF prompt from the last slide]</div><div class="r-note">Output is usable but generic — reads like anyone could have written it.</div></div>
+    <div class="round"><div class="r-tag">Round 2</div><div class="r-prompt">Cut it to half the length. Make the findings column quantitative — effect sizes, not adjectives.</div><div class="r-note">Tighter, more specific. Numbers now need your verification.</div></div>
+    <div class="round"><div class="r-tag">Round 3</div><div class="r-prompt">Add a column rating each study's relevance to our project, 1–3, with a one-phrase justification.</div><div class="r-note">Now it's doing analysis for you to react to — you accept, reject, or correct.</div></div>
+  </div>
+  <p class="figcap">Then do the final edit yourself. What you changed is the part that needed your expertise.</p>
+  <div class="footer"><span class="f-left">Environmental &amp; Occupational Health</span><span class="f-right">Dornsife School of Public Health</span></div>
+</section>
+
+<!-- 21 · REUSABLE RECIPE -->
+<section class="slide s-content">
+  <div class="eyebrow teal">SAVE WHAT WORKED</div>
+  <h2 class="serif head">Build a Reusable Recipe</h2><div class="rule"></div>
+  <p class="lead">Once a prompt works, strip the specifics and leave placeholders. Keep these in a running note — next week you fill in blanks instead of starting over.</p>
+  <div class="prompts" style="max-width:1040px">
+    <div class="prompt"><span class="p-step">The template</span>You are a [role]. [Task]. Context: [audience, purpose, constraints]. Format: [structure, length, tone].</div>
+    <div class="prompt"><span class="p-step">Saved recipe · lay summary</span>You are a research coordinator. Write a [length] lay summary of the text below. Context: audience is [group]; no jargon. Format: one paragraph, 8th-grade level, end with a one-sentence takeaway.</div>
+    <div class="prompt"><span class="p-step">Saved recipe · thread triage</span>Summarize this thread. Decisions made, open questions, and action items as a table (owner, task, due date).</div>
+  </div>
+  <div class="footer"><span class="f-left">Environmental &amp; Occupational Health</span><span class="f-right">Dornsife School of Public Health</span></div>
+</section>
+
+<!-- 22 · WRAP-UP -->
 <section class="slide s-content">
   <div class="eyebrow teal">WRAP-UP</div>
   <h2 class="serif head">What to Take Away</h2><div class="rule"></div>
   <p class="lead">Microsoft 365 Copilot for work inside Office files; Copilot Chat for protected web chat; ChatGPT Edu for open drafting and reusable assistants.</p>
-  <ul class="bullets"><li>The win is the first draft and the summary — you keep the judgment.</li><li>Save the prompts that work as reusable recipes.</li><li>Before Workshop 3: save two prompt recipes you’d actually reuse.</li></ul>
+  <ul class="bullets"><li>The win is the first draft and the summary — you keep the judgment and both ends of the task.</li><li>Run the 60-second check before anything counts: verified, disclosed, yours.</li><li>Save the prompts that work as reusable recipes.</li><li>Before Workshop 3: save two prompt recipes you’d actually reuse. We’ll turn shared recipes into team tools.</li></ul>
   <div class="footer"><span class="f-left">Environmental &amp; Occupational Health</span><span class="f-right">Dornsife School of Public Health</span></div>
 </section>
+
+<!-- 23 · CLOSING -->
 <section class="slide s-closing">
   <div class="brandcard"><span class="bc-1">Drexel University</span><span class="bc-2">Dornsife School of Public Health</span></div>
   <div class="t-body">

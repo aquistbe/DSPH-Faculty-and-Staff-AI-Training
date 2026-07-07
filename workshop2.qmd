@@ -17,6 +17,15 @@ Tuesday, July 7, 2026 | 1:00--2:00 PM | Bring a laptop and a real (non-sensitive
 [⬇ Editable PowerPoint](slides/DSPH_Workshop2_Workflow_Enhancement.pptx){.btn .btn-outline-primary role="button"}
 :::
 
+:::{.callout-note}
+## Demo Files
+Didn't bring a task? Download a synthetic demo file (all content fictional and non-sensitive):
+[Study description (Word)](demo-materials/Workshop2_Demo_StudyDescription.docx) ·
+[Committee email thread (Word)](demo-materials/Workshop2_Demo_EmailThread.docx) ·
+[Seminar attendance data (Excel)](demo-materials/Workshop2_Demo_SeminarAttendance.xlsx) ·
+[Three abstracts (Word)](demo-materials/Workshop2_Demo_Abstracts.docx)
+:::
+
 ## What You'll Leave With
 
 By the end of this hour, you will be able to:
@@ -86,28 +95,37 @@ Three checks on anything AI helped write: **Verified?** (facts and citations con
 Duration: ~19 minutes | Format: Hands-on, choose by your role
 :::
 
-**Goal:** Use Microsoft 365 Copilot where your work already lives. Pick the track that fits you. Use non-sensitive or appropriately classified content only.
+**Goal:** Use Microsoft 365 Copilot where your work already lives. Pick the track that fits you. Use non-sensitive or appropriately classified content only. Each track has a worked example with a demo file --- use it as-is, or substitute your own material and run the same three prompts.
 
 #### Track A --- Word (drafting & rewriting)
 
-1. Open a Word document with a few paragraphs of real (non-sensitive) text.
-2. Use Copilot to **summarize** it into key points.
-3. Ask Copilot to **rewrite** a paragraph for a specific audience ("rewrite for a non-technical reader").
-4. Ask it to **draft** a new section from a one-line instruction.
+**Worked example: from study aims to lay summary.** Open [Workshop2_Demo_StudyDescription.docx](demo-materials/Workshop2_Demo_StudyDescription.docx) (a synthetic pedestrian-safety study description) or your own document, then run:
+
+1. *"Summarize this document in 5 bullet points for a project status update."*
+2. *"Rewrite the first paragraph for a community advisory board --- no jargon, 8th-grade reading level, keep it to 4 sentences."*
+3. *"Draft a short 'Next Steps' section: one paragraph, three concrete steps, active voice."*
+
+**Watch for:** does the lay version keep the facts accurate? Did anything get invented? That's your verify step.
 
 #### Track B --- Outlook (email triage)
 
-1. Open a long email thread.
-2. Ask Copilot to **summarize the thread** and list any decisions or action items.
-3. Ask it to **draft a reply** with a tone you specify (e.g., "concise and friendly, confirm the meeting time").
-4. Edit and send (or save as draft).
+**Worked example: find the decisions, draft the reply.** Open a long thread of your own, or use the mock 6-message curriculum-committee thread in [Workshop2_Demo_EmailThread.docx](demo-materials/Workshop2_Demo_EmailThread.docx) (paste it into Copilot Chat if you're not working in Outlook), then run:
+
+1. *"Summarize this thread. List every decision made and every open question."*
+2. *"List the action items as a table: owner, task, due date."*
+3. *"Draft a reply confirming I'll have the syllabus draft ready by July 20 --- concise and friendly, two sentences."*
+
+**Watch for:** did it invent a decision that was never actually made? Threads are where AI over-summarizes --- in the demo thread, is the accreditation crosswalk a decision, an action item, or an open question?
 
 #### Track C --- Excel (quick analysis)
 
-1. Open a spreadsheet with non-sensitive tabular data (or use sample data).
-2. Ask Copilot to **summarize what's in the data**.
-3. Ask for a **formula** in plain language ("flag rows where the amount is over 5000").
-4. Ask it to **suggest a chart** or surface a trend.
+**Worked example: seminar attendance and spend.** Open [Workshop2_Demo_SeminarAttendance.xlsx](demo-materials/Workshop2_Demo_SeminarAttendance.xlsx) (synthetic monthly attendance and catering cost for three departments) or your own sheet, then run:
+
+1. *"Summarize this data. What stands out?"*
+2. *"Add a column that flags rows where cost per attendee is over $12."*
+3. *"Suggest a chart showing the attendance trend by department across the year."*
+
+**Watch for:** check the flag formula against one row by hand before you trust the column.
 
 #### Reflection
 
@@ -135,6 +153,19 @@ Duration: ~13 minutes | Format: Individual, bring your own task
 2. In ChatGPT Edu, select **GPT-5.5** if it is available; otherwise use the current default/latest GPT model. Write a **PTCF prompt** (Persona, Task, Context, Format---from Workshop 1). Be specific about the format you want.
 3. Run it. Then **iterate**: shorten, change tone, add a section, ask for a table. Push it 2--3 rounds until it's close to usable.
 4. Do the final edit yourself. Note what you changed---that's the part that needs your expertise.
+
+#### Worked Example: Summarize-Then-Act
+
+No task of your own? Use [Workshop2_Demo_Abstracts.docx](demo-materials/Workshop2_Demo_Abstracts.docx) --- three short synthetic abstracts on pedestrian safety. Paste them into ChatGPT Edu with:
+
+> *"Summarize each abstract as one row of a table: population, method, key finding. Then draft a 3-sentence email to my research team on what these mean for our streetlight and injury analysis."*
+
+Then iterate:
+
+- **Round 2:** *"Cut it to half the length. Make the findings column quantitative --- effect sizes, not adjectives."*
+- **Round 3:** *"Add a column rating each study's relevance to our project, 1--3, with a one-phrase justification."*
+
+**Verify:** check every number in the table against the abstracts --- confidence intervals are the easiest thing for AI to mangle.
 
 #### Two Patterns Worth Knowing
 
