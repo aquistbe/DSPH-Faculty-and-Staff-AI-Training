@@ -24,12 +24,14 @@ Everything builds on **[Workshop 1](workshop1.qmd)** — prompting and the Drexe
 | Track | Topics | Level range |
 |-------|--------|-------------|
 | [**Data & Analysis**](tracks/data-analysis.qmd) | Basics, cleaning, coding, statistics, dashboards, image annotation, qualitative, advanced (8) | novice → advanced |
-| [**Communication & Dissemination**](tracks/communication.qmd) | Science communication, grant writing, literature review, multilingual materials, manuscripts, design & visual tools, collaborating on projects (7) | novice → advanced |
+| [**Communication & Dissemination**](tracks/communication.qmd) | Science communication, grant writing, literature review, multilingual materials, manuscripts, design & visual tools, collaborating on projects, course AI policy, assignment design, grant admin (10) | novice → advanced |
 | [**Technical & Agentic**](tracks/technical-agentic.qmd) | Skills, context engineering, agents, loops, local models, RAG, MCP (7) | moderate → advanced |
-| [**Governance, Ethics & Equity**](tracks/governance-ethics.qmd) | Verifying output, sustainability, data security, responsible AI, bias & equity audit, keeping your judgment (6) | novice → moderate |
+| [**Governance, Ethics & Equity**](tracks/governance-ethics.qmd) | Verifying output, sustainability, data security, responsible AI, bias & equity audit, keeping your judgment, mentoring & advising (7) | novice → moderate |
 | [**Methods & Study Design**](tracks/methods-study-design.qmd) | Survey design, program evaluation, de-identification & synthetic data, geospatial (4) | moderate → advanced |
 
-That's **32 self-paced topics** across five tracks. Pick the track that fits your work, start at your level, and go at your own pace.
+That's **36 self-paced topics** across five tracks. Pick the track that fits your work, start at your level, and go at your own pace.
+
+Not sure where to start? Try the [**Learning Paths**](paths.qmd) page — it maps topics to your role (admin, research, teaching, practice, or mentoring).
 
 ::: {.callout-note}
 ## Have a topic to prioritize or refine?

@@ -3,7 +3,7 @@ title: "Survey & Instrument Design"
 ---
 
 ::: {.topic-badges}
-[Moderate]{.level-badge .level-moderate} · **Methods & Study Design** track · ~1 hour, self-paced
+[Moderate]{.level-badge .level-moderate} · **Methods & Study Design** track · ~35 min hands-on + readings and quiz
 :::
 
 [← Back to the Methods & Study Design track](methods-study-design.qmd){.track-back}
@@ -113,6 +113,14 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 ## Useful resources
 
 - [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with data rules.
+
+---
+
+## Navigate
+
+**Next in this track:** [Program Evaluation](program-evaluation.qmd)
+
+**Related topics:** [Program Evaluation](program-evaluation.qmd) · [Qualitative Data Analysis](qualitative-analysis.qmd)
 
 ::: {.callout-warning}
 ## Data rules

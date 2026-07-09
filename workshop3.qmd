@@ -17,6 +17,15 @@ Tuesday, July 14, 2026 | 1:00--2:00 PM | Bring a laptop; come with a team or pro
 [⬇ Editable PowerPoint](slides/DSPH_Workshop3_Collaboration_on_Projects.pptx){.btn .btn-outline-primary role="button"}
 :::
 
+:::{.callout-note}
+## Demo Files
+No team materials on hand? Download a synthetic demo file (all content fictional and non-sensitive):
+[Messy meeting notes (Word)](demo-materials/Workshop3_Demo_MeetingNotes.docx) ·
+[Project description (Word)](demo-materials/Workshop3_Demo_ProjectDescription.docx) ·
+[Team style guide (Word)](demo-materials/Workshop3_Demo_StyleGuide.docx) ·
+[Update template (Word)](demo-materials/Workshop3_Demo_UpdateTemplate.docx)
+:::
+
 ## What You'll Leave With
 
 By the end of this hour, you will be able to:
@@ -94,7 +103,7 @@ Duration: ~13 minutes | Format: Hands-on, individual or in pairs
 
 *Tip: if your meeting was on Zoom, **Zoom AI Companion** can produce a summary and action items automatically---start from that instead of raw notes.*
 
-1. Paste messy meeting notes (real but non-sensitive, or use the sample below) into ChatGPT Edu. Use **GPT-5.5** if it is available; otherwise use the current default/latest GPT model in the Drexel workspace.
+1. Paste messy meeting notes (real but non-sensitive, or use [Workshop3_Demo_MeetingNotes.docx](demo-materials/Workshop3_Demo_MeetingNotes.docx) --- a fictional study-team check-in --- or the short sample below) into ChatGPT Edu. Use **GPT-5.5** if it is available; otherwise use the current default/latest GPT model in the Drexel workspace.
 2. Use this prompt:
 
    > Turn these notes into three sections: (1) Summary in 3 bullets, (2) Decisions made, (3) Action items as a table with owner and due date. Flag anything that's unclear or unassigned.
@@ -103,13 +112,17 @@ Duration: ~13 minutes | Format: Hands-on, individual or in pairs
 
 *Sample notes if you don't have your own:* "talked about the survey rollout, Maria will check the IRB amendment, need final instrument by end of month, budget tight, someone should ask about the no-cost extension, next meeting in 2 weeks, recruitment slower than expected."
 
+**Watch for (demo notes):** only *one* decision was actually made in that meeting --- did the AI invent others? Two action items have no owner --- did it flag them? And there's a personnel note that should never reach a shared recap: that's the shared-space test in practice.
+
 #### Part B --- Draft and Stress-Test a Plan (~10 min)
 
-1. Describe a project in a sentence or two and ask:
+1. Describe a project in a sentence or two (or paste the two-paragraph description from [Workshop3_Demo_ProjectDescription.docx](demo-materials/Workshop3_Demo_ProjectDescription.docx)) and ask:
 
    > Draft a simple project plan for this with phases, key tasks, and a rough timeline. Then list the top 5 risks and what would reduce each one.
 
 2. Push back: *"What am I missing?"* or *"What would make this slip?"* Use it to find blind spots, not to write the final plan.
+
+**Watch for (demo description):** the description hides five real risks --- a data use agreement stuck in legal review, an installation schedule the team doesn't control, a shared analyst, student-worker coverage, and a report clock that starts regardless. How many did the AI's risk list catch?
 
 #### Reflection
 
@@ -138,7 +151,7 @@ Duration: ~17 minutes | Format: Hands-on; pair up so you can share with someone 
 
    > This project supports the DSPH [team] working on [goal]. Always write in plain, non-technical language. When asked for a summary, use bullets and a one-line bottom line. Flag anything that needs a human decision. Never include identifying or sensitive data.
 
-3. Upload one or two **reference files** that are appropriate under Drexel's ChatGPT Edu Terms of Use---a template, a style guide, a public report. No PHI, sensitive PII, confidential HR or contract material, or identifiable research data.
+3. Upload one or two **reference files** that are appropriate under Drexel's ChatGPT Edu Terms of Use---a template, a style guide, a public report. No files of your own? Use the demo pair: [Workshop3_Demo_StyleGuide.docx](demo-materials/Workshop3_Demo_StyleGuide.docx) and [Workshop3_Demo_UpdateTemplate.docx](demo-materials/Workshop3_Demo_UpdateTemplate.docx). No PHI, sensitive PII, confidential HR or contract material, or identifiable research data.
 4. Start a chat *inside the project* and ask something that should draw on your files: *"Using the uploaded template, draft a project update for this month."* Notice it uses the project's files and instructions without you re-pasting them.
 
 #### Part B --- Share It (~8 min)

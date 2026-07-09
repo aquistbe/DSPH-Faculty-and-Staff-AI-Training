@@ -3,7 +3,7 @@ title: "Responsible AI"
 ---
 
 ::: {.topic-badges}
-[Moderate]{.level-badge .level-moderate} · **Governance, Ethics & Equity** track · ~1 hour, self-paced
+[Moderate]{.level-badge .level-moderate} · **Governance, Ethics & Equity** track · ~35 min hands-on + readings and quiz
 :::
 
 [← Back to the Governance, Ethics & Equity track](governance-ethics.qmd){.track-back}
@@ -32,25 +32,48 @@ Public-health bodies (WHO, ASPPH) offer frameworks for AI ethics and governance.
 
 **Goal.** Decide where and how to disclose AI use.
 
-**Setup.** List three places AI shows up in your work.
+**Setup.** Below are three role-specific lists of places AI commonly shows up at DSPH. Find the list closest to your role:
+
+**Admin staff:**
+
+- Drafting email reminders about deadlines (reaccreditation, HR, events)
+- Summarizing long policy documents or meeting minutes
+- Reformatting data from spreadsheets into reports or slide decks
+- Writing first drafts of job postings or committee charges
+
+**Research faculty/staff:**
+
+- Summarizing literature or generating search strategies
+- Drafting grant aims, abstracts, or progress reports
+- Generating or cleaning code (R, Stata, Python)
+- Producing tables, figures, or lay summaries from results
+
+**Teaching faculty:**
+
+- Drafting syllabi, rubrics, or assignment descriptions
+- Creating quiz questions or case studies
+- Writing recommendation letters or advising notes
+- Generating lecture outlines or discussion prompts
+
+Pick the three uses from your list that feel most relevant. If none fits, substitute your own.
 
 **Steps.**
 
-1. For each, decide whether and how you’d disclose AI assistance.
+1. For each of your three uses, decide: Should you disclose AI assistance? To whom? How? (A footnote? A verbal mention? Not at all?)
 
 2. Draft a norm:
 
-   > Draft a one-paragraph AI-use disclosure norm for our team covering these cases — balanced and practical. [cases]
+   > Draft a one-paragraph AI-use disclosure norm for a public-health school covering these three cases. Be balanced and practical — neither requiring disclosure for every spell-check nor allowing silence on consequential uses. Cases: [your three uses].
 
-3. Refine to fit your context.
+3. Refine to fit your context. A good norm should pass the “new colleague” test — could someone who just joined your team follow it without ambiguity?
 
-**Expected result.** A short, shareable disclosure norm.
+**Expected result.** A short, shareable disclosure norm that distinguishes trivial use (no disclosure needed) from consequential use (disclose).
 
-**Check your work.** Is it specific enough to act on, or just aspirational?
+**Check your work.** Is it specific enough to act on, or just aspirational? “Use AI responsibly” is not a norm. “Disclose AI assistance in any document submitted externally — grants, publications, accreditation reports — by noting the tool and the human verification step” is.
 
-**Common pitfalls.** Over-disclosing trivial use is noise; under-disclosing consequential use is a problem. Aim for “where it matters.”
+**Common pitfalls.** Over-disclosing trivial use (auto-complete, grammar check) is noise; under-disclosing consequential use (drafting a grant aim, writing a student recommendation) is a problem. Aim for “where it matters to the reader.”
 
-**Stretch (optional).** Add a line on who’s accountable when AI informs a decision.
+**Stretch (optional).** Add a line on who’s accountable when AI informs a decision, and circulate the draft to one colleague for feedback.
 
 ```{=html}
 </details>
@@ -110,6 +133,14 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 
 - [WHO: Ethics & Governance of AI for Health](https://www.who.int/publications/i/item/9789240029200) — the leading health-sector framework.
 - [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with data rules.
+
+---
+
+## Navigate
+
+**Next in this track:** [AI Bias & Health Equity Audit](bias-equity-audit.qmd)
+
+**Related topics:** [AI Bias & Health Equity Audit](bias-equity-audit.qmd) · [Verifying AI Output](verifying-output.qmd)
 
 ::: {.callout-warning}
 ## Data rules

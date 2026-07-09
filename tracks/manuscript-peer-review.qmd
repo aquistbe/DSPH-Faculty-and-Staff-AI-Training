@@ -3,7 +3,7 @@ title: "Manuscript Preparation & Peer Review"
 ---
 
 ::: {.topic-badges}
-[Advanced]{.level-badge .level-advanced} · **Communication & Dissemination** track · ~1 hour, self-paced
+[Advanced]{.level-badge .level-advanced} · **Communication & Dissemination** track · ~35 min hands-on + readings and quiz
 :::
 
 [← Back to the Communication & Dissemination track](communication.qmd){.track-back}
@@ -66,27 +66,45 @@ Peer review has a hard rule: a manuscript you're reviewing is **confidential**. 
 
 **Goal.** Organize a clear, point-by-point reviewer response — while respecting confidentiality.
 
-**Setup.** Your own reviewer comments on your paper and your planned replies. **Never paste a manuscript you are reviewing for a journal.**
+**Setup.** Use this fictional methods excerpt and reviewer comments (or substitute your own). **Never paste a manuscript you are reviewing for a journal.**
+
+**Fictional methods paragraph:**
+
+> We conducted a cross-sectional analysis of pedestrian crashes in Philadelphia from 2018–2023 using PennDOT crash records linked to road-segment characteristics from OpenStreetMap. Fatal and serious injuries (KSI) were modeled using logistic regression. Covariates included lane count, posted speed limit, crosswalk presence, and lighting. Census-tract income quartile was included as a fixed effect. We excluded crashes on highways and those involving intoxicated pedestrians. Missing speed-limit data (18% of segments) were imputed using the median of adjacent segments.
+
+**Fictional reviewer comments:**
+
+> **Reviewer 1:**
+>
+> - Major: The exclusion of intoxicated pedestrians is unexplained and potentially introduces selection bias. Please justify or conduct a sensitivity analysis including these cases.
+> - Major: Imputing speed limits using the median of adjacent segments is ad hoc. How sensitive are results to this choice? Consider a sensitivity analysis with complete cases only.
+> - Minor: Table 2 header says “OR” but the footnote says “adjusted OR” — which is it?
+>
+> **Reviewer 2:**
+>
+> - Major: The cross-sectional design limits causal claims, but the discussion reads as if these are causal findings (“reducing lanes prevents KSI”). Reframe.
+> - Minor: Why OpenStreetMap rather than PennDOT’s road inventory? Address data-quality concerns.
+> - Minor: Line 142 — “significant” used without a p-value or CI.
 
 **Steps.**
 
-1. Organize the letter:
+1. Organize the response:
 
-   > Organize these reviewer comments and my planned responses into a professional, point-by-point response letter grouped by reviewer, with polite framing. [comments + your replies]
+   > Organize these reviewer comments and my planned responses into a professional, point-by-point response letter grouped by reviewer, with polite framing. For each comment, acknowledge the concern, describe the revision, and note the page/line where the change was made. Reviewer comments: [paste above]. My planned responses: Reviewer 1 Major 1 — we will add a sensitivity analysis including intoxicated pedestrians. R1 Major 2 — we will add a complete-case sensitivity analysis. R1 Minor — it’s adjusted OR; we’ll fix the header. R2 Major — we’ll reframe to associational language. R2 Minor 1 — we chose OSM for coverage; we’ll add a data-quality note. R2 Minor 2 — we’ll add the CI.
 
-2. Verify every “we have revised…” statement is actually done in the manuscript.
+2. Verify every “we have revised…” statement: do you actually plan to make each change? Don’t promise a revision you won’t do.
 
 3. Soften where needed:
 
    > Flag any response that sounds defensive and suggest a more constructive phrasing.
 
-**Expected result.** A clean response-to-reviewers letter.
+**Expected result.** A clean, professional response-to-reviewers letter organized by reviewer, with polite framing that acknowledges each concern before describing the revision.
 
-**Check your work.** Confirm each claim of a change matches the revised manuscript.
+**Check your work.** Confirm each claim of a change matches what you’ll actually revise. The most common error is promising a sensitivity analysis you don’t actually run.
 
-**Common pitfalls.** Hard rule: never put a manuscript you’re peer-reviewing into an AI tool — it’s confidential and many journals prohibit it. Disclose AI use in your own writing.
+**Common pitfalls.** Hard rule: never put a manuscript you’re peer-reviewing into an AI tool — it’s confidential and many journals prohibit it. Disclose AI use in your own writing per ICMJE guidance.
 
-**Stretch (optional).** Draft a short cover letter to the editor summarizing the major changes.
+**Stretch (optional).** Draft a short cover letter to the editor summarizing the three major revisions.
 
 ```{=html}
 </details>
@@ -115,6 +133,14 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 - [ICMJE Recommendations](https://www.icmje.org) — authorship and AI-disclosure guidance.
 - [EQUATOR Network](https://www.equator-network.org) — reporting guidelines (STROBE, CONSORT, etc.).
 - [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with data rules.
+
+---
+
+## Navigate
+
+**Next in this track:** [Writing Your Course AI Policy](course-ai-policy.qmd)
+
+**Related topics:** [Literature Review & Evidence Synthesis](literature-review.qmd) · [Verifying AI Output](verifying-output.qmd)
 
 ::: {.callout-warning}
 ## Data rules

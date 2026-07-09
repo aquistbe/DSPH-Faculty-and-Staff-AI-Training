@@ -3,7 +3,7 @@ title: "Collaborating on Projects"
 ---
 
 ::: {.topic-badges}
-[Moderate]{.level-badge .level-moderate} · **Communication & Dissemination** track · ~1 hour, self-paced
+[Moderate]{.level-badge .level-moderate} · **Communication & Dissemination** track · ~35 min hands-on + readings and quiz
 :::
 
 [← Back to the Communication & Dissemination track](communication.qmd){.track-back}
@@ -110,6 +110,14 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 
 - [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with the data rules.
 - [Workshop 3 — Collaboration on Projects](../workshop3.qmd) — the live workshop this builds on.
+
+---
+
+## Navigate
+
+**Next in this track:** [Manuscript Preparation & Peer Review](manuscript-peer-review.qmd)
+
+**Related topics:** [Creating & Using Skills](creating-skills.qmd) · [Context Engineering](context-engineering.qmd)
 
 ::: {.callout-warning}
 ## Data rules

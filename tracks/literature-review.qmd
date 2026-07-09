@@ -3,7 +3,7 @@ title: "Literature Review & Evidence Synthesis"
 ---
 
 ::: {.topic-badges}
-[Moderate]{.level-badge .level-moderate} · **Communication & Dissemination** track · ~1 hour, self-paced
+[Moderate]{.level-badge .level-moderate} · **Communication & Dissemination** track · ~35 min hands-on + readings and quiz
 :::
 
 [← Back to the Communication & Dissemination track](communication.qmd){.track-back}
@@ -66,7 +66,13 @@ For a defensible review, keep AI in an assisting role: it speeds screening and s
 
 **Goal.** Synthesize a few studies while checking every claim.
 
-**Setup.** Two or three open-access abstracts on your topic.
+**Setup.** Use these three open-access articles on pedestrian safety and the built environment (or substitute your own topic):
+
+- **PMID 31783684** — DiMaggio et al. (2019). "Changes in Pedestrian and Bicyclist Injury Patterns in New York City After Adoption of Vision Zero." *JAMA Netw Open.* [PubMed](https://pubmed.ncbi.nlm.nih.gov/31783684/)
+- **PMID 31175717** — Stoker et al. (2019). "Pedestrian Safety and the Built Environment: A Review of the Risk Factors." *J Plan Lit.* [PubMed](https://pubmed.ncbi.nlm.nih.gov/31175717/)
+- **PMID 35238777** — Amram et al. (2022). "Association of the Built Environment with Pedestrian Crashes Along Arterial Roads." *Inj Prev.* [PubMed](https://pubmed.ncbi.nlm.nih.gov/35238777/)
+
+Open each abstract in PubMed before starting — you'll need the actual text to verify the AI's summary.
 
 **Steps.**
 
@@ -115,6 +121,14 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 - [PRISMA](https://www.prisma-statement.org) — reporting standard for systematic reviews.
 - [Rayyan](https://www.rayyan.ai) — screening tool for reviews.
 - [Covidence](https://www.covidence.org) — systematic-review management.
+
+---
+
+## Navigate
+
+**Next in this track:** [Multilingual & Culturally-Adapted Materials](multilingual-materials.qmd)
+
+**Related topics:** [Verifying AI Output](verifying-output.qmd) · [Grant & Proposal Development](grant-proposal-development.qmd)
 
 ::: {.callout-warning}
 ## Data rules

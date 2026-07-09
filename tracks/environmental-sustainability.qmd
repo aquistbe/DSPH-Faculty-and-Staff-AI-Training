@@ -3,7 +3,7 @@ title: "AI & Environmental Sustainability"
 ---
 
 ::: {.topic-badges}
-[Novice]{.level-badge .level-novice} · **Governance, Ethics & Equity** track · ~1 hour, self-paced
+[Novice]{.level-badge .level-novice} · **Governance, Ethics & Equity** track · ~35 min hands-on + readings and quiz
 :::
 
 [← Back to the Governance, Ethics & Equity track](governance-ethics.qmd){.track-back}
@@ -32,23 +32,36 @@ Right-sizing is the practical lever: use the smallest model that does the job, a
 
 **Goal.** Use the smallest model that does the job.
 
-**Setup.** A simple task you’d normally send to a large model.
+**Setup.** Use this abstract (approximately 200 words) for the right-sizing comparison:
+
+> **Built environment and pedestrian injury severity: A multi-level analysis of 12,400 crashes in Philadelphia, 2017–2023.** We examined the association between built-environment features and pedestrian crash severity using a multilevel logistic regression framework. Crash records from PennDOT were geocoded and linked to road-segment characteristics (lane count, speed limit, presence of sidewalks, crosswalk markings, and lighting) and census-tract-level variables (population density, median income, percent non-white). Severe injuries (KSI: killed or seriously injured) were modeled as the outcome. Roads with ≥4 lanes had 2.3 times the odds of KSI compared to 2-lane roads (95% CI: 1.8–2.9). Absence of marked crosswalks was associated with 1.7 times the odds of KSI (95% CI: 1.3–2.2). Tracts in the lowest income quartile had 40% higher KSI odds after adjusting for road features. A small-model approach (GPT-4o mini or equivalent) is adequate for summarizing and reformatting this kind of text; a frontier model adds little value for straightforward summarization tasks but consumes substantially more compute.
 
 **Steps.**
 
-1. Run it on a smaller/faster model and judge whether quality held.
+1. Run this prompt on a **smaller/faster model** (e.g., GPT-4o mini or the non-default option in ChatGPT Edu):
 
-2. Run it on the large model and compare.
+   > Summarize this abstract in 3 bullet points for a non-technical audience. Keep every number accurate.
 
-3. Note where the smaller model is good enough.
+2. Run the same prompt on the **largest available model** (e.g., GPT-5.5).
 
-**Expected result.** A sense of where “smaller is fine.”
+3. Compare using this checklist:
 
-**Check your work.** Did the big model actually add value here, or just cost more energy and money?
+   | Criterion | Small model | Large model |
+   |-----------|-------------|-------------|
+   | All numbers accurate? | | |
+   | Readable for non-expert? | | |
+   | Captures the 3 key findings? | | |
+   | Any added insight the small model missed? | | |
 
-**Common pitfalls.** Defaulting to the biggest model for everything is wasteful.
+4. Note where the smaller model is good enough — and where, if anywhere, the larger model genuinely added value.
 
-**Stretch (optional).** Estimate how often your typical tasks really need the largest model.
+**Expected result.** For a straightforward summarization task like this, the small model should perform comparably. You should be able to identify that the large model was not necessary.
+
+**Check your work.** Did the big model actually add value here, or just cost more energy and money? For summarization, the answer is usually no.
+
+**Common pitfalls.** Defaulting to the biggest model for everything is wasteful. The energy difference is real: frontier models use roughly 5–10× the compute of smaller models per query.
+
+**Stretch (optional).** List your five most common AI tasks and estimate which need a frontier model vs. a smaller one. You may find that 70–80% of your daily use doesn’t require the largest model.
 
 ```{=html}
 </details>
@@ -108,6 +121,14 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 ## Useful resources
 
 - [ML CO2 Impact](https://mlco2.github.io/impact/) — estimate the carbon of compute.
+
+---
+
+## Navigate
+
+**Next in this track:** [Data Security & Classification Deep-Dive](data-security-classification.qmd)
+
+**Related topics:** [Responsible AI](responsible-ai.qmd) · [Keeping Your Judgment: Cognitive Offloading & When to Scrutinize AI](judgment-and-offloading.qmd)
 
 ::: {.callout-warning}
 ## Data rules

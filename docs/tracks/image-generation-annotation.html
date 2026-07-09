@@ -133,6 +133,10 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Self-Paced Tracks</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../paths.html"> 
+<span class="menu-text">Learning Paths</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../tools.html"> 
 <span class="menu-text">Tools &amp; Access</span></a>
   </li>  
@@ -169,6 +173,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#check-your-readiness" id="toc-check-your-readiness" class="nav-link" data-scroll-target="#check-your-readiness">Check your readiness</a></li>
   <li><a href="#recommended-readings" id="toc-recommended-readings" class="nav-link" data-scroll-target="#recommended-readings">Recommended readings</a></li>
   <li><a href="#useful-resources" id="toc-useful-resources" class="nav-link" data-scroll-target="#useful-resources">Useful resources</a></li>
+  <li><a href="#navigate" id="toc-navigate" class="nav-link" data-scroll-target="#navigate">Navigate</a></li>
   </ul>
 </nav>
     </div>
@@ -195,7 +200,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="topic-badges">
-<p><span class="level-badge level-moderate">Moderate</span> · <strong>Data &amp; Analysis</strong> track · ~1 hour, self-paced</p>
+<p><span class="level-badge level-moderate">Moderate</span> · <strong>Data &amp; Analysis</strong> track · ~35 min hands-on + readings and quiz</p>
 </div>
 <p><a href="../tracks/data-analysis.html" class="track-back">← Back to the Data &amp; Analysis track</a></p>
 <p><em>Make communication graphics responsibly, and turn images into labeled data.</em></p>
@@ -240,7 +245,20 @@ ul.task-list li input[type="checkbox"] {
 <details class="activity"><summary>Activity 2 · Moderate — Annotate street images</summary>
 <p><strong>Time</strong> ~20 min · <strong>Tools</strong> Label Studio (free) + a browser</p>
 <p><strong>Goal.</strong> Turn images into labeled data you could measure.</p>
-<p><strong>Setup.</strong> Collect ~10 public Google Street View images of Philadelphia intersections (Google already blurs faces and plates). Install or open <strong>Label Studio</strong>.</p>
+<p><strong>Setup.</strong> Use these 10 publicly available Philadelphia intersection images from Google Street View (Google automatically blurs faces and license plates). Open each link and save the image, or right-click to copy:</p>
+<ol type="1">
+<li><a href="https://www.google.com/maps/@39.9893,-75.1563,3a,75y,90h,90t/data=!3m6!1e1!3m4!1s0x0:0x0!2e0!7i16384!8i8192">Broad &amp; Lehigh</a> — wide arterial, no visible crosswalk markings</li>
+<li><a href="https://www.google.com/maps/@39.9494,-75.1631,3a,75y,270h,90t/data=!3m6!1e1!3m4!1s0x0:0x0!2e0!7i16384!8i8192">Broad &amp; Walnut</a> — downtown, marked crosswalks and curb ramps</li>
+<li><a href="https://www.google.com/maps/@39.9939,-75.1234,3a,75y,180h,90t/data=!3m6!1e1!3m4!1s0x0:0x0!2e0!7i16384!8i8192">Frankford &amp; Allegheny</a> — complex intersection</li>
+<li><a href="https://www.google.com/maps/@39.9619,-75.1478,3a,75y,90h,90t/data=!3m6!1e1!3m4!1s0x0:0x0!2e0!7i16384!8i8192">5th &amp; Spring Garden</a> — near highway ramp</li>
+<li><a href="https://www.google.com/maps/@39.9617,-75.2058,3a,75y,90h,90t/data=!3m6!1e1!3m4!1s0x0:0x0!2e0!7i16384!8i8192">Lancaster &amp; 40th</a> — West Philadelphia</li>
+<li><a href="https://www.google.com/maps/@39.9143,-75.1631,3a,75y,270h,90t/data=!3m6!1e1!3m4!1s0x0:0x0!2e0!7i16384!8i8192">Oregon &amp; Broad</a> — South Philadelphia</li>
+<li><a href="https://www.google.com/maps/@39.9696,-75.1352,3a,75y,180h,90t/data=!3m6!1e1!3m4!1s0x0:0x0!2e0!7i16384!8i8192">Girard &amp; Front</a> — Fishtown</li>
+<li><a href="https://www.google.com/maps/@40.0342,-75.0991,3a,75y,90h,90t/data=!3m6!1e1!3m4!1s0x0:0x0!2e0!7i16384!8i8192">Roosevelt Blvd &amp; Adams Ave</a> — high-crash corridor</li>
+<li><a href="https://www.google.com/maps/@39.9575,-75.2266,3a,75y,270h,90t/data=!3m6!1e1!3m4!1s0x0:0x0!2e0!7i16384!8i8192">Market &amp; 52nd</a> — West Philadelphia commercial</li>
+<li><a href="https://www.google.com/maps/@40.0555,-75.0574,3a,75y,90h,90t/data=!3m6!1e1!3m4!1s0x0:0x0!2e0!7i16384!8i8192">Cottman &amp; Bustleton</a> — Northeast Philadelphia</li>
+</ol>
+<p>If the Street View links don’t load at the exact angle, navigate to the intersection in Google Maps and drop the Street View pegman. Install or open <strong>Label Studio</strong> (free, open-source).</p>
 <p><strong>Steps.</strong></p>
 <ol type="1">
 <li><p>Set up a bounding-box project with two labels: <strong>marked crosswalk</strong> and <strong>curb ramp</strong>. Write a one-line definition for each <em>before</em> you start.</p></li>
@@ -281,6 +299,12 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="https://labelstud.io">Label Studio</a> — open-source image and text annotation.</li>
 <li><a href="https://www.cvat.ai">CVAT</a> — computer-vision annotation tool.</li>
 </ul>
+<hr>
+</section>
+<section id="navigate" class="level2">
+<h2 class="anchored" data-anchor-id="navigate">Navigate</h2>
+<p><strong>Next in this track:</strong> <a href="../tracks/web-and-dashboards.html">AI-Assisted Web &amp; Dashboards</a></p>
+<p><strong>Related topics:</strong> <a href="../tracks/design-visual-communication.html">AI for Design &amp; Visual Communication</a> · <a href="../tracks/geospatial-gis.html">Geospatial / GIS &amp; Built Environment</a></p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">

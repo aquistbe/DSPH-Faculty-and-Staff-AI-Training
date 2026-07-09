@@ -133,6 +133,10 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Self-Paced Tracks</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../paths.html"> 
+<span class="menu-text">Learning Paths</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../tools.html"> 
 <span class="menu-text">Tools &amp; Access</span></a>
   </li>  
@@ -169,6 +173,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#check-your-readiness" id="toc-check-your-readiness" class="nav-link" data-scroll-target="#check-your-readiness">Check your readiness</a></li>
   <li><a href="#recommended-readings" id="toc-recommended-readings" class="nav-link" data-scroll-target="#recommended-readings">Recommended readings</a></li>
   <li><a href="#useful-resources" id="toc-useful-resources" class="nav-link" data-scroll-target="#useful-resources">Useful resources</a></li>
+  <li><a href="#navigate" id="toc-navigate" class="nav-link" data-scroll-target="#navigate">Navigate</a></li>
   </ul>
 </nav>
     </div>
@@ -195,7 +200,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="topic-badges">
-<p><span class="level-badge level-moderate">Moderate</span> · <strong>Data &amp; Analysis</strong> track · ~1 hour, self-paced</p>
+<p><span class="level-badge level-moderate">Moderate</span> · <strong>Data &amp; Analysis</strong> track · ~35 min hands-on + readings and quiz</p>
 </div>
 <p><a href="../tracks/data-analysis.html" class="track-back">← Back to the Data &amp; Analysis track</a></p>
 <p><em>Read output, translate between languages, and sanity-check what AI tells you.</em></p>
@@ -217,7 +222,64 @@ ul.task-list li input[type="checkbox"] {
 <details class="activity"><summary>Activity 1 · Moderate — Translate a model across Stata, R, and Python</summary>
 <p><strong>Time</strong> ~20 min · <strong>Tools</strong> ChatGPT Edu + Stata and/or R/Python</p>
 <p><strong>Goal.</strong> Move a model between languages and confirm the translation is faithful.</p>
-<p><strong>Setup.</strong> Download the <a href="https://hub.arcgis.com/api/v3/datasets/21154a8f1894449f839d2288726e9837_0/downloads/data?format=csv&amp;spatialRefId=3857&amp;where=1%3D1">Crash Data 2020–2024 (CSV)</a>. Outcome: a <strong>fatal-crash indicator</strong> (fatal count &gt; 0). Predictors: a few crash characteristics such as speeding-related, intersection, and a light/dark indicator (use the exact field names from the dataset’s metadata).</p>
+<p><strong>Setup.</strong> Download the <a href="https://hub.arcgis.com/api/v3/datasets/21154a8f1894449f839d2288726e9837_0/downloads/data?format=csv&amp;spatialRefId=3857&amp;where=1%3D1">Philadelphia Crash Data 2020–2024 (CSV)</a>. Key columns you’ll use:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 36%">
+<col style="width: 39%">
+<col style="width: 24%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Column name</th>
+<th>Description</th>
+<th>Values</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>FATAL_COUNT</code></td>
+<td>Number of fatalities</td>
+<td>0, 1, 2, … (create a binary indicator: 1 if &gt; 0)</td>
+</tr>
+<tr class="even">
+<td><code>SPEED_RELATED</code></td>
+<td>Was speeding a factor?</td>
+<td>0 = No, 1 = Yes</td>
+</tr>
+<tr class="odd">
+<td><code>INTERSECT_TYPE</code></td>
+<td>Intersection type</td>
+<td>0 = Non-intersection, 1–9 = various intersection types (recode to binary: 0 vs.&nbsp;any)</td>
+</tr>
+<tr class="even">
+<td><code>ILLUMINATION</code></td>
+<td>Lighting conditions</td>
+<td>1 = Daylight, 2 = Dark (no street lights), 3 = Dark (street lights), 4 = Dusk, 5 = Dawn, 8 = Other, 9 = Unknown (recode to binary: dark vs.&nbsp;light)</td>
+</tr>
+<tr class="odd">
+<td><code>PEDESTRIAN</code></td>
+<td>Pedestrian involved?</td>
+<td>0 = No, 1 = Yes</td>
+</tr>
+<tr class="even">
+<td><code>BICYCLE</code></td>
+<td>Bicycle involved?</td>
+<td>0 = No, 1 = Yes</td>
+</tr>
+<tr class="odd">
+<td><code>CRASH_MONTH</code></td>
+<td>Month of crash</td>
+<td>1–12</td>
+</tr>
+<tr class="even">
+<td><code>DAY_OF_WEEK</code></td>
+<td>Day of week</td>
+<td>1 = Sunday … 7 = Saturday</td>
+</tr>
+</tbody>
+</table>
+<p>Outcome: a <strong>fatal-crash indicator</strong> (<code>FATAL_COUNT &gt; 0</code>). Predictors: <code>SPEED_RELATED</code>, intersection (binary from <code>INTERSECT_TYPE</code>), and a dark/light indicator (binary from <code>ILLUMINATION</code>). Optionally restrict to pedestrian-involved crashes (<code>PEDESTRIAN == 1</code>).</p>
 <p><strong>Steps.</strong></p>
 <ol type="1">
 <li><p>Start in your home language (Stata, if that’s yours):</p>
@@ -282,6 +344,12 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="https://www.r-project.org">R Project</a> — open-source statistics and graphics.</li>
 <li><a href="https://www.statsmodels.org">statsmodels (Python)</a> — statistical models in Python.</li>
 </ul>
+<hr>
+</section>
+<section id="navigate" class="level2">
+<h2 class="anchored" data-anchor-id="navigate">Navigate</h2>
+<p><strong>Next in this track:</strong> <a href="../tracks/qualitative-analysis.html">Qualitative Data Analysis</a></p>
+<p><strong>Related topics:</strong> <a href="../tracks/coding-with-ai.html">Coding with AI</a> · <a href="../tracks/data-analysis-advanced.html">Data Analysis Advanced</a></p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">

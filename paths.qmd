@@ -1,0 +1,161 @@
+---
+title: "Learning Paths by Role"
+---
+
+::: {.day-header}
+# Learning Paths by Role
+::: {.day-subtitle}
+Not sure where to start? Find your role below and follow a curated sequence of workshops and self-paced topics.
+:::
+:::
+
+Everyone begins with **[Workshop 1: Foundations & Capabilities](workshop1.qmd)** and **[Workshop 2: Workflow Enhancement](workshop2.qmd)** — they cover the prompting basics and Drexel data rules that everything else builds on. After that, your path depends on what you do.
+
+Pick the role closest to yours, then work through the recommended sequence. Each entry links to either a workshop page or a self-paced track topic. You don't have to do them all — start with the ones marked **start here** and add from there.
+
+---
+
+## Admin & Operations Staff
+
+You manage schedules, budgets, reports, events, accreditation documents, and communications. AI helps most with drafting, reformatting, and summarizing — the recurring tasks that eat your week.
+
+| Order | Topic | Type | Why it matters for you |
+|-------|-------|------|----------------------|
+| 1 | [Workshop 1: Foundations](workshop1.qmd) | Workshop | Prompting basics and data rules — **start here** |
+| 2 | [Workshop 2: Workflow Enhancement](workshop2.qmd) | Workshop | Copilot in Word, Outlook, Excel for daily tasks |
+| 3 | [Data Security & Classification](tracks/data-security-classification.qmd) | Self-paced | You handle student records, budgets, and HR data — classification matters |
+| 4 | [Verifying AI Output](tracks/verifying-output.qmd) | Self-paced | Catch errors before they reach a report or accreditation document |
+| 5 | [Workshop 3: Collaboration on Projects](workshop3.qmd) | Workshop | Reusable prompts and shared templates for your team |
+| 6 | [Design & Visual Communication](tracks/design-visual-communication.qmd) | Self-paced | Flyers, event materials, and accessible visuals |
+| 7 | [Responsible AI](tracks/responsible-ai.qmd) | Self-paced | Disclosure norms and accountability for AI-assisted work |
+| 8 | [Grant Administration with AI](tracks/grant-administration.qmd) | Self-paced | Deadline tracking, compliance checks, and budget formatting |
+
+::: {.callout-tip}
+## Admin priority
+Workshops 1–3 plus Data Security and Verifying Output cover 80% of what admin staff need. The rest is useful but not urgent.
+:::
+
+---
+
+## Research Staff & Coordinators
+
+You manage data, run analyses, coordinate IRB submissions, track grant deadlines, and draft reports. AI accelerates the data pipeline and the writing that surrounds it.
+
+| Order | Topic | Type | Why it matters for you |
+|-------|-------|------|----------------------|
+| 1 | [Workshop 1: Foundations](workshop1.qmd) | Workshop | Prompting basics and data rules — **start here** |
+| 2 | [Workshop 2: Workflow Enhancement](workshop2.qmd) | Workshop | Summarizing, drafting, and formatting in your daily tools |
+| 3 | [Data Cleaning](tracks/data-cleaning.qmd) | Self-paced | Diagnose and fix messy data faster |
+| 4 | [Data Security & Classification](tracks/data-security-classification.qmd) | Self-paced | You work with identifiable data — know the boundaries |
+| 5 | [De-identification & Synthetic Data](tracks/de-identification-synthetic-data.qmd) | Self-paced | Make data safe for tools or sharing |
+| 6 | [Coding with AI](tracks/coding-with-ai.qmd) | Self-paced | Generate, debug, and translate code (R, Stata, Python) |
+| 7 | [Statistical Interpretation](tracks/statistical-interpretation.qmd) | Self-paced | Translate models across languages and interrogate output |
+| 8 | [Verifying AI Output](tracks/verifying-output.qmd) | Self-paced | Catch fabricated citations and wrong statistics |
+| 9 | [Workshop 3: Collaboration on Projects](workshop3.qmd) | Workshop | Reusable prompts for recurring research tasks |
+| 10 | [Literature Review](tracks/literature-review.qmd) | Self-paced | Search strategy and evidence synthesis |
+
+::: {.callout-tip}
+## Research staff priority
+Start with Workshops 1–2, then Data Cleaning and Data Security. Add Coding with AI and Statistical Interpretation once you're comfortable.
+:::
+
+---
+
+## Teaching Faculty
+
+You design courses, write syllabi, create assignments, advise students, and communicate findings to multiple audiences. AI helps with content creation, assessment design, and plain-language translation.
+
+| Order | Topic | Type | Why it matters for you |
+|-------|-------|------|----------------------|
+| 1 | [Workshop 1: Foundations](workshop1.qmd) | Workshop | Prompting basics and data rules — **start here** |
+| 2 | [Workshop 2: Workflow Enhancement](workshop2.qmd) | Workshop | Drafting, summarizing, and formatting for teaching tasks |
+| 3 | [Science Communication](tracks/science-communication.qmd) | Self-paced | Translate findings for students and the public |
+| 4 | [Verifying AI Output](tracks/verifying-output.qmd) | Self-paced | Model verification habits for your students |
+| 5 | [Workshop 6: AI for Curriculum Development](workshop6.qmd) | Workshop | Assignment design and AI policies for your courses |
+| 6 | [Writing Your Course AI Policy](tracks/course-ai-policy.qmd) | Self-paced | A clear, enforceable policy for your syllabus |
+| 7 | [Assignment & Assessment Design](tracks/assignment-assessment-design.qmd) | Self-paced | Assignments that work with or despite AI |
+| 8 | [Responsible AI](tracks/responsible-ai.qmd) | Self-paced | Disclosure norms — for you and your students |
+| 9 | [AI Bias & Health Equity Audit](tracks/bias-equity-audit.qmd) | Self-paced | Teach students to test AI across groups |
+| 10 | [Multilingual Materials](tracks/multilingual-materials.qmd) | Self-paced | Translate and adapt materials for diverse learners |
+
+::: {.callout-tip}
+## Teaching faculty priority
+Workshops 1–2, then Science Communication and Verifying Output. Before fall semester, complete Workshop 6 and the Course AI Policy topic.
+:::
+
+---
+
+## Research Faculty (PI / Co-I)
+
+You design studies, write grants, publish papers, and lead research teams. AI helps most with writing, literature synthesis, and methods — but the stakes of errors are high.
+
+| Order | Topic | Type | Why it matters for you |
+|-------|-------|------|----------------------|
+| 1 | [Workshop 1: Foundations](workshop1.qmd) | Workshop | Prompting basics and data rules — **start here** |
+| 2 | [Workshop 2: Workflow Enhancement](workshop2.qmd) | Workshop | Drafting and summarizing in your daily tools |
+| 3 | [Literature Review](tracks/literature-review.qmd) | Self-paced | Search, synthesize, and verify — not fabricate |
+| 4 | [Verifying AI Output](tracks/verifying-output.qmd) | Self-paced | Catch hallucinated citations before they reach a manuscript |
+| 5 | [Grant Proposal Development](tracks/grant-proposal-development.qmd) | Self-paced | Draft aims, abstracts, and reviews of your own work |
+| 6 | [Manuscript Preparation & Peer Review](tracks/manuscript-peer-review.qmd) | Self-paced | Tighten manuscripts and structure reviewer responses |
+| 7 | [Statistical Interpretation](tracks/statistical-interpretation.qmd) | Self-paced | Translate models and interrogate output |
+| 8 | [AI Bias & Health Equity Audit](tracks/bias-equity-audit.qmd) | Self-paced | Test for disparities in AI-assisted analyses |
+| 9 | [Responsible AI](tracks/responsible-ai.qmd) | Self-paced | Disclosure, accountability, and governance frameworks |
+| 10 | [Coding with AI](tracks/coding-with-ai.qmd) | Self-paced | Generate and debug analysis code |
+
+::: {.callout-tip}
+## Research faculty priority
+Workshops 1–2, then Literature Review and Verifying Output. Add Grant Proposal Development and Manuscript Prep when you're writing.
+:::
+
+---
+
+## Practice & Community-Facing Roles
+
+You work with communities, run programs, create outreach materials, or do practice-based work. AI helps with communication, evaluation, and materials — but cultural competence and community trust are non-negotiable.
+
+| Order | Topic | Type | Why it matters for you |
+|-------|-------|------|----------------------|
+| 1 | [Workshop 1: Foundations](workshop1.qmd) | Workshop | Prompting basics and data rules — **start here** |
+| 2 | [Workshop 2: Workflow Enhancement](workshop2.qmd) | Workshop | Drafting and formatting for outreach materials |
+| 3 | [Science Communication](tracks/science-communication.qmd) | Self-paced | Plain-language materials for community audiences |
+| 4 | [Multilingual Materials](tracks/multilingual-materials.qmd) | Self-paced | Translate and culturally adapt, not just swap words |
+| 5 | [Design & Visual Communication](tracks/design-visual-communication.qmd) | Self-paced | Flyers, social posts, and accessible visuals |
+| 6 | [Program Evaluation](tracks/program-evaluation.qmd) | Self-paced | Logic models and evaluation plans for your programs |
+| 7 | [AI Bias & Health Equity Audit](tracks/bias-equity-audit.qmd) | Self-paced | Test AI for disparities before using it with communities |
+| 8 | [Verifying AI Output](tracks/verifying-output.qmd) | Self-paced | Don't let AI errors reach communities |
+| 9 | [Data Security & Classification](tracks/data-security-classification.qmd) | Self-paced | Community data is often sensitive — know the rules |
+| 10 | [Keeping Your Judgment](tracks/judgment-and-offloading.qmd) | Self-paced | Community relationships require human judgment, not AI shortcuts |
+
+::: {.callout-tip}
+## Practice/community priority
+Workshops 1–2, then Science Communication and Multilingual Materials. AI Bias & Equity Audit is essential before deploying any AI-assisted tool in a community context.
+:::
+
+---
+
+## Mentoring & Advising
+
+You advise students, mentor junior colleagues, write recommendation letters, and navigate sensitive conversations. AI can help with some of these tasks, but judgment, confidentiality, and the personal relationship are paramount.
+
+| Order | Topic | Type | Why it matters for you |
+|-------|-------|------|----------------------|
+| 1 | [Workshop 1: Foundations](workshop1.qmd) | Workshop | Prompting basics and data rules — **start here** |
+| 2 | [Workshop 2: Workflow Enhancement](workshop2.qmd) | Workshop | Drafting and summarizing for advising tasks |
+| 3 | [AI in Mentoring & Advising](tracks/mentoring-advising.qmd) | Self-paced | Where AI helps and where it has no place |
+| 4 | [Responsible AI](tracks/responsible-ai.qmd) | Self-paced | Disclosure norms — when to tell a student AI helped |
+| 5 | [Data Security & Classification](tracks/data-security-classification.qmd) | Self-paced | Student records are FERPA-protected — know the limits |
+| 6 | [Verifying AI Output](tracks/verifying-output.qmd) | Self-paced | Don't pass AI errors along to advisees |
+| 7 | [Keeping Your Judgment](tracks/judgment-and-offloading.qmd) | Self-paced | Mentoring is a human relationship — keep it that way |
+| 8 | [Writing Your Course AI Policy](tracks/course-ai-policy.qmd) | Self-paced | Help students understand where AI is and isn't appropriate |
+
+::: {.callout-tip}
+## Mentoring/advising priority
+Workshops 1–2, then Mentoring & Advising and Responsible AI. Data Security is essential for anyone handling student records.
+:::
+
+---
+
+::: {.callout-note}
+## Not sure which path fits?
+Start with Workshops 1 and 2 — everyone needs those. Then try the [Verifying AI Output](tracks/verifying-output.qmd) topic (it applies to every role) and explore from there. If your role spans multiple paths, pick topics from each that match your actual work.
+:::

@@ -3,7 +3,7 @@ title: "AI-Assisted Web & Dashboards"
 ---
 
 ::: {.topic-badges}
-[Moderate]{.level-badge .level-moderate} · **Data & Analysis** track · ~1 hour, self-paced
+[Moderate]{.level-badge .level-moderate} · **Data & Analysis** track · ~35 min hands-on + readings and quiz
 :::
 
 [← Back to the Data & Analysis track](data-analysis.qmd){.track-back}
@@ -112,6 +112,14 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 - [Quarto Dashboards](https://quarto.org/docs/dashboards/) — build dashboards from R/Python.
 - [Shiny](https://shiny.posit.co) — interactive web apps from R or Python.
 - [Plotly](https://plotly.com/graphing-libraries/) — interactive charts for web output.
+
+---
+
+## Navigate
+
+**Next in this track:** [Data Analysis Advanced](data-analysis-advanced.qmd)
+
+**Related topics:** [Data Analysis Advanced](data-analysis-advanced.qmd) · [AI for Design & Visual Communication](design-visual-communication.qmd)
 
 ::: {.callout-warning}
 ## Data rules

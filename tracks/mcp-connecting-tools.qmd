@@ -3,7 +3,7 @@ title: "MCP & Connecting AI to Data & Tools"
 ---
 
 ::: {.topic-badges}
-[Advanced]{.level-badge .level-advanced} · **Technical & Agentic** track · ~1 hour, self-paced
+[Advanced]{.level-badge .level-advanced} · **Technical & Agentic** track · ~35 min hands-on + readings and quiz
 :::
 
 [← Back to the Technical & Agentic track](technical-agentic.qmd){.track-back}
@@ -32,25 +32,41 @@ Connect with least privilege: give the narrowest access that does the job, prefe
 
 **Goal.** Plan a safe AI-to-tool connection.
 
-**Setup.** Pick a task that would need AI to reach a tool or data source (e.g., read a shared folder of public reports).
+**Setup.** Work through this concrete scenario:
+
+**The task:** You want to connect Claude Desktop to your OneDrive folder containing de-identified crash data files (CSVs and PDFs of published reports) so you can ask questions about the data without manually copying and pasting. The folder is `Pedestrian Safety Study / Public Data`.
+
+**The over-scoped version:** You connect Claude to your entire OneDrive — every folder, every file, read and write access. This is faster to set up.
+
+**The least-privilege version:** You connect Claude to only the `Pedestrian Safety Study / Public Data` subfolder, read-only access, no access to any other folder including the parent `Pedestrian Safety Study` folder (which contains identified data, IRB documents, and personnel files).
 
 **Steps.**
 
-1. Write exactly what access the task needs — then the narrowest version that still works (read-only? one folder?).
+1. Map out what each version can access:
+
+   | | Over-scoped | Least-privilege |
+   |---|---|---|
+   | Can read public crash CSVs | Yes | Yes |
+   | Can read published PDF reports | Yes | Yes |
+   | Can read IRB protocols with participant details | Yes | **No** |
+   | Can read personnel files with salaries | Yes | **No** |
+   | Can read your email drafts | Yes | **No** |
+   | Can modify or delete files | Yes | **No** |
+   | Can write new files into any folder | Yes | **No** |
 
 2. Get a second opinion:
 
-   > Here’s the task and the access I’m considering. What’s the least-privilege version, and what could go wrong if it’s over-scoped? [task]
+   > I want to connect an AI assistant (Claude Desktop via MCP) to a OneDrive subfolder containing de-identified crash data CSVs and published reports. The parent folder contains identified data and IRB documents. I’m considering read-only access to only the public-data subfolder. What’s the least-privilege version of this, and what could go wrong if I connected the whole OneDrive instead?
 
-3. Decide read-only vs. write, and what stays off-limits.
+3. Decide: Is even read-only access to the subfolder acceptable under Drexel’s data rules, given that the files are de-identified and public? What would change if the folder also contained files with ZIP codes and dates that could theoretically re-identify?
 
-**Expected result.** A least-privilege access plan.
+**Expected result.** A least-privilege access plan: read-only, single subfolder, no access to parent directories. You should also have identified that the over-scoped version would expose IRB protocols, personnel files, and email drafts to the AI — none of which are needed for the task.
 
-**Check your work.** Could a misbehaving connection do damage with this access? If so, narrow it.
+**Check your work.** Ask: "If this connection misbehaved or was compromised, what’s the worst it could do?" With least-privilege, the worst case is reading de-identified public data. With over-scoped access, the worst case is reading (and potentially leaking) identified research data, personnel records, and IRB documents.
 
-**Common pitfalls.** Convenience tempts over-permissioning. Prefer read-only; confirm Drexel rules before connecting any real or sensitive system.
+**Common pitfalls.** Convenience tempts over-permissioning. "I’ll just connect the whole drive so I don’t have to reconfigure later" is the most common mistake. Prefer read-only; confirm Drexel rules before connecting any system.
 
-**Stretch (optional).** Decide whether the connection is even worth the risk versus a manual copy-paste.
+**Stretch (optional).** Decide whether the connection is even worth the risk versus manually copying the specific CSV into the chat. For a one-time question, copy-paste may be safer than a persistent connection.
 
 ```{=html}
 </details>
@@ -110,6 +126,14 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 
 - [Model Context Protocol](https://modelcontextprotocol.io) — the open MCP standard.
 - [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with data rules.
+
+---
+
+## Navigate
+
+**Back to track overview:** [Technical & Agentic](technical-agentic.qmd)
+
+**Related topics:** [Building AI Agents with Natural Language](building-agents.qmd) · [Data Security & Classification Deep-Dive](data-security-classification.qmd)
 
 ::: {.callout-warning}
 ## Data rules

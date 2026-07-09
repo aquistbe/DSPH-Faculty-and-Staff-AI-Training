@@ -3,7 +3,7 @@ title: "Geospatial / GIS & Built Environment"
 ---
 
 ::: {.topic-badges}
-[Advanced]{.level-badge .level-advanced} · **Methods & Study Design** track · ~1 hour, self-paced
+[Advanced]{.level-badge .level-advanced} · **Methods & Study Design** track · ~35 min hands-on + readings and quiz
 :::
 
 [← Back to the Methods & Study Design track](methods-study-design.qmd){.track-back}
@@ -113,6 +113,14 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 - [QGIS](https://qgis.org) — free, open-source GIS.
 - [geopandas](https://geopandas.org) — spatial analysis in Python.
 - [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with data rules.
+
+---
+
+## Navigate
+
+**Back to track overview:** [Methods & Study Design](methods-study-design.qmd)
+
+**Related topics:** [Image Generation & Annotation](image-generation-annotation.qmd) · [Coding with AI](coding-with-ai.qmd)
 
 ::: {.callout-warning}
 ## Data rules

@@ -133,6 +133,10 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Self-Paced Tracks</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../paths.html"> 
+<span class="menu-text">Learning Paths</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../tools.html"> 
 <span class="menu-text">Tools &amp; Access</span></a>
   </li>  
@@ -169,6 +173,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#check-your-readiness" id="toc-check-your-readiness" class="nav-link" data-scroll-target="#check-your-readiness">Check your readiness</a></li>
   <li><a href="#recommended-readings" id="toc-recommended-readings" class="nav-link" data-scroll-target="#recommended-readings">Recommended readings</a></li>
   <li><a href="#useful-resources" id="toc-useful-resources" class="nav-link" data-scroll-target="#useful-resources">Useful resources</a></li>
+  <li><a href="#navigate" id="toc-navigate" class="nav-link" data-scroll-target="#navigate">Navigate</a></li>
   </ul>
 </nav>
     </div>
@@ -195,7 +200,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="topic-badges">
-<p><span class="level-badge level-moderate">Moderate</span> · <strong>Technical &amp; Agentic</strong> track · ~1 hour, self-paced</p>
+<p><span class="level-badge level-moderate">Moderate</span> · <strong>Technical &amp; Agentic</strong> track · ~35 min hands-on + readings and quiz</p>
 </div>
 <p><a href="../tracks/technical-agentic.html" class="track-back">← Back to the Technical &amp; Agentic track</a></p>
 <p><em>The quiet skill behind good AI output: structuring what the model sees.</em></p>
@@ -217,20 +222,30 @@ ul.task-list li input[type="checkbox"] {
 <details class="activity"><summary>Activity 1 · Moderate — Fix a drift with better context</summary>
 <p><strong>Time</strong> ~15 min · <strong>Tools</strong> ChatGPT Edu or Claude</p>
 <p><strong>Goal.</strong> Improve output by improving context, not by writing a longer prompt.</p>
-<p><strong>Setup.</strong> A task where AI keeps missing what you want (e.g., it won’t match your report’s tone).</p>
+<p><strong>Setup.</strong> You will experience the problem firsthand, then fix it with one example.</p>
+<p><strong>The scenario:</strong> You need to write monthly progress updates for an NIH R01 grant. They should be brief, factual, and structured — but when you prompt generically, the AI produces something bloated and off-tone.</p>
 <p><strong>Steps.</strong></p>
 <ol type="1">
-<li><p>Add a short system instruction and one reference example:</p>
+<li><p><strong>Run the weak prompt</strong> and watch it drift:</p>
 <blockquote class="blockquote">
-<p>You are [role]. Always [2–3 standing rules]. Here is an example of the output I want: [example]. Now do [task].</p>
+<p>Write a monthly progress update for my NIH-funded study on pedestrian safety in Philadelphia.</p>
+</blockquote>
+<p>You’ll likely get something long, vague, and overly enthusiastic (“We are thrilled to report exciting progress…”) with no specific data and a structure that doesn’t match how you actually report.</p></li>
+<li><p><strong>Now add a role, standing rules, and one concrete example:</strong></p>
+<blockquote class="blockquote">
+<p>You are a research coordinator writing terse monthly updates for a PI. Rules: (1) No adjectives like “exciting” or “significant” — just state what happened. (2) Use past tense. (3) Under 120 words. (4) Three sections only: Completed, In Progress, Next Month.</p>
+<p><strong>Example of the output I want:</strong></p>
+<p><em>Completed:</em> Geocoded 2,400 crash records from PennDOT 2022 file; linked to road-segment data. Submitted IRB continuing review (approved 6/28).<br>
+<em>In Progress:</em> Missing speed-limit imputation — 31% of segments lack PennDOT values. Testing two approaches (nearest-neighbor vs.&nbsp;OSM).<br>
+<em>Next Month:</em> Finalize speed-limit variable. Begin multilevel models for KSI outcome. Draft abstract for APHA.</p>
+<p>Now write July’s update. This month we finished the speed-limit imputation using nearest-neighbor, started the multilevel models, and learned that the 2023 PennDOT file has a new format that breaks our ingestion script.</p>
 </blockquote></li>
-<li><p>Re-run and compare to your earlier attempts.</p></li>
-<li><p>Notice that the example and rules — not extra length — fixed it.</p></li>
+<li><p>Compare the two outputs. The second should closely match your example’s tone, structure, and length. Notice that <strong>the single example</strong> — not extra paragraphs of instruction — carried the weight.</p></li>
 </ol>
-<p><strong>Expected result.</strong> Noticeably better, on-spec output.</p>
-<p><strong>Check your work.</strong> Remove the example and re-run — quality should drop, confirming the example carried the weight.</p>
-<p><strong>Common pitfalls.</strong> More text isn’t better context; one sharp example beats paragraphs of description.</p>
-<p><strong>Stretch (optional).</strong> Turn the working context into a reusable skill.</p>
+<p><strong>Expected result.</strong> The first output drifts (too long, wrong tone, vague). The second matches your example’s format and style. This is the core lesson: one sharp example beats paragraphs of description.</p>
+<p><strong>Check your work.</strong> Remove the example and re-run with only the rules — quality should drop, confirming the example was doing the work.</p>
+<p><strong>Common pitfalls.</strong> More text isn’t better context; instructions alone often aren’t enough. The example is the anchor.</p>
+<p><strong>Stretch (optional).</strong> Turn the working context (role + rules + example) into a reusable custom GPT or Claude skill for monthly updates.</p>
 </details>
 <details class="activity"><summary>Activity 2 · Moderate — Trim the context</summary>
 <p><strong>Time</strong> ~12 min · <strong>Tools</strong> ChatGPT Edu or Claude</p>
@@ -275,6 +290,12 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="https://docs.anthropic.com/en/resources/prompt-library/library">Anthropic Prompt Library</a> — worked prompt/context examples.</li>
 <li><a href="https://drexel.edu/provost/ai/tools">ChatGPT Edu (Drexel AI Tools)</a> — the approved tool, with data rules.</li>
 </ul>
+<hr>
+</section>
+<section id="navigate" class="level2">
+<h2 class="anchored" data-anchor-id="navigate">Navigate</h2>
+<p><strong>Next in this track:</strong> <a href="../tracks/building-agents.html">Building AI Agents with Natural Language</a></p>
+<p><strong>Related topics:</strong> <a href="../tracks/creating-skills.html">Creating &amp; Using Skills</a> · <a href="../tracks/building-agents.html">Building AI Agents with Natural Language</a></p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">

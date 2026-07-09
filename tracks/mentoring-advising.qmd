@@ -1,0 +1,143 @@
+---
+title: "AI in Mentoring & Advising"
+---
+
+::: {.topic-badges}
+[Moderate]{.level-badge .level-moderate} · **Governance, Ethics & Equity** track · ~35 min hands-on + readings and quiz
+:::
+
+[← Back to the Governance, Ethics & Equity track](governance-ethics.qmd){.track-back}
+
+*Where AI can help with advising tasks — and where the human relationship is the whole point.*
+
+## What you'll be able to do
+
+- Identify which advising tasks benefit from AI assistance and which don't
+- Use AI to draft recommendation letters, advising notes, and resource compilations while keeping student data safe
+- Set boundaries on AI use in mentoring conversations and sensitive advising situations
+
+## Overview
+
+Mentoring and advising are relationship-based. An AI can draft a recommendation letter, summarize a student's milestones, or compile resources for a career question — but it cannot replace the trust, judgment, and personal knowledge that make advising work.
+
+The data rules matter here more than in most topics: student records are FERPA-protected, advising conversations are often sensitive, and recommendation letters are confidential. Never paste identifiable student information into any tool unless it's approved for that classification.
+
+Use AI for the **administrative** parts of advising (drafting, formatting, compiling) and keep the **relational** parts (listening, judging readiness, delivering difficult feedback) human.
+
+## Practice activities
+
+```{=html}
+<details class="activity"><summary>Activity 1 · Moderate — Draft a recommendation letter with guardrails</summary>
+```
+
+**Time** ~18 min · **Tools** ChatGPT Edu
+
+**Goal.** Use AI to draft a recommendation letter while protecting student privacy and keeping your voice authentic.
+
+**Setup.** Use this fabricated student profile (do not use a real student's information):
+
+> **Student:** Jordan Rivera (fabricated), 2nd-year MPH in Epidemiology. Applying for a CDC/CSTE Applied Epidemiology Fellowship. Strengths: strong quantitative skills (completed advanced biostatistics, proficient in R and SAS), led a community-based participatory research project on lead exposure in North Philadelphia, excellent at communicating with community partners. Areas of growth: still developing confidence presenting to large audiences. You have supervised Jordan for 14 months as their practicum advisor. Jordan analyzed 3 years of childhood blood lead level data for the Philadelphia Department of Public Health and produced a policy brief that was shared with City Council.
+
+**Steps.**
+
+1. Draft the letter:
+
+   > Using this student profile, draft a recommendation letter for the CDC/CSTE Applied Epi Fellowship. Tone: warm but professional. Length: ~400 words. Include specific examples from the profile. Do not invent accomplishments not listed here.
+
+2. Review the draft critically:
+   - Does it sound like *you*, or does it sound like generic AI?
+   - Did it invent any accomplishments not in the profile?
+   - Would this letter distinguish Jordan from other applicants?
+
+3. Rewrite the opening paragraph in your own voice — this is the part that most needs to sound like a person who actually knows the student.
+
+**Expected result.** A usable first draft that saves time on structure and phrasing, but requires your edits to sound authentic and to add the personal observations only you can provide.
+
+**Check your work.** Read the letter aloud. If it could be about any student, it's too generic. The specific details (lead exposure project, City Council brief, community partner skills) should be front and center.
+
+**Common pitfalls.** AI-drafted recommendation letters tend toward inflation ("exceptional," "outstanding," "one of the best") and sameness. Tone them down and add the specific, personal details that only a mentor can provide. Never paste real student records — use fabricated profiles or de-identified details.
+
+**Stretch (optional).** Draft a second letter for a different opportunity (e.g., a PhD program) and notice how the emphasis should shift.
+
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 2 · Moderate — Sort advising tasks: AI-appropriate vs. human-only</summary>
+```
+
+**Time** ~15 min · **Tools** ChatGPT Edu
+
+**Goal.** Draw a clear line between advising tasks where AI helps and situations where it has no place.
+
+**Setup.** Consider these 10 advising scenarios:
+
+1. Compiling a list of fellowship and job opportunities for a graduating student
+2. Drafting talking points for a meeting with a student about their academic performance
+3. A student discloses a mental health crisis during an advising meeting
+4. Summarizing a student's coursework and practicum history for an annual review
+5. Helping a student brainstorm dissertation topic ideas
+6. Writing a student's individualized development plan (IDP)
+7. A student asks whether they should report a lab safety concern
+8. Formatting a student's CV for a specific opportunity
+9. Deciding whether a student is ready to defend their thesis
+10. A student asks you to help them think through a career decision
+
+**Steps.**
+
+1. For each scenario, classify it: **AI-appropriate** (AI can do the bulk of the work), **AI-assisted** (AI helps with drafting/research but human judgment is central), or **Human-only** (AI has no place here).
+
+2. Check your classifications:
+
+   > Here are 10 advising scenarios and my classifications. Do you agree, and are there any I've classified as AI-appropriate that actually need more human involvement? [your list]
+
+3. For each "human-only" scenario, write one sentence explaining why AI involvement would be inappropriate or harmful.
+
+**Expected result.** A classified list that distinguishes administrative tasks (AI-appropriate), judgment-heavy tasks (AI-assisted), and relationship/crisis tasks (human-only). Scenarios 3, 7, 9, and 10 should likely be human-only or heavily human-led.
+
+**Check your work.** Would you be comfortable telling the student that AI helped with each task you marked as AI-appropriate? If not, reconsider.
+
+**Common pitfalls.** The temptation is to use AI for everything because it's faster. But advising a student through a crisis, evaluating readiness, or navigating an ethical dilemma requires presence, judgment, and trust that AI cannot provide.
+
+**Stretch (optional).** Draft a one-paragraph "AI in advising" norm for your department that distinguishes permissible from impermissible uses.
+
+```{=html}
+</details>
+```
+
+
+## Check your readiness
+
+Answer these, then check — your score suggests whether to dive in or skim the readings first.
+
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions": [{"q": "Student records in advising are protected by…", "options": ["FERPA — they're educationally protected", "Nothing in particular", "HIPAA", "The student's preference"], "answer": 0, "explain": "FERPA protects student education records."}, {"q": "The best use of AI in advising is…", "options": ["Administrative tasks like drafting, compiling, and formatting", "Making decisions about student readiness", "Handling crisis situations", "Replacing advising meetings"], "answer": 0, "explain": "AI handles the admin; the mentor handles the relationship."}, {"q": "An AI-drafted recommendation letter needs…", "options": ["Your edits to add personal, specific details only you know", "No changes if it sounds fluent", "More adjectives", "A disclaimer that AI wrote it"], "answer": 0, "explain": "Authenticity and specificity come from you, not the model."}]}
+</script>
+</div>
+
+## Recommended readings
+
+Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings**, and online where linked:
+
+- [**How Responsible AI Changes in the Agent Era**](https://www.turingpost.com/p/how-responsible-ai-changes-in-the-agent-era) — responsibility as AI gains autonomy.
+- [**AI and Humans: Making the Relationship Work (Schneier)**](https://www.schneier.com/blog/archives/2026/01/ai-humans-making-the-relationship-work.html) — where humans must stay in the loop.
+
+## Useful resources
+
+- [FERPA Basics (US Dept of Education)](https://studentprivacy.ed.gov/faq) — what's protected and what isn't.
+- [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with data rules.
+
+---
+
+## Navigate
+
+**Back to track overview:** [Governance, Ethics & Equity](governance-ethics.qmd)
+
+**Related topics:** [Responsible AI](responsible-ai.qmd) · [Writing Your Course AI Policy](course-ai-policy.qmd)
+
+::: {.callout-warning}
+## Data rules
+**Never** paste identifiable student information into any AI tool unless it is approved for that data classification. Use fabricated profiles for practice. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+:::

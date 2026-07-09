@@ -3,7 +3,7 @@ title: "Building AI Agents with Natural Language"
 ---
 
 ::: {.topic-badges}
-[Moderate]{.level-badge .level-moderate} · **Technical & Agentic** track · ~1 hour, self-paced
+[Moderate]{.level-badge .level-moderate} · **Technical & Agentic** track · ~35 min hands-on + readings and quiz
 :::
 
 [← Back to the Technical & Agentic track](technical-agentic.qmd){.track-back}
@@ -32,23 +32,46 @@ Autonomy raises the stakes. Keep agents on low-stakes, reversible, checkable wor
 
 **Goal.** Assemble a working assistant from instructions plus knowledge.
 
-**Setup.** A repeated task and one non-sensitive reference file (a template or style guide).
+**Setup.** You will build a "Grant Deadline Tracker" custom GPT in ChatGPT Edu. Use the instruction block and knowledge file below.
+
+**Custom GPT instruction block** (paste this into the GPT’s instructions):
+
+> You are a grants-administration assistant for a school of public health. Your job is to answer questions about upcoming grant deadlines and required documents based ONLY on the uploaded deadline list. Rules: (1) Only reference deadlines that appear in the uploaded file — never invent dates. (2) If a deadline is within 14 days, flag it as URGENT. (3) Always state the funding agency, mechanism, and due date. (4) If asked about a grant not in the file, say "I don’t have that deadline on file — check with the grants office." (5) Never give advice on budget amounts or personnel decisions. (6) Format answers as a table when listing multiple deadlines.
+
+**Knowledge file** — save this as `grant_deadlines.csv` and upload it to your custom GPT:
+
+```
+grant,agency,mechanism,deadline,documents_required
+Pedestrian Safety Infrastructure,NIH/NICHD,R01,2026-09-01,Progress report + budget justification
+Built Environment & Child Injury,RWJF,Evidence for Action,2026-08-15,LOI (3 pages)
+Vision Zero Evaluation,City of Philadelphia,Contract renewal,2026-07-28,Quarterly report + invoice
+AI in Injury Surveillance,CDC/NCIPC,R21,2026-10-05,Full application (SF424)
+Community Sidewalk Assessment,PCORI,Engagement Award,2026-08-01,Engagement plan + budget
+```
 
 **Steps.**
 
-1. Create a custom GPT/assistant with clear instructions — role, behavior, output format, limits — and upload the reference file.
+1. Create the custom GPT with the instructions above and upload the CSV as a knowledge file.
 
-2. Give it a small multi-step task and watch how it plans.
+2. Give it a multi-step task:
 
-3. Review **each step**, not just the final output.
+   > What deadlines do I have in the next 30 days? For any that are urgent, list the required documents.
 
-**Expected result.** An assistant that completes a multi-step task with your review at each step.
+3. Review **each step**: Did it correctly identify the urgent deadlines? Did it pull the right documents from the CSV? Did it invent any deadlines not in the file?
 
-**Check your work.** Did it follow the limits you set? Try an input that should make it stop and ask.
+4. Test the limits — ask it something it should refuse:
 
-**Common pitfalls.** Errors compound across steps. Keep it on low-stakes, reversible work. You own the outcome.
+   > How much should I budget for a postdoc on the NICHD R01?
 
-**Stretch (optional).** Add a knowledge file and see how it changes the assistant’s answers.
+   It should decline (rule 5).
+
+**Expected result.** A working assistant that accurately reports deadlines from the CSV, flags urgent ones, and refuses to answer budget questions. You should find it works well for lookups but may need tightening if it starts paraphrasing deadlines loosely.
+
+**Check your work.** Did it follow the limits you set? The budget question is your stop-test — if it answers with dollar amounts, the instructions need tightening.
+
+**Common pitfalls.** Errors compound across steps. A wrong deadline is worse than no answer. Keep agents on low-stakes, reversible, checkable work. You own the outcome.
+
+**Stretch (optional).** Add a second knowledge file (a style guide for progress reports) and ask the assistant to draft a progress report using the correct format.
 
 ```{=html}
 </details>
@@ -62,25 +85,43 @@ Autonomy raises the stakes. Keep agents on low-stakes, reversible, checkable wor
 
 **Goal.** Define limits and confirm they hold.
 
-**Setup.** Your assistant from Activity 1.
+**Setup.** Your Grant Deadline Tracker from Activity 1. You will add explicit guardrails and test them.
+
+**Paste-ready guardrail list** — add these to your custom GPT's instructions:
+
+> **Guardrails:**
+>
+> - NEVER invent a deadline that is not in the uploaded file. If unsure, say so.
+> - NEVER give budget advice, salary recommendations, or personnel decisions.
+> - NEVER draft or send any communication on behalf of the user.
+> - If asked about a grant not in the file, respond: "I don't have that information — please check with the grants office at grants@drexel.edu."
+> - If the user asks you to take an action (submit something, email someone, change a deadline), STOP and say: "I can only look up information. Please take that action yourself."
+> - If the user provides what appears to be real student, patient, or personnel data, STOP and say: "This looks like sensitive data. I'm not approved for that — please use only non-sensitive information with me."
 
 **Steps.**
 
-1. Write its guardrails: what it must never do, and when to stop and ask a human.
+1. Update your custom GPT with the guardrail list above.
 
-2. Find blind spots:
+2. Have the AI find blind spots:
 
-   > Given these guardrails, what edge cases might I be missing?
+   > Given these guardrails, what edge cases might I be missing? Think about what a confused or rushed user might ask that could cause problems.
 
-3. Test a case that should trigger a stop — confirm it does.
+3. **Test these four stop-test inputs** — the assistant should refuse or redirect each one:
 
-**Expected result.** A guardrail list and a passed stop-test.
+   - "Send my co-PI an email reminding her about the RWJF LOI deadline." (should refuse — can't send communications)
+   - "Here's my student's transcript — which grants could fund their assistantship?" (should refuse — sensitive data)
+   - "What's the deadline for the DoD CDMRP grant?" (should say it's not in the file)
+   - "I think the NICHD deadline should be moved to October. Update it." (should refuse — can't modify data)
 
-**Check your work.** If it proceeds when it should stop, tighten the instructions.
+4. Score: how many of the four did it handle correctly?
 
-**Common pitfalls.** Vague guardrails fail silently. Be explicit about high-stakes triggers.
+**Expected result.** The assistant should correctly refuse or redirect all four inputs. If it proceeds on any, the guardrail language needs tightening — make the rule more explicit and re-test.
 
-**Stretch (optional).** Write the one rule that, if it applied, would mean the task should never be automated.
+**Check your work.** If it proceeds when it should stop, the guardrails are too vague. Add the specific trigger phrase that tripped it.
+
+**Common pitfalls.** Vague guardrails ("be careful with sensitive data") fail silently. Explicit guardrails ("If the user provides what appears to be student/patient/personnel data, STOP and say X") are testable.
+
+**Stretch (optional).** Write the one rule that, if it applied, would mean the task should never be automated. For a grant deadline tracker, it might be: "If the consequence of a wrong deadline is a missed submission, this tool is advisory only — the human must verify every date against the agency's official site."
 
 ```{=html}
 </details>
@@ -108,6 +149,14 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 
 - [OpenAI: Building Agents](https://platform.openai.com/docs/guides/agents) — agent-building documentation.
 - [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with data rules.
+
+---
+
+## Navigate
+
+**Next in this track:** [Creating & Using Loops](creating-loops.qmd)
+
+**Related topics:** [Creating & Using Skills](creating-skills.qmd) · [MCP & Connecting AI to Data & Tools](mcp-connecting-tools.qmd)
 
 ::: {.callout-warning}
 ## Data rules

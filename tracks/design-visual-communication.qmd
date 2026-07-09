@@ -3,7 +3,7 @@ title: "AI for Design & Visual Communication"
 ---
 
 ::: {.topic-badges}
-[Moderate]{.level-badge .level-moderate} · **Communication & Dissemination** track · ~1 hour, self-paced
+[Moderate]{.level-badge .level-moderate} · **Communication & Dissemination** track · ~35 min hands-on + readings and quiz
 :::
 
 [← Back to the Communication & Dissemination track](communication.qmd){.track-back}
@@ -66,25 +66,33 @@ The data rules differ by tool. Adobe Express, Firefly, and Acrobat are Drexel-ap
 
 **Goal.** Pick the right design tool for the task *and* the data sensitivity.
 
-**Setup.** A real visual need — a flyer, a social post, or a slide.
+**Setup.** Use this concrete brief:
+
+> **Design brief:** Create a one-page flyer for a **community pedestrian-safety event** at Fairhill Square Park (4th & Lehigh, North Philadelphia) on Saturday, October 18, 2026, 10 AM–1 PM. The event is organized by DSPH and the Office of Transportation & Infrastructure Systems. It includes free bike helmet fittings for children, a crosswalk-safety demonstration, and information tables about Vision Zero. The flyer should be in English and Spanish, include a QR code placeholder for RSVP, and be suitable for posting at community centers, schools, and bus shelters. Audience: neighborhood residents, particularly families with children. Data sensitivity: all content is public.
+
+Also write alt-text for the flyer’s main image. Here’s an example of good alt-text for a pedestrian-safety context:
+
+> *Sample alt-text:* "A parent holding a child’s hand crosses a marked crosswalk at an urban intersection. A pedestrian countdown signal shows 12 seconds remaining. Cars are stopped at the red light. The scene is set on a sunny day in a residential neighborhood with brick row houses."
 
 **Steps.**
 
-1. Make a quick draft in two tools (e.g., a flyer in Adobe Express, an interactive chart in Claude).
+1. Make a quick draft of the flyer in two tools (e.g., Adobe Express and Claude/Canva).
 
-2. Compare speed, control, output quality, and the data classification each tool allows.
+2. Compare: speed, control over layout, output quality, and the data classification each tool allows.
 
 3. Get a recommendation:
 
-   > This is [data sensitivity] content for [use]. Which tool fits best and why? List the Drexel data-rule consideration for each of Adobe Express, Canva, Figma, and Claude.
+   > This is public (Low Risk) content for community distribution. Which tool fits best for producing a bilingual pedestrian-safety flyer: Adobe Express, Canva, Figma, or Claude? List the Drexel data-rule consideration for each.
 
-**Expected result.** A reasoned tool choice with the data-rule rationale.
+4. Write alt-text for the main image in your flyer, following the sample above — describe what’s shown, not what it means.
 
-**Check your work.** Did you match the tool to Drexel’s classification — Adobe Express/Firefly (Moderate Risk approved) vs. Canva/Figma/Claude (Low Risk only)?
+**Expected result.** A reasoned tool choice with the data-rule rationale, plus alt-text for your flyer image. Since the content is public/Low Risk, all four tools are acceptable here — the choice is about capability and workflow, not data restrictions.
 
-**Common pitfalls.** The flashiest tool isn’t always approved for your data. Always disclose AI-generated visuals.
+**Check your work.** Did your alt-text describe the image content (who, what, where) rather than interpreting it ("a beautiful scene of safety")? Could a screen-reader user understand the image from your description?
 
-**Stretch (optional).** Decide which tool you’d standardize on for routine team graphics, and why.
+**Common pitfalls.** The flashiest tool isn’t always approved for your data — this case is Low Risk, but if the flyer included photos of identifiable community members, the classification would change. Always disclose AI-generated visuals.
+
+**Stretch (optional).** Decide which tool you’d standardize on for routine team graphics, and why. Consider accessibility features (alt-text support, color-contrast checking) as a factor.
 
 ```{=html}
 </details>
@@ -115,6 +123,14 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 - [Figma](https://www.figma.com) — collaborative design with AI features; Low Risk data only.
 - [Claude](https://claude.ai) — generate infographics and artifacts; Low Risk data only at Drexel.
 - [Drexel AI Tools](https://drexel.edu/provost/ai/tools) — approved tools by data classification.
+
+---
+
+## Navigate
+
+**Next in this track:** [Collaborating on Projects](collaborating-on-projects.qmd)
+
+**Related topics:** [Science Communication & Plain-Language Translation](science-communication.qmd) · [Image Generation & Annotation](image-generation-annotation.qmd)
 
 ::: {.callout-warning}
 ## Data rules

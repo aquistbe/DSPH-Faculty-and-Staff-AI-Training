@@ -3,7 +3,7 @@ title: "Local Models via Ollama"
 ---
 
 ::: {.topic-badges}
-[Advanced]{.level-badge .level-advanced} · **Technical & Agentic** track · ~1 hour, self-paced
+[Advanced]{.level-badge .level-advanced} · **Technical & Agentic** track · ~35 min hands-on + readings and quiz
 :::
 
 [← Back to the Technical & Agentic track](technical-agentic.qmd){.track-back}
@@ -110,6 +110,14 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 - [Ollama](https://ollama.com) — run open models locally.
 - [Hugging Face](https://huggingface.co) — open models and tools.
 - [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with data rules.
+
+---
+
+## Navigate
+
+**Next in this track:** [RAG & Knowledge Bases over Your Documents](rag-knowledge-bases.qmd)
+
+**Related topics:** [RAG & Knowledge Bases over Your Documents](rag-knowledge-bases.qmd) · [Data Security & Classification Deep-Dive](data-security-classification.qmd)
 
 ::: {.callout-warning}
 ## Data rules

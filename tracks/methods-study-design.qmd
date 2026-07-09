@@ -25,6 +25,16 @@ AI support for the research methods public-health staff use most — designing i
 | 3 | [De-identification & Synthetic Data](de-identification-synthetic-data.qmd) | [Moderate]{.level-badge .level-moderate} | Make data safe to share or teach with — and know the limits |
 | 4 | [Geospatial / GIS & Built Environment](geospatial-gis.qmd) | [Advanced]{.level-badge .level-advanced} | Mapping, spatial joins, and imagery for environmental health |
 
+## Not sure where to start?
+
+Answer a few questions to find your starting point in this track.
+
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions":[{"q":"You use AI to draft a survey about food insecurity. What should you check before piloting it?","options":["Whether items are clear, unbiased, and validated scales are used correctly","Whether the survey looks professional","Whether the AI used the latest research","Whether the number of questions is under 20"],"answer":0,"explain":"If you already evaluate item quality and scale validity, start at topic 2 (Program Evaluation) or topic 3 (De-identification). If survey construction is new to you, begin at topic 1 (Survey & Instrument Design)."},{"q":"A dataset contains participant names and zip codes. What must you do before sharing it for a class exercise?","options":["Remove or replace direct identifiers and assess re-identification risk from indirect identifiers","Delete only the names — zip codes are fine","Ask the AI to anonymize it for you and trust the result","Share it as-is since it's for educational purposes"],"answer":0,"explain":"If de-identification principles are familiar, skip to topic 3 (De-identification & Synthetic Data) or topic 4 (Geospatial). If you're unsure what counts as an identifier, start at topic 1 and work through the track."},{"q":"You want to map eviction rates by census tract. What's the first methodological concern?","options":["Whether the geographic boundaries in your data align with the census tracts you're mapping to","Which color scheme to use for the map","Whether to use a 2D or 3D map","Whether AI can generate the map automatically"],"answer":0,"explain":"If spatial joins and boundary alignment are familiar concepts, you're ready for topic 4 (Geospatial/GIS). If not, start at topic 1 and let the earlier topics build your methods foundation."}]}
+</script>
+</div>
+
 ::: {.callout-warning}
 ## Data rules apply throughout
 Use **public or non-sensitive** data for every activity, and match any tool to Drexel's data classification. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).

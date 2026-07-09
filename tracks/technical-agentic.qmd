@@ -28,6 +28,16 @@ Go beyond chat: package reusable instructions, run multi-step and looped tasks, 
 | 6 | [RAG & Knowledge Bases over Your Documents](rag-knowledge-bases.qmd) | [Advanced]{.level-badge .level-advanced} | Ground answers in your own document set, with citations |
 | 7 | [MCP & Connecting AI to Data & Tools](mcp-connecting-tools.qmd) | [Advanced]{.level-badge .level-advanced} | The plumbing that lets agents reach data sources and tools |
 
+## Not sure where to start?
+
+Answer a few questions to find your starting point in this track.
+
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions":[{"q":"You want AI to follow a consistent format every time you run a weekly task. What's the most reliable approach?","options":["Write a reusable system prompt or skill that specifies the format and steps","Describe the format each time you start a new conversation","Use the longest possible model context window","Copy and paste last week's output as a template"],"answer":0,"explain":"If packaging reusable instructions is familiar, skip to topic 3 (Building Agents) or topic 4 (Loops). If this is new, start with topic 1 (Creating Skills)."},{"q":"An AI agent is taking actions on your behalf across multiple steps. What's the biggest risk?","options":["An early error compounds through every later step without you noticing","The agent works too slowly","The agent uses too many API calls","The agent's output isn't formatted nicely"],"answer":0,"explain":"Understanding error propagation is key for agentic work. If this risk is intuitive to you, try topic 5 (Local Models) or topic 6 (RAG). If not, start at topic 2 (Context Engineering) to learn how to keep agents on track."},{"q":"What does RAG (Retrieval-Augmented Generation) do?","options":["Retrieves relevant passages from your documents so the AI can ground its answers","Makes the AI model larger and more accurate","Replaces the need for prompt engineering","Stores your conversation history permanently"],"answer":0,"explain":"If you know what RAG is and have tried it, start at topic 6 (RAG) or topic 7 (MCP). If this term is new, begin at topic 1 (Creating Skills) and work forward."}]}
+</script>
+</div>
+
 ::: {.callout-warning}
 ## Data rules apply throughout
 Use **public or non-sensitive** data for every activity, and match any tool to Drexel's data classification. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).

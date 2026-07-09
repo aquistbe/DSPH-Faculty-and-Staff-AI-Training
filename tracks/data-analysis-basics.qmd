@@ -3,7 +3,7 @@ title: "Data Analysis Basics"
 ---
 
 ::: {.topic-badges}
-[Novice]{.level-badge .level-novice} · **Data & Analysis** track · ~1 hour, self-paced
+[Novice]{.level-badge .level-novice} · **Data & Analysis** track · ~35 min hands-on + readings and quiz
 :::
 
 [← Back to the Data & Analysis track](data-analysis.qmd){.track-back}
@@ -120,6 +120,14 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 - [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool for this work, with data rules.
 - [Posit / RStudio](https://posit.co) — the standard environment for R analysis.
 - [tidyverse](https://www.tidyverse.org) — R packages for reading, summarizing, and plotting data.
+
+---
+
+## Navigate
+
+**Next in this track:** [Data Cleaning, Recoding & Codebooks](data-cleaning.qmd)
+
+**Related topics:** [Data Cleaning, Recoding & Codebooks](data-cleaning.qmd) · [Verifying AI Output](verifying-output.qmd)
 
 ::: {.callout-warning}
 ## Data rules

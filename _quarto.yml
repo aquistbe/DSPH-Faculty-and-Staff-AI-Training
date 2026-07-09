@@ -35,6 +35,8 @@ website:
             text: "6 · AI for Curriculum Development"
       - href: tracks.qmd
         text: "Self-Paced Tracks"
+      - href: paths.qmd
+        text: "Learning Paths"
       - href: tools.qmd
         text: "Tools & Access"
       - href: resources.qmd

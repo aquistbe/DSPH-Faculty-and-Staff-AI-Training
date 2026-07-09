@@ -3,7 +3,7 @@ title: "Verifying AI Output"
 ---
 
 ::: {.topic-badges}
-[Novice]{.level-badge .level-novice} · **Governance, Ethics & Equity** track · ~1 hour, self-paced
+[Novice]{.level-badge .level-novice} · **Governance, Ethics & Equity** track · ~35 min hands-on + readings and quiz
 :::
 
 [← Back to the Governance, Ethics & Equity track](governance-ethics.qmd){.track-back}
@@ -64,25 +64,31 @@ Right-size the effort. A throwaway brainstorm needs little checking; a number in
 
 **Goal.** Build a quick verification routine you’ll actually use.
 
-**Setup.** A claim with a statistic (from AI or a draft).
+**Setup.** One of these two citations is real and one is fabricated by AI. Your job is to determine which is which:
+
+> **Citation A:** DiMaggio C, Li G, Metzger KB, et al. "Changes in Pedestrian and Bicyclist Injury Patterns in New York City After Adoption of Vision Zero." *JAMA Network Open.* 2019;2(11):e1916703.
+>
+> **Citation B:** Hartwell JR, Chen S, Kowalski PM, et al. "Longitudinal Effects of Road Diet Interventions on Pedestrian Mortality in Mid-Sized US Cities, 2010–2021." *American Journal of Preventive Medicine.* 2023;64(3):412–419.
 
 **Steps.**
 
-1. Ask for a sourced figure:
+1. For each citation, try to verify it:
 
-   > State a public-health statistic about [topic] and give the original source.
+   - Search PubMed or Google Scholar for the title, authors, and journal.
+   - Check: Does the article exist? Do the authors, journal, volume, and page numbers match?
+   - If you find it, open the abstract and confirm the topic matches what's described.
 
-2. Trace the number to the primary source and confirm it — exact figure, year, population.
+2. Determine which is real and which is fabricated. (Answer: Citation A is real — PMID 31783684. Citation B is fabricated — the authors, the specific title, and the volume/page numbers were invented. The journal is real, but that article does not exist.)
 
-3. Ask yourself: would you have caught this if you were rushing?
+3. Reflect: What made the fabricated citation convincing? It has a real journal name, plausible authors, a reasonable topic, and correctly formatted volume/page numbers. This is exactly how AI hallucinations work — they look right because they follow the pattern of real citations.
 
-**Expected result.** A verified (or debunked) statistic.
+**Expected result.** You correctly identify Citation A as real and Citation B as fabricated, and you can articulate what made the fake one convincing.
 
-**Check your work.** Match effort to stakes — a number going into a report gets full verification.
+**Check your work.** The rule: if you can't open it and read the abstract, you can't cite it. A formatted citation that looks right is not evidence that the paper exists.
 
-**Common pitfalls.** Secondary sources drift from primaries; go to the original.
+**Common pitfalls.** Fabricated citations are the most common and most dangerous AI error in academic work. They look perfect. The only defense is checking every one.
 
-**Stretch (optional).** Write a 3-step personal “verify before it counts” checklist.
+**Stretch (optional).** Write a 3-step personal “verify before it counts” checklist for any AI-generated citation. Example: (1) Search PubMed/Scholar, (2) Open the actual paper, (3) Confirm the specific claim matches.
 
 ```{=html}
 </details>
@@ -109,6 +115,14 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 ## Useful resources
 
 - [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with data rules.
+
+---
+
+## Navigate
+
+**Next in this track:** [AI & Environmental Sustainability](environmental-sustainability.qmd)
+
+**Related topics:** [Literature Review & Evidence Synthesis](literature-review.qmd) · [Responsible AI](responsible-ai.qmd)
 
 ::: {.callout-warning}
 ## Data rules

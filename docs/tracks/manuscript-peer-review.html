@@ -133,6 +133,10 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Self-Paced Tracks</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../paths.html"> 
+<span class="menu-text">Learning Paths</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../tools.html"> 
 <span class="menu-text">Tools &amp; Access</span></a>
   </li>  
@@ -169,6 +173,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#check-your-readiness" id="toc-check-your-readiness" class="nav-link" data-scroll-target="#check-your-readiness">Check your readiness</a></li>
   <li><a href="#recommended-readings" id="toc-recommended-readings" class="nav-link" data-scroll-target="#recommended-readings">Recommended readings</a></li>
   <li><a href="#useful-resources" id="toc-useful-resources" class="nav-link" data-scroll-target="#useful-resources">Useful resources</a></li>
+  <li><a href="#navigate" id="toc-navigate" class="nav-link" data-scroll-target="#navigate">Navigate</a></li>
   </ul>
 </nav>
     </div>
@@ -195,7 +200,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="topic-badges">
-<p><span class="level-badge level-advanced">Advanced</span> · <strong>Communication &amp; Dissemination</strong> track · ~1 hour, self-paced</p>
+<p><span class="level-badge level-advanced">Advanced</span> · <strong>Communication &amp; Dissemination</strong> track · ~35 min hands-on + readings and quiz</p>
 </div>
 <p><a href="../tracks/communication.html" class="track-back">← Back to the Communication &amp; Dissemination track</a></p>
 <p><em>Use AI to prepare manuscripts and assist review — within strict confidentiality and disclosure rules.</em></p>
@@ -238,23 +243,42 @@ ul.task-list li input[type="checkbox"] {
 <details class="activity"><summary>Activity 2 · Advanced — Structure a response to reviewers</summary>
 <p><strong>Time</strong> ~15 min · <strong>Tools</strong> ChatGPT Edu</p>
 <p><strong>Goal.</strong> Organize a clear, point-by-point reviewer response — while respecting confidentiality.</p>
-<p><strong>Setup.</strong> Your own reviewer comments on your paper and your planned replies. <strong>Never paste a manuscript you are reviewing for a journal.</strong></p>
+<p><strong>Setup.</strong> Use this fictional methods excerpt and reviewer comments (or substitute your own). <strong>Never paste a manuscript you are reviewing for a journal.</strong></p>
+<p><strong>Fictional methods paragraph:</strong></p>
+<blockquote class="blockquote">
+<p>We conducted a cross-sectional analysis of pedestrian crashes in Philadelphia from 2018–2023 using PennDOT crash records linked to road-segment characteristics from OpenStreetMap. Fatal and serious injuries (KSI) were modeled using logistic regression. Covariates included lane count, posted speed limit, crosswalk presence, and lighting. Census-tract income quartile was included as a fixed effect. We excluded crashes on highways and those involving intoxicated pedestrians. Missing speed-limit data (18% of segments) were imputed using the median of adjacent segments.</p>
+</blockquote>
+<p><strong>Fictional reviewer comments:</strong></p>
+<blockquote class="blockquote">
+<p><strong>Reviewer 1:</strong></p>
+<ul>
+<li>Major: The exclusion of intoxicated pedestrians is unexplained and potentially introduces selection bias. Please justify or conduct a sensitivity analysis including these cases.</li>
+<li>Major: Imputing speed limits using the median of adjacent segments is ad hoc. How sensitive are results to this choice? Consider a sensitivity analysis with complete cases only.</li>
+<li>Minor: Table 2 header says “OR” but the footnote says “adjusted OR” — which is it?</li>
+</ul>
+<p><strong>Reviewer 2:</strong></p>
+<ul>
+<li>Major: The cross-sectional design limits causal claims, but the discussion reads as if these are causal findings (“reducing lanes prevents KSI”). Reframe.</li>
+<li>Minor: Why OpenStreetMap rather than PennDOT’s road inventory? Address data-quality concerns.</li>
+<li>Minor: Line 142 — “significant” used without a p-value or CI.</li>
+</ul>
+</blockquote>
 <p><strong>Steps.</strong></p>
 <ol type="1">
-<li><p>Organize the letter:</p>
+<li><p>Organize the response:</p>
 <blockquote class="blockquote">
-<p>Organize these reviewer comments and my planned responses into a professional, point-by-point response letter grouped by reviewer, with polite framing. [comments + your replies]</p>
+<p>Organize these reviewer comments and my planned responses into a professional, point-by-point response letter grouped by reviewer, with polite framing. For each comment, acknowledge the concern, describe the revision, and note the page/line where the change was made. Reviewer comments: [paste above]. My planned responses: Reviewer 1 Major 1 — we will add a sensitivity analysis including intoxicated pedestrians. R1 Major 2 — we will add a complete-case sensitivity analysis. R1 Minor — it’s adjusted OR; we’ll fix the header. R2 Major — we’ll reframe to associational language. R2 Minor 1 — we chose OSM for coverage; we’ll add a data-quality note. R2 Minor 2 — we’ll add the CI.</p>
 </blockquote></li>
-<li><p>Verify every “we have revised…” statement is actually done in the manuscript.</p></li>
+<li><p>Verify every “we have revised…” statement: do you actually plan to make each change? Don’t promise a revision you won’t do.</p></li>
 <li><p>Soften where needed:</p>
 <blockquote class="blockquote">
 <p>Flag any response that sounds defensive and suggest a more constructive phrasing.</p>
 </blockquote></li>
 </ol>
-<p><strong>Expected result.</strong> A clean response-to-reviewers letter.</p>
-<p><strong>Check your work.</strong> Confirm each claim of a change matches the revised manuscript.</p>
-<p><strong>Common pitfalls.</strong> Hard rule: never put a manuscript you’re peer-reviewing into an AI tool — it’s confidential and many journals prohibit it. Disclose AI use in your own writing.</p>
-<p><strong>Stretch (optional).</strong> Draft a short cover letter to the editor summarizing the major changes.</p>
+<p><strong>Expected result.</strong> A clean, professional response-to-reviewers letter organized by reviewer, with polite framing that acknowledges each concern before describing the revision.</p>
+<p><strong>Check your work.</strong> Confirm each claim of a change matches what you’ll actually revise. The most common error is promising a sensitivity analysis you don’t actually run.</p>
+<p><strong>Common pitfalls.</strong> Hard rule: never put a manuscript you’re peer-reviewing into an AI tool — it’s confidential and many journals prohibit it. Disclose AI use in your own writing per ICMJE guidance.</p>
+<p><strong>Stretch (optional).</strong> Draft a short cover letter to the editor summarizing the three major revisions.</p>
 </details>
 </section>
 <section id="check-your-readiness" class="level2">
@@ -281,6 +305,12 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="https://www.equator-network.org">EQUATOR Network</a> — reporting guidelines (STROBE, CONSORT, etc.).</li>
 <li><a href="https://drexel.edu/provost/ai/tools">ChatGPT Edu (Drexel AI Tools)</a> — the approved tool, with data rules.</li>
 </ul>
+<hr>
+</section>
+<section id="navigate" class="level2">
+<h2 class="anchored" data-anchor-id="navigate">Navigate</h2>
+<p><strong>Next in this track:</strong> <a href="../tracks/course-ai-policy.html">Writing Your Course AI Policy</a></p>
+<p><strong>Related topics:</strong> <a href="../tracks/literature-review.html">Literature Review &amp; Evidence Synthesis</a> · <a href="../tracks/verifying-output.html">Verifying AI Output</a></p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">

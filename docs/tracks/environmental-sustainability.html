@@ -133,6 +133,10 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Self-Paced Tracks</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../paths.html"> 
+<span class="menu-text">Learning Paths</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../tools.html"> 
 <span class="menu-text">Tools &amp; Access</span></a>
   </li>  
@@ -169,6 +173,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#check-your-readiness" id="toc-check-your-readiness" class="nav-link" data-scroll-target="#check-your-readiness">Check your readiness</a></li>
   <li><a href="#recommended-readings" id="toc-recommended-readings" class="nav-link" data-scroll-target="#recommended-readings">Recommended readings</a></li>
   <li><a href="#useful-resources" id="toc-useful-resources" class="nav-link" data-scroll-target="#useful-resources">Useful resources</a></li>
+  <li><a href="#navigate" id="toc-navigate" class="nav-link" data-scroll-target="#navigate">Navigate</a></li>
   </ul>
 </nav>
     </div>
@@ -195,7 +200,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="topic-badges">
-<p><span class="level-badge level-novice">Novice</span> · <strong>Governance, Ethics &amp; Equity</strong> track · ~1 hour, self-paced</p>
+<p><span class="level-badge level-novice">Novice</span> · <strong>Governance, Ethics &amp; Equity</strong> track · ~35 min hands-on + readings and quiz</p>
 </div>
 <p><a href="../tracks/governance-ethics.html" class="track-back">← Back to the Governance, Ethics &amp; Equity track</a></p>
 <p><em>AI has a physical footprint — understand it and make proportionate choices.</em></p>
@@ -217,17 +222,55 @@ ul.task-list li input[type="checkbox"] {
 <details class="activity"><summary>Activity 1 · Novice — Right-size a task</summary>
 <p><strong>Time</strong> ~12 min · <strong>Tools</strong> ChatGPT Edu (model picker)</p>
 <p><strong>Goal.</strong> Use the smallest model that does the job.</p>
-<p><strong>Setup.</strong> A simple task you’d normally send to a large model.</p>
+<p><strong>Setup.</strong> Use this abstract (approximately 200 words) for the right-sizing comparison:</p>
+<blockquote class="blockquote">
+<p><strong>Built environment and pedestrian injury severity: A multi-level analysis of 12,400 crashes in Philadelphia, 2017–2023.</strong> We examined the association between built-environment features and pedestrian crash severity using a multilevel logistic regression framework. Crash records from PennDOT were geocoded and linked to road-segment characteristics (lane count, speed limit, presence of sidewalks, crosswalk markings, and lighting) and census-tract-level variables (population density, median income, percent non-white). Severe injuries (KSI: killed or seriously injured) were modeled as the outcome. Roads with ≥4 lanes had 2.3 times the odds of KSI compared to 2-lane roads (95% CI: 1.8–2.9). Absence of marked crosswalks was associated with 1.7 times the odds of KSI (95% CI: 1.3–2.2). Tracts in the lowest income quartile had 40% higher KSI odds after adjusting for road features. A small-model approach (GPT-4o mini or equivalent) is adequate for summarizing and reformatting this kind of text; a frontier model adds little value for straightforward summarization tasks but consumes substantially more compute.</p>
+</blockquote>
 <p><strong>Steps.</strong></p>
 <ol type="1">
-<li><p>Run it on a smaller/faster model and judge whether quality held.</p></li>
-<li><p>Run it on the large model and compare.</p></li>
-<li><p>Note where the smaller model is good enough.</p></li>
+<li><p>Run this prompt on a <strong>smaller/faster model</strong> (e.g., GPT-4o mini or the non-default option in ChatGPT Edu):</p>
+<blockquote class="blockquote">
+<p>Summarize this abstract in 3 bullet points for a non-technical audience. Keep every number accurate.</p>
+</blockquote></li>
+<li><p>Run the same prompt on the <strong>largest available model</strong> (e.g., GPT-5.5).</p></li>
+<li><p>Compare using this checklist:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Criterion</th>
+<th>Small model</th>
+<th>Large model</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>All numbers accurate?</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Readable for non-expert?</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Captures the 3 key findings?</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Any added insight the small model missed?</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></li>
+<li><p>Note where the smaller model is good enough — and where, if anywhere, the larger model genuinely added value.</p></li>
 </ol>
-<p><strong>Expected result.</strong> A sense of where “smaller is fine.”</p>
-<p><strong>Check your work.</strong> Did the big model actually add value here, or just cost more energy and money?</p>
-<p><strong>Common pitfalls.</strong> Defaulting to the biggest model for everything is wasteful.</p>
-<p><strong>Stretch (optional).</strong> Estimate how often your typical tasks really need the largest model.</p>
+<p><strong>Expected result.</strong> For a straightforward summarization task like this, the small model should perform comparably. You should be able to identify that the large model was not necessary.</p>
+<p><strong>Check your work.</strong> Did the big model actually add value here, or just cost more energy and money? For summarization, the answer is usually no.</p>
+<p><strong>Common pitfalls.</strong> Defaulting to the biggest model for everything is wasteful. The energy difference is real: frontier models use roughly 5–10× the compute of smaller models per query.</p>
+<p><strong>Stretch (optional).</strong> List your five most common AI tasks and estimate which need a frontier model vs.&nbsp;a smaller one. You may find that 70–80% of your daily use doesn’t require the largest model.</p>
 </details>
 <details class="activity"><summary>Activity 2 · Novice — Connect AI’s footprint to environmental health</summary>
 <p><strong>Time</strong> ~13 min · <strong>Tools</strong> a reading + ChatGPT Edu</p>
@@ -271,6 +314,12 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><a href="https://mlco2.github.io/impact/">ML CO2 Impact</a> — estimate the carbon of compute.</li>
 </ul>
+<hr>
+</section>
+<section id="navigate" class="level2">
+<h2 class="anchored" data-anchor-id="navigate">Navigate</h2>
+<p><strong>Next in this track:</strong> <a href="../tracks/data-security-classification.html">Data Security &amp; Classification Deep-Dive</a></p>
+<p><strong>Related topics:</strong> <a href="../tracks/responsible-ai.html">Responsible AI</a> · <a href="../tracks/judgment-and-offloading.html">Keeping Your Judgment: Cognitive Offloading &amp; When to Scrutinize AI</a></p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">

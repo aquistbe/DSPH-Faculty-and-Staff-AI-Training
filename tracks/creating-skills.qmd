@@ -3,7 +3,7 @@ title: "Creating & Using Skills"
 ---
 
 ::: {.topic-badges}
-[Moderate]{.level-badge .level-moderate} · **Technical & Agentic** track · ~1 hour, self-paced
+[Moderate]{.level-badge .level-moderate} · **Technical & Agentic** track · ~35 min hands-on + readings and quiz
 :::
 
 [← Back to the Technical & Agentic track](technical-agentic.qmd){.track-back}
@@ -32,25 +32,43 @@ Most quality lives in the instructions, not the model. A good skill names the jo
 
 **Goal.** Package a repeated task as a shareable, reliable skill.
 
-**Setup.** Pick a task you repeat — e.g., *“turn messy meeting notes into our standard recap.”*
+**Setup.** Your task: turn messy meeting notes into a standard recap. Here are sample messy meeting notes to use:
+
+> epi dept mtg weds 7/2 — jen started with enrollment update, MPH apps up 12% but DrPH down, she’s worried about the DrPH pipeline. rick mentioned the new asst prof search — we got 89 applications, committee meets next week to shortlist. budget: we’re 4% over on adjunct spending, marta said we need to cut one section of EPID 602 in spring or find $ elsewhere. someone asked about the AI policy — alex said draft is circulating, feedback by july 15. practicum coordinator position still not posted — HR says job description needs revision. jen wants dept retreat date locked in (sept or oct?). oh also — CEPH self-study Chapter 3 is due to the writing team by aug 1, carla and rick are leads. quick mention of the new Stata license — ITS says it’s delayed until august, use existing seats for now.
+
+**Target recap format** (this is what the skill should produce):
+
+> **EPID Department Meeting — July 2, 2026**
+>
+> **Decisions made:**
+> - [list any actual decisions]
+>
+> **Action items:**
+> - [person]: [task] — by [date]
+>
+> **Discussion highlights:**
+> - [2–4 sentence summary of key topics]
+>
+> **Parking lot** (raised but not resolved):
+> - [items needing follow-up]
 
 **Steps.**
 
 1. Draft the skill:
 
-   > Help me write a reusable “skill” for this task. Include the job, step-by-step instructions, the exact output format, and guardrails (what it must never do). Task: [task].
+   > Help me write a reusable “skill” for this task. Include the job, step-by-step instructions, the exact output format, and guardrails (what it must never do). Task: Turn messy meeting notes into a structured recap using this format: [paste target format above]. Rules: (1) Only include action items that have a clear owner. (2) If a decision was discussed but not decided, put it in the parking lot, not in decisions. (3) Never invent attendees or topics not in the notes. (4) Keep highlights under 4 sentences.
 
-2. Save it as a custom GPT’s instructions (or a Claude skill).
+2. Save it as a custom GPT’s instructions (or a Claude skill) and test it on the messy notes above.
 
-3. Test on two different inputs; tighten wherever it drifts.
+3. Test on a **second set of notes** — use notes from your own recent meeting (non-sensitive content only). Does the skill produce the same clean format? Tighten wherever it drifts.
 
-**Expected result.** A documented skill that produces consistent output across different inputs.
+**Expected result.** A documented skill that consistently produces the four-section recap from any set of messy notes. The messy notes above should produce something like: no decisions made (several items were discussed but not resolved), action items for Alex (AI policy feedback by 7/15), Carla and Rick (CEPH Chapter 3 by 8/1), and parking lot items for the DrPH pipeline concern and the HR job description.
 
-**Check your work.** Run it on a deliberately tricky input — does it hold the format and the guardrails?
+**Check your work.** Run it on the messy notes above and check: Did it put the retreat date in “decisions” (it shouldn’t — no date was decided) or in “parking lot” (correct)? Did it invent an action item for Marta about cutting EPID 602 (it shouldn’t — that was a concern, not an assigned action)?
 
-**Common pitfalls.** Most of the quality is in the instructions, not the model. Keep sensitive data out of skill files; share inside Drexel only.
+**Common pitfalls.** Most of the quality is in the instructions, not the model. Vague instructions (“summarize the meeting”) produce vague output. Keep sensitive data out of skill files; share inside Drexel only.
 
-**Stretch (optional).** Add a one-line “use this when…” and have a colleague test it cold.
+**Stretch (optional).** Add a one-line “use this when…” trigger and have a colleague test it cold — if they can’t get the same output without help, the instructions need work.
 
 ```{=html}
 </details>
@@ -110,6 +128,14 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 
 - [Claude Skills (docs)](https://docs.claude.com) — Claude's formal Skills feature.
 - [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with data rules.
+
+---
+
+## Navigate
+
+**Next in this track:** [Context Engineering](context-engineering.qmd)
+
+**Related topics:** [Context Engineering](context-engineering.qmd) · [Building AI Agents with Natural Language](building-agents.qmd)
 
 ::: {.callout-warning}
 ## Data rules

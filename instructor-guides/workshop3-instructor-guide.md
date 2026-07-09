@@ -24,6 +24,14 @@ Participants should leave able to:
 - Open OpenAI Academy in a browser tab.
 - Prepare a sample set of messy meeting notes for participants who do not bring their own.
 
+Ready-made synthetic demo files are in `demo-materials/` (also linked from the workshop 3 page). Each ends with its workshop prompt and a "then check" list:
+
+- `Workshop3_Demo_MeetingNotes.docx` — messy study-team check-in notes (Activity 1 Part A). Planted teaching moments: only ONE real decision (the September newsletter), so you can catch the AI inventing others — the budget move and equipment choice were NOT decided; two unassigned action items (Spanish translation, October room booking); vague dates ("hopefully back soon"); and a personnel aside (student worker missing shifts) that must not reach a shared recap — use it to run the shared-space test live.
+- `Workshop3_Demo_ProjectDescription.docx` — two-paragraph fictional study description (Activity 1 Part B). Five planted risks the AI's plan should surface: DUA stuck in legal review, city installation schedule outside team control, a shared analyst, student-worker coverage during counts, and a 90-day report clock that starts regardless. Score the AI's risk list against the five.
+- `Workshop3_Demo_StyleGuide.docx` + `Workshop3_Demo_UpdateTemplate.docx` — the upload pair for Activity 2 (shared Project reference files). After uploading both, run "Using the uploaded template, draft a project update for this month" and point out that the output follows the template's Done / In Progress / Needs Attention structure and the style guide's rules (bottom line, no unexplained acronyms) without re-pasting them — the shared-context payoff, demonstrated.
+
+Live-demo script (~4 minutes, before releasing the room): open the meeting notes, run the recap prompt, and check the three planted traps aloud — invented decisions, unassigned items, the personnel note. That models both the recap habit and the shared-space test in one pass.
+
 ## 60-Minute Run of Show
 
 | Time | Segment | Instructor role |

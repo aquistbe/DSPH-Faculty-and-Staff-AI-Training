@@ -133,6 +133,10 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Self-Paced Tracks</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../paths.html"> 
+<span class="menu-text">Learning Paths</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../tools.html"> 
 <span class="menu-text">Tools &amp; Access</span></a>
   </li>  
@@ -169,6 +173,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#check-your-readiness" id="toc-check-your-readiness" class="nav-link" data-scroll-target="#check-your-readiness">Check your readiness</a></li>
   <li><a href="#recommended-readings" id="toc-recommended-readings" class="nav-link" data-scroll-target="#recommended-readings">Recommended readings</a></li>
   <li><a href="#useful-resources" id="toc-useful-resources" class="nav-link" data-scroll-target="#useful-resources">Useful resources</a></li>
+  <li><a href="#navigate" id="toc-navigate" class="nav-link" data-scroll-target="#navigate">Navigate</a></li>
   </ul>
 </nav>
     </div>
@@ -195,7 +200,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="topic-badges">
-<p><span class="level-badge level-moderate">Moderate</span> · <strong>Governance, Ethics &amp; Equity</strong> track · ~1 hour, self-paced</p>
+<p><span class="level-badge level-moderate">Moderate</span> · <strong>Governance, Ethics &amp; Equity</strong> track · ~35 min hands-on + readings and quiz</p>
 </div>
 <p><a href="../tracks/governance-ethics.html" class="track-back">← Back to the Governance, Ethics &amp; Equity track</a></p>
 <p><em>Bias in AI becomes inequity in health. Learn to test for it, not assume it away.</em></p>
@@ -217,38 +222,120 @@ ul.task-list li input[type="checkbox"] {
 <details class="activity"><summary>Activity 1 · Moderate — Audit outputs across groups</summary>
 <p><strong>Time</strong> ~18 min · <strong>Tools</strong> ChatGPT Edu or an image tool</p>
 <p><strong>Goal.</strong> Test for disparities, not just average quality.</p>
-<p><strong>Setup.</strong> An AI output that varies by input — generated example “patients,” summaries, or images. Use non-sensitive, fabricated inputs.</p>
+<p><strong>Setup.</strong> You will run two paste-ready vignette prompts that hold clinical details constant and change only the patient’s demographic group, then compare outputs for disparities.</p>
 <p><strong>Steps.</strong></p>
 <ol type="1">
-<li><p>Vary the <strong>group</strong> in the input, holding everything else constant:</p>
+<li><p>Run this prompt in ChatGPT Edu, then run it again changing only the bolded demographic details:</p>
+<p><strong>Prompt A:</strong></p>
 <blockquote class="blockquote">
-<p>Generate a short patient vignette for a [group] person with [condition]. (repeat across groups)</p>
+<p>Generate a brief clinical vignette and recommended follow-up plan for a <strong>35-year-old Black woman</strong> presenting to an urban emergency department with chronic knee pain rated 7/10, no prior imaging, BMI 31, works as a home health aide, and has Medicaid coverage. Include triage priority, recommended workup, and discharge plan.</p>
+</blockquote>
+<p><strong>Prompt B</strong> (change only the demographic):</p>
+<blockquote class="blockquote">
+<p>Generate a brief clinical vignette and recommended follow-up plan for a <strong>35-year-old white woman</strong> presenting to an urban emergency department with chronic knee pain rated 7/10, no prior imaging, BMI 31, works as a home health aide, and has Medicaid coverage. Include triage priority, recommended workup, and discharge plan.</p>
 </blockquote></li>
-<li><p>Compare outputs for stereotypes, tone, or quality gaps.</p></li>
-<li><p>Document any disparity you find.</p></li>
+<li><p>Place the two outputs side by side and compare: Are the recommended workups identical? Is the tone different? Does one vignette mention pain medication concerns, substance screening, or compliance language that the other does not? Document every difference.</p></li>
+<li><p>Now test with a third variation — change the patient to a <strong>35-year-old Latino man</strong> with the same clinical details. Note any new disparities.</p></li>
 </ol>
-<p><strong>Expected result.</strong> A small audit showing whether outputs differ by group.</p>
-<p><strong>Check your work.</strong> Are the differences justified by the input, or are they stereotypes?</p>
-<p><strong>Common pitfalls.</strong> Averages hide disparities — test across the groups you serve.</p>
-<p><strong>Stretch (optional).</strong> Connect to a real case (e.g., Obermeyer 2019, cost-as-proxy) and name the proxy risk in your own work.</p>
+<p><strong>Expected result.</strong> A comparison table showing whether the AI’s clinical recommendations, tone, or assumptions differ by race/ethnicity or gender when clinical details are identical. Common findings: differential mention of opioid risk, different imaging recommendations, or assumptions about adherence.</p>
+<p><strong>Check your work.</strong> Are the differences justified by the clinical input (they shouldn’t be — the inputs are identical except demographics), or are they stereotypes the model learned from training data?</p>
+<p><strong>Common pitfalls.</strong> Averages hide disparities — a model can be “85% accurate overall” while systematically under-treating one group. Test across the groups you serve, not just in aggregate.</p>
+<p><strong>Stretch (optional).</strong> Connect your findings to Obermeyer et al.&nbsp;(2019) — the algorithm that used healthcare cost as a proxy for health need, under-serving sicker Black patients. Name one proxy in your own work that could produce a similar disparity.</p>
 </details>
 <details class="activity"><summary>Activity 2 · Moderate — Set a “don’t use” threshold</summary>
 <p><strong>Time</strong> ~12 min · <strong>Tools</strong> ChatGPT Edu</p>
 <p><strong>Goal.</strong> Decide when a biased tool shouldn’t be used.</p>
-<p><strong>Setup.</strong> A real use case.</p>
+<p><strong>Setup.</strong> A city health department is piloting an AI-based “Pedestrian Risk Score” tool to prioritize intersections for safety improvements. The tool scores intersections 0–100 (higher = more dangerous). Here are its scores for eight intersections:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 25%">
+<col style="width: 23%">
+<col style="width: 18%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Intersection</th>
+<th>Neighborhood</th>
+<th>% Residents of Color</th>
+<th>Crash Count (3yr)</th>
+<th>AI Risk Score</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Broad &amp; Erie</td>
+<td>North Phila</td>
+<td>89%</td>
+<td>14</td>
+<td>62</td>
+</tr>
+<tr class="even">
+<td>Broad &amp; Walnut</td>
+<td>Center City</td>
+<td>38%</td>
+<td>12</td>
+<td>71</td>
+</tr>
+<tr class="odd">
+<td>Frankford &amp; Allegheny</td>
+<td>Kensington</td>
+<td>78%</td>
+<td>16</td>
+<td>58</td>
+</tr>
+<tr class="even">
+<td>Market &amp; 52nd</td>
+<td>West Phila</td>
+<td>82%</td>
+<td>13</td>
+<td>55</td>
+</tr>
+<tr class="odd">
+<td>Oregon &amp; Broad</td>
+<td>South Phila</td>
+<td>45%</td>
+<td>11</td>
+<td>70</td>
+</tr>
+<tr class="even">
+<td>Roosevelt &amp; Adams</td>
+<td>NE Phila</td>
+<td>32%</td>
+<td>10</td>
+<td>68</td>
+</tr>
+<tr class="odd">
+<td>Girard &amp; Front</td>
+<td>Fishtown</td>
+<td>35%</td>
+<td>9</td>
+<td>72</td>
+</tr>
+<tr class="even">
+<td>Lancaster &amp; 40th</td>
+<td>West Phila</td>
+<td>91%</td>
+<td>15</td>
+<td>54</td>
+</tr>
+</tbody>
+</table>
+<p>Notice the pattern: intersections in neighborhoods with higher percentages of residents of color have <strong>more crashes</strong> but <strong>lower AI risk scores</strong> — an average 8-point gap.</p>
 <p><strong>Steps.</strong></p>
 <ol type="1">
-<li><p>Write what level of disparity would make you <strong>not</strong> use the tool.</p></li>
+<li><p>Examine the table and document the disparity. Write what level of score gap would make you recommend <strong>not</strong> using this tool to prioritize infrastructure spending.</p></li>
 <li><p>Identify who decides:</p>
 <blockquote class="blockquote">
-<p>Here’s my use case and threshold. Who should be at the table for this decision, and what evidence would I need? [case]</p>
+<p>Here’s a scenario: an AI intersection-scoring tool produces systematically lower risk scores for high-crash intersections in communities of color (average 8-point gap). The tool would determine which intersections get safety improvements first. What’s the threshold for “too biased to use”? Who should be at the table for this decision, and what evidence would I need to present?</p>
 </blockquote></li>
-<li><p>Note the stakeholders and the evidence required.</p></li>
+<li><p>Note the stakeholders (community representatives, traffic engineers, equity officers, elected officials) and the evidence required (validation data, community crash burden, historical infrastructure spending patterns).</p></li>
 </ol>
-<p><strong>Expected result.</strong> A decision rule plus the people who should make it.</p>
-<p><strong>Check your work.</strong> Would you defend the threshold to the affected community?</p>
-<p><strong>Common pitfalls.</strong> “It’s mostly accurate” can still be inequitable. Equity is a go/no-go, not a footnote.</p>
-<p><strong>Stretch (optional).</strong> Draft a short bias-audit checklist your team can reuse.</p>
+<p><strong>Expected result.</strong> A decision rule (e.g., “If the score systematically under-prioritizes communities of color by more than X points relative to crash burden, we don’t use it”) plus the people who should make that decision.</p>
+<p><strong>Check your work.</strong> Would you defend the threshold to residents of the under-scored neighborhoods? If the tool were deployed as-is, Lancaster &amp; 40th (15 crashes, score 54) would be deprioritized compared to Girard &amp; Front (9 crashes, score 72).</p>
+<p><strong>Common pitfalls.</strong> “It’s mostly accurate on average” can still be systematically inequitable. The tool may be using proxy variables (property values, road classification, infrastructure age) that correlate with neighborhood demographics. Equity is a go/no-go, not a footnote.</p>
+<p><strong>Stretch (optional).</strong> Draft a 5-item bias-audit checklist your team can apply to any scoring tool before deploying it for resource allocation.</p>
 </details>
 </section>
 <section id="check-your-readiness" class="level2">
@@ -274,6 +361,12 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="https://www.who.int/publications/i/item/9789240029200">WHO: Ethics &amp; Governance of AI for Health</a> — equity in health AI.</li>
 <li><a href="https://drexel.edu/provost/ai/tools">ChatGPT Edu (Drexel AI Tools)</a> — the approved tool, with data rules.</li>
 </ul>
+<hr>
+</section>
+<section id="navigate" class="level2">
+<h2 class="anchored" data-anchor-id="navigate">Navigate</h2>
+<p><strong>Next in this track:</strong> <a href="../tracks/judgment-and-offloading.html">Keeping Your Judgment: Cognitive Offloading &amp; When to Scrutinize AI</a></p>
+<p><strong>Related topics:</strong> <a href="../tracks/responsible-ai.html">Responsible AI</a> · <a href="../tracks/qualitative-analysis.html">Qualitative Data Analysis</a></p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">

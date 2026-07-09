@@ -3,7 +3,7 @@ title: "Data Analysis Advanced"
 ---
 
 ::: {.topic-badges}
-[Advanced]{.level-badge .level-advanced} · **Data & Analysis** track · ~1 hour, self-paced
+[Advanced]{.level-badge .level-advanced} · **Data & Analysis** track · ~35 min hands-on + readings and quiz
 :::
 
 [← Back to the Data & Analysis track](data-analysis.qmd){.track-back}
@@ -119,6 +119,14 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 - [tidymodels](https://www.tidymodels.org) — modeling and validation framework in R.
 - [scikit-learn](https://scikit-learn.org) — machine learning in Python.
 - [Quarto](https://quarto.org) — reproducible analysis documents.
+
+---
+
+## Navigate
+
+**Back to track overview:** [Data & Analysis](data-analysis.qmd)
+
+**Related topics:** [Statistical Interpretation across Stata, R & Python](statistical-interpretation.qmd) · [AI-Assisted Web & Dashboards](web-and-dashboards.qmd)
 
 ::: {.callout-warning}
 ## Data rules

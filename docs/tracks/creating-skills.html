@@ -133,6 +133,10 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Self-Paced Tracks</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../paths.html"> 
+<span class="menu-text">Learning Paths</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../tools.html"> 
 <span class="menu-text">Tools &amp; Access</span></a>
   </li>  
@@ -169,6 +173,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#check-your-readiness" id="toc-check-your-readiness" class="nav-link" data-scroll-target="#check-your-readiness">Check your readiness</a></li>
   <li><a href="#recommended-readings" id="toc-recommended-readings" class="nav-link" data-scroll-target="#recommended-readings">Recommended readings</a></li>
   <li><a href="#useful-resources" id="toc-useful-resources" class="nav-link" data-scroll-target="#useful-resources">Useful resources</a></li>
+  <li><a href="#navigate" id="toc-navigate" class="nav-link" data-scroll-target="#navigate">Navigate</a></li>
   </ul>
 </nav>
     </div>
@@ -195,7 +200,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="topic-badges">
-<p><span class="level-badge level-moderate">Moderate</span> · <strong>Technical &amp; Agentic</strong> track · ~1 hour, self-paced</p>
+<p><span class="level-badge level-moderate">Moderate</span> · <strong>Technical &amp; Agentic</strong> track · ~35 min hands-on + readings and quiz</p>
 </div>
 <p><a href="../tracks/technical-agentic.html" class="track-back">← Back to the Technical &amp; Agentic track</a></p>
 <p><em>Turn a prompt that works into a reusable, shareable skill your team can run again and again.</em></p>
@@ -217,20 +222,31 @@ ul.task-list li input[type="checkbox"] {
 <details class="activity"><summary>Activity 1 · Moderate — Write a reusable skill</summary>
 <p><strong>Time</strong> ~18 min · <strong>Tools</strong> ChatGPT Edu (custom GPT) or Claude</p>
 <p><strong>Goal.</strong> Package a repeated task as a shareable, reliable skill.</p>
-<p><strong>Setup.</strong> Pick a task you repeat — e.g., <em>“turn messy meeting notes into our standard recap.”</em></p>
+<p><strong>Setup.</strong> Your task: turn messy meeting notes into a standard recap. Here are sample messy meeting notes to use:</p>
+<blockquote class="blockquote">
+<p>epi dept mtg weds 7/2 — jen started with enrollment update, MPH apps up 12% but DrPH down, she’s worried about the DrPH pipeline. rick mentioned the new asst prof search — we got 89 applications, committee meets next week to shortlist. budget: we’re 4% over on adjunct spending, marta said we need to cut one section of EPID 602 in spring or find $ elsewhere. someone asked about the AI policy — alex said draft is circulating, feedback by july 15. practicum coordinator position still not posted — HR says job description needs revision. jen wants dept retreat date locked in (sept or oct?). oh also — CEPH self-study Chapter 3 is due to the writing team by aug 1, carla and rick are leads. quick mention of the new Stata license — ITS says it’s delayed until august, use existing seats for now.</p>
+</blockquote>
+<p><strong>Target recap format</strong> (this is what the skill should produce):</p>
+<blockquote class="blockquote">
+<p><strong>EPID Department Meeting — July 2, 2026</strong></p>
+<p><strong>Decisions made:</strong> - [list any actual decisions]</p>
+<p><strong>Action items:</strong> - [person]: [task] — by [date]</p>
+<p><strong>Discussion highlights:</strong> - [2–4 sentence summary of key topics]</p>
+<p><strong>Parking lot</strong> (raised but not resolved): - [items needing follow-up]</p>
+</blockquote>
 <p><strong>Steps.</strong></p>
 <ol type="1">
 <li><p>Draft the skill:</p>
 <blockquote class="blockquote">
-<p>Help me write a reusable “skill” for this task. Include the job, step-by-step instructions, the exact output format, and guardrails (what it must never do). Task: [task].</p>
+<p>Help me write a reusable “skill” for this task. Include the job, step-by-step instructions, the exact output format, and guardrails (what it must never do). Task: Turn messy meeting notes into a structured recap using this format: [paste target format above]. Rules: (1) Only include action items that have a clear owner. (2) If a decision was discussed but not decided, put it in the parking lot, not in decisions. (3) Never invent attendees or topics not in the notes. (4) Keep highlights under 4 sentences.</p>
 </blockquote></li>
-<li><p>Save it as a custom GPT’s instructions (or a Claude skill).</p></li>
-<li><p>Test on two different inputs; tighten wherever it drifts.</p></li>
+<li><p>Save it as a custom GPT’s instructions (or a Claude skill) and test it on the messy notes above.</p></li>
+<li><p>Test on a <strong>second set of notes</strong> — use notes from your own recent meeting (non-sensitive content only). Does the skill produce the same clean format? Tighten wherever it drifts.</p></li>
 </ol>
-<p><strong>Expected result.</strong> A documented skill that produces consistent output across different inputs.</p>
-<p><strong>Check your work.</strong> Run it on a deliberately tricky input — does it hold the format and the guardrails?</p>
-<p><strong>Common pitfalls.</strong> Most of the quality is in the instructions, not the model. Keep sensitive data out of skill files; share inside Drexel only.</p>
-<p><strong>Stretch (optional).</strong> Add a one-line “use this when…” and have a colleague test it cold.</p>
+<p><strong>Expected result.</strong> A documented skill that consistently produces the four-section recap from any set of messy notes. The messy notes above should produce something like: no decisions made (several items were discussed but not resolved), action items for Alex (AI policy feedback by 7/15), Carla and Rick (CEPH Chapter 3 by 8/1), and parking lot items for the DrPH pipeline concern and the HR job description.</p>
+<p><strong>Check your work.</strong> Run it on the messy notes above and check: Did it put the retreat date in “decisions” (it shouldn’t — no date was decided) or in “parking lot” (correct)? Did it invent an action item for Marta about cutting EPID 602 (it shouldn’t — that was a concern, not an assigned action)?</p>
+<p><strong>Common pitfalls.</strong> Most of the quality is in the instructions, not the model. Vague instructions (“summarize the meeting”) produce vague output. Keep sensitive data out of skill files; share inside Drexel only.</p>
+<p><strong>Stretch (optional).</strong> Add a one-line “use this when…” trigger and have a colleague test it cold — if they can’t get the same output without help, the instructions need work.</p>
 </details>
 <details class="activity"><summary>Activity 2 · Moderate — Start a small skill library</summary>
 <p><strong>Time</strong> ~12 min · <strong>Tools</strong> a shared doc (Teams/SharePoint)</p>
@@ -274,6 +290,12 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="https://docs.claude.com">Claude Skills (docs)</a> — Claude’s formal Skills feature.</li>
 <li><a href="https://drexel.edu/provost/ai/tools">ChatGPT Edu (Drexel AI Tools)</a> — the approved tool, with data rules.</li>
 </ul>
+<hr>
+</section>
+<section id="navigate" class="level2">
+<h2 class="anchored" data-anchor-id="navigate">Navigate</h2>
+<p><strong>Next in this track:</strong> <a href="../tracks/context-engineering.html">Context Engineering</a></p>
+<p><strong>Related topics:</strong> <a href="../tracks/context-engineering.html">Context Engineering</a> · <a href="../tracks/building-agents.html">Building AI Agents with Natural Language</a></p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">

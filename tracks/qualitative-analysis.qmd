@@ -3,7 +3,7 @@ title: "Qualitative Data Analysis"
 ---
 
 ::: {.topic-badges}
-[Moderate]{.level-badge .level-moderate} · **Data & Analysis** track · ~1 hour, self-paced
+[Moderate]{.level-badge .level-moderate} · **Data & Analysis** track · ~35 min hands-on + readings and quiz
 :::
 
 [← Back to the Data & Analysis track](data-analysis.qmd){.track-back}
@@ -68,7 +68,9 @@ Transcripts are often sensitive. De-identify them and use an approved tool — c
 
 **Goal.** Apply the codebook and check reliability against your own coding.
 
-**Setup.** A second small batch of ~8 responses (real and de-identified, or another sample set).
+**Setup.** Use this second batch of 8 walkability comments (different from Activity 1):
+
+> "The new bike lane is great but now there's nowhere to load groceries." · "My wheelchair can't get over the curb at 5th and Spring Garden." · "Drivers run the red at Broad and Lehigh every single day." · "We need more benches — older people can't walk far without resting." · "The crossing signal doesn't last long enough to get across safely." · "I'd walk to work but there's no sidewalk on the last two blocks." · "The school zone signs are hidden behind a tree branch." · "I feel safer since they added the speed bumps on my block."
 
 **Steps.**
 
@@ -117,6 +119,14 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 - [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with data rules.
 - [Dedoose](https://www.dedoose.com) — qualitative analysis platform (check data rules before use).
 - [NVivo](https://lumivero.com/products/nvivo/) — qualitative analysis software.
+
+---
+
+## Navigate
+
+**Next in this track:** [Image Generation & Annotation](image-generation-annotation.qmd)
+
+**Related topics:** [AI Bias & Health Equity Audit](bias-equity-audit.qmd) · [Science Communication & Plain-Language Translation](science-communication.qmd)
 
 ::: {.callout-warning}
 ## Data rules

@@ -3,7 +3,7 @@ title: "Coding with AI"
 ---
 
 ::: {.topic-badges}
-[Moderate]{.level-badge .level-moderate} · **Data & Analysis** track · ~1 hour, self-paced
+[Moderate]{.level-badge .level-moderate} · **Data & Analysis** track · ~35 min hands-on + readings and quiz
 :::
 
 [← Back to the Data & Analysis track](data-analysis.qmd){.track-back}
@@ -32,7 +32,9 @@ Use approved tools, and never paste sensitive data, credentials, or API keys int
 
 **Goal.** Use AI to debug code you actually understand before trusting it.
 
-**Setup.** Download the [Crash Data 2020–2024 (CSV)](https://hub.arcgis.com/api/v3/datasets/21154a8f1894449f839d2288726e9837_0/downloads/data?format=csv&spatialRefId=3857&where=1%3D1). Below is a short R script with a deliberate bug — it should count pedestrian-involved crashes but returns 0 (wrong column name, and NAs not handled):
+**Setup.** Download the [Crash Data 2020–2024 (CSV)](https://hub.arcgis.com/api/v3/datasets/21154a8f1894449f839d2288726e9837_0/downloads/data?format=csv&spatialRefId=3857&where=1%3D1). Below are buggy scripts in R and Stata — pick your language. Each should count pedestrian-involved crashes but returns 0 (wrong column name, NAs not handled):
+
+**R version:**
 
 ```r
 library(tidyverse)
@@ -41,11 +43,18 @@ ped <- crashes %>% filter(PEDESTRIAN > 0)   # column may be named differently; N
 nrow(ped)
 ```
 
+**Stata version:**
+
+```stata
+import delimited "crashes.csv", clear
+count if pedestrian > 0   // variable name may differ; missings treated as large numbers
+```
+
 **Steps.**
 
 1. Paste the script, the column names, and the wrong result into ChatGPT Edu:
 
-   > This R script should count Philadelphia crashes involving a pedestrian, but it returns 0. Here are the script and the actual column names. Explain what's wrong and show the **minimal** change — don't rewrite the whole thing.
+   > This [R/Stata] script should count Philadelphia crashes involving a pedestrian, but it returns 0 (or the wrong number). Here are the script and the actual column names. Explain what's wrong and show the **minimal** change — don't rewrite the whole thing.
 
 2. Apply the fix (likely the correct field name + NA handling) and run it.
 
@@ -120,6 +129,14 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 - [GitHub Copilot](https://github.com/features/copilot) — in-editor code assistance.
 - [Posit / RStudio](https://posit.co) — R/Python environment with AI integrations.
 - [Visual Studio Code](https://code.visualstudio.com) — editor with AI coding extensions.
+
+---
+
+## Navigate
+
+**Next in this track:** [Statistical Interpretation across Stata, R & Python](statistical-interpretation.qmd)
+
+**Related topics:** [Statistical Interpretation across Stata, R & Python](statistical-interpretation.qmd) · [Data Cleaning, Recoding & Codebooks](data-cleaning.qmd)
 
 ::: {.callout-warning}
 ## Data rules

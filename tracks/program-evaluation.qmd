@@ -3,7 +3,7 @@ title: "Program Evaluation"
 ---
 
 ::: {.topic-badges}
-[Moderate]{.level-badge .level-moderate} · **Methods & Study Design** track · ~1 hour, self-paced
+[Moderate]{.level-badge .level-moderate} · **Methods & Study Design** track · ~35 min hands-on + readings and quiz
 :::
 
 [← Back to the Methods & Study Design track](methods-study-design.qmd){.track-back}
@@ -32,7 +32,9 @@ Evaluation frameworks (e.g., CDC's) give structure; AI fills in drafts you refin
 
 **Goal.** Turn a program into a logic model with measurable indicators.
 
-**Setup.** Describe a real program (e.g., a Philadelphia Vision Zero intervention, or a clinic outreach effort): inputs, activities, intended outcomes.
+**Setup.** Use this program description (or substitute your own):
+
+> **Roosevelt Boulevard Safety Corridor Initiative.** Philadelphia's Vision Zero program is piloting a 2-year pedestrian safety intervention along a 1.5-mile segment of Roosevelt Boulevard (US-1) between Adams Avenue and Cottman Avenue. The intervention includes automated speed cameras at 4 intersections, installation of 6 new pedestrian refuge islands, retiming of 8 pedestrian countdown signals to allow longer crossing times, a community outreach campaign in English, Spanish, and Vietnamese targeting residents within ¼ mile, and monthly police enforcement operations focused on failure-to-yield violations. The goal is a 30% reduction in pedestrian KSI (killed or seriously injured) crashes on the corridor within 2 years. The program is funded by a $2.1M federal Safe Streets grant with a $400K city match.
 
 **Steps.**
 
@@ -66,7 +68,7 @@ Evaluation frameworks (e.g., CDC's) give structure; AI fills in drafts you refin
 
 **Goal.** Structure a plan against a recognized standard.
 
-**Setup.** Your logic model and the CDC program-evaluation framework steps.
+**Setup.** Your logic model from Activity 1 (the Roosevelt Boulevard Safety Corridor Initiative) and the [CDC Framework for Program Evaluation](https://www.cdc.gov/evaluation/framework/index.html) steps (engage stakeholders, describe the program, focus the evaluation design, gather credible evidence, justify conclusions, ensure use and share lessons).
 
 **Steps.**
 
@@ -114,6 +116,14 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 
 - [CDC Program Evaluation Framework](https://www.cdc.gov/evaluation/) — the standard PH evaluation framework.
 - [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with data rules.
+
+---
+
+## Navigate
+
+**Next in this track:** [De-identification & Synthetic Data](de-identification-synthetic-data.qmd)
+
+**Related topics:** [Survey & Instrument Design](survey-instrument-design.qmd) · [Science Communication & Plain-Language Translation](science-communication.qmd)
 
 ::: {.callout-warning}
 ## Data rules

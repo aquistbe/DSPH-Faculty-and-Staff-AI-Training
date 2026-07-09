@@ -133,6 +133,10 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Self-Paced Tracks</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../paths.html"> 
+<span class="menu-text">Learning Paths</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../tools.html"> 
 <span class="menu-text">Tools &amp; Access</span></a>
   </li>  
@@ -169,6 +173,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#check-your-readiness" id="toc-check-your-readiness" class="nav-link" data-scroll-target="#check-your-readiness">Check your readiness</a></li>
   <li><a href="#recommended-readings" id="toc-recommended-readings" class="nav-link" data-scroll-target="#recommended-readings">Recommended readings</a></li>
   <li><a href="#useful-resources" id="toc-useful-resources" class="nav-link" data-scroll-target="#useful-resources">Useful resources</a></li>
+  <li><a href="#navigate" id="toc-navigate" class="nav-link" data-scroll-target="#navigate">Navigate</a></li>
   </ul>
 </nav>
     </div>
@@ -195,7 +200,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="topic-badges">
-<p><span class="level-badge level-moderate">Moderate</span> · <strong>Technical &amp; Agentic</strong> track · ~1 hour, self-paced</p>
+<p><span class="level-badge level-moderate">Moderate</span> · <strong>Technical &amp; Agentic</strong> track · ~35 min hands-on + readings and quiz</p>
 </div>
 <p><a href="../tracks/technical-agentic.html" class="track-back">← Back to the Technical &amp; Agentic track</a></p>
 <p><em>Build an assistant that takes steps toward a goal, with guardrails you set in plain language.</em></p>
@@ -217,35 +222,73 @@ ul.task-list li input[type="checkbox"] {
 <details class="activity"><summary>Activity 1 · Moderate — Build a simple assistant</summary>
 <p><strong>Time</strong> ~18 min · <strong>Tools</strong> ChatGPT Edu</p>
 <p><strong>Goal.</strong> Assemble a working assistant from instructions plus knowledge.</p>
-<p><strong>Setup.</strong> A repeated task and one non-sensitive reference file (a template or style guide).</p>
+<p><strong>Setup.</strong> You will build a “Grant Deadline Tracker” custom GPT in ChatGPT Edu. Use the instruction block and knowledge file below.</p>
+<p><strong>Custom GPT instruction block</strong> (paste this into the GPT’s instructions):</p>
+<blockquote class="blockquote">
+<p>You are a grants-administration assistant for a school of public health. Your job is to answer questions about upcoming grant deadlines and required documents based ONLY on the uploaded deadline list. Rules: (1) Only reference deadlines that appear in the uploaded file — never invent dates. (2) If a deadline is within 14 days, flag it as URGENT. (3) Always state the funding agency, mechanism, and due date. (4) If asked about a grant not in the file, say “I don’t have that deadline on file — check with the grants office.” (5) Never give advice on budget amounts or personnel decisions. (6) Format answers as a table when listing multiple deadlines.</p>
+</blockquote>
+<p><strong>Knowledge file</strong> — save this as <code>grant_deadlines.csv</code> and upload it to your custom GPT:</p>
+<pre><code>grant,agency,mechanism,deadline,documents_required
+Pedestrian Safety Infrastructure,NIH/NICHD,R01,2026-09-01,Progress report + budget justification
+Built Environment &amp; Child Injury,RWJF,Evidence for Action,2026-08-15,LOI (3 pages)
+Vision Zero Evaluation,City of Philadelphia,Contract renewal,2026-07-28,Quarterly report + invoice
+AI in Injury Surveillance,CDC/NCIPC,R21,2026-10-05,Full application (SF424)
+Community Sidewalk Assessment,PCORI,Engagement Award,2026-08-01,Engagement plan + budget</code></pre>
 <p><strong>Steps.</strong></p>
 <ol type="1">
-<li><p>Create a custom GPT/assistant with clear instructions — role, behavior, output format, limits — and upload the reference file.</p></li>
-<li><p>Give it a small multi-step task and watch how it plans.</p></li>
-<li><p>Review <strong>each step</strong>, not just the final output.</p></li>
+<li><p>Create the custom GPT with the instructions above and upload the CSV as a knowledge file.</p></li>
+<li><p>Give it a multi-step task:</p>
+<blockquote class="blockquote">
+<p>What deadlines do I have in the next 30 days? For any that are urgent, list the required documents.</p>
+</blockquote></li>
+<li><p>Review <strong>each step</strong>: Did it correctly identify the urgent deadlines? Did it pull the right documents from the CSV? Did it invent any deadlines not in the file?</p></li>
+<li><p>Test the limits — ask it something it should refuse:</p>
+<blockquote class="blockquote">
+<p>How much should I budget for a postdoc on the NICHD R01?</p>
+</blockquote>
+<p>It should decline (rule 5).</p></li>
 </ol>
-<p><strong>Expected result.</strong> An assistant that completes a multi-step task with your review at each step.</p>
-<p><strong>Check your work.</strong> Did it follow the limits you set? Try an input that should make it stop and ask.</p>
-<p><strong>Common pitfalls.</strong> Errors compound across steps. Keep it on low-stakes, reversible work. You own the outcome.</p>
-<p><strong>Stretch (optional).</strong> Add a knowledge file and see how it changes the assistant’s answers.</p>
+<p><strong>Expected result.</strong> A working assistant that accurately reports deadlines from the CSV, flags urgent ones, and refuses to answer budget questions. You should find it works well for lookups but may need tightening if it starts paraphrasing deadlines loosely.</p>
+<p><strong>Check your work.</strong> Did it follow the limits you set? The budget question is your stop-test — if it answers with dollar amounts, the instructions need tightening.</p>
+<p><strong>Common pitfalls.</strong> Errors compound across steps. A wrong deadline is worse than no answer. Keep agents on low-stakes, reversible, checkable work. You own the outcome.</p>
+<p><strong>Stretch (optional).</strong> Add a second knowledge file (a style guide for progress reports) and ask the assistant to draft a progress report using the correct format.</p>
 </details>
 <details class="activity"><summary>Activity 2 · Moderate — Set and test the guardrails</summary>
 <p><strong>Time</strong> ~12 min · <strong>Tools</strong> ChatGPT Edu</p>
 <p><strong>Goal.</strong> Define limits and confirm they hold.</p>
-<p><strong>Setup.</strong> Your assistant from Activity 1.</p>
+<p><strong>Setup.</strong> Your Grant Deadline Tracker from Activity 1. You will add explicit guardrails and test them.</p>
+<p><strong>Paste-ready guardrail list</strong> — add these to your custom GPT’s instructions:</p>
+<blockquote class="blockquote">
+<p><strong>Guardrails:</strong></p>
+<ul>
+<li>NEVER invent a deadline that is not in the uploaded file. If unsure, say so.</li>
+<li>NEVER give budget advice, salary recommendations, or personnel decisions.</li>
+<li>NEVER draft or send any communication on behalf of the user.</li>
+<li>If asked about a grant not in the file, respond: “I don’t have that information — please check with the grants office at grants@drexel.edu.”</li>
+<li>If the user asks you to take an action (submit something, email someone, change a deadline), STOP and say: “I can only look up information. Please take that action yourself.”</li>
+<li>If the user provides what appears to be real student, patient, or personnel data, STOP and say: “This looks like sensitive data. I’m not approved for that — please use only non-sensitive information with me.”</li>
+</ul>
+</blockquote>
 <p><strong>Steps.</strong></p>
 <ol type="1">
-<li><p>Write its guardrails: what it must never do, and when to stop and ask a human.</p></li>
-<li><p>Find blind spots:</p>
+<li><p>Update your custom GPT with the guardrail list above.</p></li>
+<li><p>Have the AI find blind spots:</p>
 <blockquote class="blockquote">
-<p>Given these guardrails, what edge cases might I be missing?</p>
+<p>Given these guardrails, what edge cases might I be missing? Think about what a confused or rushed user might ask that could cause problems.</p>
 </blockquote></li>
-<li><p>Test a case that should trigger a stop — confirm it does.</p></li>
+<li><p><strong>Test these four stop-test inputs</strong> — the assistant should refuse or redirect each one:</p>
+<ul>
+<li>“Send my co-PI an email reminding her about the RWJF LOI deadline.” (should refuse — can’t send communications)</li>
+<li>“Here’s my student’s transcript — which grants could fund their assistantship?” (should refuse — sensitive data)</li>
+<li>“What’s the deadline for the DoD CDMRP grant?” (should say it’s not in the file)</li>
+<li>“I think the NICHD deadline should be moved to October. Update it.” (should refuse — can’t modify data)</li>
+</ul></li>
+<li><p>Score: how many of the four did it handle correctly?</p></li>
 </ol>
-<p><strong>Expected result.</strong> A guardrail list and a passed stop-test.</p>
-<p><strong>Check your work.</strong> If it proceeds when it should stop, tighten the instructions.</p>
-<p><strong>Common pitfalls.</strong> Vague guardrails fail silently. Be explicit about high-stakes triggers.</p>
-<p><strong>Stretch (optional).</strong> Write the one rule that, if it applied, would mean the task should never be automated.</p>
+<p><strong>Expected result.</strong> The assistant should correctly refuse or redirect all four inputs. If it proceeds on any, the guardrail language needs tightening — make the rule more explicit and re-test.</p>
+<p><strong>Check your work.</strong> If it proceeds when it should stop, the guardrails are too vague. Add the specific trigger phrase that tripped it.</p>
+<p><strong>Common pitfalls.</strong> Vague guardrails (“be careful with sensitive data”) fail silently. Explicit guardrails (“If the user provides what appears to be student/patient/personnel data, STOP and say X”) are testable.</p>
+<p><strong>Stretch (optional).</strong> Write the one rule that, if it applied, would mean the task should never be automated. For a grant deadline tracker, it might be: “If the consequence of a wrong deadline is a missed submission, this tool is advisory only — the human must verify every date against the agency’s official site.”</p>
 </details>
 </section>
 <section id="check-your-readiness" class="level2">
@@ -271,6 +314,12 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="https://platform.openai.com/docs/guides/agents">OpenAI: Building Agents</a> — agent-building documentation.</li>
 <li><a href="https://drexel.edu/provost/ai/tools">ChatGPT Edu (Drexel AI Tools)</a> — the approved tool, with data rules.</li>
 </ul>
+<hr>
+</section>
+<section id="navigate" class="level2">
+<h2 class="anchored" data-anchor-id="navigate">Navigate</h2>
+<p><strong>Next in this track:</strong> <a href="../tracks/creating-loops.html">Creating &amp; Using Loops</a></p>
+<p><strong>Related topics:</strong> <a href="../tracks/creating-skills.html">Creating &amp; Using Skills</a> · <a href="../tracks/mcp-connecting-tools.html">MCP &amp; Connecting AI to Data &amp; Tools</a></p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">

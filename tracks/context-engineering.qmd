@@ -3,7 +3,7 @@ title: "Context Engineering"
 ---
 
 ::: {.topic-badges}
-[Moderate]{.level-badge .level-moderate} · **Technical & Agentic** track · ~1 hour, self-paced
+[Moderate]{.level-badge .level-moderate} · **Technical & Agentic** track · ~35 min hands-on + readings and quiz
 :::
 
 [← Back to the Technical & Agentic track](technical-agentic.qmd){.track-back}
@@ -32,25 +32,39 @@ More context is not always better. Too much dilutes attention; the skill is pick
 
 **Goal.** Improve output by improving context, not by writing a longer prompt.
 
-**Setup.** A task where AI keeps missing what you want (e.g., it won’t match your report’s tone).
+**Setup.** You will experience the problem firsthand, then fix it with one example.
+
+**The scenario:** You need to write monthly progress updates for an NIH R01 grant. They should be brief, factual, and structured — but when you prompt generically, the AI produces something bloated and off-tone.
 
 **Steps.**
 
-1. Add a short system instruction and one reference example:
+1. **Run the weak prompt** and watch it drift:
 
-   > You are [role]. Always [2–3 standing rules]. Here is an example of the output I want: [example]. Now do [task].
+   > Write a monthly progress update for my NIH-funded study on pedestrian safety in Philadelphia.
 
-2. Re-run and compare to your earlier attempts.
+   You’ll likely get something long, vague, and overly enthusiastic ("We are thrilled to report exciting progress...") with no specific data and a structure that doesn’t match how you actually report.
 
-3. Notice that the example and rules — not extra length — fixed it.
+2. **Now add a role, standing rules, and one concrete example:**
 
-**Expected result.** Noticeably better, on-spec output.
+   > You are a research coordinator writing terse monthly updates for a PI. Rules: (1) No adjectives like "exciting" or "significant" — just state what happened. (2) Use past tense. (3) Under 120 words. (4) Three sections only: Completed, In Progress, Next Month.
+   >
+   > **Example of the output I want:**
+   >
+   > *Completed:* Geocoded 2,400 crash records from PennDOT 2022 file; linked to road-segment data. Submitted IRB continuing review (approved 6/28).\
+   > *In Progress:* Missing speed-limit imputation — 31% of segments lack PennDOT values. Testing two approaches (nearest-neighbor vs. OSM).\
+   > *Next Month:* Finalize speed-limit variable. Begin multilevel models for KSI outcome. Draft abstract for APHA.
+   >
+   > Now write July’s update. This month we finished the speed-limit imputation using nearest-neighbor, started the multilevel models, and learned that the 2023 PennDOT file has a new format that breaks our ingestion script.
 
-**Check your work.** Remove the example and re-run — quality should drop, confirming the example carried the weight.
+3. Compare the two outputs. The second should closely match your example’s tone, structure, and length. Notice that **the single example** — not extra paragraphs of instruction — carried the weight.
 
-**Common pitfalls.** More text isn’t better context; one sharp example beats paragraphs of description.
+**Expected result.** The first output drifts (too long, wrong tone, vague). The second matches your example’s format and style. This is the core lesson: one sharp example beats paragraphs of description.
 
-**Stretch (optional).** Turn the working context into a reusable skill.
+**Check your work.** Remove the example and re-run with only the rules — quality should drop, confirming the example was doing the work.
+
+**Common pitfalls.** More text isn’t better context; instructions alone often aren’t enough. The example is the anchor.
+
+**Stretch (optional).** Turn the working context (role + rules + example) into a reusable custom GPT or Claude skill for monthly updates.
 
 ```{=html}
 </details>
@@ -111,6 +125,14 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 
 - [Anthropic Prompt Library](https://docs.anthropic.com/en/resources/prompt-library/library) — worked prompt/context examples.
 - [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with data rules.
+
+---
+
+## Navigate
+
+**Next in this track:** [Building AI Agents with Natural Language](building-agents.qmd)
+
+**Related topics:** [Creating & Using Skills](creating-skills.qmd) · [Building AI Agents with Natural Language](building-agents.qmd)
 
 ::: {.callout-warning}
 ## Data rules

@@ -3,7 +3,7 @@ title: "Multilingual & Culturally-Adapted Materials"
 ---
 
 ::: {.topic-badges}
-[Moderate]{.level-badge .level-moderate} · **Communication & Dissemination** track · ~1 hour, self-paced
+[Moderate]{.level-badge .level-moderate} · **Communication & Dissemination** track · ~35 min hands-on + readings and quiz
 :::
 
 [← Back to the Communication & Dissemination track](communication.qmd){.track-back}
@@ -32,7 +32,19 @@ Cultural adaptation is more than translation: examples, framing, and imagery may
 
 **Goal.** Translate an outreach message and catch errors before it goes public.
 
-**Setup.** A short, non-sensitive outreach message (e.g., a crosswalk-safety reminder) and a target language relevant to your community.
+**Setup.** Use this pedestrian-safety outreach message and translate it into **Spanish** (the most common non-English language in Philadelphia):
+
+> **Walk Safely in Your Neighborhood**
+>
+> Pedestrian crashes in Philadelphia peak between 4 and 7 PM, especially on wide, busy roads. Here's how to stay safer:
+>
+> - Cross at marked crosswalks and intersections — drivers are more likely to see you there.
+> - Make eye contact with drivers before stepping into the street.
+> - At night, wear something light-colored or reflective. Carry a flashlight if you can.
+> - If there's no sidewalk, walk facing traffic so you can see oncoming cars.
+> - Report broken streetlights, missing crosswalk markings, or damaged sidewalks to 311 (call 311 or use the Philly311 app).
+>
+> Your safety matters. If a street in your neighborhood feels dangerous to walk on, you can request a traffic-safety review from the city at [link].
 
 **Steps.**
 
@@ -66,7 +78,7 @@ Cultural adaptation is more than translation: examples, framing, and imagery may
 
 **Goal.** Adapt framing and examples for a specific community, not just the words.
 
-**Setup.** Your translated message plus a brief description of the target community.
+**Setup.** Your Spanish translation from Activity 1, plus this community context: the target audience is Spanish-speaking residents of North Philadelphia, many of whom are originally from Puerto Rico or the Dominican Republic. The neighborhood has high pedestrian crash rates, limited sidewalk infrastructure, and several schools within walking distance.
 
 **Steps.**
 
@@ -114,6 +126,14 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 
 - [CDC Health Literacy](https://www.cdc.gov/healthliteracy/) — clear-communication and audience guidance.
 - [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with data rules.
+
+---
+
+## Navigate
+
+**Next in this track:** [AI for Design & Visual Communication](design-visual-communication.qmd)
+
+**Related topics:** [Science Communication & Plain-Language Translation](science-communication.qmd) · [AI Bias & Health Equity Audit](bias-equity-audit.qmd)
 
 ::: {.callout-warning}
 ## Data rules

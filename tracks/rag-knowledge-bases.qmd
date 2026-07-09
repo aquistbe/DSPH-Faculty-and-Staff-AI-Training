@@ -3,7 +3,7 @@ title: "RAG & Knowledge Bases over Your Documents"
 ---
 
 ::: {.topic-badges}
-[Advanced]{.level-badge .level-advanced} · **Technical & Agentic** track · ~1 hour, self-paced
+[Advanced]{.level-badge .level-advanced} · **Technical & Agentic** track · ~35 min hands-on + readings and quiz
 :::
 
 [← Back to the Technical & Agentic track](technical-agentic.qmd){.track-back}
@@ -32,7 +32,15 @@ Quality depends on retrieval: if the right passage isn't found, the answer is wr
 
 **Goal.** Make AI answer from your sources, with citations you verify.
 
-**Setup.** In NotebookLM, load 3–5 **public** sources (e.g., open-access pedestrian-safety papers, a public city report).
+**Setup.** In NotebookLM, load these 5 **public** PDFs on pedestrian safety:
+
+1. [Philadelphia Vision Zero Action Plan (2017)](https://www.phila.gov/media/20171025174232/Vision-Zero-Action-Plan.pdf) — the city's strategy for eliminating traffic deaths
+2. [NHTSA Pedestrian Safety Report (2023)](https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/813558) — national pedestrian fatality trends
+3. [WHO Global Status Report on Road Safety (2023)](https://www.who.int/publications/i/item/9789240086517) — global context for pedestrian injury
+4. [FHWA Proven Safety Countermeasures: Pedestrian Safety](https://safety.fhwa.dot.gov/provencountermeasures/) — evidence-based infrastructure interventions
+5. [Philadelphia Complete Streets Design Handbook](https://www.phila.gov/documents/complete-streets-design-handbook/) — city design standards for pedestrian infrastructure
+
+Upload all five to a new NotebookLM notebook. These are all public government or NGO documents — no data-sensitivity concerns.
 
 **Steps.**
 
@@ -110,6 +118,14 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 
 - [NotebookLM](https://notebooklm.google.com) — source-grounded notebooks (use public data).
 - [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with data rules.
+
+---
+
+## Navigate
+
+**Next in this track:** [MCP & Connecting AI to Data & Tools](mcp-connecting-tools.qmd)
+
+**Related topics:** [MCP & Connecting AI to Data & Tools](mcp-connecting-tools.qmd) · [Local Models via Ollama](local-models-ollama.qmd)
 
 ::: {.callout-warning}
 ## Data rules

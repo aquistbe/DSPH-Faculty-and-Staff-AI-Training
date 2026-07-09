@@ -3,7 +3,7 @@ title: "Communication & Dissemination Track"
 ---
 
 ::: {.topic-badges}
-Self-paced track · 7 topics · novice → advanced
+Self-paced track · 10 topics · novice → advanced
 :::
 
 [← All self-paced tracks](../tracks.qmd){.track-back}
@@ -27,6 +27,19 @@ Use AI to write, translate, and disseminate public-health work — from grants a
 | 5 | [Manuscript Preparation & Peer Review](manuscript-peer-review.qmd) | [Advanced]{.level-badge .level-advanced} | Draft sections and reviewer responses; respect peer-review confidentiality |
 | 6 | [AI for Design & Visual Communication](design-visual-communication.qmd) | [Moderate]{.level-badge .level-moderate} | Make graphics with Claude, Canva, Figma, and Adobe — matched to the data level |
 | 7 | [Collaborating on Projects](collaborating-on-projects.qmd) | [Moderate]{.level-badge .level-moderate} | Set up shared Projects and custom GPTs for a team (companion to Workshop 3) |
+| 8 | [Writing Your Course AI Policy](course-ai-policy.qmd) | [Novice]{.level-badge .level-novice} | Write a clear, enforceable AI policy for your syllabus |
+| 9 | [Assignment & Assessment Design in the AI Era](assignment-assessment-design.qmd) | [Moderate]{.level-badge .level-moderate} | Design assignments that develop competence whether students use AI or not |
+| 10 | [Grant Administration with AI](grant-administration.qmd) | [Novice]{.level-badge .level-novice} | Track deadlines, format compliance docs, and draft progress reports |
+
+## Not sure where to start?
+
+Answer a few questions to find your starting point in this track.
+
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions":[{"q":"You use AI to draft a plain-language summary of a study for a community audience. What's the most important check before sharing it?","options":["Verify that every claim and statistic matches the original study","Make sure the summary sounds professional","Check that the AI cited its sources","Read it aloud to see if it flows well"],"answer":0,"explain":"Fact-checking AI writing is the core skill in this track. If you already do this routinely, start at topic 3 (Literature Review) or topic 5 (Manuscript Preparation). If not, start at topic 1 (Science Communication)."},{"q":"AI generates a literature review paragraph with three citations. What should you do?","options":["Look up each cited paper to confirm it exists and says what the AI claims","Trust the citations because they have proper formatting","Spot-check one citation and assume the rest are fine","Ask the AI if the citations are real"],"answer":0,"explain":"AI frequently fabricates citations. If verifying references is already your habit, skip ahead to topic 5 (Manuscript Preparation). Otherwise, topic 3 (Literature Review) will build this practice."},{"q":"You want to translate a health fact sheet into Spanish using AI. What's the best quality check?","options":["Have a fluent speaker review it and back-translate key sections","Use a second AI tool to check the first tool's translation","Confirm it reads well to you using a dictionary","Trust the translation if the AI model supports Spanish"],"answer":0,"explain":"If back-translation and cultural review are familiar, start at topic 4 (Multilingual Materials) or later. If this workflow is new, topic 1 (Science Communication) will build the foundation."}]}
+</script>
+</div>
 
 ::: {.callout-warning}
 ## Data rules apply throughout

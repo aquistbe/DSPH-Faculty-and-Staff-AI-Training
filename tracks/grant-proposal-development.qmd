@@ -3,7 +3,7 @@ title: "Grant & Proposal Development"
 ---
 
 ::: {.topic-badges}
-[Moderate]{.level-badge .level-moderate} · **Communication & Dissemination** track · ~1 hour, self-paced
+[Moderate]{.level-badge .level-moderate} · **Communication & Dissemination** track · ~35 min hands-on + readings and quiz
 :::
 
 [← Back to the Communication & Dissemination track](communication.qmd){.track-back}
@@ -115,6 +115,14 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 - [NIH How to Apply — Application Guide](https://grants.nih.gov/grants/how-to-apply-application-guide.html) — official NIH proposal guidance.
 - [NIH RePORTER](https://reporter.nih.gov) — find funded examples and language.
 - [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with data rules.
+
+---
+
+## Navigate
+
+**Next in this track:** [Literature Review & Evidence Synthesis](literature-review.qmd)
+
+**Related topics:** [Literature Review & Evidence Synthesis](literature-review.qmd) · [Grant Administration with AI](grant-administration.qmd)
 
 ::: {.callout-warning}
 ## Data rules

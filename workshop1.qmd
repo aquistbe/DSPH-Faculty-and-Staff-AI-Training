@@ -91,19 +91,23 @@ Duration: ~17 minutes | Format: Individual, hands-on
 
 **Prompt A --- Summarize**
 
-> Summarize the following text in 5 bullet points for a busy colleague, then give me a one-sentence "bottom line." [paste a paragraph or two from a public report or article]
+> Summarize the following text in 5 bullet points for a busy colleague, then give me a one-sentence "bottom line."
+>
+> Between 2018 and 2022, pedestrian fatalities in the United States increased by 18 percent, reaching the highest levels since 1981. Urban areas accounted for roughly 84 percent of these deaths, with arterial roads—wide, high-speed corridors often lacking sidewalks, crosswalks, or pedestrian signals—representing a disproportionate share. Black and Hispanic pedestrians were killed at roughly twice the rate of white pedestrians when adjusted for population. Older adults (65+) also faced elevated fatality rates, particularly at unsignalized intersections. Several cities have adopted Vision Zero plans, but implementation has been uneven: many plans focus on education campaigns rather than the infrastructure redesign (road diets, curb extensions, reduced speed limits) that evidence links to the largest reductions. Federal funding through the Bipartisan Infrastructure Law includes $5 billion for Safe Streets, though local match requirements can slow uptake in under-resourced communities.
 
 **Prompt B --- Draft**
 
-> Draft a friendly but professional email reminding committee members that their meeting materials are due Friday at noon. Keep it under 120 words.
+> Draft a friendly but professional email reminding committee members that their self-study section drafts for the CEPH reaccreditation report are due Friday at noon. Mention that late submissions delay the full committee review scheduled for the following Tuesday. Keep it under 120 words.
 
 **Prompt C --- Explain**
 
-> Explain what a "data use agreement" is to a new staff member, in plain language, in about 100 words.
+> Explain what a "data use agreement" is to a new research coordinator who just started at a school of public health, in plain language, in about 100 words.
 
 **Prompt D --- Reformat**
 
-> Turn these rough notes into a clean numbered agenda with time estimates: [paste a few messy lines of notes]
+> Turn these rough notes into a clean numbered agenda with time estimates:
+>
+> curriculum cmt mtg weds — need to talk about new DrPH concentration proposal, carla is presenting enrollment projections, also CEPH competency mapping still not done, someone said we need to vote on the revised practicum hours (120→150), also brief update from assessment subcommittee maybe 5 min?, oh and the AI policy draft — alex will share it, probably 15 min discussion, don't forget to approve last meeting minutes at the start
 
 3. Pick the output you found most useful and ask one **follow-up**: "Make it shorter," "More formal," or "Add a sentence about X." Notice that it remembers the conversation.
 
@@ -138,13 +142,13 @@ Duration: ~15 minutes | Format: Hands-on + pair share
 
 #### Try It
 
-1. Start with a **bare prompt** for a task from your own work (use non-sensitive details):
+1. Start with a **bare prompt**:
 
    > Write a project update.
 
-2. Now rewrite it using all four PTCF parts. For example:
+2. Now rewrite it using all four PTCF parts:
 
-   > **Persona:** You are a research coordinator. **Task:** Write a short project status update. **Context:** For our study team's monthly check-in; we finished participant recruitment, are behind on data cleaning, and have an IRB renewal due next month. **Format:** Three short sections---Done, In Progress, Needs Attention---under 150 words total.
+   > **Persona:** You are a research coordinator at a school of public health. **Task:** Write a project status update for our NIH-funded pedestrian safety study. **Context:** For the PI and co-investigators' monthly check-in. We finished geocoding 14,000 crash records and linking them to road-segment characteristics. Data cleaning is behind schedule—about 30% of records have missing speed-limit data that needs to be imputed or verified against PennDOT records. The IRB continuing review is due August 15 and the progress report to NICHD is due September 1. **Format:** Three short sections---Completed, In Progress, Needs Attention---under 150 words total, with specific dates for upcoming deadlines.
 
 3. Compare the two outputs. Then refine once more: change the tone, the length, or the audience and rerun.
 

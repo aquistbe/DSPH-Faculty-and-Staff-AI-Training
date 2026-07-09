@@ -1,0 +1,149 @@
+---
+title: "Grant Administration with AI"
+---
+
+::: {.topic-badges}
+[Novice]{.level-badge .level-novice} · **Communication & Dissemination** track · ~35 min hands-on + readings and quiz
+:::
+
+[← Back to the Communication & Dissemination track](communication.qmd){.track-back}
+
+*Use AI for the administrative side of grants — deadlines, formatting, compliance — without touching sensitive budget or personnel details.*
+
+## What you'll be able to do
+
+- Use AI to track deadlines, summarize requirements, and format compliance documents
+- Recognize which grant-administration tasks are safe for AI and which aren't
+- Build reusable prompts for recurring admin tasks (progress reports, no-cost extensions, subaward tracking)
+
+## Overview
+
+Grant administration involves a lot of recurring, structured work: tracking deadlines, formatting budget justifications, drafting progress report narratives, summarizing sponsor requirements, and compiling compliance documentation. AI is good at all of these — and the data is often non-sensitive (public funding announcements, published guidelines, de-identified summaries).
+
+The boundary is clear: AI can help with formatting and summarizing public or non-sensitive grant information. It should not be used with identifiable personnel data (salaries, effort allocations with names), real budget numbers that are confidential, or anything involving sponsored program compliance decisions (those require human judgment and institutional sign-off).
+
+## Practice activities
+
+```{=html}
+<details class="activity"><summary>Activity 1 · Novice — Summarize sponsor requirements</summary>
+```
+
+**Time** ~15 min · **Tools** ChatGPT Edu
+
+**Goal.** Extract and organize key requirements from a funding announcement.
+
+**Setup.** Use a real, publicly posted funding opportunity announcement (FOA). Here's one to use:
+
+> Go to [NIH Guide](https://grants.nih.gov/funding/searchguide/index.html) and find any current R21 or R01 FOA in injury prevention, environmental health, or a topic in your area. Copy the "Application and Submission Information" section.
+
+Alternatively, use this summary of typical NIH requirements:
+
+> **Funding Opportunity:** PA-24-XXX, NIH R21 Exploratory/Developmental Research Grant. Page limits: Specific Aims (1 page), Research Strategy (6 pages for R21), Budget (modular up to $275,000 direct costs over 2 years). Required sections: Specific Aims, Significance, Innovation, Approach, Protection of Human Subjects (if applicable), Data Management and Sharing Plan (required per 2023 policy), Authentication of Key Biological/Chemical Resources (if applicable). Letters of support required from subaward sites. Biosketch format: NIH format (5 pages). Submission via Grants.gov with eRA Commons validation. Due dates: standard NIH cycles (February 5, June 5, October 5 for new R21s).
+
+**Steps.**
+
+1. Extract the key requirements:
+
+   > From this FOA summary, create a pre-submission checklist organized by: (a) documents to prepare, (b) page/format limits for each, (c) institutional approvals needed, and (d) key dates. Flag anything that's easy to miss.
+
+2. Verify each item against the actual FOA — AI may miss recent policy changes (e.g., the 2023 Data Management and Sharing Plan requirement).
+
+3. Save the checklist as a reusable template for your next submission.
+
+**Expected result.** A clean pre-submission checklist you can reuse. The AI should catch most items but may miss institution-specific requirements (e.g., Drexel's internal routing deadline, which is typically 5 business days before the sponsor deadline).
+
+**Check your work.** Compare to your grants office's checklist if they have one. The AI version is a starting point, not a replacement for institutional guidance.
+
+**Common pitfalls.** AI doesn't know your institution's internal deadlines, routing requirements, or F&A rate. Layer those in yourself.
+
+**Stretch (optional).** Create checklists for two different mechanisms (e.g., R01 vs. foundation LOI) and note what differs.
+
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 2 · Novice — Draft a progress report narrative</summary>
+```
+
+**Time** ~18 min · **Tools** ChatGPT Edu
+
+**Goal.** Use AI to draft a progress report narrative from bullet points, then verify it against what actually happened.
+
+**Setup.** Use these fabricated project milestones (or substitute your own non-sensitive project details):
+
+> **Project:** Pedestrian Safety Infrastructure and Injury Outcomes (NIH R01, Year 2 of 5)
+>
+> **Year 2 milestones completed:**
+> - Geocoded 14,200 crash records from PennDOT 2018-2023 files
+> - Linked crash data to road-segment characteristics (lanes, speed limit, crosswalk presence) from PennDOT and OpenStreetMap
+> - Completed missing speed-limit imputation (nearest-neighbor method, validated against 500 manually checked segments)
+> - Submitted IRB continuing review (approved March 2026)
+> - Published 1 paper (Injury Prevention, accepted January 2026)
+> - Presented at APHA annual meeting (November 2025)
+>
+> **In progress:**
+> - Multilevel models for KSI outcome — preliminary results show 2.3x odds on 4+ lane roads
+> - Hiring replacement research coordinator (previous coordinator left February 2026)
+>
+> **Challenges:**
+> - 2023 PennDOT file format change broke ingestion script — 3 weeks to fix
+> - Coordinator turnover delayed data cleaning by approximately 6 weeks
+
+**Steps.**
+
+1. Draft the narrative:
+
+   > From these project milestones, draft a 300-word progress report narrative for an NIH annual progress report. Tone: factual, no adjectives like "exciting" or "significant." Structure: Accomplishments, Challenges, and Plans for Next Year. Include specific numbers where available.
+
+2. Verify every claim — did the draft invent any accomplishments not in the milestones? Did it minimize the challenges?
+
+3. Add the one thing AI can't know: your assessment of whether the project is on track, and any changes to the scientific direction.
+
+**Expected result.** A clean, factual narrative that saves 30–60 minutes of writing time. You should need to add: (1) your PI assessment of progress, (2) any changes to specific aims or approach, and (3) institutional details the AI doesn't know.
+
+**Check your work.** Every number in the narrative must match the milestones. AI tends to inflate ("over 14,000 records" when the number is 14,200 — use the exact number).
+
+**Common pitfalls.** AI-drafted progress reports often minimize challenges ("a minor delay") when the actual impact was significant. Be honest — NIH reviewers appreciate candor, and understating delays can backfire in a site visit.
+
+**Stretch (optional).** Draft the progress report for a foundation grant using the same milestones but a different format and audience (shorter, less technical).
+
+```{=html}
+</details>
+```
+
+
+## Check your readiness
+
+Answer these, then check — your score suggests whether to dive in or skim the readings first.
+
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions": [{"q": "Grant admin tasks safe for AI include…", "options": ["Summarizing public FOAs, formatting checklists, drafting from non-sensitive notes", "Entering budget numbers with personnel names", "Making compliance decisions", "Submitting applications"], "answer": 0, "explain": "AI helps with formatting and summarizing non-sensitive information."}, {"q": "An AI-drafted progress report needs you to add…", "options": ["Your assessment of progress and any changes to scientific direction", "More adjectives", "Nothing — it's ready to submit", "A longer methods section"], "answer": 0, "explain": "Your judgment about the project's trajectory is the part AI can't provide."}, {"q": "AI doesn't know your institution's…", "options": ["Internal routing deadlines and F&A rate", "The NIH page limits", "The sponsor's name", "Standard due dates"], "answer": 0, "explain": "Institutional details must come from your grants office."}]}
+</script>
+</div>
+
+## Recommended readings
+
+Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings**, and online where linked:
+
+- [**A Practical Guide to Building Agents (OpenAI)**](https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf) — relevant for building grant-tracking assistants.
+- [**AI-Slop, GrantaGate and Bad Writing**](https://tuhinchakrabarty.substack.com/p/ai-slop-grantagate-and-bad-writing) — cautionary view of AI-generated academic text.
+
+## Useful resources
+
+- [NIH Grants Guide](https://grants.nih.gov/funding/searchguide/index.html) — funding opportunities and submission guidance.
+- [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with data rules.
+
+---
+
+## Navigate
+
+**Back to track overview:** [Communication & Dissemination](communication.qmd)
+
+**Related topics:** [Grant & Proposal Development](grant-proposal-development.qmd) · [Data Security & Classification Deep-Dive](data-security-classification.qmd)
+
+::: {.callout-warning}
+## Data rules
+Use **non-sensitive** grant information only — public FOAs, de-identified milestones, generic templates. Do not paste real budget numbers with personnel names and salaries. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+:::

@@ -1,0 +1,135 @@
+---
+title: "Assignment & Assessment Design in the AI Era"
+---
+
+::: {.topic-badges}
+[Moderate]{.level-badge .level-moderate} · **Communication & Dissemination** track · ~35 min hands-on + readings and quiz
+:::
+
+[← Back to the Communication & Dissemination track](communication.qmd){.track-back}
+
+*Design assignments that develop real competence — whether students use AI or not.*
+
+## What you'll be able to do
+
+- Redesign assignments so AI assistance doesn't bypass the learning objective
+- Create assessments that test judgment, application, and reflection — not just recall
+- Set clear, enforceable expectations for AI use in student work
+
+## Overview
+
+AI can write a passable essay, summarize a paper, draft code, and answer many exam questions. That doesn't mean assignments are broken — it means the ones that test recall or generic writing need updating. Assignments that require students to apply concepts to specific local data, reflect on their own reasoning, or make and defend judgment calls are harder to shortcut with AI and more aligned with what public-health professionals actually do.
+
+The goal isn't to ban AI or to make assignments "AI-proof" — it's to design work that develops the competencies you're actually assessing, whether students use AI tools or not.
+
+## Practice activities
+
+```{=html}
+<details class="activity"><summary>Activity 1 · Moderate — Redesign an assignment for the AI era</summary>
+```
+
+**Time** ~18 min · **Tools** ChatGPT Edu
+
+**Goal.** Take an existing assignment and redesign it so AI assistance doesn't bypass the learning objective.
+
+**Setup.** Use this sample assignment (or substitute one of your own):
+
+> **Original assignment (EPID 601 — Intro to Epidemiology):** "Write a 500-word essay explaining the difference between incidence and prevalence, with one example of each from the public health literature."
+
+This assignment is easy to complete with AI in about 30 seconds. The learning objective — understanding the conceptual difference — is bypassed entirely.
+
+**Steps.**
+
+1. Test the vulnerability:
+
+   > Complete this assignment: "Write a 500-word essay explaining the difference between incidence and prevalence, with one example of each from the public health literature."
+
+   Note how quickly and competently AI handles it.
+
+2. Now redesign it to resist shortcutting while testing the same concepts:
+
+   > Redesign this assignment so it still tests understanding of incidence vs. prevalence but can't be completed by simply pasting the prompt into AI. The students are MPH epidemiology students. The redesign should involve local data, personal judgment, or application to a specific scenario. Give me 3 options.
+
+3. Evaluate the options: Which one best tests the actual learning objective? Which would you want to grade?
+
+**Expected result.** Three redesigned options. Strong redesigns typically involve: using real local data (e.g., "Using this Philadelphia Health Department report, calculate and interpret..."), requiring students to explain their reasoning process, or asking them to evaluate a flawed example. Weak redesigns just make the prompt longer.
+
+**Check your work.** Try completing your redesigned assignment with AI. If the AI can still produce a submission that would earn a good grade without the student learning anything, redesign further.
+
+**Common pitfalls.** Adding "cite 5 sources" doesn't help — AI fabricates citations. Adding "be creative" doesn't help — AI is fluent. Focus on tasks that require the student to *use* their understanding on specific, local, or personal material.
+
+**Stretch (optional).** Redesign one more assignment from a different course using the same principles.
+
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 2 · Moderate — Build AI-use expectations into an assignment</summary>
+```
+
+**Time** ~15 min · **Tools** ChatGPT Edu
+
+**Goal.** Write clear, specific AI-use expectations for a single assignment — not a vague syllabus statement.
+
+**Setup.** Use your redesigned assignment from Activity 1 (or a real assignment from your course). Decide: for this specific assignment, what AI use is acceptable, what isn't, and what must be disclosed?
+
+**Steps.**
+
+1. Draft the expectations:
+
+   > For this assignment, write a clear "AI Use" section that specifies: (a) what AI tools may be used for (e.g., grammar checking, brainstorming), (b) what they may not be used for (e.g., generating the analysis, writing the interpretation), (c) what must be disclosed (e.g., "list any AI tools used and describe how"), and (d) what happens if expectations are violated. Be specific enough that a student could follow these instructions without ambiguity.
+
+2. Stress-test it:
+
+   > Read this AI-use policy as a student who wants to use AI as much as possible without technically violating the rules. Where are the loopholes?
+
+3. Close the loopholes and finalize.
+
+**Expected result.** A specific, enforceable AI-use section for one assignment. It should be clear enough that two students reading it would reach the same conclusion about what's allowed.
+
+**Check your work.** Show it to a colleague or TA. If they interpret the rules differently than you intended, the language needs tightening.
+
+**Common pitfalls.** "Use AI responsibly" is not a policy. "You may use AI for grammar and spelling checks. You may not use AI to generate any part of your data analysis or interpretation. Disclose all AI use in a footnote listing the tool and the purpose" is a policy.
+
+**Stretch (optional).** Draft a rubric criterion that evaluates the quality of a student's AI disclosure (did they describe what they used and how, or just say "I used ChatGPT"?).
+
+```{=html}
+</details>
+```
+
+
+## Check your readiness
+
+Answer these, then check — your score suggests whether to dive in or skim the readings first.
+
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions": [{"q": "The best way to make assignments 'AI-resistant' is to…", "options": ["Require application to specific, local, or personal material", "Make prompts longer", "Ban AI entirely", "Add more citations"], "answer": 0, "explain": "AI struggles with tasks that require specific, local application and personal judgment."}, {"q": "A good AI-use policy for an assignment should be…", "options": ["Specific enough that students know exactly what's allowed", "Vague to allow flexibility", "A blanket ban", "Optional"], "answer": 0, "explain": "Clarity prevents confusion and enables enforcement."}, {"q": "Adding 'cite 5 sources' to an assignment…", "options": ["Doesn't help — AI fabricates citations", "Makes it AI-proof", "Ensures accuracy", "Tests research skills"], "answer": 0, "explain": "Citation requirements don't prevent AI use; they add a new failure mode."}]}
+</script>
+</div>
+
+## Recommended readings
+
+Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings**, and online where linked:
+
+- [**AI-Slop, GrantaGate and Bad Writing**](https://tuhinchakrabarty.substack.com/p/ai-slop-grantagate-and-bad-writing) — what AI-generated academic writing looks like and why it matters.
+- [**How Responsible AI Changes in the Agent Era**](https://www.turingpost.com/p/how-responsible-ai-changes-in-the-agent-era) — responsibility as AI capabilities grow.
+
+## Useful resources
+
+- [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with data rules.
+- [Drexel Academic Integrity Policy](https://drexel.edu/studentlife/community-standards/code-of-conduct/) — the institutional framework for academic honesty.
+
+---
+
+## Navigate
+
+**Next in this track:** [Grant Administration with AI](grant-administration.qmd)
+
+**Related topics:** [Writing Your Course AI Policy](course-ai-policy.qmd) · [Verifying AI Output](verifying-output.qmd)
+
+::: {.callout-warning}
+## Data rules
+Use **non-sensitive** examples when designing and testing assignments. Do not share real student submissions with AI tools. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+:::

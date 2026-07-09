@@ -3,7 +3,7 @@ title: "Image Generation & Annotation"
 ---
 
 ::: {.topic-badges}
-[Moderate]{.level-badge .level-moderate} · **Data & Analysis** track · ~1 hour, self-paced
+[Moderate]{.level-badge .level-moderate} · **Data & Analysis** track · ~35 min hands-on + readings and quiz
 :::
 
 [← Back to the Data & Analysis track](data-analysis.qmd){.track-back}
@@ -68,7 +68,20 @@ Disclose AI-generated visuals in published materials, and check that people and 
 
 **Goal.** Turn images into labeled data you could measure.
 
-**Setup.** Collect ~10 public Google Street View images of Philadelphia intersections (Google already blurs faces and plates). Install or open **Label Studio**.
+**Setup.** Use these 10 publicly available Philadelphia intersection images from Google Street View (Google automatically blurs faces and license plates). Open each link and save the image, or right-click to copy:
+
+1. [Broad & Lehigh](https://www.google.com/maps/@39.9893,-75.1563,3a,75y,90h,90t/data=!3m6!1e1!3m4!1s0x0:0x0!2e0!7i16384!8i8192) — wide arterial, no visible crosswalk markings
+2. [Broad & Walnut](https://www.google.com/maps/@39.9494,-75.1631,3a,75y,270h,90t/data=!3m6!1e1!3m4!1s0x0:0x0!2e0!7i16384!8i8192) — downtown, marked crosswalks and curb ramps
+3. [Frankford & Allegheny](https://www.google.com/maps/@39.9939,-75.1234,3a,75y,180h,90t/data=!3m6!1e1!3m4!1s0x0:0x0!2e0!7i16384!8i8192) — complex intersection
+4. [5th & Spring Garden](https://www.google.com/maps/@39.9619,-75.1478,3a,75y,90h,90t/data=!3m6!1e1!3m4!1s0x0:0x0!2e0!7i16384!8i8192) — near highway ramp
+5. [Lancaster & 40th](https://www.google.com/maps/@39.9617,-75.2058,3a,75y,90h,90t/data=!3m6!1e1!3m4!1s0x0:0x0!2e0!7i16384!8i8192) — West Philadelphia
+6. [Oregon & Broad](https://www.google.com/maps/@39.9143,-75.1631,3a,75y,270h,90t/data=!3m6!1e1!3m4!1s0x0:0x0!2e0!7i16384!8i8192) — South Philadelphia
+7. [Girard & Front](https://www.google.com/maps/@39.9696,-75.1352,3a,75y,180h,90t/data=!3m6!1e1!3m4!1s0x0:0x0!2e0!7i16384!8i8192) — Fishtown
+8. [Roosevelt Blvd & Adams Ave](https://www.google.com/maps/@40.0342,-75.0991,3a,75y,90h,90t/data=!3m6!1e1!3m4!1s0x0:0x0!2e0!7i16384!8i8192) — high-crash corridor
+9. [Market & 52nd](https://www.google.com/maps/@39.9575,-75.2266,3a,75y,270h,90t/data=!3m6!1e1!3m4!1s0x0:0x0!2e0!7i16384!8i8192) — West Philadelphia commercial
+10. [Cottman & Bustleton](https://www.google.com/maps/@40.0555,-75.0574,3a,75y,90h,90t/data=!3m6!1e1!3m4!1s0x0:0x0!2e0!7i16384!8i8192) — Northeast Philadelphia
+
+If the Street View links don't load at the exact angle, navigate to the intersection in Google Maps and drop the Street View pegman. Install or open **Label Studio** (free, open-source).
 
 **Steps.**
 
@@ -117,6 +130,14 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 - [Adobe Firefly](https://www.adobe.com/products/firefly.html) — commercially-safe image generation (Drexel Moderate-Risk data).
 - [Label Studio](https://labelstud.io) — open-source image and text annotation.
 - [CVAT](https://www.cvat.ai) — computer-vision annotation tool.
+
+---
+
+## Navigate
+
+**Next in this track:** [AI-Assisted Web & Dashboards](web-and-dashboards.qmd)
+
+**Related topics:** [AI for Design & Visual Communication](design-visual-communication.qmd) · [Geospatial / GIS & Built Environment](geospatial-gis.qmd)
 
 ::: {.callout-warning}
 ## Data rules

@@ -3,7 +3,7 @@ title: "Keeping Your Judgment: Cognitive Offloading & When to Scrutinize AI"
 ---
 
 ::: {.topic-badges}
-[Moderate]{.level-badge .level-moderate} · **Governance, Ethics & Equity** track · ~1 hour, self-paced
+[Moderate]{.level-badge .level-moderate} · **Governance, Ethics & Equity** track · ~35 min hands-on + readings and quiz
 :::
 
 [← Back to the Governance, Ethics & Equity track](governance-ethics.qmd){.track-back}
@@ -122,6 +122,14 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 - [Workshop 5 — Getting Started with Agentic AI](../workshop5.qmd) — automation bias and oversight.
 - [Verifying AI Output](verifying-output.qmd) — the hands-on companion habit.
 - [Drexel AI Tools](https://drexel.edu/provost/ai/tools) — approved tools and data rules.
+
+---
+
+## Navigate
+
+**Next in this track:** [AI in Mentoring & Advising](mentoring-advising.qmd)
+
+**Related topics:** [Responsible AI](responsible-ai.qmd) · [Verifying AI Output](verifying-output.qmd)
 
 ::: {.callout-warning}
 ## Data rules

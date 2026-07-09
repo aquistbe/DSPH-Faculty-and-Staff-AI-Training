@@ -1,0 +1,133 @@
+---
+title: "Writing Your Course AI Policy"
+---
+
+::: {.topic-badges}
+[Novice]{.level-badge .level-novice} · **Communication & Dissemination** track · ~35 min hands-on + readings and quiz
+:::
+
+[← Back to the Communication & Dissemination track](communication.qmd){.track-back}
+
+*A clear, enforceable AI policy for your syllabus — not a disclaimer, a working document.*
+
+## What you'll be able to do
+
+- Write a course AI policy that is specific, enforceable, and fair
+- Adapt the policy to different assignment types within the same course
+- Anticipate student questions and edge cases before the semester starts
+
+## Overview
+
+A course AI policy tells students what's allowed, what isn't, and what happens when the line is crossed. Most existing policies are either too vague ("use AI responsibly") or too broad ("AI is prohibited in this course"). Neither works well — vague policies are unenforceable, and blanket bans are unrealistic and may disadvantage students who need accessibility tools.
+
+A good policy is assignment-specific, states what must be disclosed, and explains *why* — connecting the rules to the learning objectives. Students follow policies they understand.
+
+## Practice activities
+
+```{=html}
+<details class="activity"><summary>Activity 1 · Novice — Draft your course AI policy</summary>
+```
+
+**Time** ~18 min · **Tools** ChatGPT Edu
+
+**Goal.** Produce a syllabus-ready AI policy tailored to your course.
+
+**Setup.** Use this sample course, or substitute your own:
+
+> **Course:** EPID 602 — Intermediate Epidemiology (MPH required course). **Assignments:** weekly problem sets (calculations and interpretations), a midterm case study analysis, a final research proposal, and in-class participation. **Learning objectives:** Apply epidemiologic measures, interpret study designs, and critically evaluate published research.
+
+**Steps.**
+
+1. Draft a policy:
+
+   > Draft a course AI policy for this epidemiology course. The policy should: (a) state the overall stance (AI is a tool, not a replacement for learning), (b) specify allowed and prohibited uses for each assignment type, (c) require disclosure of AI use, (d) explain consequences for violations, and (e) include 2-3 specific examples so students know where the line is. Keep it under 400 words — students won't read a 2-page policy.
+
+2. Review for enforceability: Could you actually detect a violation? If you can't tell whether a student used AI for their problem set calculations, your prohibition may be unenforceable — consider redesigning the assignment instead.
+
+3. Add a "why" statement — one sentence explaining how the policy connects to the learning objectives:
+
+   > Add a one-sentence explanation of why this policy exists, framed in terms of the course learning objectives — not "because it's cheating" but because of what students need to be able to do.
+
+**Expected result.** A syllabus-ready policy under 400 words that distinguishes among assignment types and includes specific examples.
+
+**Check your work.** Have a colleague or TA read it. If they can identify a scenario where the right answer isn't clear, tighten the language.
+
+**Common pitfalls.** The most common mistake is writing one rule for the whole course. Problem sets, case studies, and research proposals have different learning objectives — the AI rules should differ too.
+
+**Stretch (optional).** Draft a short FAQ (3–4 questions) anticipating the student questions you'll get in the first week.
+
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 2 · Novice — Stress-test and compare policies</summary>
+```
+
+**Time** ~15 min · **Tools** ChatGPT Edu
+
+**Goal.** Find the loopholes in your policy before students do.
+
+**Setup.** Your draft policy from Activity 1.
+
+**Steps.**
+
+1. Stress-test it:
+
+   > Read this course AI policy as a student who wants to use AI as much as possible without technically violating the rules. List every loophole, ambiguity, or gray area you can find.
+
+2. Close the loopholes — revise the language to address each one.
+
+3. Compare to a different approach:
+
+   > Now draft an alternative policy for the same course that takes the opposite stance — one that actively integrates AI into assignments and assesses students on how well they use it. What changes?
+
+4. Decide which approach (restrictive, integrative, or a hybrid) fits your learning objectives better.
+
+**Expected result.** A tightened policy plus an alternative version that shows the other end of the spectrum. Most courses land somewhere in between.
+
+**Check your work.** The final policy should pass three tests: (1) A student can read it and know what to do. (2) You can detect most violations or have designed assignments where violations don't bypass learning. (3) It connects to your learning objectives, not just institutional rules.
+
+**Common pitfalls.** Banning AI use in a course where students will use AI in their jobs after graduation deserves a justification. "Because it's academic dishonesty" is weaker than "because you need to be able to do this calculation yourself in a job interview."
+
+**Stretch (optional).** Identify one assignment where integrating AI use *is* the learning objective — e.g., "Use AI to draft a methods section, then annotate where it got your study design wrong."
+
+```{=html}
+</details>
+```
+
+
+## Check your readiness
+
+Answer these, then check — your score suggests whether to dive in or skim the readings first.
+
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions": [{"q": "A good course AI policy should be…", "options": ["Specific to each assignment type", "One rule for everything", "As short as possible", "Left to students to figure out"], "answer": 0, "explain": "Different assignments have different learning objectives and AI risks."}, {"q": "The biggest problem with 'use AI responsibly' as a policy is…", "options": ["It's unenforceable — students don't know what it means", "It's too restrictive", "It mentions AI", "Students ignore policies anyway"], "answer": 0, "explain": "Vague policies can't be followed or enforced consistently."}, {"q": "A policy's 'why' should connect to…", "options": ["The course learning objectives", "Institutional punishment", "AI company terms of service", "Nothing — just state the rule"], "answer": 0, "explain": "Students follow policies they understand the purpose of."}]}
+</script>
+</div>
+
+## Recommended readings
+
+Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings**, and online where linked:
+
+- [**AI-Slop, GrantaGate and Bad Writing**](https://tuhinchakrabarty.substack.com/p/ai-slop-grantagate-and-bad-writing) — what AI-generated academic writing looks like.
+- [**How Responsible AI Changes in the Agent Era**](https://www.turingpost.com/p/how-responsible-ai-changes-in-the-agent-era) — responsibility as AI capabilities grow.
+
+## Useful resources
+
+- [Drexel Academic Integrity Policy](https://drexel.edu/studentlife/community-standards/code-of-conduct/) — institutional framework.
+- [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with data rules.
+
+---
+
+## Navigate
+
+**Next in this track:** [Assignment & Assessment Design in the AI Era](assignment-assessment-design.qmd)
+
+**Related topics:** [Assignment & Assessment Design in the AI Era](assignment-assessment-design.qmd) · [Responsible AI](responsible-ai.qmd)
+
+::: {.callout-warning}
+## Data rules
+Do not share real student submissions or grades with AI tools when developing your policy. Use fabricated examples. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+:::

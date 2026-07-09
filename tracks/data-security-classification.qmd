@@ -3,7 +3,7 @@ title: "Data Security & Classification Deep-Dive"
 ---
 
 ::: {.topic-badges}
-[Novice]{.level-badge .level-novice} · **Governance, Ethics & Equity** track · ~1 hour, self-paced
+[Novice]{.level-badge .level-novice} · **Governance, Ethics & Equity** track · ~35 min hands-on + readings and quiz
 :::
 
 [← Back to the Governance, Ethics & Equity track](governance-ethics.qmd){.track-back}
@@ -32,25 +32,31 @@ When a tool isn't cleared for your data, the move is to de-identify, use synthet
 
 **Goal.** Map your data to the right tools.
 
-**Setup.** List three data types you actually work with.
+**Setup.** Use these three data scenarios that span DSPH roles:
+
+| Scenario | Data description |
+|----------|-----------------|
+| **Research coordinator** | A de-identified CSV of crash records: intersection ID, crash date, time of day, severity (fatal/serious/minor), pedestrian age band, weather. No names, no exact addresses. |
+| **Academic advisor** | A student’s email asking about switching from MPH to DrPH, mentioning their GPA and that they’re on academic probation. |
+| **Grants administrator** | A draft budget justification for an NIH R21 listing personnel names, percent effort, and salary amounts. |
 
 **Steps.**
 
-1. For each, note its sensitivity (public → high-risk) and which Drexel-approved tools allow it (check the AI Tools page).
+1. For each scenario, classify the data sensitivity (Public / Low Risk / Moderate Risk / High Risk) and identify which Drexel-approved tools may be used. Check the [AI Tools page](https://drexel.edu/provost/ai/tools).
 
 2. Sanity-check with AI:
 
-   > I have these data types and these tools available. Which uses are appropriate and which aren’t, based on data sensitivity? [types] [tools]
+   > I have these three data scenarios. For each, tell me the likely data classification and which Drexel-approved AI tools are appropriate. Scenario 1: De-identified crash data (intersection ID, date, time, severity, age band, weather — no names or exact addresses). Scenario 2: A student email mentioning GPA and academic probation status. Scenario 3: A draft NIH budget with personnel names, effort, and salaries.
 
-3. Flag any current habit that doesn’t match.
+3. Compare the AI’s answer to your own classification. Flag any disagreement and resolve it using the official policy, not the AI’s guess.
 
-**Expected result.** A data-to-tool matrix and a list of habits to change.
+**Expected result.** A completed classification for all three scenarios, with the tool(s) allowed for each. The crash data is likely Low Risk (de-identified, no FERPA/HIPAA data); the student email contains FERPA-protected records (Moderate or High Risk — ChatGPT Edu may be acceptable but check policy); the budget with names and salaries is at least Moderate Risk.
 
-**Check your work.** Verify against Drexel’s official AI Tools page, not the AI’s guess.
+**Check your work.** Verify against Drexel’s official AI Tools page, not the AI’s guess. The AI may under-classify.
 
-**Common pitfalls.** “It’s probably fine” isn’t a classification. When unsure, treat data as more sensitive.
+**Common pitfalls.** “It’s probably fine” isn’t a classification. Student records (FERPA) and personnel data are commonly under-classified. When unsure, treat data as more sensitive.
 
-**Stretch (optional).** Write your team’s one-page “what goes where” cheat sheet.
+**Stretch (optional).** Write your team’s one-page “what goes where” cheat sheet covering the five most common data types you handle.
 
 ```{=html}
 </details>
@@ -64,25 +70,33 @@ When a tool isn't cleared for your data, the move is to de-identify, use synthet
 
 **Goal.** Make sensitive data safe for a given tool.
 
-**Setup.** A fabricated sensitive example.
+**Setup.** Use this fabricated patient-encounter table:
+
+| Name | Age | Sex | ZIP | Admission Date | Diagnosis |
+|------|-----|-----|-----|----------------|-----------|
+| Maria Torres | 34 | F | 19104 | 2026-03-12 | Tibial fracture, pedestrian crash |
+| James Chen | 71 | M | 19143 | 2026-03-14 | Hip fracture, fall on broken sidewalk |
+| Aisha Patel | 28 | F | 19131 | 2026-03-15 | Traumatic brain injury, cyclist-vehicle collision |
+| Robert Williams | 82 | M | 19104 | 2026-03-12 | Concussion, pedestrian struck at crosswalk |
+| Dara Kim | 45 | NB | 19146 | 2026-03-18 | Laceration and contusion, e-scooter fall |
 
 **Steps.**
 
 1. De-identify it:
 
-   > Here is a record with identifiers. Produce a de-identified version safe for a Low-Risk tool, and list what you removed or generalized. [fabricated record]
+   > Here is a fabricated patient-encounter table. Produce a de-identified version that would be safe for a Low-Risk AI tool, and list each change you made and why.
 
-2. Check: could the remaining fields still identify someone in combination?
+2. Check: could the remaining fields still identify someone in combination? Pay special attention to the 82-year-old male in ZIP 19104 admitted the same day as another patient with an uncommon diagnosis — that combination narrows the population considerably.
 
-3. Decide whether de-identification is enough or you need an approved tool.
+3. Decide whether de-identification is enough or whether you need to generalize further (age bands, 3-digit ZIP) or use an approved higher-classification tool.
 
-**Expected result.** A de-identified version plus a re-identification check.
+**Expected result.** A de-identified version with names removed, plus an assessment of whether age + ZIP + date + rare diagnosis (e.g., the TBI from a cyclist collision) could still re-identify. You should find that at least one record remains risky even after removing names.
 
-**Check your work.** Quasi-identifiers (age + ZIP + date) can re-identify — scrutinize them.
+**Check your work.** Quasi-identifiers (age + ZIP + date) can re-identify — particularly for older adults or uncommon injury types. Removing names alone is not sufficient.
 
-**Common pitfalls.** Removing names isn’t de-identification; combinations matter.
+**Common pitfalls.** "I removed the names, so it’s de-identified" is the most common mistake. Combinations of age, geography, date, and rare conditions are the real risk.
 
-**Stretch (optional).** Try generating fully synthetic data instead (see the Methods track).
+**Stretch (optional).** Generalize further (5-year age bands, 3-digit ZIP prefix) and re-assess whether re-identification risk drops to acceptable levels. Then try generating fully synthetic data instead (see the [De-identification & Synthetic Data](de-identification-synthetic-data.qmd) topic).
 
 ```{=html}
 </details>
@@ -110,6 +124,14 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 
 - [Drexel AI Tools page](https://drexel.edu/provost/ai/tools) — approved tools by data classification.
 - [HHS De-identification Guidance](https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/index.html) — HIPAA de-identification standards.
+
+---
+
+## Navigate
+
+**Next in this track:** [Responsible AI](responsible-ai.qmd)
+
+**Related topics:** [De-identification & Synthetic Data](de-identification-synthetic-data.qmd) · [Responsible AI](responsible-ai.qmd)
 
 ::: {.callout-warning}
 ## Data rules

@@ -29,13 +29,13 @@ Work through these on your own, in order or by the topic you need. Each page has
 | 7 | [Qualitative Data Analysis](qualitative-analysis.qmd) | [Moderate]{.level-badge .level-moderate} | Assist coding and theming without outsourcing interpretation |
 | 8 | [Data Analysis Advanced](data-analysis-advanced.qmd) | [Advanced]{.level-badge .level-advanced} | Scaffold pipelines and audit their subtle failure modes |
 
-## Where should you start?
+## Not sure where to start?
 
-Answer these to find your entry point.
+Answer a few questions to find your starting point in this track.
 
 <div class="readiness-quiz">
 <script type="application/json" class="quiz-data">
-{"questions":[{"q":"Have you used R, Python, or Stata for data analysis before?","options":["Not really","A little","Regularly"],"answer":2,"explain":"If you code regularly, you can skip ahead to Coding with AI (3) or the Advanced topic (8). If not, start at topic 1."},{"q":"What's the safest way to trust an AI-computed number?","options":["Check it against the data or a known value","Ask the AI if it's sure","Use a bigger model"],"answer":0,"explain":"Verification against the source is the core habit across every topic here."},{"q":"Which data is fine to practice with?","options":["Public or synthetic","Identifiable patient records","A private roster"],"answer":0,"explain":"Always practice on non-sensitive data."}]}
+{"questions":[{"q":"You ask an AI tool to calculate the average age of participants in a dataset. How should you verify the result?","options":["Compute the average yourself in a spreadsheet or script and compare","Ask the AI 'are you sure?' and accept its confirmation","Check if the number looks reasonable and move on","Assume it's correct because AI is good at math"],"answer":0,"explain":"If you already verify AI results against the source data, you're ready for moderate topics like Coding with AI (topic 3). If this is new, start with Data Analysis Basics (topic 1)."},{"q":"What's the first step when AI produces a cleaned version of your dataset?","options":["Check a sample of rows against the original to confirm changes are correct","Save it immediately — cleaning is straightforward","Ask the AI to confirm nothing was lost","Run the analysis and see if results look right"],"answer":0,"explain":"Spot-checking AI work is essential. If this is second nature, start at topic 3 or beyond. If you'd like to build this habit, begin at topic 2 (Data Cleaning)."},{"q":"A colleague shares R code that AI wrote to join two datasets. What should you check before running it?","options":["Whether the join key is correct and how it handles non-matching rows","Nothing — if it runs without errors, it's fine","Only the output table's row count","Whether the AI model used was the newest version"],"answer":0,"explain":"If you can evaluate join logic and edge cases, try the Advanced topic (topic 8). If code review is unfamiliar, start at topic 1 and work up to Coding with AI (topic 3)."}]}
 </script>
 </div>
 

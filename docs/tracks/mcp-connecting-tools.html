@@ -133,6 +133,10 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Self-Paced Tracks</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../paths.html"> 
+<span class="menu-text">Learning Paths</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../tools.html"> 
 <span class="menu-text">Tools &amp; Access</span></a>
   </li>  
@@ -169,6 +173,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#check-your-readiness" id="toc-check-your-readiness" class="nav-link" data-scroll-target="#check-your-readiness">Check your readiness</a></li>
   <li><a href="#recommended-readings" id="toc-recommended-readings" class="nav-link" data-scroll-target="#recommended-readings">Recommended readings</a></li>
   <li><a href="#useful-resources" id="toc-useful-resources" class="nav-link" data-scroll-target="#useful-resources">Useful resources</a></li>
+  <li><a href="#navigate" id="toc-navigate" class="nav-link" data-scroll-target="#navigate">Navigate</a></li>
   </ul>
 </nav>
     </div>
@@ -195,7 +200,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="topic-badges">
-<p><span class="level-badge level-advanced">Advanced</span> · <strong>Technical &amp; Agentic</strong> track · ~1 hour, self-paced</p>
+<p><span class="level-badge level-advanced">Advanced</span> · <strong>Technical &amp; Agentic</strong> track · ~35 min hands-on + readings and quiz</p>
 </div>
 <p><a href="../tracks/technical-agentic.html" class="track-back">← Back to the Technical &amp; Agentic track</a></p>
 <p><em>Understand how assistants connect to real systems — and the access risks that come with it.</em></p>
@@ -217,20 +222,69 @@ ul.task-list li input[type="checkbox"] {
 <details class="activity"><summary>Activity 1 · Advanced — Map a connection with least privilege</summary>
 <p><strong>Time</strong> ~15 min · <strong>Tools</strong> conceptual + the connector’s docs</p>
 <p><strong>Goal.</strong> Plan a safe AI-to-tool connection.</p>
-<p><strong>Setup.</strong> Pick a task that would need AI to reach a tool or data source (e.g., read a shared folder of public reports).</p>
+<p><strong>Setup.</strong> Work through this concrete scenario:</p>
+<p><strong>The task:</strong> You want to connect Claude Desktop to your OneDrive folder containing de-identified crash data files (CSVs and PDFs of published reports) so you can ask questions about the data without manually copying and pasting. The folder is <code>Pedestrian Safety Study / Public Data</code>.</p>
+<p><strong>The over-scoped version:</strong> You connect Claude to your entire OneDrive — every folder, every file, read and write access. This is faster to set up.</p>
+<p><strong>The least-privilege version:</strong> You connect Claude to only the <code>Pedestrian Safety Study / Public Data</code> subfolder, read-only access, no access to any other folder including the parent <code>Pedestrian Safety Study</code> folder (which contains identified data, IRB documents, and personnel files).</p>
 <p><strong>Steps.</strong></p>
 <ol type="1">
-<li><p>Write exactly what access the task needs — then the narrowest version that still works (read-only? one folder?).</p></li>
+<li><p>Map out what each version can access:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>Over-scoped</th>
+<th>Least-privilege</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Can read public crash CSVs</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>Can read published PDF reports</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td>Can read IRB protocols with participant details</td>
+<td>Yes</td>
+<td><strong>No</strong></td>
+</tr>
+<tr class="even">
+<td>Can read personnel files with salaries</td>
+<td>Yes</td>
+<td><strong>No</strong></td>
+</tr>
+<tr class="odd">
+<td>Can read your email drafts</td>
+<td>Yes</td>
+<td><strong>No</strong></td>
+</tr>
+<tr class="even">
+<td>Can modify or delete files</td>
+<td>Yes</td>
+<td><strong>No</strong></td>
+</tr>
+<tr class="odd">
+<td>Can write new files into any folder</td>
+<td>Yes</td>
+<td><strong>No</strong></td>
+</tr>
+</tbody>
+</table></li>
 <li><p>Get a second opinion:</p>
 <blockquote class="blockquote">
-<p>Here’s the task and the access I’m considering. What’s the least-privilege version, and what could go wrong if it’s over-scoped? [task]</p>
+<p>I want to connect an AI assistant (Claude Desktop via MCP) to a OneDrive subfolder containing de-identified crash data CSVs and published reports. The parent folder contains identified data and IRB documents. I’m considering read-only access to only the public-data subfolder. What’s the least-privilege version of this, and what could go wrong if I connected the whole OneDrive instead?</p>
 </blockquote></li>
-<li><p>Decide read-only vs.&nbsp;write, and what stays off-limits.</p></li>
+<li><p>Decide: Is even read-only access to the subfolder acceptable under Drexel’s data rules, given that the files are de-identified and public? What would change if the folder also contained files with ZIP codes and dates that could theoretically re-identify?</p></li>
 </ol>
-<p><strong>Expected result.</strong> A least-privilege access plan.</p>
-<p><strong>Check your work.</strong> Could a misbehaving connection do damage with this access? If so, narrow it.</p>
-<p><strong>Common pitfalls.</strong> Convenience tempts over-permissioning. Prefer read-only; confirm Drexel rules before connecting any real or sensitive system.</p>
-<p><strong>Stretch (optional).</strong> Decide whether the connection is even worth the risk versus a manual copy-paste.</p>
+<p><strong>Expected result.</strong> A least-privilege access plan: read-only, single subfolder, no access to parent directories. You should also have identified that the over-scoped version would expose IRB protocols, personnel files, and email drafts to the AI — none of which are needed for the task.</p>
+<p><strong>Check your work.</strong> Ask: “If this connection misbehaved or was compromised, what’s the worst it could do?” With least-privilege, the worst case is reading de-identified public data. With over-scoped access, the worst case is reading (and potentially leaking) identified research data, personnel records, and IRB documents.</p>
+<p><strong>Common pitfalls.</strong> Convenience tempts over-permissioning. “I’ll just connect the whole drive so I don’t have to reconfigure later” is the most common mistake. Prefer read-only; confirm Drexel rules before connecting any system.</p>
+<p><strong>Stretch (optional).</strong> Decide whether the connection is even worth the risk versus manually copying the specific CSV into the chat. For a one-time question, copy-paste may be safer than a persistent connection.</p>
 </details>
 <details class="activity"><summary>Activity 2 · Advanced — Risk-check the connection</summary>
 <p><strong>Time</strong> ~12 min · <strong>Tools</strong> conceptual</p>
@@ -274,6 +328,12 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="https://modelcontextprotocol.io">Model Context Protocol</a> — the open MCP standard.</li>
 <li><a href="https://drexel.edu/provost/ai/tools">ChatGPT Edu (Drexel AI Tools)</a> — the approved tool, with data rules.</li>
 </ul>
+<hr>
+</section>
+<section id="navigate" class="level2">
+<h2 class="anchored" data-anchor-id="navigate">Navigate</h2>
+<p><strong>Back to track overview:</strong> <a href="../tracks/technical-agentic.html">Technical &amp; Agentic</a></p>
+<p><strong>Related topics:</strong> <a href="../tracks/building-agents.html">Building AI Agents with Natural Language</a> · <a href="../tracks/data-security-classification.html">Data Security &amp; Classification Deep-Dive</a></p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">

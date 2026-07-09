@@ -3,7 +3,7 @@ title: "Creating & Using Loops"
 ---
 
 ::: {.topic-badges}
-[Advanced]{.level-badge .level-advanced} · **Technical & Agentic** track · ~1 hour, self-paced
+[Advanced]{.level-badge .level-advanced} · **Technical & Agentic** track · ~35 min hands-on + readings and quiz
 :::
 
 [← Back to the Technical & Agentic track](technical-agentic.qmd){.track-back}
@@ -112,6 +112,14 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 
 - [OpenAI: Building Agents](https://platform.openai.com/docs/guides/agents) — loop and workflow patterns.
 - [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with data rules.
+
+---
+
+## Navigate
+
+**Next in this track:** [Local Models via Ollama](local-models-ollama.qmd)
+
+**Related topics:** [Building AI Agents with Natural Language](building-agents.qmd) · [Creating & Using Skills](creating-skills.qmd)
 
 ::: {.callout-warning}
 ## Data rules

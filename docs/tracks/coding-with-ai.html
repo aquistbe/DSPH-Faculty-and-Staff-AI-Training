@@ -168,6 +168,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Self-Paced Tracks</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../paths.html"> 
+<span class="menu-text">Learning Paths</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../tools.html"> 
 <span class="menu-text">Tools &amp; Access</span></a>
   </li>  
@@ -204,6 +208,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#check-your-readiness" id="toc-check-your-readiness" class="nav-link" data-scroll-target="#check-your-readiness">Check your readiness</a></li>
   <li><a href="#recommended-readings" id="toc-recommended-readings" class="nav-link" data-scroll-target="#recommended-readings">Recommended readings</a></li>
   <li><a href="#useful-resources" id="toc-useful-resources" class="nav-link" data-scroll-target="#useful-resources">Useful resources</a></li>
+  <li><a href="#navigate" id="toc-navigate" class="nav-link" data-scroll-target="#navigate">Navigate</a></li>
   </ul>
 </nav>
     </div>
@@ -230,7 +235,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <div class="topic-badges">
-<p><span class="level-badge level-moderate">Moderate</span> · <strong>Data &amp; Analysis</strong> track · ~1 hour, self-paced</p>
+<p><span class="level-badge level-moderate">Moderate</span> · <strong>Data &amp; Analysis</strong> track · ~35 min hands-on + readings and quiz</p>
 </div>
 <p><a href="../tracks/data-analysis.html" class="track-back">← Back to the Data &amp; Analysis track</a></p>
 <p><em>A strong pair-programmer for R, Python, and Stata — that you always review.</em></p>
@@ -252,16 +257,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <details class="activity"><summary>Activity 1 · Moderate — Explain and fix a broken script</summary>
 <p><strong>Time</strong> ~18 min · <strong>Tools</strong> ChatGPT Edu + R (or Python)</p>
 <p><strong>Goal.</strong> Use AI to debug code you actually understand before trusting it.</p>
-<p><strong>Setup.</strong> Download the <a href="https://hub.arcgis.com/api/v3/datasets/21154a8f1894449f839d2288726e9837_0/downloads/data?format=csv&amp;spatialRefId=3857&amp;where=1%3D1">Crash Data 2020–2024 (CSV)</a>. Below is a short R script with a deliberate bug — it should count pedestrian-involved crashes but returns 0 (wrong column name, and NAs not handled):</p>
+<p><strong>Setup.</strong> Download the <a href="https://hub.arcgis.com/api/v3/datasets/21154a8f1894449f839d2288726e9837_0/downloads/data?format=csv&amp;spatialRefId=3857&amp;where=1%3D1">Crash Data 2020–2024 (CSV)</a>. Below are buggy scripts in R and Stata — pick your language. Each should count pedestrian-involved crashes but returns 0 (wrong column name, NAs not handled):</p>
+<p><strong>R version:</strong></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>crashes <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"crashes.csv"</span>)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>ped <span class="ot">&lt;-</span> crashes <span class="sc">%&gt;%</span> <span class="fu">filter</span>(PEDESTRIAN <span class="sc">&gt;</span> <span class="dv">0</span>)   <span class="co"># column may be named differently; NAs ignored</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(ped)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Stata version:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>import delimited <span class="st">"crashes.csv"</span>, <span class="kw">clear</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">count</span> <span class="kw">if</span> pedestrian &gt; 0   <span class="co">// variable name may differ; missings treated as large numbers</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Steps.</strong></p>
 <ol type="1">
 <li><p>Paste the script, the column names, and the wrong result into ChatGPT Edu:</p>
 <blockquote class="blockquote">
-<p>This R script should count Philadelphia crashes involving a pedestrian, but it returns 0. Here are the script and the actual column names. Explain what’s wrong and show the <strong>minimal</strong> change — don’t rewrite the whole thing.</p>
+<p>This [R/Stata] script should count Philadelphia crashes involving a pedestrian, but it returns 0 (or the wrong number). Here are the script and the actual column names. Explain what’s wrong and show the <strong>minimal</strong> change — don’t rewrite the whole thing.</p>
 </blockquote></li>
 <li><p>Apply the fix (likely the correct field name + NA handling) and run it.</p></li>
 <li><p>Confirm the fix is actually correct:</p>
@@ -318,6 +327,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><a href="https://posit.co">Posit / RStudio</a> — R/Python environment with AI integrations.</li>
 <li><a href="https://code.visualstudio.com">Visual Studio Code</a> — editor with AI coding extensions.</li>
 </ul>
+<hr>
+</section>
+<section id="navigate" class="level2">
+<h2 class="anchored" data-anchor-id="navigate">Navigate</h2>
+<p><strong>Next in this track:</strong> <a href="../tracks/statistical-interpretation.html">Statistical Interpretation across Stata, R &amp; Python</a></p>
+<p><strong>Related topics:</strong> <a href="../tracks/statistical-interpretation.html">Statistical Interpretation across Stata, R &amp; Python</a> · <a href="../tracks/data-cleaning.html">Data Cleaning, Recoding &amp; Codebooks</a></p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">

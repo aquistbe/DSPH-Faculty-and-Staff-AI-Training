@@ -3,7 +3,7 @@ title: "De-identification & Synthetic Data"
 ---
 
 ::: {.topic-badges}
-[Moderate]{.level-badge .level-moderate} · **Methods & Study Design** track · ~1 hour, self-paced
+[Moderate]{.level-badge .level-moderate} · **Methods & Study Design** track · ~35 min hands-on + readings and quiz
 :::
 
 [← Back to the Methods & Study Design track](methods-study-design.qmd){.track-back}
@@ -32,7 +32,17 @@ Neither is magic. De-identified data can sometimes be re-identified by combining
 
 **Goal.** Apply Safe Harbor-style de-identification and test re-identification risk.
 
-**Setup.** A small **fabricated** sample with quasi-identifiers (age, ZIP, admission date, sex).
+**Setup.** Use this **fabricated** emergency department visit table:
+
+| Patient Name | DOB | Age | Sex | ZIP | Visit Date | Diagnosis | Provider |
+|-------------|-----|-----|-----|-----|------------|-----------|----------|
+| Maria Santos | 1992-04-15 | 34 | F | 19134 | 2026-03-10 | Tibial fracture, pedestrian struck by vehicle | Dr. Okafor |
+| James Henderson | 1954-11-02 | 71 | M | 19143 | 2026-03-12 | Hip fracture, fall on broken sidewalk | Dr. Okafor |
+| Linh Nguyen | 1998-07-22 | 27 | F | 19120 | 2026-03-14 | Concussion, bicycle-vehicle collision | Dr. Patel |
+| Robert Jackson | 1943-09-30 | 82 | M | 19104 | 2026-03-10 | Subdural hematoma, pedestrian struck at crosswalk | Dr. Amadi |
+| Destiny Brown | 2009-06-18 | 16 | F | 19131 | 2026-03-15 | Wrist fracture, fell off e-scooter | Dr. Patel |
+
+This is entirely fabricated — no real patients. But it contains the full range of HIPAA identifiers: names, dates of birth, exact ages, ZIP codes, visit dates, and provider names.
 
 **Steps.**
 
@@ -114,6 +124,14 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 
 - [HHS De-identification Guidance](https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/index.html) — HIPAA Safe Harbor and Expert Determination.
 - [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with data rules.
+
+---
+
+## Navigate
+
+**Next in this track:** [Geospatial / GIS & Built Environment](geospatial-gis.qmd)
+
+**Related topics:** [Data Security & Classification Deep-Dive](data-security-classification.qmd) · [Data Cleaning, Recoding & Codebooks](data-cleaning.qmd)
 
 ::: {.callout-warning}
 ## Data rules
