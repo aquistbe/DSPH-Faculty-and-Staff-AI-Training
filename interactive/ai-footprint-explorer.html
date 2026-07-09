@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI's Environmental Footprint: A Reality Check</title>
+<style>
+/* ============ tokens ============ */
+:root{
+  /* Drexel brand — page chrome & typography only */
+  --brand-navy:#07294D;
+  --brand-gold:#FFC600;
+  --brand-teal:#006699;
+  --brand-crimson:#971B2F;
+  /* dataviz roles (validated palette — marks only) */
+  --surface-1:#fcfcfb;
+  --page:#f6f5f2;
+  --text-primary:#0b0b0b;
+  --text-secondary:#52514e;
+  --muted:#898781;
+  --grid:#e1e0d9;
+  --baseline:#c3c2b7;
+  --hairline:rgba(11,11,11,0.10);
+  --series-energy:#2a78d6;   /* categorical slot 1: blue  — energy accent */
+  --series-water:#1baf7a;    /* categorical slot 2: aqua  — water accent  */
+  --ord-light:#86b6ef;       /* sequential step 250 — small model / manual */
+  --ord-dark:#1c5cab;        /* sequential step 550 — frontier / AI       */
+  --context-gray:#b4b3ab;    /* de-emphasis gray for context bars */
+  --whisker:#52514e;
+  --sans:system-ui,-apple-system,"Segoe UI",sans-serif;
+  --serif:Georgia,"Times New Roman",serif;
+  --labelw:225px;
+  --rpad:130px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--page);color:var(--text-primary);font-family:var(--sans);font-size:15px;line-height:1.55}
+.wrap{max-width:1020px;margin:0 auto;padding:0 20px 60px}
+
+/* ============ page chrome (Drexel brand) ============ */
+header.site{padding:44px 0 8px}
+.kicker{font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--brand-teal);font-weight:600;margin:0 0 10px}
+h1{font-family:var(--serif);color:var(--brand-navy);font-size:clamp(28px,4.4vw,40px);line-height:1.15;margin:0 0 14px;font-weight:700}
+.gold-rule{width:64px;height:5px;background:var(--brand-gold);margin:0 0 18px}
+.intro{max-width:760px;color:var(--text-secondary);font-size:16px}
+.intro strong{color:var(--text-primary)}
+h2{font-family:var(--serif);color:var(--brand-navy);font-size:24px;margin:0 0 4px;font-weight:700}
+h3{font-family:var(--serif);color:var(--brand-navy);font-size:17px;margin:0 0 8px;font-weight:700}
+.mod-sub{color:var(--text-secondary);margin:0 0 18px;max-width:760px}
+section.module{margin-top:44px;background:var(--surface-1);border:1px solid var(--hairline);border-radius:10px;padding:26px 26px 24px}
+section.plain{background:none;border:none;padding:0}
+
+/* ============ controls ============ */
+.ctrlrow{position:sticky;top:0;z-index:50;background:var(--page);padding:12px 0;margin-top:26px;border-bottom:1px solid var(--hairline);display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.ctrl-label{font-size:13px;color:var(--text-secondary)}
+.seg{display:inline-flex;border:1px solid var(--hairline);border-radius:8px;overflow:hidden;background:var(--surface-1)}
+.seg button{font:600 13px var(--sans);padding:7px 16px;border:none;background:transparent;color:var(--text-secondary);cursor:pointer}
+.seg button+button{border-left:1px solid var(--hairline)}
+.seg button[aria-pressed="true"]{background:var(--brand-navy);color:#fff}
+.seg button:focus-visible{outline:2px solid var(--brand-teal);outline-offset:-2px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 20px}
+.chip{font:600 13px var(--sans);padding:8px 14px;border-radius:20px;border:1px solid var(--brand-navy);background:#fff;color:var(--brand-navy);cursor:pointer;text-align:left}
+.chip .csub{display:block;font-weight:400;font-size:11px;color:var(--text-secondary)}
+.chip[aria-pressed="true"]{background:var(--brand-navy);color:#fff}
+.chip[aria-pressed="true"] .csub{color:rgba(255,255,255,.75)}
+.chip:focus-visible{outline:2px solid var(--brand-teal);outline-offset:2px}
+.lowconf-tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--brand-crimson);border:1px solid var(--brand-crimson);border-radius:3px;padding:0 4px;margin-left:6px;vertical-align:1px}
+.chip[aria-pressed="true"] .lowconf-tag{color:#ffd9de;border-color:#ffd9de}
+.tbtn{font:600 12px var(--sans);padding:6px 12px;border:1px solid var(--hairline);border-radius:6px;background:#fff;color:var(--text-secondary);cursor:pointer}
+.tbtn[aria-pressed="true"]{background:var(--brand-navy);color:#fff;border-color:var(--brand-navy)}
+.tbtn:focus-visible{outline:2px solid var(--brand-teal);outline-offset:2px}
+.modhead{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+
+/* ============ charts (HTML bars) ============ */
+.chart-title{font:600 13.5px var(--sans);color:var(--text-primary);margin:18px 0 2px}
+.chart-note{font-size:12px;color:var(--muted);margin:0 0 8px}
+.lchart{position:relative;margin:6px 0 4px;min-width:0}
+.lgrid{position:absolute;top:0;bottom:0;left:var(--labelw);right:var(--rpad);z-index:0}
+.gline{position:absolute;top:0;bottom:0;width:1px;background:var(--grid)}
+.gline.base{background:var(--baseline)}
+.brow{display:flex;align-items:center;min-height:38px;position:relative;z-index:1;border-radius:4px}
+.brow:focus-visible{outline:2px solid var(--brand-teal);outline-offset:1px}
+.brow:hover .bbar,.brow:focus-visible .bbar{filter:brightness(.88)}
+.brow:hover .ddot,.brow:focus-visible .ddot{filter:brightness(.88)}
+.blabel{width:var(--labelw);flex:none;padding-right:14px;font-size:12.5px;color:var(--text-primary);line-height:1.25}
+.blabel .lsub{display:block;font-size:11px;color:var(--muted)}
+.btrack{flex:1;position:relative;margin-right:var(--rpad);height:38px;overflow:visible}
+.bbar{position:absolute;left:0;top:50%;transform:translateY(-50%);height:16px;min-width:2px;border-radius:0 4px 4px 0;transition:width .45s ease;z-index:2}
+.bwhisk{position:absolute;top:50%;height:10px;transform:translateY(-50%);border-left:2px solid var(--whisker);border-right:2px solid var(--whisker);transition:left .45s ease,width .45s ease;z-index:3}
+.bwhisk::after{content:"";position:absolute;left:0;right:0;top:50%;height:2px;transform:translateY(-50%);background:var(--whisker)}
+.bval{position:absolute;top:50%;transform:translateY(-50%);font-size:12px;color:var(--text-secondary);white-space:nowrap;padding-left:9px;transition:left .45s ease;z-index:4;font-variant-numeric:tabular-nums}
+.baxis{margin-left:var(--labelw);margin-right:var(--rpad);position:relative;height:24px}
+.atick{position:absolute;top:5px;transform:translateX(-50%);font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.axis-title{margin-left:var(--labelw);font-size:11.5px;color:var(--muted);padding-bottom:4px}
+/* dumbbell */
+.dconn{position:absolute;top:50%;height:2px;transform:translateY(-50%);background:var(--baseline);transition:left .45s ease,width .45s ease;z-index:1}
+.dhit{position:absolute;top:50%;width:28px;height:28px;transform:translate(-50%,-50%);transition:left .45s ease;z-index:3}
+.ddot{position:absolute;left:50%;top:50%;width:12px;height:12px;transform:translate(-50%,-50%);border-radius:50%;border:2px solid var(--surface-1)}
+.dval{position:absolute;transform:translateX(-50%);font-size:11.5px;color:var(--text-secondary);white-space:nowrap;transition:left .45s ease;z-index:4;font-variant-numeric:tabular-nums}
+.dval.above{top:-1px}
+.dval.below{bottom:-1px}
+/* legend */
+.legend{display:flex;gap:18px;flex-wrap:wrap;margin:10px 0 2px;font-size:12.5px;color:var(--text-secondary)}
+.legend .li{display:inline-flex;align-items:center;gap:7px}
+.sw{width:14px;height:14px;border-radius:3px;flex:none}
+.sw.dot{border-radius:50%;width:12px;height:12px}
+/* tooltip */
+#tt{position:fixed;z-index:200;pointer-events:none;background:#fff;border:1px solid var(--hairline);box-shadow:0 4px 16px rgba(11,11,11,.14);border-radius:8px;padding:10px 12px;max-width:340px;display:none}
+#tt .tt-val{font:700 15px var(--sans);color:var(--text-primary)}
+#tt .tt-name{font-size:12.5px;color:var(--text-secondary);margin-top:1px}
+#tt .tt-range{font-size:12px;color:var(--text-secondary);margin-top:6px;font-variant-numeric:tabular-nums}
+#tt .tt-src{font-size:11.5px;color:var(--muted);margin-top:6px;border-top:1px solid var(--grid);padding-top:6px}
+/* tables */
+table.dt{border-collapse:collapse;width:100%;font-size:13px;margin:10px 0 4px}
+table.dt caption{text-align:left;font:600 13.5px var(--sans);padding:6px 0;color:var(--text-primary)}
+table.dt th{text-align:left;font-weight:600;color:var(--text-secondary);border-bottom:1px solid var(--baseline);padding:6px 10px 6px 0}
+table.dt td{border-bottom:1px solid var(--grid);padding:6px 10px 6px 0;vertical-align:top}
+table.dt td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+table.dt td.src{color:var(--muted);font-size:12px;max-width:340px}
+/* stat tiles */
+.kpirow{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:16px}
+.tile{background:#fff;border:1px solid var(--hairline);border-radius:8px;padding:14px 16px}
+.tile .tlabel{font-size:12px;color:var(--text-secondary);margin-bottom:6px}
+.tile .tval{font:600 17px/1.35 var(--sans);color:var(--text-primary)}
+.tile .tproj{font-size:12.5px;color:var(--text-secondary);margin-top:6px}
+.tile .tsrc{font-size:11px;color:var(--muted);margin-top:8px;border-top:1px solid var(--grid);padding-top:6px}
+.herotile .tval{font:600 46px/1 var(--sans);color:var(--text-primary)}
+.herotile .tsub{font-size:13px;color:var(--text-secondary);margin-top:8px}
+.ctgrid{display:grid;grid-template-columns:minmax(230px,1fr) 1.5fr;gap:16px;margin-top:20px;align-items:stretch}
+.caveat{background:#fffbe9;border:1px solid var(--hairline);border-left:4px solid var(--brand-gold);border-radius:6px;padding:14px 16px;font-size:13.5px;color:var(--text-primary)}
+.caveat .cv-head{font-weight:700;color:var(--brand-navy);margin-bottom:4px}
+/* prose caveats */
+.prose-caveats{margin-top:18px;font-size:14px;color:var(--text-primary);max-width:820px}
+.prose-caveats ol{margin:8px 0 0;padding-left:22px}
+.prose-caveats li{margin-bottom:8px}
+/* explainer / callout */
+details.exp{border-bottom:1px solid var(--grid);padding:10px 0}
+details.exp summary{cursor:pointer;font-weight:600;font-size:14.5px;color:var(--brand-navy);list-style-position:outside}
+details.exp summary:focus-visible{outline:2px solid var(--brand-teal);outline-offset:2px}
+details.exp p{margin:8px 0 2px;color:var(--text-secondary);font-size:14px;max-width:800px}
+.unknown{background:#f1f0ec;border:1px solid var(--hairline);border-radius:10px;padding:22px 26px}
+.unknown ul{margin:10px 0 0;padding-left:20px}
+.unknown li{margin-bottom:10px;color:var(--text-primary);font-size:14px;max-width:820px}
+/* inline warning */
+.inline-warn{display:none;font-size:13px;color:var(--brand-crimson);background:#fdf3f4;border:1px solid rgba(151,27,47,.25);border-radius:6px;padding:8px 12px;margin:10px 0 4px;max-width:820px}
+.inline-warn.show{display:block}
+/* footer */
+footer{margin-top:48px;border-top:1px solid var(--baseline);padding-top:22px;font-size:13px;color:var(--text-secondary)}
+footer h2{font-size:19px}
+footer ol{padding-left:20px}
+footer li{margin-bottom:6px}
+.prepnote{margin-top:16px;font-style:italic;color:var(--muted)}
+.srhint{font-size:12px;color:var(--muted);margin:2px 0 0}
+.exp-flat{border-bottom:1px solid var(--grid);padding:10px 0;font-weight:600;font-size:14.5px;color:var(--brand-navy)}
+@media (max-width:720px){
+  :root{--labelw:128px;--rpad:96px}
+  .blabel{font-size:11.5px}
+  .blabel .lsub{display:none}
+  section.module{padding:18px 14px}
+  .ctgrid{grid-template-columns:1fr}
+  #modA-charts,#modB-chart,#modC-chart,#modA-tables,#modB-table,#modC-table{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .lchart{min-width:540px}
+  table.dt{min-width:540px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="site">
+  <p class="kicker">AI for Urban Health &middot; Interactive Explorer</p>
+  <h1>AI&rsquo;s Environmental Footprint: A Reality Check</h1>
+  <div class="gold-rule"></div>
+  <p class="intro">How much energy and water does one AI query actually use &mdash; and how does that compare to things you already do every day? This is a genuinely contested question: <strong>credible public estimates disagree by 10&ndash;30&times;</strong> depending on methodology, so this tool shows <strong>ranges with sources, not single truths</strong> &mdash; here&rsquo;s what&rsquo;s actually known, and what isn&rsquo;t. Hover (or keyboard-focus) any bar or dot for the exact figures and the source behind them.</p>
+</header>
+
+<div class="ctrlrow" id="ctrlrow">
+  <span class="ctrl-label" id="lvl-label">Estimate basis (applies to all range-based charts below):</span>
+  <div class="seg" role="group" aria-labelledby="lvl-label" id="levelseg">
+    <button data-level="low" aria-pressed="false">Low</button>
+    <button data-level="mid" aria-pressed="true">Mid</button>
+    <button data-level="high" aria-pressed="false">High</button>
+  </div>
+</div>
+
+<!-- ============ MODULE A ============ -->
+<section class="module" aria-labelledby="modA-h">
+  <div class="modhead">
+    <div>
+      <h2 id="modA-h">Put an AI task on a familiar scale</h2>
+      <p class="mod-sub">Pick an AI task. Its estimated energy and water use (colored bar, with the whisker showing the low&ndash;high range across published estimates) is placed on the same axis as everyday activities (gray bars). <strong>Note the log scale</strong> &mdash; each gridline is 10&times; the previous one.</p>
+    </div>
+    <button class="tbtn" id="btn-tableA" aria-pressed="false">View as table</button>
+  </div>
+  <div class="chips" id="task-chips" role="group" aria-label="Choose an AI task"></div>
+  <div class="inline-warn" id="video-warn"><strong>Low-confidence figure:</strong> this video estimate comes from one open academic model (CogVideoX) on research hardware. Commercial models like Sora or Veo have never disclosed per-video figures &mdash; treat this as a rough order of magnitude only.</div>
+  <div id="modA-charts">
+    <div class="legend" aria-hidden="false">
+      <span class="li"><span class="sw" style="background:var(--series-energy)"></span>Selected AI task &mdash; energy</span>
+      <span class="li"><span class="sw" style="background:var(--series-water)"></span>Selected AI task &mdash; water</span>
+      <span class="li"><span class="sw" style="background:var(--context-gray)"></span>Everyday comparison (context)</span>
+      <span class="li"><span class="sw" style="background:none;border-left:2px solid var(--whisker);border-right:2px solid var(--whisker);border-radius:0;height:10px"></span>Low&ndash;high range of estimates</span>
+    </div>
+    <p class="chart-title" id="energy-title">Energy per task</p>
+    <div class="lchart" id="chartA-energy"></div>
+    <p class="chart-title" id="water-title">Water per task</p>
+    <p class="chart-note">Water figures for AI mix on-site cooling and (for some sources) lifecycle/indirect water &mdash; see each bar&rsquo;s source note.</p>
+    <div class="lchart" id="chartA-water"></div>
+  </div>
+  <div id="modA-tables" hidden></div>
+</section>
+
+<!-- ============ MODULE B ============ -->
+<section class="module" aria-labelledby="modB-h">
+  <div class="modhead">
+    <div>
+      <h2 id="modB-h">AI task vs. doing it yourself</h2>
+      <p class="mod-sub">Each row compares the device-side energy of an AI query against roughly 20 minutes of active laptop use &mdash; a stand-in for doing a simple task manually. Shared log axis.</p>
+    </div>
+    <button class="tbtn" id="btn-tableB" aria-pressed="false">View as table</button>
+  </div>
+  <div id="modB-chart">
+    <div class="legend">
+      <span class="li"><span class="sw dot" style="background:var(--ord-dark)"></span>AI query (energy)</span>
+      <span class="li"><span class="sw dot" style="background:var(--ord-light)"></span>Manual: 20 min of laptop use</span>
+    </div>
+    <div class="lchart" id="chartB"></div>
+  </div>
+  <div id="modB-table" hidden></div>
+  <div class="prose-caveats">
+    <h3>Read this chart with four caveats</h3>
+    <ol>
+      <li><strong>The laptop runs regardless.</strong> You don&rsquo;t power your laptop down the moment you stop typing, so the manual-task figure is <em>marginal</em>, not truly <em>avoided</em>, energy. The comparison overstates the manual cost.</li>
+      <li><strong>Substitution cuts both ways.</strong> One AI answer might replace several manual searches (favoring AI) &mdash; or AI&rsquo;s near-zero cost per query might create queries that would never otherwise happen at all (the rebound effect, disfavoring AI). Both are real, and this comparison cannot tell you which dominates for any given use.</li>
+      <li><strong>This only counts device-side electricity.</strong> It says nothing about water use, or about <em>where</em> the electricity and water are drawn &mdash; a data center&rsquo;s footprint is concentrated in one community; your laptop&rsquo;s is not.</li>
+      <li><strong>It says nothing about community-level impacts</strong> &mdash; local grid strain, water stress in specific regions like Phoenix &mdash; which is the actual subject of the WSJ piece this course read. Per-query math cannot answer a siting question.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ MODULE C ============ -->
+<section class="module" aria-labelledby="modC-h">
+  <div class="modhead">
+    <div>
+      <h2 id="modC-h">Right-sizing: your choices matter</h2>
+      <p class="mod-sub">For a simple query, a frontier model uses on the order of 10&ndash;100&times; the energy of a small model that would answer it just as well. Model choice is the single largest per-query lever a user controls.</p>
+    </div>
+    <button class="tbtn" id="btn-tableC" aria-pressed="false">View as table</button>
+  </div>
+  <div id="modC-chart">
+    <div class="legend">
+      <span class="li"><span class="sw" style="background:var(--ord-light)"></span>Small model</span>
+      <span class="li"><span class="sw" style="background:var(--ord-dark)"></span>Frontier model</span>
+    </div>
+    <div class="lchart" id="chartC"></div>
+    <p class="chart-note" id="chartC-note"></p>
+  </div>
+  <div id="modC-table" hidden></div>
+  <div class="ctgrid">
+    <div class="tile herotile">
+      <div class="tlabel">Efficiency is improving fast</div>
+      <div class="tval" id="eff-hero">33&times;</div>
+      <div class="tsub">more energy-efficient per median prompt (and 44&times; lower carbon), May 2024 to May 2025.</div>
+      <div class="tsrc">Source: Google, 2025</div>
+    </div>
+    <div class="caveat">
+      <div class="cv-head">&hellip;but don&rsquo;t read that stat alone (Jevons paradox)</div>
+      But Google&rsquo;s total data-center electricity use still rose roughly 27% and water use roughly 34% over a similar period &mdash; a textbook Jevons paradox: far more efficient per query, yet total footprint still growing because usage grew faster than efficiency improved.
+    </div>
+  </div>
+</section>
+
+<!-- ============ MODULE D ============ -->
+<section class="module" aria-labelledby="modD-h">
+  <h2 id="modD-h">Zooming out: the aggregate numbers</h2>
+  <p class="mod-sub">Per-query numbers are small; the aggregate footprint is not. It is real, it is growing fast, and it is concentrated in particular places. These are the headline figures, stated plainly.</p>
+  <div class="kpirow" id="kpirow"></div>
+</section>
+
+<!-- ============ MODULE E ============ -->
+<section class="module" aria-labelledby="modE-h">
+  <h2 id="modE-h">Why do the public numbers disagree so much?</h2>
+  <p class="mod-sub">Estimates for the same task differ by 10&ndash;30&times; in the public record. That isn&rsquo;t (mostly) anyone lying &mdash; it&rsquo;s six methodological choices that compound. Expand each one.</p>
+  <div id="whylist"></div>
+</section>
+
+<!-- ============ MODULE F ============ -->
+<section class="plain module-f" aria-labelledby="modF-h" style="margin-top:44px">
+  <div class="unknown">
+    <h2 id="modF-h">What we genuinely don&rsquo;t know</h2>
+    <p class="mod-sub" style="margin-bottom:0">Epistemic humility is the point of this section, not a footnote. Anyone quoting precise figures for the items below is estimating, not reporting.</p>
+    <ul id="unknownlist"></ul>
+  </div>
+</section>
+
+<footer>
+  <h2>Sources</h2>
+  <p>Every figure in this tool carries one of the following source strings (also shown on hover and in each table view):</p>
+  <ol id="sourcelist"></ol>
+  <p class="prepnote">Prepared 2026-07-09 &mdash; this is a fast-moving topic; treat exact figures as illustrative of order of magnitude and recheck primary sources for anything load-bearing.</p>
+</footer>
+
+</div>
+<div id="tt" role="status" aria-hidden="true"></div>
+
+<script>
+"use strict";
+const DATA = {
+  preparedDate: "2026-07-09",
+  aiTasks: {
+    small_text: { label: "Small/light model text query", sub: "e.g. GPT-4o mini class", energyWh: {low:0.016, mid:0.03, high:0.1}, waterML: {low:0.02, mid:0.05, high:0.3}, source: "MIT Technology Review, 2025 (measured via U. Michigan ML.Energy leaderboard, Llama 3.1 8B)" },
+    frontier_text: { label: "Typical frontier chatbot query", sub: "a normal back-and-forth exchange", energyWh: {low:0.1, mid:0.3, high:3}, waterML: {low:0.12, mid:0.3, high:45}, source: "Google, 2025 (median, full-system methodology, Gemini); Epoch AI, 2025; high end from de Vries, Joule 2023 (now considered high for a typical 2025 query, but still cited widely) and Mistral 2025 lifecycle analysis (water, includes indirect/lifecycle water, not just on-site)" },
+    complex_text: { label: "Long / complex reasoning query", sub: "10,000+ token context", energyWh: {low:2.5, mid:8, high:40}, waterML: {low:3, mid:10, high:60}, source: "Epoch AI, 2025" },
+    image: { label: "One AI image generation", sub: "e.g. Stable Diffusion class model", energyWh: {low:0.3, mid:1, high:2.9}, waterML: {low:0.4, mid:1.5, high:5}, source: "MIT Technology Review, 2025; Luccioni, Jernite & Strubell, \"Power Hungry Processing,\" FAccT 2024" },
+    video: { label: "One 5-second AI video clip", sub: "academic open model, NOT a commercial product estimate", energyWh: {low:30, mid:940, high:3000}, waterML: {low:40, mid:1200, high:4000}, source: "MIT Technology Review, 2025 (CogVideoX, academic hardware) — commercial models like Sora/Veo have never disclosed per-video figures; treat this as low-confidence, order-of-magnitude only", lowConfidence: true }
+  },
+  everyday: {
+    google_search: { label: "One web search", energyWh: {low:0.2, mid:0.3, high:0.5}, source: "Google, 2009 — never updated since; treat as dated" },
+    netflix_hour: { label: "1 hour of video streaming", energyWh: {low:25, mid:77, high:240}, source: "IEA (Kamiya), 2020; Carbon Brief, 2020" },
+    phone_charge: { label: "Charging a smartphone once", energyWh: {low:12, mid:15, high:20}, source: "Device specs + EPRI, 2024" },
+    laundry: { label: "One load of laundry", energyWh: {low:300, mid:900, high:2300}, source: "Silicon Valley Power appliance data; ENERGY STAR" },
+    dishwasher: { label: "One dishwasher cycle", energyWh: {low:900, mid:1200, high:1800}, source: "ENERGY STAR" },
+    ac_hour: { label: "1 hour of air conditioning", energyWh: {low:500, mid:1500, high:3500}, source: "US DOE / Silicon Valley Power" },
+    kettle: { label: "Boiling a 1-liter kettle", energyWh: {low:100, mid:120, high:150}, source: "Physics (specific heat) + typical losses" },
+    drive_mile_gas: { label: "Driving 1 mile, gas car", energyWh: {low:1000, mid:1200, high:1600}, source: "EPA, fueleconomy.gov" },
+    drive_mile_ev: { label: "Driving 1 mile, EV", energyWh: {low:240, mid:300, high:400}, source: "EPA, fueleconomy.gov" },
+    shower: { label: "A 10-minute shower", waterML: {low:60000, mid:80000, high:95000}, source: "EPA WaterSense" },
+    washer_load_water: { label: "One washing-machine load (water)", waterML: {low:50000, mid:75000, high:150000}, source: "EPA / ENERGY STAR" }
+  },
+  manual: {
+    laptop_20min: { label: "20 min of active laptop use", sub: "roughly the time a manual version of a simple task might take", energyWh: {low:10, mid:17, high:25}, source: "Typical laptop power draw, 30-70W active use" }
+  },
+  rightsizing: {
+    multiplier: { low:10, mid:50, high:100, label: "Frontier vs. small model, same simple query", source: "MIT Technology Review, 2025 (measured, ~60x); Jegham et al., 2025, \"How Hungry is AI?\" (~65x spread across 30 commercial models)" },
+    efficiencyTrend: { energyImprovement: "33x", carbonImprovement: "44x", period: "May 2024 to May 2025", source: "Google, 2025", caveat: "But Google's total data-center electricity use still rose roughly 27% and water use roughly 34% over a similar period — a textbook Jevons paradox: far more efficient per query, yet total footprint still growing because usage grew faster than efficiency improved." }
+  },
+  aggregate: {
+    global_electricity: { label: "Data centers, share of world electricity", now: "415 TWh in 2024 (~1.5%)", proj: "~945 TWh by 2030 (~3% projected)", source: "IEA, \"Energy and AI,\" 2025" },
+    us_electricity: { label: "Data centers, share of US electricity", now: "176 TWh in 2023 (4.4%)", proj: "325-580 TWh by 2028 (6.7-12% projected)", source: "Lawrence Berkeley National Lab / US DOE, Dec 2024" },
+    us_water: { label: "US data-center water use, 2023", now: "228 billion gallons total — 17B direct (on-site cooling) + 211B indirect (via electricity generation)", proj: "indirect water use is roughly 12x direct", source: "Lawrence Berkeley National Lab data, via WSJ reporting, July 2026" },
+    google_water: { label: "Google data-center water use", now: "10.9 billion gallons direct in 2025 (+34% year over year); indirect water via its electricity use is roughly 3x its direct use", source: "Google Environmental Report, 2025; WSJ, July 2026" },
+    phoenix: { label: "Phoenix-area water demand from data centers", now: "roughly 3% of the region's annual water today", proj: "could exceed 20% by 2031 under current buildout projections", source: "WSJ, July 2026" }
+  },
+  dontKnow: [
+    "Anthropic (Claude) and Microsoft Copilot have not published per-query energy or water figures — any number attributed to them online is a third-party estimate, not a company disclosure.",
+    "OpenAI's Sora and Google's Veo have never disclosed per-video energy or water figures. The video estimate in this tool comes from one open academic model on research hardware, not a commercial product — treat it as a rough order of magnitude only.",
+    "No public source distinguishes the mean from the median per-query energy for any commercial chatbot. Since a small number of very long or complex prompts likely use disproportionate energy, the true average is probably meaningfully higher than the median figures companies report.",
+    "There is no authoritative public estimate of what share of data-center electricity use is generative AI specifically, as opposed to cloud computing and computing generally.",
+    "Whether AI queries mostly replace equivalent manual effort (a environmental wash or win) or mostly create demand that would not otherwise exist (a net addition, i.e. the 'rebound effect') has not been studied at population scale — both dynamics are plausible and probably both occur."
+  ],
+  whyEstimatesDisagree: [
+    "Chip-only vs. full-system accounting — including host CPU/RAM and idle failover capacity roughly doubles the number.",
+    "Data-center cooling and power-distribution overhead (PUE) adds another 10-50%.",
+    "Assumed prompt/response length — energy scales with tokens, and worse than linearly for very long context windows.",
+    "Model and hardware generation — measured efficiency improved more than 10x in about two years.",
+    "Whether the (large, one-time) cost of training the model is amortized into the per-query number, and over how much usage.",
+    "Direct water (on-site cooling) vs. indirect water (used to generate the electricity the data center consumes) — these can differ by 10x or more, and most companies report only the direct figure."
+  ]
+};
+
+/* ============ state & helpers ============ */
+const state = { level: "mid", task: "frontier_text" };
+const updaters = []; // each: fn(level) — called on level change
+
+const cssVar = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+function el(tag, cls, text){
+  const e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (text != null) e.textContent = text;
+  return e;
+}
+function fmtNum(v){
+  return v >= 1000 ? v.toLocaleString("en-US") : String(v);
+}
+function fmtVal(v, unit){
+  if (unit === "Wh") return fmtNum(v) + " Wh" + (v >= 1000 ? " (" + fmtNum(v/1000) + " kWh)" : "");
+  return fmtNum(v) + " mL" + (v >= 1000 ? " (" + fmtNum(v/1000) + " L)" : "");
+}
+function rangeText(vals, unit){
+  return "low " + fmtNum(vals.low) + " · mid " + fmtNum(vals.mid) + " · high " + fmtNum(vals.high) + " " + unit;
+}
+const log10 = Math.log10;
+function makeScale(min, max){
+  const a = log10(min), b = log10(max);
+  return v => Math.max(0, Math.min(100, (log10(v) - a) / (b - a) * 100));
+}
+
+/* ============ tooltip ============ */
+const tt = document.getElementById("tt");
+function showTip(parts, x, y){
+  tt.textContent = "";
+  const v = el("div","tt-val", parts.value);
+  const n = el("div","tt-name", parts.name);
+  tt.appendChild(v); tt.appendChild(n);
+  if (parts.range){ tt.appendChild(el("div","tt-range", parts.range)); }
+  if (parts.source){ tt.appendChild(el("div","tt-src", "Source: " + parts.source)); }
+  tt.style.display = "block";
+  tt.setAttribute("aria-hidden","false");
+  positionTip(x, y);
+}
+function positionTip(x, y){
+  const r = tt.getBoundingClientRect();
+  let left = x + 16, top = y + 14;
+  if (left + r.width > window.innerWidth - 8) left = x - r.width - 12;
+  if (top + r.height > window.innerHeight - 8) top = y - r.height - 12;
+  tt.style.left = Math.max(6, left) + "px";
+  tt.style.top = Math.max(6, top) + "px";
+}
+function hideTip(){ tt.style.display = "none"; tt.setAttribute("aria-hidden","true"); }
+function attachTip(target, getParts){
+  target.addEventListener("pointerenter", e => showTip(getParts(), e.clientX, e.clientY));
+  target.addEventListener("pointermove", e => { if (tt.style.display === "block") positionTip(e.clientX, e.clientY); });
+  target.addEventListener("pointerleave", hideTip);
+  target.addEventListener("focus", () => {
+    const r = target.getBoundingClientRect();
+    showTip(getParts(), r.left + Math.min(260, r.width * 0.5), r.top + r.height);
+  });
+  target.addEventListener("blur", hideTip);
+}
+
+/* ============ generic log-scale bar chart (HTML) ============ */
+// rows: [{label, sub, values:{low,mid,high}, source, accent(bool), accentColor, whisker(bool)}]
+function renderLogBars(container, rows, opts){
+  container.textContent = "";
+  const scale = makeScale(opts.domain[0], opts.domain[1]);
+  const grid = el("div","lgrid");
+  opts.ticks.forEach((t,i) => {
+    const g = el("div", "gline" + (i === 0 ? " base" : ""));
+    g.style.left = scale(t.v) + "%";
+    grid.appendChild(g);
+  });
+  container.appendChild(grid);
+
+  const refs = [];
+  rows.forEach(row => {
+    const r = el("div","brow");
+    r.tabIndex = 0;
+    const lab = el("div","blabel");
+    lab.appendChild(el("span",null,row.label));
+    if (row.sub) lab.appendChild(el("span","lsub",row.sub));
+    const track = el("div","btrack");
+    const bar = el("div","bbar");
+    bar.style.background = row.accent ? row.accentColor : cssVar("--context-gray");
+    track.appendChild(bar);
+    let whisk = null;
+    if (row.whisker){
+      whisk = el("div","bwhisk");
+      track.appendChild(whisk);
+    }
+    const val = el("span","bval");
+    track.appendChild(val);
+    r.appendChild(lab); r.appendChild(track);
+    container.appendChild(r);
+    refs.push({row, r, bar, whisk, val});
+    attachTip(r, () => ({
+      value: fmtVal(row.values[state.level], opts.unit) + " (" + state.level + " estimate)",
+      name: row.label + (row.sub ? " — " + row.sub : ""),
+      range: rangeText(row.values, opts.unit),
+      source: row.source
+    }));
+  });
+
+  const axis = el("div","baxis");
+  opts.ticks.forEach(t => {
+    const a = el("span","atick", t.l);
+    a.style.left = scale(t.v) + "%";
+    axis.appendChild(a);
+  });
+  container.appendChild(axis);
+  container.appendChild(el("div","axis-title", opts.axisTitle));
+
+  function update(){
+    refs.forEach(({row, r, bar, whisk, val}) => {
+      const v = row.values[state.level];
+      bar.style.width = scale(v) + "%";
+      if (whisk){
+        const lo = scale(row.values.low), hi = scale(row.values.high);
+        whisk.style.left = lo + "%";
+        whisk.style.width = Math.max(0, hi - lo) + "%";
+        val.style.left = hi + "%";
+      } else {
+        val.style.left = scale(v) + "%";
+      }
+      val.textContent = fmtVal(v, opts.unit);
+      r.setAttribute("aria-label",
+        row.label + ": " + fmtVal(v, opts.unit) + " at " + state.level +
+        " estimate; range " + rangeText(row.values, opts.unit) + ". Source: " + row.source);
+    });
+  }
+  update();
+  return update;
+}
+
+/* ============ Module A ============ */
+const ENERGY_TICKS = [
+  {v:0.01,l:"0.01"},{v:0.1,l:"0.1"},{v:1,l:"1"},{v:10,l:"10"},
+  {v:100,l:"100"},{v:1000,l:"1k"},{v:10000,l:"10k"}
+];
+const WATER_TICKS = [
+  {v:0.01,l:"0.01"},{v:0.1,l:"0.1"},{v:1,l:"1"},{v:10,l:"10"},{v:100,l:"100"},
+  {v:1000,l:"1k"},{v:10000,l:"10k"},{v:100000,l:"100k"},{v:1000000,l:"1M"}
+];
+const ENERGY_CONTEXT = ["google_search","phone_charge","netflix_hour","kettle","laundry","drive_mile_gas"];
+const WATER_CONTEXT = ["shower","washer_load_water"];
+
+let updateA = null;
+function renderModuleA(){
+  const t = DATA.aiTasks[state.task];
+  document.getElementById("video-warn").classList.toggle("show", !!t.lowConfidence);
+  document.getElementById("energy-title").textContent =
+    "Energy: “" + t.label + "” vs. everyday activities (watt-hours, log scale)";
+  document.getElementById("water-title").textContent =
+    "Water: “" + t.label + "” vs. everyday water use (milliliters, log scale)";
+
+  const eRows = [{
+    label: t.label, sub: t.sub, values: t.energyWh, source: t.source,
+    accent: true, accentColor: cssVar("--series-energy"), whisker: true
+  }].concat(ENERGY_CONTEXT.map(k => {
+    const d = DATA.everyday[k];
+    return {label: d.label, values: d.energyWh, source: d.source};
+  }));
+  const upE = renderLogBars(document.getElementById("chartA-energy"), eRows, {
+    unit:"Wh", domain:[0.01,10000], ticks:ENERGY_TICKS,
+    axisTitle:"watt-hours (Wh) — logarithmic scale: each gridline is 10× the last"
+  });
+
+  const wRows = [{
+    label: t.label, sub: t.sub, values: t.waterML, source: t.source,
+    accent: true, accentColor: cssVar("--series-water"), whisker: true
+  }].concat(WATER_CONTEXT.map(k => {
+    const d = DATA.everyday[k];
+    return {label: d.label, values: d.waterML, source: d.source};
+  }));
+  const upW = renderLogBars(document.getElementById("chartA-water"), wRows, {
+    unit:"mL", domain:[0.01,1000000], ticks:WATER_TICKS,
+    axisTitle:"milliliters (mL) — logarithmic scale: each gridline is 10× the last"
+  });
+  updateA = () => { upE(); upW(); };
+}
+
+/* task chips */
+const chipsHost = document.getElementById("task-chips");
+Object.keys(DATA.aiTasks).forEach(key => {
+  const t = DATA.aiTasks[key];
+  const c = el("button","chip");
+  c.setAttribute("aria-pressed", String(key === state.task));
+  const name = el("span", null, t.label);
+  if (t.lowConfidence){
+    const tag = el("span","lowconf-tag","low confidence");
+    name.appendChild(tag);
+  }
+  c.appendChild(name);
+  c.appendChild(el("span","csub", t.sub));
+  c.addEventListener("click", () => {
+    state.task = key;
+    chipsHost.querySelectorAll(".chip").forEach(b => b.setAttribute("aria-pressed","false"));
+    c.setAttribute("aria-pressed","true");
+    renderModuleA();
+  });
+  chipsHost.appendChild(c);
+});
+renderModuleA();
+updaters.push(() => updateA && updateA());
+
+/* Module A tables */
+function makeTable(captionText, headers, rows){
+  const tbl = el("table","dt");
+  tbl.appendChild(el("caption",null,captionText));
+  const thead = el("thead"); const trh = el("tr");
+  headers.forEach(h => trh.appendChild(el("th",null,h)));
+  thead.appendChild(trh); tbl.appendChild(thead);
+  const tb = el("tbody");
+  rows.forEach(cells => {
+    const tr = el("tr");
+    cells.forEach((c,i) => {
+      const td = el("td", i>0 && i<headers.length-1 ? "num" : (i===headers.length-1 ? "src" : null), c);
+      tr.appendChild(td);
+    });
+    tb.appendChild(tr);
+  });
+  tbl.appendChild(tb);
+  return tbl;
+}
+function buildTablesA(){
+  const host = document.getElementById("modA-tables");
+  host.textContent = "";
+  const eRows = [];
+  Object.values(DATA.aiTasks).forEach(t => eRows.push(
+    ["AI: " + t.label, fmtNum(t.energyWh.low), fmtNum(t.energyWh.mid), fmtNum(t.energyWh.high), t.source]));
+  Object.values(DATA.everyday).forEach(d => { if (d.energyWh) eRows.push(
+    [d.label, fmtNum(d.energyWh.low), fmtNum(d.energyWh.mid), fmtNum(d.energyWh.high), d.source]); });
+  host.appendChild(makeTable("Energy per task (watt-hours)", ["Item","Low (Wh)","Mid (Wh)","High (Wh)","Source"], eRows));
+  const wRows = [];
+  Object.values(DATA.aiTasks).forEach(t => wRows.push(
+    ["AI: " + t.label, fmtNum(t.waterML.low), fmtNum(t.waterML.mid), fmtNum(t.waterML.high), t.source]));
+  Object.values(DATA.everyday).forEach(d => { if (d.waterML) wRows.push(
+    [d.label, fmtNum(d.waterML.low), fmtNum(d.waterML.mid), fmtNum(d.waterML.high), d.source]); });
+  host.appendChild(makeTable("Water per task (milliliters)", ["Item","Low (mL)","Mid (mL)","High (mL)","Source"], wRows));
+}
+buildTablesA();
+function wireTableToggle(btnId, chartId, tableId){
+  const btn = document.getElementById(btnId);
+  btn.addEventListener("click", () => {
+    const showTable = btn.getAttribute("aria-pressed") !== "true";
+    btn.setAttribute("aria-pressed", String(showTable));
+    btn.textContent = showTable ? "View as chart" : "View as table";
+    document.getElementById(chartId).hidden = showTable;
+    document.getElementById(tableId).hidden = !showTable;
+  });
+}
+wireTableToggle("btn-tableA","modA-charts","modA-tables");
+
+/* ============ Module B — dumbbell ============ */
+const B_TASKS = ["small_text","frontier_text","complex_text"];
+const B_TICKS = [{v:0.01,l:"0.01"},{v:0.1,l:"0.1"},{v:1,l:"1"},{v:10,l:"10"},{v:100,l:"100"}];
+function renderModuleB(){
+  const host = document.getElementById("chartB");
+  host.textContent = "";
+  const scale = makeScale(0.01, 100);
+  const grid = el("div","lgrid");
+  B_TICKS.forEach((t,i) => {
+    const g = el("div","gline" + (i===0?" base":""));
+    g.style.left = scale(t.v) + "%";
+    grid.appendChild(g);
+  });
+  host.appendChild(grid);
+  const man = DATA.manual.laptop_20min;
+  const refs = [];
+  B_TASKS.forEach(key => {
+    const t = DATA.aiTasks[key];
+    const r = el("div","brow");
+    r.tabIndex = 0;
+    r.style.minHeight = "52px";
+    const lab = el("div","blabel");
+    lab.appendChild(el("span",null,t.label));
+    if (t.sub) lab.appendChild(el("span","lsub",t.sub));
+    const track = el("div","btrack");
+    track.style.height = "52px";
+    const conn = el("div","dconn");
+    const aiHit = el("div","dhit"); const aiDot = el("div","ddot");
+    aiDot.style.background = cssVar("--ord-dark"); aiHit.appendChild(aiDot);
+    const mHit = el("div","dhit"); const mDot = el("div","ddot");
+    mDot.style.background = cssVar("--ord-light"); mHit.appendChild(mDot);
+    const aiVal = el("span","dval above");
+    const mVal = el("span","dval below");
+    track.appendChild(conn); track.appendChild(mHit); track.appendChild(aiHit);
+    track.appendChild(aiVal); track.appendChild(mVal);
+    r.appendChild(lab); r.appendChild(track);
+    host.appendChild(r);
+    refs.push({t, r, conn, aiHit, mHit, aiVal, mVal});
+    attachTip(aiHit, () => ({
+      value: fmtVal(t.energyWh[state.level], "Wh") + " (" + state.level + " estimate)",
+      name: "AI: " + t.label,
+      range: rangeText(t.energyWh, "Wh"),
+      source: t.source
+    }));
+    attachTip(mHit, () => ({
+      value: fmtVal(man.energyWh[state.level], "Wh") + " (" + state.level + " estimate)",
+      name: "Manual: " + man.label + " — " + man.sub,
+      range: rangeText(man.energyWh, "Wh"),
+      source: man.source
+    }));
+    attachTip(r, () => ({
+      value: "AI " + fmtVal(t.energyWh[state.level],"Wh") + "  vs.  manual " + fmtVal(man.energyWh[state.level],"Wh"),
+      name: t.label + " vs. " + man.label,
+      range: "AI: " + rangeText(t.energyWh,"Wh") + "   |   Manual: " + rangeText(man.energyWh,"Wh"),
+      source: t.source + " / " + man.source
+    }));
+  });
+  const axis = el("div","baxis");
+  B_TICKS.forEach(t => {
+    const a = el("span","atick", t.l);
+    a.style.left = scale(t.v) + "%";
+    axis.appendChild(a);
+  });
+  host.appendChild(axis);
+  host.appendChild(el("div","axis-title","watt-hours (Wh) — logarithmic scale: each gridline is 10× the last"));
+
+  function update(){
+    refs.forEach(({t, r, conn, aiHit, mHit, aiVal, mVal}) => {
+      const a = scale(t.energyWh[state.level]);
+      const m = scale(man.energyWh[state.level]);
+      conn.style.left = Math.min(a,m) + "%";
+      conn.style.width = Math.abs(a-m) + "%";
+      aiHit.style.left = a + "%"; mHit.style.left = m + "%";
+      aiVal.style.left = a + "%"; mVal.style.left = m + "%";
+      aiVal.textContent = fmtVal(t.energyWh[state.level],"Wh") + " (AI)";
+      mVal.textContent = fmtVal(man.energyWh[state.level],"Wh") + " (manual)";
+      r.setAttribute("aria-label",
+        t.label + ": AI " + fmtVal(t.energyWh[state.level],"Wh") + " versus manual (" + man.label + ") " +
+        fmtVal(man.energyWh[state.level],"Wh") + " at " + state.level + " estimate.");
+    });
+  }
+  update();
+  return update;
+}
+updaters.push(renderModuleB());
+(function buildTableB(){
+  const man = DATA.manual.laptop_20min;
+  const rows = B_TASKS.map(k => {
+    const t = DATA.aiTasks[k];
+    return ["AI: " + t.label, fmtNum(t.energyWh.low), fmtNum(t.energyWh.mid), fmtNum(t.energyWh.high), t.source];
+  });
+  rows.push(["Manual: " + man.label + " (" + man.sub + ")", fmtNum(man.energyWh.low), fmtNum(man.energyWh.mid), fmtNum(man.energyWh.high), man.source]);
+  document.getElementById("modB-table").appendChild(
+    makeTable("AI query vs. manual task, device-side energy (watt-hours)",
+      ["Item","Low (Wh)","Mid (Wh)","High (Wh)","Source"], rows));
+})();
+wireTableToggle("btn-tableB","modB-chart","modB-table");
+
+/* ============ Module C — two-bar sequential comparison ============ */
+function renderModuleC(){
+  const host = document.getElementById("chartC");
+  host.textContent = "";
+  const m = DATA.rightsizing.multiplier;
+  const maxV = m.high; // linear scale, relative units
+  const rows = [
+    {label:"Small model", color:cssVar("--ord-light"), get:()=>1, txt:()=> "1× (baseline)"},
+    {label:"Frontier model", color:cssVar("--ord-dark"), get:()=>m[state.level], txt:()=> m[state.level] + "× the energy"}
+  ];
+  const refs = [];
+  rows.forEach(row => {
+    const r = el("div","brow"); r.tabIndex = 0;
+    const lab = el("div","blabel"); lab.appendChild(el("span",null,row.label));
+    const track = el("div","btrack");
+    const bar = el("div","bbar"); bar.style.background = row.color;
+    const val = el("span","bval");
+    track.appendChild(bar); track.appendChild(val);
+    r.appendChild(lab); r.appendChild(track);
+    host.appendChild(r);
+    refs.push({row, r, bar, val});
+    attachTip(r, () => ({
+      value: row.txt(),
+      name: m.label,
+      range: "multiplier: low " + m.low + "× · mid " + m.mid + "× · high " + m.high + "×",
+      source: m.source
+    }));
+  });
+  host.appendChild(el("div","axis-title","relative energy per identical simple query (linear scale, small model = 1×)"));
+  function update(){
+    refs.forEach(({row, r, bar, val}) => {
+      const v = row.get();
+      bar.style.width = (v / maxV * 100) + "%";
+      val.style.left = (v / maxV * 100) + "%";
+      val.textContent = row.txt();
+      r.setAttribute("aria-label", row.label + ": " + row.txt() + ". " + m.label + ". Source: " + m.source);
+    });
+    document.getElementById("chartC-note").textContent =
+      "Showing the " + state.level + " estimate: " + m[state.level] +
+      "× — published measurements put this multiplier anywhere from " + m.low + "× to " + m.high + "×.";
+  }
+  update();
+  return update;
+}
+updaters.push(renderModuleC());
+(function buildTableC(){
+  const m = DATA.rightsizing.multiplier;
+  const e = DATA.rightsizing.efficiencyTrend;
+  const rows = [
+    [m.label, m.low + "×", m.mid + "×", m.high + "×", m.source],
+    ["Efficiency trend, " + e.period, e.energyImprovement + " energy", e.carbonImprovement + " carbon", "see caveat →", e.source]
+  ];
+  document.getElementById("modC-table").appendChild(
+    makeTable("Right-sizing figures", ["Figure","Low","Mid","High","Source"], rows));
+})();
+wireTableToggle("btn-tableC","modC-chart","modC-table");
+
+/* ============ Module D — KPI tiles ============ */
+(function buildKPIs(){
+  const host = document.getElementById("kpirow");
+  Object.values(DATA.aggregate).forEach(a => {
+    const t = el("div","tile");
+    t.appendChild(el("div","tlabel", a.label));
+    t.appendChild(el("div","tval", a.now));
+    if (a.proj) t.appendChild(el("div","tproj", "Projected: " + a.proj));
+    t.appendChild(el("div","tsrc", "Source: " + a.source));
+    host.appendChild(t);
+  });
+})();
+
+/* ============ Module E — expandable explainer ============ */
+(function buildWhy(){
+  const host = document.getElementById("whylist");
+  DATA.whyEstimatesDisagree.forEach(item => {
+    const dash = item.indexOf(" — ");
+    if (dash > 0){
+      const d = el("details","exp");
+      d.appendChild(el("summary", null, item.slice(0, dash)));
+      d.appendChild(el("p", null, item));
+      host.appendChild(d);
+    } else {
+      host.appendChild(el("div","exp-flat", item));
+    }
+  });
+})();
+
+/* ============ Module F — unknowns ============ */
+(function buildUnknowns(){
+  const host = document.getElementById("unknownlist");
+  DATA.dontKnow.forEach(item => host.appendChild(el("li", null, item)));
+})();
+
+/* ============ Footer sources (deduplicated, exact strings) ============ */
+(function buildSources(){
+  const seen = new Set();
+  const add = s => { if (s && !seen.has(s)) seen.add(s); };
+  Object.values(DATA.aiTasks).forEach(t => add(t.source));
+  Object.values(DATA.everyday).forEach(d => add(d.source));
+  Object.values(DATA.manual).forEach(d => add(d.source));
+  add(DATA.rightsizing.multiplier.source);
+  add(DATA.rightsizing.efficiencyTrend.source);
+  Object.values(DATA.aggregate).forEach(a => add(a.source));
+  const host = document.getElementById("sourcelist");
+  seen.forEach(s => host.appendChild(el("li", null, s)));
+})();
+
+/* ============ level toggle ============ */
+document.getElementById("levelseg").querySelectorAll("button").forEach(btn => {
+  btn.addEventListener("click", () => {
+    state.level = btn.dataset.level;
+    document.getElementById("levelseg").querySelectorAll("button")
+      .forEach(b => b.setAttribute("aria-pressed", String(b === btn)));
+    updaters.forEach(u => u());
+  });
+});
+</script>
+</body>
+</html>

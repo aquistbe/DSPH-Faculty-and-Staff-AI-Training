@@ -200,22 +200,28 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="topic-badges">
-<p><span class="level-badge level-novice">Novice</span> · <strong>Governance, Ethics &amp; Equity</strong> track · ~35 min hands-on + readings and quiz</p>
+<p><span class="level-badge level-novice">Novice</span> · <strong>Governance, Ethics &amp; Equity</strong> track · ~45 min hands-on + readings and quiz</p>
 </div>
 <p><a href="../tracks/governance-ethics.html" class="track-back">← Back to the Governance, Ethics &amp; Equity track</a></p>
 <p><em>AI has a physical footprint — understand it and make proportionate choices.</em></p>
 <section id="what-youll-be-able-to-do" class="level2">
 <h2 class="anchored" data-anchor-id="what-youll-be-able-to-do">What you’ll be able to do</h2>
 <ul>
-<li>Describe the energy and water cost of AI compute</li>
+<li>Describe the energy and water cost of AI compute, with a sense of the actual range (not a single made-up number)</li>
+<li>Explain why public estimates for AI’s footprint disagree so much — and what that does and doesn’t tell you</li>
 <li>Right-size model use to the task</li>
-<li>Weigh benefit against environmental cost in your work</li>
+<li>Weigh benefit against environmental cost in your work, and in conversations with students or colleagues who are anxious about it</li>
 </ul>
 </section>
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
 <p>AI runs on data centers that consume electricity and water at scale. The footprint is real and growing, and it’s an environmental-health issue squarely in DSPH’s wing. Awareness doesn’t mean abstention — it means proportion.</p>
+<p>It’s also a topic where the public numbers are a mess. Depending on the source, “how much energy does one AI query use” gets answered anywhere from about a tenth of a watt-hour to several watt-hours — a 30x spread — because sources disagree on what to count (chip only vs.&nbsp;the whole data center, a short answer vs.&nbsp;a long one, whether to fold in the one-time cost of training the model). The honest answer is a range with sources, not a single confident number. That’s also the more useful thing to model for students: this is a case where “I don’t know exactly, but here’s the defensible range and why it’s a range” is the correct scholarly answer, not a cop-out.</p>
 <p>Right-sizing is the practical lever: use the smallest model that does the job, avoid wasteful re-runs, and reserve heavy compute for tasks that warrant it.</p>
+<div class="slides-cta">
+<p><a class="btn btn-primary" href="../interactive/ai-footprint-explorer.html" target="_blank">🔎 Open the AI Environmental Footprint Explorer</a></p>
+</div>
+<p>The explorer above puts specific AI tasks (a quick chatbot query, a long reasoning query, an image, a 5-second video) on the same scale as things you already have intuition for — a Google search, an hour of streaming, a load of laundry, a mile of driving — and against the “manual” way of doing the same task. Every figure shows its low/mid/high range and its source. Activity 3 below walks you through it.</p>
 </section>
 <section id="practice-activities" class="level2">
 <h2 class="anchored" data-anchor-id="practice-activities">Practice activities</h2>
@@ -269,10 +275,10 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <p><strong>Expected result.</strong> For a straightforward summarization task like this, the small model should perform comparably. You should be able to identify that the large model was not necessary.</p>
 <p><strong>Check your work.</strong> Did the big model actually add value here, or just cost more energy and money? For summarization, the answer is usually no.</p>
-<p><strong>Common pitfalls.</strong> Defaulting to the biggest model for everything is wasteful. The energy difference is real: frontier models use roughly 5–10× the compute of smaller models per query.</p>
+<p><strong>Common pitfalls.</strong> Defaulting to the biggest model for everything is wasteful. The energy difference is real and larger than most people guess: measured comparisons put a frontier model at roughly <strong>50x</strong> (order-of-magnitude range 10–100x) the energy of a small model on the same simple query.</p>
 <p><strong>Stretch (optional).</strong> List your five most common AI tasks and estimate which need a frontier model vs.&nbsp;a smaller one. You may find that 70–80% of your daily use doesn’t require the largest model.</p>
 </details>
-<details class="activity"><summary>Activity 2 · Novice — Connect AI’s footprint to environmental health</summary>
+<details class="activity"><summary>Activity 2 · Novice — Connect AI's footprint to environmental health</summary>
 <p><strong>Time</strong> ~13 min · <strong>Tools</strong> a reading + ChatGPT Edu</p>
 <p><strong>Goal.</strong> Frame AI’s resource use as a DSPH-relevant issue.</p>
 <p><strong>Setup.</strong> Read one source on data-center energy or water use (in your DSPH Readings folder).</p>
@@ -290,13 +296,30 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Common pitfalls.</strong> This is a real tradeoff, not a reason to abstain; aim for proportion.</p>
 <p><strong>Stretch (optional).</strong> Draft a one-line “responsible use” norm for your team.</p>
 </details>
+<details class="activity"><summary>Activity 3 · Novice — Put AI's footprint on a scale you know (and find its limits)</summary>
+<p><strong>Time</strong> ~15 min · <strong>Tools</strong> the <a href="../interactive/ai-footprint-explorer.html">AI Environmental Footprint Explorer</a></p>
+<p><strong>Goal.</strong> Practice reasoning with ranges and sourced uncertainty instead of a single scary or reassuring number — and know where the honest answer is “we don’t know.”</p>
+<p><strong>Setup.</strong> Open the <a href="../interactive/ai-footprint-explorer.html">AI Environmental Footprint Explorer</a> in a new tab.</p>
+<p><strong>Steps.</strong></p>
+<ol type="1">
+<li><p>In <strong>Module A</strong>, pick “Typical frontier chatbot query.” Note the mid-range energy figure, then switch the toggle to <strong>Low</strong> and <strong>High</strong>. Write down all three numbers and the everyday activities they land closest to.</p></li>
+<li><p>Still in Module A, switch to “One 5-second AI video clip.” Notice the confidence flag on this one — read why it’s marked low-confidence before you use this number in front of a class or in writing.</p></li>
+<li><p>In <strong>Module B</strong>, compare an AI task against 20 minutes of manual laptop use for the same task. Read the four caveats underneath it. Pick the one caveat you find most underappreciated in public conversation about AI and water/energy, and write one sentence on why.</p></li>
+<li><p>In <strong>Module C</strong>, note the right-sizing multiplier and the efficiency-over-time stat — then read the Jevons-paradox caveat next to it. In your own words: how can AI get 33x more efficient per query <em>and</em> Google’s total data-center electricity and water use still rise in the same period? (Both are true — this is the point.)</p></li>
+<li><p>Read <strong>Module E</strong> (“Why do the public numbers disagree so much?”) and <strong>Module F</strong> (“What we genuinely don’t know”). Pick one item from Module F and think about how you’d answer a student who asked you that question directly.</p></li>
+</ol>
+<p><strong>Expected result.</strong> You can state a defensible range (not a single number) for at least two AI tasks, explain one reason estimates diverge, and name one thing that genuinely isn’t known yet.</p>
+<p><strong>Check your work.</strong> If you find yourself quoting a single AI-footprint number with confidence in class or a paper, go back and check whether you have the range and the source — the range and the “why it varies” are the actual teachable content here, more than any one figure.</p>
+<p><strong>Common pitfalls.</strong> The tempting failure mode is picking whichever number (highest or lowest) supports the conclusion you already had. Use the mid-range as your default and cite the range when precision matters.</p>
+<p><strong>Stretch (optional).</strong> Using Module D’s aggregate figures, draft the two-sentence framing from Activity 2 again — does having the aggregate context (share of US electricity, direct vs.&nbsp;indirect water) change how you’d word it?</p>
+</details>
 </section>
 <section id="check-your-readiness" class="level2">
 <h2 class="anchored" data-anchor-id="check-your-readiness">Check your readiness</h2>
 <p>Answer these, then check — your score suggests whether to dive in or skim the readings first.</p>
 <div class="readiness-quiz">
 <script type="application/json" class="quiz-data">
-{"questions": [{"q": "The main environmental costs of AI compute are…", "options": ["Electricity and water for data centers", "Paper and ink", "Bandwidth only", "None"], "answer": 0, "explain": "Data centers draw significant power and water."}, {"q": "The practical lever for individuals is…", "options": ["Right-sizing model use to the task", "Never using AI", "Using the biggest model always", "Ignoring it"], "answer": 0, "explain": "Use the smallest model that does the job."}, {"q": "Why is this a DSPH issue?", "options": ["It's an environmental-health and equity concern", "It isn't", "Only IT cares", "It's purely financial"], "answer": 0, "explain": "Siting and resource use affect communities."}]}
+{"questions": [{"q": "The main environmental costs of AI compute are…", "options": ["Electricity and water for data centers", "Paper and ink", "Bandwidth only", "None"], "answer": 0, "explain": "Data centers draw significant power and water."}, {"q": "The practical lever for individuals is…", "options": ["Right-sizing model use to the task", "Never using AI", "Using the biggest model always", "Ignoring it"], "answer": 0, "explain": "Use the smallest model that does the job."}, {"q": "Why is this a DSPH issue?", "options": ["It's an environmental-health and equity concern", "It isn't", "Only IT cares", "It's purely financial"], "answer": 0, "explain": "Siting and resource use affect communities."}, {"q": "Why do public per-query energy estimates vary by 10-30x?", "options": ["Different assumptions about what's counted — chip-only vs. full system, prompt length, cooling overhead, whether training is amortized in", "Because researchers keep making arithmetic errors", "They don't actually vary — there's one agreed number", "AI companies deliberately falsify all their numbers"], "answer": 0, "explain": "The spread is mostly methodology (accounting boundaries), not fraud or carelessness — know this before you cite a single number confidently."}, {"q": "Per-query AI energy use has fallen sharply (Google reports ~33x in 12 months) even as total data-center electricity and water use keep rising. This is an example of…", "options": ["The Jevons paradox — efficiency gains lower cost-per-use, which increases total use enough to raise overall consumption", "A contradiction that means one of the two numbers must be wrong", "Proof that AI's footprint is now negligible", "Proof that efficiency gains never matter"], "answer": 0, "explain": "Both facts are true at once: it's a real efficiency gain and total demand grew faster than efficiency improved."}]}
 </script>
 </div>
 </section>
@@ -304,14 +327,17 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="recommended-readings">Recommended readings</h2>
 <p>Available in the shared OneDrive folder <strong>Staff Faculty AI Workshop → Readings</strong>, and online where linked:</p>
 <ul>
-<li><a href="https://www.eesi.org/articles/view/data-centers-and-water-consumption"><strong>Data Centers and Water Consumption (EESI)</strong></a> — the water footprint of AI infrastructure.</li>
-<li><a href="https://www.deseret.com/u-s-world/2026/06/21/what-environmental-costs-do-data-centers-have/"><strong>Are Data Centers Bad for the Environment? (Deseret News)</strong></a> — a balanced look at the impacts.</li>
+<li><a href="https://www.eesi.org/articles/view/data-centers-and-water-consumption"><strong>Data Centers and Water Consumption (EESI)</strong></a> — the water footprint of AI infrastructure. Note: this piece repeats the widely-circulated “519 mL per 100-word email” figure; that number is a worst-case, older-model estimate that includes indirect water — see the Explorer’s Module E for why it’s much higher than current on-site figures.</li>
+<li><a href="https://www.deseret.com/u-s-world/2026/06/21/what-environmental-costs-do-data-centers-have/"><strong>Are Data Centers Bad for the Environment? (Deseret News)</strong></a> — a balanced look at the impacts, and a good corrective to the anxiety-outrunning-evidence pattern.</li>
 <li><a href="https://www.realclearmarkets.com/2025/10/25/from_mexico_to_ireland_fury_mounts_over_a_global_ai_frenzy_1143206.html"><strong>AI Data Centers Create Fury From Mexico to Ireland (NYT)</strong></a> — community and equity dimensions.</li>
+<li><strong>AI Data Centers Use Far More Water Than Most Tech Giants Report (WSJ, July 2026)</strong> — the piece prompting many of these student and faculty questions; paywalled, but ask your instructor for a copy, or see the Deseret News piece above for the same underlying LBNL data.</li>
+<li><a href="https://news.mit.edu/2025/explained-generative-ai-environmental-impact-0117"><strong>Explained: Generative AI’s environmental impact (MIT News)</strong></a> — a clear, non-technical overview of the aggregate numbers.</li>
 </ul>
 </section>
 <section id="useful-resources" class="level2">
 <h2 class="anchored" data-anchor-id="useful-resources">Useful resources</h2>
 <ul>
+<li><a href="../interactive/ai-footprint-explorer.html">AI Environmental Footprint Explorer</a> — the interactive tool used in Activity 3.</li>
 <li><a href="https://mlco2.github.io/impact/">ML CO2 Impact</a> — estimate the carbon of compute.</li>
 </ul>
 <hr>

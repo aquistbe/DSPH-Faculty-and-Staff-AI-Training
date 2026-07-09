@@ -8,6 +8,7 @@ project:
     - robots.txt
     - slides/
     - demo-materials/
+    - interactive/
     - .nojekyll
 
 website:
