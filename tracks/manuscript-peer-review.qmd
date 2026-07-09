@@ -8,19 +8,34 @@ title: "Manuscript Preparation & Peer Review"
 
 [← Back to the Communication & Dissemination track](communication.qmd){.track-back}
 
-*Use AI to prepare manuscripts and assist review — within strict confidentiality and disclosure rules.*
+*Use AI to critique and strengthen your own manuscript — within strict authorship, confidentiality, and disclosure rules.*
 
 ## What you'll be able to do
 
-- Draft and tighten manuscript sections, abstracts, and reviewer responses
-- Apply reporting checklists (STROBE/CONSORT) with AI help
-- Respect confidentiality and journal AI policies in peer review
+- Brainstorm and critique your own manuscript sections the way a peer reviewer would — not have AI draft them
+- Apply reporting checklists (STROBE/CONSORT) with AI as the critic, and use AI for structural tasks like organizing reviewer responses
+- Know what ICMJE and COPE require you to disclose, and respect journal-specific AI policies in peer review
 
 ## Overview
 
-AI can draft a methods paragraph, tighten a results narrative, structure a cover letter, and organize point-by-point reviewer responses. The analysis, interpretation, and authorship remain yours, and AI use is typically disclosed.
+Use AI to brainstorm framings, search and organize literature, and critique your own draft the way a peer reviewer would — not write the first draft of your science. AI should not draft your methods, results, or interpretation from scratch. That's not just a compliance issue: writing those sections yourself is how you keep authorship, originality, and accountability over the work. The workflow that pays off is the one in Activity 1 — you write the section, then AI stress-tests it against a reporting standard and tells you what's missing.
 
-Peer review has a hard rule: a manuscript you're reviewing is **confidential**. Do not paste an unpublished manuscript into an AI tool, and follow each journal's policy on AI in review — many prohibit it outright.
+Structural and administrative tasks are a different matter. Having AI organize a point-by-point response-to-reviewers letter from decisions you've already made, or tighten language you've already written, is a reasonable use — the substance is yours; AI is just formatting and polishing it.
+
+Peer review has a hard rule: a manuscript you're reviewing is **confidential**. Never paste it into any AI tool — and note that many journals prohibit *any* AI use during review, not just uploading the manuscript. Check the journal's reviewer guidelines before touching an AI tool in a review.
+
+::: {.callout-important}
+## Read before you draft: authorship, disclosure, and journal policy
+**AI cannot be an author.** Both [ICMJE](https://www.icmje.org/recommendations/browse/artificial-intelligence/ai-use-by-authors.html) and [COPE](https://publicationethics.org/guidance/cope-position/authorship-and-ai-tools) are explicit: AI tools cannot be listed as authors, because they cannot take responsibility for the accuracy, integrity, and originality of the work. The human authors are fully responsible for **all** content, including any AI-assisted portions — you must review AI output (it can be incorrect, incomplete, or biased), verify it isn't plagiarized, and ensure citations are real and accurate.
+
+**Disclose your AI use.** ICMJE says disclosure belongs in both the cover letter and the appropriate section of the manuscript itself; failing to disclose may require corrective action and can be construed as misconduct. COPE requires documenting transparently which tools were used, typically in the methods or acknowledgments section.
+
+**Journal policies vary and change often.** Some journals are stricter than the ICMJE/COPE baseline — some prohibit any AI use in peer review outright, and some restrict which sections or data may touch AI tools at all. Check your target journal's specific author guidelines *and* reviewer guidelines every time you submit or review.
+
+**Peer review confidentiality is absolute.** Never paste a manuscript you're reviewing into any AI tool; many journals prohibit any AI use in review, not just uploading the text.
+
+The recommended drafting workflow is Activity 1 below: you write the section, AI critiques it against a standard — not the other way around.
+:::
 
 ## Practice activities
 
@@ -30,7 +45,7 @@ Peer review has a hard rule: a manuscript you're reviewing is **confidential**. 
 
 **Time** ~18 min · **Tools** ChatGPT Edu
 
-**Goal.** Use a reporting guideline to strengthen your own methods section.
+**Goal.** Practice the sanctioned pattern — you write it, AI critiques it against a standard. Use a reporting guideline to strengthen a methods section you have already drafted yourself.
 
 **Setup.** Your own draft methods section (non-sensitive) and the relevant checklist (e.g., STROBE for observational studies).
 
@@ -40,17 +55,17 @@ Peer review has a hard rule: a manuscript you're reviewing is **confidential**. 
 
    > Here is my methods section and the STROBE checklist. Which checklist items are missing, unclear, or under-reported? Be specific. [methods] [checklist]
 
-2. Revise to address them; confirm each change is true to what you actually did.
+2. Revise to address them yourself; confirm each change is true to what you actually did.
 
 3. Improve reproducibility:
 
    > Suggest where I should add detail to make this reproducible, without padding.
 
-**Expected result.** A checklist-aligned methods section.
+**Expected result.** A checklist-aligned methods section — still written by you, sharpened by an AI critique.
 
-**Check your work.** Every added detail must match your real methods — don’t let AI invent procedures you didn’t use.
+**Check your work.** Every added detail must match your real methods — don't let AI invent procedures you didn't use.
 
-**Common pitfalls.** AI “improves” by adding things you didn’t do. You own accuracy. Use an approved tool for unpublished work.
+**Common pitfalls.** AI "improves" by adding things you didn't do. You own accuracy. Use an approved tool for unpublished work.
 
 **Stretch (optional).** Generate a STROBE/CONSORT compliance table to submit with the paper.
 
@@ -64,7 +79,7 @@ Peer review has a hard rule: a manuscript you're reviewing is **confidential**. 
 
 **Time** ~15 min · **Tools** ChatGPT Edu
 
-**Goal.** Organize a clear, point-by-point reviewer response — while respecting confidentiality.
+**Goal.** Organize a clear, point-by-point reviewer response — while respecting confidentiality. This is a structural/administrative use of AI, not substantive drafting: every scientific decision in the letter is one you already made; AI only formats and organizes it.
 
 **Setup.** Use this fictional methods excerpt and reviewer comments (or substitute your own). **Never paste a manuscript you are reviewing for a journal.**
 
@@ -78,21 +93,21 @@ Peer review has a hard rule: a manuscript you're reviewing is **confidential**. 
 >
 > - Major: The exclusion of intoxicated pedestrians is unexplained and potentially introduces selection bias. Please justify or conduct a sensitivity analysis including these cases.
 > - Major: Imputing speed limits using the median of adjacent segments is ad hoc. How sensitive are results to this choice? Consider a sensitivity analysis with complete cases only.
-> - Minor: Table 2 header says “OR” but the footnote says “adjusted OR” — which is it?
+> - Minor: Table 2 header says "OR" but the footnote says "adjusted OR" — which is it?
 >
 > **Reviewer 2:**
 >
-> - Major: The cross-sectional design limits causal claims, but the discussion reads as if these are causal findings (“reducing lanes prevents KSI”). Reframe.
-> - Minor: Why OpenStreetMap rather than PennDOT’s road inventory? Address data-quality concerns.
-> - Minor: Line 142 — “significant” used without a p-value or CI.
+> - Major: The cross-sectional design limits causal claims, but the discussion reads as if these are causal findings ("reducing lanes prevents KSI"). Reframe.
+> - Minor: Why OpenStreetMap rather than PennDOT's road inventory? Address data-quality concerns.
+> - Minor: Line 142 — "significant" used without a p-value or CI.
 
 **Steps.**
 
 1. Organize the response:
 
-   > Organize these reviewer comments and my planned responses into a professional, point-by-point response letter grouped by reviewer, with polite framing. For each comment, acknowledge the concern, describe the revision, and note the page/line where the change was made. Reviewer comments: [paste above]. My planned responses: Reviewer 1 Major 1 — we will add a sensitivity analysis including intoxicated pedestrians. R1 Major 2 — we will add a complete-case sensitivity analysis. R1 Minor — it’s adjusted OR; we’ll fix the header. R2 Major — we’ll reframe to associational language. R2 Minor 1 — we chose OSM for coverage; we’ll add a data-quality note. R2 Minor 2 — we’ll add the CI.
+   > Organize these reviewer comments and my planned responses into a professional, point-by-point response letter grouped by reviewer, with polite framing. For each comment, acknowledge the concern, describe the revision, and note the page/line where the change was made. Reviewer comments: [paste above]. My planned responses: Reviewer 1 Major 1 — we will add a sensitivity analysis including intoxicated pedestrians. R1 Major 2 — we will add a complete-case sensitivity analysis. R1 Minor — it's adjusted OR; we'll fix the header. R2 Major — we'll reframe to associational language. R2 Minor 1 — we chose OSM for coverage; we'll add a data-quality note. R2 Minor 2 — we'll add the CI.
 
-2. Verify every “we have revised…” statement: do you actually plan to make each change? Don’t promise a revision you won’t do.
+2. Verify every "we have revised…" statement: do you actually plan to make each change? Don't promise a revision you won't do.
 
 3. Soften where needed:
 
@@ -100,9 +115,9 @@ Peer review has a hard rule: a manuscript you're reviewing is **confidential**. 
 
 **Expected result.** A clean, professional response-to-reviewers letter organized by reviewer, with polite framing that acknowledges each concern before describing the revision.
 
-**Check your work.** Confirm each claim of a change matches what you’ll actually revise. The most common error is promising a sensitivity analysis you don’t actually run.
+**Check your work.** Confirm each claim of a change matches what you'll actually revise. The most common error is promising a sensitivity analysis you don't actually run.
 
-**Common pitfalls.** Hard rule: never put a manuscript you’re peer-reviewing into an AI tool — it’s confidential and many journals prohibit it. Disclose AI use in your own writing per ICMJE guidance.
+**Common pitfalls.** Hard rule: never put a manuscript you're peer-reviewing into an AI tool — it's confidential and many journals prohibit any AI use in review. Separately, as an *author*, any AI use in preparing your own manuscript (including help organizing this letter) should be disclosed per the target journal's policy and ICMJE/COPE guidance — that's a different rule from review confidentiality, and both apply.
 
 **Stretch (optional).** Draft a short cover letter to the editor summarizing the three major revisions.
 
@@ -117,7 +132,7 @@ Answer these, then check — your score suggests whether to dive in or skim the 
 
 <div class="readiness-quiz">
 <script type="application/json" class="quiz-data">
-{"questions": [{"q": "A manuscript you're peer-reviewing is…", "options": ["Confidential — don't put it in an AI tool", "Fine to paste anywhere", "Public", "Yours to share"], "answer": 0, "explain": "Review confidentiality is a firm rule; many journals prohibit AI in review."}, {"q": "In your own manuscript, AI use is typically…", "options": ["Disclosed per journal/ICMJE guidance", "Hidden", "Required", "Irrelevant"], "answer": 0, "explain": "Disclose AI assistance; AI can't be an author."}, {"q": "What does AI not do for you here?", "options": ["Own the analysis, interpretation, and authorship", "Draft text", "Tighten language", "Format a letter"], "answer": 0, "explain": "Substance and authorship stay with you."}]}
+{"questions": [{"q": "A manuscript you're peer-reviewing is…", "options": ["Confidential — don't put it in an AI tool", "Fine to paste anywhere", "Public", "Yours to share"], "answer": 0, "explain": "Review confidentiality is a firm rule; many journals prohibit any AI use in review, not just uploading the manuscript."}, {"q": "Can an AI tool be listed as a manuscript author?", "options": ["No — ICMJE and COPE both prohibit it; human authors are fully responsible for all content, including AI-assisted portions", "Yes, if it wrote most of the text", "Yes, in the acknowledgments only", "Only with the journal's permission"], "answer": 0, "explain": "AI can't take responsibility for the accuracy, integrity, and originality of the work — so it can't be an author, and you remain accountable for everything, disclosed per ICMJE/COPE and your journal's policy."}, {"q": "Who should write the first draft of your methods and results?", "options": ["You — then AI critiques it against a reporting checklist", "AI — you edit afterward", "AI — if you disclose it", "Whoever is faster"], "answer": 0, "explain": "Drafting substantive scientific content is yours; AI's role is to brainstorm, organize, and critique your own draft the way a peer reviewer would."}]}
 </script>
 </div>
 
@@ -130,7 +145,8 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 
 ## Useful resources
 
-- [ICMJE Recommendations](https://www.icmje.org) — authorship and AI-disclosure guidance.
+- [ICMJE: AI Use by Authors](https://www.icmje.org/recommendations/browse/artificial-intelligence/ai-use-by-authors.html) — disclosure requirements (cover letter and manuscript), no AI authorship, and author responsibility for AI-assisted content.
+- [COPE: Authorship and AI Tools](https://publicationethics.org/guidance/cope-position/authorship-and-ai-tools) — AI as a tool, not a contributor; document which tools you used, transparently.
 - [EQUATOR Network](https://www.equator-network.org) — reporting guidelines (STROBE, CONSORT, etc.).
 - [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with data rules.
 

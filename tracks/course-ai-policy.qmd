@@ -22,6 +22,8 @@ A course AI policy tells students what's allowed, what isn't, and what happens w
 
 A good policy is assignment-specific, states what must be disclosed, and explains *why* — connecting the rules to the learning objectives. Students follow policies they understand.
 
+You're in good company: funders (NIH, NSF) and journals (ICMJE, COPE) have recently written their own specific, enforceable AI-use rules for grant applications and manuscripts. Pointing students to these is a useful move — they're real-world examples of what "specific and enforceable" looks like in the professional settings students are headed for.
+
 ## Practice activities
 
 ```{=html}
@@ -118,6 +120,7 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 
 - [Drexel Academic Integrity Policy](https://drexel.edu/studentlife/community-standards/code-of-conduct/) — institutional framework.
 - [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with data rules.
+- [Grant & Proposal Development](grant-proposal-development.qmd) and [Manuscript Preparation & Peer Review](manuscript-peer-review.qmd) — real funder and journal AI-disclosure policies (NIH, NSF, ICMJE, COPE) as concrete examples of specific, enforceable AI-use rules.
 
 ---
 

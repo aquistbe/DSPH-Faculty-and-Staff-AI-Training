@@ -20,7 +20,7 @@ title: "Literature Review & Evidence Synthesis"
 
 AI can draft a search strategy, suggest inclusion criteria, and summarize what a set of papers says. It can also invent references that look real, so every citation must be checked against the actual paper.
 
-For a defensible review, keep AI in an assisting role: it speeds screening and summarizing, but you decide what's included and confirm what each source actually says.
+For a defensible review, keep AI in an assisting role: it speeds screening and summarizing, but you decide what's included and confirm what each source actually says. This searching-and-summarizing role — AI assists, you decide and verify — is exactly the kind of sanctioned use described on the [Grant & Proposal Development](grant-proposal-development.qmd) and [Manuscript & Peer Review](manuscript-peer-review.qmd) pages, and literature you find and verify here often feeds directly into a proposal's significance section or a manuscript's introduction and discussion.
 
 ## Practice activities
 
@@ -38,7 +38,7 @@ For a defensible review, keep AI in an assisting role: it speeds screening and s
 
 1. Turn it into a search:
 
-   > Turn this PICO question into a PubMed search strategy: key concepts, synonyms and likely MeSH terms, and a Boolean string. Note where I’ll need to adjust. [PICO]
+   > Turn this PICO question into a PubMed search strategy: key concepts, synonyms and likely MeSH terms, and a Boolean string. Note where I'll need to adjust. [PICO]
 
 2. Run it in PubMed and record the result count.
 
@@ -48,9 +48,9 @@ For a defensible review, keep AI in an assisting role: it speeds screening and s
 
 **Expected result.** A working search string and a refined version, with the exact final string saved.
 
-**Check your work.** A search you can’t reproduce isn’t usable — save the final string and the date you ran it.
+**Check your work.** A search you can't reproduce isn't usable — save the final string and the date you ran it.
 
-**Common pitfalls.** AI may invent MeSH terms — confirm each in PubMed. Don’t trust predicted result counts; run the search.
+**Common pitfalls.** AI may invent MeSH terms — confirm each in PubMed. Don't trust predicted result counts; run the search.
 
 **Stretch (optional).** Ask for inclusion/exclusion criteria suited to your question.
 
@@ -88,9 +88,9 @@ Open each abstract in PubMed before starting — you'll need the actual text to 
 
 **Expected result.** A comparison table plus a careful synthesis paragraph.
 
-**Check your work.** Verify every effect size against the source; reject any number the abstract doesn’t actually state.
+**Check your work.** Verify every effect size against the source; reject any number the abstract doesn't actually state.
 
-**Common pitfalls.** AI smooths over conflicting findings and fabricates citations. If you can’t open it, you can’t cite it.
+**Common pitfalls.** AI smooths over conflicting findings and fabricates citations. If you can't open it, you can't cite it.
 
 **Stretch (optional).** Ask what study design would best fill the gap you found.
 
@@ -121,6 +121,7 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 - [PRISMA](https://www.prisma-statement.org) — reporting standard for systematic reviews.
 - [Rayyan](https://www.rayyan.ai) — screening tool for reviews.
 - [Covidence](https://www.covidence.org) — systematic-review management.
+- [Grant & Proposal Development](grant-proposal-development.qmd) and [Manuscript & Peer Review](manuscript-peer-review.qmd) — how funders and journals expect AI use to be disclosed when this literature work feeds a proposal or paper.
 
 ---
 

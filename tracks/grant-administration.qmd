@@ -20,6 +20,8 @@ title: "Grant Administration with AI"
 
 Grant administration involves a lot of recurring, structured work: tracking deadlines, formatting budget justifications, drafting progress report narratives, summarizing sponsor requirements, and compiling compliance documentation. AI is good at all of these — and the data is often non-sensitive (public funding announcements, published guidelines, de-identified summaries).
 
+A note on how this page differs from [Grant & Proposal Development](grant-proposal-development.qmd): that page covers drafting the scientific content of grant *applications*, where funder policies like NIH's NOT-OD-25-132 apply and the stakes of AI use are much higher. The administrative and progress-report work covered here is a lower-risk category — but progress report narratives are still official submissions to a federal sponsor, so verify every fact before you submit, and disclose your AI use if your sponsor or institution asks. See the proposal-development page for the fuller discussion of funder AI policies.
+
 The boundary is clear: AI can help with formatting and summarizing public or non-sensitive grant information. It should not be used with identifiable personnel data (salaries, effort allocations with names), real budget numbers that are confidential, or anything involving sponsored program compliance decisions (those require human judgment and institutional sign-off).
 
 ## Practice activities
@@ -104,7 +106,7 @@ Alternatively, use this summary of typical NIH requirements:
 
 **Check your work.** Every number in the narrative must match the milestones. AI tends to inflate ("over 14,000 records" when the number is 14,200 — use the exact number).
 
-**Common pitfalls.** AI-drafted progress reports often minimize challenges ("a minor delay") when the actual impact was significant. Be honest — NIH reviewers appreciate candor, and understating delays can backfire in a site visit.
+**Common pitfalls.** AI-drafted progress reports often minimize challenges ("a minor delay") when the actual impact was significant. Be honest — NIH reviewers appreciate candor, and understating delays can backfire in a site visit. And remember that a progress report is an official record submitted to the sponsor — it's not governed by NIH's application-focused NOT-OD-25-132 policy, but every fact in it still needs to be accurate and verified by you.
 
 **Stretch (optional).** Draft the progress report for a foundation grant using the same milestones but a different format and audience (shorter, less technical).
 
@@ -134,6 +136,7 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 
 - [NIH Grants Guide](https://grants.nih.gov/funding/searchguide/index.html) — funding opportunities and submission guidance.
 - [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with data rules.
+- [Funder AI-disclosure policy (NIH/NSF)](grant-proposal-development.qmd) — read this before drafting an application (not required for routine progress reports, but useful context).
 
 ---
 
