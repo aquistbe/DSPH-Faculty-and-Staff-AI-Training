@@ -149,6 +149,10 @@ footer{margin-top:48px;border-top:1px solid var(--baseline);padding-top:22px;fon
 footer h2{font-size:19px}
 footer ol{padding-left:20px}
 footer li{margin-bottom:6px}
+a.src-link{color:var(--brand-teal);text-decoration:underline;text-underline-offset:2px}
+a.src-link:hover{color:var(--brand-navy)}
+a.src-link:focus-visible{outline:2px solid var(--brand-teal);outline-offset:2px}
+td.src a.src-link{color:var(--brand-teal)}
 .prepnote{margin-top:16px;font-style:italic;color:var(--muted)}
 .srhint{font-size:12px;color:var(--muted);margin:2px 0 0}
 .exp-flat{border-bottom:1px solid var(--grid);padding:10px 0;font-weight:600;font-size:14.5px;color:var(--brand-navy)}
@@ -372,6 +376,103 @@ function el(tag, cls, text){
   if (text != null) e.textContent = text;
   return e;
 }
+function elHTML(tag, cls, html){
+  const e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (html != null) e.innerHTML = html;
+  return e;
+}
+function escHTML(s){
+  return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+}
+
+/* ============ verified source URLs (checked 2026-07-10) ============ */
+/* Keyed by the EXACT raw `source` string as it appears in DATA above, so */
+/* compound citations link each sub-citation to its own correct source.  */
+const SOURCE_HTML = {
+  "MIT Technology Review, 2025 (measured via U. Michigan ML.Energy leaderboard, Llama 3.1 8B)":
+    '<a class="src-link" href="https://www.technologyreview.com/2025/05/20/1116327/ai-energy-usage-climate-footprint-big-tech/" target="_blank" rel="noopener">MIT Technology Review, 2025</a> (measured via U. Michigan ML.Energy leaderboard, Llama 3.1 8B)',
+
+  "Google, 2025 (median, full-system methodology, Gemini); Epoch AI, 2025; high end from de Vries, Joule 2023 (now considered high for a typical 2025 query, but still cited widely) and Mistral 2025 lifecycle analysis (water, includes indirect/lifecycle water, not just on-site)":
+    '<a class="src-link" href="https://cloud.google.com/blog/products/infrastructure/measuring-the-environmental-impact-of-ai-inference" target="_blank" rel="noopener">Google, 2025</a> (median, full-system methodology, Gemini); ' +
+    '<a class="src-link" href="https://epoch.ai/gradient-updates/how-much-energy-does-chatgpt-use" target="_blank" rel="noopener">Epoch AI, 2025</a>; high end from ' +
+    '<a class="src-link" href="https://www.cell.com/joule/fulltext/S2542-4351(23)00365-3" target="_blank" rel="noopener">de Vries, Joule 2023</a> (now considered high for a typical 2025 query, but still cited widely) and ' +
+    '<a class="src-link" href="https://mistral.ai/news/our-contribution-to-a-global-environmental-standard-for-ai/" target="_blank" rel="noopener">Mistral 2025 lifecycle analysis</a> (water, includes indirect/lifecycle water, not just on-site)',
+
+  "Epoch AI, 2025":
+    '<a class="src-link" href="https://epoch.ai/gradient-updates/how-much-energy-does-chatgpt-use" target="_blank" rel="noopener">Epoch AI, 2025</a>',
+
+  "MIT Technology Review, 2025; Luccioni, Jernite & Strubell, \"Power Hungry Processing,\" FAccT 2024":
+    '<a class="src-link" href="https://www.technologyreview.com/2025/05/20/1116327/ai-energy-usage-climate-footprint-big-tech/" target="_blank" rel="noopener">MIT Technology Review, 2025</a>; ' +
+    '<a class="src-link" href="https://arxiv.org/abs/2311.16863" target="_blank" rel="noopener">Luccioni, Jernite &amp; Strubell, "Power Hungry Processing," FAccT 2024</a>',
+
+  "MIT Technology Review, 2025 (CogVideoX, academic hardware) — commercial models like Sora/Veo have never disclosed per-video figures; treat this as low-confidence, order-of-magnitude only":
+    '<a class="src-link" href="https://www.technologyreview.com/2025/05/20/1116327/ai-energy-usage-climate-footprint-big-tech/" target="_blank" rel="noopener">MIT Technology Review, 2025</a> (CogVideoX, academic hardware) — commercial models like Sora/Veo have never disclosed per-video figures; treat this as low-confidence, order-of-magnitude only',
+
+  "Google, 2009 — never updated since; treat as dated":
+    '<a class="src-link" href="https://googleblog.blogspot.com/2009/01/powering-google-search.html" target="_blank" rel="noopener">Google, 2009</a> — never updated since; treat as dated',
+
+  "IEA (Kamiya), 2020; Carbon Brief, 2020":
+    '<a class="src-link" href="https://www.iea.org/commentaries/the-carbon-footprint-of-streaming-video-fact-checking-the-headlines" target="_blank" rel="noopener">IEA (Kamiya), 2020</a>; ' +
+    '<a class="src-link" href="https://www.carbonbrief.org/factcheck-what-is-the-carbon-footprint-of-streaming-video-on-netflix/" target="_blank" rel="noopener">Carbon Brief, 2020</a>',
+
+  "Device specs + EPRI, 2024":
+    'Device specs + <a class="src-link" href="https://www.epri.com/research/products/000000003002028905" target="_blank" rel="noopener">EPRI, 2024</a>',
+
+  "Silicon Valley Power appliance data; ENERGY STAR":
+    '<a class="src-link" href="https://www.siliconvalleypower.com/residents/save-energy/appliance-energy-use-chart" target="_blank" rel="noopener">Silicon Valley Power appliance data</a>; ' +
+    '<a class="src-link" href="https://www.energystar.gov/products/clothes_washers" target="_blank" rel="noopener">ENERGY STAR</a>',
+
+  "ENERGY STAR":
+    '<a class="src-link" href="https://www.energystar.gov/products/dishwashers/key_product_criteria" target="_blank" rel="noopener">ENERGY STAR</a>',
+
+  "US DOE / Silicon Valley Power":
+    '<a class="src-link" href="https://www.energy.gov/energysaver/air-conditioning" target="_blank" rel="noopener">US DOE</a> / ' +
+    '<a class="src-link" href="https://www.siliconvalleypower.com/residents/save-energy/appliance-energy-use-chart" target="_blank" rel="noopener">Silicon Valley Power</a>',
+
+  "Physics (specific heat) + typical losses":
+    'Physics (specific heat) + typical losses',
+
+  "EPA, fueleconomy.gov":
+    '<a class="src-link" href="https://www.fueleconomy.gov/" target="_blank" rel="noopener">EPA, fueleconomy.gov</a>',
+
+  "EPA WaterSense":
+    '<a class="src-link" href="https://www.epa.gov/watersense/showerheads" target="_blank" rel="noopener">EPA WaterSense</a>',
+
+  "EPA / ENERGY STAR":
+    'EPA / <a class="src-link" href="https://www.energystar.gov/products/clothes_washers" target="_blank" rel="noopener">ENERGY STAR</a>',
+
+  "Typical laptop power draw, 30-70W active use":
+    'Typical laptop power draw, 30-70W active use',
+
+  "MIT Technology Review, 2025 (measured, ~60x); Jegham et al., 2025, \"How Hungry is AI?\" (~65x spread across 30 commercial models)":
+    '<a class="src-link" href="https://www.technologyreview.com/2025/05/20/1116327/ai-energy-usage-climate-footprint-big-tech/" target="_blank" rel="noopener">MIT Technology Review, 2025</a> (measured, ~60x); ' +
+    '<a class="src-link" href="https://arxiv.org/abs/2505.09598" target="_blank" rel="noopener">Jegham et al., 2025, "How Hungry is AI?"</a> (~65x spread across 30 commercial models)',
+
+  "Google, 2025":
+    '<a class="src-link" href="https://cloud.google.com/blog/products/infrastructure/measuring-the-environmental-impact-of-ai-inference" target="_blank" rel="noopener">Google, 2025</a>',
+
+  "IEA, \"Energy and AI,\" 2025":
+    '<a class="src-link" href="https://www.iea.org/reports/energy-and-ai/executive-summary" target="_blank" rel="noopener">IEA, "Energy and AI," 2025</a>',
+
+  "Lawrence Berkeley National Lab / US DOE, Dec 2024":
+    '<a class="src-link" href="https://eta-publications.lbl.gov/sites/default/files/2024-12/lbnl-2024-united-states-data-center-energy-usage-report_1.pdf" target="_blank" rel="noopener">Lawrence Berkeley National Lab</a> / ' +
+    '<a class="src-link" href="https://www.energy.gov/articles/doe-releases-new-report-evaluating-increase-electricity-demand-data-centers" target="_blank" rel="noopener">US DOE, Dec 2024</a>',
+
+  "Lawrence Berkeley National Lab data, via WSJ reporting, July 2026":
+    '<a class="src-link" href="https://eta-publications.lbl.gov/sites/default/files/2024-12/lbnl-2024-united-states-data-center-energy-usage-report_1.pdf" target="_blank" rel="noopener">Lawrence Berkeley National Lab data</a>, via ' +
+    '<a class="src-link" href="https://www.wsj.com/tech/ai/ai-data-centers-water-use-901e2902" target="_blank" rel="noopener">WSJ reporting, July 2026</a>',
+
+  "Google Environmental Report, 2025; WSJ, July 2026":
+    '<a class="src-link" href="https://sustainability.google/reports/google-2025-environmental-report/" target="_blank" rel="noopener">Google Environmental Report, 2025</a>; ' +
+    '<a class="src-link" href="https://www.wsj.com/tech/ai/ai-data-centers-water-use-901e2902" target="_blank" rel="noopener">WSJ, July 2026</a>',
+
+  "WSJ, July 2026":
+    '<a class="src-link" href="https://www.wsj.com/tech/ai/ai-data-centers-water-use-901e2902" target="_blank" rel="noopener">WSJ, July 2026</a>'
+};
+function linkifySource(s){
+  return SOURCE_HTML[s] || escHTML(s);
+}
 function fmtNum(v){
   return v >= 1000 ? v.toLocaleString("en-US") : String(v);
 }
@@ -576,7 +677,10 @@ function makeTable(captionText, headers, rows){
   rows.forEach(cells => {
     const tr = el("tr");
     cells.forEach((c,i) => {
-      const td = el("td", i>0 && i<headers.length-1 ? "num" : (i===headers.length-1 ? "src" : null), c);
+      const isSrc = i === headers.length-1;
+      const td = isSrc
+        ? elHTML("td", "src", linkifySource(c))
+        : el("td", i>0 ? "num" : null, c);
       tr.appendChild(td);
     });
     tb.appendChild(tr);
@@ -776,7 +880,7 @@ wireTableToggle("btn-tableC","modC-chart","modC-table");
     t.appendChild(el("div","tlabel", a.label));
     t.appendChild(el("div","tval", a.now));
     if (a.proj) t.appendChild(el("div","tproj", "Projected: " + a.proj));
-    t.appendChild(el("div","tsrc", "Source: " + a.source));
+    t.appendChild(elHTML("div","tsrc", "Source: " + linkifySource(a.source)));
     host.appendChild(t);
   });
 })();
@@ -814,7 +918,7 @@ wireTableToggle("btn-tableC","modC-chart","modC-table");
   add(DATA.rightsizing.efficiencyTrend.source);
   Object.values(DATA.aggregate).forEach(a => add(a.source));
   const host = document.getElementById("sourcelist");
-  seen.forEach(s => host.appendChild(el("li", null, s)));
+  seen.forEach(s => host.appendChild(elHTML("li", null, linkifySource(s))));
 })();
 
 /* ============ level toggle ============ */
