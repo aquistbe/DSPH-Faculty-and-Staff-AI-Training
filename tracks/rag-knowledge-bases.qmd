@@ -96,6 +96,58 @@ Upload all five to a new NotebookLM notebook. These are all public government or
 </details>
 ```
 
+```{=html}
+<details class="activity"><summary>Activity 3 · Advanced — See retrieval happen: build a minimal RAG pipeline with Claude Code</summary>
+```
+
+**Time** ~25 min · **Tools** Claude Code (consumer/PI-purchased — Low Risk Data only; these 5 PDFs are public)
+
+**Goal.** Build the machinery NotebookLM hides: a from-scratch RAG pipeline where you can read the exact passages the system retrieved — and see when it retrieves nothing.
+
+**Setup.** Open Claude Code in an empty folder. You'll point it at the same 5 public PDFs from Activity 1:
+
+1. [Philadelphia Vision Zero Action Plan (2017)](https://www.phila.gov/media/20171025174232/Vision-Zero-Action-Plan.pdf)
+2. [NHTSA Pedestrian Safety Report (2023)](https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/813558)
+3. [WHO Global Status Report on Road Safety (2023)](https://www.who.int/publications/i/item/9789240086517)
+4. [FHWA Proven Safety Countermeasures: Pedestrian Safety](https://safety.fhwa.dot.gov/provencountermeasures/)
+5. [Philadelphia Complete Streets Design Handbook](https://www.phila.gov/documents/complete-streets-design-handbook/)
+
+Reminder: Claude Code is not Drexel-supported and is approved for Low Risk Data only — never feed it student records, PHI, or unpublished research data.
+
+**Steps.**
+
+1. Ask Claude Code to build the pipeline and make retrieval visible:
+
+   > Download these 5 public PDFs [paste the 5 URLs], extract the text, and split it into paragraph-sized chunks tagged with source and page. Write a small Python script that takes a question, retrieves the 3 most relevant chunks (keyword or embedding similarity is fine), and prints each retrieved chunk IN FULL — source, page, similarity score, and the literal text — before printing an answer based only on those chunks.
+
+2. Run a question the sources can answer, and read the retrieved chunks yourself:
+
+   > Run the script with: "What speed-management countermeasures reduce pedestrian deaths?" Show me the 3 retrieved chunks in full and explain why each scored high.
+
+   In Activity 1 you trusted a citation marker; here you can see the 3 passages chosen out of hundreds and judge whether retrieval picked the right ones.
+
+3. Repeat Activity 1's gap probe — but this time watch retrieval fail in the open:
+
+   > Run the same script with: "What do these documents say about e-scooter injury rates in Philadelphia?" Show me the retrieved chunks and their similarity scores, and tell me whether anything relevant was actually found.
+
+   With NotebookLM you had to infer a gap from the tone of the answer; here the low scores and off-topic chunks show you directly that nothing relevant exists in the sources.
+
+4. Break retrieval on purpose to see why chunking matters:
+
+   > Re-chunk the documents into much larger chunks (e.g., 2 pages each) and rerun question 2. Did the retrieved passages get noisier? Explain how chunk size changed what the answer was grounded in.
+
+**Expected result.** A working script that answers from the 5 sources while printing the literal retrieved passages; one question where retrieval visibly succeeds, one gap question where you can see it visibly fail.
+
+**Check your work.** Read the retrieved chunks before reading the answer — does each one actually contain the evidence the answer claims? If the answer says something no printed chunk supports, the model added it.
+
+**Common pitfalls.** A high similarity score doesn't mean the chunk is right — keyword overlap can retrieve the wrong passage confidently. Retrieval quality is the whole game: garbage chunks in, confident garbage out. Low Risk Data only in Claude Code unless separately approved.
+
+**Stretch (optional).** Ask the same question here and in NotebookLM (Activity 1) and compare: where NotebookLM gave a citation marker, can you find the equivalent chunk your pipeline retrieved? Which experience made an error easier to catch?
+
+```{=html}
+</details>
+```
+
 
 ## Check your readiness
 

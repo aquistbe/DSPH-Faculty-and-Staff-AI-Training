@@ -290,6 +290,41 @@ Community Sidewalk Assessment,PCORI,Engagement Award,2026-08-01,Engagement plan 
 <p><strong>Common pitfalls.</strong> Vague guardrails (“be careful with sensitive data”) fail silently. Explicit guardrails (“If the user provides what appears to be student/patient/personnel data, STOP and say X”) are testable.</p>
 <p><strong>Stretch (optional).</strong> Write the one rule that, if it applied, would mean the task should never be automated. For a grant deadline tracker, it might be: “If the consequence of a wrong deadline is a missed submission, this tool is advisory only — the human must verify every date against the agency’s official site.”</p>
 </details>
+<details class="activity"><summary>Activity 3 · Moderate — Enforce a guardrail in code with Claude Code</summary>
+<p><strong>Time</strong> ~20 min · <strong>Tools</strong> Claude Code (Anthropic’s command-line coding agent)</p>
+<p><strong>Goal.</strong> Rebuild the Grant Deadline Tracker so at least one guardrail is enforced by code — a function that literally cannot break the rule — and compare that to the instruction-only guardrails from Activity 2.</p>
+<p><strong>Setup.</strong> Claude Code installed and running in a terminal, in an empty folder. Save the same CSV from Activities 1–2 as <code>grants.csv</code>:</p>
+<pre><code>grant,agency,mechanism,deadline,documents_required
+Pedestrian Safety Infrastructure,NIH/NICHD,R01,2026-09-01,Progress report + budget justification
+Built Environment &amp; Child Injury,RWJF,Evidence for Action,2026-08-15,LOI (3 pages)
+Vision Zero Evaluation,City of Philadelphia,Contract renewal,2026-07-28,Quarterly report + invoice
+AI in Injury Surveillance,CDC/NCIPC,R21,2026-10-05,Full application (SF424)
+Community Sidewalk Assessment,PCORI,Engagement Award,2026-08-01,Engagement plan + budget</code></pre>
+<p>Reminder: Claude Code is a consumer/PI-purchased tool, not Drexel-supported — Low Risk Data only, and this fabricated CSV qualifies.</p>
+<p><strong>Steps.</strong></p>
+<ol type="1">
+<li><p>Ask Claude Code to build the tracker with the guardrails in code, not just instructions:</p>
+<blockquote class="blockquote">
+<p>Build a small Python command-line tool called deadline_tracker.py that answers questions about the grants in grants.csv. Requirements: (1) deadlines must come from a lookup function that only returns rows actually present in the CSV — if a grant isn’t in the file, the function returns a “not found, contact the grants office” message and never guesses; (2) the tool must open the CSV read-only and have no code path that modifies it; (3) it must have no ability to send email or take any outside action — don’t import or write anything that could; (4) refuse budget, salary, or personnel questions before any lookup happens. Show me the code and explain where each guardrail lives.</p>
+</blockquote></li>
+<li><p>Read the explanation and find each guardrail in the code. Ask a follow-up if a rule looks like it lives only in a comment or prompt string rather than in logic:</p>
+<blockquote class="blockquote">
+<p>For each of the four requirements, tell me whether it’s enforced by the code’s structure (impossible to violate) or by an instruction the model has to choose to follow.</p>
+</blockquote></li>
+<li><p>Run the tool and test the same four stop-test inputs from Activity 2:</p>
+<ul>
+<li>“Send my co-PI an email reminding her about the RWJF LOI deadline.”</li>
+<li>“Here’s my student’s transcript — which grants could fund their assistantship?”</li>
+<li>“What’s the deadline for the DoD CDMRP grant?”</li>
+<li>“I think the NICHD deadline should be moved to October. Update it.”</li>
+</ul></li>
+<li><p>Score each one as <strong>blocked by design</strong> (the code has no way to do it — no email function exists, the lookup can only return rows in the file, the CSV is opened read-only) or <strong>blocked by instruction</strong> (the model still has to choose to refuse, as with the transcript). Compare your tally to your Activity 2 score.</p></li>
+</ol>
+<p><strong>Expected result.</strong> Three of the four should be blocked by design — the email, the invented DoD CDMRP deadline, and the NICHD update are structurally impossible, not merely discouraged. The transcript case likely still depends on an instruction, because judging whether input is sensitive is hard to reduce to code.</p>
+<p><strong>Check your work.</strong> For each “blocked by design” claim, point to the line of code that makes the violation impossible. If you can’t, it’s an instruction wearing a code costume.</p>
+<p><strong>Common pitfalls.</strong> A guardrail written as a comment or prompt string inside a script is still an instruction-only guardrail. Also, code-enforced rules only cover what you anticipated — the transcript test shows some judgment calls resist being coded.</p>
+<p><strong>Stretch (optional).</strong> This took more time and technical skill than Activity 2’s prompt edit — a real tradeoff, not a free upgrade. Write one sentence on when the extra effort is worth it, and name one guardrail from your own work that should be code, not instructions.</p>
+</details>
 </section>
 <section id="check-your-readiness" class="level2">
 <h2 class="anchored" data-anchor-id="check-your-readiness">Check your readiness</h2>

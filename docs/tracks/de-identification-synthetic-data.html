@@ -338,6 +338,37 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Common pitfalls.</strong> Synthetic data is for teaching, prototyping, and sharing — not a substitute for real analysis. It can also leak patterns if generated from real data.</p>
 <p><strong>Stretch (optional).</strong> Use the synthetic set to test an analysis script before touching real data.</p>
 </details>
+<details class="activity"><summary>Activity 3 · Moderate — Generate and statistically validate synthetic data with Claude Code</summary>
+<p><strong>Time</strong> ~15 min · <strong>Tools</strong> Claude Code + R/Python</p>
+<p><strong>Goal.</strong> Have an AI agent generate synthetic data <em>and</em> run real statistical fidelity checks against a reference — turning Activity 2’s prose critique into measurable numbers.</p>
+<p><strong>Setup.</strong> Claude Code is a command-line coding agent that writes <em>and runs</em> code in one session — so instead of copying code into R yourself, you watch it generate the data, compute the checks, and report the results. Reminder: Claude Code is a consumer/PI-purchased tool approved for <strong>Low Risk Data only</strong> — use only fabricated data like the structure below, never real records. Use the same Philadelphia crash structure from Activity 2, plus this fabricated reference summary to check against:</p>
+<ul>
+<li>62% of pedestrian crashes occur during daylight hours</li>
+<li>18% involve speeding</li>
+<li>44% occur at intersections</li>
+<li>12% result in a severe injury</li>
+<li>Speeding crashes are roughly twice as likely to be severe as non-speeding crashes</li>
+</ul>
+<p><strong>Steps.</strong></p>
+<ol type="1">
+<li><p>In a terminal, ask Claude Code to generate the data reproducibly:</p>
+<blockquote class="blockquote">
+<p>Write and run an R (or Python) script that generates 500 synthetic pedestrian crash records with these columns: [structure]. Set a seed, use realistic distributions, and save it as a CSV.</p>
+</blockquote></li>
+<li><p>Then have it <em>compute</em> the fidelity check instead of just opining:</p>
+<blockquote class="blockquote">
+<p>Now compare the synthetic data against this reference summary: 62% daylight, 18% speeding, 44% at intersections, 12% severe injury, and speeding crashes about twice as likely to be severe. Compute each statistic from the synthetic data, show observed vs.&nbsp;expected side by side, and flag any variable off by more than 5 percentage points.</p>
+</blockquote></li>
+<li><p>Ask it to fix what diverged:</p>
+<blockquote class="blockquote">
+<p>Adjust the generation script so the flagged variables match the reference, re-run the comparison, and confirm everything is within tolerance.</p>
+</blockquote></li>
+</ol>
+<p><strong>Expected result.</strong> A reproducible synthetic dataset plus a computed observed-vs-expected comparison table — a fidelity check you can re-run, not a one-off prose answer.</p>
+<p><strong>Check your work.</strong> Matching marginal percentages doesn’t guarantee realistic <em>relationships</em> — verify the speeding-severity association actually holds in the synthetic data, not just the individual proportions.</p>
+<p><strong>Common pitfalls.</strong> An agent that runs its own code can also <em>grade</em> its own code — read the comparison output yourself rather than accepting “everything matches.” And a dataset tuned to match five reference statistics can still miss every other real-world pattern.</p>
+<p><strong>Stretch (optional).</strong> Ask Claude Code to also compare full distributions (not just means/proportions) — e.g., a chi-squared test on the hour-of-day distribution — and explain what the test does and doesn’t tell you.</p>
+</details>
 </section>
 <section id="check-your-readiness" class="level2">
 <h2 class="anchored" data-anchor-id="check-your-readiness">Check your readiness</h2>

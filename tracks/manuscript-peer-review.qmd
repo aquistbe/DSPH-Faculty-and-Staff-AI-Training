@@ -125,6 +125,54 @@ The recommended drafting workflow is Activity 1 below: you write the section, AI
 </details>
 ```
 
+```{=html}
+<details class="activity"><summary>Activity 3 · Advanced — Cross-check your manuscript package with Claude Cowork</summary>
+```
+
+**Time** ~20 min · **Tools** Claude Cowork (personal/PI-purchased — not Drexel-supported; Low Risk Data only)
+
+**Goal.** Extend the "AI as reviewer" pattern across files instead of one document. Before submission, your methods section, supplementary materials, and reporting checklist must agree with each other — journals and reviewers absolutely catch internal inconsistencies. Cowork connects to a folder and reads all three at once, so it can flag where they disagree.
+
+**Boundary this activity does NOT cross.** This is your OWN manuscript package only. The hard rule from the top of this page applies to Cowork with zero exceptions: never put a manuscript you are peer-reviewing into any AI tool — not a chat window, not a connected folder. Confidential peer-review material never touches Cowork. And because Cowork is a consumer tool approved for Low Risk Data only, practice with the clearly fictional files below, not real unpublished work, unless your use has been separately approved.
+
+**Setup.** Create a folder (e.g., `cowork-practice/`) containing three small files, then connect Cowork to that folder. Use these fabricated excerpts — one inconsistency is planted deliberately:
+
+`methods-excerpt.txt`:
+
+> We conducted a cross-sectional analysis of pedestrian crashes in Philadelphia, 2019–2023, using PennDOT crash records linked to OpenStreetMap road segments. Posted speed limit was analyzed as a three-level categorical variable (<25 mph, 25–35 mph, >35 mph). Models adjusted for segment length, land use, and time of day. Segments with missing speed limit data (n = 214) were excluded.
+
+`supplementary-table-S1.txt`:
+
+> Table S1. Variable definitions. Posted speed limit: continuous, mph, from OSM maxspeed tag. Segment length: continuous, meters. Land use: 4 categories (residential, commercial, industrial, mixed). Time of day: 4 categories. Sidewalk presence: binary, from OSM sidewalk tag.
+
+`strobe-notes.txt`:
+
+> Item 7 (Variables): all covariates defined in Methods para 2 and Table S1. Item 12 (Statistical methods): missing data handled by complete-case analysis. Item 6 (Participants/setting): eligibility = all mapped road segments with a crash record, 2019–2023.
+
+**Steps.**
+
+1. Connect Cowork to the folder, then ask for a consistency audit:
+
+   > These three files are the methods excerpt, supplementary variable table, and STROBE notes for my own manuscript. Compare them against each other and list every place they disagree — variables defined differently across files, variables in one file but not another, checklist claims the other files don't support. Cite file and line for each.
+
+2. Review the findings. It should catch the plant: speed limit is categorical in methods but continuous in Table S1 — and may also flag that sidewalk presence appears in Table S1 but never in methods.
+
+3. Decide the fix yourself (which file reflects what you actually did?), edit the files yourself, then re-run:
+
+   > I've revised the files. Re-check the folder and confirm whether any inconsistencies remain.
+
+**Expected result.** A file-and-line list of internal contradictions in your submission package — the same critique a careful reviewer would make, caught before submission instead of after.
+
+**Check your work.** Verify every flagged inconsistency by opening the files yourself — and resolve each one toward what you actually did in the study, not toward whichever wording the AI prefers. You decide the fix; Cowork only points.
+
+**Common pitfalls.** Connecting Cowork to a folder that also contains confidential material (a manuscript under review, student records, identifiable data) — Cowork can read the whole folder, so make a clean practice folder. Letting the AI "fix" the files for you and silently rewrite your methods. Forgetting that Cowork is Low Risk Data only.
+
+**Stretch (optional).** Add a fictional abstract as a fourth file and ask Cowork to check that every number in the abstract appears identically somewhere in the other files — abstract/text mismatches are among the most common reviewer catches.
+
+```{=html}
+</details>
+```
+
 
 ## Check your readiness
 

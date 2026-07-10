@@ -343,6 +343,96 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Common pitfalls.</strong> “I removed the names, so it’s de-identified” is the most common mistake. Combinations of age, geography, date, and rare conditions are the real risk.</p>
 <p><strong>Stretch (optional).</strong> Generalize further (5-year age bands, 3-digit ZIP prefix) and re-assess whether re-identification risk drops to acceptable levels. Then try generating fully synthetic data instead (see the <a href="../tracks/de-identification-synthetic-data.html">De-identification &amp; Synthetic Data</a> topic).</p>
 </details>
+<details class="activity"><summary>Activity 3 · Novice — Scan for quasi-identifier risk systematically with Claude Code</summary>
+<p><strong>Time</strong> ~15 min · <strong>Tools</strong> Claude Code (fabricated data only — Low Risk)</p>
+<p><strong>Goal.</strong> Replace eyeball review with a systematic, scriptable scan that flags every risky quasi-identifier combination — not just the one you were told to look for.</p>
+<p><strong>Setup.</strong> Reuse the same fabricated patient-encounter table from Activity 2:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 33%">
+<col style="width: 22%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Age</th>
+<th>Sex</th>
+<th>ZIP</th>
+<th>Admission Date</th>
+<th>Diagnosis</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Maria Torres</td>
+<td>34</td>
+<td>F</td>
+<td>19104</td>
+<td>2026-03-12</td>
+<td>Tibial fracture, pedestrian crash</td>
+</tr>
+<tr class="even">
+<td>James Chen</td>
+<td>71</td>
+<td>M</td>
+<td>19143</td>
+<td>2026-03-14</td>
+<td>Hip fracture, fall on broken sidewalk</td>
+</tr>
+<tr class="odd">
+<td>Aisha Patel</td>
+<td>28</td>
+<td>F</td>
+<td>19131</td>
+<td>2026-03-15</td>
+<td>Traumatic brain injury, cyclist-vehicle collision</td>
+</tr>
+<tr class="even">
+<td>Robert Williams</td>
+<td>82</td>
+<td>M</td>
+<td>19104</td>
+<td>2026-03-12</td>
+<td>Concussion, pedestrian struck at crosswalk</td>
+</tr>
+<tr class="odd">
+<td>Dara Kim</td>
+<td>45</td>
+<td>NB</td>
+<td>19146</td>
+<td>2026-03-18</td>
+<td>Laceration and contusion, e-scooter fall</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Reminder:</strong> Claude Code is a consumer/PI-purchased tool, not Drexel-supported — approved for <strong>Low Risk Data only</strong>. There’s a small irony here worth savoring: because we’re practicing classification decisions with a tool that isn’t cleared for sensitive data, the practice data itself must already be Low Risk — which is exactly why this table is fabricated. Never substitute real records.</p>
+<p><strong>Steps.</strong></p>
+<ol type="1">
+<li><p>De-identify the table first, exactly as in Activity 2: remove the Name column. Save the remaining five rows (Age, Sex, ZIP, Admission Date, Diagnosis) as <code>encounters.csv</code> in an empty working folder.</p></li>
+<li><p>Open Claude Code in that folder and ask it to build the scanner:</p></li>
+</ol>
+<blockquote class="blockquote">
+<p>Read encounters.csv. Write a small Python script that treats Age, ZIP, and Admission Date as quasi-identifiers, plus a yes/no flag for whether the Diagnosis is a rare or uncommon category. For every row, compute the equivalence class size — how many rows in the file share that same combination of quasi-identifier values. Also check partial combinations (ZIP + date, age + ZIP, etc.). Flag every row whose class size is below 3 and print a plain-English report explaining why each flagged row could be re-identified by someone with outside knowledge (a neighbor, a news story, a coworker).</p>
+</blockquote>
+<ol start="3" type="1">
+<li><p>Run the script and read the report. Did it flag the 82-year-old male in ZIP 19104 admitted 2026-03-12 — the row Activity 2 told you to notice? What else did it flag that Activity 2 never mentioned?</p></li>
+<li><p>Now ask Claude Code to test whether generalization fixes it:</p></li>
+</ol>
+<blockquote class="blockquote">
+<p>Modify the script to generalize before scanning: replace Age with 10-year age bands and ZIP with its first 3 digits, then recompute equivalence class sizes. Print a before/after comparison showing which rows are still flagged.</p>
+</blockquote>
+<ol start="5" type="1">
+<li>Compare the two reports. Decide, as in Activity 2, whether de-identification alone was enough — but this time with counts, not a hunch.</li>
+</ol>
+<p><strong>Expected result.</strong> A working script plus a flag report. The scan should catch the ZIP 19104 / 2026-03-12 pair (two patients sharing date and ZIP, each made unique again by age and an uncommon diagnosis) — and it should also show that with only five rows, essentially every row is an equivalence class of one. The manual hint in Activity 2 pointed you at a single risky record; the systematic scan shows they are all risky, which no amount of squinting communicates as clearly.</p>
+<p><strong>Check your work.</strong> The core idea is k-anonymity: a row is safer when at least k rows (commonly k ≥ 3–5) share its quasi-identifier combination. If your script only checks columns one at a time, it will miss the point — re-identification risk lives in the combinations. Your before/after comparison should show generalization increasing class sizes but not necessarily eliminating every flag at n=5.</p>
+<p><strong>Common pitfalls.</strong> Pasting real patient data into Claude Code “just to test the script” — the tool’s Low Risk approval doesn’t change because your intentions are good. Concluding “the script flagged everything, so it’s broken” — at five rows, flagging everything is the correct answer, and it’s exactly why tiny published tables are dangerous. Trusting the generated script without reading it — you, not Claude Code, are accountable for the classification decision.</p>
+<p><strong>Stretch (optional).</strong> Ask Claude Code to generate a fully synthetic dataset of 200 encounters with realistic age/ZIP/date distributions, then re-run the scanner. Notice that risky small equivalence classes still exist but are now impossible to spot by eye — the scale at which manual review fails and systematic scanning becomes the only honest method.</p>
+</details>
 </section>
 <section id="check-your-readiness" class="level2">
 <h2 class="anchored" data-anchor-id="check-your-readiness">Check your readiness</h2>

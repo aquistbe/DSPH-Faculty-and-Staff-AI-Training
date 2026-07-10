@@ -94,6 +94,58 @@ Evaluation frameworks (e.g., CDC's) give structure; AI fills in drafts you refin
 </details>
 ```
 
+```{=html}
+<details class="activity"><summary>Activity 3 · Moderate — Pressure-test indicators against real data with Claude Code</summary>
+```
+
+**Time** ~25 min · **Tools** Claude Code
+
+**Goal.** Turn Activity 1's abstract "can I measure this?" question into a concrete test — have Claude Code write a script that actually tries to compute each candidate indicator from a real (fabricated) monitoring dataset.
+
+> **Data reminder.** Claude Code is a consumer/PI-purchased tool approved for **Low Risk Data only** — use only the fabricated data below, never real program or participant data.
+
+**Setup.** You'll need the 5 candidate indicators from Activity 1 and this program description:
+
+> **Roosevelt Boulevard Safety Corridor Initiative.** Philadelphia's Vision Zero program is piloting a 2-year pedestrian safety intervention along a 1.5-mile segment of Roosevelt Boulevard (US-1) between Adams Avenue and Cottman Avenue. The intervention includes automated speed cameras at 4 intersections, installation of 6 new pedestrian refuge islands, retiming of 8 pedestrian countdown signals to allow longer crossing times, a community outreach campaign in English, Spanish, and Vietnamese targeting residents within ¼ mile, and monthly police enforcement operations focused on failure-to-yield violations. The goal is a 30% reduction in pedestrian KSI (killed or seriously injured) crashes on the corridor within 2 years. The program is funded by a $2.1M federal Safe Streets grant with a $400K city match.
+
+In a working folder, save this fabricated monitoring sample as `corridor_monitoring.csv`:
+
+```
+month,crash_count,ksi_count,speed_camera_citations,outreach_events,avg_survey_safety_score
+2025-01,14,2,1180,3,2.4
+2025-02,11,1,1043,2,2.6
+2025-03,13,2,987,4,2.5
+2025-04,9,0,858,3,2.9
+2025-05,10,1,791,5,3.1
+2025-06,8,1,745,4,3.2
+```
+
+**Steps.**
+
+1. Open a terminal in the working folder, start Claude Code, and give it the program description, your 5 indicators from Activity 1, and the data:
+
+   > Here is a program description and 5 candidate evaluation indicators. [paste both] The file corridor_monitoring.csv contains 6 months of fabricated monitoring data for this corridor. Write and run a Python script that attempts to compute each indicator exactly as worded from the available fields. For each one, classify it: COMPUTABLE (show the value), MISSING FIELD (name the field the data would need), or AMBIGUOUS (the wording doesn't define a computation — say what definition is needed).
+
+2. Push on the ambiguous ones — a column that happens to exist is not a definition:
+
+   > For "community perception of safety": avg_survey_safety_score exists, but the indicator never defined a survey instrument, scale, or sampling plan. What would I have to specify before this column legitimately measures that indicator?
+
+3. Close the loop back to Activity 1:
+
+   > Rewrite each failing indicator so it IS computable from these fields — or tell me exactly what new data collection it would require, and roughly what that costs the evaluation plan.
+
+**Expected result.** A script plus a three-way verdict on each indicator — computed values for the ones that work (e.g., KSI trend from `ksi_count`), named missing fields for the ones that don't (e.g., anything needing pedestrian volume or ¼-mile resident reach), and required definitions for the ambiguous ones — and a revised indicator list you've actually pressure-tested.
+
+**Check your work.** Compare with Activity 1: did ChatGPT's abstract "yes, measurable" judgment survive contact with actual fields? An indicator that fails against 6 rows of representative data will fail against 24 months of real data in a funded evaluation plan.
+
+**Common pitfalls.** Claude Code may "helpfully" compute a proxy when the real field is missing (e.g., using citations as a stand-in for speeding rates) without flagging the substitution — make it label every proxy explicitly. And a computable number isn't automatically a valid indicator: `avg_survey_safety_score` computes fine while measuring nothing until the survey is defined.
+
+**Stretch (optional).** Ask Claude Code to generate the ideal monitoring CSV schema — every field the full indicator set would need — then compare it to what the city's data systems could realistically export.
+
+```{=html}
+</details>
+```
+
 
 ## Check your readiness
 

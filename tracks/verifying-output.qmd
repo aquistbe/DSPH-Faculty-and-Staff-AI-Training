@@ -94,6 +94,52 @@ Right-size the effort. A throwaway brainstorm needs little checking; a number in
 </details>
 ```
 
+```{=html}
+<details class="activity"><summary>Activity 3 · Novice — Catch a numeric hallucination with Claude Code</summary>
+```
+
+**Time** ~20 min · **Tools** Claude Code (consumer/PI-purchased — not Drexel-supported; **Low Risk Data only**: use only the fabricated text below or other public content)
+
+**Goal.** See how a coding agent can systematize "verify before it counts" — checking every number in an AI-written paragraph against its source automatically, at a scale manual checking can't match.
+
+**Setup.** Activities 1 and 2 caught fake *citations* one at a time. But AI also invents *numbers* inside otherwise-accurate prose, and a real document may contain dozens of them. Both texts below are **fabricated for practice**. First, the "source" fact sheet — treat this as the only ground truth:
+
+> **SOURCE FACT SHEET (fabricated — save as `source.txt`)**
+>
+> Philadelphia recorded 312 pedestrian crashes in 2023, resulting in 38 fatalities. 61% of crashes occurred after dark. 46% of all crashes were concentrated on the high-injury network, which makes up just 12% of city streets.
+
+Next, the "AI-generated" summary — most numbers match, but not all:
+
+> **AI SUMMARY (fabricated — save as `ai_summary.txt`)**
+>
+> In 2023, Philadelphia saw 312 pedestrian crashes and 38 deaths, a 24% increase over the previous year. 61% of crashes happened after dark, and 52% were concentrated on the high-injury network — just 12% of city streets.
+
+**Steps.**
+
+1. On your own computer, save the two passages above as plain text files: `source.txt` and `ai_summary.txt`. (Alternatively, ask ChatGPT Edu to summarize the fact sheet and use *its* output as your `ai_summary.txt` — it may hallucinate its own numbers.)
+
+2. Open a terminal, start Claude Code in that folder, and ask it to build the checker:
+
+   > I have two files. source.txt is a trusted fact sheet. ai_summary.txt is an AI-generated summary of it. Write and run a Python script that extracts every number and percentage from ai_summary.txt and checks whether each one appears in source.txt. Print a table: each number, its surrounding phrase, and VERIFIED or NOT IN SOURCE.
+
+3. Run the script (Claude Code will offer to run it for you) and read the output table.
+
+4. The script should flag two problems: **"24%"** (an invented year-over-year increase that appears nowhere in the source) and **"52%"** (an altered version of the source's 46%). Confirm both by rereading `source.txt` yourself — the script points, but you make the call.
+
+5. Reflect: Activities 1 and 2 would never have caught these. The citations could all be real and the prose could still be wrong.
+
+**Expected result.** A working script whose output verifies 312, 38, 61%, and 12% — and flags 24% and 52% as not traceable to the source.
+
+**Check your work.** Every flagged number should be genuinely absent from `source.txt`, and every verified number genuinely present. If the script misses 52% or falsely flags a real number, tell Claude Code what went wrong and have it fix the script — you verify the verifier, too.
+
+**Common pitfalls.** A "NOT IN SOURCE" flag doesn't automatically mean fabrication — it can be a legitimate calculation or a rounding difference — so the flag starts your verification, it doesn't finish it. And remember the tool's status: Claude Code is approved for Low Risk Data only, so never feed it drafts containing student records, health data, or anything non-public.
+
+**Stretch (optional).** Ask Claude Code to extend the script to also flag numbers whose surrounding context differs (e.g., 12% attached to the wrong claim), or point it at a public CDC or PennDOT fact sheet and a fresh ChatGPT Edu summary of it — then count how many numbers per paragraph you'd have had to check by hand.
+
+```{=html}
+</details>
+```
+
 
 ## Check your readiness
 

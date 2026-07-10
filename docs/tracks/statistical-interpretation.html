@@ -318,6 +318,21 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Common pitfalls.</strong> AI often slips into causal language (“speeding causes…”). This is observational data — keep it associational.</p>
 <p><strong>Stretch (optional).</strong> Ask AI to name the single biggest threat to validity in this analysis.</p>
 </details>
+<details class="activity"><summary>Activity 3 · Moderate — Translate and verify with Claude Code</summary>
+<p><strong>Time</strong> ~25 min · <strong>Tools</strong> Claude Code</p>
+<p><strong>Goal.</strong> Have an agent translate the same logistic regression across Stata, R, and Python — and actually run the R and Python versions to prove the results match, instead of you comparing outputs by hand.</p>
+<p><strong>Setup.</strong> Download the <a href="https://hub.arcgis.com/api/v3/datasets/21154a8f1894449f839d2288726e9837_0/downloads/data?format=csv&amp;spatialRefId=3857&amp;where=1%3D1">Philadelphia Crash Data 2020–2024 CSV</a> into a working folder and open a terminal there. You’ll need Claude Code installed plus R and/or Python on your machine — Claude Code can run whatever you have. One honest caveat: it can <em>write</em> the Stata <code>.do</code> file, but it can’t <em>run</em> Stata unless you have a licensed copy with command-line access configured, so the Stata version stays code-on-paper here.</p>
+<p><strong>Steps.</strong></p>
+<ol type="1">
+<li>Start Claude Code in the folder with the CSV and give it the full task in one prompt: &gt; In this folder is crashes.csv, Philadelphia crash data. Build a logistic regression predicting a fatal-crash indicator (FATAL_COUNT &gt; 0) from SPEED_RELATED, an intersection binary derived from INTERSECT_TYPE, and a dark/light binary derived from ILLUMINATION. Write three scripts: Stata (.do), R (glm), and Python (statsmodels). Use identical variable coding and reference categories in all three.</li>
+<li>Then have it verify rather than just generate: &gt; Run the R and Python scripts. Report the N, coefficients, and odds ratios from each side by side, and tell me explicitly whether they match. Don’t tell me the code “should” be equivalent — show me the actual output.</li>
+<li>If it reports a mismatch (common culprits: R and Python defaulting to different reference categories, or dropping missing rows differently), ask it to diagnose and fix: &gt; The Ns differ. Figure out whether it’s NA handling, factor coding, or how the binaries were derived, fix it so both scripts use the same rules, and re-run both to confirm.</li>
+</ol>
+<p><strong>Expected result.</strong> Three scripts on disk, plus a side-by-side comparison where the agent has run the R and Python versions itself and confirmed identical Ns, coefficients, and odds ratios — with any discrepancy diagnosed and resolved, not eyeballed. The Stata script should mirror the same coding, verified by you in Stata if you have it.</p>
+<p><strong>Check your work.</strong> Open the scripts and read the variable derivations yourself — did it code “dark” and “intersection” the way you intended, and does the missing-data rule make sense for these variables? The agent can prove the two scripts agree with each other; only you can confirm they both answer the right question. If you have Stata, run the <code>.do</code> file and check it matches too.</p>
+<p><strong>Common pitfalls.</strong> Agreement between R and Python is not the same as correctness — both scripts can share the same wrong recoding, which is exactly why you read the derivation code. And the standing rule: Claude Code is not Drexel-supported and is approved for Low Risk Data only — fine for this public crash CSV, not for anything with identifiable or restricted data.</p>
+<p><strong>Stretch (optional).</strong> Ask Claude Code to add a robustness check to both scripts — for example, refit treating ILLUMINATION as a multi-category factor instead of a binary — and report whether the SPEED_RELATED odds ratio holds up.</p>
+</details>
 </section>
 <section id="check-your-readiness" class="level2">
 <h2 class="anchored" data-anchor-id="check-your-readiness">Check your readiness</h2>

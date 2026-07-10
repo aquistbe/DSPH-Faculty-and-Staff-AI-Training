@@ -266,6 +266,53 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Common pitfalls.</strong> A skill only its author can run isn’t reusable. Document clearly.</p>
 <p><strong>Stretch (optional).</strong> Convert your best prompt from another workshop into a skill.</p>
 </details>
+<details class="activity"><summary>Activity 3 · Moderate — Build a real file-based skill with Claude Code</summary>
+<p><strong>Time</strong> ~20 min · <strong>Tools</strong> Claude Code (Anthropic’s command-line agent)</p>
+<p><strong>Goal.</strong> Rebuild Activity 1’s meeting-recap skill as a real, file-based Claude Code Skill — a folder with a <code>SKILL.md</code> file anyone can open, read, diff, and share — and compare its output to the custom-GPT version.</p>
+<p><strong>Setup.</strong> Claude Code is a consumer/PI-purchased tool, not Drexel-supported — Low Risk Data only, so stick to the fabricated notes below. Unlike a custom GPT (where the instructions live inside your account’s settings), a Claude Code Skill is just a folder containing a <code>SKILL.md</code> file — the job description, steps, output format, and guardrails written in plain markdown — plus any helper scripts the skill can actually run. You’ll reuse the same messy notes and target format from Activity 1:</p>
+<blockquote class="blockquote">
+<p>epi dept mtg weds 7/2 — jen started with enrollment update, MPH apps up 12% but DrPH down, she’s worried about the DrPH pipeline. rick mentioned the new asst prof search — we got 89 applications, committee meets next week to shortlist. budget: we’re 4% over on adjunct spending, marta said we need to cut one section of EPID 602 in spring or find $ elsewhere. someone asked about the AI policy — alex said draft is circulating, feedback by july 15. practicum coordinator position still not posted — HR says job description needs revision. jen wants dept retreat date locked in (sept or oct?). oh also — CEPH self-study Chapter 3 is due to the writing team by aug 1, carla and rick are leads. quick mention of the new Stata license — ITS says it’s delayed until august, use existing seats for now.</p>
+</blockquote>
+<p><strong>Target recap format:</strong></p>
+<blockquote class="blockquote">
+<p><strong>EPID Department Meeting — July 2, 2026</strong></p>
+<p><strong>Decisions made:</strong> - [list any actual decisions]</p>
+<p><strong>Action items:</strong> - [person]: [task] — by [date]</p>
+<p><strong>Discussion highlights:</strong> - [2–4 sentence summary of key topics]</p>
+<p><strong>Parking lot</strong> (raised but not resolved): - [items needing follow-up]</p>
+</blockquote>
+<p><strong>Steps.</strong></p>
+<ol type="1">
+<li>Create a folder called <code>meeting-recap-skill/</code> and inside it a file named <code>SKILL.md</code> containing the skill — same job, steps, output format, and guardrails as Activity 1, now as an actual document:</li>
+</ol>
+<blockquote class="blockquote">
+<p>--- name: meeting-recap description: Turn messy meeting notes into a standard 4-section recap. Use when given raw or informal meeting notes. ---</p>
+<p><strong>Job.</strong> Convert messy meeting notes into a recap with exactly four sections: Decisions made, Action items, Discussion highlights, Parking lot.</p>
+<p><strong>Steps.</strong> Read the full notes first. Sort each item into one section. Then run <code>python count_actions.py</code> on the finished recap as a sanity check.</p>
+<p><strong>Output format.</strong> [paste the target recap format from above]</p>
+<p><strong>Guardrails.</strong> Only list action items with a clear owner. Undecided items go to the parking lot, never to decisions. Never invent attendees, dates, or topics not in the notes. Keep discussion highlights under 4 sentences.</p>
+</blockquote>
+<ol start="2" type="1">
+<li>Add the sanity-check helper the skill references — something a custom GPT can’t reliably do, because Claude Code can actually execute code. Save this as <code>count_actions.py</code> in the same folder:</li>
+</ol>
+<blockquote class="blockquote">
+<p>import sys text = sys.stdin.read() n = text.split(“Action items:”)[-1].split(“Discussion highlights:”)[0].count(“-”) print(f”Action items extracted: {n}” + (” — WARNING: zero action items, check the recap.” if n == 0 else ““))</p>
+</blockquote>
+<ol start="3" type="1">
+<li>Open a terminal in that folder, start Claude Code by typing <code>claude</code>, and give it the same messy notes:</li>
+</ol>
+<blockquote class="blockquote">
+<p>Use the meeting-recap skill to recap these notes: [paste the messy notes from Setup]</p>
+</blockquote>
+<ol start="4" type="1">
+<li><p>Watch it read <code>SKILL.md</code>, produce the recap, and run the counter. Compare the output side-by-side with your Activity 1 custom-GPT result: same sections? Same sorting decisions?</p></li>
+<li><p>Now the payoff: open <code>SKILL.md</code> in any text editor. That single readable file <em>is</em> the skill — email it, drop it on a shared drive, or put it in version control, and a colleague sees exactly what it does. Try changing one guardrail and re-running to see the behavior change.</p></li>
+</ol>
+<p><strong>Expected result.</strong> The same four-section recap as Activity 1, plus a printed action-item count — produced by a skill that exists as an inspectable file rather than settings hidden in someone’s account.</p>
+<p><strong>Check your work.</strong> Same tests as Activity 1: retreat date in “parking lot” (correct), not “decisions”; no invented action item for Marta about cutting EPID 602. New test: did the counter run and report a nonzero count?</p>
+<p><strong>Common pitfalls.</strong> Low Risk Data only — never point Claude Code at a folder containing real student, personnel, or health data. The quality still lives in the instructions: a vague <code>SKILL.md</code> produces vague recaps, exactly like a vague custom GPT.</p>
+<p><strong>Stretch (optional).</strong> Put <code>meeting-recap-skill/</code> in a shared drive or git repository, have a colleague run it cold on their own (non-sensitive) notes, and use a file diff to review any edits they propose — try doing <em>that</em> with a custom GPT’s instructions box.</p>
+</details>
 </section>
 <section id="check-your-readiness" class="level2">
 <h2 class="anchored" data-anchor-id="check-your-readiness">Check your readiness</h2>

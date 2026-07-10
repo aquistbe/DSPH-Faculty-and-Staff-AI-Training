@@ -90,6 +90,59 @@ The discipline is sampling and spot-checking: validate the loop on a few items, 
 </details>
 ```
 
+```{=html}
+<details class="activity"><summary>Activity 3 · Advanced — Script, run, and audit the loop in one Claude Code session</summary>
+```
+
+**Time** ~25 min · **Tools** Claude Code (terminal) + Python or R
+
+**Low Risk Data only.** Claude Code is a consumer/PI-purchased tool, not Drexel-supported — use it only with Low Risk (public) data like these 311-style descriptions unless you have separate approval.
+
+**Goal.** Have the agent write, run, and first-pass audit the entire batch loop in one session — you only verify the final output.
+
+**Setup.** Open Claude Code in an empty folder. You'll use 10–12 fabricated 311-style request descriptions (modeled on public [311 Service & Information Requests](https://opendataphilly.org/datasets/311-service-and-information-requests/)) — no real resident data. Copy this batch into a file called `requests.txt`, one per line:
+
+> pothole on 5th street near the intersection
+> graffiti removal request on retaining wall
+> broken streetlight near the elementary school
+> illegal dumping behind apartment building
+> missed trash pickup for the third week
+> abandoned vehicle parked on residential block
+> water leaking from fire hydrant onto sidewalk
+> loud construction noise starting before 6am
+> tree branch down blocking the bike lane
+> rat sighting in vacant lot next door
+> stop sign knocked over at the corner
+> dark corner by the park — something should be fixed there
+
+(The last one is deliberately vague — expect the audit to flag it.)
+
+**Steps.**
+
+1. Ask Claude Code to build and validate the classifier on a few items first:
+
+   > Write a Python script that reads requests.txt and classifies each line by issue type (e.g., Street Repair, Sanitation, Lighting, Vandalism, Noise, Other) using simple keyword rules. Run it on just the first 3 lines and show me the results before doing the full batch.
+
+2. Confirm the three test classifications look right, then have it run the full batch and write results to `classified.csv`.
+
+3. Have the agent audit its own output:
+
+   > Pull a random sample of 4 rows from classified.csv. Print each description, its assigned category, and whether you're confident in that classification. Flag any you're unsure about and say what's likely systematically wrong with the rules.
+
+4. Based on what the audit flags (the vague "dark corner" item, or a keyword rule that's too greedy), ask it to fix the logic and re-run **only the flagged/failed items**, not the whole batch. Then open `classified.csv` yourself and spot-check 3 rows by hand — the human does the final verification.
+
+**Expected result.** A working script, a 12-row classified CSV, an agent-generated audit of a random sample with at least one item flagged as low-confidence, and a targeted re-run of just the failures.
+
+**Check your work.** Did the agent actually flag the ambiguous item, or did it confidently misfile it? If it claimed 100% confidence on everything, its self-audit failed — that's the lesson. Your manual spot-check is the checkpoint the agent can't replace.
+
+**Common pitfalls.** An agent that writes, runs, and grades its own work will be biased toward passing itself — treat its audit as a first pass, never the final sign-off. And don't let convenience creep the data upward: this workflow is approved for public/Low Risk data only.
+
+**Stretch (optional).** Ask Claude Code to add a `confidence` column and automatically route every low-confidence row into a separate `needs_human_review.csv`, then compare its uncertainty flags against your own judgment.
+
+```{=html}
+</details>
+```
+
 
 ## Check your readiness
 

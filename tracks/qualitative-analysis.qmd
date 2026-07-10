@@ -96,6 +96,40 @@ Transcripts are often sensitive. De-identify them and use an approved tool — c
 </details>
 ```
 
+```{=html}
+<details class="activity"><summary>Activity 3 · Moderate — Apply Your Codebook Across Multiple Files with Claude Cowork</summary>
+```
+
+**Time** ~20 min · **Tools** Claude Cowork
+
+**Goal.** Apply the codebook you built in Activities 1–2 consistently across both batches of walkability comments stored as separate files — the way real qualitative data actually arrives — while keeping every interpretive decision yourself.
+
+**Setup.** Create a folder on your computer called `walkability-coding`. Save Batch 1's eight comments as `batch1.txt` (one comment per line) and Batch 2's eight comments as `batch2.txt`. Add a third file, `codebook.txt`, containing your codes and their definitions from the earlier activities (e.g., *traffic safety*, *infrastructure condition*, *accessibility*, *personal safety/lighting*). Open Claude Cowork and connect the `walkability-coding` folder. Unlike pasting into a chat window, Cowork reads the files directly — no copy-paste, and the same codebook is applied to every file.
+
+**Steps.**
+
+1. Ask Cowork to code both files against your codebook and combine the results:
+
+   > Read codebook.txt, then apply those codes to every comment in batch1.txt and batch2.txt. Produce one combined table with columns: source file, comment, suggested code(s), and a one-line rationale for each. Use only codes from my codebook — do not invent new ones. These are suggestions for my review, not final coding decisions.
+
+2. Read the combined table against your own coding of at least four comments — two from each batch. Where Cowork disagrees with you, ask it to explain its rationale, then decide yourself. Your reading wins; the table is a first pass, not an answer key.
+
+3. Ask it to surface its own uncertainty:
+
+   > Go back through both files and flag any comment where you were not confident which code applied, or where two codes seemed equally plausible. List those separately with the competing codes and why each could fit.
+
+**Expected result.** One combined coded table covering all sixteen comments across both files, plus a shorter flagged list of ambiguous comments (e.g., "The crossing signal doesn't last long enough" could be *traffic safety* or *accessibility*) queued for your judgment.
+
+**Check your work.** Compare Cowork's codes against your own on your sample — do you agree at least most of the time, and can you articulate why where you don't? Every low-confidence comment gets read and coded by you personally; never accept a flagged item on the tool's rationale alone.
+
+**Common pitfalls.** Treating the combined table as finished coding — it's a draft that you adjudicate, exactly as in Activities 1 and 2. And the data warning matters more here, not less: this workflow is fine because these comments are fabricated and non-sensitive, but Claude and Claude Cowork are not Drexel-supported and are approved for Low Risk Data only. Connecting a folder of real interview transcripts to Cowork would hand sensitive data to an uncleared tool — real transcripts must be de-identified and analyzed in an approved, Drexel-cleared tool, full stop.
+
+**Stretch (optional).** Add a `batch3.txt` with five new comments you write yourself, rerun the same prompt, and see whether the codebook holds up or a comment surfaces the need for a new code — your call to make.
+
+```{=html}
+</details>
+```
+
 
 ## Check your readiness
 

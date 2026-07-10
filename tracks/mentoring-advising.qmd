@@ -106,6 +106,52 @@ Use AI for the **administrative** parts of advising (drafting, formatting, compi
 </details>
 ```
 
+```{=html}
+<details class="activity"><summary>Activity 3 · Moderate — Catch the sameness problem across multiple letters with Claude Cowork</summary>
+```
+
+**Time** ~25 min · **Tools** Claude Cowork (personal/consumer account — not Drexel-supported)
+
+**Goal.** Use Cowork's ability to work across a whole folder of files to draft several recommendation letters at once — then make the AI expose the "sameness" problem that a one-letter-at-a-time workflow (like Activity 1) can never reveal.
+
+**Data classification warning.** Claude and Claude Cowork are consumer/PI-purchased tools, not Drexel-supported, and are approved for **Low Risk Data only**. Student records are FERPA-protected and must never touch this tool. This activity uses **only the fabricated profiles below** — never substitute a real student, and never connect Cowork to a folder containing real advising files.
+
+**Setup.** Create a new folder on your computer (e.g., `rec-letter-practice`) containing three text files, one fabricated student profile per file (do not use any real student's information):
+
+> **File 1 — jordan-rivera.txt.** **Student:** Jordan Rivera (fabricated), 2nd-year MPH in Epidemiology. Applying for a CDC/CSTE Applied Epidemiology Fellowship. Strengths: strong quantitative skills (completed advanced biostatistics, proficient in R and SAS), led a community-based participatory research project on lead exposure in North Philadelphia, excellent at communicating with community partners. Areas of growth: still developing confidence presenting to large audiences. You have supervised Jordan for 14 months as their practicum advisor. Jordan analyzed 3 years of childhood blood lead level data for the Philadelphia Department of Public Health and produced a policy brief that was shared with City Council.
+
+> **File 2 — sam-okafor.txt.** **Student:** Sam Okafor (fabricated), graduating MPH in Community Health and Prevention. Applying to a PhD program in public health with a qualitative research focus. Strengths: exceptional qualitative skills (designed and conducted 30 semi-structured interviews with immigrant caregivers about vaccine hesitancy, coded them in NVivo, co-authored a manuscript under review), thoughtful writer, generous peer mentor in the department's writing group. Areas of growth: sometimes over-scopes projects and needs help narrowing research questions. You have taught Sam in two seminars and supervised their thesis for a year.
+
+> **File 3 — priya-shah.txt.** **Student:** Priya Shah (fabricated), 1st-year MPH in Environmental and Occupational Health. Applying for a summer internship with a state health department's environmental epidemiology unit. Strengths: strong geospatial skills (built interactive GIS maps of heat-island exposure and asthma ED visits for a class project, proficient in QGIS and ArcGIS), fast learner, reliable under deadline. Areas of growth: newer to formal coursework in statistics; early in professional development. You have known Priya for 6 months as her academic advisor and course instructor.
+
+**Steps.**
+
+1. Open Claude Cowork and connect it to your `rec-letter-practice` folder. Ask it to draft all three letters in one pass:
+
+> Read each of the three student profile files in this folder. For each student, draft a separate recommendation letter (~400 words, warm but professional) saved as a new file, tailored to that student's specific target opportunity. Use only the examples in each profile — do not invent accomplishments. Each letter should be distinctly about that student.
+
+2. Now make Cowork audit its own work for sameness:
+
+> Compare the three letters you just drafted against each other. List every sentence, phrase, or structural pattern that repeats nearly verbatim across letters for different students — including identical openings, identical closing endorsements, and reused adjectives. Present the repeats side by side so I can see them.
+
+3. Read the flagged repeats. For each one, decide: is this harmless letter convention, or interchangeable boilerplate that would make a reviewer reading all three letters discount them?
+
+4. Rewrite the flagged boilerplate yourself, per student — as in Activity 1, in your own voice, drawing on a specific observation only you could make about that student (Jordan's City Council brief, Sam's interview coding, Priya's heat-island maps).
+
+5. Delete the practice folder when finished, and disconnect Cowork from it.
+
+**Expected result.** Three personalized letter drafts plus a concrete list of repeated language across them — direct, checkable evidence of the "sameness" risk that reviewing one letter at a time cannot surface.
+
+**Check your work.** Swap the student names across the three letters and reread. Any paragraph that still works under the wrong name is boilerplate you need to rewrite.
+
+**Common pitfalls.** Fellowship and admissions reviewers often read multiple letters from the same recommender — identical phrasing quietly devalues every student it describes. Never connect Cowork (or any unapproved tool) to folders containing real student records; Low Risk Data only.
+
+**Stretch (optional).** Ask Cowork to produce a one-page comparison table of which concrete, student-specific evidence appears in each letter — any letter whose column is mostly adjectives rather than evidence needs another pass from you.
+
+```{=html}
+</details>
+```
+
 
 ## Check your readiness
 

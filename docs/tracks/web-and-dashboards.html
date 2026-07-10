@@ -259,6 +259,21 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Common pitfalls.</strong> Changing many things at once makes failures hard to localize — iterate singly.</p>
 <p><strong>Stretch (optional).</strong> Ask AI to add a short methods note: data source, years covered, and what “pedestrian-involved” means.</p>
 </details>
+<details class="activity"><summary>Activity 3 · Moderate — Same dashboard, built by an agent: Claude Code</summary>
+<p><strong>Time</strong> ~20 min · <strong>Tools</strong> Claude Code</p>
+<p><strong>Goal.</strong> Build the same crash dashboard as Activity 1, but let Claude Code read the real CSV, write the HTML file to disk, and verify its own numbers — no copy-pasting code out of a chat window.</p>
+<p><strong>Setup.</strong> Download the <a href="https://hub.arcgis.com/api/v3/datasets/21154a8f1894449f839d2288726e9837_0/downloads/data?format=csv&amp;spatialRefId=3857&amp;where=1%3D1">Crash Data 2020–2024 CSV</a> into an empty folder (e.g., <code>crash-dashboard/</code>). Open a terminal in that folder and start Claude Code (<code>claude</code>). Note: Claude Code is a consumer/PI-purchased tool, not Drexel-supported — Low Risk Data only, and this public dataset qualifies.</p>
+<p><strong>Steps.</strong></p>
+<ol type="1">
+<li>Describe the dashboard and let it work from the actual file, not a description of it: &gt; Read the crash CSV in this folder and inspect its columns. Then create dashboard.html — a single self-contained file with three views: a map of pedestrian crashes, a bar chart of crashes by year, and a table of the top 10 collision types. Compute the counts from the CSV and bake them into the HTML; don’t load the CSV at runtime.</li>
+<li>Once it writes the file, make it check its own math against the source: &gt; Before we call this done: re-read the CSV and count crashes for 2022 directly. Does that number match the 2022 bar in dashboard.html? Show me both numbers. Because Claude Code can read the data and the file it just wrote, it can catch its own mismatch — a chat window can’t.</li>
+<li>Open <code>dashboard.html</code> in your browser, then iterate in place: &gt; Add a dropdown filter to the table so I can filter collision types by year. Update dashboard.html. Refresh the browser and confirm the change landed in the same file — no re-pasting, no dashboard_v2_final.html.</li>
+</ol>
+<p><strong>Expected result.</strong> A working <code>dashboard.html</code> on disk with map, chart, and table — and the agent has verified at least one figure (the 2022 count) against the raw CSV itself.</p>
+<p><strong>Check your work.</strong> Its self-check is a start, not a substitute: spot-check one more year’s total against your earlier counts, confirm map points fall within Philadelphia, and skim the table for obviously miscoded collision types.</p>
+<p><strong>Common pitfalls.</strong> Claude Code is a consumer/PI-purchased tool and not Drexel-supported — use it with Low Risk Data only, and as always, publish only non-sensitive data. Also, an agent that can write files can overwrite them: work in a dedicated folder, not your Documents directory, and review what it changed before you share the result.</p>
+<p><strong>Stretch (optional).</strong> Ask Claude Code to write a small script that regenerates <code>dashboard.html</code> from a fresh CSV download, so next year’s data update is one command.</p>
+</details>
 </section>
 <section id="check-your-readiness" class="level2">
 <h2 class="anchored" data-anchor-id="check-your-readiness">Check your readiness</h2>

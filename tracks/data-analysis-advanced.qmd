@@ -94,6 +94,44 @@ Recent work cautions that "foundation models" don't automatically win on tabular
 </details>
 ```
 
+```{=html}
+<details class="activity"><summary>Activity 3 · Advanced — Build, run, and audit the pipeline in one Claude Code session</summary>
+```
+
+**Time** ~30 min · **Tools** Claude Code
+
+**Goal.** Have Claude Code build the serious-crash pipeline, actually execute it, and then audit the *fitted* model — coefficients, splits, metrics — instead of auditing code by eye.
+
+**Setup.** Download the [Crash Data 2020–2024 CSV](https://hub.arcgis.com/api/v3/datasets/21154a8f1894449f839d2288726e9837_0/downloads/data?format=csv&spatialRefId=3857&where=1%3D1) into a working folder, `cd` into it, and start `claude`. Same outcome as Activity 1: a serious-crash indicator (fatal or suspected-serious injury), predicted only from fields known at the time of the crash.
+
+**Steps.**
+
+1. Ask for the pipeline — and insist it runs, not just writes:
+
+   > Read crash_data.csv and inspect the columns. Write a Python script that builds a logistic regression predicting a serious-crash indicator (fatal or suspected-serious injury) using only fields knowable at the time of the crash. Split, fit, and evaluate — then run the script and show me the output. If it errors, fix it and re-run until it works.
+
+2. Interrogate the fitted model, not the source code:
+
+   > Print the model's coefficients sorted by absolute magnitude, the class balance in train and test, and the exact split boundary. Which features are doing the most work, and why?
+
+   Injury-severity counts, EMS/transport fields, or anything derived from the outcome sitting at the top of the coefficient list is your leakage, visible in the actual model rather than hypothetical in the code.
+
+3. Now make it audit and repair its own work:
+
+   > Audit this pipeline for (a) predictors that encode the outcome, (b) validation strategy — I want a temporal split, train on 2020–2022, test on 2023–2024, not a random split, and (c) metrics appropriate for class imbalance: recall, precision, and PR-AUC, not accuracy. Fix every problem you find, re-run, and show me the before/after metrics side by side.
+
+**Expected result.** A working, executed pipeline; at least one substantive flaw caught in the fitted model (leaky feature, random split, or accuracy-only reporting); and a before/after comparison where the honest metrics are visibly worse — that drop is the audit working.
+
+**Check your work.** Ask Claude Code to print `min` and `max` crash dates for train and test — they must not overlap. Re-inspect the corrected model's top coefficients and confirm nothing there is only knowable after the crash. If performance barely changed after removing a "leaky" feature, question whether it was actually leaking.
+
+**Common pitfalls.** Claude Code will happily "fix" a flaw by explaining it without editing the code — confirm the script changed and the numbers changed with it. And the standing rule: Claude Code is not Drexel-supported and is approved for Low Risk (public) data only — this public crash CSV qualifies; your real project data likely does not without a Third-Party Risk Assessment.
+
+**Stretch (optional).** Ask it to add a trivial baseline (predict the majority class, or a one-feature model) and report how much the full model beats it on PR-AUC.
+
+```{=html}
+</details>
+```
+
 
 ## Check your readiness
 

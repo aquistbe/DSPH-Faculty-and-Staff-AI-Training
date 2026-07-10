@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -303,6 +338,45 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Check your work.</strong> Is there any path where the AI acts irreversibly without a human? Close it.</p>
 <p><strong>Common pitfalls.</strong> Connected agents can be misled by malicious content (prompt injection) — keep humans on consequential steps.</p>
 <p><strong>Stretch (optional).</strong> Note which actions you’d never connect to AI at all.</p>
+</details>
+<details class="activity"><summary>Activity 3 · Advanced — Configure a real least-privilege MCP connection</summary>
+<p><strong>Time</strong> ~25 min · <strong>Tools</strong> Claude Desktop (or Claude Code) + Node.js — consumer/PI-purchased tools: Low Risk Data only</p>
+<p><strong>Goal.</strong> Turn Activity 1’s paper plan into a real, working, testable least-privilege connection — using only fabricated practice data.</p>
+<p><strong>Setup.</strong> Make one new folder on your computer (e.g., <code>mcp-practice</code> on your Desktop) and put 2–3 fake “crash summary” text files in it with obviously made-up numbers (e.g., <code>crash-summary-2024.txt</code>: “District 9 recorded 42 crashes in 2024, 7 involving bicycles.”). Nothing real, nothing identified — this folder is the entire universe the assistant will be allowed to see. NOT a real OneDrive folder; NOT anything with actual Drexel data. Then connect the official filesystem MCP server (<code>@modelcontextprotocol/server-filesystem</code>) scoped to only that folder. In Claude Desktop: Settings → Developer → Edit Config, add this to <code>claude_desktop_config.json</code> (swap in your actual folder path), save, and restart the app:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"mcpServers"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"practice-folder"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"npx"</span><span class="fu">,</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"args"</span><span class="fu">:</span> <span class="ot">[</span><span class="st">"-y"</span><span class="ot">,</span> <span class="st">"@modelcontextprotocol/server-filesystem"</span><span class="ot">,</span> <span class="st">"/Users/you/Desktop/mcp-practice"</span><span class="ot">]</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>That last line is Activity 1’s least-privilege table row, now as real configuration: one specific folder path — not your whole drive, not a parent folder.</p>
+<p><strong>Steps.</strong></p>
+<ol type="1">
+<li>Test that reading works. Ask a question answerable only from the practice files:</li>
+</ol>
+<blockquote class="blockquote">
+<p>Using the practice-folder connection, which district had the most crashes across the summary files, and what is the total in each file?</p>
+</blockquote>
+<ol start="2" type="1">
+<li>Test the boundary. Ask for something outside the folder and confirm it fails:</li>
+</ol>
+<blockquote class="blockquote">
+<p>List the files in my Documents folder.</p>
+</blockquote>
+<p>You should get an “access denied” or “not in allowed directories” response — the connection can only see the one folder named in the config, nothing else on the computer.</p>
+<ol start="3" type="1">
+<li>Now deliberately try to make it write:</li>
+</ol>
+<blockquote class="blockquote">
+<p>Create a new file called notes.txt in the practice folder that says “test”.</p>
+</blockquote>
+<p>This reference server does include write tools, so Claude Desktop will ask your approval before any write — click <strong>Deny</strong>. That approval prompt is Activity 2’s human-approval gate, made real. Since the server itself doesn’t enforce read-only, your read-only guarantee comes from two things you can inspect: the config grants only this one folder, and you decline every write. When you’re done practicing, remove the server block from the config and restart — the narrowest access of all is none.</p>
+<p><strong>Expected result.</strong> A working connection that answers questions from the practice files, cannot see anything outside the folder, and never writes without your explicit approval — Activity 1’s comparison table passing a live test.</p>
+<p><strong>Check your work.</strong> Re-ask Activity 1’s question against the real thing: “if this connection misbehaved, what’s the worst it could do?” The honest answer should now be “read three fake text files.”</p>
+<p><strong>Common pitfalls.</strong> Pointing the config at your Desktop or home folder instead of the single practice subfolder — that’s the over-scoped version from Activity 1, for real. Clicking “Allow” on write prompts out of habit. Leaving the server configured after the exercise ends. And the big one: this is a controlled practice exercise only — connecting MCP to any real Drexel data folder (OneDrive included) needs Drexel’s approval first, exactly as this page’s Data rules state.</p>
+<p><strong>Stretch (optional).</strong> Try the same design in Claude Code: <code>claude mcp add practice-folder -- npx -y @modelcontextprotocol/server-filesystem ~/Desktop/mcp-practice</code>, then use <code>/permissions</code> to deny the server’s write tools outright — least privilege enforced by configuration rather than by clicking Deny each time.</p>
 </details>
 </section>
 <section id="check-your-readiness" class="level2">

@@ -104,6 +104,44 @@ Cultural adaptation is more than translation: examples, framing, and imagery may
 </details>
 ```
 
+```{=html}
+<details class="activity"><summary>Activity 3 · Moderate — Scale translation QA across languages with Claude Cowork</summary>
+```
+
+**Time** ~20 min · **Tools** Claude Cowork (consumer/PI-purchased — not Drexel-supported; **Low Risk Data only**)
+
+**Goal.** Run the same translate-then-back-translate QA check from Activity 1 across three languages at once, the way a real multilingual campaign actually goes out.
+
+**Setup.** Real outreach rarely ships in one language. Spanish is Philadelphia's most common non-English language, but DSPH projects often also need Vietnamese, Chinese, or others — and each version needs the same QA check. Instead of re-prompting a chat window three times, connect a folder and let Cowork work across all the files at once. Create a folder containing one file, `original-message.txt`, with the same pedestrian-safety message from Activity 1 (it's already public and non-sensitive — keep it that way; nothing above Low Risk goes into Cowork). Connect that folder to a Cowork session.
+
+**Steps.**
+
+1. Ask Cowork to translate into all three languages, one file per language:
+
+   > In the connected folder, read original-message.txt. Translate it into Spanish, Vietnamese, and Simplified Chinese, keeping a warm, plain-language tone. Save each as translation-[language].txt — three separate files.
+
+2. Then have it back-translate each one, as literally as possible:
+
+   > Now back-translate each translation-[language].txt into English, as literally as possible, without looking at the original. Save each as backtranslation-[language].txt.
+
+3. Finally, ask for a single consolidated QA table:
+
+   > Compare each back-translation against original-message.txt. Create qa-report.md with a table: one row per language, columns for sentences that drifted in meaning, the nature of the drift (idiom, health term, tone), and a severity flag. Flag any language where meaning shifted.
+
+4. Open the folder: you should have three translations, three back-translations, and one QA report. Read the flagged rows and spot-check them against the files.
+
+**Expected result.** Seven files — one original, three translations, three back-translations — plus a consolidated QA table telling you where to look first in each language.
+
+**Check your work.** The QA table is a **triage step, not a sign-off**. A bilingual human must review each language's version before anything is published — same rule as Activity 1, now times three.
+
+**Common pitfalls.** The same model translating and grading itself can miss its own confident errors — that's exactly why the human review rule doesn't scale away. And remember Cowork's data status: Low Risk (public) content only, unless separately approved.
+
+**Stretch (optional).** Ask Cowork to add a column to the QA table noting reading level per translation, and whether any language's version drifted above plain-language level.
+
+```{=html}
+</details>
+```
+
 
 ## Check your readiness
 

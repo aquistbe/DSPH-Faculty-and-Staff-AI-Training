@@ -269,6 +269,37 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Common pitfalls.</strong> AI-drafted progress reports often minimize challenges (“a minor delay”) when the actual impact was significant. Be honest — NIH reviewers appreciate candor, and understating delays can backfire in a site visit. And remember that a progress report is an official record submitted to the sponsor — it’s not governed by NIH’s application-focused NOT-OD-25-132 policy, but every fact in it still needs to be accurate and verified by you.</p>
 <p><strong>Stretch (optional).</strong> Draft the progress report for a foundation grant using the same milestones but a different format and audience (shorter, less technical).</p>
 </details>
+<details class="activity"><summary>Activity 3 · Novice — Build a reusable deadline tracker with Claude Code</summary>
+<p><strong>Time</strong> ~25 min · <strong>Tools</strong> Claude Code (personal/PI-purchased — not Drexel-supported; <strong>Low Risk Data only</strong>)</p>
+<p><strong>Goal.</strong> Instead of re-running the Activity 1 prompt every time you add a funding opportunity, have Claude Code build a small script you can rerun forever: it reads a list of FOA deadlines from a file and prints a sorted deadline calendar.</p>
+<p><strong>Setup.</strong> Claude Code runs in your computer’s <em>terminal</em> — the text-based window where you type commands (Terminal on Mac, PowerShell or Windows Terminal on Windows). Unlike a chat window, Claude Code can read and write real files on your computer and run code, which is what makes a <em>reusable</em> tool possible. Install it from <a href="https://docs.anthropic.com/en/docs/claude-code">Anthropic’s Claude Code page</a> and open a terminal in an empty folder (e.g., <code>foa-tracker</code>).</p>
+<p>Data reminder: Claude Code is approved for <strong>Low Risk data only</strong> — use public FOA information and the fabricated data below, never real budget figures or personnel names/salaries.</p>
+<p>Create a file called <code>foas.csv</code> in that folder (any text editor works — or ask Claude Code to create it for you) with this fabricated sample:</p>
+<blockquote class="blockquote">
+<pre><code>title,sponsor,page_limit,due_date
+Community Air Quality Sensor Networks (R21),NIH/NIEHS,6,2026-10-16
+Pedestrian Injury Prevention in Urban Corridors (R01),NIH/NICHD,12,2026-11-05
+Regional Wastewater Surveillance Capacity,CDC,10,2026-09-30
+Heat Resilience Planning for Older Adults,RWJF,8,2027-01-15</code></pre>
+</blockquote>
+<p><strong>Steps.</strong></p>
+<ol type="1">
+<li><p>In the folder containing <code>foas.csv</code>, type <code>claude</code> to start Claude Code, then describe the tool you want:</p>
+<blockquote class="blockquote">
+<p>I’m a grants administrator tracking multiple funding opportunities. Read foas.csv in this folder — it has columns title, sponsor, page_limit, due_date. Write a simple Python script called deadline_tracker.py that reads this file and prints a table of all opportunities sorted by due date (soonest first), showing title, sponsor, page limit, due date, and days remaining from today. Flag anything due within 60 days. Keep the script simple enough for a non-programmer to rerun, and tell me the exact command to run it.</p>
+</blockquote></li>
+<li><p>Claude Code will show you what it plans to create and ask permission before writing files or running anything — read each request before approving. When it finishes, run the command it gives you (typically <code>python deadline_tracker.py</code>).</p></li>
+<li><p>Test that it’s genuinely reusable: add a fifth made-up FOA row to <code>foas.csv</code> yourself, rerun the script, and confirm the new opportunity appears in the right sorted position.</p></li>
+<li><p>Ask for one refinement in plain English:</p>
+<blockquote class="blockquote">
+<p>Update the script so it also writes the sorted table to a file called deadline_report.txt that I can paste into an email to my study teams.</p>
+</blockquote></li>
+</ol>
+<p><strong>Expected result.</strong> A working <code>deadline_tracker.py</code> you keep and rerun each grant cycle — add a row to the CSV, run one command, get an updated sorted deadline calendar. No re-prompting required.</p>
+<p><strong>Check your work.</strong> Count days-remaining by hand for at least two rows against a real calendar, and confirm the sort order matches the due dates. Just like Activity 2: verify every number the tool produces before anyone relies on it.</p>
+<p><strong>Common pitfalls.</strong> The script only knows what’s in your CSV — it won’t know about internal routing deadlines, so consider adding a column for your grants office’s internal due date (usually days before the sponsor deadline). A typo in a date (e.g., <code>2026-13-01</code>) can break the script or silently mis-sort; if that happens, just paste the error message into Claude Code and ask it to fix it. And remember the classification rule: this file lives on your computer and passes through a non-Drexel tool, so keep it to public, fabricated, or otherwise Low Risk information only.</p>
+<p><strong>Stretch (optional).</strong> Ask Claude Code to add a <code>status</code> column (e.g., “drafting,” “in routing,” “submitted”) and print submitted opportunities in a separate section — a first step toward the pre-submission checklist from Activity 1 living in a file instead of a chat window.</p>
+</details>
 </section>
 <section id="check-your-readiness" class="level2">
 <h2 class="anchored" data-anchor-id="check-your-readiness">Check your readiness</h2>

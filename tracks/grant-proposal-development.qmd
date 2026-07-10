@@ -106,6 +106,54 @@ Activity 1 below is the recommended workflow: brainstorm with AI, draft it yours
 </details>
 ```
 
+```{=html}
+<details class="activity"><summary>Activity 3 · Moderate — Cross-check a multi-document application package with Claude Cowork</summary>
+```
+
+**Time** ~20 min · **Tools** Claude Cowork (consumer/PI-purchased — see below)
+
+**Data classification — read this first.** Claude Cowork is not a Drexel-supported tool and is approved for **Low Risk Data only** unless separately approved through Drexel's Third-Party Risk Assessment process. Real grant application content is normally unpublished and competitively sensitive — it is **not** low-risk. Do this activity only with the fabricated files below (or your own clearly fictional materials). Real proposal documents belong in an approved Drexel tool.
+
+**Goal.** Use an agentic, folder-based tool to catch cross-document inconsistencies in an application package you wrote yourself — the kind a study section or grants office would flag, and a single-document chat review would miss. No drafting: AI reads, compares, and critiques; you make every fix.
+
+**Setup.** Create a folder on your computer called `mock-grant` containing three plain-text files with the fabricated excerpts below (all fictional — invented investigator, institution, and data), then connect Claude Cowork to that folder. At least one inconsistency is deliberately planted.
+
+- `specific-aims.txt`:
+
+  > Pedestrian injuries near the fictional city of Harborview's school zones have risen 40% since 2020 (invented figure). Building on our preliminary dataset of 18 months of intersection-camera observations at 12 school crossings, we will test whether low-cost signal-timing changes reduce risky mid-block crossings (Aim 1) and whether effects differ by time of day (Aim 2). Co-Investigator Dr. Elena Vasquez, a biostatistician, will lead the Aim 2 modeling. PI Dr. Sam Okafor will oversee all data collection and analysis.
+
+- `budget-justification.txt`:
+
+  > Dr. Sam Okafor (PI, 0.6 calendar months) will provide overall scientific direction. Dr. Elena Vasquez (Co-I, 1.2 calendar months) will conduct statistical modeling for Aim 2. A Community Engagement Coordinator (3.0 calendar months) will recruit and convene the parent advisory board described in the outreach plan.
+
+- `biosketch-okafor.txt`:
+
+  > Dr. Sam Okafor is an Associate Professor of urban health at the fictional Marchmont University with 10 years of experience in transportation-injury epidemiology. Dr. Okafor recently completed a municipal collaboration mapping sidewalk conditions across Harborview. Dr. Okafor's current projects focus on qualitative interviews with crossing guards.
+
+**Steps.**
+
+1. Ask Cowork to review the whole package as a reviewer would — comparing across files, not editing them:
+
+   > This folder contains three files from a draft grant application I wrote myself: a Specific Aims page, a budget justification, and the PI's biosketch personal statement. Act as a study section reviewer and a grants-office pre-award checker. Read all three files and flag cross-document inconsistencies only: claims in one document that another document doesn't support, effort or personnel that don't match, named collaborators or resources with no corresponding documentation, and anything a reviewer would question. For each flag, cite which files conflict and quote the conflicting passages. Do not rewrite or edit anything.
+
+2. Compare its findings to the planted problems. It should catch at least: the Aims page claims a *preliminary intersection-camera dataset* that the biosketch never mentions or supports; the budget funds a *Community Engagement Coordinator and parent advisory board* that appear nowhere in the Aims; and the Aims says the PI will "oversee all data collection and analysis" while the budget gives the PI only 0.6 months.
+
+3. Decide which flags are real problems and revise the files yourself, in your own words. Then ask for a re-check:
+
+   > I've revised the files. Re-read all three and tell me whether the inconsistencies you flagged are resolved, and whether my revisions introduced any new mismatches.
+
+**Expected result.** A cross-document inconsistency report citing specific files and passages — then, after your own revisions, a clean (or cleaner) re-check.
+
+**Check your work.** Verify each flag against the actual files yourself; agentic tools can misquote or over-flag. And confirm it caught all three planted problems — if it missed one, that's a useful lesson in why AI review supplements, never replaces, your grants office.
+
+**Common pitfalls.** Letting the tool "fix" the files for you — that crosses from critique into drafting, which NIH and NSF policy (and this course's rule) put squarely on you. Also, connecting Cowork to a folder that contains more than you intended — it can read everything in the folder, so keep practice materials isolated. And never repeat this workflow with real, unpublished proposal documents in Cowork; that requires an approved Drexel tool.
+
+**Stretch (optional).** Add a fourth fabricated file — a one-paragraph letter of support from a fictional partner — and ask Cowork whether every collaborator and resource named in the Aims now has corresponding documentation somewhere in the package.
+
+```{=html}
+</details>
+```
+
 
 ## Check your readiness
 

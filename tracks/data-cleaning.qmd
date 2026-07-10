@@ -116,6 +116,44 @@ Issues planted: inconsistent capitalization (severity, road_type, crosswalk, lig
 </details>
 ```
 
+```{=html}
+<details class="activity"><summary>Activity 3 · Novice — Same cleaning job, but the AI runs the code itself (Claude Code)</summary>
+```
+
+**Time** ~20 min · **Tools** Claude Code
+
+**Goal.** See what changes when the AI can actually execute the cleaning instead of just describing it — Claude Code writes the script, runs it, checks the output, and hands you a cleaned file with the counts to prove it.
+
+If this is your first time hearing "command-line agent": Claude Code is a paid Anthropic tool that runs in your computer's terminal (the text-based window, not a browser) and, unlike a chat window, can read and write real files on your machine and run code directly — so when the script errors, it sees the error and fixes it without you copy-pasting anything.
+
+**Setup.** Save the fabricated crash sample from Activity 2 as `crashes_sample.csv` in an empty folder. Open your terminal, `cd` into that folder, and start `claude`. (Install instructions are at docs.anthropic.com; you need a Claude subscription or API access.)
+
+**Steps.**
+
+1. Ask it to diagnose first, then clean — and to actually run the code:
+
+   > Read crashes_sample.csv. First list every data quality problem you find, with the crash_id of each affected row. Then write a Python script that fixes them — standardize capitalization and Yes/No coding, normalize dates, recode "Female" to "F", remove exact duplicates, and set the impossible date to missing rather than guessing. Run the script and save the result as crashes_clean.csv. Don't delete rows with missing values — leave them missing.
+
+2. Make it show its receipts:
+
+   > Print the row count before and after, show me the duplicate row you removed and the impossible-date row you flagged, and give me a value-counts table for severity, crosswalk, and lighting before vs. after.
+
+3. Have it document what it did:
+
+   > Write a codebook.md describing each variable, its allowed values after cleaning, and every cleaning decision you made — including anything you left as missing and why.
+
+**Expected result.** A `crashes_clean.csv` and `codebook.md` sitting in your folder, plus a before/after summary the agent produced by running the script itself — not by predicting what the output would probably be.
+
+**Check your work.** The arithmetic should reconcile exactly: 18 rows in, 17 out (one duplicate, 1009/1010, removed). Severity should collapse to Minor/Serious/Fatal plus one missing (crash 1015); crosswalk to Yes/No; crash 1014's date should be missing, not "fixed" to a made-up year. Open both files yourself — the agent verifying its own work is a check, not the check.
+
+**Common pitfalls.** Claude Code is not Drexel-supported and is approved for **Low Risk data only** — this activity works precisely because the CSV is fabricated; never point it (or any personally purchased AI tool) at real crash records, student data, or anything with identifiers. Also watch for over-helpfulness: agents sometimes "fix" the impossible date by inventing a plausible one, which is why the prompt says to set it to missing.
+
+**Stretch (optional).** Ask it to add a validation step to the script that fails loudly if any severity value falls outside Minor/Serious/Fatal — then corrupt one row and confirm it catches it.
+
+```{=html}
+</details>
+```
+
 
 ## Check your readiness
 

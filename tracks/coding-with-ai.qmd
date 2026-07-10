@@ -104,6 +104,48 @@ count if pedestrian > 0   // variable name may differ; missings treated as large
 </details>
 ```
 
+```{=html}
+<details class="activity"><summary>Activity 3 · Moderate — Let the agent close the loop: Claude Code debugs the crash script</summary>
+```
+
+**Time** ~15 min · **Tools** Claude Code
+
+**Goal.** See what changes when the AI can actually run your code — Claude Code executes the buggy script, reads the real error and real column names itself, fixes it, and re-runs to confirm, with you reviewing every change before it's applied.
+
+**Setup.** Make a folder (e.g., `crash-debug/`) containing two files: the buggy script from Activity 1 saved as `count_ped.R`, and the [Crash Data 2020–2024 CSV](https://hub.arcgis.com/api/v3/datasets/21154a8f1894449f839d2288726e9837_0/downloads/data?format=csv&spatialRefId=3857&where=1%3D1) saved as `crashes.csv`. Open a terminal in that folder and start Claude Code (`claude`). You'll need R installed locally, plus a Claude Code license — it's a consumer/PI-purchased tool, not Drexel-supported.
+
+**Steps.**
+
+1. Instead of pasting the script into a chat, point the agent at the real files and let it hit the real failure:
+
+   > Run count_ped.R in this folder. It should count pedestrian-involved crashes in crashes.csv but returns 0, which is wrong. Look at the actual column names in the CSV, figure out why the filter matches nothing, and propose a minimal fix. Show me the diff before you change anything.
+
+   Watch what it does: it runs the script, sees the 0 (or an "object not found" error) itself, inspects the CSV header itself, and explains the mismatch — no copy-paste round-trip. Review the proposed diff and approve it only if you understand it.
+
+2. Don't take "it ran" as "it's right." Make the agent spot-check its own fix against the raw data:
+
+   > Now verify the fix independently: print the actual column names from crashes.csv, show the distinct values in the pedestrian column including NAs, and confirm the new count is consistent with a manual tally of that column.
+
+   The point is the same as Activity 1's follow-up question — evidence the fix is *correct*, not just non-erroring — except here the agent gathers the evidence by running code, and you check its reasoning.
+
+3. Add the same guard as Activity 1's stretch goal, and make the agent prove it works:
+
+   > Add a check that warns if the pedestrian column contains unexpected values (negative numbers, non-numeric entries). Then create a small copy of the CSV with one deliberately bad row and run the script against it to confirm the warning actually triggers.
+
+   A guard you've never seen fire is a guard you're trusting on faith — this closes that loop too.
+
+**Expected result.** A corrected script producing the same pedestrian-crash count you got on the Data Analysis Basics page, with the agent having verified the column names and count against the raw CSV itself, plus a working warning that you watched trigger on a bad row.
+
+**Check your work.** Still compare the final count against your Data Analysis Basics number yourself. The agent verified its own work — that's better than nothing, but it's the same system checking itself. Your independent number is the ground truth here, and "it ran without error" is still not "it's correct."
+
+**Common pitfalls.** Never give credentials, API keys, or tokens to any AI tool — and that goes double for an agent that can execute code and read files on your machine; keep them out of the folder you point it at. Claude Code is a consumer/PI-purchased tool, not Drexel-supported: Low Risk Data only (this public crash CSV qualifies) unless you have separate approval. Also resist auto-approving every action — reviewing each diff and command is the whole exercise.
+
+**Stretch (optional).** Ask Claude Code to write a tiny test file (e.g., using `testthat`) that locks in the correct count and the bad-value warning, so future edits to the script get checked automatically.
+
+```{=html}
+</details>
+```
+
 
 ## Check your readiness
 

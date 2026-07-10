@@ -106,6 +106,78 @@ Most quality lives in the instructions, not the model. A good skill names the jo
 </details>
 ```
 
+```{=html}
+<details class="activity"><summary>Activity 3 · Moderate — Build a real file-based skill with Claude Code</summary>
+```
+
+**Time** ~20 min · **Tools** Claude Code (Anthropic's command-line agent)
+
+**Goal.** Rebuild Activity 1's meeting-recap skill as a real, file-based Claude Code Skill — a folder with a `SKILL.md` file anyone can open, read, diff, and share — and compare its output to the custom-GPT version.
+
+**Setup.** Claude Code is a consumer/PI-purchased tool, not Drexel-supported — Low Risk Data only, so stick to the fabricated notes below. Unlike a custom GPT (where the instructions live inside your account's settings), a Claude Code Skill is just a folder containing a `SKILL.md` file — the job description, steps, output format, and guardrails written in plain markdown — plus any helper scripts the skill can actually run. You'll reuse the same messy notes and target format from Activity 1:
+
+> epi dept mtg weds 7/2 — jen started with enrollment update, MPH apps up 12% but DrPH down, she's worried about the DrPH pipeline. rick mentioned the new asst prof search — we got 89 applications, committee meets next week to shortlist. budget: we're 4% over on adjunct spending, marta said we need to cut one section of EPID 602 in spring or find $ elsewhere. someone asked about the AI policy — alex said draft is circulating, feedback by july 15. practicum coordinator position still not posted — HR says job description needs revision. jen wants dept retreat date locked in (sept or oct?). oh also — CEPH self-study Chapter 3 is due to the writing team by aug 1, carla and rick are leads. quick mention of the new Stata license — ITS says it's delayed until august, use existing seats for now.
+
+**Target recap format:**
+
+> **EPID Department Meeting — July 2, 2026**
+>
+> **Decisions made:**
+> - [list any actual decisions]
+>
+> **Action items:**
+> - [person]: [task] — by [date]
+>
+> **Discussion highlights:**
+> - [2–4 sentence summary of key topics]
+>
+> **Parking lot** (raised but not resolved):
+> - [items needing follow-up]
+
+**Steps.**
+
+1. Create a folder called `meeting-recap-skill/` and inside it a file named `SKILL.md` containing the skill — same job, steps, output format, and guardrails as Activity 1, now as an actual document:
+
+> \-\-\-
+> name: meeting-recap
+> description: Turn messy meeting notes into a standard 4-section recap. Use when given raw or informal meeting notes.
+> \-\-\-
+>
+> **Job.** Convert messy meeting notes into a recap with exactly four sections: Decisions made, Action items, Discussion highlights, Parking lot.
+>
+> **Steps.** Read the full notes first. Sort each item into one section. Then run `python count_actions.py` on the finished recap as a sanity check.
+>
+> **Output format.** [paste the target recap format from above]
+>
+> **Guardrails.** Only list action items with a clear owner. Undecided items go to the parking lot, never to decisions. Never invent attendees, dates, or topics not in the notes. Keep discussion highlights under 4 sentences.
+
+2. Add the sanity-check helper the skill references — something a custom GPT can't reliably do, because Claude Code can actually execute code. Save this as `count_actions.py` in the same folder:
+
+> import sys
+> text = sys.stdin.read()
+> n = text.split("Action items:")[-1].split("Discussion highlights:")[0].count("- ")
+> print(f"Action items extracted: {n}" + (" — WARNING: zero action items, check the recap." if n == 0 else ""))
+
+3. Open a terminal in that folder, start Claude Code by typing `claude`, and give it the same messy notes:
+
+> Use the meeting-recap skill to recap these notes: [paste the messy notes from Setup]
+
+4. Watch it read `SKILL.md`, produce the recap, and run the counter. Compare the output side-by-side with your Activity 1 custom-GPT result: same sections? Same sorting decisions?
+
+5. Now the payoff: open `SKILL.md` in any text editor. That single readable file *is* the skill — email it, drop it on a shared drive, or put it in version control, and a colleague sees exactly what it does. Try changing one guardrail and re-running to see the behavior change.
+
+**Expected result.** The same four-section recap as Activity 1, plus a printed action-item count — produced by a skill that exists as an inspectable file rather than settings hidden in someone's account.
+
+**Check your work.** Same tests as Activity 1: retreat date in "parking lot" (correct), not "decisions"; no invented action item for Marta about cutting EPID 602. New test: did the counter run and report a nonzero count?
+
+**Common pitfalls.** Low Risk Data only — never point Claude Code at a folder containing real student, personnel, or health data. The quality still lives in the instructions: a vague `SKILL.md` produces vague recaps, exactly like a vague custom GPT.
+
+**Stretch (optional).** Put `meeting-recap-skill/` in a shared drive or git repository, have a colleague run it cold on their own (non-sensitive) notes, and use a file diff to review any edits they propose — try doing *that* with a custom GPT's instructions box.
+
+```{=html}
+</details>
+```
+
 
 ## Check your readiness
 

@@ -298,6 +298,40 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Common pitfalls.</strong> Hard rule: never put a manuscript you’re peer-reviewing into an AI tool — it’s confidential and many journals prohibit any AI use in review. Separately, as an <em>author</em>, any AI use in preparing your own manuscript (including help organizing this letter) should be disclosed per the target journal’s policy and ICMJE/COPE guidance — that’s a different rule from review confidentiality, and both apply.</p>
 <p><strong>Stretch (optional).</strong> Draft a short cover letter to the editor summarizing the three major revisions.</p>
 </details>
+<details class="activity"><summary>Activity 3 · Advanced — Cross-check your manuscript package with Claude Cowork</summary>
+<p><strong>Time</strong> ~20 min · <strong>Tools</strong> Claude Cowork (personal/PI-purchased — not Drexel-supported; Low Risk Data only)</p>
+<p><strong>Goal.</strong> Extend the “AI as reviewer” pattern across files instead of one document. Before submission, your methods section, supplementary materials, and reporting checklist must agree with each other — journals and reviewers absolutely catch internal inconsistencies. Cowork connects to a folder and reads all three at once, so it can flag where they disagree.</p>
+<p><strong>Boundary this activity does NOT cross.</strong> This is your OWN manuscript package only. The hard rule from the top of this page applies to Cowork with zero exceptions: never put a manuscript you are peer-reviewing into any AI tool — not a chat window, not a connected folder. Confidential peer-review material never touches Cowork. And because Cowork is a consumer tool approved for Low Risk Data only, practice with the clearly fictional files below, not real unpublished work, unless your use has been separately approved.</p>
+<p><strong>Setup.</strong> Create a folder (e.g., <code>cowork-practice/</code>) containing three small files, then connect Cowork to that folder. Use these fabricated excerpts — one inconsistency is planted deliberately:</p>
+<p><code>methods-excerpt.txt</code>:</p>
+<blockquote class="blockquote">
+<p>We conducted a cross-sectional analysis of pedestrian crashes in Philadelphia, 2019–2023, using PennDOT crash records linked to OpenStreetMap road segments. Posted speed limit was analyzed as a three-level categorical variable (&lt;25 mph, 25–35 mph, &gt;35 mph). Models adjusted for segment length, land use, and time of day. Segments with missing speed limit data (n = 214) were excluded.</p>
+</blockquote>
+<p><code>supplementary-table-S1.txt</code>:</p>
+<blockquote class="blockquote">
+<p>Table S1. Variable definitions. Posted speed limit: continuous, mph, from OSM maxspeed tag. Segment length: continuous, meters. Land use: 4 categories (residential, commercial, industrial, mixed). Time of day: 4 categories. Sidewalk presence: binary, from OSM sidewalk tag.</p>
+</blockquote>
+<p><code>strobe-notes.txt</code>:</p>
+<blockquote class="blockquote">
+<p>Item 7 (Variables): all covariates defined in Methods para 2 and Table S1. Item 12 (Statistical methods): missing data handled by complete-case analysis. Item 6 (Participants/setting): eligibility = all mapped road segments with a crash record, 2019–2023.</p>
+</blockquote>
+<p><strong>Steps.</strong></p>
+<ol type="1">
+<li><p>Connect Cowork to the folder, then ask for a consistency audit:</p>
+<blockquote class="blockquote">
+<p>These three files are the methods excerpt, supplementary variable table, and STROBE notes for my own manuscript. Compare them against each other and list every place they disagree — variables defined differently across files, variables in one file but not another, checklist claims the other files don’t support. Cite file and line for each.</p>
+</blockquote></li>
+<li><p>Review the findings. It should catch the plant: speed limit is categorical in methods but continuous in Table S1 — and may also flag that sidewalk presence appears in Table S1 but never in methods.</p></li>
+<li><p>Decide the fix yourself (which file reflects what you actually did?), edit the files yourself, then re-run:</p>
+<blockquote class="blockquote">
+<p>I’ve revised the files. Re-check the folder and confirm whether any inconsistencies remain.</p>
+</blockquote></li>
+</ol>
+<p><strong>Expected result.</strong> A file-and-line list of internal contradictions in your submission package — the same critique a careful reviewer would make, caught before submission instead of after.</p>
+<p><strong>Check your work.</strong> Verify every flagged inconsistency by opening the files yourself — and resolve each one toward what you actually did in the study, not toward whichever wording the AI prefers. You decide the fix; Cowork only points.</p>
+<p><strong>Common pitfalls.</strong> Connecting Cowork to a folder that also contains confidential material (a manuscript under review, student records, identifiable data) — Cowork can read the whole folder, so make a clean practice folder. Letting the AI “fix” the files for you and silently rewrite your methods. Forgetting that Cowork is Low Risk Data only.</p>
+<p><strong>Stretch (optional).</strong> Add a fictional abstract as a fourth file and ask Cowork to check that every number in the abstract appears identically somewhere in the other files — abstract/text mismatches are among the most common reviewer catches.</p>
+</details>
 </section>
 <section id="check-your-readiness" class="level2">
 <h2 class="anchored" data-anchor-id="check-your-readiness">Check your readiness</h2>

@@ -265,6 +265,31 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Common pitfalls.</strong> Over-trimming removes needed constraints; iterate one cut at a time.</p>
 <p><strong>Stretch (optional).</strong> Build a minimal reusable context template for this task type.</p>
 </details>
+<details class="activity"><summary>Activity 3 · Moderate — Make context persistent with a CLAUDE.md file</summary>
+<p><strong>Time</strong> ~20 min · <strong>Tools</strong> Claude Code (Low Risk Data only — not Drexel-supported; use fabricated details as in Activity 1)</p>
+<p><strong>Goal.</strong> Move the working context from Activity 1 out of the chat window and into a file that Claude reads automatically every session — no re-pasting.</p>
+<p><strong>Setup.</strong> In Activity 1, the role, rules, and example fixed the drift — but you had to paste them into every new chat. Claude Code reads a <code>CLAUDE.md</code> file in your project folder at the start of every session, so the same context can live in one place, permanently. Reminder: Claude Code is approved for Low Risk Data only; keep using the fabricated pedestrian-safety scenario.</p>
+<p><strong>Steps.</strong></p>
+<ol type="1">
+<li><p>Create a project folder (e.g., <code>progress-updates</code>) and inside it a file named <code>CLAUDE.md</code> containing the exact context from Activity 1:</p>
+<blockquote class="blockquote">
+<p>You are a research coordinator writing terse monthly updates for a PI. Rules: (1) No adjectives like “exciting” or “significant.” (2) Past tense. (3) Under 120 words. (4) Three sections only: Completed, In Progress, Next Month.</p>
+<p>Example: <em>Completed:</em> Geocoded 2,400 crash records… <em>In Progress:</em> Missing speed-limit imputation… <em>Next Month:</em> Finalize speed-limit variable…</p>
+</blockquote></li>
+<li><p>Open a terminal in that folder, start Claude Code, and give it only the new facts — no role, no rules:</p>
+<blockquote class="blockquote">
+<p>Write August’s update. [new fabricated facts]</p>
+</blockquote>
+<p>The output should match the tone, structure, and length from Activity 1, even though you pasted nothing.</p></li>
+<li><p>Quit, then start a <strong>fresh</strong> Claude Code session in the same folder and try September’s update with different fabricated facts. Same result — the standing context is applied automatically each time.</p></li>
+<li><p>Now run the drift test. Temporarily rename the file (e.g., <code>CLAUDE.md</code> → <code>CLAUDE.md.bak</code>), start another fresh session, and ask for October’s update. Watch it drift back toward the long, vague, enthusiastic output from Activity 1’s weak prompt.</p></li>
+<li><p>Rename the file back and confirm the next session snaps back into shape.</p></li>
+</ol>
+<p><strong>Expected result.</strong> With the file present, every new session produces on-spec updates with zero re-explaining; with it removed, the same request drifts generic.</p>
+<p><strong>Check your work.</strong> Delete just the example from <code>CLAUDE.md</code>, keep the rules, and re-run — quality should drop, exactly as in Activity 1’s check.</p>
+<p><strong>Common pitfalls.</strong> The file must be named <code>CLAUDE.md</code> and sit in the folder where you launch Claude Code — a session started elsewhere won’t see it. And persistence doesn’t change the classification: Low Risk Data only.</p>
+<p><strong>Stretch (optional).</strong> Add a second standing rule to the file (e.g., a required final line naming the reporting month) and verify it appears in every new session without being asked.</p>
+</details>
 </section>
 <section id="check-your-readiness" class="level2">
 <h2 class="anchored" data-anchor-id="check-your-readiness">Check your readiness</h2>

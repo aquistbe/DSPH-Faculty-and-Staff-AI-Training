@@ -104,6 +104,59 @@ Connect with least privilege: give the narrowest access that does the job, prefe
 </details>
 ```
 
+```{=html}
+<details class="activity"><summary>Activity 3 · Advanced — Configure a real least-privilege MCP connection</summary>
+```
+
+**Time** ~25 min · **Tools** Claude Desktop (or Claude Code) + Node.js — consumer/PI-purchased tools: Low Risk Data only
+
+**Goal.** Turn Activity 1's paper plan into a real, working, testable least-privilege connection — using only fabricated practice data.
+
+**Setup.** Make one new folder on your computer (e.g., `mcp-practice` on your Desktop) and put 2–3 fake "crash summary" text files in it with obviously made-up numbers (e.g., `crash-summary-2024.txt`: "District 9 recorded 42 crashes in 2024, 7 involving bicycles."). Nothing real, nothing identified — this folder is the entire universe the assistant will be allowed to see. NOT a real OneDrive folder; NOT anything with actual Drexel data. Then connect the official filesystem MCP server (`@modelcontextprotocol/server-filesystem`) scoped to only that folder. In Claude Desktop: Settings → Developer → Edit Config, add this to `claude_desktop_config.json` (swap in your actual folder path), save, and restart the app:
+
+```json
+{
+  "mcpServers": {
+    "practice-folder": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/Users/you/Desktop/mcp-practice"]
+    }
+  }
+}
+```
+
+That last line is Activity 1's least-privilege table row, now as real configuration: one specific folder path — not your whole drive, not a parent folder.
+
+**Steps.**
+
+1. Test that reading works. Ask a question answerable only from the practice files:
+
+> Using the practice-folder connection, which district had the most crashes across the summary files, and what is the total in each file?
+
+2. Test the boundary. Ask for something outside the folder and confirm it fails:
+
+> List the files in my Documents folder.
+
+You should get an "access denied" or "not in allowed directories" response — the connection can only see the one folder named in the config, nothing else on the computer.
+
+3. Now deliberately try to make it write:
+
+> Create a new file called notes.txt in the practice folder that says "test".
+
+This reference server does include write tools, so Claude Desktop will ask your approval before any write — click **Deny**. That approval prompt is Activity 2's human-approval gate, made real. Since the server itself doesn't enforce read-only, your read-only guarantee comes from two things you can inspect: the config grants only this one folder, and you decline every write. When you're done practicing, remove the server block from the config and restart — the narrowest access of all is none.
+
+**Expected result.** A working connection that answers questions from the practice files, cannot see anything outside the folder, and never writes without your explicit approval — Activity 1's comparison table passing a live test.
+
+**Check your work.** Re-ask Activity 1's question against the real thing: "if this connection misbehaved, what's the worst it could do?" The honest answer should now be "read three fake text files."
+
+**Common pitfalls.** Pointing the config at your Desktop or home folder instead of the single practice subfolder — that's the over-scoped version from Activity 1, for real. Clicking "Allow" on write prompts out of habit. Leaving the server configured after the exercise ends. And the big one: this is a controlled practice exercise only — connecting MCP to any real Drexel data folder (OneDrive included) needs Drexel's approval first, exactly as this page's Data rules state.
+
+**Stretch (optional).** Try the same design in Claude Code: `claude mcp add practice-folder -- npx -y @modelcontextprotocol/server-filesystem ~/Desktop/mcp-practice`, then use `/permissions` to deny the server's write tools outright — least privilege enforced by configuration rather than by clicking Deny each time.
+
+```{=html}
+</details>
+```
+
 
 ## Check your readiness
 

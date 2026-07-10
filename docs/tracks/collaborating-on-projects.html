@@ -255,6 +255,27 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Common pitfalls.</strong> Don’t add PHI, sensitive PII, or confidential material to GPT files. Share inside Drexel only.</p>
 <p><strong>Stretch (optional).</strong> Start a shared prompt library with 2–3 entries (title, prompt with placeholders, “use when”).</p>
 </details>
+<details class="activity"><summary>Activity 3 · Moderate — Give your team a shared folder-based context with Claude Cowork</summary>
+<p><strong>Time</strong> ~20 min · <strong>Tools</strong> Claude Cowork (Claude desktop app) · a shared folder (OneDrive or Google Drive synced to your computer)</p>
+<p><strong>Goal.</strong> Build the same “step in without re-explaining” team context as Activity 1 — but as a shared <em>folder</em> that Cowork reads and writes directly, instead of files uploaded into a chat.</p>
+<p><strong>Setup.</strong> <strong>Data classification first, and this one is stricter than Activities 1–2:</strong> Claude and Claude Cowork are consumer/PI-purchased tools, <em>not</em> Drexel-supported, and are approved for <strong>Low Risk Data only</strong> unless separately approved (see the Tools page). ChatGPT Edu is the Drexel-supported tool cleared for higher-risk data — so for this activity, use <strong>only fabricated, publicly shareable content</strong>. Create a test folder in a synced OneDrive or Google Drive location (e.g., <code>Cowork-Test</code>) containing two small files you write yourself: <code>team-brief.md</code> (a one-paragraph fictional project brief, e.g., a made-up community walking-program pilot) and <code>style-guide.md</code> (3–4 bullets: plain language, bullets plus a one-line bottom line, flag decisions for a human). Add an empty <code>templates</code> subfolder.</p>
+<p><strong>Steps.</strong></p>
+<ol type="1">
+<li><p>Open the Claude desktop app, start a Cowork session, and <strong>connect it to your <code>Cowork-Test</code> folder</strong>. Ask it to orient itself first:</p>
+<blockquote class="blockquote">
+<p>Look through this folder. Summarize what the team brief says and list the style rules you’ll follow from the style guide.</p>
+</blockquote></li>
+<li><p>Ask for a draft that requires <strong>both files together</strong> — the brief for content, the style guide for voice:</p>
+<blockquote class="blockquote">
+<p>Using the team brief and following the style guide, draft a one-page project update for this month. Save it as a new file called project-update-july.md in the templates subfolder.</p>
+</blockquote></li>
+<li><p>Open the new file <strong>in the folder itself</strong> (Finder/Explorer or OneDrive/Drive) — not in the chat. Then edit <code>style-guide.md</code> yourself (add a rule like “always end with ‘Questions? Contact the project lead.’”), and ask Cowork to revise the update. Notice it picks up your change from the folder.</p></li>
+</ol>
+<p><strong>Expected result.</strong> A shared folder where the context <em>lives in the files</em>: any teammate who connects Cowork to the same synced folder gets the identical brief, style guide, and outputs automatically — no re-uploading, no invitation to a chat workspace — and Cowork’s drafts land as real files the whole team can open in Word, Drive, or anything else.</p>
+<p><strong>Check your work.</strong> Did the draft clearly use both files (brief content, style-guide voice)? Does <code>project-update-july.md</code> exist in the folder outside of any chat? Could a colleague on the shared folder open Cowork tomorrow and pick up exactly where you left off?</p>
+<p><strong>Common pitfalls.</strong> The big one: <strong>do not put real Drexel work in this folder unless it is Low Risk Data</strong> — for anything beyond that (student records, research data, anything sensitive), your team should default to ChatGPT Edu Projects, the Drexel-supported route. Also: Cowork can <em>modify and create</em> files in the connected folder, which is the point — but it means everyone on the shared folder sees its edits, so use a dedicated test/project folder, not your whole Drive. And remember the folder’s own sharing settings (who’s on the OneDrive/Drive share) now control who gets the AI context — check them the way you checked “Only those invited” in Activity 1.</p>
+<p><strong>Stretch (optional).</strong> Drop a real (non-sensitive, public) template into <code>templates</code> and ask Cowork to fill it out from the brief — then compare the experience with Activity 1: same goal, but folder-native with direct file read/write versus files uploaded into a Project’s chat. Jot one sentence on which model fits which of your team’s tasks.</p>
+</details>
 </section>
 <section id="check-your-readiness" class="level2">
 <h2 class="anchored" data-anchor-id="check-your-readiness">Check your readiness</h2>

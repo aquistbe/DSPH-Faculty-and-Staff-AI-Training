@@ -98,6 +98,47 @@ Open each abstract in PubMed before starting — you'll need the actual text to 
 </details>
 ```
 
+```{=html}
+<details class="activity"><summary>Activity 3 · Moderate — Verify citations programmatically with Claude Code</summary>
+```
+
+**Time** ~20 min · **Tools** Claude Code (personal or PI-purchased license) + terminal
+
+**Goal.** Catch fabricated or misattributed citations with a script instead of your eyeballs — check every PMID against PubMed's actual records.
+
+**Setup.** Claude Code is a consumer/PI-purchased tool, not Drexel-supported: **Low Risk (public) data only** — these citations are public PubMed records, so they qualify. Open Claude Code in an empty folder with no sensitive files. Use this reference list, which mixes the three real citations from Activity 2 with **two planted errors** (don't peek yet at which):
+
+- **PMID 31783684** — DiMaggio et al. (2019). "Changes in Pedestrian and Bicyclist Injury Patterns in New York City After Adoption of Vision Zero." *JAMA Netw Open.*
+- **PMID 31175717** — Stoker et al. (2019). "Pedestrian Safety and the Built Environment: A Review of the Risk Factors." *J Plan Lit.*
+- **PMID 35238777** — Chen & Rodriguez (2021). "Sidewalk Connectivity and Pedestrian Crash Risk in Mid-Sized Cities." *Am J Public Health.*
+- **PMID 99887766** — Larsen et al. (2020). "Urban Greening Interventions and Pedestrian Injury: A Systematic Review." *Accid Anal Prev.*
+
+**Steps.**
+
+1. Ask Claude Code to build and run the check:
+
+   > Here are four references: [paste the list]. Write and run a small script that checks each one against PubMed's free E-utilities API (esearch/esummary — no API key needed for light use). For each PMID: does it exist, and do the title, first author, and year on record match what the reference claims? Print a PASS/FAIL table with a reason for every FAIL.
+
+2. Before approving execution, read the script: confirm it only calls `eutils.ncbi.nlm.nih.gov` and sends nothing beyond the PMIDs and citation text.
+
+3. Ask for the corrections:
+
+   > For each FAIL, show the citation PubMed actually has on record (if any) so I can fix the list.
+
+4. Compare against Activity 2. Which planted error would you have caught by eye, and which might have slipped through under deadline pressure?
+
+**Expected result.** Two PASSes; PMID 99887766 flagged as nonexistent; PMID 35238777 flagged as a mismatch (PubMed's record is Amram et al., 2022, *Inj Prev* — the claimed title and authors belong to no paper at all).
+
+**Check your work.** Open the two flagged PMIDs in PubMed yourself and confirm the script's verdicts. The script checks the AI; you check the script.
+
+**Common pitfalls.** A PASS means the citation *exists and matches* — not that it's relevant, well-conducted, or says what your draft claims it says. Keep requests light (E-utilities allows about 3/second without a key). And Claude Code runs real commands on your machine: review before you approve, every time.
+
+**Stretch (optional).** Ask Claude Code to generalize the script to read a whole `.bib` or exported reference file, or to verify DOIs against Crossref the same way.
+
+```{=html}
+</details>
+```
+
 
 ## Check your readiness
 

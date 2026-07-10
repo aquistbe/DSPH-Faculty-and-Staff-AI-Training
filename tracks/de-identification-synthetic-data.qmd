@@ -102,6 +102,48 @@ This is entirely fabricated — no real patients. But it contains the full range
 </details>
 ```
 
+```{=html}
+<details class="activity"><summary>Activity 3 · Moderate — Generate and statistically validate synthetic data with Claude Code</summary>
+```
+
+**Time** ~15 min · **Tools** Claude Code + R/Python
+
+**Goal.** Have an AI agent generate synthetic data *and* run real statistical fidelity checks against a reference — turning Activity 2's prose critique into measurable numbers.
+
+**Setup.** Claude Code is a command-line coding agent that writes *and runs* code in one session — so instead of copying code into R yourself, you watch it generate the data, compute the checks, and report the results. Reminder: Claude Code is a consumer/PI-purchased tool approved for **Low Risk Data only** — use only fabricated data like the structure below, never real records. Use the same Philadelphia crash structure from Activity 2, plus this fabricated reference summary to check against:
+
+- 62% of pedestrian crashes occur during daylight hours
+- 18% involve speeding
+- 44% occur at intersections
+- 12% result in a severe injury
+- Speeding crashes are roughly twice as likely to be severe as non-speeding crashes
+
+**Steps.**
+
+1. In a terminal, ask Claude Code to generate the data reproducibly:
+
+   > Write and run an R (or Python) script that generates 500 synthetic pedestrian crash records with these columns: [structure]. Set a seed, use realistic distributions, and save it as a CSV.
+
+2. Then have it *compute* the fidelity check instead of just opining:
+
+   > Now compare the synthetic data against this reference summary: 62% daylight, 18% speeding, 44% at intersections, 12% severe injury, and speeding crashes about twice as likely to be severe. Compute each statistic from the synthetic data, show observed vs. expected side by side, and flag any variable off by more than 5 percentage points.
+
+3. Ask it to fix what diverged:
+
+   > Adjust the generation script so the flagged variables match the reference, re-run the comparison, and confirm everything is within tolerance.
+
+**Expected result.** A reproducible synthetic dataset plus a computed observed-vs-expected comparison table — a fidelity check you can re-run, not a one-off prose answer.
+
+**Check your work.** Matching marginal percentages doesn't guarantee realistic *relationships* — verify the speeding-severity association actually holds in the synthetic data, not just the individual proportions.
+
+**Common pitfalls.** An agent that runs its own code can also *grade* its own code — read the comparison output yourself rather than accepting "everything matches." And a dataset tuned to match five reference statistics can still miss every other real-world pattern.
+
+**Stretch (optional).** Ask Claude Code to also compare full distributions (not just means/proportions) — e.g., a chi-squared test on the hour-of-day distribution — and explain what the test does and doesn't tell you.
+
+```{=html}
+</details>
+```
+
 
 ## Check your readiness
 

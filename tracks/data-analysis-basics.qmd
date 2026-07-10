@@ -96,6 +96,46 @@ Start small and verifiable: one dataset, one question, one chart. Confirm a numb
 </details>
 ```
 
+```{=html}
+<details class="activity"><summary>Activity 3 · Novice — Same question, but the AI runs the code itself</summary>
+```
+
+**Time** ~20 min · **Tools** Claude Code
+
+**Goal.** Answer the same question as Activity 1 — pedestrian-involved crashes per year — but let a coding agent read the actual file, write the code, run it, and fix its own errors, so you can compare the two workflows.
+
+**Setup.** Claude Code is a coding agent from Anthropic that runs in a terminal — the plain text window where you type commands instead of clicking (Terminal on Mac, PowerShell on Windows). Unlike a chat window, it can open files on your computer, run code, and see the results itself. Install it per [Anthropic's instructions](https://docs.anthropic.com/en/docs/claude-code) (it requires a paid Claude account or API key — this is a personal tool, not a Drexel one). Download the same [Crash Data 2020–2024 CSV](https://hub.arcgis.com/api/v3/datasets/21154a8f1894449f839d2288726e9837_0/downloads/data?format=csv&spatialRefId=3857&where=1%3D1) from Activity 1 and save it in a new empty folder (e.g., `crash-practice/crashes.csv`).
+
+**Steps.**
+
+1. Open your terminal, move into the folder (`cd crash-practice`), and type `claude` to start. Then ask it to look at the file — notice you don't paste any rows; it reads the file itself:
+
+   > Read crashes.csv and tell me what the columns mean. It's PennDOT crash data for Philadelphia, 2020–2024.
+
+2. Ask the same question as Activity 1, and let it do the whole loop:
+
+   > Write and run a short Python script that counts pedestrian-involved crashes by year. Show me the table and save the script as ped_crashes.py.
+
+   Watch what happens: Claude Code writes the script, runs it, and if the code errors (wrong column name, missing library), it reads the error and fixes it — the copy-paste-back-and-forth from Activity 1 is gone. It will ask permission before running things; read what it wants to do before saying yes.
+
+3. Ask for the chart:
+
+   > Now make a simple bar chart of that table and save it as ped_crashes.png.
+
+   Open the PNG from your file browser and look at it.
+
+**Expected result.** The same small table as Activity 1 — pedestrian-involved crashes per year, roughly a few thousand each year — plus two real files on your computer: a script you can rerun and a chart you can open.
+
+**Check your work.** The numbers should match your Activity 1 output exactly (same file, same question). If you skipped Activity 1, spot-check one year in Excel: count rows where the pedestrian field is > 0. Since Claude Code saved the script, you can also open `ped_crashes.py` and read what it actually did — that's your audit trail.
+
+**Common pitfalls.** Claude Code can read *everything* in the folder you start it in, so start it in a folder containing only this CSV — not your Documents folder. And the standing rule: Claude Code is not Drexel-supported and is approved for Low Risk (public) data only, so never point it at student records, PHI, or anything non-public.
+
+**Stretch (optional).** Ask it to add bicycle-involved crashes as a second series on the same chart, and watch how it modifies and re-runs its own script.
+
+```{=html}
+</details>
+```
+
 
 ## Check your readiness
 

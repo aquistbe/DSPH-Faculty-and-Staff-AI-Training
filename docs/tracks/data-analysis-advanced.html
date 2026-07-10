@@ -263,6 +263,31 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Common pitfalls.</strong> A higher AUC doesn’t automatically justify complexity. Recent evidence shows classic methods often match boosting and “foundation” models on tabular data.</p>
 <p><strong>Stretch (optional).</strong> Log your prompts, package versions, and a random seed so a colleague could reproduce the comparison (see the Reproducible AI topic).</p>
 </details>
+<details class="activity"><summary>Activity 3 · Advanced — Build, run, and audit the pipeline in one Claude Code session</summary>
+<p><strong>Time</strong> ~30 min · <strong>Tools</strong> Claude Code</p>
+<p><strong>Goal.</strong> Have Claude Code build the serious-crash pipeline, actually execute it, and then audit the <em>fitted</em> model — coefficients, splits, metrics — instead of auditing code by eye.</p>
+<p><strong>Setup.</strong> Download the <a href="https://hub.arcgis.com/api/v3/datasets/21154a8f1894449f839d2288726e9837_0/downloads/data?format=csv&amp;spatialRefId=3857&amp;where=1%3D1">Crash Data 2020–2024 CSV</a> into a working folder, <code>cd</code> into it, and start <code>claude</code>. Same outcome as Activity 1: a serious-crash indicator (fatal or suspected-serious injury), predicted only from fields known at the time of the crash.</p>
+<p><strong>Steps.</strong></p>
+<ol type="1">
+<li><p>Ask for the pipeline — and insist it runs, not just writes:</p>
+<blockquote class="blockquote">
+<p>Read crash_data.csv and inspect the columns. Write a Python script that builds a logistic regression predicting a serious-crash indicator (fatal or suspected-serious injury) using only fields knowable at the time of the crash. Split, fit, and evaluate — then run the script and show me the output. If it errors, fix it and re-run until it works.</p>
+</blockquote></li>
+<li><p>Interrogate the fitted model, not the source code:</p>
+<blockquote class="blockquote">
+<p>Print the model’s coefficients sorted by absolute magnitude, the class balance in train and test, and the exact split boundary. Which features are doing the most work, and why?</p>
+</blockquote>
+<p>Injury-severity counts, EMS/transport fields, or anything derived from the outcome sitting at the top of the coefficient list is your leakage, visible in the actual model rather than hypothetical in the code.</p></li>
+<li><p>Now make it audit and repair its own work:</p>
+<blockquote class="blockquote">
+<p>Audit this pipeline for (a) predictors that encode the outcome, (b) validation strategy — I want a temporal split, train on 2020–2022, test on 2023–2024, not a random split, and (c) metrics appropriate for class imbalance: recall, precision, and PR-AUC, not accuracy. Fix every problem you find, re-run, and show me the before/after metrics side by side.</p>
+</blockquote></li>
+</ol>
+<p><strong>Expected result.</strong> A working, executed pipeline; at least one substantive flaw caught in the fitted model (leaky feature, random split, or accuracy-only reporting); and a before/after comparison where the honest metrics are visibly worse — that drop is the audit working.</p>
+<p><strong>Check your work.</strong> Ask Claude Code to print <code>min</code> and <code>max</code> crash dates for train and test — they must not overlap. Re-inspect the corrected model’s top coefficients and confirm nothing there is only knowable after the crash. If performance barely changed after removing a “leaky” feature, question whether it was actually leaking.</p>
+<p><strong>Common pitfalls.</strong> Claude Code will happily “fix” a flaw by explaining it without editing the code — confirm the script changed and the numbers changed with it. And the standing rule: Claude Code is not Drexel-supported and is approved for Low Risk (public) data only — this public crash CSV qualifies; your real project data likely does not without a Third-Party Risk Assessment.</p>
+<p><strong>Stretch (optional).</strong> Ask it to add a trivial baseline (predict the majority class, or a one-feature model) and report how much the full model beats it on PR-AUC.</p>
+</details>
 </section>
 <section id="check-your-readiness" class="level2">
 <h2 class="anchored" data-anchor-id="check-your-readiness">Check your readiness</h2>

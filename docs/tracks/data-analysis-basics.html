@@ -265,6 +265,32 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Common pitfalls.</strong> Don’t let AI invent a year that isn’t in the data — confirm the year range. Reject any chart with an unlabeled axis.</p>
 <p><strong>Stretch (optional).</strong> Ask AI to add a one-sentence, plain-language caption summarizing the takeaway for a community audience.</p>
 </details>
+<details class="activity"><summary>Activity 3 · Novice — Same question, but the AI runs the code itself</summary>
+<p><strong>Time</strong> ~20 min · <strong>Tools</strong> Claude Code</p>
+<p><strong>Goal.</strong> Answer the same question as Activity 1 — pedestrian-involved crashes per year — but let a coding agent read the actual file, write the code, run it, and fix its own errors, so you can compare the two workflows.</p>
+<p><strong>Setup.</strong> Claude Code is a coding agent from Anthropic that runs in a terminal — the plain text window where you type commands instead of clicking (Terminal on Mac, PowerShell on Windows). Unlike a chat window, it can open files on your computer, run code, and see the results itself. Install it per <a href="https://docs.anthropic.com/en/docs/claude-code">Anthropic’s instructions</a> (it requires a paid Claude account or API key — this is a personal tool, not a Drexel one). Download the same <a href="https://hub.arcgis.com/api/v3/datasets/21154a8f1894449f839d2288726e9837_0/downloads/data?format=csv&amp;spatialRefId=3857&amp;where=1%3D1">Crash Data 2020–2024 CSV</a> from Activity 1 and save it in a new empty folder (e.g., <code>crash-practice/crashes.csv</code>).</p>
+<p><strong>Steps.</strong></p>
+<ol type="1">
+<li><p>Open your terminal, move into the folder (<code>cd crash-practice</code>), and type <code>claude</code> to start. Then ask it to look at the file — notice you don’t paste any rows; it reads the file itself:</p>
+<blockquote class="blockquote">
+<p>Read crashes.csv and tell me what the columns mean. It’s PennDOT crash data for Philadelphia, 2020–2024.</p>
+</blockquote></li>
+<li><p>Ask the same question as Activity 1, and let it do the whole loop:</p>
+<blockquote class="blockquote">
+<p>Write and run a short Python script that counts pedestrian-involved crashes by year. Show me the table and save the script as ped_crashes.py.</p>
+</blockquote>
+<p>Watch what happens: Claude Code writes the script, runs it, and if the code errors (wrong column name, missing library), it reads the error and fixes it — the copy-paste-back-and-forth from Activity 1 is gone. It will ask permission before running things; read what it wants to do before saying yes.</p></li>
+<li><p>Ask for the chart:</p>
+<blockquote class="blockquote">
+<p>Now make a simple bar chart of that table and save it as ped_crashes.png.</p>
+</blockquote>
+<p>Open the PNG from your file browser and look at it.</p></li>
+</ol>
+<p><strong>Expected result.</strong> The same small table as Activity 1 — pedestrian-involved crashes per year, roughly a few thousand each year — plus two real files on your computer: a script you can rerun and a chart you can open.</p>
+<p><strong>Check your work.</strong> The numbers should match your Activity 1 output exactly (same file, same question). If you skipped Activity 1, spot-check one year in Excel: count rows where the pedestrian field is &gt; 0. Since Claude Code saved the script, you can also open <code>ped_crashes.py</code> and read what it actually did — that’s your audit trail.</p>
+<p><strong>Common pitfalls.</strong> Claude Code can read <em>everything</em> in the folder you start it in, so start it in a folder containing only this CSV — not your Documents folder. And the standing rule: Claude Code is not Drexel-supported and is approved for Low Risk (public) data only, so never point it at student records, PHI, or anything non-public.</p>
+<p><strong>Stretch (optional).</strong> Ask it to add bicycle-involved crashes as a second series on the same chart, and watch how it modifies and re-runs its own script.</p>
+</details>
 </section>
 <section id="check-your-readiness" class="level2">
 <h2 class="anchored" data-anchor-id="check-your-readiness">Check your readiness</h2>

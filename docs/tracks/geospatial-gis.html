@@ -258,6 +258,31 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Common pitfalls.</strong> Don’t treat AI image descriptions as measurements. Avoid images with identifiable people in unapproved tools.</p>
 <p><strong>Stretch (optional).</strong> Compare the AI’s description to a quick manual audit of the same image.</p>
 </details>
+<details class="activity"><summary>Activity 3 · Advanced — Run and self-validate the spatial join with Claude Code</summary>
+<p><strong>Time</strong> ~25 min · <strong>Tools</strong> Claude Code (terminal) + Python (geopandas) or R (sf) installed locally</p>
+<p><strong>Goal.</strong> Watch an AI agent write, run, and validate the spatial join itself — including catching the CRS mismatch that Activity 1 could only warn you about.</p>
+<p><strong>Setup.</strong> The same two public layers as Activity 1 — Philadelphia crash points (the <a href="https://opendataphilly.org/datasets/crashes/">Philadelphia Crashes data</a> GeoJSON) and a neighborhood or Census-tract boundary file — downloaded to a working folder. Claude Code is a consumer/PI-purchased tool, not Drexel-supported: Low Risk (public) Data only, which these layers are.</p>
+<p><strong>Steps.</strong></p>
+<ol type="1">
+<li><p>Start Claude Code in the folder containing both files and give it the full task:</p>
+<blockquote class="blockquote">
+<p>Write and run Python (geopandas) or R (sf) code to count pedestrian crashes per neighborhood from these two files. Before joining, print each layer’s CRS. If they don’t match, reproject one to match the other and tell me exactly what you changed and why. Do not join until they match.</p>
+</blockquote></li>
+<li><p>Ask for the diagnostics a naive script would skip:</p>
+<blockquote class="blockquote">
+<p>Print the crash row count before the join, the count after, and how many crash points fell outside every neighborhood boundary. What might explain points that fall outside?</p>
+</blockquote></li>
+<li><p>Have the agent validate against a known pattern, the same test you ran by hand in Activity 1:</p>
+<blockquote class="blockquote">
+<p>Show the top 10 neighborhoods by pedestrian crash count. Does a known high-crash corridor (e.g., Roosevelt Boulevard through the Northeast) appear where expected? If not, investigate before concluding.</p>
+</blockquote></li>
+<li><p>Read the transcript, not just the answer — confirm the agent actually printed both CRSs and reprojected before joining, rather than asserting it did.</p></li>
+</ol>
+<p><strong>Expected result.</strong> A crashes-per-neighborhood table plus a visible audit trail: both layers’ CRS printed, any reprojection explained, before/after row counts, and a count of unmatched points.</p>
+<p><strong>Check your work.</strong> The unmatched-point count is your edge-effect signal — points on boundary lines or outside city limits should be small in number and explainable. If the agent never printed a CRS, it may have joined blind exactly the way a copy-pasted script would.</p>
+<p><strong>Common pitfalls.</strong> An agent that runs code can still validate against the wrong expectation — you supply the known pattern, it only checks it. Agreeable confirmation (“yes, that corridor shows up”) isn’t validation; make it show the numbers. The ecological fallacy still applies to area rates, agent or no agent.</p>
+<p><strong>Stretch (optional).</strong> Ask Claude Code to deliberately re-run the join with the reprojection step removed and compare the two result tables — seeing how a CRS mismatch silently fails (zero or garbage matches, no error) is the whole lesson.</p>
+</details>
 </section>
 <section id="check-your-readiness" class="level2">
 <h2 class="anchored" data-anchor-id="check-your-readiness">Check your readiness</h2>

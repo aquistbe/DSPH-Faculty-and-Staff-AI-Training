@@ -102,6 +102,54 @@ When a tool isn't cleared for your data, the move is to de-identify, use synthet
 </details>
 ```
 
+```{=html}
+<details class="activity"><summary>Activity 3 · Novice — Scan for quasi-identifier risk systematically with Claude Code</summary>
+```
+
+**Time** ~15 min · **Tools** Claude Code (fabricated data only — Low Risk)
+
+**Goal.** Replace eyeball review with a systematic, scriptable scan that flags every risky quasi-identifier combination — not just the one you were told to look for.
+
+**Setup.** Reuse the same fabricated patient-encounter table from Activity 2:
+
+| Name | Age | Sex | ZIP | Admission Date | Diagnosis |
+|------|-----|-----|-----|----------------|-----------|
+| Maria Torres | 34 | F | 19104 | 2026-03-12 | Tibial fracture, pedestrian crash |
+| James Chen | 71 | M | 19143 | 2026-03-14 | Hip fracture, fall on broken sidewalk |
+| Aisha Patel | 28 | F | 19131 | 2026-03-15 | Traumatic brain injury, cyclist-vehicle collision |
+| Robert Williams | 82 | M | 19104 | 2026-03-12 | Concussion, pedestrian struck at crosswalk |
+| Dara Kim | 45 | NB | 19146 | 2026-03-18 | Laceration and contusion, e-scooter fall |
+
+**Reminder:** Claude Code is a consumer/PI-purchased tool, not Drexel-supported — approved for **Low Risk Data only**. There's a small irony here worth savoring: because we're practicing classification decisions with a tool that isn't cleared for sensitive data, the practice data itself must already be Low Risk — which is exactly why this table is fabricated. Never substitute real records.
+
+**Steps.**
+
+1. De-identify the table first, exactly as in Activity 2: remove the Name column. Save the remaining five rows (Age, Sex, ZIP, Admission Date, Diagnosis) as `encounters.csv` in an empty working folder.
+
+2. Open Claude Code in that folder and ask it to build the scanner:
+
+> Read encounters.csv. Write a small Python script that treats Age, ZIP, and Admission Date as quasi-identifiers, plus a yes/no flag for whether the Diagnosis is a rare or uncommon category. For every row, compute the equivalence class size — how many rows in the file share that same combination of quasi-identifier values. Also check partial combinations (ZIP + date, age + ZIP, etc.). Flag every row whose class size is below 3 and print a plain-English report explaining why each flagged row could be re-identified by someone with outside knowledge (a neighbor, a news story, a coworker).
+
+3. Run the script and read the report. Did it flag the 82-year-old male in ZIP 19104 admitted 2026-03-12 — the row Activity 2 told you to notice? What else did it flag that Activity 2 never mentioned?
+
+4. Now ask Claude Code to test whether generalization fixes it:
+
+> Modify the script to generalize before scanning: replace Age with 10-year age bands and ZIP with its first 3 digits, then recompute equivalence class sizes. Print a before/after comparison showing which rows are still flagged.
+
+5. Compare the two reports. Decide, as in Activity 2, whether de-identification alone was enough — but this time with counts, not a hunch.
+
+**Expected result.** A working script plus a flag report. The scan should catch the ZIP 19104 / 2026-03-12 pair (two patients sharing date and ZIP, each made unique again by age and an uncommon diagnosis) — and it should also show that with only five rows, essentially every row is an equivalence class of one. The manual hint in Activity 2 pointed you at a single risky record; the systematic scan shows they are all risky, which no amount of squinting communicates as clearly.
+
+**Check your work.** The core idea is k-anonymity: a row is safer when at least k rows (commonly k ≥ 3–5) share its quasi-identifier combination. If your script only checks columns one at a time, it will miss the point — re-identification risk lives in the combinations. Your before/after comparison should show generalization increasing class sizes but not necessarily eliminating every flag at n=5.
+
+**Common pitfalls.** Pasting real patient data into Claude Code "just to test the script" — the tool's Low Risk approval doesn't change because your intentions are good. Concluding "the script flagged everything, so it's broken" — at five rows, flagging everything is the correct answer, and it's exactly why tiny published tables are dangerous. Trusting the generated script without reading it — you, not Claude Code, are accountable for the classification decision.
+
+**Stretch (optional).** Ask Claude Code to generate a fully synthetic dataset of 200 encounters with realistic age/ZIP/date distributions, then re-run the scanner. Notice that risky small equivalence classes still exist but are now impossible to spot by eye — the scale at which manual review fails and systematic scanning becomes the only honest method.
+
+```{=html}
+</details>
+```
+
 
 ## Check your readiness
 

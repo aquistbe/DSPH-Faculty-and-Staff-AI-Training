@@ -261,6 +261,35 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Common pitfalls.</strong> Fabricated citations are the most common and most dangerous AI error in academic work. They look perfect. The only defense is checking every one.</p>
 <p><strong>Stretch (optional).</strong> Write a 3-step personal “verify before it counts” checklist for any AI-generated citation. Example: (1) Search PubMed/Scholar, (2) Open the actual paper, (3) Confirm the specific claim matches.</p>
 </details>
+<details class="activity"><summary>Activity 3 · Novice — Catch a numeric hallucination with Claude Code</summary>
+<p><strong>Time</strong> ~20 min · <strong>Tools</strong> Claude Code (consumer/PI-purchased — not Drexel-supported; <strong>Low Risk Data only</strong>: use only the fabricated text below or other public content)</p>
+<p><strong>Goal.</strong> See how a coding agent can systematize “verify before it counts” — checking every number in an AI-written paragraph against its source automatically, at a scale manual checking can’t match.</p>
+<p><strong>Setup.</strong> Activities 1 and 2 caught fake <em>citations</em> one at a time. But AI also invents <em>numbers</em> inside otherwise-accurate prose, and a real document may contain dozens of them. Both texts below are <strong>fabricated for practice</strong>. First, the “source” fact sheet — treat this as the only ground truth:</p>
+<blockquote class="blockquote">
+<p><strong>SOURCE FACT SHEET (fabricated — save as <code>source.txt</code>)</strong></p>
+<p>Philadelphia recorded 312 pedestrian crashes in 2023, resulting in 38 fatalities. 61% of crashes occurred after dark. 46% of all crashes were concentrated on the high-injury network, which makes up just 12% of city streets.</p>
+</blockquote>
+<p>Next, the “AI-generated” summary — most numbers match, but not all:</p>
+<blockquote class="blockquote">
+<p><strong>AI SUMMARY (fabricated — save as <code>ai_summary.txt</code>)</strong></p>
+<p>In 2023, Philadelphia saw 312 pedestrian crashes and 38 deaths, a 24% increase over the previous year. 61% of crashes happened after dark, and 52% were concentrated on the high-injury network — just 12% of city streets.</p>
+</blockquote>
+<p><strong>Steps.</strong></p>
+<ol type="1">
+<li><p>On your own computer, save the two passages above as plain text files: <code>source.txt</code> and <code>ai_summary.txt</code>. (Alternatively, ask ChatGPT Edu to summarize the fact sheet and use <em>its</em> output as your <code>ai_summary.txt</code> — it may hallucinate its own numbers.)</p></li>
+<li><p>Open a terminal, start Claude Code in that folder, and ask it to build the checker:</p>
+<blockquote class="blockquote">
+<p>I have two files. source.txt is a trusted fact sheet. ai_summary.txt is an AI-generated summary of it. Write and run a Python script that extracts every number and percentage from ai_summary.txt and checks whether each one appears in source.txt. Print a table: each number, its surrounding phrase, and VERIFIED or NOT IN SOURCE.</p>
+</blockquote></li>
+<li><p>Run the script (Claude Code will offer to run it for you) and read the output table.</p></li>
+<li><p>The script should flag two problems: <strong>“24%”</strong> (an invented year-over-year increase that appears nowhere in the source) and <strong>“52%”</strong> (an altered version of the source’s 46%). Confirm both by rereading <code>source.txt</code> yourself — the script points, but you make the call.</p></li>
+<li><p>Reflect: Activities 1 and 2 would never have caught these. The citations could all be real and the prose could still be wrong.</p></li>
+</ol>
+<p><strong>Expected result.</strong> A working script whose output verifies 312, 38, 61%, and 12% — and flags 24% and 52% as not traceable to the source.</p>
+<p><strong>Check your work.</strong> Every flagged number should be genuinely absent from <code>source.txt</code>, and every verified number genuinely present. If the script misses 52% or falsely flags a real number, tell Claude Code what went wrong and have it fix the script — you verify the verifier, too.</p>
+<p><strong>Common pitfalls.</strong> A “NOT IN SOURCE” flag doesn’t automatically mean fabrication — it can be a legitimate calculation or a rounding difference — so the flag starts your verification, it doesn’t finish it. And remember the tool’s status: Claude Code is approved for Low Risk Data only, so never feed it drafts containing student records, health data, or anything non-public.</p>
+<p><strong>Stretch (optional).</strong> Ask Claude Code to extend the script to also flag numbers whose surrounding context differs (e.g., 12% attached to the wrong claim), or point it at a public CDC or PennDOT fact sheet and a fresh ChatGPT Edu summary of it — then count how many numbers per paragraph you’d have had to check by hand.</p>
+</details>
 </section>
 <section id="check-your-readiness" class="level2">
 <h2 class="anchored" data-anchor-id="check-your-readiness">Check your readiness</h2>
