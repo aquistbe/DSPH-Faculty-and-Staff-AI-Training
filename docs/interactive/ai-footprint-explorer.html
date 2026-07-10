@@ -144,6 +144,23 @@ details.exp p{margin:8px 0 2px;color:var(--text-secondary);font-size:14px;max-wi
 /* inline warning */
 .inline-warn{display:none;font-size:13px;color:var(--brand-crimson);background:#fdf3f4;border:1px solid rgba(151,27,47,.25);border-radius:6px;padding:8px 12px;margin:10px 0 4px;max-width:820px}
 .inline-warn.show{display:block}
+/* module-scope controls (Module A: single task vs. annual use) */
+.ctrl-inline{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:14px 0 2px}
+.usage-block{background:#fff;border:1px solid var(--hairline);border-radius:8px;padding:14px 16px;margin:12px 0 4px;max-width:820px}
+.usage-block .u-label{display:block;font-weight:600;font-size:13.5px;color:var(--text-primary)}
+.usage-presets{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.usage-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.usage-row input[type="range"]{flex:1;min-width:180px;max-width:420px;accent-color:var(--brand-teal)}
+.usage-readout{font:600 13.5px var(--sans);color:var(--text-primary);font-variant-numeric:tabular-nums;white-space:nowrap}
+.usage-src{font-size:12px;color:var(--muted);margin:8px 0 0;max-width:820px}
+.usage-caveat{font-size:13px;color:var(--text-primary);background:#f1f0ec;border:1px solid var(--hairline);border-left:4px solid var(--context-gray);border-radius:6px;padding:8px 12px;margin:10px 0 4px;max-width:820px}
+.usage-caveat.lowconf{color:var(--brand-crimson);background:#fdf3f4;border-color:rgba(151,27,47,.25);border-left-color:var(--brand-crimson)}
+/* per-capita callout (annual view) */
+.percap{background:#eef5f9;border:1px solid var(--hairline);border-left:4px solid var(--brand-teal);border-radius:6px;padding:14px 16px;margin:16px 0 4px;font-size:13.5px;max-width:820px}
+.percap .pc-head{font-weight:700;color:var(--brand-navy);margin-bottom:4px}
+.percap .pc-line{margin:2px 0;font-variant-numeric:tabular-nums}
+.percap .pc-line strong{font-size:15px}
+.percap .pc-alt{font-size:12px;color:var(--muted);margin-top:8px;border-top:1px solid var(--grid);padding-top:6px}
 /* footer */
 footer{margin-top:48px;border-top:1px solid var(--baseline);padding-top:22px;font-size:13px;color:var(--text-secondary)}
 footer h2{font-size:19px}
@@ -199,7 +216,26 @@ td.src a.src-link{color:var(--brand-teal)}
     </div>
     <button class="tbtn" id="btn-tableA" aria-pressed="false">View as table</button>
   </div>
+  <div class="ctrl-inline">
+    <span class="ctrl-label" id="scope-label">Show this task as:</span>
+    <div class="seg" role="group" aria-labelledby="scope-label" id="scopeseg">
+      <button data-scope="single" aria-pressed="true">Single task</button>
+      <button data-scope="annual" aria-pressed="false">Annual use</button>
+    </div>
+  </div>
   <div class="chips" id="task-chips" role="group" aria-label="Choose an AI task"></div>
+  <div id="annual-controls" hidden>
+    <div class="usage-block">
+      <label class="u-label" for="usage-slider">How often do you personally do this?</label>
+      <div class="usage-presets" id="usage-presets" role="group" aria-label="Usage-rate presets"></div>
+      <div class="usage-row">
+        <input type="range" id="usage-slider" aria-describedby="usage-readout">
+        <span class="usage-readout" id="usage-readout" role="status"></span>
+      </div>
+      <p class="usage-src" id="usage-src"></p>
+    </div>
+    <div class="usage-caveat" id="usage-caveat"></div>
+  </div>
   <div class="inline-warn" id="video-warn"><strong>Low-confidence figure:</strong> this video estimate comes from one open academic model (CogVideoX) on research hardware. Commercial models like Sora or Veo have never disclosed per-video figures &mdash; treat this as a rough order of magnitude only.</div>
   <div id="modA-charts">
     <div class="legend" aria-hidden="false">
@@ -215,6 +251,7 @@ td.src a.src-link{color:var(--brand-teal)}
     <div class="lchart" id="chartA-water"></div>
   </div>
   <div id="modA-tables" hidden></div>
+  <div class="percap" id="percap" hidden></div>
 </section>
 
 <!-- ============ MODULE B ============ -->
@@ -322,17 +359,28 @@ const DATA = {
     video: { label: "One 5-second AI video clip", sub: "academic open model, NOT a commercial product estimate", energyWh: {low:30, mid:940, high:3000}, waterML: {low:40, mid:1200, high:4000}, source: "MIT Technology Review, 2025 (CogVideoX, academic hardware) — commercial models like Sora/Veo have never disclosed per-video figures; treat this as low-confidence, order-of-magnitude only", lowConfidence: true }
   },
   everyday: {
-    google_search: { label: "One web search", energyWh: {low:0.2, mid:0.3, high:0.5}, source: "Google, 2009 — never updated since; treat as dated" },
-    netflix_hour: { label: "1 hour of video streaming", energyWh: {low:25, mid:77, high:240}, source: "IEA (Kamiya), 2020; Carbon Brief, 2020" },
-    phone_charge: { label: "Charging a smartphone once", energyWh: {low:12, mid:15, high:20}, source: "Device specs + EPRI, 2024" },
-    laundry: { label: "One load of laundry", energyWh: {low:300, mid:900, high:2300}, source: "Silicon Valley Power appliance data; ENERGY STAR" },
-    dishwasher: { label: "One dishwasher cycle", energyWh: {low:900, mid:1200, high:1800}, source: "ENERGY STAR" },
-    ac_hour: { label: "1 hour of air conditioning", energyWh: {low:500, mid:1500, high:3500}, source: "US DOE / Silicon Valley Power" },
+    google_search: { label: "One web search", energyWh: {low:0.2, mid:0.3, high:0.5}, source: "Google, 2009 — never updated since; treat as dated",
+      annual: { perYear: {low:650, mid:1200, high:3600}, basis: "per person", perYearSource: "SparkToro/Datos clickstream panel, 2025 (US); cross-checked against Google's disclosure of >5 trillion searches/year globally, 2025" } },
+    netflix_hour: { label: "1 hour of video streaming", energyWh: {low:25, mid:77, high:240}, source: "IEA (Kamiya), 2020; Carbon Brief, 2020",
+      annual: { perYear: {low:450, mid:650, high:1100}, basis: "per person", perYearSource: "Nielsen The Gauge, Dec 2025 (streaming share of TV time) cross-referenced with average daily TV viewing estimates" } },
+    phone_charge: { label: "Charging a smartphone once", energyWh: {low:12, mid:15, high:20}, source: "Device specs + EPRI, 2024",
+      annual: { perYear: {low:300, mid:365, high:550}, basis: "per person", perYearSource: "Assumption: about one full charge per day (no federal survey exists for this figure)" } },
+    laundry: { label: "One load of laundry", energyWh: {low:300, mid:900, high:2300}, source: "Silicon Valley Power appliance data; ENERGY STAR",
+      annual: { perYear: {low:200, mid:300, high:400}, basis: "per household (~2.5 people)", perYearSource: "ENERGY STAR: \"the average American family washes about 300 loads of laundry each year\"" } },
+    dishwasher: { label: "One dishwasher cycle", energyWh: {low:900, mid:1200, high:1800}, source: "ENERGY STAR",
+      annual: { perYear: {low:100, mid:215, high:365}, basis: "per household", perYearSource: "ENERGY STAR Key Product Criteria: 215 cycles per year (federal test-procedure usage assumption)" } },
+    ac_hour: { label: "1 hour of air conditioning", energyWh: {low:500, mid:1500, high:3500}, source: "US DOE / Silicon Valley Power",
+      annual: { annualOverrideWh: {low:1800000, mid:2300000, high:3000000}, basis: "per AC-equipped household", perYearSource: "EIA: US homes used 254 billion kWh for air conditioning in 2020, about 19% of residential electricity (RECS 2020) ≈ ~2,300 kWh/year per AC-equipped household" } },
     kettle: { label: "Boiling a 1-liter kettle", energyWh: {low:100, mid:120, high:150}, source: "Physics (specific heat) + typical losses" },
-    drive_mile_gas: { label: "Driving 1 mile, gas car", energyWh: {low:1000, mid:1200, high:1600}, source: "EPA, fueleconomy.gov" },
-    drive_mile_ev: { label: "Driving 1 mile, EV", energyWh: {low:240, mid:300, high:400}, source: "EPA, fueleconomy.gov" },
-    shower: { label: "A 10-minute shower", waterML: {low:60000, mid:80000, high:95000}, source: "EPA WaterSense" },
-    washer_load_water: { label: "One washing-machine load (water)", waterML: {low:50000, mid:75000, high:150000}, source: "EPA / ENERGY STAR" }
+    // kettle deliberately has NO `annual` field — no defensible annual frequency exists, so it is excluded from the annual view rather than fabricating one
+    drive_mile_gas: { label: "Driving 1 mile, gas car", energyWh: {low:1000, mid:1200, high:1600}, source: "EPA, fueleconomy.gov",
+      annual: { perYear: {low:11100, mid:13700, high:16000}, basis: "per licensed driver", perYearSource: "FHWA Highway Statistics 2024: Table VM-1 total vehicle miles traveled ÷ Table DL-1C licensed drivers ≈ 13,736 mi/driver; 11,071 mi/vehicle as a low estimate" } },
+    drive_mile_ev: { label: "Driving 1 mile, EV", energyWh: {low:240, mid:300, high:400}, source: "EPA, fueleconomy.gov",
+      annual: { perYear: {low:11100, mid:13700, high:16000}, basis: "per licensed driver", perYearSource: "FHWA Highway Statistics 2024: Table VM-1 total vehicle miles traveled ÷ Table DL-1C licensed drivers ≈ 13,736 mi/driver; 11,071 mi/vehicle as a low estimate" } },
+    shower: { label: "A 10-minute shower", waterML: {low:60000, mid:80000, high:95000}, source: "EPA WaterSense",
+      annual: { perYear: {low:200, mid:300, high:365}, basis: "per person", perYearSource: "Water Research Foundation / AWWA Residential End Uses of Water v2 (2016): 0.69 shower events per person per day measured; daily-shower assumption as a high estimate" } },
+    washer_load_water: { label: "One washing-machine load (water)", waterML: {low:50000, mid:75000, high:150000}, source: "EPA / ENERGY STAR",
+      annual: { perYear: {low:200, mid:300, high:400}, basis: "per household (~2.5 people)", perYearSource: "ENERGY STAR: \"the average American family washes about 300 loads of laundry each year\"" } }
   },
   manual: {
     laptop_20min: { label: "20 min of active laptop use", sub: "roughly the time a manual version of a simple task might take", energyWh: {low:10, mid:17, high:25}, source: "Typical laptop power draw, 30-70W active use" }
@@ -365,8 +413,66 @@ const DATA = {
   ]
 };
 
+/* ============ usage-behavior data (annual view) ============ */
+/* Sibling of DATA: this is usage-frequency behavior, not per-task footprint data. */
+const ANNUAL_USAGE = {
+  text: {
+    unit: "queries/day", perYearUnit: "queries/year", daysPerUnit: 365,
+    min: 1, max: 60, step: 0.5,
+    presets: {
+      light:   { value: 1.5, label: "Light — a few sessions a week" },
+      typical: { value: 4.5, label: "Typical — average across ALL weekly ChatGPT users" },
+      heavy:   { value: 35,  label: "Heavy — AI is part of your daily workflow" }
+    },
+    source: "OpenAI disclosed ~2.5 billion prompts/day across ~500 million weekly active users, July 2025 (TechCrunch, citing OpenAI/Axios)",
+    caveat: "The \"Typical\" figure averages every weekly user, including a long tail who barely use it. Someone who uses AI as part of a daily workflow plausibly sends 5–10x this average — there is no published per-user rate specifically for power users; the Heavy preset here is an informed illustration, not a citation."
+  },
+  image: {
+    unit: "images/month", perYearUnit: "images/year", daysPerUnit: 12,
+    min: 1, max: 200, step: 1,
+    presets: {
+      light:   { value: 2,   label: "Light" },
+      typical: { value: 10,  label: "Typical" },
+      heavy:   { value: 100, label: "Heavy" }
+    },
+    source: "No published steady-state per-user image-generation rate exists; the only public datapoint is a launch-week novelty spike (OpenAI: 700 million images from 130 million users in about one week after the April 2025 GPT-4o image launch — TechCrunch)",
+    caveat: "All three presets here are illustrative round numbers, not sourced usage data — treat them as a discussion starting point, not a citation, unlike the text presets above.",
+    lowConfidence: true
+  },
+  video: {
+    unit: "videos/month", perYearUnit: "videos/year", daysPerUnit: 12,
+    min: 0, max: 150, step: 1,
+    presets: {
+      light:   { value: 0.5, label: "Light" },
+      typical: { value: 5,   label: "Typical" },
+      heavy:   { value: 50,  label: "Heavy" }
+    },
+    source: "No published per-user video-generation rate exists for any commercial provider; Sora's free tier was capped around 30 videos/day, which gives a rough ceiling for an engaged free user, not a typical rate (Forbes, Nov 2025)",
+    caveat: "All three presets here are illustrative round numbers with no published usage data behind them — treat them as a discussion starting point only.",
+    lowConfidence: true
+  }
+};
+// map each aiTasks key to its usage-rate group
+const TASK_USAGE_GROUP = { small_text:"text", frontier_text:"text", complex_text:"text", image:"image", video:"video" };
+
+const PERCAPITA = {
+  electricityTotal: { low:11600, mid:11800, high:12000, unit:"kWh/year",
+    label: "Average American's total annual electricity use (including their share of commercial & industrial use)",
+    source: "EIA: total US retail electricity sales ~3,975–4,050 TWh (2024–2025) divided by ~340–341 million population" },
+  electricityResidential: { low:4300, mid:4400, high:4500, unit:"kWh/year",
+    label: "...if you only counted your home's electricity",
+    source: "EIA: average annual US residential customer electricity purchase, 10,791 kWh in 2022" },
+  waterDomestic: { low:27000, mid:30000, high:33000, unit:"gallons/year",
+    label: "Average American's annual water use at home (showers, laundry, taps)",
+    source: "USGS Circular 1441 / Fact Sheet 2018-3035: 82 gallons per person per day domestic water use, 2015 (most recent complete national estimate)" }
+};
+const GAL_TO_L = 3.78541;
+
 /* ============ state & helpers ============ */
-const state = { level: "mid", task: "frontier_text" };
+const state = { level: "mid", task: "frontier_text", scope: "single",
+  freq: { text: ANNUAL_USAGE.text.presets.typical.value,
+          image: ANNUAL_USAGE.image.presets.typical.value,
+          video: ANNUAL_USAGE.video.presets.typical.value } };
 const updaters = []; // each: fn(level) — called on level change
 
 const cssVar = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
@@ -468,7 +574,59 @@ const SOURCE_HTML = {
     '<a class="src-link" href="https://www.wsj.com/tech/ai/ai-data-centers-water-use-901e2902" target="_blank" rel="noopener">WSJ, July 2026</a>',
 
   "WSJ, July 2026":
-    '<a class="src-link" href="https://www.wsj.com/tech/ai/ai-data-centers-water-use-901e2902" target="_blank" rel="noopener">WSJ, July 2026</a>'
+    '<a class="src-link" href="https://www.wsj.com/tech/ai/ai-data-centers-water-use-901e2902" target="_blank" rel="noopener">WSJ, July 2026</a>',
+
+  /* --- annual-view usage-rate sources --- */
+  "OpenAI disclosed ~2.5 billion prompts/day across ~500 million weekly active users, July 2025 (TechCrunch, citing OpenAI/Axios)":
+    'OpenAI disclosed ~2.5 billion prompts/day across ~500 million weekly active users, July 2025 (' +
+    '<a class="src-link" href="https://techcrunch.com/2025/07/21/chatgpt-users-send-2-5-billion-prompts-a-day/" target="_blank" rel="noopener">TechCrunch</a>, citing OpenAI/Axios)',
+
+  "No published steady-state per-user image-generation rate exists; the only public datapoint is a launch-week novelty spike (OpenAI: 700 million images from 130 million users in about one week after the April 2025 GPT-4o image launch — TechCrunch)":
+    'No published steady-state per-user image-generation rate exists; the only public datapoint is a launch-week novelty spike (OpenAI: 700 million images from 130 million users in about one week after the April 2025 GPT-4o image launch — ' +
+    '<a class="src-link" href="https://techcrunch.com/2025/04/03/chatgpt-users-have-generated-over-700m-images-since-last-week-openai-says/" target="_blank" rel="noopener">TechCrunch</a>)',
+
+  "No published per-user video-generation rate exists for any commercial provider; Sora's free tier was capped around 30 videos/day, which gives a rough ceiling for an engaged free user, not a typical rate (Forbes, Nov 2025)":
+    'No published per-user video-generation rate exists for any commercial provider; Sora\'s free tier was capped around 30 videos/day, which gives a rough ceiling for an engaged free user, not a typical rate (' +
+    '<a class="src-link" href="https://www.forbes.com/sites/barrycollins/2025/11/28/our-gpus-are-melting-warns-sora-boss-as-new-limits-are-imposed/" target="_blank" rel="noopener">Forbes, Nov 2025</a>)',
+
+  /* --- annual-view everyday-frequency sources --- */
+  "SparkToro/Datos clickstream panel, 2025 (US); cross-checked against Google's disclosure of >5 trillion searches/year globally, 2025":
+    '<a class="src-link" href="https://sparktoro.com/blog/new-research-how-often-do-americans-search-google-which-search-verticals-do-they-use/" target="_blank" rel="noopener">SparkToro/Datos clickstream panel, 2025 (US)</a>; cross-checked against ' +
+    '<a class="src-link" href="https://searchengineland.com/google-5-trillion-searches-per-year-452928" target="_blank" rel="noopener">Google&rsquo;s disclosure of &gt;5 trillion searches/year globally, 2025</a>',
+
+  "Nielsen The Gauge, Dec 2025 (streaming share of TV time) cross-referenced with average daily TV viewing estimates":
+    '<a class="src-link" href="https://www.nielsen.com/data-center/the-gauge/" target="_blank" rel="noopener">Nielsen The Gauge, Dec 2025</a> (streaming share of TV time) cross-referenced with average daily TV viewing estimates',
+
+  "Assumption: about one full charge per day (no federal survey exists for this figure)":
+    'Assumption: about one full charge per day (no federal survey exists for this figure)',
+
+  "ENERGY STAR: \"the average American family washes about 300 loads of laundry each year\"":
+    '<a class="src-link" href="https://www.energystar.gov/products/clothes_washers" target="_blank" rel="noopener">ENERGY STAR</a>: "the average American family washes about 300 loads of laundry each year"',
+
+  "ENERGY STAR Key Product Criteria: 215 cycles per year (federal test-procedure usage assumption)":
+    '<a class="src-link" href="https://www.energystar.gov/products/dishwashers/key_product_criteria" target="_blank" rel="noopener">ENERGY STAR Key Product Criteria</a>: 215 cycles per year (federal test-procedure usage assumption)',
+
+  "EIA: US homes used 254 billion kWh for air conditioning in 2020, about 19% of residential electricity (RECS 2020) ≈ ~2,300 kWh/year per AC-equipped household":
+    '<a class="src-link" href="https://www.eia.gov/consumption/residential/data/2020/" target="_blank" rel="noopener">EIA</a>: US homes used 254 billion kWh for air conditioning in 2020, about 19% of residential electricity (' +
+    '<a class="src-link" href="https://www.eia.gov/consumption/residential/data/2020/" target="_blank" rel="noopener">RECS 2020</a>) &asymp; ~2,300 kWh/year per AC-equipped household',
+
+  "FHWA Highway Statistics 2024: Table VM-1 total vehicle miles traveled ÷ Table DL-1C licensed drivers ≈ 13,736 mi/driver; 11,071 mi/vehicle as a low estimate":
+    '<a class="src-link" href="https://www.fhwa.dot.gov/policyinformation/statistics.cfm" target="_blank" rel="noopener">FHWA Highway Statistics 2024</a>: Table VM-1 total vehicle miles traveled &divide; Table DL-1C licensed drivers &asymp; 13,736 mi/driver; 11,071 mi/vehicle as a low estimate',
+
+  "Water Research Foundation / AWWA Residential End Uses of Water v2 (2016): 0.69 shower events per person per day measured; daily-shower assumption as a high estimate":
+    '<a class="src-link" href="https://www.waterrf.org/research/projects/residential-end-uses-water-version-2" target="_blank" rel="noopener">Water Research Foundation / AWWA Residential End Uses of Water v2 (2016)</a>: 0.69 shower events per person per day measured; daily-shower assumption as a high estimate',
+
+  /* --- per-capita denominator sources --- */
+  "EIA: total US retail electricity sales ~3,975–4,050 TWh (2024–2025) divided by ~340–341 million population":
+    '<a class="src-link" href="https://www.eia.gov/electricity/monthly/" target="_blank" rel="noopener">EIA</a>: total US retail electricity sales ~3,975&ndash;4,050 TWh (2024&ndash;2025) divided by ' +
+    '<a class="src-link" href="https://www.census.gov/popclock/" target="_blank" rel="noopener">~340&ndash;341 million population</a>',
+
+  "EIA: average annual US residential customer electricity purchase, 10,791 kWh in 2022":
+    '<a class="src-link" href="https://www.eia.gov/tools/faqs/faq.php?id=97&t=3" target="_blank" rel="noopener">EIA</a>: average annual US residential customer electricity purchase, 10,791 kWh in 2022',
+
+  "USGS Circular 1441 / Fact Sheet 2018-3035: 82 gallons per person per day domestic water use, 2015 (most recent complete national estimate)":
+    '<a class="src-link" href="https://pubs.usgs.gov/publication/cir1441" target="_blank" rel="noopener">USGS Circular 1441</a> / ' +
+    '<a class="src-link" href="https://pubs.usgs.gov/publication/fs20183035" target="_blank" rel="noopener">Fact Sheet 2018-3035</a>: 82 gallons per person per day domestic water use, 2015 (most recent complete national estimate)'
 };
 function linkifySource(s){
   return SOURCE_HTML[s] || escHTML(s);
@@ -476,12 +634,23 @@ function linkifySource(s){
 function fmtNum(v){
   return v >= 1000 ? v.toLocaleString("en-US") : String(v);
 }
+function fmtSig(v){ // 3 significant figures — for computed annual values, which are rarely round
+  if (!isFinite(v) || v === 0) return "0";
+  return Number(v.toPrecision(3)).toLocaleString("en-US", {maximumFractionDigits: 12});
+}
+function fmtPct(p){
+  if (!isFinite(p) || p === 0) return "0%";
+  return fmtSig(p) + "%";
+}
 function fmtVal(v, unit){
   if (unit === "Wh") return fmtNum(v) + " Wh" + (v >= 1000 ? " (" + fmtNum(v/1000) + " kWh)" : "");
+  if (unit === "kWh") return fmtSig(v) + " kWh";
+  if (unit === "L") return fmtSig(v) + " L";
   return fmtNum(v) + " mL" + (v >= 1000 ? " (" + fmtNum(v/1000) + " L)" : "");
 }
 function rangeText(vals, unit){
-  return "low " + fmtNum(vals.low) + " · mid " + fmtNum(vals.mid) + " · high " + fmtNum(vals.high) + " " + unit;
+  const f = (unit === "kWh" || unit === "L") ? fmtSig : fmtNum; // annual figures are computed, so use significant figures
+  return "low " + f(vals.low) + " · mid " + f(vals.mid) + " · high " + f(vals.high) + " " + unit;
 }
 const log10 = Math.log10;
 function makeScale(min, max){
@@ -606,40 +775,145 @@ const WATER_TICKS = [
 ];
 const ENERGY_CONTEXT = ["google_search","phone_charge","netflix_hour","kettle","laundry","drive_mile_gas"];
 const WATER_CONTEXT = ["shower","washer_load_water"];
+/* annual view: kettle intentionally absent (no defensible annual frequency); every item here carries an `annual` field */
+const ANNUAL_ENERGY_CONTEXT = ["google_search","phone_charge","netflix_hour","laundry","dishwasher","ac_hour","drive_mile_gas","drive_mile_ev"];
+const ANNUAL_WATER_CONTEXT = ["shower","washer_load_water"];
+const ANNUAL_KWH_TICKS = [
+  {v:0.0001,l:"0.0001"},{v:0.001,l:"0.001"},{v:0.01,l:"0.01"},{v:0.1,l:"0.1"},{v:1,l:"1"},
+  {v:10,l:"10"},{v:100,l:"100"},{v:1000,l:"1k"},{v:10000,l:"10k"},{v:100000,l:"100k"}
+];
+const ANNUAL_L_TICKS = ANNUAL_KWH_TICKS;
+
+/* ============ annual-view computations ============ */
+function freqPerYear(groupKey){ // slider raw value × (365 if per-day, 12 if per-month)
+  return state.freq[groupKey] * ANNUAL_USAGE[groupKey].daysPerUnit;
+}
+function scaleTriple(vals, factor){
+  return {low: vals.low * factor, mid: vals.mid * factor, high: vals.high * factor};
+}
+function annualEverydayKWh(d){ // annual override (Wh) where provided, else per-use Wh × published per-year frequency
+  const a = d.annual;
+  if (a.annualOverrideWh) return {low: a.annualOverrideWh.low/1000, mid: a.annualOverrideWh.mid/1000, high: a.annualOverrideWh.high/1000};
+  return {low: d.energyWh.low * a.perYear.low/1000, mid: d.energyWh.mid * a.perYear.mid/1000, high: d.energyWh.high * a.perYear.high/1000};
+}
+function annualEverydayL(d){
+  const a = d.annual;
+  return {low: d.waterML.low * a.perYear.low/1000, mid: d.waterML.mid * a.perYear.mid/1000, high: d.waterML.high * a.perYear.high/1000};
+}
+function annualSub(d){ // second label line explaining the annualization of an everyday item
+  const a = d.annual;
+  if (a.annualOverrideWh) return "annual total, " + a.basis;
+  return "× ~" + fmtNum(a.perYear.mid) + "/yr, " + a.basis;
+}
+function aiAnnualSub(groupKey){
+  const g = ANNUAL_USAGE[groupKey];
+  return "at " + state.freq[groupKey] + " " + g.unit + " (~" + fmtSig(freqPerYear(groupKey)) + "/yr)";
+}
 
 let updateA = null;
 function renderModuleA(){
   const t = DATA.aiTasks[state.task];
+  const annual = state.scope === "annual";
+  const groupKey = TASK_USAGE_GROUP[state.task];
   document.getElementById("video-warn").classList.toggle("show", !!t.lowConfidence);
-  document.getElementById("energy-title").textContent =
-    "Energy: “" + t.label + "” vs. everyday activities (watt-hours, log scale)";
-  document.getElementById("water-title").textContent =
-    "Water: “" + t.label + "” vs. everyday water use (milliliters, log scale)";
 
-  const eRows = [{
-    label: t.label, sub: t.sub, values: t.energyWh, source: t.source,
-    accent: true, accentColor: cssVar("--series-energy"), whisker: true
-  }].concat(ENERGY_CONTEXT.map(k => {
-    const d = DATA.everyday[k];
-    return {label: d.label, values: d.energyWh, source: d.source};
-  }));
-  const upE = renderLogBars(document.getElementById("chartA-energy"), eRows, {
-    unit:"Wh", domain:[0.01,10000], ticks:ENERGY_TICKS,
-    axisTitle:"watt-hours (Wh) — logarithmic scale: each gridline is 10× the last"
-  });
+  let eRows, wRows, upE, upW;
+  if (annual){
+    const fpy = freqPerYear(groupKey);
+    document.getElementById("energy-title").textContent =
+      "Energy: a year of “" + t.label + "” vs. a year of everyday activities (kilowatt-hours, log scale)";
+    document.getElementById("water-title").textContent =
+      "Water: a year of “" + t.label + "” vs. a year of everyday water use (liters, log scale)";
 
-  const wRows = [{
-    label: t.label, sub: t.sub, values: t.waterML, source: t.source,
-    accent: true, accentColor: cssVar("--series-water"), whisker: true
-  }].concat(WATER_CONTEXT.map(k => {
-    const d = DATA.everyday[k];
-    return {label: d.label, values: d.waterML, source: d.source};
-  }));
-  const upW = renderLogBars(document.getElementById("chartA-water"), wRows, {
-    unit:"mL", domain:[0.01,1000000], ticks:WATER_TICKS,
-    axisTitle:"milliliters (mL) — logarithmic scale: each gridline is 10× the last"
-  });
-  updateA = () => { upE(); upW(); };
+    eRows = [{
+      label: "A year of: " + t.label, sub: aiAnnualSub(groupKey),
+      values: scaleTriple(t.energyWh, fpy/1000), source: t.source,
+      accent: true, accentColor: cssVar("--series-energy"), whisker: true
+    }].concat(ANNUAL_ENERGY_CONTEXT.map(k => {
+      const d = DATA.everyday[k];
+      return {label: d.label, sub: annualSub(d), values: annualEverydayKWh(d), source: d.annual.perYearSource};
+    }));
+    upE = renderLogBars(document.getElementById("chartA-energy"), eRows, {
+      unit:"kWh", domain:[0.0001,100000], ticks:ANNUAL_KWH_TICKS,
+      axisTitle:"kilowatt-hours (kWh) per year — logarithmic scale: each gridline is 10× the last"
+    });
+
+    wRows = [{
+      label: "A year of: " + t.label, sub: aiAnnualSub(groupKey),
+      values: scaleTriple(t.waterML, fpy/1000), source: t.source,
+      accent: true, accentColor: cssVar("--series-water"), whisker: true
+    }].concat(ANNUAL_WATER_CONTEXT.map(k => {
+      const d = DATA.everyday[k];
+      return {label: d.label, sub: annualSub(d), values: annualEverydayL(d), source: d.annual.perYearSource};
+    }));
+    upW = renderLogBars(document.getElementById("chartA-water"), wRows, {
+      unit:"L", domain:[0.0001,100000], ticks:ANNUAL_L_TICKS,
+      axisTitle:"liters (L) per year — logarithmic scale: each gridline is 10× the last"
+    });
+  } else {
+    document.getElementById("energy-title").textContent =
+      "Energy: “" + t.label + "” vs. everyday activities (watt-hours, log scale)";
+    document.getElementById("water-title").textContent =
+      "Water: “" + t.label + "” vs. everyday water use (milliliters, log scale)";
+
+    eRows = [{
+      label: t.label, sub: t.sub, values: t.energyWh, source: t.source,
+      accent: true, accentColor: cssVar("--series-energy"), whisker: true
+    }].concat(ENERGY_CONTEXT.map(k => {
+      const d = DATA.everyday[k];
+      return {label: d.label, values: d.energyWh, source: d.source};
+    }));
+    upE = renderLogBars(document.getElementById("chartA-energy"), eRows, {
+      unit:"Wh", domain:[0.01,10000], ticks:ENERGY_TICKS,
+      axisTitle:"watt-hours (Wh) — logarithmic scale: each gridline is 10× the last"
+    });
+
+    wRows = [{
+      label: t.label, sub: t.sub, values: t.waterML, source: t.source,
+      accent: true, accentColor: cssVar("--series-water"), whisker: true
+    }].concat(WATER_CONTEXT.map(k => {
+      const d = DATA.everyday[k];
+      return {label: d.label, values: d.waterML, source: d.source};
+    }));
+    upW = renderLogBars(document.getElementById("chartA-water"), wRows, {
+      unit:"mL", domain:[0.01,1000000], ticks:WATER_TICKS,
+      axisTitle:"milliliters (mL) — logarithmic scale: each gridline is 10× the last"
+    });
+  }
+  updateA = () => { upE(); upW(); updatePercap(); };
+  updatePercap();
+}
+
+/* ============ per-capita callout (annual view) ============ */
+function updatePercap(){
+  const host = document.getElementById("percap");
+  if (state.scope !== "annual"){ host.hidden = true; return; }
+  host.hidden = false;
+  host.textContent = "";
+  const t = DATA.aiTasks[state.task];
+  const groupKey = TASK_USAGE_GROUP[state.task];
+  const g = ANNUAL_USAGE[groupKey];
+  const fpy = freqPerYear(groupKey);
+  const kwh = t.energyWh[state.level] * fpy / 1000;
+  const pctElec = kwh / PERCAPITA.electricityTotal.mid * 100;
+  host.appendChild(el("div","pc-head",
+    "A year of “" + t.label + "” at " + state.freq[groupKey] + " " + g.unit + " (" + state.level + " estimate)"));
+  host.appendChild(elHTML("div","pc-line",
+    "<strong>≈ " + fmtPct(pctElec) + "</strong> of the average American&rsquo;s total annual electricity use (" +
+    fmtNum(PERCAPITA.electricityTotal.mid) + " kWh/year, including your share of commercial &amp; industrial electricity)."));
+  if (t.waterML){
+    const litres = t.waterML[state.level] * fpy / 1000;
+    const pctWater = litres / (PERCAPITA.waterDomestic.mid * GAL_TO_L) * 100;
+    host.appendChild(elHTML("div","pc-line",
+      "<strong>≈ " + fmtPct(pctWater) + "</strong> of the average American&rsquo;s annual water use at home (~" +
+      fmtNum(PERCAPITA.waterDomestic.mid) + " gallons/year — showers, laundry, taps)."));
+  }
+  host.appendChild(elHTML("div","pc-alt",
+    "Why divide by <em>total</em> electricity rather than the residential-only per-capita figure (~" +
+    fmtNum(PERCAPITA.electricityResidential.mid) + " kWh/year per person; " + linkifySource(PERCAPITA.electricityResidential.source) +
+    ")? Because AI queries run on commercial data-center electricity, not your home meter — the same way your share of the grocery store&rsquo;s " +
+    "electricity use never appears on your home bill. Against the residential-only denominator these percentages would look roughly 2.7&times; larger. " +
+    "Denominators: " + linkifySource(PERCAPITA.electricityTotal.source) + "; " + linkifySource(PERCAPITA.waterDomestic.source) + "."));
 }
 
 /* task chips */
@@ -659,10 +933,66 @@ Object.keys(DATA.aiTasks).forEach(key => {
     state.task = key;
     chipsHost.querySelectorAll(".chip").forEach(b => b.setAttribute("aria-pressed","false"));
     c.setAttribute("aria-pressed","true");
+    renderUsageControl(); // task may belong to a different usage group (different unit/range/presets)
     renderModuleA();
+    buildTablesA();
   });
   chipsHost.appendChild(c);
 });
+
+/* usage-rate control (annual view) */
+const usageSlider = document.getElementById("usage-slider");
+function renderUsageControl(){
+  const groupKey = TASK_USAGE_GROUP[state.task];
+  const g = ANNUAL_USAGE[groupKey];
+  usageSlider.min = g.min; usageSlider.max = g.max; usageSlider.step = g.step;
+  usageSlider.value = state.freq[groupKey];
+  usageSlider.setAttribute("aria-label", "How often you do this, in " + g.unit);
+  const presetsHost = document.getElementById("usage-presets");
+  presetsHost.textContent = "";
+  Object.keys(g.presets).forEach(pk => {
+    const p = g.presets[pk];
+    const b = el("button","tbtn", p.label + " (" + p.value + " " + g.unit + ")");
+    b.setAttribute("aria-pressed", String(state.freq[groupKey] === p.value));
+    b.addEventListener("click", () => {
+      state.freq[groupKey] = p.value;
+      renderUsageControl();
+      renderModuleA();
+      buildTablesA();
+    });
+    presetsHost.appendChild(b);
+  });
+  document.getElementById("usage-readout").textContent =
+    state.freq[groupKey] + " " + g.unit + " (~" + fmtSig(freqPerYear(groupKey)) + " " + g.perYearUnit + ")";
+  const cav = document.getElementById("usage-caveat");
+  cav.classList.toggle("lowconf", !!g.lowConfidence);
+  cav.textContent = "";
+  cav.appendChild(elHTML("span", null,
+    "<strong>" + (g.lowConfidence ? "No published usage data behind these presets:" : "Read the presets with care:") + "</strong> " + escHTML(g.caveat)));
+  document.getElementById("usage-src").innerHTML = "Usage-rate basis: " + linkifySource(g.source);
+}
+usageSlider.addEventListener("input", () => {
+  const groupKey = TASK_USAGE_GROUP[state.task];
+  state.freq[groupKey] = parseFloat(usageSlider.value);
+  renderUsageControl();
+  renderModuleA();
+  buildTablesA();
+});
+renderUsageControl();
+
+/* Single task / Annual use scope toggle */
+document.getElementById("scopeseg").querySelectorAll("button").forEach(btn => {
+  btn.addEventListener("click", () => {
+    state.scope = btn.dataset.scope;
+    document.getElementById("scopeseg").querySelectorAll("button")
+      .forEach(b => b.setAttribute("aria-pressed", String(b === btn)));
+    document.getElementById("annual-controls").hidden = state.scope !== "annual";
+    renderUsageControl();
+    renderModuleA();
+    buildTablesA();
+  });
+});
+
 renderModuleA();
 updaters.push(() => updateA && updateA());
 
@@ -691,6 +1021,37 @@ function makeTable(captionText, headers, rows){
 function buildTablesA(){
   const host = document.getElementById("modA-tables");
   host.textContent = "";
+  if (state.scope === "annual"){
+    // Annualized figures. AI rows use your current usage-rate sliders (source = per-use estimate);
+    // everyday rows use published annual frequencies (source = frequency basis; per-use sources are in the single-task table).
+    const eRows = [];
+    Object.keys(DATA.aiTasks).forEach(k => {
+      const t = DATA.aiTasks[k];
+      const a = scaleTriple(t.energyWh, freqPerYear(TASK_USAGE_GROUP[k])/1000);
+      eRows.push(["AI: " + t.label + " — " + aiAnnualSub(TASK_USAGE_GROUP[k]), fmtSig(a.low), fmtSig(a.mid), fmtSig(a.high), t.source]);
+    });
+    Object.values(DATA.everyday).forEach(d => {
+      if (!d.energyWh || !d.annual) return; // kettle: no defensible annual frequency, deliberately excluded
+      const a = annualEverydayKWh(d);
+      eRows.push([d.label + " — " + annualSub(d), fmtSig(a.low), fmtSig(a.mid), fmtSig(a.high), d.annual.perYearSource]);
+    });
+    host.appendChild(makeTable("Annual energy (kilowatt-hours per year) — AI rows use your usage-rate sliders; everyday rows use published annual frequencies (their per-use sources are in the single-task table)",
+      ["Item","Low (kWh/yr)","Mid (kWh/yr)","High (kWh/yr)","Source"], eRows));
+    const wRows = [];
+    Object.keys(DATA.aiTasks).forEach(k => {
+      const t = DATA.aiTasks[k];
+      const a = scaleTriple(t.waterML, freqPerYear(TASK_USAGE_GROUP[k])/1000);
+      wRows.push(["AI: " + t.label + " — " + aiAnnualSub(TASK_USAGE_GROUP[k]), fmtSig(a.low), fmtSig(a.mid), fmtSig(a.high), t.source]);
+    });
+    Object.values(DATA.everyday).forEach(d => {
+      if (!d.waterML || !d.annual) return;
+      const a = annualEverydayL(d);
+      wRows.push([d.label + " — " + annualSub(d), fmtSig(a.low), fmtSig(a.mid), fmtSig(a.high), d.annual.perYearSource]);
+    });
+    host.appendChild(makeTable("Annual water (liters per year) — AI rows use your usage-rate sliders; everyday rows use published annual frequencies",
+      ["Item","Low (L/yr)","Mid (L/yr)","High (L/yr)","Source"], wRows));
+    return;
+  }
   const eRows = [];
   Object.values(DATA.aiTasks).forEach(t => eRows.push(
     ["AI: " + t.label, fmtNum(t.energyWh.low), fmtNum(t.energyWh.mid), fmtNum(t.energyWh.high), t.source]));
@@ -913,10 +1274,13 @@ wireTableToggle("btn-tableC","modC-chart","modC-table");
   const add = s => { if (s && !seen.has(s)) seen.add(s); };
   Object.values(DATA.aiTasks).forEach(t => add(t.source));
   Object.values(DATA.everyday).forEach(d => add(d.source));
+  Object.values(DATA.everyday).forEach(d => { if (d.annual) add(d.annual.perYearSource); });
   Object.values(DATA.manual).forEach(d => add(d.source));
   add(DATA.rightsizing.multiplier.source);
   add(DATA.rightsizing.efficiencyTrend.source);
   Object.values(DATA.aggregate).forEach(a => add(a.source));
+  Object.values(ANNUAL_USAGE).forEach(g => add(g.source));
+  Object.values(PERCAPITA).forEach(p => add(p.source));
   const host = document.getElementById("sourcelist");
   seen.forEach(s => host.appendChild(elHTML("li", null, linkifySource(s))));
 })();

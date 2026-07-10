@@ -124,11 +124,13 @@ The explorer above puts specific AI tasks (a quick chatbot query, a long reasoni
 
 2. Still in Module A, switch to "One 5-second AI video clip." Notice the confidence flag on this one — read why it's marked low-confidence before you use this number in front of a class or in writing.
 
-3. In **Module B**, compare an AI task against 20 minutes of manual laptop use for the same task. Read the four caveats underneath it. Pick the one caveat you find most underappreciated in public conversation about AI and water/energy, and write one sentence on why.
+3. In Module A, switch the **Single task / Annual use** toggle to **Annual use**. Set the usage-rate slider to "Typical," then to "Heavy," for a task you personally use often. Read the per-capita callout underneath the chart — write down the percentage of your annual electricity (and water, if shown) that one year of this usage represents. Then read the caveat about the "Typical" preset averaging *every* weekly user, including people who barely touch it — does that change how you'd describe your own usage relative to the average?
 
-4. In **Module C**, note the right-sizing multiplier and the efficiency-over-time stat — then read the Jevons-paradox caveat next to it. In your own words: how can AI get 33x more efficient per query *and* Google's total data-center electricity and water use still rise in the same period? (Both are true — this is the point.)
+4. In **Module B**, compare an AI task against 20 minutes of manual laptop use for the same task. Read the four caveats underneath it. Pick the one caveat you find most underappreciated in public conversation about AI and water/energy, and write one sentence on why.
 
-5. Read **Module E** ("Why do the public numbers disagree so much?") and **Module F** ("What we genuinely don't know"). Pick one item from Module F and think about how you'd answer a student who asked you that question directly.
+5. In **Module C**, note the right-sizing multiplier and the efficiency-over-time stat — then read the Jevons-paradox caveat next to it. In your own words: how can AI get 33x more efficient per query *and* Google's total data-center electricity and water use still rise in the same period? (Both are true — this is the point.)
+
+6. Read **Module E** ("Why do the public numbers disagree so much?") and **Module F** ("What we genuinely don't know"). Pick one item from Module F and think about how you'd answer a student who asked you that question directly.
 
 **Expected result.** You can state a defensible range (not a single number) for at least two AI tasks, explain one reason estimates diverge, and name one thing that genuinely isn't known yet.
 
