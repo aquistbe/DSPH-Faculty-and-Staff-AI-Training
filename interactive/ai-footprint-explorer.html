@@ -127,6 +127,7 @@ table.dt td.src{color:var(--muted);font-size:12px;max-width:340px}
 .herotile .tval{font:600 46px/1 var(--sans);color:var(--text-primary)}
 .herotile .tsub{font-size:13px;color:var(--text-secondary);margin-top:8px}
 .ctgrid{display:grid;grid-template-columns:minmax(230px,1fr) 1.5fr;gap:16px;margin-top:20px;align-items:stretch}
+.ctgrid.ctgrid-3{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
 .caveat{background:#fffbe9;border:1px solid var(--hairline);border-left:4px solid var(--brand-gold);border-radius:6px;padding:14px 16px;font-size:13.5px;color:var(--text-primary)}
 .caveat .cv-head{font-weight:700;color:var(--brand-navy);margin-bottom:4px}
 /* prose caveats */
@@ -179,7 +180,7 @@ td.src a.src-link{color:var(--brand-teal)}
   .blabel .lsub{display:none}
   section.module{padding:18px 14px}
   .ctgrid{grid-template-columns:1fr}
-  #modA-charts,#modB-chart,#modC-chart,#modA-tables,#modB-table,#modC-table{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  #modA-charts,#modB-chart,#modB2-chart,#modC-chart,#modA-tables,#modB-table,#modB2-table,#modC-table{overflow-x:auto;-webkit-overflow-scrolling:touch}
   .lchart{min-width:540px}
   table.dt{min-width:540px}
 }
@@ -282,6 +283,54 @@ td.src a.src-link{color:var(--brand-teal)}
   </div>
 </section>
 
+<!-- ============ MODULE B2 ============ -->
+<section class="module" aria-labelledby="modB2-h">
+  <div class="modhead">
+    <div>
+      <h2 id="modB2-h">When the agent costs more than the person</h2>
+      <p class="mod-sub">In July 2026 METR proposed the <em>expenditure horizon</em> &mdash; the dollar amount at which an AI agent&rsquo;s progress on a task equals what a human researcher achieves for the same spend. Above that point the human is more cost-effective. METR measured it on a hard ML-engineering task. Putting the same comparison on an energy axis gives a different answer than the dollar one.</p>
+    </div>
+    <button class="tbtn" id="btn-tableB2" aria-pressed="false">View as table</button>
+  </div>
+  <div id="modB2-chart">
+    <div class="legend">
+      <span class="li"><span class="sw" style="background:var(--ord-dark)"></span>AI agent</span>
+      <span class="li"><span class="sw" style="background:var(--ord-light)"></span>Human researcher</span>
+      <span class="li"><span class="sw" style="background:none;border-left:2px solid var(--whisker);border-right:2px solid var(--whisker);border-radius:0;height:10px"></span>Low&ndash;high range of estimates</span>
+    </div>
+    <div class="lchart" id="chartB2"></div>
+    <p class="chart-note" id="chartB2-note">Both bars are the electricity used at the same $3,300 of spend &mdash; the point where METR measured Claude Opus-4.8&rsquo;s progress matching a human researcher&rsquo;s. Same money, same result, very different electricity.</p>
+  </div>
+  <div id="modB2-table" hidden></div>
+  <div class="ctgrid ctgrid-3">
+    <div class="tile">
+      <div class="tlabel">Expenditure horizon, Claude Opus-4.8</div>
+      <div class="tval">$3,300</div>
+      <div class="tproj">The dollar crossover. Below it the agent wins on cost; above it the human does. GPT-5.5 crossed at $2,300.</div>
+    </div>
+    <div class="tile">
+      <div class="tlabel">The agent&rsquo;s electricity at that same spend</div>
+      <div class="tval">&asymp;15&times;</div>
+      <div class="tproj">Central estimate. The plausible range spans roughly 3&times; to 75&times;, driven mostly by one unpublished number: how hard the 32 GPUs were actually working.</div>
+    </div>
+    <div class="tile">
+      <div class="tlabel">Models that made no validated progress at all</div>
+      <div class="tval">2 of 4</div>
+      <div class="tproj">GPT-5 and Opus-4.1 achieved a ~$0 expenditure horizon after re-validation. Their energy per unit of progress is not favorable &mdash; it is undefined.</div>
+    </div>
+  </div>
+  <div class="prose-caveats">
+    <h3>Read this chart with five caveats</h3>
+    <ol>
+      <li><strong>A dollar of compute is not a dollar of labor.</strong> The two axes diverge because a dollar spent on GPU time buys on the order of 15&times; more electricity than a dollar spent on a person&rsquo;s time. Cost parity and energy parity are different thresholds, and a metric built for one does not answer the other.</li>
+      <li><strong>This is one task, and an unusually GPU-hungry one.</strong> Progress on the NanoGPT speedrun <em>requires</em> running training experiments, so both sides are dominated by H100 time rather than by thinking. The ratio measures experimental efficiency per unit of insight, not &ldquo;AI versus humans&rdquo; in general.</li>
+      <li><strong>The direction flips for ordinary work.</strong> The chart directly above shows a single AI query using far less energy than twenty minutes of doing the task by hand. Task type decides the answer. Nothing here says AI is generally the higher-energy option, and nothing in the chart above says it is generally the lower one.</li>
+      <li><strong>METR calls its own harness &ldquo;likely inefficient.&rdquo;</strong> The agents had continuous reserved access to the GPUs, which invites wasteful experimentation. A better-run agent would land lower. This is a first-generation setup and should be expected to improve.</li>
+      <li><strong>The largest uncertainty was never published.</strong> METR reported the hardware (4 nodes, 32 H100s) and the time limit (5 days) but not how hard those GPUs were actually working. That single assumption moves the agent estimate by about 3&times;, which is more than every other assumption combined.</li>
+    </ol>
+  </div>
+</section>
+
 <!-- ============ MODULE C ============ -->
 <section class="module" aria-labelledby="modC-h">
   <div class="modhead">
@@ -350,7 +399,7 @@ td.src a.src-link{color:var(--brand-teal)}
 <script>
 "use strict";
 const DATA = {
-  preparedDate: "2026-07-09",
+  preparedDate: "2026-07-28",
   aiTasks: {
     small_text: { label: "Small/light model text query", sub: "e.g. GPT-4o mini class", energyWh: {low:0.016, mid:0.03, high:0.1}, waterML: {low:0.02, mid:0.05, high:0.3}, source: "MIT Technology Review, 2025 (measured via U. Michigan ML.Energy leaderboard, Llama 3.1 8B)" },
     frontier_text: { label: "Typical frontier chatbot query", sub: "a normal back-and-forth exchange", energyWh: {low:0.1, mid:0.3, high:3}, waterML: {low:0.12, mid:0.3, high:45}, source: "Google, 2025 (median, full-system methodology, Gemini); Epoch AI, 2025; high end from de Vries, Joule 2023 (now considered high for a typical 2025 query, but still cited widely) and Mistral 2025 lifecycle analysis (water, includes indirect/lifecycle water, not just on-site)" },
@@ -385,6 +434,30 @@ const DATA = {
   manual: {
     laptop_20min: { label: "20 min of active laptop use", sub: "roughly the time a manual version of a simple task might take", energyWh: {low:10, mid:17, high:25}, source: "Typical laptop power draw, 30-70W active use" }
   },
+  agentic: {
+    metric: "Expenditure horizon",
+    crossoverDollars: 3300,
+    task: "NanoGPT speedrun: minimize wall-clock time on 8 NVIDIA H100 GPUs to reach a fixed validation loss (3.28). 82 community records between May 2024 and April 2026 cut the training time from about 45 minutes to under 2 minutes.",
+    humanBaseline: { dollarsPer1pct: 2500, hours: 16, hourlyRate: 150, projectHours: 1650, projectDollars: 250000,
+      source: "METR, \"Expenditure Horizon: Measuring Optimization Ability, with an Application to NanoGPT,\" July 2026 — LLM-judge effort estimates calibrated against contributor interviews" },
+    horizons: [
+      { model: "GPT-5", horizonDollars: 0, speedupPct: 0 },
+      { model: "Claude Opus-4.1", horizonDollars: 0, speedupPct: 0 },
+      { model: "GPT-5.5", horizonDollars: 2300, speedupPct: 1.0 },
+      { model: "Claude Opus-4.8", horizonDollars: 3300, speedupPct: 1.5 }
+    ],
+    horizonSource: "METR, \"Expenditure Horizon,\" July 2026 (re-validated from record #78, March 2026, 85.56 seconds); reported via The Decoder, July 2026",
+    energyAtCrossover: {
+      agent: { low: 430, mid: 960, high: 1880,
+        source: "Derived: METR reports 4 H100 nodes (32 GPUs) with continuous access and up to $10,000 per 5-day run, of which 70-90% was GPU experiment compute. Energy from NVIDIA's DGX H100 rated system power (10.2 kW for 8 H100 SXM GPUs, 700 W TDP each), an assumed 25-75% average utilization, and a PUE of 1.1-1.56 (Uptime Institute 2025 global average 1.54; Google fleet 1.09), scaled to the $3,300 crossover" },
+      human: { low: 25, mid: 67, high: 132,
+        source: "Derived: 22 hours of researcher time at METR's $150/hour convention, at 30-300 W for the workstation plus 0.5-2.6 kW of allocated office HVAC and lighting per occupant (EIA CBECS 2018 commercial site energy intensity), plus the contributor's share of GPU validation compute (METR reports roughly $3,000-4,000 in GPU spend across all 82 records)" }
+    },
+    fullRun: { low: 1300, mid: 2900, high: 5700,
+      source: "Derived: 4 DGX H100 nodes at 10.2 kW rated system power for up to 120 hours, at 25-75% average utilization and PUE 1.1-1.56 (NVIDIA DGX H100 datasheet; Uptime Institute Global Data Center Survey 2025)" },
+    ratio: { low: 3, mid: 14, high: 75 },
+    householdAnchor: "About 960 kWh is roughly one month of electricity for an average US home (EIA: about 10,500 kWh per household per year)"
+  },
   rightsizing: {
     multiplier: { low:10, mid:50, high:100, label: "Frontier vs. small model, same simple query", source: "MIT Technology Review, 2025 (measured, ~60x); Jegham et al., 2025, \"How Hungry is AI?\" (~65x spread across 30 commercial models)" },
     efficiencyTrend: { energyImprovement: "33x", carbonImprovement: "44x", period: "May 2024 to May 2025", source: "Google, 2025", caveat: "But Google's total data-center electricity use still rose roughly 27% and water use roughly 34% over a similar period — a textbook Jevons paradox: far more efficient per query, yet total footprint still growing because usage grew faster than efficiency improved." }
@@ -401,7 +474,9 @@ const DATA = {
     "OpenAI's Sora and Google's Veo have never disclosed per-video energy or water figures. The video estimate in this tool comes from one open academic model on research hardware, not a commercial product — treat it as a rough order of magnitude only.",
     "No public source distinguishes the mean from the median per-query energy for any commercial chatbot. Since a small number of very long or complex prompts likely use disproportionate energy, the true average is probably meaningfully higher than the median figures companies report.",
     "There is no authoritative public estimate of what share of data-center electricity use is generative AI specifically, as opposed to cloud computing and computing generally.",
-    "Whether AI queries mostly replace equivalent manual effort (a environmental wash or win) or mostly create demand that would not otherwise exist (a net addition, i.e. the 'rebound effect') has not been studied at population scale — both dynamics are plausible and probably both occur."
+    "Whether AI queries mostly replace equivalent manual effort (a environmental wash or win) or mostly create demand that would not otherwise exist (a net addition, i.e. the 'rebound effect') has not been studied at population scale — both dynamics are plausible and probably both occur.",
+    "METR did not publish GPU utilization or power telemetry for its agent runs, so the electricity figure for the agentic comparison is modeled from the hardware allocation and time limit, not measured. It is the single largest source of uncertainty in that module.",
+    "Whether METR's result on one ML-engineering task generalizes to any other kind of agentic work is unknown. No comparable measurement exists for agents doing writing, analysis, coding against a spec, or literature review — the tasks most people actually delegate."
   ],
   whyEstimatesDisagree: [
     "Chip-only vs. full-system accounting — including host CPU/RAM and idle failover capacity roughly doubles the number.",
@@ -626,7 +701,33 @@ const SOURCE_HTML = {
 
   "USGS Circular 1441 / Fact Sheet 2018-3035: 82 gallons per person per day domestic water use, 2015 (most recent complete national estimate)":
     '<a class="src-link" href="https://pubs.usgs.gov/publication/cir1441" target="_blank" rel="noopener">USGS Circular 1441</a> / ' +
-    '<a class="src-link" href="https://pubs.usgs.gov/publication/fs20183035" target="_blank" rel="noopener">Fact Sheet 2018-3035</a>: 82 gallons per person per day domestic water use, 2015 (most recent complete national estimate)'
+    '<a class="src-link" href="https://pubs.usgs.gov/publication/fs20183035" target="_blank" rel="noopener">Fact Sheet 2018-3035</a>: 82 gallons per person per day domestic water use, 2015 (most recent complete national estimate)',
+
+  /* --- agentic comparison (Module B2) sources --- */
+  "METR, \"Expenditure Horizon: Measuring Optimization Ability, with an Application to NanoGPT,\" July 2026 — LLM-judge effort estimates calibrated against contributor interviews":
+    '<a class="src-link" href="https://metr.org/blog/2026-07-21-expenditure-horizon/" target="_blank" rel="noopener">METR, "Expenditure Horizon: Measuring Optimization Ability, with an Application to NanoGPT," July 2026</a> &mdash; LLM-judge effort estimates calibrated against contributor interviews',
+
+  "METR, \"Expenditure Horizon,\" July 2026 (re-validated from record #78, March 2026, 85.56 seconds); reported via The Decoder, July 2026":
+    '<a class="src-link" href="https://metr.org/blog/2026-07-21-expenditure-horizon/" target="_blank" rel="noopener">METR, "Expenditure Horizon," July 2026</a> (' +
+    '<a class="src-link" href="https://metr.org/notes/2026-07-24-metrics-of-model-ability/" target="_blank" rel="noopener">re-validated</a> from record #78, March 2026, 85.56 seconds); reported via ' +
+    '<a class="src-link" href="https://the-decoder.com/metr-introduces-a-new-metric-to-calculate-exactly-when-ai-agents-become-more-expensive-than-humans/" target="_blank" rel="noopener">The Decoder, July 2026</a>',
+
+  "Derived: METR reports 4 H100 nodes (32 GPUs) with continuous access and up to $10,000 per 5-day run, of which 70-90% was GPU experiment compute. Energy from NVIDIA's DGX H100 rated system power (10.2 kW for 8 H100 SXM GPUs, 700 W TDP each), an assumed 25-75% average utilization, and a PUE of 1.1-1.56 (Uptime Institute 2025 global average 1.54; Google fleet 1.09), scaled to the $3,300 crossover":
+    'Derived: <a class="src-link" href="https://metr.org/blog/2026-07-21-expenditure-horizon/" target="_blank" rel="noopener">METR</a> reports 4 H100 nodes (32 GPUs) with continuous access and up to $10,000 per 5-day run, of which 70-90% was GPU experiment compute. Energy from ' +
+    '<a class="src-link" href="https://docs.nvidia.com/dgx/dgxh100-user-guide/introduction-to-dgxh100.html" target="_blank" rel="noopener">NVIDIA&rsquo;s DGX H100 rated system power</a> (10.2 kW for 8 H100 SXM GPUs, ' +
+    '<a class="src-link" href="https://resources.nvidia.com/en-us-gpu-resources/h100-datasheet-24306" target="_blank" rel="noopener">700 W TDP</a> each), an assumed 25-75% average utilization, and a PUE of 1.1-1.56 (' +
+    '<a class="src-link" href="https://datacenter.uptimeinstitute.com/rs/711-RIA-145/images/2025.Annual.Survey.Report.pdf" target="_blank" rel="noopener">Uptime Institute 2025 global average 1.54</a>; ' +
+    '<a class="src-link" href="https://datacenters.google/efficiency/" target="_blank" rel="noopener">Google fleet 1.09</a>), scaled to the $3,300 crossover',
+
+  "Derived: 22 hours of researcher time at METR's $150/hour convention, at 30-300 W for the workstation plus 0.5-2.6 kW of allocated office HVAC and lighting per occupant (EIA CBECS 2018 commercial site energy intensity), plus the contributor's share of GPU validation compute (METR reports roughly $3,000-4,000 in GPU spend across all 82 records)":
+    'Derived: 22 hours of researcher time at <a class="src-link" href="https://metr.org/blog/2026-07-21-expenditure-horizon/" target="_blank" rel="noopener">METR&rsquo;s $150/hour convention</a>, at 30-300 W for the workstation plus 0.5-2.6 kW of allocated office HVAC and lighting per occupant (' +
+    '<a class="src-link" href="https://www.eia.gov/consumption/commercial/pba/overview.php" target="_blank" rel="noopener">EIA CBECS 2018</a> commercial site energy intensity), plus the contributor&rsquo;s share of GPU validation compute (' +
+    '<a class="src-link" href="https://metr.org/blog/2026-07-21-expenditure-horizon/" target="_blank" rel="noopener">METR reports</a> roughly $3,000-4,000 in GPU spend across all 82 records)',
+
+  "Derived: 4 DGX H100 nodes at 10.2 kW rated system power for up to 120 hours, at 25-75% average utilization and PUE 1.1-1.56 (NVIDIA DGX H100 datasheet; Uptime Institute Global Data Center Survey 2025)":
+    'Derived: 4 DGX H100 nodes at 10.2 kW rated system power for up to 120 hours, at 25-75% average utilization and PUE 1.1-1.56 (' +
+    '<a class="src-link" href="https://docs.nvidia.com/dgx/dgxh100-user-guide/introduction-to-dgxh100.html" target="_blank" rel="noopener">NVIDIA DGX H100 datasheet</a>; ' +
+    '<a class="src-link" href="https://datacenter.uptimeinstitute.com/rs/711-RIA-145/images/2025.Annual.Survey.Report.pdf" target="_blank" rel="noopener">Uptime Institute Global Data Center Survey 2025</a>)'
 };
 function linkifySource(s){
   return SOURCE_HTML[s] || escHTML(s);
@@ -1176,6 +1277,40 @@ updaters.push(renderModuleB());
 })();
 wireTableToggle("btn-tableB","modB-chart","modB-table");
 
+/* ============ Module B2 — agent vs. human at equal spend ============ */
+const B2_TICKS = [{v:10,l:"10"},{v:100,l:"100"},{v:1000,l:"1k"},{v:10000,l:"10k"}];
+function renderModuleB2(){
+  const cx = DATA.agentic.energyAtCrossover;
+  const rows = [
+    { label: "AI agent", sub: "autonomous run on 32 H100 GPUs",
+      values: cx.agent, source: cx.agent.source,
+      accent: true, accentColor: cssVar("--ord-dark"), whisker: true },
+    { label: "Human researcher", sub: "22 hours of work, plus the GPU time to test their ideas",
+      values: cx.human, source: cx.human.source,
+      accent: true, accentColor: cssVar("--ord-light"), whisker: true }
+  ];
+  return renderLogBars(document.getElementById("chartB2"), rows, {
+    unit:"kWh", domain:[10,10000], ticks:B2_TICKS,
+    axisTitle:"kilowatt-hours (kWh) — logarithmic scale: each gridline is 10× the last"
+  });
+}
+updaters.push(renderModuleB2());
+(function buildTableB2(){
+  const g = DATA.agentic;
+  const cx = g.energyAtCrossover;
+  const rows = [
+    ["AI agent, electricity at $3,300 of spend (kWh)", fmtNum(cx.agent.low), fmtNum(cx.agent.mid), fmtNum(cx.agent.high), cx.agent.source],
+    ["Human researcher, electricity at $3,300 of spend (kWh)", fmtNum(cx.human.low), fmtNum(cx.human.mid), fmtNum(cx.human.high), cx.human.source],
+    ["Ratio (agent : human)", g.ratio.low + "×", g.ratio.mid + "×", g.ratio.high + "×",
+      "The extremes pair the agent's high estimate with the human's low estimate (and vice versa), so the corner values are a worst-case spread, not a confidence interval."],
+    ["Full agent run, 32 H100 GPUs up to 5 days (kWh)", fmtNum(g.fullRun.low), fmtNum(g.fullRun.mid), fmtNum(g.fullRun.high), g.fullRun.source]
+  ];
+  document.getElementById("modB2-table").appendChild(
+    makeTable("Agent vs. human researcher at the same $3,300 of spend",
+      ["Quantity","Low","Mid","High","Source"], rows));
+})();
+wireTableToggle("btn-tableB2","modB2-chart","modB2-table");
+
 /* ============ Module C — two-bar sequential comparison ============ */
 function renderModuleC(){
   const host = document.getElementById("chartC");
@@ -1276,6 +1411,11 @@ wireTableToggle("btn-tableC","modC-chart","modC-table");
   Object.values(DATA.everyday).forEach(d => add(d.source));
   Object.values(DATA.everyday).forEach(d => { if (d.annual) add(d.annual.perYearSource); });
   Object.values(DATA.manual).forEach(d => add(d.source));
+  add(DATA.agentic.humanBaseline.source);
+  add(DATA.agentic.horizonSource);
+  add(DATA.agentic.energyAtCrossover.agent.source);
+  add(DATA.agentic.energyAtCrossover.human.source);
+  add(DATA.agentic.fullRun.source);
   add(DATA.rightsizing.multiplier.source);
   add(DATA.rightsizing.efficiencyTrend.source);
   Object.values(DATA.aggregate).forEach(a => add(a.source));
