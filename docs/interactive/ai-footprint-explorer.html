@@ -370,6 +370,25 @@ td.src a.src-link{color:var(--brand-teal)}
   <div class="kpirow" id="kpirow"></div>
 </section>
 
+<!-- ============ MODULE D2 — growth drivers ============ -->
+<section class="module" aria-labelledby="modG-h">
+  <h2 id="modG-h">Where the growth is actually coming from</h2>
+  <p class="mod-sub" id="growth-intro"></p>
+
+  <h3 class="chart-title" style="margin-top:22px">It is volume, not per-query cost</h3>
+  <p class="chart-note">Energy per prompt is falling quickly. Total tokens processed is rising far more quickly, and increasingly from programmatic and agentic traffic rather than people typing.</p>
+  <div class="kpirow" id="growth-volume"></div>
+
+  <h3 class="chart-title" style="margin-top:26px">How much of electricity demand growth is data centers?</h3>
+  <p class="chart-note">The answer depends entirely on which system you are looking at &mdash; which is why this question produces so many contradictory headlines.</p>
+  <div class="kpirow" id="growth-drivers"></div>
+
+  <div class="caveat" style="margin-top:18px">
+    <div class="cv-head">The short version</div>
+    <span id="growth-closing"></span>
+  </div>
+</section>
+
 <!-- ============ MODULE E ============ -->
 <section class="module" aria-labelledby="modE-h">
   <h2 id="modE-h">Why do the public numbers disagree so much?</h2>
@@ -390,7 +409,7 @@ td.src a.src-link{color:var(--brand-teal)}
   <h2>Sources</h2>
   <p>Every figure in this tool carries one of the following source strings (also shown on hover and in each table view):</p>
   <ol id="sourcelist"></ol>
-  <p class="prepnote">Prepared 2026-08-11 &mdash; this is a fast-moving topic; treat exact figures as illustrative of order of magnitude and recheck primary sources for anything load-bearing.</p>
+  <p class="prepnote">Prepared 2026-08-12 &mdash; this is a fast-moving topic; treat exact figures as illustrative of order of magnitude and recheck primary sources for anything load-bearing.</p>
 </footer>
 
 </div>
@@ -399,12 +418,14 @@ td.src a.src-link{color:var(--brand-teal)}
 <script>
 "use strict";
 const DATA = {
-  preparedDate: "2026-08-11",
+  preparedDate: "2026-08-12",
   aiTasks: {
     small_text: { label: "Small/light model text query", sub: "e.g. GPT-4o mini class", energyWh: {low:0.016, mid:0.03, high:0.1}, waterML: {low:0.02, mid:0.05, high:0.3}, source: "MIT Technology Review, 2025 (measured via U. Michigan ML.Energy leaderboard, Llama 3.1 8B)" },
     frontier_text: { label: "Typical frontier chatbot query", sub: "a normal back-and-forth exchange", energyWh: {low:0.1, mid:0.3, high:0.6}, waterML: {low:0.12, mid:0.3, high:45}, source: "Energy: Oviedo et al. (Microsoft), \"Energy use of AI inference, efficiency pathways, and test-time scaling,\" Joule 2026 — measured median 0.31 Wh/query for frontier models above 200B parameters in production serving, IQR 0.16-0.60 Wh; cross-checked against Google, 2025 (0.24 Wh median Gemini text prompt, full-system methodology). NOTE: the widely circulated ~3 Wh figure (de Vries, Joule 2023) is superseded — the 2026 Joule paper finds public estimates overstated by 4-20x, largely because benchmark conditions run about 11x hotter than production serving. Water: Google, 2025 (0.26 mL); high end from Mistral 2025 lifecycle analysis, which includes indirect/lifecycle water, not just on-site" },
     complex_text: { label: "Long / complex reasoning query", sub: "reasoning mode, or 10,000+ token context", energyWh: {low:2, mid:4, high:40}, waterML: {low:3, mid:6, high:60}, source: "Oviedo et al., Joule 2026 — measured median 3.91 Wh in test-time-scaling (reasoning) mode at ~5,000 output tokens, IQR 2.15-7.05 Wh, about 13x the median short prompt; the heaviest single case measured was 10.6 Wh (DeepSeek-R1 671B). The 40 Wh high end is Epoch AI's 2025 modelled estimate for a ~100,000-token input context, not a measurement — read the whisker as the long-context tail, not a typical reasoning query" },
     image: { label: "One AI image generation", sub: "e.g. Stable Diffusion class model", energyWh: {low:0.3, mid:1, high:2.9}, waterML: {low:0.4, mid:1.5, high:5}, source: "MIT Technology Review, 2025; Luccioni, Jernite & Strubell, \"Power Hungry Processing,\" FAccT 2024" },
+    agent_task: { label: "One agentic AI task", sub: "an agent that plans, calls tools, and iterates", energyWh: {low:40, mid:150, high:500}, waterML: {low:43, mid:162, high:540}, source: "Energy: converging independent estimates — Bistline et al. / Watershed corporate framework (2026) put an agentic workflow at 50–500 Wh; Hausfather's instrumented field measurement of his own coding-agent use (Aug 2026) gives ~150 Wh per task median (1,138 typed prompts triggered 14,000+ model calls, about 12 calls per prompt); a competing token-log estimate (Couch) puts a median session at 41 Wh; the KAIST measurement study (HPCA 2026, arXiv 2506.04301) measured ~348 Wh for a Reflexion-framework task on Llama-70B, about 136x a single query, and found GPUs idle-but-powered up to 54.5% of the time on tool-heavy tasks — which is why the energy multiplier exceeds the token multiplier. Anthropic reports agents use about 4x the tokens of a chat and multi-agent systems about 15x. Water: derived by scaling Google's measured 0.26 mL per 0.24 Wh, not independently measured", agentic: true },
+    agent_day: { label: "A working day of agentic AI", sub: "a person working alongside a coding or research agent all day", energyWh: {low:1000, mid:3000, high:6000}, waterML: {low:1080, mid:3240, high:6480}, source: "Hausfather, The Climate Brink (Aug 2026) — instrumented estimate of ~3 kWh per working day from 8 weeks of Claude Code token logs (~3.2 billion tokens). This is one power user on one tool, estimated from token counts rather than metered electricity; the range here is a judgement band around that single datapoint. Water derived by scaling Google's measured mL-per-Wh ratio", agentic: true, lowConfidence: true },
     video: { label: "One 5-second AI video clip", sub: "academic open model, NOT a commercial product estimate", energyWh: {low:30, mid:940, high:3000}, waterML: {low:40, mid:1200, high:4000}, source: "MIT Technology Review, 2025 (CogVideoX, academic hardware) — commercial models like Sora/Veo have never disclosed per-video figures; treat this as low-confidence, order-of-magnitude only", lowConfidence: true }
   },
   everyday: {
@@ -469,12 +490,29 @@ const DATA = {
     google_water: { label: "Google data-center water use", now: "10.9 billion gallons direct in 2025 (+34% year over year); indirect water via its electricity use is roughly 3x its direct use", source: "Google Environmental Report, 2026 (published June 30, 2026, covering 2025); WSJ, July 2026" },
     phoenix: { label: "Phoenix-area water demand from data centers", now: "roughly 3% of the region's annual water today", proj: "could exceed 20% by 2031 under current buildout projections", source: "WSJ, July 2026" }
   },
+  growth: {
+    intro: "The per-task numbers above are about a person doing a task. The aggregate numbers are about a system running a workload — and those two things are diverging fast. This is the part a per-query view cannot show you.",
+    volume: [
+      { label: "Tokens processed per month, Google", now: "3.2 quadrillion (May 2026)", was: "480 trillion (May 2025)", note: "about 7x in a single year, across all Google surfaces — Search, Workspace, ads and API, not just the chatbot", source: "Google I/O 2026 keynote (Pichai); earlier figures compiled by Epoch AI" },
+      { label: "Tokens per year, OpenRouter", now: "~1.5 quadrillion run rate (May 2026)", was: "~100 trillion (May 2025)", note: "about 15x in a year — and OpenRouter is essentially all developer and programmatic traffic, no consumer chat at all", source: "Menlo Ventures analysis of OpenRouter, 2026" },
+      { label: "Energy per median prompt, Google", now: "0.24 Wh (Aug 2025)", was: "33x higher twelve months earlier", note: "per-query cost is falling fast. Volume is rising faster. That is the whole story", source: "Google, 2025 (median, full-system methodology, Gemini)" }
+    ],
+    drivers: [
+      { scope: "Worldwide", share: "~10%", text: "Data centers account for about a tenth of projected global electricity demand growth to 2030 — less than industrial motors, less than air conditioning, less than electric vehicles. Global demand is growing for many reasons at once.", source: "IEA, \"Energy and AI\" (2025), Executive Summary" },
+      { scope: "United States", share: "~1/3 to 1/2", text: "In the US data centers are close to half of demand growth to 2030 (IEA) or roughly 35-40% (Rystad, 2026) — partly because US demand was essentially flat for two decades, so any new load looks dominant. EV charging adds a comparable amount over the same period.", source: "IEA, \"Energy and AI\" (2025); Rystad Energy US demand decomposition (May 2026); EIA on two decades of flat US demand" },
+      { scope: "Inside data centers", share: "~half", text: "AI-accelerated servers account for almost half the net increase in data-center electricity; conventional servers only about a fifth. So within data centers, AI really is the growth story — the IEA's 2030 range still spans roughly 700 to 1,700 TWh.", source: "IEA, \"Energy and AI\" (2025), Energy demand from AI" }
+    ],
+    closing: "So the honest answer to \"isn't AI driving all of this?\" is: inside data centers, largely yes. Inside the US grid, a third to a half. Inside the world's electricity system, about a tenth. And the mechanism is volume and automation, not individual people writing longer prompts."
+  },
   dontKnow: [
     "Anthropic (Claude) and Microsoft Copilot have not published per-query energy or water figures — any number attributed to them online is a third-party estimate, not a company disclosure.",
     "OpenAI's Sora and Google's Veo have never disclosed per-video energy or water figures. The video estimate in this tool comes from one open academic model on research hardware, not a commercial product — treat it as a rough order of magnitude only.",
     "The mean per-query energy is still unpublished for every commercial chatbot. The 2026 Joule paper is the first to report an interquartile range alongside a median, which helps — but because a small number of very long, reasoning-heavy prompts use disproportionate energy, the true average is still probably meaningfully higher than the median figures companies report.",
     "There is no systematic federal assessment of data-center water use in the United States. A Congressional Research Service report (July 31, 2026) found that 97% of direct water comes from municipal systems, but no agency collects this data as a matter of course. Every national water figure in this tool is therefore a research estimate, not a reported total.",
     "There is no authoritative public estimate of what share of data-center electricity use is generative AI specifically, as opposed to cloud computing and computing generally.",
+    "The training-versus-inference split is not rigorously published by anyone. The widely repeated \"80-90% of AI compute is inference\" traces to an uncited industry estimate in a 2025 magazine investigation, not a disclosure. The last actual measurement is Google's, from 2019-2021: about 60% inference, 40% training. The direction (inference dominates and its share is rising) is well supported; the number is not.",
+    "No company publishes a consumer-versus-enterprise split of tokens, queries, or energy. That individual chatting is a small share of AI's total footprint is inferable from partial disclosures and from the size of pure-developer traffic, but it is arithmetic on fragments, not a reported figure.",
+    "Nobody counts failed and retried attempts. An agent that tries four approaches before one works has spent all four, but every per-task figure in the public record — including the ones in this tool — describes work that succeeded. The \"energy per successful goal\" metric proposed in 2026 (arXiv 2605.22883) is an attempt to fix this; on small models it found agentic pipelines used about 4.3x a linear baseline once retries were counted.",
     "Whether AI queries mostly replace equivalent manual effort (a environmental wash or win) or mostly create demand that would not otherwise exist (a net addition, i.e. the 'rebound effect') has not been studied at population scale — both dynamics are plausible and probably both occur.",
     "METR did not publish GPU utilization or power telemetry for its agent runs, so the electricity figure for the agentic comparison is modeled from the hardware allocation and time limit, not measured. It is the single largest source of uncertainty in that module.",
     "Whether METR's result on one ML-engineering task generalizes to any other kind of agentic work is unknown. No comparable measurement exists for agents doing writing, analysis, coding against a spec, or literature review — the tasks most people actually delegate."
@@ -487,7 +525,9 @@ const DATA = {
     "Whether the (large, one-time) cost of training the model is amortized into the per-query number, and over how much usage.",
     "Direct water (on-site cooling) vs. indirect water (used to generate the electricity the data center consumes) — these can differ by 10x or more, and most companies report only the direct figure.",
     "Benchmark conditions vs. production serving — the same model measured on a research benchmark runs roughly 11x hotter than under an optimized production stack, which batches requests and keeps hardware busy (Joule, 2026).",
-    "Whether the model was reasoning — a query answered in 'thinking' mode uses about 13x the energy of the same model answering directly. As reasoning modes become the default, an average drawn from non-reasoning traffic understates current use (Joule, 2026)."
+    "Whether the model was reasoning — a query answered in 'thinking' mode uses about 13x the energy of the same model answering directly. As reasoning modes become the default, an average drawn from non-reasoning traffic understates current use (Joule, 2026).",
+    "Whether a 'task' means one model call or a whole agentic run — an agent typically makes about a dozen model calls per typed prompt, and keeps GPUs reserved-but-idle between tool calls up to half the time, so its energy multiplier is larger than its token multiplier (Anthropic, 2025; KAIST, HPCA 2026).",
+    "Whether failed attempts are counted — per-task figures almost always describe successful runs, so they systematically understate the energy of getting to a working answer (arXiv 2605.22883, 2026)."
   ]
 };
 
@@ -517,6 +557,30 @@ const ANNUAL_USAGE = {
     caveat: "All three presets here are illustrative round numbers, not sourced usage data — treat them as a discussion starting point, not a citation, unlike the text presets above.",
     lowConfidence: true
   },
+  agent: {
+    unit: "agent tasks/week", perYearUnit: "agent tasks/year", daysPerUnit: 52,
+    min: 0, max: 100, step: 1,
+    presets: {
+      light:   { value: 1,  label: "Light — occasional delegated task" },
+      typical: { value: 5,  label: "Typical — a few a week" },
+      heavy:   { value: 50, label: "Heavy — agents are how you work" }
+    },
+    source: "No published per-user rate for agentic task volume exists for any provider. These presets are illustrative, anchored loosely on Hausfather's reported ~1,138 agent-invoking prompts over 8 weeks (~140/week) for a heavy user (The Climate Brink, Aug 2026)",
+    caveat: "Treat all three presets as a discussion starting point, not a citation. Agentic usage is where the aggregate energy is going and where per-user data is thinnest.",
+    lowConfidence: true
+  },
+  agentday: {
+    unit: "such days/month", perYearUnit: "such days/year", daysPerUnit: 12,
+    min: 0, max: 22, step: 1,
+    presets: {
+      light:   { value: 1,  label: "Light — about one a month" },
+      typical: { value: 4,  label: "Typical — about one a week" },
+      heavy:   { value: 20, label: "Heavy — most working days" }
+    },
+    source: "Illustrative frequencies; no published data on how many full agentic working days a typical professional has",
+    caveat: "Entirely illustrative. Use it to reason about magnitude, not to quote a number.",
+    lowConfidence: true
+  },
   video: {
     unit: "videos/month", perYearUnit: "videos/year", daysPerUnit: 12,
     min: 0, max: 150, step: 1,
@@ -531,7 +595,7 @@ const ANNUAL_USAGE = {
   }
 };
 // map each aiTasks key to its usage-rate group
-const TASK_USAGE_GROUP = { small_text:"text", frontier_text:"text", complex_text:"text", image:"image", video:"video" };
+const TASK_USAGE_GROUP = { small_text:"text", frontier_text:"text", complex_text:"text", image:"image", video:"video", agent_task:"agent", agent_day:"agentday" };
 
 const PERCAPITA = {
   electricityTotal: { low:11600, mid:11800, high:12000, unit:"kWh/year",
@@ -550,7 +614,9 @@ const GAL_TO_L = 3.78541;
 const state = { level: "mid", task: "frontier_text", scope: "single",
   freq: { text: ANNUAL_USAGE.text.presets.typical.value,
           image: ANNUAL_USAGE.image.presets.typical.value,
-          video: ANNUAL_USAGE.video.presets.typical.value } };
+          video: ANNUAL_USAGE.video.presets.typical.value,
+          agent: ANNUAL_USAGE.agent.presets.typical.value,
+          agentday: ANNUAL_USAGE.agentday.presets.typical.value } };
 const updaters = []; // each: fn(level) — called on level change
 
 const cssVar = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
@@ -574,6 +640,40 @@ function escHTML(s){
 /* Keyed by the EXACT raw `source` string as it appears in DATA above, so */
 /* compound citations link each sub-citation to its own correct source.  */
 const SOURCE_HTML = {
+  "Hannah Ritchie, 2026 synthesis of AI electricity estimates":
+    "<a class=\"src-link\" href=\"https://hannahritchie.substack.com/p/ai-electricity-2025\" target=\"_blank\" rel=\"noopener\">Hannah Ritchie, 2026 synthesis of AI electricity estimates</a>",
+
+  "No published per-user rate for agentic task volume exists for any provider. These presets are illustrative, anchored loosely on Hausfather's reported ~1,138 agent-invoking prompts over 8 weeks (~140/week) for a heavy user (The Climate Brink, Aug 2026)":
+    "No published per-user rate for agentic task volume exists for any provider. These presets are illustrative, anchored loosely on Hausfather's reported ~1,138 agent-invoking prompts over 8 weeks (~140/week) for a heavy user (<a class=\"src-link\" href=\"https://www.theclimatebrink.com/p/the-real-energy-use-of-agentic-ai\" target=\"_blank\" rel=\"noopener\">The Climate Brink, Aug 2026</a>)",
+
+  "Illustrative frequencies; no published data on how many full agentic working days a typical professional has":
+    "Illustrative frequencies; no published data on how many full agentic working days a typical professional has",
+
+  /* --- entries refreshed 2026-08-11 --- */
+  "Energy: converging independent estimates — Bistline et al. / Watershed corporate framework (2026) put an agentic workflow at 50–500 Wh; Hausfather's instrumented field measurement of his own coding-agent use (Aug 2026) gives ~150 Wh per task median (1,138 typed prompts triggered 14,000+ model calls, about 12 calls per prompt); a competing token-log estimate (Couch) puts a median session at 41 Wh; the KAIST measurement study (HPCA 2026, arXiv 2506.04301) measured ~348 Wh for a Reflexion-framework task on Llama-70B, about 136x a single query, and found GPUs idle-but-powered up to 54.5% of the time on tool-heavy tasks — which is why the energy multiplier exceeds the token multiplier. Anthropic reports agents use about 4x the tokens of a chat and multi-agent systems about 15x. Water: derived by scaling Google's measured 0.26 mL per 0.24 Wh, not independently measured":
+    "Energy: converging independent estimates — <a class=\"src-link\" href=\"https://heatmap.news/energy/watershed-ai-emissions\" target=\"_blank\" rel=\"noopener\">Bistline et al. / Watershed corporate framework (2026)</a> put an agentic workflow at 50–500 Wh; <a class=\"src-link\" href=\"https://www.theclimatebrink.com/p/the-real-energy-use-of-agentic-ai\" target=\"_blank\" rel=\"noopener\">Hausfather's instrumented field measurement of his own coding-agent use (Aug 2026)</a> gives ~150 Wh per task median (1,138 typed prompts triggered 14,000+ model calls, about 12 calls per prompt); a competing token-log estimate (Couch) puts a median session at 41 Wh; the <a class=\"src-link\" href=\"https://arxiv.org/abs/2506.04301\" target=\"_blank\" rel=\"noopener\">KAIST measurement study (HPCA 2026, arXiv 2506.04301)</a> measured ~348 Wh for a Reflexion-framework task on Llama-70B, about 136x a single query, and found GPUs idle-but-powered up to 54.5% of the time on tool-heavy tasks — which is why the energy multiplier exceeds the token multiplier. <a class=\"src-link\" href=\"https://www.anthropic.com/engineering/multi-agent-research-system\" target=\"_blank\" rel=\"noopener\">Anthropic reports agents use about 4x the tokens of a chat and multi-agent systems about 15x</a>. Water: derived by scaling Google's measured 0.26 mL per 0.24 Wh, not independently measured",
+
+  "Hausfather, The Climate Brink (Aug 2026) — instrumented estimate of ~3 kWh per working day from 8 weeks of Claude Code token logs (~3.2 billion tokens). This is one power user on one tool, estimated from token counts rather than metered electricity; the range here is a judgement band around that single datapoint. Water derived by scaling Google's measured mL-per-Wh ratio":
+    "<a class=\"src-link\" href=\"https://www.theclimatebrink.com/p/the-real-energy-use-of-agentic-ai\" target=\"_blank\" rel=\"noopener\">Hausfather, The Climate Brink (Aug 2026)</a> — instrumented estimate of ~3 kWh per working day from 8 weeks of Claude Code token logs (~3.2 billion tokens). This is one power user on one tool, estimated from token counts rather than metered electricity; the range here is a judgement band around that single datapoint. Water derived by scaling Google's measured mL-per-Wh ratio",
+
+  "Google I/O 2026 keynote (Pichai); earlier figures compiled by Epoch AI":
+    "<a class=\"src-link\" href=\"https://blog.google/innovation-and-ai/sundar-pichai-io-2026/\" target=\"_blank\" rel=\"noopener\">Google I/O 2026 keynote (Pichai)</a>; earlier figures compiled by <a class=\"src-link\" href=\"https://epoch.ai/data/ai_companies_usage_reports.csv\" target=\"_blank\" rel=\"noopener\">Epoch AI</a>",
+
+  "Menlo Ventures analysis of OpenRouter, 2026":
+    "<a class=\"src-link\" href=\"https://menlovc.com/perspective/openrouter-now-processes-more-than-a-quadrillion-tokens-a-year/\" target=\"_blank\" rel=\"noopener\">Menlo Ventures analysis of OpenRouter, 2026</a>",
+
+  "Google, 2025 (median, full-system methodology, Gemini)":
+    "<a class=\"src-link\" href=\"https://cloud.google.com/blog/products/infrastructure/measuring-the-environmental-impact-of-ai-inference\" target=\"_blank\" rel=\"noopener\">Google, 2025</a> (median, full-system methodology, Gemini)",
+
+  "IEA, \"Energy and AI\" (2025), Executive Summary":
+    "<a class=\"src-link\" href=\"https://www.iea.org/reports/energy-and-ai/executive-summary\" target=\"_blank\" rel=\"noopener\">IEA, \"Energy and AI\" (2025), Executive Summary</a>",
+
+  "IEA, \"Energy and AI\" (2025); Rystad Energy US demand decomposition (May 2026); EIA on two decades of flat US demand":
+    "<a class=\"src-link\" href=\"https://www.iea.org/reports/energy-and-ai/executive-summary\" target=\"_blank\" rel=\"noopener\">IEA, \"Energy and AI\" (2025)</a>; <a class=\"src-link\" href=\"https://www.rystadenergy.com/news/data-and-ev-create-300-twh-increase-us\" target=\"_blank\" rel=\"noopener\">Rystad Energy US demand decomposition (May 2026)</a>; <a class=\"src-link\" href=\"https://www.eia.gov/todayinenergy/detail.php?id=65264\" target=\"_blank\" rel=\"noopener\">EIA on two decades of flat US demand</a>",
+
+  "IEA, \"Energy and AI\" (2025), Energy demand from AI":
+    "<a class=\"src-link\" href=\"https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai\" target=\"_blank\" rel=\"noopener\">IEA, \"Energy and AI\" (2025), Energy demand from AI</a>",
+
   /* --- entries refreshed 2026-08-11 --- */
   "Energy: Oviedo et al. (Microsoft), \"Energy use of AI inference, efficiency pathways, and test-time scaling,\" Joule 2026 — measured median 0.31 Wh/query for frontier models above 200B parameters in production serving, IQR 0.16-0.60 Wh; cross-checked against Google, 2025 (0.24 Wh median Gemini text prompt, full-system methodology). NOTE: the widely circulated ~3 Wh figure (de Vries, Joule 2023) is superseded — the 2026 Joule paper finds public estimates overstated by 4-20x, largely because benchmark conditions run about 11x hotter than production serving. Water: Google, 2025 (0.26 mL); high end from Mistral 2025 lifecycle analysis, which includes indirect/lifecycle water, not just on-site":
     "Energy: <a class=\"src-link\" href=\"https://doi.org/10.1016/j.joule.2026.102430\" target=\"_blank\" rel=\"noopener\">Oviedo et al. (Microsoft), \"Energy use of AI inference, efficiency pathways, and test-time scaling,\" Joule 2026</a> — measured median 0.31 Wh/query for frontier models above 200B parameters in production serving, IQR 0.16-0.60 Wh; cross-checked against <a class=\"src-link\" href=\"https://cloud.google.com/blog/products/infrastructure/measuring-the-environmental-impact-of-ai-inference\" target=\"_blank\" rel=\"noopener\">Google, 2025</a> (0.24 Wh median Gemini text prompt, full-system methodology). NOTE: the widely circulated ~3 Wh figure (<a class=\"src-link\" href=\"https://www.cell.com/joule/fulltext/S2542-4351(23)00365-3\" target=\"_blank\" rel=\"noopener\">de Vries, Joule 2023</a>) is superseded — the 2026 Joule paper finds public estimates overstated by 4-20x, largely because benchmark conditions run about 11x hotter than production serving. Water: Google, 2025 (0.26 mL); high end from <a class=\"src-link\" href=\"https://mistral.ai/news/our-contribution-to-a-global-environmental-standard-for-ai/\" target=\"_blank\" rel=\"noopener\">Mistral 2025 lifecycle analysis</a>, which includes indirect/lifecycle water, not just on-site",
@@ -1034,6 +1134,12 @@ function updatePercap(){
       "<strong>≈ " + fmtPct(pctWater) + "</strong> of the average American&rsquo;s annual water use at home (~" +
       fmtNum(PERCAPITA.waterDomestic.mid) + " gallons/year — showers, laundry, taps)."));
   }
+  host.appendChild(elHTML("div","pc-line",
+    "<strong>But read that both ways.</strong> A small personal share does not mean a small problem. All chatbot <em>text</em> queries together are " +
+    "only about <strong>2% of AI&rsquo;s own electricity use</strong> — the rest is training, images, video, and increasingly agentic and enterprise " +
+    "workloads running without anyone typing. Your individual lever is real but small; the larger levers are institutional — what your organization " +
+    "buys, which model it sets as the default, whether agents run unattended, and where facilities get sited. " +
+    linkifySource("Hannah Ritchie, 2026 synthesis of AI electricity estimates")));
   host.appendChild(elHTML("div","pc-alt",
     "Why divide by <em>total</em> electricity rather than the residential-only per-capita figure (~" +
     fmtNum(PERCAPITA.electricityResidential.mid) + " kWh/year per person; " + linkifySource(PERCAPITA.electricityResidential.source) +
@@ -1406,6 +1512,34 @@ wireTableToggle("btn-tableC","modC-chart","modC-table");
   });
 })();
 
+/* ============ Module D2 — growth drivers ============ */
+(function buildGrowth(){
+  const g = DATA.growth;
+  document.getElementById("growth-intro").textContent = g.intro;
+  document.getElementById("growth-closing").textContent = g.closing;
+
+  const vol = document.getElementById("growth-volume");
+  g.volume.forEach(v => {
+    const t = el("div","tile");
+    t.appendChild(el("div","tlabel", v.label));
+    t.appendChild(el("div","tval", v.now));
+    t.appendChild(el("div","tproj", "Twelve months earlier: " + v.was));
+    t.appendChild(el("div","tproj", v.note));
+    t.appendChild(elHTML("div","tsrc", "Source: " + linkifySource(v.source)));
+    vol.appendChild(t);
+  });
+
+  const drv = document.getElementById("growth-drivers");
+  g.drivers.forEach(d => {
+    const t = el("div","tile");
+    t.appendChild(el("div","tlabel", d.scope));
+    t.appendChild(el("div","tval", d.share));
+    t.appendChild(el("div","tproj", d.text));
+    t.appendChild(elHTML("div","tsrc", "Source: " + linkifySource(d.source)));
+    drv.appendChild(t);
+  });
+})();
+
 /* ============ Module E — expandable explainer ============ */
 (function buildWhy(){
   const host = document.getElementById("whylist");
@@ -1446,6 +1580,9 @@ wireTableToggle("btn-tableC","modC-chart","modC-table");
   Object.values(DATA.aggregate).forEach(a => add(a.source));
   Object.values(ANNUAL_USAGE).forEach(g => add(g.source));
   Object.values(PERCAPITA).forEach(p => add(p.source));
+  DATA.growth.volume.forEach(v => add(v.source));
+  DATA.growth.drivers.forEach(d => add(d.source));
+  add("Hannah Ritchie, 2026 synthesis of AI electricity estimates");
   const host = document.getElementById("sourcelist");
   seen.forEach(s => host.appendChild(elHTML("li", null, linkifySource(s))));
 })();
