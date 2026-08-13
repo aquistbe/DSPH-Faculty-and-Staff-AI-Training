@@ -173,6 +173,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#check-your-readiness" id="toc-check-your-readiness" class="nav-link" data-scroll-target="#check-your-readiness">Check your readiness</a></li>
   <li><a href="#recommended-readings" id="toc-recommended-readings" class="nav-link" data-scroll-target="#recommended-readings">Recommended readings</a></li>
   <li><a href="#useful-resources" id="toc-useful-resources" class="nav-link" data-scroll-target="#useful-resources">Useful resources</a></li>
+  <li><a href="#how-these-materials-were-built" id="toc-how-these-materials-were-built" class="nav-link" data-scroll-target="#how-these-materials-were-built">How these materials were built</a></li>
   <li><a href="#navigate" id="toc-navigate" class="nav-link" data-scroll-target="#navigate">Navigate</a></li>
   </ul>
 </nav>
@@ -318,6 +319,63 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Common pitfalls.</strong> The tempting failure mode is picking whichever number (highest or lowest) supports the conclusion you already had. Use the mid-range as your default and cite the range when precision matters.</p>
 <p><strong>Stretch (optional).</strong> Using Module D’s aggregate figures, draft the two-sentence framing from Activity 2 again — does having the aggregate context (share of US electricity, direct vs.&nbsp;indirect water) change how you’d word it?</p>
 </details>
+<details class="activity"><summary>Activity 4 · Advanced — Estimate AI's electricity use from real data, and find out why your answer is wrong</summary>
+<p><strong>Time</strong> ~35 min · <strong>Tools</strong> R or Stata · <strong>Data</strong> <a href="https://epoch.ai/data/ai-data-centers">Epoch AI, <em>AI Data Centers</em></a> (CC-BY)</p>
+<p><strong>Goal.</strong> Produce your own bottom-up estimate of AI data-center electricity use, compare it with two published estimates, and diagnose the gap. The diagnosis is the point — this activity is designed so that your first answer is wrong by roughly a factor of three, for reasons that generalize to almost any capacity-based estimate you will ever make.</p>
+<p><strong>Why this dataset.</strong> Epoch AI tracks individual AI data centers — 78 sites, roughly 12.1 GW of current IT power capacity — built up from satellite imagery, construction permits, and company statements, and released under a Creative Commons Attribution license. It is the only open, facility-level, AI-specific dataset available. Note what it does <em>not</em> contain: any estimate of energy consumed, or any utilization assumption. Epoch stops at capacity deliberately, because the utilization assumption is where the disagreement actually lives.</p>
+<p><strong>Setup.</strong> Download the starter script for your language and run it. Both scripts print the column names first — check them against what the code expects before trusting any output, since Epoch revises the schema as the database grows.</p>
+<ul>
+<li>R: <code>epoch_ai_capacity.R</code></li>
+<li>Stata: <code>epoch_ai_capacity.do</code></li>
+</ul>
+<p><strong>Steps.</strong></p>
+<ol type="1">
+<li><p><strong>Run the naive estimate.</strong> The script computes: tracked IT power ÷ Epoch’s stated coverage fraction × PUE × utilization × 8,760 hours. Record what you get (it should land around 280–440 TWh/year).</p></li>
+<li><p><strong>Compare it with two published estimates for 2025.</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Source</th>
+<th>Estimate (2025)</th>
+<th>Method</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>IEA, <em>Key Questions on Energy and AI</em> (2026)</td>
+<td>~155 TWh</td>
+<td>Top-down; whole AI-focused facilities</td>
+</tr>
+<tr class="even">
+<td>de Vries-Gao, <em>Joule</em> (2025)</td>
+<td>46–82 TWh</td>
+<td>Bottom-up from chip-packaging supply; AI hardware only</td>
+</tr>
+</tbody>
+</table>
+<p>Both are estimates for <strong>2025</strong>. Your capacity snapshot is from <strong>2026</strong>. Hold that thought — it is the answer to step 3.</p>
+<p>Note that the two published figures differ from <em>each other</em> by a factor of three before you even add yours.</p></li>
+<li><p><strong>Write down, before reading further, why you think your number is too high.</strong> Be specific — name a quantity and a direction.</p></li>
+<li><p><strong>Now fix the two things that matter.</strong> First the time base: an August 2026 capacity snapshot describes <strong>2026</strong>, not 2025, and in a fleet doubling annually the energy is the integral of the growth curve, not the endpoint times 8,760. Second the load factor: published fleet-wide effective load runs <strong>0.4–0.6</strong>, not 0.6–0.8. The scripts do both, and report a 2026 estimate and a 2025 back-cast separately.</p></li>
+<li><p><strong>Rank the four corrections by how much each one moves your answer.</strong> Change one parameter at a time from the naive values and record the effect. Then check your ranking against Module “Capacity is not consumption” in the <a href="../interactive/ai-footprint-explorer.html">Footprint Explorer</a>.</p></li>
+<li><p><strong>State the boundary problem.</strong> In one or two sentences, explain why the IEA figure being larger than de Vries-Gao’s does not mean either is wrong.</p></li>
+</ol>
+<p><strong>Expected result.</strong> A defensible band of roughly <strong>120–250 TWh for 2026</strong> and <strong>55–130 TWh for 2025</strong>, a ranked list of what went wrong in the naive version, and a written statement of why your 2025 estimate should sit <em>below</em> the IEA’s 155 TWh rather than matching it.</p>
+<p><strong>Check your work.</strong> If your ranking puts “planned capacity is included in the total” at the top, re-read the Epoch documentation — sites under construction contribute zero to the current-capacity total. The dominant error is the time base: you annualized a snapshot taken today against a calendar year that has already ended, for a fleet that grows about 2× a year.</p>
+<p><strong>Common pitfalls.</strong></p>
+<ul>
+<li>Dividing a <em>power</em> figure by a <em>compute</em>-based coverage fraction. Epoch’s 27% is a share of delivered H100-equivalents, not a share of megawatts, and it carries a different date than the capacity snapshot. Both facts matter, and they push in opposite directions.</li>
+<li>Treating nameplate capacity as average draw. Published fleet-wide effective load factors run 0.4–0.6; LBNL models inference fleets nearer 0.2.</li>
+<li>Reporting a point estimate. Every input here is a range. Your output is a range.</li>
+</ul>
+<p><strong>Stretch (optional).</strong> The facility-level data has a column for location. Join it to your state or county of interest and ask a different question — not “how much electricity,” but “who lives near this, and what does the local grid look like?” That is the question the aggregate national figures cannot answer, and it is closer to what public health actually needs.</p>
+<p><strong>Citation.</strong> Epoch AI, “AI Data Centers.” Published online at epoch.ai. Retrieved from <a href="https://epoch.ai/data/ai-data-centers" class="uri">https://epoch.ai/data/ai-data-centers</a></p>
+</details>
 </section>
 <section id="check-your-readiness" class="level2">
 <h2 class="anchored" data-anchor-id="check-your-readiness">Check your readiness</h2>
@@ -340,6 +398,12 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="https://metr.org/blog/2026-07-21-expenditure-horizon/"><strong>Expenditure Horizon: Measuring Optimization Ability, with an Application to NanoGPT (METR, July 2026)</strong></a> — the primary source for the agentic comparison. Technical, but the methodology section is readable and the cost accounting is unusually transparent. METR’s <a href="https://metr.org/notes/2026-07-24-metrics-of-model-ability/">companion note on metrics of agent ability</a> gives the formal definition. Note that METR reports dollars, not kilowatt-hours; the energy figures in the Explorer are derived from the hardware and time limits METR published, and the derivation is spelled out in that module’s table view.</li>
 <li><a href="https://the-decoder.com/metr-introduces-a-new-metric-to-calculate-exactly-when-ai-agents-become-more-expensive-than-humans/"><strong>METR introduces a new metric to calculate exactly when AI agents become more expensive than humans (The Decoder)</strong></a> — a short, plain-language summary if you don’t want the full paper.</li>
 </ul>
+<p><strong>On what the operational numbers leave out</strong> — added August 2026, and worth reading as a pair:</p>
+<ul>
+<li><a href="https://www.nature.com/articles/s44168-026-00411-0"><strong>AI-driven productivity gains enable more CO₂ emissions than they avoid in a global energy–economy model (Alpine et al., <em>npj Climate Action</em>, Aug 2026)</strong></a> — open access. Argues the operational footprint is the <em>small</em> part: AI applied to fossil fuel extraction makes oil and gas cheaper to produce, raising consumption, for a modelled net increase of 0.47–1.8 Gt CO₂/year. The structural finding is the durable one — renewables productivity gains must exceed fossil gains by ~4–5× just to break even. Read with three caveats: it is a static scenario model rather than a measurement; the fossil productivity gains are calibrated from investment-bank and consultancy projections, and no peer-reviewed econometric estimate of realised AI productivity gains in oil and gas exists; and two of the four authors run an advocacy campaign named after the paper’s central concept, which they disclose in the paper. The fourth author helps develop the model they used. Teach the mechanism, not the gigatonnes.</li>
+<li><a href="https://www.nature.com/articles/s44168-025-00252-3"><strong>Green and intelligent: the role of AI in the climate transition (Stern, Romani et al., <em>npj Climate Action</em>, 2025)</strong></a> — the opposite conclusion in the same journal: AI could <em>cut</em> 3.2–5.4 Gt CO₂e/year by 2035. Reading these two together is the single best evidence-literacy exercise in this track. Both are scenario exercises; neither measures anything that has happened; they differ mainly in which pathway they model AI accelerating. Ask yourself what would have to be true for each to be right, and notice that the answer is a policy choice rather than a technical fact.</li>
+<li><a href="https://www.theclimatebrink.com/p/the-real-energy-use-of-agentic-ai"><strong>The real energy use of agentic AI (Hausfather, <em>The Climate Brink</em>, Aug 2026)</strong></a> — the most careful field estimate available of what an AI <em>agent</em> costs, from 8 weeks of instrumented token logs: ~150 Wh per typed prompt, roughly 600× a chat prompt, ~3 kWh on a working day. Note two things. First, 96% of his tokens were cache reads, so the assumed energy cost of a cached token drives the whole estimate — he uses 10%, and published methods range 1–25%. Second, his conclusion cuts against the right-sizing advice in Activity 1: he argues the decisive lever is decarbonising the grid, not user restraint. Both can be true, and the Explorer now says so.</li>
+</ul>
 </section>
 <section id="useful-resources" class="level2">
 <h2 class="anchored" data-anchor-id="useful-resources">Useful resources</h2>
@@ -348,6 +412,12 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="https://mlco2.github.io/impact/">ML CO2 Impact</a> — estimate the carbon of compute.</li>
 </ul>
 <hr>
+</section>
+<section id="how-these-materials-were-built" class="level2">
+<h2 class="anchored" data-anchor-id="how-these-materials-were-built">How these materials were built</h2>
+<p>The <a href="../interactive/ai-footprint-explorer.html">AI Environmental Footprint Explorer</a> and the activities on this page were built by D. Alex Quistberg with <a href="https://www.anthropic.com/claude">Claude</a> (Anthropic). Claude did the research synthesis, the code, and the testing; every figure was traced to a primary source and checked before it went in, and the editorial judgments — which numbers to trust, which to leave out, how to frame the disagreements — are the author’s.</p>
+<p>Several figures were corrected during that process after checking against primary sources, including a widely repeated per-image estimate that turned out to be about fifteen times too high. That is why the <a href="https://github.com/aquistbe/DSPH-Faculty-and-Staff-AI-Training/blob/main/CHANGELOG.md">changelog</a> exists, and why nothing in the Explorer is presented without its source.</p>
+<p>Worth naming on a page about AI’s costs: building this used AI, and that use had a footprint. It is a reasonable example of the right-sizing Activity 1 asks you to practise — and of the disclosure this track argues for.</p>
 </section>
 <section id="navigate" class="level2">
 <h2 class="anchored" data-anchor-id="navigate">Navigate</h2>
