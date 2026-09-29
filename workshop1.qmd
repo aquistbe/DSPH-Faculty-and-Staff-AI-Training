@@ -19,159 +19,185 @@ One hour | Bring a laptop | Runs weekly in the fall term and repeats in spring -
 
 ## What You'll Leave With
 
-By the end of this hour, you will be able to:
+No experience needed. If you have never opened ChatGPT or Copilot, this session is for you. By the end of this hour, you will be able to:
 
-1. Explain in plain terms what a large language model does---and what it doesn't
-2. Choose the right Drexel-approved tool for a task and know the data rules
-3. Sign in to ChatGPT Edu, select the current default model, and run your first useful prompts
-4. Use a simple framework (PTCF) to get noticeably better outputs
-5. Recognize how AI fails---confident errors and bias---and the basic accountability and governance rules at Drexel
+1. Say in one sentence what tools like ChatGPT do, and what they get wrong
+2. Know which Drexel tools to use and what information never goes into them
+3. Sign in to ChatGPT Edu, type a request, and ask a follow-up
+4. Use four simple questions (PTCF) to get a better answer
 
 ## Run of Show
 
 | Time | Segment |
 |------|---------|
-| 0:00--0:10 | Overview: what AI can and can't do; the Drexel tools and data rules |
-| 0:10--0:25 | Ethics & Governance: how AI fails, and who's accountable |
-| 0:25--0:42 | Activity 1: First prompts in ChatGPT Edu |
-| 0:42--0:57 | Activity 2: Better prompts with PTCF |
-| 0:57--1:00 | Wrap-up and what to try this week |
+| 0:00--0:08 | What AI is, which tools to use, and the one data rule |
+| 0:08--0:15 | How AI gets things wrong, and who is responsible |
+| 0:15--0:25 | Guided tour: ChatGPT Edu, step by step (follow along) |
+| 0:25--0:40 | Activity 1: Your first three requests |
+| 0:40--0:55 | Activity 2: Better requests with PTCF |
+| 0:55--1:00 | Wrap-up and one thing to try this week |
+
+:::{.callout-note}
+## A Few Words You'll Hear
+- **Prompt:** what you type into the box. A question, a request, or instructions.
+- **Chat:** one conversation. The tool remembers what was said earlier in the same chat, but not in other chats.
+- **Model:** the AI system underneath the tool. You can use the default.
+- **Hallucination:** when the AI states something false as if it were true.
+:::
 
 ---
 
-## Overview (10 min)
+## What AI Is, and Which Tools to Use (8 min)
 
-**What generative AI is.** Tools like ChatGPT and Copilot are *large language models*---they predict likely text based on patterns learned from huge amounts of writing. They are very good at drafting, summarizing, rewriting, explaining, and brainstorming. They do not "know" facts the way a database does, and they can state wrong things confidently (a "hallucination"). You stay in the loop: AI drafts, you verify and decide.
+**What it is.** ChatGPT and Copilot write text by predicting what words should come next, based on patterns in a huge amount of writing. That makes them good at drafting, summarizing, rewriting, and explaining. It also means they can sound confident and still be wrong. They are not search engines or databases.
 
-**Which tool, and the data rule.** For Drexel work, use **ChatGPT Edu**, **Copilot Chat with Enterprise Data Protection**, **Microsoft 365 Copilot**, Zoom AI Companion, or Adobe tools according to Drexel's data classifications. **Claude, personal ChatGPT, Gemini, Perplexity, and other consumer tools are Low Risk Data only** unless separately approved by Drexel. Never paste PHI, sensitive PII, protected student records, or identifiable research data into a tool unless that tool and use case are explicitly approved. Full details are on the [Tools & Access](tools.qmd) page.
+**Which tools to use.** For Drexel work, use **ChatGPT Edu** or **Copilot Chat**, both signed in with your Drexel account. Other tools, including personal ChatGPT, Claude, and Gemini, are for public or low-risk information only. Full details are on the [Tools & Access](tools.qmd) page.
 
-**Good first uses at DSPH.** Drafting and tightening emails, summarizing long documents and reports, turning notes into clean prose, explaining unfamiliar terms, brainstorming options, and reformatting content. We start there.
+:::{.callout-important}
+## The One Data Rule
+Never paste in health information about a person, student records, Social Security numbers, or identifiable research data. When in doubt, leave it out or make the details up.
+:::
 
 :::{.callout-tip}
 ## The Mental Model
-Treat AI like a fast, eager assistant who is widely read but sometimes wrong and never offended by edits. You give clear direction, it produces a draft, and you check the work before it counts.
+Think of AI as a fast, eager assistant who has read a lot but is sometimes wrong. You tell it what you need, it writes a draft, and you check the draft before you use it.
 :::
 
 ---
 
-## Ethics & Governance: How AI Fails, and Who's Accountable (15 min)
+## How AI Gets Things Wrong, and Who Is Responsible (7 min)
 
-*This is the first piece of an ethics and governance thread that runs through the series and comes together in [Core 4: Verify, Disclose, Decide](workshop5.qmd). Today: the two ways AI gets things wrong, and the rules that decide who is responsible.*
+**It makes things up.** Because it predicts likely-sounding text, it can invent facts, numbers, and citations. Check anything that matters before you use it.
 
-**Two failure modes to expect.** First, **confident errors ("hallucinations")**---an LLM predicts plausible text, so it can invent facts, statistics, and citations that look right and are wrong. Second, **bias**---models learn from internet-scale data that carries society's inequities, so outputs can reflect and amplify stereotypes about who belongs in which role and what communities "look like." Both matter more in public health than in most fields, because we work with diverse populations and our outputs can affect care and resources.
+**It can be biased.** It learned from writing that reflects society's inequities, so its answers can repeat stereotypes. In public health, that matters: our work affects real communities. (For a well-known health-care example, see the [Bias & Equity Audit](tracks/bias-equity-audit.qmd) track.)
 
-**Where bias comes from.** It enters at several stages: training data that reflects historical inequities, populations that are over- or under-represented, and proxies that don't mean the same thing across groups. A landmark example: an algorithm used across US health systems used past **healthcare cost** as a proxy for health *need*; because less had historically been spent on Black patients, it rated them as healthier than equally sick White patients (Obermeyer et al., 2019). The lesson isn't "don't use AI"---it's that AI trained on historical data can encode inequity, so you check outputs, especially across groups.
-
-**Who is accountable.** The person who acts on AI output owns the result---not the tool, not the vendor. That is the governing principle for everything in this series: **AI drafts; a human verifies and decides.** Where AI informs a real decision or document, note that it was used and verify what matters.
-
-**The governance frame at Drexel.** Drexel sets the rules through its AI policy and the data-classification system on the [AI Tools page](https://drexel.edu/provost/ai/tools)---which tool may touch which data. Nationally, the [ASPPH AI for Public Health framework](resources.qmd) and the WHO's *Ethics and Governance of AI for Health* lay out the principles (equity, transparency, accountability, privacy) we'll apply throughout. See the [Resources](resources.qmd) page.
-
-:::{.callout-important}
-## The Accountability Rule
-If AI helped produce it and your name is on it, you are responsible for it---accuracy, fairness, and tone. "The AI wrote it" is never the answer.
-:::
+**You are responsible.** If your name is on it, you own it: accuracy, fairness, and tone. "The AI wrote it" is never the answer. We return to these rules in [Core 4: Verify, Disclose, Decide](workshop5.qmd).
 
 ---
 
-## Activity 1: First Prompts in ChatGPT Edu {.activity}
+## Guided Tour: ChatGPT Edu, Step by Step {.activity}
 
 ::: {.activity}
 
-### Activity 1: First Prompts in ChatGPT Edu
+### Guided Tour: ChatGPT Edu, Step by Step
 ::: {.activity-meta}
-Duration: ~17 minutes | Format: Individual, hands-on
+Duration: ~10 minutes | Format: Follow along with the instructor
 :::
 
-**Goal:** Get signed in and feel what the tool does well by running real tasks.
+**Goal:** Everyone signed in and comfortable with the screen before we try real tasks.
 
-**No ChatGPT Edu yet?** Every prompt in this session also works in Copilot Chat with your Drexel account.
+**Can't sign in to ChatGPT Edu?** Open Copilot Chat with your Drexel account instead, or pair with a neighbor. Everything today works in either tool.
 
-#### Instructions
+1. **Sign in.** Go to ChatGPT Edu and sign in with your Drexel account. Check that you are in the Drexel workspace (the name appears near the top or bottom left).
+2. **Find the message box.** It is at the bottom of the screen. This is where you type your prompt.
+3. **Type a test prompt and press Enter:**
 
-1. Sign in to **ChatGPT Edu** with your Drexel account and use the current default model in the Drexel workspace.
-2. Run each of these prompts and look at how it responds. Use **public or made-up details only**---no sensitive data.
+   > In two sentences, what can you help a public health staff member with?
 
-**Prompt A --- Summarize**
+4. **Ask a follow-up in the same chat:**
 
-> Summarize the following text in 5 bullet points for a busy colleague, then give me a one-sentence "bottom line."
+   > Give me three examples.
+
+   Notice that it remembered your first question.
+5. **Copy the answer.** Hover over the response and click the copy icon, then paste it anywhere.
+6. **Start a new chat.** Click "New chat." The new chat does not remember the old one.
+7. **Find your history.** Your past chats are listed on the left. You can rename or delete them there.
+
+:::
+
+---
+
+## Activity 1: Your First Three Requests {.activity}
+
+::: {.activity}
+
+### Activity 1: Your First Three Requests
+::: {.activity-meta}
+Duration: ~15 minutes | Format: Individual, hands-on
+:::
+
+**Goal:** See what the tool does well by giving it everyday tasks.
+
+Copy each prompt below into ChatGPT Edu, one at a time. Read what comes back. There are no wrong answers here.
+
+**Request 1 --- Summarize**
+
+> Summarize this in 3 bullet points for a busy colleague:
 >
-> Between 2018 and 2022, pedestrian fatalities in the United States increased by 18 percent, reaching the highest levels since 1981. Urban areas accounted for roughly 84 percent of these deaths, with arterial roads—wide, high-speed corridors often lacking sidewalks, crosswalks, or pedestrian signals—representing a disproportionate share. Black and Hispanic pedestrians were killed at roughly twice the rate of white pedestrians when adjusted for population. Older adults (65+) also faced elevated fatality rates, particularly at unsignalized intersections. Several cities have adopted Vision Zero plans, but implementation has been uneven: many plans focus on education campaigns rather than the infrastructure redesign (road diets, curb extensions, reduced speed limits) that evidence links to the largest reductions. Federal funding through the Bipartisan Infrastructure Law includes $5 billion for Safe Streets, though local match requirements can slow uptake in under-resourced communities.
+> Between 2018 and 2022, pedestrian deaths in the United States rose 18 percent, the highest level since 1981. Most of these deaths happened in cities, often on wide, fast roads without sidewalks or crosswalks. Black and Hispanic pedestrians and adults over 65 were killed at higher rates. Many cities have Vision Zero plans, but most focus on education campaigns instead of redesigning streets, which the evidence shows works better.
 
-**Prompt B --- Draft**
+**Request 2 --- Draft an email**
 
-> Draft a friendly but professional email reminding committee members that their self-study section drafts for the CEPH reaccreditation report are due Friday at noon. Mention that late submissions delay the full committee review scheduled for the following Tuesday. Keep it under 120 words.
+> Write a short, friendly email reminding my committee that their report sections are due Friday at noon. Keep it under 100 words.
 
-**Prompt C --- Explain**
+**Request 3 --- Explain**
 
-> Explain what a "data use agreement" is to a new research coordinator who just started at a school of public health, in plain language, in about 100 words.
+> Explain what a "data use agreement" is in plain language, in about 100 words, for someone new to public health research.
 
-**Prompt D --- Reformat**
-
-> Turn these rough notes into a clean numbered agenda with time estimates:
->
-> curriculum cmt mtg weds — need to talk about new DrPH concentration proposal, carla is presenting enrollment projections, also CEPH competency mapping still not done, someone said we need to vote on the revised practicum hours (120→150), also brief update from assessment subcommittee maybe 5 min?, oh and the AI policy draft — alex will share it, probably 15 min discussion, don't forget to approve last meeting minutes at the start
-
-3. Pick the output you found most useful and ask one **follow-up**: "Make it shorter," "More formal," or "Add a sentence about X." Notice that it remembers the conversation.
+**Then try a follow-up.** Pick the answer you liked most and type one of these: "Make it shorter." "Make it more formal." "Add a sentence about ___."
 
 #### Quick Reflection
 
-- Which task did it handle best? Which needed the most fixing?
-- Where did you have to add information it couldn't have known?
+- Which answer was most useful as-is?
+- What did you need to change or add that the AI couldn't have known?
 
 :::
 
 ---
 
-## Activity 2: Better Prompts with PTCF {.activity}
+## Activity 2: Better Requests with PTCF {.activity}
 
 ::: {.activity}
 
-### Activity 2: Better Prompts with PTCF
+### Activity 2: Better Requests with PTCF
 ::: {.activity-meta}
-Duration: ~15 minutes | Format: Hands-on + pair share
+Duration: ~15 minutes | Format: Hands-on, then share with a neighbor
 :::
 
-**Goal:** See how a little structure turns a generic answer into a usable one.
+**Goal:** See how a little more detail gets you a much better answer.
 
-#### The PTCF Framework
+#### Four Questions to Ask Before You Type
 
-| Part | Ask yourself | Example |
+| Letter | Question | Example |
 |------|--------------|---------|
-| **P**ersona | Who should it act as? | "You are an experienced grants administrator..." |
-| **T**ask | What exactly should it do? | "Draft a 150-word reminder..." |
-| **C**ontext | What background does it need? | "...for faculty submitting NIH progress reports, due in two weeks." |
-| **F**ormat | How should the output look? | "Bulleted, warm tone, with a clear deadline line at the top." |
+| **P**ersona | Who should it act as? | "You are an experienced department administrator." |
+| **T**ask | What do you want it to do? | "Write an email announcing a staff meeting." |
+| **C**ontext | What does it need to know? | "The meeting is Tuesday at 10 in Room 204. We will discuss the new travel policy." |
+| **F**ormat | What should the answer look like? | "Under 100 words, warm tone, date and time in the first line." |
+
+You don't need all four every time. Adding even one or two makes a difference.
 
 #### Try It
 
-1. Start with a **bare prompt**:
+1. Type this short prompt and look at the answer:
 
-   > Write a project update.
+   > Write an email about a meeting.
 
-2. Now rewrite it using all four PTCF parts:
+2. Now start a new chat and type the full version:
 
-   > **Persona:** You are a research coordinator at a school of public health. **Task:** Write a project status update for our NIH-funded pedestrian safety study. **Context:** For the PI and co-investigators' monthly check-in. We finished geocoding 14,000 crash records and linking them to road-segment characteristics. Data cleaning is behind schedule—about 30% of records have missing speed-limit data that needs to be imputed or verified against PennDOT records. The IRB continuing review is due August 15 and the progress report to NICHD is due September 1. **Format:** Three short sections---Completed, In Progress, Needs Attention---under 150 words total, with specific dates for upcoming deadlines.
+   > You are an experienced department administrator. Write an email announcing a staff meeting. The meeting is Tuesday at 10 in Room 204, and we will discuss the new travel policy. Keep it under 100 words, use a warm tone, and put the date and time in the first line.
 
-3. Compare the two outputs. Then refine once more: change the tone, the length, or the audience and rerun.
+3. Compare the two answers. Which one could you send with the fewest changes?
+4. **Your turn.** Think of a real email or short document you need to write this week. Write a prompt for it using the four questions. Use made-up names and details if needed.
 
-#### Pair Share
+#### Share
 
-Turn to a neighbor and trade one prompt each. Read the other person's output and suggest one part of PTCF they could strengthen.
+Show a neighbor your prompt and the answer. Suggest one detail they could add.
 
 :::
 
 :::{.callout-note}
-## Note on Consistency
-The same prompt can give slightly different answers each time. For anything you'll reuse, save the prompt that worked. We'll build reusable prompts and custom GPTs in Core 3.
+## Same Prompt, Different Answer
+If you run the same prompt twice, you may get slightly different answers. That is normal. When a prompt works well, save it in a document so you can reuse it.
 :::
 
 ---
 
 ## Wrap-Up (5 min)
 
-- AI is a drafting and thinking assistant; you verify and decide.
-- For Drexel work: **ChatGPT Edu or Copilot**, and mind the data rules.
-- **PTCF** (Persona, Task, Context, Format) is your default recipe for a good prompt.
+- AI writes drafts. You check them and decide.
+- For Drexel work, use **ChatGPT Edu or Copilot** and follow the data rule.
+- Before you type, ask the four questions: **Persona, Task, Context, Format**.
 
 **Try this before Core 2:** pick one task you do every week---an email, a summary, a set of notes---and do it once with ChatGPT Edu using PTCF. Bring it to the next session.
 

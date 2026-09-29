@@ -3105,14 +3105,14 @@
     "href": "workshop1.html#what-youll-leave-with",
     "title": "Core 1 · Foundations & Capabilities",
     "section": "What You’ll Leave With",
-    "text": "What You’ll Leave With\nBy the end of this hour, you will be able to:\n\nExplain in plain terms what a large language model does—and what it doesn’t\nChoose the right Drexel-approved tool for a task and know the data rules\nSign in to ChatGPT Edu, select the current default model, and run your first useful prompts\nUse a simple framework (PTCF) to get noticeably better outputs\nRecognize how AI fails—confident errors and bias—and the basic accountability and governance rules at Drexel"
+    "text": "What You’ll Leave With\nNo experience needed. If you have never opened ChatGPT or Copilot, this session is for you. By the end of this hour, you will be able to:\n\nSay in one sentence what tools like ChatGPT do, and what they get wrong\nKnow which Drexel tools to use and what information never goes into them\nSign in to ChatGPT Edu, type a request, and ask a follow-up\nUse four simple questions (PTCF) to get a better answer"
   },
   {
     "objectID": "workshop1.html#run-of-show",
     "href": "workshop1.html#run-of-show",
     "title": "Core 1 · Foundations & Capabilities",
     "section": "Run of Show",
-    "text": "Run of Show\n\n\n\n\n\n\n\nTime\nSegment\n\n\n\n\n0:00–0:10\nOverview: what AI can and can’t do; the Drexel tools and data rules\n\n\n0:10–0:25\nEthics & Governance: how AI fails, and who’s accountable\n\n\n0:25–0:42\nActivity 1: First prompts in ChatGPT Edu\n\n\n0:42–0:57\nActivity 2: Better prompts with PTCF\n\n\n0:57–1:00\nWrap-up and what to try this week"
+    "text": "Run of Show\n\n\n\nTime\nSegment\n\n\n\n\n0:00–0:08\nWhat AI is, which tools to use, and the one data rule\n\n\n0:08–0:15\nHow AI gets things wrong, and who is responsible\n\n\n0:15–0:25\nGuided tour: ChatGPT Edu, step by step (follow along)\n\n\n0:25–0:40\nActivity 1: Your first three requests\n\n\n0:40–0:55\nActivity 2: Better requests with PTCF\n\n\n0:55–1:00\nWrap-up and one thing to try this week\n\n\n\n\n\n\n\n\n\nNoteA Few Words You’ll Hear\n\n\n\n\nPrompt: what you type into the box. A question, a request, or instructions.\nChat: one conversation. The tool remembers what was said earlier in the same chat, but not in other chats.\nModel: the AI system underneath the tool. You can use the default.\nHallucination: when the AI states something false as if it were true."
   },
   {
     "objectID": "workshop1.html#overview-10-min",
@@ -3147,7 +3147,7 @@
     "href": "workshop1.html#wrap-up-5-min",
     "title": "Core 1 · Foundations & Capabilities",
     "section": "Wrap-Up (5 min)",
-    "text": "Wrap-Up (5 min)\n\nAI is a drafting and thinking assistant; you verify and decide.\nFor Drexel work: ChatGPT Edu or Copilot, and mind the data rules.\nPTCF (Persona, Task, Context, Format) is your default recipe for a good prompt.\n\nTry this before Core 2: pick one task you do every week—an email, a summary, a set of notes—and do it once with ChatGPT Edu using PTCF. Bring it to the next session."
+    "text": "Wrap-Up (5 min)\n\nAI writes drafts. You check them and decide.\nFor Drexel work, use ChatGPT Edu or Copilot and follow the data rule.\nBefore you type, ask the four questions: Persona, Task, Context, Format.\n\nTry this before Core 2: pick one task you do every week—an email, a summary, a set of notes—and do it once with ChatGPT Edu using PTCF. Bring it to the next session."
   },
   {
     "objectID": "workshop1.html#looking-ahead",
@@ -3309,5 +3309,40 @@
     "title": "Core 4 · Verify, Disclose, Decide",
     "section": "Give Feedback on This Workshop",
     "text": "Give Feedback on This Workshop\n\n\n\n\n\n\nNoteTwo minutes: tell us how this session went\n\n\n\nYour feedback directly shapes how these workshops are revised and what gets scheduled next.\nWorkshop feedback form ↗\nIn the first question, select the session you attended."
+  },
+  {
+    "objectID": "workshop1.html#what-ai-is-and-which-tools-to-use-8-min",
+    "href": "workshop1.html#what-ai-is-and-which-tools-to-use-8-min",
+    "title": "Core 1 · Foundations & Capabilities",
+    "section": "What AI Is, and Which Tools to Use (8 min)",
+    "text": "What AI Is, and Which Tools to Use (8 min)\nWhat it is. ChatGPT and Copilot write text by predicting what words should come next, based on patterns in a huge amount of writing. That makes them good at drafting, summarizing, rewriting, and explaining. It also means they can sound confident and still be wrong. They are not search engines or databases.\nWhich tools to use. For Drexel work, use ChatGPT Edu or Copilot Chat, both signed in with your Drexel account. Other tools, including personal ChatGPT, Claude, and Gemini, are for public or low-risk information only. Full details are on the Tools & Access page.\n\n\n\n\n\n\nImportantThe One Data Rule\n\n\n\nNever paste in health information about a person, student records, Social Security numbers, or identifiable research data. When in doubt, leave it out or make the details up.\n\n\n\n\n\n\n\n\nTipThe Mental Model\n\n\n\nThink of AI as a fast, eager assistant who has read a lot but is sometimes wrong. You tell it what you need, it writes a draft, and you check the draft before you use it."
+  },
+  {
+    "objectID": "workshop1.html#how-ai-gets-things-wrong-and-who-is-responsible-7-min",
+    "href": "workshop1.html#how-ai-gets-things-wrong-and-who-is-responsible-7-min",
+    "title": "Core 1 · Foundations & Capabilities",
+    "section": "How AI Gets Things Wrong, and Who Is Responsible (7 min)",
+    "text": "How AI Gets Things Wrong, and Who Is Responsible (7 min)\nIt makes things up. Because it predicts likely-sounding text, it can invent facts, numbers, and citations. Check anything that matters before you use it.\nIt can be biased. It learned from writing that reflects society’s inequities, so its answers can repeat stereotypes. In public health, that matters: our work affects real communities. (For a well-known health-care example, see the Bias & Equity Audit track.)\nYou are responsible. If your name is on it, you own it: accuracy, fairness, and tone. “The AI wrote it” is never the answer. We return to these rules in Core 4: Verify, Disclose, Decide."
+  },
+  {
+    "objectID": "workshop1.html#guided-tour-chatgpt-edu-step-by-step",
+    "href": "workshop1.html#guided-tour-chatgpt-edu-step-by-step",
+    "title": "Core 1 · Foundations & Capabilities",
+    "section": "Guided Tour: ChatGPT Edu, Step by Step",
+    "text": "Guided Tour: ChatGPT Edu, Step by Step\n\nGuided Tour: ChatGPT Edu, Step by Step\n\nDuration: ~10 minutes | Format: Follow along with the instructor\n\nGoal: Everyone signed in and comfortable with the screen before we try real tasks.\nCan’t sign in to ChatGPT Edu? Open Copilot Chat with your Drexel account instead, or pair with a neighbor. Everything today works in either tool.\n\nSign in. Go to ChatGPT Edu and sign in with your Drexel account. Check that you are in the Drexel workspace (the name appears near the top or bottom left).\nFind the message box. It is at the bottom of the screen. This is where you type your prompt.\nType a test prompt and press Enter:\n\nIn two sentences, what can you help a public health staff member with?\n\nAsk a follow-up in the same chat:\n\nGive me three examples.\n\nNotice that it remembered your first question.\nCopy the answer. Hover over the response and click the copy icon, then paste it anywhere.\nStart a new chat. Click “New chat.” The new chat does not remember the old one.\nFind your history. Your past chats are listed on the left. You can rename or delete them there."
+  },
+  {
+    "objectID": "workshop1.html#activity-1-your-first-three-requests",
+    "href": "workshop1.html#activity-1-your-first-three-requests",
+    "title": "Core 1 · Foundations & Capabilities",
+    "section": "Activity 1: Your First Three Requests",
+    "text": "Activity 1: Your First Three Requests\n\nActivity 1: Your First Three Requests\n\nDuration: ~15 minutes | Format: Individual, hands-on\n\nGoal: See what the tool does well by giving it everyday tasks.\nCopy each prompt below into ChatGPT Edu, one at a time. Read what comes back. There are no wrong answers here.\nRequest 1 — Summarize\n\nSummarize this in 3 bullet points for a busy colleague:\nBetween 2018 and 2022, pedestrian deaths in the United States rose 18 percent, the highest level since 1981. Most of these deaths happened in cities, often on wide, fast roads without sidewalks or crosswalks. Black and Hispanic pedestrians and adults over 65 were killed at higher rates. Many cities have Vision Zero plans, but most focus on education campaigns instead of redesigning streets, which the evidence shows works better.\n\nRequest 2 — Draft an email\n\nWrite a short, friendly email reminding my committee that their report sections are due Friday at noon. Keep it under 100 words.\n\nRequest 3 — Explain\n\nExplain what a “data use agreement” is in plain language, in about 100 words, for someone new to public health research.\n\nThen try a follow-up. Pick the answer you liked most and type one of these: “Make it shorter.” “Make it more formal.” “Add a sentence about ___.”\n\nQuick Reflection\n\nWhich answer was most useful as-is?\nWhat did you need to change or add that the AI couldn’t have known?"
+  },
+  {
+    "objectID": "workshop1.html#activity-2-better-requests-with-ptcf",
+    "href": "workshop1.html#activity-2-better-requests-with-ptcf",
+    "title": "Core 1 · Foundations & Capabilities",
+    "section": "Activity 2: Better Requests with PTCF",
+    "text": "Activity 2: Better Requests with PTCF\n\nActivity 2: Better Requests with PTCF\n\nDuration: ~15 minutes | Format: Hands-on, then share with a neighbor\n\nGoal: See how a little more detail gets you a much better answer.\n\nFour Questions to Ask Before You Type\n\n\n\n\n\n\n\n\nLetter\nQuestion\nExample\n\n\n\n\nPersona\nWho should it act as?\n“You are an experienced department administrator.”\n\n\nTask\nWhat do you want it to do?\n“Write an email announcing a staff meeting.”\n\n\nContext\nWhat does it need to know?\n“The meeting is Tuesday at 10 in Room 204. We will discuss the new travel policy.”\n\n\nFormat\nWhat should the answer look like?\n“Under 100 words, warm tone, date and time in the first line.”\n\n\n\nYou don’t need all four every time. Adding even one or two makes a difference.\n\n\nTry It\n\nType this short prompt and look at the answer:\n\nWrite an email about a meeting.\n\nNow start a new chat and type the full version:\n\nYou are an experienced department administrator. Write an email announcing a staff meeting. The meeting is Tuesday at 10 in Room 204, and we will discuss the new travel policy. Keep it under 100 words, use a warm tone, and put the date and time in the first line.\n\nCompare the two answers. Which one could you send with the fewest changes?\nYour turn. Think of a real email or short document you need to write this week. Write a prompt for it using the four questions. Use made-up names and details if needed.\n\n\n\nShare\nShow a neighbor your prompt and the answer. Suggest one detail they could add.\n\n\n\n\n\n\n\n\nNoteSame Prompt, Different Answer\n\n\n\nIf you run the same prompt twice, you may get slightly different answers. That is normal. When a prompt works well, save it in a document so you can reuse it."
   }
 ]
