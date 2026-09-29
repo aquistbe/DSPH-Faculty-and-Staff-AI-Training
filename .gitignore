@@ -4,3 +4,8 @@
 
 /.quarto/
 **/*.quarto_ipynb
+
+# Internal planning documents (kept local, not published)
+refresh-plan-2026-27.md
+assessment-instruments.md
+feedback-forms-setup.md
