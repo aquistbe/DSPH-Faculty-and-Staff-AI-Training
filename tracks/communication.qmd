@@ -3,7 +3,7 @@ title: "Communication & Dissemination Track"
 ---
 
 ::: {.topic-badges}
-Self-paced track · 8 topics · novice → advanced
+Self-paced track · 9 topics · novice → advanced
 :::
 
 [← All self-paced tracks](../tracks.qmd){.track-back}
@@ -30,6 +30,7 @@ Teaching-related topics — course AI policies, assignment design, and the stude
 | 6 | [AI for Design & Visual Communication](design-visual-communication.qmd) | [Moderate]{.level-badge .level-moderate} | Make graphics with Claude, Canva, Figma, and Adobe — matched to the data level |
 | 7 | [Collaborating on Projects](collaborating-on-projects.qmd) | [Moderate]{.level-badge .level-moderate} | Set up shared Projects and custom GPTs for a team (companion to Core 3) |
 | 8 | [Grant Administration with AI](grant-administration.qmd) | [Novice]{.level-badge .level-novice} | Track deadlines, format compliance docs, and draft progress reports |
+| 9 | [Copilot for Email in Outlook](copilot-email.qmd) | [Novice]{.level-badge .level-novice} | Summarize threads, draft replies, and check tone with Copilot in Outlook |
 
 ## Not sure where to start?
 

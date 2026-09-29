@@ -23,16 +23,17 @@ You manage schedules, budgets, reports, events, accreditation documents, and com
 |-------|-------|------|----------------------|
 | 1 | [Core 1: Foundations](workshop1.qmd) | Core session | Prompting basics and data rules — **start here** |
 | 2 | [Core 2: Workflow Enhancement](workshop2.qmd) | Core session | Copilot in Word, Outlook, Excel for daily tasks |
-| 3 | [Data Security & Classification](tracks/data-security-classification.qmd) | Self-paced | You handle student records, budgets, and HR data — classification matters |
-| 4 | [Verifying AI Output](tracks/verifying-output.qmd) | Self-paced | Catch errors before they reach a report or accreditation document |
-| 5 | [Core 3: Reusable Assistants](workshop3.qmd) | Core session | Reusable prompts and shared templates for your team |
-| 6 | [Design & Visual Communication](tracks/design-visual-communication.qmd) | Self-paced | Flyers, event materials, and accessible visuals |
-| 7 | [Responsible AI](tracks/responsible-ai.qmd) | Self-paced | Disclosure norms and accountability for AI-assisted work |
-| 8 | [Grant Administration with AI](tracks/grant-administration.qmd) | Self-paced | Deadline tracking, compliance checks, and budget formatting |
+| 3 | [Copilot for Email in Outlook](tracks/copilot-email.qmd) | Self-paced | Summarize threads, draft replies, and check tone where your email already lives |
+| 4 | [Data Security & Classification](tracks/data-security-classification.qmd) | Self-paced | You handle student records, budgets, and HR data — classification matters |
+| 5 | [Verifying AI Output](tracks/verifying-output.qmd) | Self-paced | Catch errors before they reach a report or accreditation document |
+| 6 | [Core 3: Reusable Assistants](workshop3.qmd) | Core session | Reusable prompts and shared templates for your team |
+| 7 | [Design & Visual Communication](tracks/design-visual-communication.qmd) | Self-paced | Flyers, event materials, and accessible visuals |
+| 8 | [Responsible AI](tracks/responsible-ai.qmd) | Self-paced | Disclosure norms and accountability for AI-assisted work |
+| 9 | [Grant Administration with AI](tracks/grant-administration.qmd) | Self-paced | Deadline tracking, compliance checks, and budget formatting |
 
 ::: {.callout-tip}
 ## Admin priority
-Cores 1–3 plus Data Security and Verifying Output cover 80% of what admin staff need. The rest is useful but not urgent.
+Cores 1–3 plus Copilot for Email, Data Security, and Verifying Output cover 80% of what admin staff need. The rest is useful but not urgent.
 :::
 
 ---

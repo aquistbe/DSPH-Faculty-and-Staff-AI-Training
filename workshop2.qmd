@@ -119,6 +119,8 @@ Don't have the in-app Copilot license? Run the same prompts in **Copilot Chat** 
 
 **Watch for:** did it invent a decision that was never actually made? Threads are where AI over-summarizes --- in the demo thread, is the accreditation crosswalk a decision, an action item, or an open question?
 
+**Want more on email?** The self-paced [Copilot for Email in Outlook](tracks/copilot-email.qmd) page walks through summaries, replies, tone checks, and inbox-wide questions, and explains what works with and without the paid license.
+
 #### Track C --- Excel (quick analysis)
 
 **Worked example: seminar attendance and spend.** Open [Workshop2_Demo_SeminarAttendance.xlsx](demo-materials/Workshop2_Demo_SeminarAttendance.xlsx) (synthetic monthly attendance and catering cost for three departments) or your own sheet, then run:

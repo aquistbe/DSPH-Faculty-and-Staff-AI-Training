@@ -24,7 +24,7 @@ Everything builds on **[Core 1 · Foundations & Capabilities](workshop1.qmd)** �
 | Track | Topics | Level range |
 |-------|--------|-------------|
 | [**Data & Analysis**](tracks/data-analysis.qmd) | Basics, cleaning, coding, statistics, dashboards, image annotation, qualitative, advanced (8) | novice → advanced |
-| [**Communication & Dissemination**](tracks/communication.qmd) | Science communication, grant writing, literature review, multilingual materials, manuscripts, design & visual tools, collaborating on projects, grant admin (8) | novice → advanced |
+| [**Communication & Dissemination**](tracks/communication.qmd) | Science communication, grant writing, literature review, multilingual materials, manuscripts, design & visual tools, collaborating on projects, grant admin, Copilot for email (9) | novice → advanced |
 | [**Technical & Agentic**](tracks/technical-agentic.qmd) | Skills, context engineering, agents, loops, local models, RAG, MCP (7) | moderate → advanced |
 | [**Governance, Ethics & Equity**](tracks/governance-ethics.qmd) | Verifying output, sustainability, data security, responsible AI, bias & equity audit, keeping your judgment, mentoring & advising (7) | novice → moderate |
 | [**Methods & Study Design**](tracks/methods-study-design.qmd) | Survey design, program evaluation, de-identification & synthetic data, geospatial (4) | moderate → advanced |
