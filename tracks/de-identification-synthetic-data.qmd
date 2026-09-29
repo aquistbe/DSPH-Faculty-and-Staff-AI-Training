@@ -179,3 +179,5 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 ## Data rules
 Generate/transform on **non-sensitive** samples in unapproved tools; real PHI needs an approved tool and method. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
 :::
+
+{{< include /_feedback-track.qmd >}}

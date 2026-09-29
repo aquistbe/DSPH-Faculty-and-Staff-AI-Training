@@ -3,12 +3,14 @@ title: "Communication & Dissemination Track"
 ---
 
 ::: {.topic-badges}
-Self-paced track · 10 topics · novice → advanced
+Self-paced track · 8 topics · novice → advanced
 :::
 
 [← All self-paced tracks](../tracks.qmd){.track-back}
 
-Use AI to write, translate, and disseminate public-health work — from grants and manuscripts to plain-language and multilingual materials. Every page assumes you've done **[Workshop 1](../workshop1.qmd)** (prompting and the Drexel data rules). The throughline: AI drafts; you verify and own every fact, citation, and claim.
+Use AI to write, translate, and disseminate public-health work — from grants and manuscripts to plain-language and multilingual materials. Every page assumes you've done **[Core 1](../workshop1.qmd)** (prompting and the Drexel data rules). The throughline: AI drafts; you verify and own every fact, citation, and claim.
+
+Teaching-related topics — course AI policies, assignment design, and the student-facing pages on coursework and thesis work — now live in the **[Teaching & Learning](teaching-learning.qmd)** track.
 
 ## Difficulty levels
 
@@ -26,10 +28,8 @@ Use AI to write, translate, and disseminate public-health work — from grants a
 | 4 | [Multilingual & Culturally-Adapted Materials](multilingual-materials.qmd) | [Moderate]{.level-badge .level-moderate} | Translate and culturally adapt outreach, with back-translation QA |
 | 5 | [Manuscript Preparation & Peer Review](manuscript-peer-review.qmd) | [Advanced]{.level-badge .level-advanced} | Draft sections and reviewer responses; respect peer-review confidentiality |
 | 6 | [AI for Design & Visual Communication](design-visual-communication.qmd) | [Moderate]{.level-badge .level-moderate} | Make graphics with Claude, Canva, Figma, and Adobe — matched to the data level |
-| 7 | [Collaborating on Projects](collaborating-on-projects.qmd) | [Moderate]{.level-badge .level-moderate} | Set up shared Projects and custom GPTs for a team (companion to Workshop 3) |
-| 8 | [Writing Your Course AI Policy](course-ai-policy.qmd) | [Novice]{.level-badge .level-novice} | Write a clear, enforceable AI policy for your syllabus |
-| 9 | [Assignment & Assessment Design in the AI Era](assignment-assessment-design.qmd) | [Moderate]{.level-badge .level-moderate} | Design assignments that develop competence whether students use AI or not |
-| 10 | [Grant Administration with AI](grant-administration.qmd) | [Novice]{.level-badge .level-novice} | Track deadlines, format compliance docs, and draft progress reports |
+| 7 | [Collaborating on Projects](collaborating-on-projects.qmd) | [Moderate]{.level-badge .level-moderate} | Set up shared Projects and custom GPTs for a team (companion to Core 3) |
+| 8 | [Grant Administration with AI](grant-administration.qmd) | [Novice]{.level-badge .level-novice} | Track deadlines, format compliance docs, and draft progress reports |
 
 ## Not sure where to start?
 
@@ -45,3 +45,5 @@ Answer a few questions to find your starting point in this track.
 ## Data rules apply throughout
 Use **public or non-sensitive** data for every activity, and match any tool to Drexel's data classification. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
 :::
+
+{{< include /_feedback-track.qmd >}}

@@ -260,3 +260,5 @@ Worth naming on a page about AI's costs: building this used AI, and that use had
 ## Data rules
 No sensitive data needed here; this topic is about awareness and proportionate use. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
 :::
+
+{{< include /_feedback-track.qmd >}}

@@ -1,0 +1,45 @@
+---
+title: "Teaching & Learning Track"
+---
+
+::: {.topic-badges}
+Self-paced track · 4 topics · novice → moderate
+:::
+
+[← All self-paced tracks](../tracks.qmd){.track-back}
+
+Two sides of the same classroom. Topics 1–2 are for **instructors**: writing a course AI policy students can actually follow, and designing assignments that build competence whether or not students use AI. Topics 3–4 are for **graduate students**: reading those policies accurately and disclosing use specifically, then carrying the same habits into a thesis or dissertation that will become papers and fellowship applications.
+
+Read the other side. The clearest instructors are the ones who have seen what a syllabus policy looks like from the seat it's read in, and the students who read policies best are the ones who understand how they get written. Every page assumes you've done **[Core 1](../workshop1.qmd)** (prompting and the Drexel data rules); instructors will also want the **[AI for Curriculum Development](../workshop6.qmd)** elective. ChatGPT Edu is available to Drexel faculty, staff, and students — see [Tools & Access](../tools.qmd) for what each group has.
+
+## Difficulty levels
+
+[Novice]{.level-badge .level-novice} &nbsp; getting started — no prior experience needed.
+[Moderate]{.level-badge .level-moderate} &nbsp; comfortable with some AI use.
+[Advanced]{.level-badge .level-advanced} &nbsp; experienced users going deep.
+
+## Topics
+
+| # | Topic | For | Level | You'll be able to… |
+|---|-------|-----|-------|--------------------|
+| 1 | [Writing Your Course AI Policy](course-ai-policy.qmd) | Instructors | [Novice]{.level-badge .level-novice} | Write a clear, enforceable AI policy for your syllabus |
+| 2 | [Assignment & Assessment Design in the AI Era](assignment-assessment-design.qmd) | Instructors | [Moderate]{.level-badge .level-moderate} | Design assignments that develop competence whether students use AI or not |
+| 3 | [AI in Your Coursework](ai-in-your-coursework.qmd) | Students | [Novice]{.level-badge .level-novice} | Read course AI policies in good faith, disclose specifically, and ask before you submit |
+| 4 | [AI for Your Thesis or Dissertation](ai-for-your-thesis.qmd) | Students | [Moderate]{.level-badge .level-moderate} | Apply the "AI critiques, never drafts" rule before a funder or journal makes it formal |
+
+## Not sure where to start?
+
+Answer a few questions to find your starting point in this track.
+
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions":[{"q":"A course syllabus says only 'use AI responsibly.' What's the main problem with that?","options":["It's unenforceable — nobody can tell what it permits or prohibits","It's too restrictive for a graduate course","It should not mention AI at all","Nothing — it leaves useful flexibility"],"answer":0,"explain":"Specificity is the core skill on both sides of this track. If you're an instructor and this is obvious to you, start at topic 2 (Assignment & Assessment Design). If you're a student, start at topic 3 (AI in Your Coursework) — reading a vague policy accurately is its first activity."},{"q":"A syllabus says nothing whatsoever about AI. What does the silence mean?","options":["It's unresolved — ask the instructor before you use AI, not after","It's permitted, since nothing prohibits it","It's prohibited, since nothing permits it","It means the instructor doesn't care"],"answer":0,"explain":"Silence is a gap, not a ruling. Students: topic 3 covers exactly this case, including the email to send. Instructors: if your syllabus is the silent one, start at topic 1."},{"q":"You're a doctoral student and AI produces a fluent draft of your methods section. What's the problem?","options":["Substantive scientific writing is yours — NIH won't review AI-developed applications, and ICMJE bars AI authorship","Nothing, as long as you disclose it","Nothing, as long as you edit it afterward","Only that AI methods sections read poorly"],"answer":0,"explain":"If the funder and journal rules are already familiar, go straight to topic 4 (AI for Your Thesis or Dissertation) and its committee-critique activity. If they're new, topic 4 opens with them — read that callout first."}]}
+</script>
+</div>
+
+::: {.callout-warning}
+## Data rules apply throughout
+Instructors: use fabricated examples — never put real student submissions, grades, or advising notes into an AI tool. Students: your unpublished thesis work and any practicum or assistantship data belong in an approved tool, not a consumer one. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+:::
+
+{{< include /_feedback-track.qmd >}}

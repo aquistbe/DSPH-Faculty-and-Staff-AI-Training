@@ -192,3 +192,5 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 ## Data rules
 Keep unpublished ideas in an **approved** tool; verify all claims and citations before submission. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
 :::
+
+{{< include /_feedback-track.qmd >}}

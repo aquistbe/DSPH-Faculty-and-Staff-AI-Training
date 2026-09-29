@@ -213,3 +213,5 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 ## Data rules
 Keep sensitive data out of skill instructions and example files; share **inside Drexel** only. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
 :::
+
+{{< include /_feedback-track.qmd >}}

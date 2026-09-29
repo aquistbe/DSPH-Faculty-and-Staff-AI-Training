@@ -71,6 +71,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <meta name="robots" content="noindex, nofollow">
+<script data-goatcounter="https://aquistbe.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script>
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -98,33 +99,40 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-workshops" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Workshops</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-core-sessions" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Core Sessions</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-workshops">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-core-sessions">    
         <li>
     <a class="dropdown-item" href="../workshop1.html">
- <span class="dropdown-text">1 · Foundations &amp; Capabilities</span></a>
+ <span class="dropdown-text">Core 1 · Foundations &amp; Capabilities</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../workshop2.html">
- <span class="dropdown-text">2 · Workflow Enhancement</span></a>
+ <span class="dropdown-text">Core 2 · Workflow Enhancement</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../workshop3.html">
- <span class="dropdown-text">3 · Collaboration on Projects</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../workshop4.html">
- <span class="dropdown-text">4 · Documents &amp; Visuals (Adobe)</span></a>
+ <span class="dropdown-text">Core 3 · Reusable Assistants</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../workshop5.html">
- <span class="dropdown-text">5 · Getting Started with Agentic AI</span></a>
+ <span class="dropdown-text">Core 4 · Verify, Disclose, Decide</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-electives" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Electives</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-electives">    
+        <li>
+    <a class="dropdown-item" href="../workshop4.html">
+ <span class="dropdown-text">Documents &amp; Visuals (Adobe)</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../workshop6.html">
- <span class="dropdown-text">6 · AI for Curriculum Development</span></a>
+ <span class="dropdown-text">AI for Curriculum Development</span></a>
   </li>  
     </ul>
   </li>
@@ -174,6 +182,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#recommended-readings" id="toc-recommended-readings" class="nav-link" data-scroll-target="#recommended-readings">Recommended readings</a></li>
   <li><a href="#useful-resources" id="toc-useful-resources" class="nav-link" data-scroll-target="#useful-resources">Useful resources</a></li>
   <li><a href="#navigate" id="toc-navigate" class="nav-link" data-scroll-target="#navigate">Navigate</a></li>
+  <li><a href="#give-feedback-on-this-page" id="toc-give-feedback-on-this-page" class="nav-link" data-scroll-target="#give-feedback-on-this-page">Give Feedback on This Page</a></li>
   </ul>
 </nav>
     </div>
@@ -240,10 +249,10 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Common pitfalls.</strong> AI may “fix” data by inventing values — only accept fixes you can verify. Keep the raw file untouched; never overwrite it.</p>
 <p><strong>Stretch (optional).</strong> Ask for the cleaning steps as a documented, re-runnable R/Python script you could apply to next year’s data.</p>
 </details>
-<details class="activity"><summary>Activity 2 · Novice — Recode and document (Philadelphia crime categories)</summary>
+<details class="activity"><summary>Activity 2 · Novice — Recode and document (crash lighting categories)</summary>
 <p><strong>Time</strong> ~18 min · <strong>Tools</strong> ChatGPT Edu + R or Python</p>
 <p><strong>Goal.</strong> Standardize a messy category field and produce a codebook.</p>
-<p><strong>Setup.</strong> Use this 18-row sample of fabricated pedestrian crash records (modeled on PennDOT crash data structure), or grab a real slice from <a href="https://opendataphilly.org/datasets/crime-incidents/">OpenDataPhilly Crime Incidents</a>. This sample has the typical data-cleaning problems built in:</p>
+<p><strong>Setup.</strong> Use this 18-row sample of fabricated pedestrian crash records (modeled on PennDOT crash data structure — the same file as Activity 1). It has the typical data-cleaning problems built in:</p>
 <pre><code>crash_id,date,time,severity,ped_age,ped_sex,speed_limit,road_type,crosswalk,lighting
 1001,2024-03-15,16:45,Minor,34,F,25,Local,Yes,Daylight
 1002,2024-03-15,17:30,serious,67,M,35,Arterial,No,Dark - lighted
@@ -268,7 +277,7 @@ ul.task-list li input[type="checkbox"] {
 <ol type="1">
 <li><p>Recode:</p>
 <blockquote class="blockquote">
-<p>Here are the distinct values of the crime offense field. Propose a recode into 4–6 analysis groups (e.g., violent, property, quality-of-life, other) and write R/Python code mapping each original value to a group. Leave anything ambiguous as “review”.</p>
+<p>Here are the distinct values of the lighting field from the file above: Daylight, daylight, Dark - lighted, Dark - not lighted, Dusk. Propose a recode into 3–4 analysis groups suitable for a pedestrian-crash analysis (e.g., daylight, dark – lighted, dark – not lighted, dawn/dusk) and write R/Python code mapping each original value to a group. Leave anything ambiguous as “review”.</p>
 </blockquote></li>
 <li><p>Generate documentation:</p>
 <blockquote class="blockquote">
@@ -276,10 +285,10 @@ ul.task-list li input[type="checkbox"] {
 </blockquote></li>
 <li><p>Verify counts before and after.</p></li>
 </ol>
-<p><strong>Expected result.</strong> A grouped variable plus a codebook table; counts reconcile.</p>
+<p><strong>Expected result.</strong> A grouped lighting variable plus a codebook table; the grouped counts sum to 18 — nothing dropped.</p>
 <p><strong>Check your work.</strong> The grouped counts must sum to the original total — confirm nothing was dropped. Inspect the “review” bucket by hand.</p>
-<p><strong>Common pitfalls.</strong> Don’t let AI silently bucket ambiguous offenses. Grouping choices are substantive decisions — they’re yours, not the model’s.</p>
-<p><strong>Stretch (optional).</strong> Ask AI to flag any offense whose grouping is genuinely debatable and explain the tradeoff.</p>
+<p><strong>Common pitfalls.</strong> Don’t let AI silently bucket ambiguous values. Grouping choices are substantive decisions — they’re yours, not the model’s.</p>
+<p><strong>Stretch (optional).</strong> Want a messier version? Pull the distinct values of <code>text_general_code</code> from <a href="https://opendataphilly.org/datasets/crime-incidents/">OpenDataPhilly Crime Incidents</a> and repeat with 4–6 groups (violent, property, quality-of-life, other) — real category fields are far uglier than this sample. Ask AI to flag any value whose grouping is genuinely debatable and explain the tradeoff.</p>
 </details>
 <details class="activity"><summary>Activity 3 · Novice — Same cleaning job, but the AI runs the code itself (Claude Code)</summary>
 <p><strong>Time</strong> ~20 min · <strong>Tools</strong> Claude Code</p>
@@ -348,6 +357,25 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="callout-body-container callout-body">
 <p>Practice on <strong>non-sensitive</strong> data; de-identify before any tool sees real records. See <a href="../tools.html">Tools &amp; Access</a> and Drexel’s <a href="https://drexel.edu/provost/ai/tools">AI Tools page</a>.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="give-feedback-on-this-page" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="give-feedback-on-this-page">Give Feedback on This Page</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Two minutes: tell us how this track is working
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Your feedback shapes which topics get expanded and what new activities are added.</p>
+<p><a href="https://forms.cloud.microsoft/r/eLHm7tRtGY" class="btn btn-primary" target="_blank"><strong>Self-paced track feedback form</strong> ↗</a></p>
+<p>In the form, select this page from the list of topics.</p>
 </div>
 </div>
 
@@ -438,6 +466,12 @@ details.activity > *:not(summary):first-of-type{margin-top:.4rem}
         var pct=Math.round(correct/qs.length*100);
         var verdict=pct>=80?"You're ready — dive in.":(pct>=50?"Close — skim the readings first, then start Activity 1.":"Start with the readings and Activity 1, then retry.");
         score.textContent='You scored '+correct+'/'+qs.length+' ('+pct+'%). '+verdict;
+        try{
+          if(window.goatcounter&&window.goatcounter.count){
+            var slug=location.pathname.split('/').pop().replace(/\.html$/,'')||'index';
+            window.goatcounter.count({path:'quiz/'+slug+'/'+correct+'of'+qs.length,title:'Readiness quiz: '+slug,event:true});
+          }
+        }catch(e){}
       });
       box.innerHTML=''; box.appendChild(wrap); box.appendChild(btn); box.appendChild(score);
     });

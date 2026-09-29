@@ -181,3 +181,5 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 ## Data rules
 Use **non-sensitive** program details; participant data requires an approved tool. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
 :::
+
+{{< include /_feedback-track.qmd >}}

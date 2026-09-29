@@ -18,7 +18,7 @@ title: "RAG & Knowledge Bases over Your Documents"
 
 ## Overview
 
-Retrieval-augmented generation (RAG) connects a model to your document set: it retrieves relevant passages and answers from them, citing sources. NotebookLM is a friendly entry point; the same idea powers custom knowledge bases. It reduces hallucination but doesn't eliminate it.
+Retrieval-augmented generation (RAG) connects a model to your document set: it retrieves relevant passages and answers from them, citing sources. Gemini Notebook (formerly NotebookLM — renamed July 2026; old links redirect) is a friendly entry point; the same idea powers custom knowledge bases. It reduces hallucination but doesn't eliminate it.
 
 Quality depends on retrieval: if the right passage isn't found, the answer is wrong or guessed. You check that citations actually support the claim.
 
@@ -28,11 +28,11 @@ Quality depends on retrieval: if the right passage isn't found, the answer is wr
 <details class="activity"><summary>Activity 1 · Advanced — Ground answers in your documents</summary>
 ```
 
-**Time** ~18 min · **Tools** NotebookLM (public sources only)
+**Time** ~18 min · **Tools** Gemini Notebook (public sources only)
 
 **Goal.** Make AI answer from your sources, with citations you verify.
 
-**Setup.** In NotebookLM, load these 5 **public** PDFs on pedestrian safety:
+**Setup.** In Gemini Notebook, load these 5 **public** PDFs on pedestrian safety:
 
 1. [Philadelphia Vision Zero Action Plan (2017)](https://www.phila.gov/media/20171025174232/Vision-Zero-Action-Plan.pdf) — the city's strategy for eliminating traffic deaths
 2. [NHTSA Pedestrian Safety Report (2023)](https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/813558) — national pedestrian fatality trends
@@ -40,7 +40,7 @@ Quality depends on retrieval: if the right passage isn't found, the answer is wr
 4. [FHWA Proven Safety Countermeasures: Pedestrian Safety](https://safety.fhwa.dot.gov/provencountermeasures/) — evidence-based infrastructure interventions
 5. [Philadelphia Complete Streets Design Handbook](https://www.phila.gov/documents/complete-streets-design-handbook/) — city design standards for pedestrian infrastructure
 
-Upload all five to a new NotebookLM notebook. These are all public government or NGO documents — no data-sensitivity concerns.
+Upload all five to a new Gemini Notebook notebook. These are all public government or NGO documents — no data-sensitivity concerns.
 
 **Steps.**
 
@@ -68,7 +68,7 @@ Upload all five to a new NotebookLM notebook. These are all public government or
 <details class="activity"><summary>Activity 2 · Advanced — Probe retrieval quality</summary>
 ```
 
-**Time** ~12 min · **Tools** NotebookLM
+**Time** ~12 min · **Tools** Gemini Notebook
 
 **Goal.** Understand when retrieval misses relevant material.
 
@@ -102,7 +102,7 @@ Upload all five to a new NotebookLM notebook. These are all public government or
 
 **Time** ~25 min · **Tools** Claude Code (consumer/PI-purchased — Low Risk Data only; these 5 PDFs are public)
 
-**Goal.** Build the machinery NotebookLM hides: a from-scratch RAG pipeline where you can read the exact passages the system retrieved — and see when it retrieves nothing.
+**Goal.** Build the machinery Gemini Notebook hides: a from-scratch RAG pipeline where you can read the exact passages the system retrieved — and see when it retrieves nothing.
 
 **Setup.** Open Claude Code in an empty folder. You'll point it at the same 5 public PDFs from Activity 1:
 
@@ -130,7 +130,7 @@ Reminder: Claude Code is not Drexel-supported and is approved for Low Risk Data 
 
    > Run the same script with: "What do these documents say about e-scooter injury rates in Philadelphia?" Show me the retrieved chunks and their similarity scores, and tell me whether anything relevant was actually found.
 
-   With NotebookLM you had to infer a gap from the tone of the answer; here the low scores and off-topic chunks show you directly that nothing relevant exists in the sources.
+   With Gemini Notebook you had to infer a gap from the tone of the answer; here the low scores and off-topic chunks show you directly that nothing relevant exists in the sources.
 
 4. Break retrieval on purpose to see why chunking matters:
 
@@ -142,7 +142,7 @@ Reminder: Claude Code is not Drexel-supported and is approved for Low Risk Data 
 
 **Common pitfalls.** A high similarity score doesn't mean the chunk is right — keyword overlap can retrieve the wrong passage confidently. Retrieval quality is the whole game: garbage chunks in, confident garbage out. Low Risk Data only in Claude Code unless separately approved.
 
-**Stretch (optional).** Ask the same question here and in NotebookLM (Activity 1) and compare: where NotebookLM gave a citation marker, can you find the equivalent chunk your pipeline retrieved? Which experience made an error easier to catch?
+**Stretch (optional).** Ask the same question here and in Gemini Notebook (Activity 1) and compare: where Gemini Notebook gave a citation marker, can you find the equivalent chunk your pipeline retrieved? Which experience made an error easier to catch?
 
 ```{=html}
 </details>
@@ -168,7 +168,7 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 
 ## Useful resources
 
-- [NotebookLM](https://notebooklm.google.com) — source-grounded notebooks (use public data).
+- [Gemini Notebook](https://notebooklm.google.com) — source-grounded notebooks (use public data).
 - [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with data rules.
 
 ---
@@ -181,5 +181,7 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 
 ::: {.callout-warning}
 ## Data rules
-Use **public or non-sensitive** documents unless the tool is approved for the data; verify cited passages. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+Use **public or non-sensitive** documents unless the tool is approved for the data; verify cited passages. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools). **Study data is stricter:** never in commercial/consumer AI tools, and even aggregate or de-identified study data needs the PI's approval and must respect the IRB protocol, DUA, and the data's terms of use — see the Research Data callout on [Tools & Access](../tools.qmd).
 :::
+
+{{< include /_feedback-track.qmd >}}

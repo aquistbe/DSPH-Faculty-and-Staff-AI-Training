@@ -192,3 +192,5 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 ## Data rules
 Connect with **least privilege**; get approval before any connection to real or sensitive data. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
 :::
+
+{{< include /_feedback-track.qmd >}}

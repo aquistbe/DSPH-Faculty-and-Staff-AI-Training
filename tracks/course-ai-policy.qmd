@@ -3,10 +3,10 @@ title: "Writing Your Course AI Policy"
 ---
 
 ::: {.topic-badges}
-[Novice]{.level-badge .level-novice} · **Communication & Dissemination** track · ~35 min hands-on + readings and quiz
+[Novice]{.level-badge .level-novice} · **Teaching & Learning** track · ~35 min hands-on + readings and quiz
 :::
 
-[← Back to the Communication & Dissemination track](communication.qmd){.track-back}
+[← Back to the Teaching & Learning track](teaching-learning.qmd){.track-back}
 
 *A clear, enforceable AI policy for your syllabus — not a disclaimer, a working document.*
 
@@ -68,7 +68,7 @@ You're in good company: funders (NIH, NSF) and journals (ICMJE, COPE) have recen
 
 **Time** ~15 min · **Tools** ChatGPT Edu
 
-**Goal.** Find the loopholes in your policy before students do.
+**Goal.** Find the ambiguities in your policy before your students run into them.
 
 **Setup.** Your draft policy from Activity 1.
 
@@ -76,9 +76,9 @@ You're in good company: funders (NIH, NSF) and journals (ICMJE, COPE) have recen
 
 1. Stress-test it:
 
-   > Read this course AI policy as a student who wants to use AI as much as possible without technically violating the rules. List every loophole, ambiguity, or gray area you can find.
+   > Read this course AI policy as a student acting in good faith who genuinely can't tell what's allowed. List every place where a reasonable, honest student could read the policy two different ways, and say what question they'd have to ask me to resolve each one.
 
-2. Close the loopholes — revise the language to address each one.
+2. Close the gaps — revise the language so each of those questions is answered in the policy itself.
 
 3. Compare to a different approach:
 
@@ -86,7 +86,7 @@ You're in good company: funders (NIH, NSF) and journals (ICMJE, COPE) have recen
 
 4. Decide which approach (restrictive, integrative, or a hybrid) fits your learning objectives better.
 
-**Expected result.** A tightened policy plus an alternative version that shows the other end of the spectrum. Most courses land somewhere in between.
+**Expected result.** A tightened policy plus an alternative version that shows the other end of the spectrum. Most courses land somewhere in between. (For the same exercise from the other side of the desk — students reading three different policies in one term — see [AI in Your Coursework](ai-in-your-coursework.qmd), the student-facing mirror of this page.)
 
 **Check your work.** The final policy should pass three tests: (1) A student can read it and know what to do. (2) You can detect most violations or have designed assignments where violations don't bypass learning. (3) It connects to your learning objectives, not just institutional rules.
 
@@ -119,7 +119,9 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 ## Useful resources
 
 - [Drexel Academic Integrity Policy](https://drexel.edu/studentlife/community-standards/code-of-conduct/) — institutional framework.
+- [Generative AI and Teaching (Drexel Teaching and Learning Center)](https://drexel.edu/teaching-and-learning/resources/teaching-tech/GAI-and-teaching/) — Drexel's central guidance (updated July 2026): course-level policies with clear rationale; instructor autonomy. No final university-wide policy has been published as of this writing — check this page for the current version.
 - [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with data rules.
+- [AI in Your Coursework](ai-in-your-coursework.qmd) — the student-facing mirror of this page: how students read course AI policies, disclose their use, and ask when a policy is silent.
 - [Grant & Proposal Development](grant-proposal-development.qmd) and [Manuscript Preparation & Peer Review](manuscript-peer-review.qmd) — real funder and journal AI-disclosure policies (NIH, NSF, ICMJE, COPE) as concrete examples of specific, enforceable AI-use rules.
 
 ---
@@ -128,9 +130,11 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 
 **Next in this track:** [Assignment & Assessment Design in the AI Era](assignment-assessment-design.qmd)
 
-**Related topics:** [Assignment & Assessment Design in the AI Era](assignment-assessment-design.qmd) · [Responsible AI](responsible-ai.qmd)
+**Related topics:** [Assignment & Assessment Design in the AI Era](assignment-assessment-design.qmd) · [AI in Your Coursework](ai-in-your-coursework.qmd) · [Responsible AI](responsible-ai.qmd)
 
 ::: {.callout-warning}
 ## Data rules
 Do not share real student submissions or grades with AI tools when developing your policy. Use fabricated examples. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
 :::
+
+{{< include /_feedback-track.qmd >}}

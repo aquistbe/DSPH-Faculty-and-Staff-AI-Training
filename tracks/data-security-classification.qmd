@@ -42,7 +42,7 @@ When a tool isn't cleared for your data, the move is to de-identify, use synthet
 
 **Steps.**
 
-1. For each scenario, classify the data sensitivity (Public / Low Risk / Moderate Risk / High Risk) and identify which Drexel-approved tools may be used. Check the [AI Tools page](https://drexel.edu/provost/ai/tools).
+1. For each scenario, classify the data sensitivity (Public / Low Risk / Moderate Risk / High Risk) and identify which Drexel-approved tools may be used. Check the [AI Tools page](https://drexel.edu/provost/ai/tools). (Drexel's [interim classification scheme](https://servicedesk.drexel.edu/TDClient/277/Portal/KB/Article/20082) also defines a fourth, stricter **Restricted** tier for data requiring non-networked storage — none of the AI tools here are approved for it.)
 
 2. Sanity-check with AI:
 
@@ -185,3 +185,5 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 ## Data rules
 This **is** the data-rules topic: never exceed a tool's approved classification. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
 :::
+
+{{< include /_feedback-track.qmd >}}

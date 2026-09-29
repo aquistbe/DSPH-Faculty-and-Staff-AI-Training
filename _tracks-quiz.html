@@ -81,6 +81,12 @@ details.activity > *:not(summary):first-of-type{margin-top:.4rem}
         var pct=Math.round(correct/qs.length*100);
         var verdict=pct>=80?"You're ready — dive in.":(pct>=50?"Close — skim the readings first, then start Activity 1.":"Start with the readings and Activity 1, then retry.");
         score.textContent='You scored '+correct+'/'+qs.length+' ('+pct+'%). '+verdict;
+        try{
+          if(window.goatcounter&&window.goatcounter.count){
+            var slug=location.pathname.split('/').pop().replace(/\.html$/,'')||'index';
+            window.goatcounter.count({path:'quiz/'+slug+'/'+correct+'of'+qs.length,title:'Readiness quiz: '+slug,event:true});
+          }
+        }catch(e){}
       });
       box.innerHTML=''; box.appendChild(wrap); box.appendChild(btn); box.appendChild(score);
     });

@@ -18,7 +18,7 @@ title: "Collaborating on Projects"
 
 ## Overview
 
-A shared **Project** in ChatGPT Edu gives a team one place for related chats, files, and instructions, so everyone works from the same context and a colleague can pick up where you left off. **Custom GPTs** turn a good prompt into a reusable team tool, and a **shared prompt library** spreads what works. This is the self-paced companion to [Workshop 3 — Collaboration on Projects](../workshop3.qmd); do that workshop for the live, hands-on version.
+A shared **Project** in ChatGPT Edu gives a team one place for related chats, files, and instructions, so everyone works from the same context and a colleague can pick up where you left off. **Custom GPTs** turn a good prompt into a reusable team tool, and a **shared prompt library** spreads what works. This is the self-paced companion to [Core 3 · Reusable Assistants](../workshop3.qmd); do that session for the live, hands-on version.
 
 Shared use raises new questions: whose data is this, who agreed to it, and who has access. Keep sharing **inside Drexel** ("Only those invited"), keep PHI and sensitive or identifiable data out of shared files, and match the tool to Drexel's data classification.
 
@@ -143,7 +143,7 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 ## Useful resources
 
 - [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with the data rules.
-- [Workshop 3 — Collaboration on Projects](../workshop3.qmd) — the live workshop this builds on.
+- [Core 3 · Reusable Assistants](../workshop3.qmd) — the live session this builds on.
 
 ---
 
@@ -157,3 +157,5 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 ## Data rules
 Keep sharing **inside Drexel** and keep PHI or sensitive/identifiable data out of shared Projects and custom-GPT files. Match the tool to Drexel's data classification. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
 :::
+
+{{< include /_feedback-track.qmd >}}

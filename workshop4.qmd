@@ -1,20 +1,20 @@
 ---
-title: "Workshop 4: AI for Documents & Visuals (Adobe)"
+title: "Elective · Documents & Visuals (Adobe)"
 ---
 
 ::: {.day-header}
-# Workshop 4: AI for Documents & Visuals
+# Elective · Documents & Visuals (Adobe)
 ::: {.day-subtitle}
 Adobe Creative Cloud Pro --- Acrobat AI Assistant for PDFs and Firefly for communication graphics
 :::
 ::: {.day-time}
-Upcoming --- Fall 2026 | Date TBD | 1 hour | Bring a laptop
+1 hour | Bring a laptop | Offered once a year --- dates announced by school email
 :::
 :::
 
 :::{.callout-note}
-## Upcoming Workshop
-This session is planned for the **fall**. The date will be posted on the [home page](index.qmd#schedule) once scheduled. The agenda below is a draft.
+## Elective Session
+This is an **elective**, offered once a year by demand. Dates are announced by school email and posted on the [home page](index.qmd#schedule).
 :::
 
 ## What You'll Leave With
@@ -59,7 +59,7 @@ Reach for **Acrobat AI Assistant** when the work is trapped in a PDF. Reach for 
 
 ## Ethics & Governance: Representation, Accuracy, and Disclosure in AI Media (15 min)
 
-*The thread continues. Earlier workshops dealt with AI text and team use. Making images and visuals adds a distinct set of risks, because pictures carry meaning---and bias---in ways that land fast and stick.*
+*The core sessions build a thread on how AI fails, verification, and disclosure that culminates in [Core 4: Verify, Disclose, Decide](workshop5.qmd). This elective applies it to images and visual media, which add a distinct set of risks---pictures carry meaning, and bias, in ways that land fast and stick.*
 
 **Representation bias is the big one.** Image models learn from internet-scale pictures and reproduce the stereotypes in them. Ask for "a doctor," "an epidemiologist," "a health department director" and you'll often get the same narrow demographic; ask for "a low-income neighborhood" or "a person struggling with addiction" and you may get stigmatizing, stereotyped scenes. In public health this is not a small problem: biased visuals can misrepresent and stigmatize the very communities we serve, and signal who "belongs" in a profession. Generate a few of these in the activity and you'll see it directly.
 
@@ -159,4 +159,6 @@ Generated images can include inaccurate or stereotyped depictions. For anything 
 ## Related
 
 - [Tools & Access](tools.qmd) --- full data rules and the Adobe section
-- [Workshop 2](workshop2.qmd) --- the document-summarizing patterns that pair with Acrobat AI Assistant
+- [Core 2: Workflow Enhancement](workshop2.qmd) --- the document-summarizing patterns that pair with Acrobat AI Assistant
+
+{{< include /_feedback-workshop.qmd >}}

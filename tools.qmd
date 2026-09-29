@@ -9,7 +9,7 @@ Which AI tools to use at DSPH, how to get them, and the data rules that come wit
 :::
 :::
 
-This page is the reference for the tools we use across all three workshops. The short version: **use Drexel-licensed tools for Drexel work, check the Drexel data classification for each tool, and never put regulated or sensitive data into a consumer tool.**
+This page is the reference for the tools we use across the core sessions and the electives. The short version: **use Drexel-licensed tools for Drexel work, check the Drexel data classification for each tool, and never put regulated or sensitive data into a consumer tool.**
 
 Drexel's official hub is **[AI at Drexel](https://drexel.edu/provost/ai)** (Office of the Provost). The **[AI Tools page](https://drexel.edu/provost/ai/tools)** lists each tool's availability and the **data classification level** it's approved for---treat that page as the authoritative source if anything here and Drexel's guidance differ.
 
@@ -17,7 +17,7 @@ Drexel's official hub is **[AI at Drexel](https://drexel.edu/provost/ai)** (Offi
 
 | Tool | Drexel access | Drexel data classification | Best for |
 |------|---------------|----------------------------|----------|
-| **ChatGPT Edu** | Faculty and staff, Drexel workspace | Governed by **Drexel ChatGPT Edu Terms of Use** | Writing, summarizing, analysis, custom GPTs |
+| **ChatGPT Edu** | Faculty, staff, and students, Drexel workspace | Governed by **Drexel ChatGPT Edu Terms of Use** | Writing, summarizing, analysis, custom GPTs |
 | **Microsoft Copilot Chat with Enterprise Data Protection** | Students, faculty, and staff | **High Risk Data** when signed in with Drexel account; **Low Risk Data** otherwise | Web-based AI chat, drafting, summarizing |
 | **Microsoft 365 Copilot** | Faculty and staff, extra-cost license | **High Risk Data** | Word, Excel, PowerPoint, Outlook, Teams |
 | **Zoom AI Companion** | Faculty, staff, and students | **High Risk Data** when not recorded/transcribed; **Low Risk Data** when recorded/transcribed | Meeting summaries, recaps, action items |
@@ -30,20 +30,35 @@ Drexel's official hub is **[AI at Drexel](https://drexel.edu/provost/ai)** (Offi
 Regulated or sensitive information --- PHI, non-directory PII, confidential HR information, protected student records, identifiable human-subjects data, contract-protected data, or export-controlled data --- goes **only** into a tool and use case explicitly approved for it. When unsure, do not enter it. Use de-identified or synthetic data and ask for guidance.
 :::
 
+:::{.callout-important}
+## Research Data Has Its Own Rules
+**No research study data goes into commercial or consumer AI tools** — personal ChatGPT, Claude, Gemini, Perplexity, or any tool outside Drexel's approved list. That is absolute for anything containing PII or HIPAA-protected information, and it applies to "just testing a prompt" too. For other study data, **de-identified, aggregate, or publicly available data may be acceptable in a Drexel-approved tool — but only with the PI's approval and within the data's own terms**: the IRB protocol, any data use agreement, sponsor conditions, and the source's terms of use can each be more restrictive than Drexel's classification tiers. The classification table above is the floor, not the ceiling — when in doubt, ask the PI before any study data touches an AI tool. (For AI in grant writing and manuscripts — a separate set of rules — see [Grant & Proposal Development](tracks/grant-proposal-development.qmd) and [Manuscript Preparation & Peer Review](tracks/manuscript-peer-review.qmd).)
+:::
+
+
+## Students: What You Have Access To
+
+- **ChatGPT Edu --- yes.** Students were added in August 2026; sign in with your Drexel account.
+- **Copilot Chat with Enterprise Data Protection --- yes.** Sign in with your Drexel account and confirm EDP is active.
+- **Zoom AI Companion and the Adobe AI tools --- yes**, at the classifications listed in the table above.
+- **Microsoft 365 Copilot inside Word, Excel, PowerPoint, Outlook, and Teams --- no.** That is an extra-cost faculty/staff license. Use **Copilot Chat in the browser** instead and paste your text in; every Copilot Chat prompt in these sessions works that way.
+- **Two Edu-workspace features have low-fidelity substitutes** if something isn't enabled for you: a **saved instruction block in a note** that you paste at the top of a chat does roughly what a **custom GPT** does (you re-paste it each time instead of it being built in), and a **shared OneDrive folder** of files and a written instruction doc does roughly what a **shared Project** does (the AI won't read the folder itself---you attach the files each session).
+- Your **course AI policies come from your instructors**, not from this site — and that includes the **APE** and the **ILE/capstone**, where the supervising instructor, advisor, or preceptor sets the rules. Drexel's [generative AI and teaching guidance](https://drexel.edu/teaching-and-learning/resources/teaching-tech/GAI-and-teaching/) is instructor-level guidance, not a university-wide policy. Read the syllabus first; these tools don't override it.
+
 ## ChatGPT Edu (Primary Tool)
 
-ChatGPT Edu is Drexel's institutionally supported version of ChatGPT. It is the default tool for most of what we do in these workshops.
+ChatGPT Edu is Drexel's institutionally supported version of ChatGPT. It is the default tool for most of what we do in these sessions.
 
 **What it gives you**
 
-- Access to current OpenAI models in a Drexel-managed workspace. Use **GPT-5.5** when it appears in your model picker; otherwise use the current default/latest GPT model available in the Drexel workspace.
+- Access to current OpenAI models in a Drexel-managed workspace. In these materials, "**the current default model**" means whatever model the Drexel ChatGPT Edu workspace selects by default (model names change too often to hard-code); "**the smaller/faster model**" means the lighter option in the picker.
 - Prompts and uploaded content are **not used to train OpenAI's models**
 - Higher message limits than the free tier
 - The ability to build and share **custom GPTs** (reusable assistants with your own instructions and files) inside the Drexel workspace
 
 **How to get access**
 
-ChatGPT Edu is **available now to Drexel faculty and professional staff** ([announcement](https://drexel.edu/provost/news-events/announcements/2026/May/faculty-and-professional-staff-access-to-chatgpt-edu)). Request access and read the feature details through the IT service catalog: **[ChatGPT Edu Features and Access](https://servicedesk.drexel.edu/TDClient/277/Portal/Requests/ServiceDet?ID=10760)**. Review the [ChatGPT Terms of Use](https://servicedesk.drexel.edu/TDClient/277/Portal/KB/ArticleDet?ID=20194) before you start. Bring any access questions to Workshop 1.
+ChatGPT Edu is **available to Drexel faculty, professional staff, and students** — access rolled out in phases through 2026, reaching students in August 2026, and is provisioned automatically based on an active Drexel affiliation ([Drexel AI Tools page](https://drexel.edu/provost/ai/tools), [FAQ](https://servicedesk.drexel.edu/TDClient/277/Portal/KB/Article/20193)). Request access and read the feature details through the IT service catalog: **[ChatGPT Edu Features and Access](https://servicedesk.drexel.edu/TDClient/277/Portal/Requests/ServiceDet?ID=10760)**. Review the [ChatGPT Terms of Use](https://servicedesk.drexel.edu/TDClient/277/Portal/KB/ArticleDet?ID=20194) before you start. Bring any access questions to Core 1 or the monthly AI Clinic.
 
 **Data rules**
 
@@ -67,7 +82,7 @@ Sign in with your Drexel account. For Copilot Chat, confirm that Enterprise Data
 
 **Data rules**
 
-Drexel's AI Tools page lists Copilot Chat with Enterprise Data Protection as usable with **High Risk Data** when signed in with a Drexel account, and **Low Risk Data** otherwise. Microsoft 365 Copilot is listed as usable with **High Risk Data** for faculty and staff with the extra-cost license. Do not use a personal Microsoft account for Drexel work.
+Drexel's AI Tools page lists Copilot Chat with Enterprise Data Protection as usable with **High Risk Data** when signed in with a Drexel account, and **Low Risk Data** otherwise. Microsoft 365 Copilot is listed as usable with **High Risk Data** for faculty and staff with the extra-cost license. Note: since April 2026, the in-app Copilot button in Word, Excel, and PowerPoint requires the paid Microsoft 365 Copilot license — without it, use Copilot Chat in the browser or Outlook instead ([details](https://servicedesk.drexel.edu/TDClient/277/Portal/KB/Article/20230)). Do not use a personal Microsoft account for Drexel work.
 
 ## Zoom AI Companion (Meetings)
 
@@ -105,7 +120,7 @@ Sign in with your Drexel account. Some Adobe licenses or premium features may in
 
 Drexel lists Adobe Acrobat AI Assistant, PDF Spaces, Creative Cloud, and Express as usable with **Moderate Risk Data**. Confirm the current classification on the [AI Tools page](https://drexel.edu/provost/ai/tools) before putting real documents into Acrobat AI Assistant. Review generated images before publishing---they can be inaccurate or misrepresent people and communities.
 
-This tool is the focus of [Workshop 4](workshop4.qmd).
+These tools are the focus of the [Documents & Visuals with Adobe](workshop4.qmd) elective.
 
 ## Consumer and PI-Purchased Tools
 

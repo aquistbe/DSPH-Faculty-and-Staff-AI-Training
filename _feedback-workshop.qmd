@@ -1,0 +1,13 @@
+
+---
+
+## Give Feedback on This Workshop {.unnumbered}
+
+::: {.callout-note}
+## Two minutes: tell us how this session went
+Your feedback directly shapes how these workshops are revised and what gets scheduled next.
+
+[**Workshop feedback form** ↗](https://forms.cloud.microsoft/r/nkvSu3x9PD){.btn .btn-primary target="_blank"}
+
+In the first question, select the session you attended.
+:::

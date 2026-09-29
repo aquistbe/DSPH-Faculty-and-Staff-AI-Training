@@ -8,7 +8,7 @@ Self-paced track · 7 topics · moderate → advanced
 
 [← All self-paced tracks](../tracks.qmd){.track-back}
 
-Go beyond chat: package reusable instructions, run multi-step and looped tasks, and build assistants that connect to your files and tools. Start from **[Workshop 5](../workshop5.qmd)** (agentic basics) and keep **Workshop 1**'s data rules in view. The throughline: more autonomy for the tool means more deliberate oversight from you.
+Go beyond chat: package reusable instructions, run multi-step and looped tasks, and build assistants that connect to your files and tools. Start from **[Core 3 · Reusable Assistants](../workshop3.qmd)** (assistant-building basics) and keep **Core 1**'s data rules in view. The throughline: more autonomy for the tool means more deliberate oversight from you.
 
 ## Difficulty levels
 
@@ -40,5 +40,7 @@ Answer a few questions to find your starting point in this track.
 
 ::: {.callout-warning}
 ## Data rules apply throughout
-Use **public or non-sensitive** data for every activity, and match any tool to Drexel's data classification. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+Use **public or non-sensitive** data for every activity, and match any tool to Drexel's data classification. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools). **Study data is stricter:** never in commercial/consumer AI tools, and even aggregate or de-identified study data needs the PI's approval and must respect the IRB protocol, DUA, and the data's terms of use — see the Research Data callout on [Tools & Access](../tools.qmd).
 :::
+
+{{< include /_feedback-track.qmd >}}

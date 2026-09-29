@@ -13,11 +13,11 @@ Guides, references, and where to go deeper after the workshops
 
 - **[AI at Drexel](https://drexel.edu/provost/ai)** --- the university's central AI hub (start here).
 - **[AI Tools + data classification](https://drexel.edu/provost/ai/tools)** --- which tools are approved for which data (authoritative).
-- **ChatGPT Edu** --- university-licensed; primary tool for the workshops. Use **GPT-5.5** when it appears in your model picker; otherwise use the current default/latest GPT model in the Drexel workspace. [Request access](https://servicedesk.drexel.edu/TDClient/277/Portal/Requests/ServiceDet?ID=10760). See also [Tools & Access](tools.qmd).
+- **ChatGPT Edu** --- university-licensed; primary tool for the workshops, available to faculty, professional staff, and students. Use **the current default model** in the Drexel workspace. [Request access](https://servicedesk.drexel.edu/TDClient/277/Portal/Requests/ServiceDet?ID=10760). See also [Tools & Access](tools.qmd).
 - **Microsoft Copilot Chat with Enterprise Data Protection** --- sign in with your Drexel M365 account; Drexel lists it as usable with **High Risk Data** when Enterprise Data Protection is active.
 - **Microsoft 365 Copilot** --- integrated with Word, Excel, PowerPoint, Outlook, and Teams for licensed faculty and staff; Drexel lists it as usable with **High Risk Data**.
 - **Zoom AI Companion** --- included with Drexel Zoom; meeting summaries, recaps, and action items. Drexel lists it as **High Risk Data** when not recorded or transcribed and **Low Risk Data** when recorded or transcribed.
-- **Adobe Acrobat AI Assistant, PDF Spaces, Creative Cloud, and Express** --- document and visual tools; Drexel lists them as usable with **Moderate Risk Data**. Featured in [Workshop 4](workshop4.qmd).
+- **Adobe Acrobat AI Assistant, PDF Spaces, Creative Cloud, and Express** --- document and visual tools; Drexel lists them as usable with **Moderate Risk Data**. Featured in the [Documents & Visuals with Adobe](workshop4.qmd) elective.
 
 ## Drexel Policy & Training
 
@@ -46,6 +46,7 @@ Guides, references, and where to go deeper after the workshops
 | Manage admin, schedules, grants | Drafting emails and reminders, summarizing long threads, cleaning up notes into agendas, reformatting documents |
 | Coordinate research | Meeting recaps with action items, drafting project updates, summarizing protocols and reports, first-draft plans |
 | Teach and run a lab / faculty | Drafting and revising materials, summarizing literature on public topics, generating practice questions, reformatting slides |
+| Study in an MPH, MS, or doctoral program | Understanding dense readings, structuring an argument before you write it, checking your own draft for gaps, practicing methods explanations---within your course AI policy |
 
 ## Public Health & AI --- Further Learning
 
@@ -53,17 +54,15 @@ Guides, references, and where to go deeper after the workshops
 - **World Health Organization (2021). _Ethics and Governance of Artificial Intelligence for Health._** [Available online](https://www.who.int/publications/i/item/9789240029200) --- authoritative, freely available guidance; the executive summary (pp. 1--12) is a good starting point.
 - **Mollick, E. (2024). _Co-Intelligence: Living and Working with AI._** --- accessible introduction to working with AI tools. His blog, **[One Useful Thing](https://www.oneusefulthing.org/)**, has regular, practical updates on AI developments.
 
-## Research-Staff Sessions (Coming Summer or Fall)
+## For Research Staff Who Code and Analyze
 
-For research staff who code and analyze data, specialized sessions will cover:
+The material once planned as a separate research-staff session is now available self-paced, and goes further than an hour would have:
 
-- AI for **data cleaning** and reshaping
-- Writing and debugging code in **Stata, R, and Python**
-- Explaining and documenting analyses
-- Reproducibility and good practice when AI writes code
+- **[Data & Analysis track](tracks/data-analysis.qmd)** --- data cleaning, coding in R/Stata/Python, statistical interpretation, qualitative analysis, dashboards, and image annotation, from novice to advanced.
+- **[Technical & Agentic track](tracks/technical-agentic.qmd)** --- reusable skills, context engineering, agents, loops, local models, RAG, and connecting tools with MCP.
 
-Watch for announcements, or email [daq26@drexel.edu](mailto:daq26@drexel.edu) to suggest topics.
+A **Data & Code for Research Staff** elective is planned to sit on top of these. Email [daq26@drexel.edu](mailto:daq26@drexel.edu) to suggest what it should cover.
 
 ## Suggest a Topic
 
-These workshops will repeat and expand. If there's a tool, task, or workflow you'd like covered, email [daq26@drexel.edu](mailto:daq26@drexel.edu).
+The core sessions repeat every fall and spring, and the elective list keeps growing. If there's a tool, task, or workflow you'd like covered, email [daq26@drexel.edu](mailto:daq26@drexel.edu).

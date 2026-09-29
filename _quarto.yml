@@ -13,27 +13,29 @@ project:
 
 website:
   title: "AI Workshops for DSPH"
-  description: "Hands-on AI workshops for Dornsife School of Public Health staff and faculty"
+  description: "Hands-on AI workshops for Dornsife School of Public Health faculty, staff, and graduate students"
   navbar:
     background: "#003366"
     foreground: white
     left:
       - href: index.qmd
         text: Home
-      - text: "Workshops"
+      - text: "Core Sessions"
         menu:
           - href: workshop1.qmd
-            text: "1 · Foundations & Capabilities"
+            text: "Core 1 · Foundations & Capabilities"
           - href: workshop2.qmd
-            text: "2 · Workflow Enhancement"
+            text: "Core 2 · Workflow Enhancement"
           - href: workshop3.qmd
-            text: "3 · Collaboration on Projects"
-          - href: workshop4.qmd
-            text: "4 · Documents & Visuals (Adobe)"
+            text: "Core 3 · Reusable Assistants"
           - href: workshop5.qmd
-            text: "5 · Getting Started with Agentic AI"
+            text: "Core 4 · Verify, Disclose, Decide"
+      - text: "Electives"
+        menu:
+          - href: workshop4.qmd
+            text: "Documents & Visuals (Adobe)"
           - href: workshop6.qmd
-            text: "6 · AI for Curriculum Development"
+            text: "AI for Curriculum Development"
       - href: tracks.qmd
         text: "Self-Paced Tracks"
       - href: paths.qmd
@@ -60,5 +62,6 @@ format:
     include-in-header:
       text: |
         <meta name="robots" content="noindex, nofollow">
+        <script data-goatcounter="https://aquistbe.goatcounter.com/count"
+                async src="//gc.zgo.at/count.js"></script>
     include-after-body: _tracks-quiz.html
-

@@ -18,7 +18,7 @@ title: "Responsible AI"
 
 ## Overview
 
-Responsible AI isn't a separate task — it's how you do every task. The governing principle from Workshop 1 holds: the person who acts on AI output owns the result. Disclosure, verification, and human oversight are the operational habits.
+Responsible AI isn't a separate task — it's how you do every task. The governing principle from Core 1 holds: the person who acts on AI output owns the result. Disclosure, verification, and human oversight are the operational habits.
 
 For grants and manuscripts, this principle now has real regulatory teeth: NIH will not review applications substantially developed by AI, NSF requires disclosure in the project description, and ICMJE/COPE prohibit AI authorship — see [Grant Proposal Development](grant-proposal-development.qmd) and [Manuscript Peer Review](manuscript-peer-review.qmd) for worked examples.
 
@@ -150,3 +150,5 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 ## Data rules
 Responsible use includes the data rules — confirm classification before any real data. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
 :::
+
+{{< include /_feedback-track.qmd >}}

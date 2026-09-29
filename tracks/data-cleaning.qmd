@@ -59,14 +59,14 @@ A **codebook** (what each variable means and how it's coded) is easy to skip and
 ```
 
 ```{=html}
-<details class="activity"><summary>Activity 2 · Novice — Recode and document (Philadelphia crime categories)</summary>
+<details class="activity"><summary>Activity 2 · Novice — Recode and document (crash lighting categories)</summary>
 ```
 
 **Time** ~18 min · **Tools** ChatGPT Edu + R or Python
 
 **Goal.** Standardize a messy category field and produce a codebook.
 
-**Setup.** Use this 18-row sample of fabricated pedestrian crash records (modeled on PennDOT crash data structure), or grab a real slice from [OpenDataPhilly Crime Incidents](https://opendataphilly.org/datasets/crime-incidents/). This sample has the typical data-cleaning problems built in:
+**Setup.** Use this 18-row sample of fabricated pedestrian crash records (modeled on PennDOT crash data structure — the same file as Activity 1). It has the typical data-cleaning problems built in:
 
 ```
 crash_id,date,time,severity,ped_age,ped_sex,speed_limit,road_type,crosswalk,lighting
@@ -96,7 +96,7 @@ Issues planted: inconsistent capitalization (severity, road_type, crosswalk, lig
 
 1. Recode:
 
-   > Here are the distinct values of the crime offense field. Propose a recode into 4–6 analysis groups (e.g., violent, property, quality-of-life, other) and write R/Python code mapping each original value to a group. Leave anything ambiguous as "review".
+   > Here are the distinct values of the lighting field from the file above: Daylight, daylight, Dark - lighted, Dark - not lighted, Dusk. Propose a recode into 3–4 analysis groups suitable for a pedestrian-crash analysis (e.g., daylight, dark – lighted, dark – not lighted, dawn/dusk) and write R/Python code mapping each original value to a group. Leave anything ambiguous as "review".
 
 2. Generate documentation:
 
@@ -104,13 +104,13 @@ Issues planted: inconsistent capitalization (severity, road_type, crosswalk, lig
 
 3. Verify counts before and after.
 
-**Expected result.** A grouped variable plus a codebook table; counts reconcile.
+**Expected result.** A grouped lighting variable plus a codebook table; the grouped counts sum to 18 — nothing dropped.
 
 **Check your work.** The grouped counts must sum to the original total — confirm nothing was dropped. Inspect the "review" bucket by hand.
 
-**Common pitfalls.** Don't let AI silently bucket ambiguous offenses. Grouping choices are substantive decisions — they're yours, not the model's.
+**Common pitfalls.** Don't let AI silently bucket ambiguous values. Grouping choices are substantive decisions — they're yours, not the model's.
 
-**Stretch (optional).** Ask AI to flag any offense whose grouping is genuinely debatable and explain the tradeoff.
+**Stretch (optional).** Want a messier version? Pull the distinct values of `text_general_code` from [OpenDataPhilly Crime Incidents](https://opendataphilly.org/datasets/crime-incidents/) and repeat with 4–6 groups (violent, property, quality-of-life, other) — real category fields are far uglier than this sample. Ask AI to flag any value whose grouping is genuinely debatable and explain the tradeoff.
 
 ```{=html}
 </details>
@@ -190,3 +190,5 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 ## Data rules
 Practice on **non-sensitive** data; de-identify before any tool sees real records. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
 :::
+
+{{< include /_feedback-track.qmd >}}

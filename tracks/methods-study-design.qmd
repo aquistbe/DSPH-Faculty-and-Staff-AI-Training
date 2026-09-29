@@ -8,7 +8,7 @@ Self-paced track · 4 topics · moderate → advanced
 
 [← All self-paced tracks](../tracks.qmd){.track-back}
 
-AI support for the research methods public-health staff use most — designing instruments, evaluating programs, working with geospatial data, and protecting participants through de-identification and synthetic data. Start from **[Workshop 1](../workshop1.qmd)**; keep data rules central, since this track touches real study data.
+AI support for the research methods public-health staff use most — designing instruments, evaluating programs, working with geospatial data, and protecting participants through de-identification and synthetic data. Start from **[Core 1](../workshop1.qmd)**; keep data rules central, since this track touches real study data.
 
 ## Difficulty levels
 
@@ -37,5 +37,7 @@ Answer a few questions to find your starting point in this track.
 
 ::: {.callout-warning}
 ## Data rules apply throughout
-Use **public or non-sensitive** data for every activity, and match any tool to Drexel's data classification. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+Use **public or non-sensitive** data for every activity, and match any tool to Drexel's data classification. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools). **Study data is stricter:** never in commercial/consumer AI tools, and even aggregate or de-identified study data needs the PI's approval and must respect the IRB protocol, DUA, and the data's terms of use — see the Research Data callout on [Tools & Access](../tools.qmd).
 :::
+
+{{< include /_feedback-track.qmd >}}

@@ -118,8 +118,8 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 
 ## Useful resources
 
-- [Workshop 2 — Workflow Enhancement](../workshop2.qmd) — the "don't over-rely" segment this builds on.
-- [Workshop 5 — Getting Started with Agentic AI](../workshop5.qmd) — automation bias and oversight.
+- [Core 2 · Workflow Enhancement](../workshop2.qmd) — the "don't over-rely" segment this builds on.
+- [Core 4 · Verify, Disclose, Decide](../workshop5.qmd) — the live session where this judgment map is practiced.
 - [Verifying AI Output](verifying-output.qmd) — the hands-on companion habit.
 - [Drexel AI Tools](https://drexel.edu/provost/ai/tools) — approved tools and data rules.
 
@@ -135,3 +135,5 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 ## Data rules
 No sensitive data is needed for this topic — it's about *how* you work with AI. Keep the data rules from the rest of the series in place whenever real data is involved. See [Tools & Access](../tools.qmd).
 :::
+
+{{< include /_feedback-track.qmd >}}

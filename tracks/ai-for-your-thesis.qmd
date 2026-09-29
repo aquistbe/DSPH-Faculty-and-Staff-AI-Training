@@ -1,0 +1,217 @@
+---
+title: "AI for Your Thesis or Dissertation"
+---
+
+::: {.topic-badges}
+[Moderate]{.level-badge .level-moderate} · **Teaching & Learning** track · ~35 min hands-on + readings and quiz
+:::
+
+[← Back to the Teaching & Learning track](teaching-learning.qmd){.track-back}
+
+*Build the habit now — AI critiques your draft, it never writes it — before a funder or a journal makes it a formal problem.*
+
+## What you'll be able to do
+
+- Apply the "AI critiques, never drafts" rule to a thesis, and say why funders and journals require it
+- Ask your advisor what they expect *before* you need the answer
+- Use AI as a committee member against a methods section you wrote yourself
+- Verify every citation in a chapter before it carries your name
+
+## Overview
+
+A thesis or dissertation is the first thing you write that behaves like professional scientific work: it gets defended, it turns into papers, and its chapters turn into F31 and dissertation-award applications. The rules that govern professional work already apply — you just meet them earlier, usually before anyone hands you the policy.
+
+The rule is the one running through this series: **use AI to brainstorm before you write and to critique after, and write the substantive science yourself.** Brainstorming framings, drafting a search strategy, tightening language you already wrote, stress-testing a chapter the way a committee member would — all fine. Having AI produce your background, methods, results, or interpretation is not. It's also how you keep what you need at the defense: the ability to answer *why did you do it this way* in your own words, without notes.
+
+Who sets the rules? For the thesis, dissertation, ILE/capstone, and APE alike, the advisor, committee, or preceptor of record does — Drexel's central [guidance on generative AI and teaching](https://drexel.edu/teaching-and-learning/resources/teaching-tech/GAI-and-teaching/) keeps AI decisions at the course and instructor level, and no final university-wide policy has been published as of this writing. Which is exactly why Activity 1 below has you ask your advisor *before* you need the answer.
+
+::: {.callout-important}
+## Read before you draft: what funders and journals already require
+
+These rules govern grant applications and manuscripts, not your dissertation as submitted to Drexel. But your chapters become both — often within a year — and the habits aren't retrofittable.
+
+**NIH** ([NOT-OD-25-132, "Supporting Fairness and Originality in NIH Research Applications"](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-25-132.html)): Applications "substantially developed by AI," or containing sections substantially developed by AI, are not the applicant's original ideas and **will not be reviewed**. NIH uses detection technology to identify AI-generated content, and post-award discovery can be referred to the Office of Research Integrity as a misconduct matter. The notice allows AI "to assist in application preparation for limited aspects or in specific circumstances" (e.g., administrative tasks) but flags plagiarism and fabricated citations as risks. It applies to F31s, effective for the September 25, 2025 receipt date and beyond.
+
+**NSF** ([Notice to the Research Community on Use of Generative AI in the Merit Review Process](https://www.nsf.gov/news/notice-to-the-research-community-on-ai)): Proposers are asked to **indicate in the project description** the extent to which, if any, generative AI was used and how. You remain fully responsible for the accuracy and authenticity of everything submitted.
+
+**ICMJE and COPE** ([ICMJE](https://www.icmje.org/recommendations/browse/artificial-intelligence/ai-use-by-authors.html); [COPE](https://publicationethics.org/guidance/cope-position/authorship-and-ai-tools)): **AI cannot be an author** — it can't take responsibility for the accuracy, integrity, and originality of the work. Human authors are fully responsible for all content including AI-assisted portions, and must ensure citations are real and accurate. ICMJE places disclosure in both the cover letter and the manuscript; failing to disclose can be construed as misconduct.
+
+**Your program and committee are a separate layer.** Where policy is silent, ask, disclose anyway, and never let AI write the substantive science.
+:::
+
+## Practice activities
+
+```{=html}
+<details class="activity"><summary>Activity 1 · Moderate — Ask your advisor before you need the answer</summary>
+```
+
+**Time** ~15 min · **Tools** a document + ChatGPT Edu (optional)
+
+**Goal.** Turn "I should ask my advisor about AI sometime" into five specific questions and one conversation — while the stakes are still hypothetical.
+
+**Setup.** The wrong time to discover your advisor's expectations is the week a chapter is due. Here is a **fabricated** advisor note of the kind some faculty now send — short, reasonable, and not answering everything.
+
+> **From: Dr. Priya Raman (fabricated) — "AI expectations for my students"**
+>
+> 1. Everything with your name on it should be your writing. If a committee member asks "why did you do it this way," the answer needs to be yours.
+> 2. Use it to clean up your grammar all you like — I'd rather read a clear sentence than a clumsy one.
+> 3. I don't want AI anywhere near your methods or your results.
+> 4. Citations: check every one. I have caught two fabricated references in student drafts this year, and I won't read a chapter with a bad reference list.
+> 5. If you're submitting an F31 or a paper, tell me what you used before we submit, not after.
+> 6. Ask me before you try something new with these tools.
+
+**Steps.**
+
+1. Write down what the note does **not** tell you. Be precise — "it's vague about methods" isn't a question; "does point 3 prohibit asking AI to critique a methods section I wrote myself?" is.
+
+2. Draft five questions for your own advisor, adapting these to your project:
+
+   - **Drafting:** Where is the line between AI helping me and AI writing? Does it move between a chapter draft, a conference abstract, and an F31?
+   - **Critique:** Are you comfortable with me asking AI to stress-test a section *after* I've written it, and does that count as AI "touching" it?
+   - **Literature:** May I use AI for search strategies and screening, and what verification do you want on what it returns?
+   - **Disclosure:** When a chapter becomes a paper, what gets disclosed, where, and who writes it — me or you?
+   - **Tools and data:** Which tools are acceptable for our unpublished data? (Check [Tools & Access](../tools.qmd) first so you arrive informed.)
+
+3. Optional pressure-test:
+
+   > Here are five questions I've drafted for my dissertation advisor about AI use. Which are too vague to get a usable answer, and which important question am I not asking? Don't answer them — critique them. [your five questions]
+
+4. Ask them, and write the answers down, dated. A note from September is useful in February.
+
+**Expected result.** Five specific questions, at least three adapted to your actual project, answered this month rather than at submission.
+
+**Check your work.** The planted ambiguity sits between points 2 and 3: point 2 permits AI to "clean up your grammar" anywhere in the document, while point 3 puts AI "nowhere near your methods or your results." Those overlap — polishing the language of a methods section is both at once. And neither says whether the practice this page recommends most strongly (Activity 2: AI *critiquing* a methods section you wrote) counts as "near." If your gap list names that overlap, you're reading the way you need to. If you assumed critique was obviously fine, notice that you assumed.
+
+**Common pitfalls.** Asking one broad question ("how do you feel about AI?") and getting one broad answer. Not writing the answers down. And assuming a permissive advisor overrides funder or journal policy — separate layers, and the funder's applies regardless.
+
+**Stretch (optional).** Write the two-sentence standing rule you'll follow without re-asking, for the top of your working notes.
+
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 2 · Moderate — Make AI your toughest committee member</summary>
+```
+
+**Time** ~20 min · **Tools** ChatGPT Edu
+
+**Goal.** Practice the sanctioned pattern where it pays most: you write the methods, AI attacks them the way a committee member will, you fix what's real.
+
+**Setup.** Use the methods excerpt below — **fabricated for practice** (fictional city, fictional university, invented numbers) — containing at least one claim a committee member would stop on.
+
+> **Fabricated thesis methods excerpt.**
+>
+> We recruited participants from the waiting rooms of two federally qualified health centers in the fictional city of Harborview between January and June 2025. Research assistants approached adults aged 18 and older during weekday daytime clinic hours and invited them to complete a 20-minute tablet survey; 214 of the 260 adults approached agreed to participate (82% response). Because the two clinics serve neighborhoods spanning the city's income distribution, the resulting sample is representative of Harborview's adult population. The survey included the PHQ-8, a food-security module adapted from the USDA six-item scale, and items on transportation barriers. Depression was modeled as a binary outcome (PHQ-8 ≥ 10) using logistic regression adjusted for age, sex, income, and insurance status. Missing income data (11%) were handled by complete-case analysis. All procedures were approved by the fabricated Marchmont University IRB.
+
+**Steps.**
+
+1. Mark your own challenges first, on paper. Five minutes, no AI. (Doing it yourself first is the point — see [Keeping Your Judgment](judgment-and-offloading.qmd).)
+
+2. Convene the committee:
+
+   > Act as a dissertation committee member reading this methods section. Do not rewrite it. List every claim you would challenge at a defense, in order of how hard you'd press, and for each state exactly what question you'd ask the candidate. Pay particular attention to any claim the described procedures don't support. [paste the excerpt]
+
+3. Press on the worst one:
+
+   > Take the strongest objection on your list. If I defended that claim by saying the two clinics cover a wide income range, what would your follow-up be?
+
+4. Decide which objections are real, and rewrite the offending sentences **yourself**. Don't ask it to rewrite them.
+
+5. Re-run step 2 on your revision and see whether the objection is gone or just relocated.
+
+**Expected result.** A ranked list of defense-grade objections, and a revised excerpt where the indefensible claim is replaced by an accurate one you wrote.
+
+**Check your work.** The planted flaw: **the sample is called "representative of Harborview's adult population," and nothing in the methods supports that.** It's a convenience sample of people in two clinic waiting rooms on weekday daytimes — favoring people not at work during business hours, who use those two clinics, and who had a reason to be there. A wide income range across two neighborhoods is not a sampling frame, and there's no probability sampling of any kind. The honest sentence is closer to "a convenience sample drawn from two clinic populations, not representative of Harborview adults," plus a limitations note. Note too that 82% is a *participation* rate among those approached, not a response rate for any defined population.
+
+If the AI caught it, good. If it didn't — and it may not, because the paragraph is fluent — that's the more important result: **the tool is a second reader, not the reader.** Two secondary issues worth catching yourself: complete-case analysis with 11% missing income can bias estimates when income is a key covariate, and no power justification is given for n = 214.
+
+**Common pitfalls.** Asking AI to "improve" the methods instead of critiquing them — that crosses from critique into drafting. Accepting a critique you don't agree with; you decide which objections are real and make every edit yourself. And use an approved tool — unpublished thesis text and data are not Low Risk Data ([Tools & Access](../tools.qmd)).
+
+**Stretch (optional).** Re-run as "the biostatistician on the committee," then "the community-partner member," and compare what each surfaces.
+
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 3 · Moderate — Audit a chapter's citations before your name goes on it</summary>
+```
+
+**Time** ~18 min · **Tools** ChatGPT Edu + PubMed
+
+**Goal.** Apply the verification approach from [Literature Review & Evidence Synthesis](literature-review.qmd) where a fabricated citation is most expensive: a chapter that becomes a paper.
+
+**Setup.** AI invents references that look perfect — real journal, plausible authors, well-formed volume and pages. In a course paper that's embarrassing; in a chapter it propagates into a manuscript, where ICMJE and COPE put citation accuracy squarely on you. Here are four references from a **fabricated** chapter — two real, two planted errors. Don't look them up yet.
+
+> 1. **PMID 31783684** — DiMaggio et al. (2019). "Changes in Pedestrian and Bicyclist Injury Patterns in New York City After Adoption of Vision Zero." *JAMA Netw Open.*
+> 2. **PMID 31175717** — Stoker et al. (2019). "Pedestrian Safety and the Built Environment: A Review of the Risk Factors." *J Plan Lit.*
+> 3. **PMID 35238777** — Chen & Rodriguez (2021). "Sidewalk Connectivity and Pedestrian Crash Risk in Mid-Sized Cities." *Am J Public Health.*
+> 4. **PMID 99887766** — Larsen et al. (2020). "Urban Greening Interventions and Pedestrian Injury: A Systematic Review." *Accid Anal Prev.*
+
+**Steps.**
+
+1. Verify each **by hand first** in PubMed: does the PMID resolve, and do title, first author, year, and journal match what the reference claims? Record PASS or FAIL with a reason.
+
+2. For every PASS, do the check most people skip — open the abstract and confirm the paper supports the sentence citing it. A real paper attached to a claim it doesn't make is still a citation error.
+
+3. Now ask AI and compare:
+
+   > Here are four references from a chapter I'm writing. For each, tell me whether you can confirm it exists and whether the title, authors, year, and journal are consistent. Say explicitly when you are not certain rather than guessing. [paste the four references]
+
+4. Compare its verdicts to your PubMed results. Where it was confidently wrong — in either direction — is the finding.
+
+**Expected result.** References 1 and 2 PASS. Reference 4 fails outright: **PMID 99887766 does not exist.** Reference 3 fails as a mismatch: **PMID 35238777 is a real record, but it is Amram et al. (2022), "Association of the Built Environment with Pedestrian Crashes Along Arterial Roads," *Inj Prev*** — the claimed authors, title, year, and journal belong to no paper at all. That second kind is the dangerous one: a valid-looking PMID with invented details survives a glance, and survives your reference manager, because the manager stores what you typed.
+
+**Check your work.** Open both flagged PMIDs in PubMed yourself and confirm the verdicts — including the AI's. If it confidently "confirmed" reference 4, you've seen the failure mode you're guarding against. And ask honestly which of the two you'd have caught at 11pm the night a chapter was due.
+
+**Common pitfalls.** Treating a formatted citation as evidence a paper exists — if you can't open it, you can't cite it ([Verifying AI Output](verifying-output.qmd)). Verifying that a paper exists but not that it says what you claim. And verifying a chapter once, then adding six references during revisions without re-checking.
+
+**Stretch (optional).** [Literature Review & Evidence Synthesis](literature-review.qmd) Activity 3 checks a whole reference list against PubMed's E-utilities API with Claude Code — worth doing once for a full chapter bibliography.
+
+```{=html}
+</details>
+```
+
+
+## Check your readiness
+
+Answer these, then check — your score suggests whether to dive in or skim the readings first.
+
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions": [{"q": "Who should write the first draft of your dissertation's methods and results?", "options": ["You — then AI can critique it the way a committee member would", "AI — you revise it afterward", "AI — as long as you disclose it", "Whichever gets the chapter done faster"], "answer": 0, "explain": "NIH will not review applications substantially developed by AI, ICMJE and COPE hold the human author responsible for all content, and your defense requires that the reasoning be yours."}, {"q": "Can an AI tool be listed as an author on the paper your chapter becomes?", "options": ["No — ICMJE and COPE both prohibit it; human authors are fully responsible for all content", "Yes, if it contributed substantially", "Yes, in the acknowledgments only", "Only if the journal has no AI policy"], "answer": 0, "explain": "AI can't take responsibility for the accuracy, integrity, and originality of the work — and your AI use must still be disclosed."}, {"q": "The best time to ask your advisor what they expect about AI is…", "options": ["Early, with specific questions, and you write the answers down", "When they raise it", "After you submit, as a disclosure", "Never — permissive silence is easier to work with"], "answer": 0, "explain": "Early questions get usable answers; the same ones at submission are a disclosure. And a permissive advisor doesn't override funder or journal policy."}]}
+</script>
+</div>
+
+## Recommended readings
+
+Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings**, and online where linked:
+
+- [**AI-Slop, GrantaGate and Bad Writing (Tuhin Chakrabarty)**](https://tuhinchakrabarty.substack.com/p/ai-slop-grantagate-and-bad-writing) — what AI-generated academic text reads like to a reviewer.
+- [**A Framework for Technical Writing in the Age of LLMs**](https://thedataquarry.com/blog/a-framework-for-reading-and-writing/) — writing faster without losing rigor.
+- [**Peer Review Is Dead; Long Live Peer Review!**](https://daafguide.substack.com/p/a-better-ai-future-for-peer-review) — the review system your chapters are headed into.
+
+## Useful resources
+
+- [NIH: NOT-OD-25-132](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-25-132.html) — the policy that applies to your F31.
+- [NSF: Notice on Use of Generative AI in the Merit Review Process](https://www.nsf.gov/news/notice-to-the-research-community-on-ai) — NSF's disclosure ask.
+- [ICMJE: AI Use by Authors](https://www.icmje.org/recommendations/browse/artificial-intelligence/ai-use-by-authors.html) and [COPE: Authorship and AI Tools](https://publicationethics.org/guidance/cope-position/authorship-and-ai-tools) — no AI authorship; disclose which tools you used.
+- [EQUATOR Network](https://www.equator-network.org) — reporting guidelines (STROBE, CONSORT) to critique your methods against.
+- [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — unpublished thesis material belongs in an approved tool.
+- [Grant & Proposal Development](grant-proposal-development.qmd), [Manuscript Preparation & Peer Review](manuscript-peer-review.qmd), and [Literature Review & Evidence Synthesis](literature-review.qmd) — the full versions of the rules and the workflow condensed here.
+
+---
+
+## Navigate
+
+**Back to track overview:** [Teaching & Learning](teaching-learning.qmd)
+
+**Related topics:** [AI in Your Coursework](ai-in-your-coursework.qmd) · [Manuscript Preparation & Peer Review](manuscript-peer-review.qmd) · [Grant & Proposal Development](grant-proposal-development.qmd)
+
+::: {.callout-warning}
+## Data rules
+Your unpublished thesis text, data, and analyses are **not** Low Risk Data — keep them in an approved Drexel tool, and check any human-subjects data against your IRB protocol and data use agreements first. Practice with the fabricated excerpts on this page. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+:::
+
+{{< include /_feedback-track.qmd >}}

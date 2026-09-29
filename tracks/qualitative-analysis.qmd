@@ -164,5 +164,7 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 
 ::: {.callout-warning}
 ## Data rules
-De-identify transcripts and use an **approved** tool; qualitative data is frequently sensitive. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+De-identify transcripts and use an **approved** tool; qualitative data is frequently sensitive. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools). **Study data is stricter:** never in commercial/consumer AI tools, and even aggregate or de-identified study data needs the PI's approval and must respect the IRB protocol, DUA, and the data's terms of use — see the Research Data callout on [Tools & Access](../tools.qmd).
 :::
+
+{{< include /_feedback-track.qmd >}}

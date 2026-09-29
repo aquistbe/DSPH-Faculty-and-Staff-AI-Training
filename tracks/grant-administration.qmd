@@ -136,6 +136,8 @@ Create a file called `foas.csv` in that folder (any text editor works — or ask
 > Heat Resilience Planning for Older Adults,RWJF,8,2027-01-15
 > ```
 
+The dates above were written in summer 2026. Before you start, edit the `due_date` values so that one is already past, one falls within the next 60 days, and the rest are further out — the past-due row is deliberate; step 3 checks how your script handles it.
+
 **Steps.**
 
 1. In the folder containing `foas.csv`, type `claude` to start Claude Code, then describe the tool you want:
@@ -144,7 +146,7 @@ Create a file called `foas.csv` in that folder (any text editor works — or ask
 
 2. Claude Code will show you what it plans to create and ask permission before writing files or running anything — read each request before approving. When it finishes, run the command it gives you (typically `python deadline_tracker.py`).
 
-3. Test that it's genuinely reusable: add a fifth made-up FOA row to `foas.csv` yourself, rerun the script, and confirm the new opportunity appears in the right sorted position.
+3. Test that it's genuinely reusable: add a fifth made-up FOA row to `foas.csv` yourself, rerun the script, and confirm the new opportunity appears in the right sorted position. Then look at the past-due row: does the script print a clear "PAST DUE" flag, or a confusing negative days-remaining number? If the latter, ask for a fix in plain English.
 
 4. Ask for one refinement in plain English:
 
@@ -198,3 +200,5 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 ## Data rules
 Use **non-sensitive** grant information only — public FOAs, de-identified milestones, generic templates. Do not paste real budget numbers with personnel names and salaries. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
 :::
+
+{{< include /_feedback-track.qmd >}}

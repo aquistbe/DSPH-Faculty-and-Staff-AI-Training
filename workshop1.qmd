@@ -1,14 +1,14 @@
 ---
-title: "Workshop 1: Foundations & Capabilities"
+title: "Core 1 · Foundations & Capabilities"
 ---
 
 ::: {.day-header}
-# Workshop 1: Foundations & Capabilities
+# Core 1 · Foundations & Capabilities
 ::: {.day-subtitle}
 What generative AI is, which Drexel tools to use, and how to prompt for useful results
 :::
 ::: {.day-time}
-Monday, June 29, 2026 | 1:00--2:00 PM | Bring a laptop
+One hour | Bring a laptop | Runs weekly in the fall term and repeats in spring --- dates announced by school email
 :::
 :::
 
@@ -23,7 +23,7 @@ By the end of this hour, you will be able to:
 
 1. Explain in plain terms what a large language model does---and what it doesn't
 2. Choose the right Drexel-approved tool for a task and know the data rules
-3. Sign in to ChatGPT Edu, select GPT-5.5 when available, and run your first useful prompts
+3. Sign in to ChatGPT Edu, select the current default model, and run your first useful prompts
 4. Use a simple framework (PTCF) to get noticeably better outputs
 5. Recognize how AI fails---confident errors and bias---and the basic accountability and governance rules at Drexel
 
@@ -56,7 +56,7 @@ Treat AI like a fast, eager assistant who is widely read but sometimes wrong and
 
 ## Ethics & Governance: How AI Fails, and Who's Accountable (15 min)
 
-*This is the first piece of an ethics and governance thread that runs through every workshop. Today: the two ways AI gets things wrong, and the rules that decide who is responsible.*
+*This is the first piece of an ethics and governance thread that runs through the series and comes together in [Core 4: Verify, Disclose, Decide](workshop5.qmd). Today: the two ways AI gets things wrong, and the rules that decide who is responsible.*
 
 **Two failure modes to expect.** First, **confident errors ("hallucinations")**---an LLM predicts plausible text, so it can invent facts, statistics, and citations that look right and are wrong. Second, **bias**---models learn from internet-scale data that carries society's inequities, so outputs can reflect and amplify stereotypes about who belongs in which role and what communities "look like." Both matter more in public health than in most fields, because we work with diverse populations and our outputs can affect care and resources.
 
@@ -84,9 +84,11 @@ Duration: ~17 minutes | Format: Individual, hands-on
 
 **Goal:** Get signed in and feel what the tool does well by running real tasks.
 
+**No ChatGPT Edu yet?** Every prompt in this session also works in Copilot Chat with your Drexel account.
+
 #### Instructions
 
-1. Sign in to **ChatGPT Edu** with your Drexel account. Use **GPT-5.5** if it appears in your model picker; otherwise use the current default/latest GPT model in the Drexel workspace.
+1. Sign in to **ChatGPT Edu** with your Drexel account and use the current default model in the Drexel workspace.
 2. Run each of these prompts and look at how it responds. Use **public or made-up details only**---no sensitive data.
 
 **Prompt A --- Summarize**
@@ -160,7 +162,7 @@ Turn to a neighbor and trade one prompt each. Read the other person's output and
 
 :::{.callout-note}
 ## Note on Consistency
-The same prompt can give slightly different answers each time. For anything you'll reuse, save the prompt that worked. We'll build reusable prompts and custom GPTs in Workshop 3.
+The same prompt can give slightly different answers each time. For anything you'll reuse, save the prompt that worked. We'll build reusable prompts and custom GPTs in Core 3.
 :::
 
 ---
@@ -171,10 +173,12 @@ The same prompt can give slightly different answers each time. For anything you'
 - For Drexel work: **ChatGPT Edu or Copilot**, and mind the data rules.
 - **PTCF** (Persona, Task, Context, Format) is your default recipe for a good prompt.
 
-**Try this before Workshop 2:** pick one task you do every week---an email, a summary, a set of notes---and do it once with ChatGPT Edu using PTCF. Bring it to the next session.
+**Try this before Core 2:** pick one task you do every week---an email, a summary, a set of notes---and do it once with ChatGPT Edu using PTCF. Bring it to the next session.
 
 ---
 
 ## Looking Ahead
 
-**Workshop 2: Workflow Enhancement** --- we move from single prompts to real workflows: drafting and summarizing in Word and Outlook with Copilot, and using ChatGPT Edu to speed up the writing and analysis tasks you do most.
+**Core 2: Workflow Enhancement** --- we move from single prompts to real workflows: drafting and summarizing in Word and Outlook with Copilot, and using ChatGPT Edu to speed up the writing and analysis tasks you do most.
+
+{{< include /_feedback-workshop.qmd >}}

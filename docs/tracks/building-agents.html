@@ -71,6 +71,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <meta name="robots" content="noindex, nofollow">
+<script data-goatcounter="https://aquistbe.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script>
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -98,33 +99,40 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-workshops" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Workshops</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-core-sessions" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Core Sessions</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-workshops">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-core-sessions">    
         <li>
     <a class="dropdown-item" href="../workshop1.html">
- <span class="dropdown-text">1 · Foundations &amp; Capabilities</span></a>
+ <span class="dropdown-text">Core 1 · Foundations &amp; Capabilities</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../workshop2.html">
- <span class="dropdown-text">2 · Workflow Enhancement</span></a>
+ <span class="dropdown-text">Core 2 · Workflow Enhancement</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../workshop3.html">
- <span class="dropdown-text">3 · Collaboration on Projects</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../workshop4.html">
- <span class="dropdown-text">4 · Documents &amp; Visuals (Adobe)</span></a>
+ <span class="dropdown-text">Core 3 · Reusable Assistants</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../workshop5.html">
- <span class="dropdown-text">5 · Getting Started with Agentic AI</span></a>
+ <span class="dropdown-text">Core 4 · Verify, Disclose, Decide</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-electives" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Electives</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-electives">    
+        <li>
+    <a class="dropdown-item" href="../workshop4.html">
+ <span class="dropdown-text">Documents &amp; Visuals (Adobe)</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../workshop6.html">
- <span class="dropdown-text">6 · AI for Curriculum Development</span></a>
+ <span class="dropdown-text">AI for Curriculum Development</span></a>
   </li>  
     </ul>
   </li>
@@ -174,6 +182,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#recommended-readings" id="toc-recommended-readings" class="nav-link" data-scroll-target="#recommended-readings">Recommended readings</a></li>
   <li><a href="#useful-resources" id="toc-useful-resources" class="nav-link" data-scroll-target="#useful-resources">Useful resources</a></li>
   <li><a href="#navigate" id="toc-navigate" class="nav-link" data-scroll-target="#navigate">Navigate</a></li>
+  <li><a href="#give-feedback-on-this-page" id="toc-give-feedback-on-this-page" class="nav-link" data-scroll-target="#give-feedback-on-this-page">Give Feedback on This Page</a></li>
   </ul>
 </nav>
     </div>
@@ -227,7 +236,7 @@ ul.task-list li input[type="checkbox"] {
 <blockquote class="blockquote">
 <p>You are a grants-administration assistant for a school of public health. Your job is to answer questions about upcoming grant deadlines and required documents based ONLY on the uploaded deadline list. Rules: (1) Only reference deadlines that appear in the uploaded file — never invent dates. (2) If a deadline is within 14 days, flag it as URGENT. (3) Always state the funding agency, mechanism, and due date. (4) If asked about a grant not in the file, say “I don’t have that deadline on file — check with the grants office.” (5) Never give advice on budget amounts or personnel decisions. (6) Format answers as a table when listing multiple deadlines.</p>
 </blockquote>
-<p><strong>Knowledge file</strong> — save this as <code>grant_deadlines.csv</code> and upload it to your custom GPT:</p>
+<p><strong>Knowledge file</strong> — save this as <code>grant_deadlines.csv</code> and upload it to your custom GPT. <strong>First, update the <code>deadline</code> column</strong>: the dates below were written in summer 2026, so replace them with dates roughly 10, 25, 40, 60, and 90 days from today — the mix of urgent and distant deadlines is what makes the test work:</p>
 <pre><code>grant,agency,mechanism,deadline,documents_required
 Pedestrian Safety Infrastructure,NIH/NICHD,R01,2026-09-01,Progress report + budget justification
 Built Environment &amp; Child Injury,RWJF,Evidence for Action,2026-08-15,LOI (3 pages)
@@ -248,7 +257,7 @@ Community Sidewalk Assessment,PCORI,Engagement Award,2026-08-01,Engagement plan 
 </blockquote>
 <p>It should decline (rule 5).</p></li>
 </ol>
-<p><strong>Expected result.</strong> A working assistant that accurately reports deadlines from the CSV, flags urgent ones, and refuses to answer budget questions. You should find it works well for lookups but may need tightening if it starts paraphrasing deadlines loosely.</p>
+<p><strong>Expected result.</strong> A working assistant that accurately reports deadlines from the CSV and refuses to answer budget questions. With the dates set as suggested, the 30-day question should return exactly the two nearest deadlines, and only the ~10-day one should be flagged URGENT. You should find it works well for lookups but may need tightening if it starts paraphrasing deadlines loosely.</p>
 <p><strong>Check your work.</strong> Did it follow the limits you set? The budget question is your stop-test — if it answers with dollar amounts, the instructions need tightening.</p>
 <p><strong>Common pitfalls.</strong> Errors compound across steps. A wrong deadline is worse than no answer. Keep agents on low-stakes, reversible, checkable work. You own the outcome.</p>
 <p><strong>Stretch (optional).</strong> Add a second knowledge file (a style guide for progress reports) and ask the assistant to draft a progress report using the correct format.</p>
@@ -293,7 +302,7 @@ Community Sidewalk Assessment,PCORI,Engagement Award,2026-08-01,Engagement plan 
 <details class="activity"><summary>Activity 3 · Moderate — Enforce a guardrail in code with Claude Code</summary>
 <p><strong>Time</strong> ~20 min · <strong>Tools</strong> Claude Code (Anthropic’s command-line coding agent)</p>
 <p><strong>Goal.</strong> Rebuild the Grant Deadline Tracker so at least one guardrail is enforced by code — a function that literally cannot break the rule — and compare that to the instruction-only guardrails from Activity 2.</p>
-<p><strong>Setup.</strong> Claude Code installed and running in a terminal, in an empty folder. Save the same CSV from Activities 1–2 as <code>grants.csv</code>:</p>
+<p><strong>Setup.</strong> Claude Code installed and running in a terminal, in an empty folder. Save the same CSV from Activities 1–2 as <code>grants.csv</code> (with the updated deadlines you set in Activity 1):</p>
 <pre><code>grant,agency,mechanism,deadline,documents_required
 Pedestrian Safety Infrastructure,NIH/NICHD,R01,2026-09-01,Progress report + budget justification
 Built Environment &amp; Child Injury,RWJF,Evidence for Action,2026-08-15,LOI (3 pages)
@@ -366,6 +375,25 @@ Community Sidewalk Assessment,PCORI,Engagement Award,2026-08-01,Engagement plan 
 </div>
 <div class="callout-body-container callout-body">
 <p>Keep agents on <strong>non-sensitive</strong>, reversible tasks; require human approval before anything consequential. See <a href="../tools.html">Tools &amp; Access</a> and Drexel’s <a href="https://drexel.edu/provost/ai/tools">AI Tools page</a>.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="give-feedback-on-this-page" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="give-feedback-on-this-page">Give Feedback on This Page</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Two minutes: tell us how this track is working
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Your feedback shapes which topics get expanded and what new activities are added.</p>
+<p><a href="https://forms.cloud.microsoft/r/eLHm7tRtGY" class="btn btn-primary" target="_blank"><strong>Self-paced track feedback form</strong> ↗</a></p>
+<p>In the form, select this page from the list of topics.</p>
 </div>
 </div>
 
@@ -456,6 +484,12 @@ details.activity > *:not(summary):first-of-type{margin-top:.4rem}
         var pct=Math.round(correct/qs.length*100);
         var verdict=pct>=80?"You're ready — dive in.":(pct>=50?"Close — skim the readings first, then start Activity 1.":"Start with the readings and Activity 1, then retry.");
         score.textContent='You scored '+correct+'/'+qs.length+' ('+pct+'%). '+verdict;
+        try{
+          if(window.goatcounter&&window.goatcounter.count){
+            var slug=location.pathname.split('/').pop().replace(/\.html$/,'')||'index';
+            window.goatcounter.count({path:'quiz/'+slug+'/'+correct+'of'+qs.length,title:'Readiness quiz: '+slug,event:true});
+          }
+        }catch(e){}
       });
       box.innerHTML=''; box.appendChild(wrap); box.appendChild(btn); box.appendChild(score);
     });

@@ -71,6 +71,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <meta name="robots" content="noindex, nofollow">
+<script data-goatcounter="https://aquistbe.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script>
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -98,33 +99,40 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-workshops" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Workshops</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-core-sessions" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Core Sessions</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-workshops">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-core-sessions">    
         <li>
     <a class="dropdown-item" href="../workshop1.html">
- <span class="dropdown-text">1 · Foundations &amp; Capabilities</span></a>
+ <span class="dropdown-text">Core 1 · Foundations &amp; Capabilities</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../workshop2.html">
- <span class="dropdown-text">2 · Workflow Enhancement</span></a>
+ <span class="dropdown-text">Core 2 · Workflow Enhancement</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../workshop3.html">
- <span class="dropdown-text">3 · Collaboration on Projects</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../workshop4.html">
- <span class="dropdown-text">4 · Documents &amp; Visuals (Adobe)</span></a>
+ <span class="dropdown-text">Core 3 · Reusable Assistants</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../workshop5.html">
- <span class="dropdown-text">5 · Getting Started with Agentic AI</span></a>
+ <span class="dropdown-text">Core 4 · Verify, Disclose, Decide</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-electives" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Electives</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-electives">    
+        <li>
+    <a class="dropdown-item" href="../workshop4.html">
+ <span class="dropdown-text">Documents &amp; Visuals (Adobe)</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../workshop6.html">
- <span class="dropdown-text">6 · AI for Curriculum Development</span></a>
+ <span class="dropdown-text">AI for Curriculum Development</span></a>
   </li>  
     </ul>
   </li>
@@ -174,6 +182,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#recommended-readings" id="toc-recommended-readings" class="nav-link" data-scroll-target="#recommended-readings">Recommended readings</a></li>
   <li><a href="#useful-resources" id="toc-useful-resources" class="nav-link" data-scroll-target="#useful-resources">Useful resources</a></li>
   <li><a href="#navigate" id="toc-navigate" class="nav-link" data-scroll-target="#navigate">Navigate</a></li>
+  <li><a href="#give-feedback-on-this-page" id="toc-give-feedback-on-this-page" class="nav-link" data-scroll-target="#give-feedback-on-this-page">Give Feedback on This Page</a></li>
   </ul>
 </nav>
     </div>
@@ -214,15 +223,15 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>Retrieval-augmented generation (RAG) connects a model to your document set: it retrieves relevant passages and answers from them, citing sources. NotebookLM is a friendly entry point; the same idea powers custom knowledge bases. It reduces hallucination but doesn’t eliminate it.</p>
+<p>Retrieval-augmented generation (RAG) connects a model to your document set: it retrieves relevant passages and answers from them, citing sources. Gemini Notebook (formerly NotebookLM — renamed July 2026; old links redirect) is a friendly entry point; the same idea powers custom knowledge bases. It reduces hallucination but doesn’t eliminate it.</p>
 <p>Quality depends on retrieval: if the right passage isn’t found, the answer is wrong or guessed. You check that citations actually support the claim.</p>
 </section>
 <section id="practice-activities" class="level2">
 <h2 class="anchored" data-anchor-id="practice-activities">Practice activities</h2>
 <details class="activity"><summary>Activity 1 · Advanced — Ground answers in your documents</summary>
-<p><strong>Time</strong> ~18 min · <strong>Tools</strong> NotebookLM (public sources only)</p>
+<p><strong>Time</strong> ~18 min · <strong>Tools</strong> Gemini Notebook (public sources only)</p>
 <p><strong>Goal.</strong> Make AI answer from your sources, with citations you verify.</p>
-<p><strong>Setup.</strong> In NotebookLM, load these 5 <strong>public</strong> PDFs on pedestrian safety:</p>
+<p><strong>Setup.</strong> In Gemini Notebook, load these 5 <strong>public</strong> PDFs on pedestrian safety:</p>
 <ol type="1">
 <li><a href="https://www.phila.gov/media/20171025174232/Vision-Zero-Action-Plan.pdf">Philadelphia Vision Zero Action Plan (2017)</a> — the city’s strategy for eliminating traffic deaths</li>
 <li><a href="https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/813558">NHTSA Pedestrian Safety Report (2023)</a> — national pedestrian fatality trends</li>
@@ -230,7 +239,7 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="https://safety.fhwa.dot.gov/provencountermeasures/">FHWA Proven Safety Countermeasures: Pedestrian Safety</a> — evidence-based infrastructure interventions</li>
 <li><a href="https://www.phila.gov/documents/complete-streets-design-handbook/">Philadelphia Complete Streets Design Handbook</a> — city design standards for pedestrian infrastructure</li>
 </ol>
-<p>Upload all five to a new NotebookLM notebook. These are all public government or NGO documents — no data-sensitivity concerns.</p>
+<p>Upload all five to a new Gemini Notebook notebook. These are all public government or NGO documents — no data-sensitivity concerns.</p>
 <p><strong>Steps.</strong></p>
 <ol type="1">
 <li><p>Ask a question the sources can answer; for each cited passage, confirm it actually supports the answer.</p></li>
@@ -246,7 +255,7 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Stretch (optional).</strong> Add a source that contradicts the others and see how it handles the conflict.</p>
 </details>
 <details class="activity"><summary>Activity 2 · Advanced — Probe retrieval quality</summary>
-<p><strong>Time</strong> ~12 min · <strong>Tools</strong> NotebookLM</p>
+<p><strong>Time</strong> ~12 min · <strong>Tools</strong> Gemini Notebook</p>
 <p><strong>Goal.</strong> Understand when retrieval misses relevant material.</p>
 <p><strong>Setup.</strong> The same notebook.</p>
 <p><strong>Steps.</strong></p>
@@ -265,7 +274,7 @@ ul.task-list li input[type="checkbox"] {
 </details>
 <details class="activity"><summary>Activity 3 · Advanced — See retrieval happen: build a minimal RAG pipeline with Claude Code</summary>
 <p><strong>Time</strong> ~25 min · <strong>Tools</strong> Claude Code (consumer/PI-purchased — Low Risk Data only; these 5 PDFs are public)</p>
-<p><strong>Goal.</strong> Build the machinery NotebookLM hides: a from-scratch RAG pipeline where you can read the exact passages the system retrieved — and see when it retrieves nothing.</p>
+<p><strong>Goal.</strong> Build the machinery Gemini Notebook hides: a from-scratch RAG pipeline where you can read the exact passages the system retrieved — and see when it retrieves nothing.</p>
 <p><strong>Setup.</strong> Open Claude Code in an empty folder. You’ll point it at the same 5 public PDFs from Activity 1:</p>
 <ol type="1">
 <li><a href="https://www.phila.gov/media/20171025174232/Vision-Zero-Action-Plan.pdf">Philadelphia Vision Zero Action Plan (2017)</a></li>
@@ -290,7 +299,7 @@ ul.task-list li input[type="checkbox"] {
 <blockquote class="blockquote">
 <p>Run the same script with: “What do these documents say about e-scooter injury rates in Philadelphia?” Show me the retrieved chunks and their similarity scores, and tell me whether anything relevant was actually found.</p>
 </blockquote>
-<p>With NotebookLM you had to infer a gap from the tone of the answer; here the low scores and off-topic chunks show you directly that nothing relevant exists in the sources.</p></li>
+<p>With Gemini Notebook you had to infer a gap from the tone of the answer; here the low scores and off-topic chunks show you directly that nothing relevant exists in the sources.</p></li>
 <li><p>Break retrieval on purpose to see why chunking matters:</p>
 <blockquote class="blockquote">
 <p>Re-chunk the documents into much larger chunks (e.g., 2 pages each) and rerun question 2. Did the retrieved passages get noisier? Explain how chunk size changed what the answer was grounded in.</p>
@@ -299,7 +308,7 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Expected result.</strong> A working script that answers from the 5 sources while printing the literal retrieved passages; one question where retrieval visibly succeeds, one gap question where you can see it visibly fail.</p>
 <p><strong>Check your work.</strong> Read the retrieved chunks before reading the answer — does each one actually contain the evidence the answer claims? If the answer says something no printed chunk supports, the model added it.</p>
 <p><strong>Common pitfalls.</strong> A high similarity score doesn’t mean the chunk is right — keyword overlap can retrieve the wrong passage confidently. Retrieval quality is the whole game: garbage chunks in, confident garbage out. Low Risk Data only in Claude Code unless separately approved.</p>
-<p><strong>Stretch (optional).</strong> Ask the same question here and in NotebookLM (Activity 1) and compare: where NotebookLM gave a citation marker, can you find the equivalent chunk your pipeline retrieved? Which experience made an error easier to catch?</p>
+<p><strong>Stretch (optional).</strong> Ask the same question here and in Gemini Notebook (Activity 1) and compare: where Gemini Notebook gave a citation marker, can you find the equivalent chunk your pipeline retrieved? Which experience made an error easier to catch?</p>
 </details>
 </section>
 <section id="check-your-readiness" class="level2">
@@ -322,7 +331,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="useful-resources" class="level2">
 <h2 class="anchored" data-anchor-id="useful-resources">Useful resources</h2>
 <ul>
-<li><a href="https://notebooklm.google.com">NotebookLM</a> — source-grounded notebooks (use public data).</li>
+<li><a href="https://notebooklm.google.com">Gemini Notebook</a> — source-grounded notebooks (use public data).</li>
 <li><a href="https://drexel.edu/provost/ai/tools">ChatGPT Edu (Drexel AI Tools)</a> — the approved tool, with data rules.</li>
 </ul>
 <hr>
@@ -341,7 +350,26 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Use <strong>public or non-sensitive</strong> documents unless the tool is approved for the data; verify cited passages. See <a href="../tools.html">Tools &amp; Access</a> and Drexel’s <a href="https://drexel.edu/provost/ai/tools">AI Tools page</a>.</p>
+<p>Use <strong>public or non-sensitive</strong> documents unless the tool is approved for the data; verify cited passages. See <a href="../tools.html">Tools &amp; Access</a> and Drexel’s <a href="https://drexel.edu/provost/ai/tools">AI Tools page</a>. <strong>Study data is stricter:</strong> never in commercial/consumer AI tools, and even aggregate or de-identified study data needs the PI’s approval and must respect the IRB protocol, DUA, and the data’s terms of use — see the Research Data callout on <a href="../tools.html">Tools &amp; Access</a>.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="give-feedback-on-this-page" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="give-feedback-on-this-page">Give Feedback on This Page</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Two minutes: tell us how this track is working
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Your feedback shapes which topics get expanded and what new activities are added.</p>
+<p><a href="https://forms.cloud.microsoft/r/eLHm7tRtGY" class="btn btn-primary" target="_blank"><strong>Self-paced track feedback form</strong> ↗</a></p>
+<p>In the form, select this page from the list of topics.</p>
 </div>
 </div>
 
@@ -432,6 +460,12 @@ details.activity > *:not(summary):first-of-type{margin-top:.4rem}
         var pct=Math.round(correct/qs.length*100);
         var verdict=pct>=80?"You're ready — dive in.":(pct>=50?"Close — skim the readings first, then start Activity 1.":"Start with the readings and Activity 1, then retry.");
         score.textContent='You scored '+correct+'/'+qs.length+' ('+pct+'%). '+verdict;
+        try{
+          if(window.goatcounter&&window.goatcounter.count){
+            var slug=location.pathname.split('/').pop().replace(/\.html$/,'')||'index';
+            window.goatcounter.count({path:'quiz/'+slug+'/'+correct+'of'+qs.length,title:'Readiness quiz: '+slug,event:true});
+          }
+        }catch(e){}
       });
       box.innerHTML=''; box.appendChild(wrap); box.appendChild(btn); box.appendChild(score);
     });

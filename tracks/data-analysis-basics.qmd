@@ -143,7 +143,7 @@ Answer these, then check — your score suggests whether to dive in or skim the 
 
 <div class="readiness-quiz">
 <script type="application/json" class="quiz-data">
-{"questions": [{"q": "What's the safest first step before trusting an AI-computed statistic?", "options": ["Run it twice", "Check it against the raw data or a known value", "Ask the AI if it's sure", "Use a bigger model"], "answer": 1, "explain": "Verification against the source is the habit that catches confident errors."}, {"q": "You have a spreadsheet of identifiable patient records. Which tool is appropriate?", "options": ["A Drexel-approved tool cleared for that data level", "Any chatbot you trust", "NotebookLM", "A personal ChatGPT account"], "answer": 0, "explain": "Match the tool to Drexel's data classification; identifiable records need an approved tool."}, {"q": "Why start with one question and one chart?", "options": ["It's faster to verify and learn from", "Charts are required", "AI can only do one thing", "It saves tokens"], "answer": 0, "explain": "Small, verifiable steps build judgment and catch errors early."}]}
+{"questions": [{"q": "What's the safest first step before trusting an AI-computed statistic?", "options": ["Run it twice", "Check it against the raw data or a known value", "Ask the AI if it's sure", "Use a bigger model"], "answer": 1, "explain": "Verification against the source is the habit that catches confident errors."}, {"q": "You have a spreadsheet of identifiable patient records. Which tool is appropriate?", "options": ["A Drexel-approved tool cleared for that data level", "Any chatbot you trust", "Gemini Notebook", "A personal ChatGPT account"], "answer": 0, "explain": "Match the tool to Drexel's data classification; identifiable records need an approved tool."}, {"q": "Why start with one question and one chart?", "options": ["It's faster to verify and learn from", "Charts are required", "AI can only do one thing", "It saves tokens"], "answer": 0, "explain": "Small, verifiable steps build judgment and catch errors early."}]}
 </script>
 </div>
 
@@ -171,5 +171,7 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 
 ::: {.callout-warning}
 ## Data rules
-Use **public or non-sensitive** data for practice; never paste identifiable records into an unapproved tool. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+Use **public or non-sensitive** data for practice; never paste identifiable records into an unapproved tool. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools). **Study data is stricter:** never in commercial/consumer AI tools, and even aggregate or de-identified study data needs the PI's approval and must respect the IRB protocol, DUA, and the data's terms of use — see the Research Data callout on [Tools & Access](../tools.qmd).
 :::
+
+{{< include /_feedback-track.qmd >}}

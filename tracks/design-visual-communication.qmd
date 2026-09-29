@@ -18,7 +18,7 @@ title: "AI for Design & Visual Communication"
 
 ## Overview
 
-Several AI tools now produce usable visuals fast. **Claude** can generate interactive infographics and web pages ("artifacts"); **Canva** and **Figma** have AI design features; **Adobe Express** with **Firefly** makes commercially-safe images and templates. You bring the message, the accuracy, and the design judgment. This is the self-paced companion to [Workshop 4](../workshop4.qmd), which focuses on the Adobe tools.
+Several AI tools now produce usable visuals fast. **Claude** can generate interactive infographics and web pages ("artifacts"); **Canva** and **Figma** have AI design features; **Adobe Express** with **Firefly** makes commercially-safe images and templates. You bring the message, the accuracy, and the design judgment. This is the self-paced companion to the [Documents & Visuals elective](../workshop4.qmd), which focuses on the Adobe tools.
 
 The data rules differ by tool. Adobe Express, Firefly, and Acrobat are Drexel-approved for **Moderate Risk** data; **Canva, Figma, and Claude are consumer tools — Low Risk Data only** unless Drexel approves them. Use public, non-sensitive content, disclose AI-generated visuals, and check representation and accessibility before anything is published.
 
@@ -136,3 +136,5 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 ## Data rules
 Adobe Express/Firefly are approved for **Moderate Risk** data; **Canva, Figma, and Claude are Low Risk Data only** unless Drexel approves them. Use public/non-sensitive content and disclose AI-generated visuals. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
 :::
+
+{{< include /_feedback-track.qmd >}}

@@ -1,14 +1,14 @@
 ---
-title: "Workshop 2: Workflow Enhancement"
+title: "Core 2 · Workflow Enhancement"
 ---
 
 ::: {.day-header}
-# Workshop 2: Workflow Enhancement
+# Core 2 · Workflow Enhancement
 ::: {.day-subtitle}
 Use ChatGPT Edu, Copilot Chat, and Microsoft 365 Copilot to speed up the work you already do
 :::
 ::: {.day-time}
-Tuesday, July 7, 2026 | 1:00--2:00 PM | Bring a laptop and a real (non-sensitive) task
+One hour | Bring a laptop and a real (non-sensitive) task | Runs weekly in the fall term and repeats in spring --- dates announced by school email
 :::
 :::
 
@@ -32,7 +32,7 @@ By the end of this hour, you will be able to:
 
 1. Spot which of your recurring tasks are good candidates for AI help
 2. Use Microsoft 365 Copilot inside Word, Outlook, and Excel for everyday tasks
-3. Use ChatGPT Edu with GPT-5.5, and Copilot Chat with Enterprise Data Protection, to summarize, rewrite, and analyze faster
+3. Use ChatGPT Edu with the current default model, and Copilot Chat with Enterprise Data Protection, to summarize, rewrite, and analyze faster
 4. Build a small "prompt recipe" you can reuse
 5. Apply the workflow ethics: verify before it counts, disclose AI use appropriately, and avoid over-reliance
 
@@ -54,9 +54,9 @@ By the end of this hour, you will be able to:
 
 **Copilot vs. ChatGPT Edu---when to use which.**
 
-- **Microsoft 365 Copilot** shines when the work is *already in a Microsoft file*: a Word doc to rewrite, an Outlook thread to summarize, an Excel sheet to analyze. It sees the document you're in and respects Microsoft 365 permissions.
-- **Copilot Chat with Enterprise Data Protection** is useful for web-based drafting, summarizing, and brainstorming when you do not need a reusable GPT.
-- **ChatGPT Edu** shines for open-ended drafting, summarizing pasted text, file-based analysis, and building reusable assistants. Use **GPT-5.5** when it appears in your model picker; otherwise use the current default/latest GPT model in the Drexel workspace.
+- **Microsoft 365 Copilot** shines when the work is *already in a Microsoft file*: a Word doc to rewrite, an Outlook thread to summarize, an Excel sheet to analyze. It sees the document you're in and respects Microsoft 365 permissions. It requires the paid faculty/staff license.
+- **Copilot Chat with Enterprise Data Protection** is useful for web-based drafting, summarizing, and brainstorming when you do not need a reusable GPT---and it's what to use if you don't have the in-app Copilot license.
+- **ChatGPT Edu** shines for open-ended drafting, summarizing pasted text, file-based analysis, and building reusable assistants. Use the current default model in the Drexel workspace.
 
 Use each tool according to Drexel's data classifications. See [Tools & Access](tools.qmd).
 
@@ -69,7 +69,7 @@ A task is a good AI candidate if it's (1) text-heavy, (2) something you do repea
 
 ## Ethics & Governance: Verification, Disclosure, and Over-Reliance (15 min)
 
-*The thread continues. Workshop 1 covered how AI fails and who's accountable. Today: what that accountability means once AI is in your daily work.*
+*The thread continues. Core 1 covered how AI fails and who's accountable. Today: what that accountability means once AI is in your daily work. [Core 4](workshop5.qmd) is where we put a full hour into practicing it.*
 
 **Verify before it counts.** Speed is the selling point and the trap. AI can fabricate facts, statistics, and citations that read as authoritative. For anything that goes into a real document or decision, check it against the source---especially numbers and references. A quick rule from the intensive course: *if you can't open it, you can't cite it.* Treat every AI-supplied figure as unverified until you've confirmed it.
 
@@ -97,6 +97,8 @@ Duration: ~19 minutes | Format: Hands-on, choose by your role
 
 **Goal:** Use Microsoft 365 Copilot where your work already lives. Pick the track that fits you. Use non-sensitive or appropriately classified content only. Each track has a worked example with a demo file --- use it as-is, or substitute your own material and run the same three prompts.
 
+Don't have the in-app Copilot license? Run the same prompts in **Copilot Chat** in the browser, pasting the demo text in.
+
 #### Track A --- Word (drafting & rewriting)
 
 **Worked example: from study aims to lay summary.** Open [Workshop2_Demo_StudyDescription.docx](demo-materials/Workshop2_Demo_StudyDescription.docx) (a synthetic pedestrian-safety study description) or your own document, then run:
@@ -113,7 +115,7 @@ Duration: ~19 minutes | Format: Hands-on, choose by your role
 
 1. *"Summarize this thread. List every decision made and every open question."*
 2. *"List the action items as a table: owner, task, due date."*
-3. *"Draft a reply confirming I'll have the syllabus draft ready by July 20 --- concise and friendly, two sentences."*
+3. *"Draft a reply confirming I'll have the syllabus draft ready by the end of next week --- concise and friendly, two sentences."*
 
 **Watch for:** did it invent a decision that was never actually made? Threads are where AI over-summarizes --- in the demo thread, is the accreditation crosswalk a decision, an action item, or an open question?
 
@@ -150,7 +152,7 @@ Duration: ~13 minutes | Format: Individual, bring your own task
 #### Instructions
 
 1. Pick a real task that is non-sensitive or appropriate for ChatGPT Edu under Drexel's Terms of Use: a report section, a summary of a long document, a set of meeting notes to clean up, a draft announcement, a literature blurb on a public topic.
-2. In ChatGPT Edu, select **GPT-5.5** if it is available; otherwise use the current default/latest GPT model. Write a **PTCF prompt** (Persona, Task, Context, Format---from Workshop 1). Be specific about the format you want.
+2. In ChatGPT Edu, use the current default model. Write a **PTCF prompt** (Persona, Task, Context, Format---from Core 1). Be specific about the format you want.
 3. Run it. Then **iterate**: shorten, change tone, add a section, ask for a table. Push it 2--3 rounds until it's close to usable.
 4. Do the final edit yourself. Note what you changed---that's the part that needs your expertise.
 
@@ -196,10 +198,12 @@ AI can invent facts, citations, and numbers. For anything that goes into a real 
 - The win is the first draft and the summary---you keep the judgment.
 - Save the prompts that work as **reusable recipes**.
 
-**Try this before Workshop 3:** save two prompt recipes you'd actually reuse. We'll turn shared recipes into team tools next session.
+**Try this before Core 3:** save two prompt recipes you'd actually reuse. We'll turn shared recipes into team tools next session.
 
 ---
 
 ## Looking Ahead
 
-**Workshop 3: Collaboration on Projects** --- moving from solo use to team use: AI for meeting notes and follow-ups, project planning, and the team tools that standardize how a group works---**shared Projects** in ChatGPT Edu (one workspace for a team's files, instructions, and chats), custom GPTs, and a shared prompt library.
+**Core 3: Reusable Assistants** --- turning the prompts that work into things you and your team use again: **shared Projects** in ChatGPT Edu (one workspace for a group's files, instructions, and chats), **custom GPTs**, a shared prompt library, and a first look at assistants that take several steps on their own.
+
+{{< include /_feedback-workshop.qmd >}}

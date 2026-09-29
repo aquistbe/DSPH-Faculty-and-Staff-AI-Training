@@ -38,7 +38,7 @@ Autonomy raises the stakes. Keep agents on low-stakes, reversible, checkable wor
 
 > You are a grants-administration assistant for a school of public health. Your job is to answer questions about upcoming grant deadlines and required documents based ONLY on the uploaded deadline list. Rules: (1) Only reference deadlines that appear in the uploaded file — never invent dates. (2) If a deadline is within 14 days, flag it as URGENT. (3) Always state the funding agency, mechanism, and due date. (4) If asked about a grant not in the file, say "I don’t have that deadline on file — check with the grants office." (5) Never give advice on budget amounts or personnel decisions. (6) Format answers as a table when listing multiple deadlines.
 
-**Knowledge file** — save this as `grant_deadlines.csv` and upload it to your custom GPT:
+**Knowledge file** — save this as `grant_deadlines.csv` and upload it to your custom GPT. **First, update the `deadline` column**: the dates below were written in summer 2026, so replace them with dates roughly 10, 25, 40, 60, and 90 days from today — the mix of urgent and distant deadlines is what makes the test work:
 
 ```
 grant,agency,mechanism,deadline,documents_required
@@ -65,7 +65,7 @@ Community Sidewalk Assessment,PCORI,Engagement Award,2026-08-01,Engagement plan 
 
    It should decline (rule 5).
 
-**Expected result.** A working assistant that accurately reports deadlines from the CSV, flags urgent ones, and refuses to answer budget questions. You should find it works well for lookups but may need tightening if it starts paraphrasing deadlines loosely.
+**Expected result.** A working assistant that accurately reports deadlines from the CSV and refuses to answer budget questions. With the dates set as suggested, the 30-day question should return exactly the two nearest deadlines, and only the ~10-day one should be flagged URGENT. You should find it works well for lookups but may need tightening if it starts paraphrasing deadlines loosely.
 
 **Check your work.** Did it follow the limits you set? The budget question is your stop-test — if it answers with dollar amounts, the instructions need tightening.
 
@@ -135,7 +135,7 @@ Community Sidewalk Assessment,PCORI,Engagement Award,2026-08-01,Engagement plan 
 
 **Goal.** Rebuild the Grant Deadline Tracker so at least one guardrail is enforced by code — a function that literally cannot break the rule — and compare that to the instruction-only guardrails from Activity 2.
 
-**Setup.** Claude Code installed and running in a terminal, in an empty folder. Save the same CSV from Activities 1–2 as `grants.csv`:
+**Setup.** Claude Code installed and running in a terminal, in an empty folder. Save the same CSV from Activities 1–2 as `grants.csv` (with the updated deadlines you set in Activity 1):
 
 ```
 grant,agency,mechanism,deadline,documents_required
@@ -214,3 +214,5 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 ## Data rules
 Keep agents on **non-sensitive**, reversible tasks; require human approval before anything consequential. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
 :::
+
+{{< include /_feedback-track.qmd >}}

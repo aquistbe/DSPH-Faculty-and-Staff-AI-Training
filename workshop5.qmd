@@ -1,175 +1,279 @@
 ---
-title: "Workshop 5: Getting Started with Agentic AI"
+title: "Core 4 · Verify, Disclose, Decide"
 ---
 
 ::: {.day-header}
-# Workshop 5: Getting Started with Agentic AI
+# Core 4 · Verify, Disclose, Decide
 ::: {.day-subtitle}
-From chatbots to assistants that take steps --- agents, instructions, and skills
+The hands-on ethics hour --- catch a fake citation, catch a wrong number, write a real disclosure
 :::
 ::: {.day-time}
-Upcoming --- Fall 2026 | Date TBD | 1 hour | Bring a laptop
+Dates and location: see the schedule on the home page. | 1 hour | Bring a laptop and one piece of your own recent work
 :::
 :::
 
 :::{.callout-note}
-## Upcoming Workshop
-This is an **intro-level** session planned for the **fall**. No coding required. The date will be posted on the [home page](index.qmd#schedule) once scheduled. The agenda below is a draft. It builds on the shared Projects and custom GPTs from [Workshop 3](workshop3.qmd).
+## What to Bring
+One real, non-sensitive piece of your own work that AI touched in any way---a report section, an email you had rewritten, a summary, an abstract, a syllabus, a lit-review table. You'll write a disclosure statement for it in Activity 2. If you don't have one, a worked example is provided and you can write the disclosure for that instead. Everything else you need is on this page.
 :::
 
 ## What You'll Leave With
 
-By the end of this hour, you will be able to:
+This is a lab, not a lecture. By the end of the hour you will have personally:
 
-1. Explain in plain terms what "agentic" AI means and how it differs from a normal chat
-2. Name the building blocks of an AI assistant: **instructions, knowledge, tools, and skills**
-3. Set up a simple assistant in ChatGPT Edu with clear instructions and a knowledge file
-4. Write a reusable **"skill"**---a packaged set of instructions for a task you repeat
-5. Apply basic guardrails: keep a human in the loop and know the data rules
-6. Recognize automation bias and decide when a task should *not* be handed to an agent
+1. **Caught a fabricated citation** in a matched pair, and named what made the fake one convincing
+2. **Caught two wrong numbers** planted in an AI-written summary, by hand, against its source
+3. **Written one honest disclosure statement** for a real piece of your own work
+4. Placed ten concrete DSPH tasks on a scrutiny map and defended where you put them
+5. Learned what NIH, NSF, ICMJE and COPE actually require---in ten minutes, not fifty
 
 ## Run of Show
 
 | Time | Segment |
 |------|---------|
-| 0:00--0:10 | Overview: what "agentic" means and the four building blocks |
-| 0:10--0:25 | Ethics & Governance: automation bias, oversight, and when not to automate |
-| 0:25--0:42 | Activity 1: Set up your first assistant (instructions + knowledge) |
-| 0:42--0:55 | Activity 2: Write a reusable skill and run a multi-step task |
-| 0:55--1:00 | Wrap-up: guardrails, data rules, and where to go next |
+| 0:00--0:04 | Opening: why this hour, and how it runs |
+| 0:04--0:20 | Activity 1: Two verification drills (citation, then numbers) |
+| 0:20--0:30 | Policy orientation: NIH, NSF, ICMJE/COPE |
+| 0:30--0:43 | Activity 2: Write a real disclosure statement |
+| 0:43--0:55 | Activity 3: The scrutiny map |
+| 0:55--1:00 | Capstone: what you can now do |
+
+*Roughly two minutes of each activity slot is transition. Working time is budgeted inside each activity below.*
 
 ---
 
-## Overview (10 min)
+## Opening (4 min)
 
-**From answering to doing.** A normal chat answers one prompt at a time---you steer every step. An **agentic** workflow is one where you give the AI a goal and some standing guidance, and it plans and carries out several steps toward that goal, using files or tools along the way, checking in with you as needed. The difference is less "answer my question" and more "handle this task, and show me your work."
+Cores 1, 2, and 3 each opened with a five-minute ethics beat---how AI fails and who's accountable, verification and disclosure in daily work, oversight of shared and agentic use. **This session is where those beats come together and become things you can do with your hands.** You don't need to have attended the others; everything you need is here.
 
-**The four building blocks.** Every assistant or agent, in any tool, is some combination of:
+Three habits carry the hour, and each one gets a drill:
 
-- **Instructions** --- the standing guidance: who it is, how it should behave, the format and tone it always uses. This is where most of the quality comes from.
-- **Knowledge** --- files or context you give it to work from (a template, a style guide, a reference document).
-- **Tools** --- things it can actually do beyond writing text: search the web, read a document, run a step. (In ChatGPT, "agent mode" and connected actions; admin-controlled in the Drexel workspace.)
-- **Skills** --- reusable, packaged instructions for a specific repeatable task, so you don't rebuild the same setup each time.
+- **Verify.** AI states wrong facts, numbers, and citations with complete confidence. The rule from across this series: *if you can't open it, you can't cite it.* Right-size the effort---a throwaway brainstorm needs almost none, a number in a report needs all of it.
+- **Disclose.** Where AI informed a real document or decision, say so specifically enough that a reader knows what you did.
+- **Decide.** You own the result. The judgment about which tasks get AI at all is the one that can't be delegated.
 
-:::{.callout-tip}
-## What is a "skill"?
-A **skill** is a saved package of instructions (and sometimes example files) that tells an assistant how to do one job well---like "turn meeting notes into our standard recap format." You write it once; the assistant uses it whenever that job comes up. **Claude** has a formal feature literally called *Skills*. In **ChatGPT Edu**, you get the same effect with **custom GPTs**, **project instructions**, and saved instruction blocks. The idea is the same everywhere: capture the know-how once, reuse it.
+The policy segment at 0:20 is **orientation, not a reading**. Ten minutes on what the four rules actually say, so you know when they bind you. Then straight back into the lab.
+
+---
+
+## Activity 1: Two Verification Drills {.activity}
+
+::: {.activity}
+
+### Activity 1: Two Verification Drills
+::: {.activity-meta}
+Duration: ~14 minutes working time (16-minute slot) | Format: Individual, then compare with a neighbor
 :::
 
-**This works across tools.** We'll do hands-on in **ChatGPT Edu** because it's approved for Drexel data. The concepts---instructions, knowledge, tools, skills---are the same in Copilot and Claude. For the most advanced agentic features and the formal Skills system, see the Claude note at the end (PI-paid, and **not for Drexel data**).
+**Goal:** Catch the two errors that do the most damage in academic and public-health work---an invented source, and a number that drifted.
+
+#### Part A --- One of these two citations is fake (~7 min)
+
+One of the citations below is real. The other was fabricated by AI. Your job is to work out which, and how you know.
+
+> **Citation A:** DiMaggio C, Li G, Metzger KB, et al. "Changes in Pedestrian and Bicyclist Injury Patterns in New York City After Adoption of Vision Zero." *JAMA Network Open.* 2019;2(11):e1916703.
+>
+> **Citation B:** Hartwell JR, Chen S, Kowalski PM, et al. "Longitudinal Effects of Road Diet Interventions on Pedestrian Mortality in Mid-Sized US Cities, 2010--2021." *American Journal of Preventive Medicine.* 2023;64(3):412--419.
+
+1. For each one, search PubMed or Google Scholar for the title, then the first author, then the journal plus volume and pages.
+2. Check every field: does the article exist? Do the authors, journal, volume, and page numbers all match? If you find something, **open the abstract** and confirm the topic is actually what the citation describes.
+3. Write down one sentence: what made the fabricated one convincing?
+
+**Expected result.** **Citation A is real** (PMID 31783684). **Citation B is fabricated**---the authors, the specific title, and the volume and page numbers were invented. The journal is real; that article is not. You should be able to say what fooled you: a real journal, plausible author names, a reasonable topic for that journal, and correctly formatted volume and page numbers. That is precisely how AI fabrication works---it follows the *pattern* of a real citation, because the pattern is what it learned.
+
+**Check your work.** If you concluded "B looks fine" from the formatting alone, that's the lesson: a formatted citation is not a real one. The rule holds without exception---**if you can't open it and read the abstract, you can't cite it.** Fabricated references are the most common and most damaging AI error in academic work precisely because they look perfect.
+
+#### Part B --- Two of these numbers are wrong (~7 min)
+
+No searching for this one. Everything you need is on the page. Below is a source fact sheet (treat it as the only ground truth) and an AI-generated summary of it. **Both are fabricated for practice.** Find the errors by hand.
+
+> **SOURCE FACT SHEET**
+>
+> Philadelphia recorded 312 pedestrian crashes in 2023, resulting in 38 fatalities. 61% of crashes occurred after dark. 46% of all crashes were concentrated on the high-injury network, which makes up just 12% of city streets.
+
+> **AI-GENERATED SUMMARY**
+>
+> In 2023, Philadelphia saw 312 pedestrian crashes and 38 deaths, a 24% increase over the previous year. 61% of crashes happened after dark, and 52% were concentrated on the high-injury network --- just 12% of city streets.
+
+1. Circle **every** number in the summary---there are six.
+2. Take them one at a time and find each one in the fact sheet. Mark each **VERIFIED** or **NOT IN SOURCE**.
+3. For anything you mark NOT IN SOURCE, decide which kind of problem it is: a number that was *invented*, or a number that was *altered* from a real one. They fail differently and are caught differently.
+
+**Expected result.** Four verify: **312**, **38**, **61%**, **12%**. Two do not:
+
+- **"24% increase"** --- **invented**. The fact sheet contains no year-over-year comparison at all. There is no previous-year figure anywhere in the source. This is the easier catch, because nothing like it exists to compare against.
+- **"52%"** --- **altered**. The source says **46%**. This is the dangerous one: a number in the right place, attached to the right claim, in a plausible range, differing from the truth by six points. A reader skimming for whether the summary "matches" will pass right over it.
+
+**Check your work.** Did you catch 52%, or only 24%? Most people catch the invented number and miss the altered one---which is exactly backwards from the risk. Now notice what Part A would *not* have caught: every citation in a paragraph can be real and the prose around them can still be wrong. Verifying sources and verifying numbers are two separate jobs, and the second one has no shortcut. And a "not in source" flag *starts* your verification---it can also be a legitimate calculation or a rounding difference---it doesn't finish it.
+
+:::
 
 ---
 
-## Ethics & Governance: Automation Bias, Oversight, and When Not to Automate (15 min)
+## Policy Orientation: What the Rules Actually Say (10 min)
 
-*The thread concludes here. Earlier workshops asked what AI writes and how teams share it. Once AI starts to **act**---taking steps on its own---the central question becomes oversight: how much do you hand off, and how do you stay responsible for it?*
+*Ten minutes of orientation, not a policy reading. The point is to know when each rule binds you and where to look it up.*
 
-**Responsibility doesn't transfer.** An agent can plan and carry out a series of steps, but you still own the outcome. More autonomy for the tool does not mean less responsibility for you---if anything, it means you have to be more deliberate about where you let it run.
-
-**Automation bias is the core risk.** People over-trust automated output, especially when it's fast and stated with confidence, and quietly stop checking. Agentic workflows make this sharper: when an agent chains several steps, a small error early on compounds through everything after it. The countermeasure is unglamorous---**review each step**, not just the final result, and stay skeptical exactly when the output looks polished.
-
-**The black-box problem.** You often can't see *why* an agent chose a step. If you can't explain or justify what it did, don't act on it for anything that matters. "The agent decided" is not a defensible reason for a consequential decision.
-
-**When *not* to automate.** Keep agents on low-stakes, reversible, checkable work. Do **not** hand off high-stakes or irreversible decisions, anything affecting a person's care, benefits, eligibility, or rights, anything involving regulated data, or anything you couldn't verify afterward. Those stay with a human---full stop.
-
-**Oversight as governance.** Start small, keep a human approval step before anything consequential happens, document where agents are used in real work, and confirm Drexel's data classification before an agent touches real data. This is the same accountability principle from Workshop 1, now applied to a tool that can take action on its own.
+**The line that runs through all four policies is the same one this series has held since Core 1: AI brainstorms and critiques; it does not draft your substantive scientific content.** Brainstorm framings before you write, critique the draft after you write it---but the science, the feasibility, the citations, and the writing are yours.
 
 :::{.callout-important}
-## Before You Let It Run
-Three questions before handing a task to an agent: **Reversible?** (could I undo a wrong result). **Verifiable?** (can I check each step). **Low-stakes?** (no one's care, rights, or benefits ride on it). If any answer is no, keep a human doing it.
+## The four rules, condensed
+
+**NIH** ([NOT-OD-25-132, "Supporting Fairness and Originality in NIH Research Applications"](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-25-132.html)): Applications "substantially developed by AI," or containing sections substantially developed by AI, are not considered the applicant's original ideas and **will not be reviewed**. NIH uses **detection technology** to identify AI-generated content, and if it's discovered after an award, the matter can be **referred to the Office of Research Integrity** for a misconduct investigation---with possible consequences including disallowed costs, withheld future awards, suspension, and termination. The notice does allow AI "to assist in application preparation for limited aspects or in specific circumstances" (e.g., administrative tasks), but flags plagiarism and fabricated citations as risks. NIH does not require a disclosure form---its mechanism is **prohibition plus detection**. Separately, NIH peer reviewers are prohibited from using AI to write their critiques.
+
+**NSF** ([Notice to the Research Community on Use of Generative AI in the Merit Review Process](https://www.nsf.gov/news/notice-to-the-research-community-on-ai)): Proposers are asked to **indicate in the project description** the extent to which, if any, generative AI was used and how. You remain fully responsible for the accuracy and authenticity of everything submitted, including any AI-generated content---NSF's existing fabrication, falsification, and plagiarism policies apply. NSF reviewers may not upload proposal content to non-approved AI tools.
+
+**ICMJE and COPE** ([ICMJE: AI Use by Authors](https://www.icmje.org/recommendations/browse/artificial-intelligence/ai-use-by-authors.html) · [COPE: Authorship and AI Tools](https://publicationethics.org/guidance/cope-position/authorship-and-ai-tools)): **AI cannot be an author**, because it cannot take responsibility for the accuracy, integrity, and originality of the work. Human authors are fully responsible for **all** content, including AI-assisted portions---you must review the output, verify it isn't plagiarized, and confirm every citation is real. **Disclose:** ICMJE places disclosure in both the cover letter and the appropriate section of the manuscript; failing to disclose may require corrective action and can be construed as misconduct. COPE requires documenting transparently which tools were used, typically in methods or acknowledgments.
+
+**Peer review confidentiality is absolute.** Never paste a manuscript you are reviewing into any AI tool. Many journals prohibit *any* AI use during review, not just uploading the text---check the reviewer guidelines before you touch a tool.
+
+**Everything else:** foundation and journal policy is inconsistent and changing. Check the specific opportunity or the target journal's author guidelines every single time. When policy is silent or unclear, **disclose anyway**.
 :::
+
+Two contrasts worth holding on to. First, **NIH and NSF are structurally different**: NSF asks you to disclose, NIH tells you not to do it and looks for it. Disclosure does not make substantial AI drafting acceptable to NIH. Second, **authorship and confidentiality are different rules that both apply**: as an *author* you disclose your AI use; as a *reviewer* you keep the manuscript out of every tool. Neither one covers the other.
+
+Longer worked examples of both workflows: [Grant & Proposal Development](tracks/grant-proposal-development.qmd) and [Manuscript Preparation & Peer Review](tracks/manuscript-peer-review.qmd).
 
 ---
 
-## Activity 1: Set Up Your First Assistant {.activity}
+## Activity 2: Write a Real Disclosure Statement {.activity}
 
 ::: {.activity}
 
-### Activity 1: Set Up Your First Assistant
+### Activity 2: Write a Real Disclosure Statement
 ::: {.activity-meta}
-Duration: ~17 minutes | Format: Individual, hands-on. Use non-sensitive content appropriate under Drexel's ChatGPT Edu Terms of Use.
+Duration: ~12 minutes working time (13-minute slot) | Format: Write alone, then trade with a neighbor
 :::
 
-**Goal:** Build a working assistant by writing good instructions and giving it knowledge---the core of every agent.
+**Goal:** Leave with one honest, specific disclosure statement written for a real piece of your own work---not a policy opinion about disclosure.
 
-#### Instructions
+#### The worked example first (~3 min)
 
-1. In ChatGPT Edu, create a **custom GPT** (or a Project, from Workshop 3) for a real task you repeat. Examples: "Plain-Language Rewriter," "Grant Deadline Checker," "Standard Meeting Recap."
-2. Write clear **instructions**. Cover four things:
-   - **Role:** who it is ("You are a writing assistant for the DSPH [team]").
-   - **Behavior:** how it works ("Always ask for the audience before drafting").
-   - **Format:** what its output looks like ("Return a title, 3 bullets, and a one-line bottom line").
-   - **Limits:** what it must not do ("Never include identifying or sensitive data; flag anything that needs a human decision").
-3. Add one **knowledge file** that is appropriate under Drexel's Terms of Use---a template, a style guide, a sample of the format you want. No PHI, sensitive PII, confidential HR or contract material, or identifiable research data.
-4. **Test it** with two different inputs. Where it drifts from what you wanted, tighten the instructions and try again. Notice that better instructions---not a longer prompt---fix most problems.
+Here is the same disclosure written two ways. Read both before you write.
 
-#### Reflection
+**Too vague:**
 
-- Which instruction made the biggest difference to the output?
-- What did you have to spell out that you assumed it would "just know"?
+> I used ChatGPT to help with this paper.
+
+That tells a reader nothing they can act on. Which tool? For which parts? Did AI write the methods, or fix the commas? Was anything checked? A reader who cares about the answer still has to ask. A reader who doesn't care wasn't going to read it anyway. This sentence protects no one.
+
+**Specific and honest---two sentences:**
+
+> I used ChatGPT Edu to brainstorm alternative framings for the significance section before drafting, and to critique the methods section after I had written it; all text in this manuscript was written by me. I verified every citation against the original article and every reported statistic against the source table, and I am responsible for the accuracy of all content, including the sections where AI provided feedback.
+
+Notice what makes it work: it names **the tool**, it names **what AI did and did not do** (brainstormed and critiqued; did not draft), it names **the verification step**, and it ends with **accountability**. It's two sentences. It took ninety seconds to write.
+
+**The calibration rule.** Over-disclosing trivial use (spell-check, autocomplete, reformatting a table) is noise. Under-disclosing consequential use (drafting substance, shaping an argument, producing a number that ends up in a document) is a problem. Aim for **where it matters to the reader**.
+
+#### Now write yours (~6 min)
+
+1. Take the piece of your own work you brought---or, if you didn't bring one, write the disclosure for something you did in Core 2 or Core 3, or for the AI-generated summary in Activity 1 above.
+2. Write **two sentences**, no more, covering all four elements:
+   - **Tool** --- which one, named.
+   - **Scope** --- what AI did, and just as important, what it did not do.
+   - **Verification** --- what you personally checked, and against what.
+   - **Accountability** --- that the content is yours.
+3. Decide **where it goes**: a methods or acknowledgments line, a cover-letter sentence, a footnote in a report, a line in an email, or---legitimately---nowhere, because the use was trivial. Write that decision down next to the statement.
+
+#### Trade it (~3 min)
+
+Hand your statement to a neighbor. Their only job is to answer one question: **"After reading this, do I know what you actually did?"** If they have to ask a follow-up, the statement isn't specific enough yet. Fix it now, while someone is sitting there to tell you.
+
+**Expected result.** A two-sentence disclosure that names a tool, distinguishes what AI did from what you did, states a verification step, and asserts your accountability---plus a decision about where it goes.
+
+**Check your work.** Four tests, in order. (1) Could you delete your statement and lose nothing? Then it's the vague version---rewrite it. (2) Does it name what AI **did not** do? That clause is what makes a disclosure informative rather than defensive. (3) Is the verification claim **true**? Never write "I verified every citation" unless you did---a false disclosure is worse than none. (4) Apply the funder and journal rules from the segment above: if this were an NIH application, would the scope you just described be **allowable assistance** or **substantial development**? If you had to think about it, that's your answer---go and change the workflow, not the wording.
 
 :::
 
 ---
 
-## Activity 2: Write a Skill and Run a Multi-Step Task {.activity}
+## Activity 3: The Scrutiny Map {.activity}
 
 ::: {.activity}
 
-### Activity 2: Write a Skill and Run a Multi-Step Task
+### Activity 3: The Scrutiny Map
 ::: {.activity-meta}
-Duration: ~13 minutes | Format: Hands-on + discussion
+Duration: ~11 minutes working time (12-minute slot) | Format: Individual, then discuss the disagreements
 :::
 
-**Goal:** Turn your setup into a reusable skill, and see an assistant carry out a task with more than one step.
+**Goal:** Turn "use your judgment" into a decision you can defend on ten specific tasks.
 
-#### Part A --- Write a Reusable Skill (~9 min)
+#### The ten tasks
 
-Capture the instructions from Activity 1 as a standalone **skill** you could reuse or hand to a colleague. A good skill states the job, the steps, the output, and the guardrails:
+These are real DSPH work, spanning administrative, research, teaching, and student roles. Place **each one** in a scrutiny level---don't skip the ones that feel obvious.
 
-> **Skill: Standard Meeting Recap**
-> **When to use:** After any team meeting with notes.
-> **Steps:** (1) Read the notes. (2) Produce a 3-bullet summary. (3) List decisions. (4) List action items as a table with owner and due date. (5) Flag anything unassigned or unclear.
-> **Output:** Three labeled sections, plain language, under 250 words.
-> **Guardrails:** No sensitive or identifying data. If notes are missing an owner or date, ask before finishing.
+1. **Admin.** Draft a reminder email to committee members that their self-study section drafts are due Friday.
+2. **Admin.** Turn messy department meeting notes into a recap circulated to the whole department.
+3. **Admin.** Summarize a 40-page funding announcement into the one-page eligibility brief the team will use to decide whether to apply.
+4. **Research.** Write the first draft of a Specific Aims page.
+5. **Research.** Recode and clean a variable in an analysis dataset.
+6. **Research.** Interpret a regression coefficient for the results section of a manuscript.
+7. **Research / community.** Draft a plain-language summary of study findings for a community advisory board.
+8. **Teaching.** Generate ten multiple-choice questions from this week's assigned readings.
+9. **Teaching.** Write a letter of recommendation for a doctoral student.
+10. **Student.** Summarize thirty abstracts into a literature-review table for a qualifying exam.
 
-Save it where your team can find it (a shared doc, a Project, or a custom GPT's instructions). That's the reusable part---next time, you don't rebuild it.
+#### The four scrutiny levels
 
-#### Part B --- Run a Multi-Step Task (~9 min)
+| Level | Means |
+|-------|-------|
+| **Skim** | Read the output once; errors are cheap and obvious |
+| **Spot-check** | Verify a sample---one row, one claim, one calculation |
+| **Verify everything** | Check every fact, number, and citation against its source before anyone acts on it |
+| **Don't automate** | A human does this; AI's role at most is brainstorming or critique |
 
-1. Give your assistant a small task that takes **more than one step**---for example: *"Read the uploaded report, pull out the three key findings, then draft a short email to my team about what they need to do."*
-2. If **agent mode** is enabled in your Drexel workspace, try a goal that involves the assistant looking something up or working through steps, and watch how it plans and pauses.
-3. **Review every step.** Don't accept the final output blind---check that each step did what you intended. The human-in-the-loop is the point.
+#### Steps
 
-#### Discussion
+1. For each of the ten, rate it quickly on three things: **stakes** (who is harmed if it's wrong), **reversibility** (can you undo it), and **verifiability** (can you check it easily). Then assign one of the four levels. Six minutes---move fast, first instinct.
 
-- Where would a reusable skill save your team the most repeated effort?
-- For a multi-step task, where would you want the assistant to **stop and check with you** before continuing?
+2. Pressure-test the map. Paste your ratings into ChatGPT Edu:
 
+   > Here are ten tasks and the scrutiny level I assigned each, with my stakes/reversibility/verifiability ratings. Which did I likely mis-rate, and which deserve closer human scrutiny than I gave them? Argue the other side for my three most confident calls.
+
+3. Find the person nearest you who placed a task differently and spend two minutes on **why**. The disagreements are the useful part.
+
+**Expected result.** Ten tasks, each with a defensible scrutiny level, and at least one you moved after the pressure-test or the disagreement.
+
+**Check your work.** Compare against these, and argue with them where you disagree---the reasoning matters more than matching:
+
+- **#4 and #9 belong in "don't automate."** The Specific Aims draft is squarely what NIH's NOT-OD-25-132 prohibits---brainstorm and critique with AI, write it yourself. A recommendation letter is a judgment about a specific person that only you can make and that they can't undo.
+- **#3 and #6 belong in "verify everything."** Both are places where a confidently wrong sentence becomes a decision or a published claim, and both are cheap to check against a source you already have.
+- **#5 belongs in "verify everything"** even though it feels technical rather than consequential: a recoding error propagates silently into every result downstream and is close to invisible after the fact.
+- **#2 is the trap.** It scores low on stakes and looks like a skim---until you remember from Core 3 that department notes contain personnel asides, and "circulated to the whole department" is not reversible once it's sent. Distribution changes the stakes, not the task.
+- **#1, #8, and #10 are genuinely "skim" or "spot-check"**---which is the point. The map's job is to free your attention for the tasks that need it, not to make everything maximum-scrutiny.
+- **#7 deserves more than it looks like it deserves.** Plain-language rewriting is exactly where AI quietly changes what a finding means. Spot-check the *claims*, not the reading level.
+
+Then the real test: **would you defend your "skim" calls if one of them went wrong in public?** The riskiest tasks usually feel routine.
+
+:::
+
+:::{.callout-tip}
+## Guard the skills you don't want to lose
+Handing thinking to a tool is fine in moderation---we all offload arithmetic to calculators. Too much erodes the very judgment you need to catch the tool's mistakes, and your writing drifts toward a generic sameness. Aim for **calibrated reliance**: lean on AI for the low-stakes, reversible, checkable work you just mapped, and keep your hands on the rest. More on this in [Keeping Your Judgment](tracks/judgment-and-offloading.qmd).
 :::
 
 ---
 
-## Wrap-Up (5 min)
+## Capstone: What You Can Now Do (5 min)
 
-- **Agentic** means giving the AI a goal and standing guidance, and letting it carry out steps---with you reviewing.
-- The building blocks are **instructions, knowledge, tools, and skills**. Most of the quality is in the instructions.
-- A **skill** captures the know-how for a repeated task once, so you and your team reuse it.
-- **Guardrails matter:** keep a human in the loop, review each step, and never put data into a tool that isn't approved for that classification.
+Not "what we covered." What you personally did in the last fifty-five minutes:
 
-:::{.callout-warning}
-## Guardrails for Agentic Work
-The more an assistant does on its own, the more its mistakes can compound. Start small, review each step, and keep agentic tasks to low-stakes work until you trust the setup. Confirm data classification on Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools) before any agent touches real documents.
-:::
+1. **You caught a fabricated citation.** You have seen, first-hand, that a perfectly formatted reference in a real journal can be entirely invented---and you know the only defense: open it, or don't cite it.
+2. **You caught a planted wrong number.** Two of them, by hand, against a source---including the altered one that reads as plausible. You know that verifying sources and verifying numbers are different jobs.
+3. **You wrote one honest disclosure statement.** Two sentences naming the tool, the scope, the verification, and your accountability---for a real piece of your own work, checked by a colleague who confirmed it says something.
 
-:::{.callout-note}
-## Advanced option: Claude (PI-paid, not for Drexel data)
-For the most developed agentic features---a formal **Skills** system, **Projects**, and **MCP** connections to outside tools and data sources---**Claude** is the strongest option, and some PIs license it themselves. It is **not approved for Drexel data**: use it only with public or fully synthetic information. The concepts you practiced today transfer directly. See [Tools & Access](tools.qmd).
-:::
+That is the confidence move. You are not "being careful about AI" in the abstract. You have done the three things that make AI use defensible, on real material, and you can do them again tomorrow.
+
+**Take it with you.** Put the two-sentence disclosure into the document it belongs to this week. Put the scrutiny map somewhere you'll see it. And keep the rule that made all of it work: *if you can't open it, you can't cite it.*
 
 ---
 
-## Related
+## Where to Go Next
 
-- [Workshop 3](workshop3.qmd) --- shared Projects and custom GPTs, the foundation this builds on
-- [Tools & Access](tools.qmd) --- data classification and the Claude caveat
+- [Verifying AI Output](tracks/verifying-output.qmd) --- the self-paced version, with an automated numeric-verification exercise
+- [Responsible AI](tracks/responsible-ai.qmd) --- disclosure norms and governance frameworks (WHO, ASPPH)
+- [Keeping Your Judgment](tracks/judgment-and-offloading.qmd) --- cognitive offloading and calibrated reliance
+- [Grant & Proposal Development](tracks/grant-proposal-development.qmd) · [Manuscript Preparation & Peer Review](tracks/manuscript-peer-review.qmd) --- the funder and journal rules, worked through
+- [Tools & Access](tools.qmd) --- Drexel's data classifications and which tool is approved for what
+
+{{< include /_feedback-workshop.qmd >}}

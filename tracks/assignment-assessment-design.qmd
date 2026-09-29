@@ -3,10 +3,10 @@ title: "Assignment & Assessment Design in the AI Era"
 ---
 
 ::: {.topic-badges}
-[Moderate]{.level-badge .level-moderate} · **Communication & Dissemination** track · ~35 min hands-on + readings and quiz
+[Moderate]{.level-badge .level-moderate} · **Teaching & Learning** track · ~35 min hands-on + readings and quiz
 :::
 
-[← Back to the Communication & Dissemination track](communication.qmd){.track-back}
+[← Back to the Teaching & Learning track](teaching-learning.qmd){.track-back}
 
 *Design assignments that develop real competence — whether students use AI or not.*
 
@@ -82,11 +82,11 @@ This assignment is easy to complete with AI in about 30 seconds. The learning ob
 
 2. Stress-test it:
 
-   > Read this AI-use policy as a student who wants to use AI as much as possible without technically violating the rules. Where are the loopholes?
+   > Read this AI-use policy as a student acting in good faith who genuinely can't tell what's allowed. Where could two honest students reach different conclusions about what's permitted, and what would each have to ask me to be sure?
 
-3. Close the loopholes and finalize.
+3. Close those gaps and finalize.
 
-**Expected result.** A specific, enforceable AI-use section for one assignment. It should be clear enough that two students reading it would reach the same conclusion about what's allowed.
+**Expected result.** A specific, enforceable AI-use section for one assignment. It should be clear enough that two students reading it would reach the same conclusion about what's allowed. (To see what this reads like from the student's seat — including how a "cite any AI use" line lands when it doesn't say how — see [AI in Your Coursework](ai-in-your-coursework.qmd), the student-facing mirror of this page.)
 
 **Check your work.** Show it to a colleague or TA. If they interpret the rules differently than you intended, the language needs tightening.
 
@@ -120,16 +120,19 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings
 
 - [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with data rules.
 - [Drexel Academic Integrity Policy](https://drexel.edu/studentlife/community-standards/code-of-conduct/) — the institutional framework for academic honesty.
+- [AI in Your Coursework](ai-in-your-coursework.qmd) — the student-facing mirror of this page: how students read assignment AI-use rules and write a disclosure worth reading.
 
 ---
 
 ## Navigate
 
-**Next in this track:** [Grant Administration with AI](grant-administration.qmd)
+**Next in this track:** [AI in Your Coursework](ai-in-your-coursework.qmd)
 
-**Related topics:** [Writing Your Course AI Policy](course-ai-policy.qmd) · [Verifying AI Output](verifying-output.qmd)
+**Related topics:** [Writing Your Course AI Policy](course-ai-policy.qmd) · [AI in Your Coursework](ai-in-your-coursework.qmd) · [Verifying AI Output](verifying-output.qmd)
 
 ::: {.callout-warning}
 ## Data rules
 Use **non-sensitive** examples when designing and testing assignments. Do not share real student submissions with AI tools. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
 :::
+
+{{< include /_feedback-track.qmd >}}

@@ -1,0 +1,229 @@
+---
+title: "AI in Your Coursework"
+---
+
+::: {.topic-badges}
+[Novice]{.level-badge .level-novice} · **Teaching & Learning** track · ~35 min hands-on + readings and quiz
+:::
+
+[← Back to the Teaching & Learning track](teaching-learning.qmd){.track-back}
+
+*Read your course AI policies accurately, disclose your use specifically, and know where AI is the learning and where it skips it.*
+
+## What you'll be able to do
+
+- Read a course AI policy in good faith and find what it genuinely doesn't answer
+- Write a disclosure specific enough to be worth reading
+- Tell AI use that builds the skill from AI use that bypasses it
+- Ask an instructor a clear question *before* you submit, not after
+
+## Overview
+
+ChatGPT Edu became available to Drexel students in August 2026, and Copilot Chat with Enterprise Data Protection is available to you too — see [Tools & Access](../tools.qmd) for what you have and the data rules attached. What the tools don't tell you is what each of your courses allows. Three courses in one term will often have three different policies, and at least one will be silent. Faculty are writing these rules for the first time; your job is to read each one accurately, in good faith, and ask when it genuinely doesn't answer your question.
+
+**Your syllabus outranks anything on this site.** That reach is wider than courses: the **Applied Practice Experience (APE)** and the **Integrative Learning Experience (ILE) or capstone** each have a responsible instructor, advisor, or preceptor whose AI policy controls — and when their syllabus or handbook is silent, ask before you use AI. Drexel's central [guidance on generative AI and teaching](https://drexel.edu/teaching-and-learning/resources/teaching-tech/GAI-and-teaching/) (Teaching and Learning Center, updated July 2026) deliberately leaves these decisions at the course level; as of this writing there is no final university-wide policy on AI in coursework, so the course-level policy *is* the policy. And **the goal isn't staying technically compliant, it's still being able to do the thing** — a policy prohibits AI on a problem set because you need that calculation in a qualifying exam or a job interview, where nobody can look it up for you. That's the argument in [Keeping Your Judgment](judgment-and-offloading.qmd), and it lands differently when the skill at stake is yours.
+
+::: {.callout-tip}
+## The one-sentence test
+Before using AI on coursework, ask: **is the thing I'm handing to the AI the thing this assignment is trying to teach me?** If yes, do it yourself first — even where the policy allows it.
+:::
+
+::: {.callout-important}
+## Three fabricated course policies — the demo material for this page
+
+All three are **fabricated for practice.** The courses, instructors, and text are invented; each resembles real syllabus language, and each contains something it does not answer.
+
+**Excerpt A — BSTA 550: Biostatistics II (fabricated).**
+
+> *Academic Integrity and AI.* Generative AI tools may not be used on any graded work in this course, including weekly problem sets, the take-home midterm, and the final project. Submitting AI-generated work is a violation of the University's Academic Integrity Policy and will be reported. Standard spelling and grammar checking tools are permitted. If you are unsure whether a tool is permitted, the answer is no.
+
+**Excerpt B — EPID 602: Intermediate Epidemiology (fabricated).**
+
+> *AI Use.* AI is a tool, not a replacement for learning. You may use AI tools to help you understand concepts, check your writing, and brainstorm approaches. You may **not** use AI to produce the calculations or interpretations you submit on weekly problem sets — those must be your own work, because the objective of this course is that *you* can apply epidemiologic measures and interpret study designs. On the midterm case study and the final research proposal, AI may be used for brainstorming and outlining. **Cite any AI use.** Violations are handled under the University's Academic Integrity Policy.
+
+**Excerpt C — CHP 610: Community Health Program Planning (fabricated).**
+
+> *Academic Integrity.* All work you submit must be your own. Collaboration is encouraged on the Module 3 group project; all other assignments are individual. Plagiarism, unauthorized collaboration, and misrepresentation of sources are violations of the University's Academic Integrity Policy and will be reported.
+>
+> *(The rest of this fabricated syllabus contains no mention of AI tools at all.)*
+:::
+
+## Practice activities
+
+```{=html}
+<details class="activity"><summary>Activity 1 · Novice — Three courses, three policies, one term</summary>
+```
+
+**Time** ~18 min · **Tools** ChatGPT Edu
+
+**Goal.** Build one grid of what you may do in each course — and a short list of what the policies don't answer.
+
+**Setup.** The three fabricated excerpts above, as if all three were on your schedule this term.
+
+**Steps.**
+
+1. Before touching AI, read all three and write one sentence per course: *what am I allowed to do here?*
+
+2. Put them side by side, reading in good faith rather than looking for room:
+
+   > Here are three fabricated course AI policies from three courses I'm taking. I want to follow all three honestly. Build a table with one row per course and columns for: clearly allowed, clearly prohibited, and genuinely unclear. In the "genuinely unclear" column, list only things where a reasonable, honest student could read the policy two different ways — don't list things the policy actually answers. [paste all three excerpts]
+
+3. Turn each unclear item into an askable question:
+
+   > For each unclear item, write the one-sentence question I'd need to ask the instructor to resolve it. Make each specific enough to answer yes or no.
+
+4. Compare the AI's list to what you wrote in step 1. What did you read past?
+
+**Expected result.** A three-row grid plus specific questions — not "can I use AI?" but "does running my finished paragraph through a tool that rewrites sentences count as a grammar checker here?"
+
+**Check your work.** Each excerpt leaves one thing genuinely unresolved. A good grid finds all three:
+
+- **BSTA 550** prohibits AI on all graded work *and* permits "standard spelling and grammar checking tools" — which now rewrite whole sentences, not just flag errors. Where correcting ends and rewriting begins is never stated, and "if unsure, the answer is no" contradicts the category just permitted.
+- **EPID 602** says "**Cite any AI use**" and never says *how* — not where, not the format, not the detail. "I used ChatGPT" and a three-sentence account both technically comply.
+- **CHP 610** says nothing about AI while requiring work be "your own" and encouraging collaboration on a group project. Whether AI is unauthorized collaboration is unanswered — as is what happens if a groupmate uses it on a deliverable with your name on it.
+
+If the AI's table sounded confident about something the text doesn't say, that's the more useful lesson: it filled the gap instead of flagging it.
+
+**Common pitfalls.** Asking "is this allowed?" instead of "what does this leave unresolved?" And treating silence as permission; see Activity 3.
+
+**Stretch (optional).** Do this with your actual syllabi this term, and note which of your real courses is the CHP 610 case.
+
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 2 · Novice — Write a disclosure worth reading</summary>
+```
+
+**Time** ~12 min · **Tools** ChatGPT Edu (optional — this works on paper)
+
+**Goal.** Replace "I used ChatGPT" with a disclosure that says what actually happened.
+
+**Setup.** A disclosure has three parts: **what tool**, **what you asked it to do**, and **what you did with the output**. The third is the one people skip and the one that matters — it's where the judgment shows. Two disclosures of the *same* work:
+
+> **Vague:** "I used ChatGPT for this assignment."
+
+> **Specific:** "I used ChatGPT Edu twice on this case study. Before writing, I asked it to list common threats to validity in cross-sectional designs so I could check my own list for gaps; it named two I hadn't considered, and I looked both up in the assigned chapter before including them. After drafting my discussion, I asked where my argument was weakest; it flagged my third paragraph as overstated and I rewrote that paragraph myself. All calculations, the interpretation, and the final wording are mine."
+
+The vague version tells your instructor nothing they can evaluate — it reads as either an over-disclosure of a spell-check or an under-disclosure of a ghostwritten paper.
+
+**Steps.**
+
+1. Take an assignment where you used AI (or the EPID 602 case study as a hypothetical) and write your own three-part disclosure by hand, under 100 words.
+
+2. Test it:
+
+   > Here is my AI disclosure for a graduate course assignment. Acting as the instructor reading it, tell me what you still don't know about how I used AI. Do not rewrite it — just list what's missing. [your disclosure]
+
+3. Fix the gaps yourself, then decide where it goes. EPID 602 says "cite any AI use" without saying where, so put it in a short note at the end *and* be ready to ask.
+
+**Expected result.** A disclosure under 100 words a reader could act on, plus a decision about where it goes.
+
+**Check your work.** Could your instructor tell, from this alone, whether the thinking in the paper is yours? If honestly no, it isn't specific enough yet. Second test: would you be comfortable if they read it and then asked you to explain your third paragraph out loud?
+
+**Common pitfalls.** Naming the tool but not the task ("I used ChatGPT Edu" — for what?), or the task but not what you did with the output. And padding: disclosing a spell-check is noise.
+
+**Stretch (optional).** Write the version you'd use professionally — a manuscript acknowledgment or funder disclosure. Same habit; see [AI for Your Thesis or Dissertation](ai-for-your-thesis.qmd).
+
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 3 · Novice — Draw your own line, then ask</summary>
+```
+
+**Time** ~15 min · **Tools** your own judgment first, then ChatGPT Edu
+
+**Goal.** Sort AI uses into "builds the skill" and "skips it," then write the email you send when the syllabus doesn't answer.
+
+**Setup.** Six uses a graduate student might make of AI. Sort them yourself, on paper, before asking anything:
+
+1. Asking it to explain why a confidence interval widens as the sample shrinks, after you got a problem wrong.
+2. Asking it to do the confidence-interval calculation on your problem set.
+3. Asking it to generate practice problems like the ones on the problem set, then working them unaided.
+4. Asking it to summarize the three assigned readings so you can skip them before seminar.
+5. Asking it to critique the discussion post you already wrote, before you post it.
+6. Asking it to find a citation for a claim you're making in a paper.
+
+**Steps.**
+
+1. Sort all six into *builds the skill* / *skips the skill* / *depends*, writing what the "depends" ones depend on.
+
+2. Check your reasoning against the argument, not against a policy:
+
+   > I'm a graduate student. Here's how I sorted six uses of AI in my coursework into "builds the skill I'm here to build" and "bypasses it." Challenge my sorting — which did I get wrong, and what's the strongest case against my reasoning? Don't tell me what's allowed; tell me what I'd lose. [your sort]
+
+3. Take the CHP 610 case — silent syllabus, group project — and write a short, respectful email asking before you act. Model (fabricated instructor):
+
+   > **Subject:** Quick question about AI use on the CHP 610 group project
+   >
+   > Dear Dr. Marchetti,
+   >
+   > I'm starting the Module 3 group project and want to make sure I'm working the way you intend. The syllabus doesn't mention AI tools, so I'd rather ask than assume.
+   >
+   > Specifically: after my group has drafted our logic model and narrative ourselves, would it be acceptable to ask ChatGPT Edu to point out gaps or weak links in it? We'd write everything we submit; the tool would only tell us what we'd left out. If you'd rather we not use it at all, that's completely fine and we'll skip it.
+   >
+   > And if any AI use is acceptable, is there a way you'd like us to note it when we submit?
+   >
+   > Thank you,
+   > Jordan Lee
+
+4. Note its shape: one specific proposed use, one sentence on what stays yours, an explicit offer to take no for an answer, and a question about disclosure. Write your own version for an unresolved item from Activity 1.
+
+**Expected result.** A sorted list with your reasoning, and one email you'd actually send.
+
+**Check your work.** The defensible sort: **#1, #3, and #5 build the skill** — you do the work; AI explains, drills, or critiques. **#2 and #4 skip it** — the calculation and the reading *are* the learning objectives. **#6 depends**: having AI *find* a source is fine only if you open the paper and confirm it says what you're claiming, because AI invents citations that look perfect ([Verifying AI Output](verifying-output.qmd)). If you sorted #4 as "builds," reread it — a summary of a reading is not the reading. For the email: it should be answerable in one line.
+
+**Common pitfalls.** Asking after you submit. A question before is a student being careful; after, it's a disclosure of something you already did. And don't ask permission for everything — put Activity 1's unclear cases in one email, not six.
+
+**Stretch (optional).** Name the skill you'd be most embarrassed to have lost by graduation, and decide what you'll keep doing unaided to protect it.
+
+```{=html}
+</details>
+```
+
+
+## Check your readiness
+
+Answer these, then check — your score suggests whether to dive in or skim the readings first.
+
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions": [{"q": "Your syllabus says nothing at all about AI. What does that mean?", "options": ["It's unresolved — ask before you use it, not after", "It's permitted, since nothing prohibits it", "It's prohibited, since nothing permits it", "You can decide yourself and disclose later"], "answer": 0, "explain": "Silence is a gap, not a permission and not a ban. Asked before, it's a question; asked after, it's a disclosure."}, {"q": "Which disclosure is actually useful to an instructor?", "options": ["The tool, what you asked it to do, and what you did with the output", "\"I used ChatGPT\"", "A note that AI was used somewhere in the document", "None — disclosure only invites suspicion"], "answer": 0, "explain": "The third part shows the judgment stayed yours; without it, nobody can tell a spell-check from a ghostwritten paper."}, {"q": "The best reason not to have AI do your problem-set calculations is…", "options": ["You need to do them yourself when no one can look it up for you", "You'd probably get caught", "It's against the rules", "AI is bad at math"], "answer": 0, "explain": "The skill is the point — cognitive offloading applied to your own training."}]}
+</script>
+</div>
+
+## Recommended readings
+
+Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings**, and online where linked:
+
+- [**How to Outsource Everything to AI and Get Dumb**](https://ruben.substack.com/p/how-to-rot-your-brain-with-ai) — the cognitive-offloading risk, bluntly put; the most useful item here if you're early in a program.
+- [**Judgment Is the Skill That Matters Most in the AI Era**](https://dev.jimgrey.net/2026/05/27/judgment-is-the-skill-that-matters-most-in-the-ai-era/) — what you're actually building in graduate school.
+- [**Results May Vary (Lance Eaton)**](https://aiedusimplified.substack.com/p/useful-but) — why the same prompt gives different answers.
+- [**AI-Slop, GrantaGate and Bad Writing**](https://tuhinchakrabarty.substack.com/p/ai-slop-grantagate-and-bad-writing) — what AI-generated writing reads like to the person grading it.
+
+## Useful resources
+
+- [Tools & Access](../tools.qmd) — what ChatGPT Edu and Copilot Chat give you as a Drexel student, and the data rules.
+- [Drexel Academic Integrity Policy](https://drexel.edu/studentlife/community-standards/code-of-conduct/) — the framework every course policy sits on.
+- [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with data rules.
+- [Writing Your Course AI Policy](course-ai-policy.qmd) — the instructor-facing mirror of this page.
+- [Keeping Your Judgment: Cognitive Offloading](judgment-and-offloading.qmd) — the full argument behind Activity 3.
+- [Verifying AI Output](verifying-output.qmd) — a fabricated citation in a course paper has your name on it.
+
+---
+
+## Navigate
+
+**Next in this track:** [AI for Your Thesis or Dissertation](ai-for-your-thesis.qmd)
+
+**Related topics:** [Writing Your Course AI Policy](course-ai-policy.qmd) · [Keeping Your Judgment: Cognitive Offloading](judgment-and-offloading.qmd) · [Verifying AI Output](verifying-output.qmd)
+
+::: {.callout-warning}
+## Data rules
+Practice with the fabricated policies on this page. Don't paste a classmate's work, a graded submission with someone else's name on it, or practicum and assistantship data into any AI tool — that data is usually someone else's to protect. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+:::
+
+{{< include /_feedback-track.qmd >}}
