@@ -1,0 +1,1046 @@
+crash_id,year,month,hour,light,speed_limit_mph,ped_age_group,neighborhood,severity
+R0001,2019,9,16,Daylight,25.0,18-44,Downtown,No apparent injury
+R0002,2019,8,16,Daylight,25.0,18-44,Southport,Minor injury
+R0003,2019,11,19,Dark,30.0,18-44,Eastgate,Minor injury
+R0004,2019,6,16,Daylight,30.0,0-17,Eastgate,Minor injury
+R0005,2019,3,10,Daylight,30.0,18-44,Old Mill,Minor injury
+R0006,2019,5,15,Daylight,45.0,18-44,Southport,Serious injury
+R0007,2019,8,9,Daylight,30.0,45-64,Riverside,Minor injury
+R0008,2019,11,15,Daylight,35.0,45-64,Old Mill,Minor injury
+R0009,2019,1,15,Daylight,35.0,18-44,Southport,Fatal
+R0010,2019,5,11,Daylight,30.0,18-44,Northside,No apparent injury
+R0011,2019,7,17,Daylight,30.0,18-44,Downtown,No apparent injury
+R0012,2019,1,16,Daylight,40.0,18-44,Riverside,Serious injury
+R0013,2019,11,16,Daylight,25.0,18-44,Eastgate,Serious injury
+R0014,2019,4,15,Daylight,30.0,18-44,Downtown,Minor injury
+R0015,2019,10,16,Daylight,35.0,45-64,Eastgate,Minor injury
+R0016,2019,4,7,Daylight,40.0,45-64,Eastgate,Minor injury
+R0017,2019,10,16,Daylight,40.0,18-44,Northside,Minor injury
+R0018,2019,12,2,Dark,25.0,0-17,Eastgate,Minor injury
+R0019,2019,6,11,Daylight,40.0,18-44,Eastgate,Serious injury
+R0020,2019,6,14,Daylight,40.0,18-44,Downtown,No apparent injury
+R0021,2019,8,16,Daylight,25.0,45-64,Eastgate,Minor injury
+R0022,2019,8,6,Dusk/Dawn,30.0,18-44,Old Mill,Minor injury
+R0023,2019,9,9,Daylight,25.0,65+,Southport,Minor injury
+R0024,2019,4,18,Dusk/Dawn,25.0,18-44,Old Mill,Minor injury
+R0025,2019,7,18,Dusk/Dawn,25.0,18-44,Northside,Minor injury
+R0026,2019,7,8,Daylight,30.0,18-44,Northside,No apparent injury
+R0027,2019,3,7,Daylight,40.0,45-64,Downtown,No apparent injury
+R0028,2019,3,10,Daylight,45.0,45-64,Eastgate,Serious injury
+R0029,2019,1,7,Daylight,30.0,18-44,Old Mill,Minor injury
+R0030,2019,1,8,Daylight,40.0,18-44,Riverside,Minor injury
+R0031,2019,3,18,Dusk/Dawn,35.0,45-64,Downtown,No apparent injury
+R0032,2019,2,15,Daylight,25.0,18-44,Riverside,Serious injury
+R0033,2019,2,20,Dark,25.0,45-64,Eastgate,Minor injury
+R0034,2019,4,13,Daylight,30.0,18-44,Downtown,Minor injury
+R0035,2019,6,8,Daylight,25.0,65+,Riverside,Minor injury
+R0036,2019,4,12,Daylight,35.0,18-44,Old Mill,No apparent injury
+R0037,2019,7,1,Dark,25.0,18-44,Downtown,Minor injury
+R0038,2019,1,7,Daylight,25.0,65+,Downtown,Minor injury
+R0039,2019,6,15,Daylight,45.0,65+,Southport,Serious injury
+R0040,2019,11,8,Daylight,35.0,18-44,Downtown,Fatal
+R0041,2019,7,4,Dark,30.0,65+,Eastgate,Minor injury
+R0042,2019,6,7,Daylight,25.0,18-44,Northside,Minor injury
+R0043,2019,9,20,Dark,35.0,65+,Southport,Minor injury
+R0044,2019,1,11,Daylight,30.0,65+,Northside,Minor injury
+R0045,2019,9,14,Daylight,25.0,45-64,Eastgate,Minor injury
+R0046,2019,5,11,Daylight,25.0,18-44,Riverside,Minor injury
+R0047,2019,1,14,Daylight,40.0,65+,Old Mill,Serious injury
+R0048,2019,12,6,Dusk/Dawn,30.0,0-17,Southport,Minor injury
+R0049,2019,5,17,Daylight,30.0,18-44,Riverside,No apparent injury
+R0050,2019,12,12,Daylight,40.0,45-64,Old Mill,No apparent injury
+R0051,2019,2,21,Dark,45.0,65+,Eastgate,Serious injury
+R0052,2019,8,14,Daylight,35.0,18-44,Southport,Serious injury
+R0053,2019,3,17,Daylight,25.0,0-17,Eastgate,Serious injury
+R0054,2019,4,13,Daylight,25.0,18-44,Southport,Minor injury
+R0055,2019,4,21,Dark,35.0,18-44,Downtown,Serious injury
+R0056,2019,12,12,Daylight,25.0,0-17,Northside,No apparent injury
+R0057,2019,3,11,Daylight,40.0,18-44,Eastgate,Serious injury
+R0058,2019,7,4,Dark,30.0,18-44,Eastgate,No apparent injury
+R0059,2019,4,17,Daylight,25.0,18-44,Southport,Minor injury
+R0060,2019,7,19,Dark,25.0,45-64,Old Mill,Minor injury
+R0061,2019,5,5,Dark,25.0,45-64,Southport,Minor injury
+R0062,2019,11,19,Dark,25.0,65+,Southport,Minor injury
+R0063,2019,2,6,Dusk/Dawn,30.0,45-64,Old Mill,Fatal
+R0064,2019,1,18,Dusk/Dawn,35.0,18-44,Downtown,Minor injury
+R0065,2019,4,16,Daylight,40.0,0-17,Northside,Minor injury
+R0066,2019,8,10,Daylight,35.0,18-44,Southport,Minor injury
+R0067,2019,1,10,Daylight,30.0,18-44,Eastgate,Minor injury
+R0068,2019,6,6,Dusk/Dawn,45.0,18-44,Northside,Serious injury
+R0069,2019,10,17,Daylight,40.0,18-44,Downtown,Minor injury
+R0070,2019,2,9,Daylight,30.0,18-44,Old Mill,Minor injury
+R0071,2019,2,16,Daylight,30.0,18-44,Southport,No apparent injury
+R0072,2019,12,9,Daylight,40.0,45-64,Old Mill,Minor injury
+R0073,2019,1,22,Dark,25.0,0-17,Eastgate,Minor injury
+R0074,2019,3,17,Daylight,30.0,45-64,Old Mill,Minor injury
+R0075,2019,4,7,Daylight,25.0,65+,Northside,Minor injury
+R0076,2019,4,12,Daylight,25.0,0-17,Old Mill,Minor injury
+R0077,2019,11,8,Daylight,45.0,18-44,Eastgate,Minor injury
+R0078,2019,12,17,Daylight,25.0,65+,Southport,Minor injury
+R0079,2019,10,22,Dark,45.0,18-44,Riverside,No apparent injury
+R0080,2019,1,17,Daylight,45.0,18-44,Southport,Serious injury
+R0081,2019,11,15,Daylight,35.0,65+,Southport,Serious injury
+R0082,2019,1,8,Daylight,30.0,18-44,Northside,No apparent injury
+R0083,2019,11,19,Dark,30.0,45-64,Eastgate,Minor injury
+R0084,2019,9,20,Dark,30.0,18-44,Old Mill,Minor injury
+R0085,2019,10,16,Daylight,45.0,45-64,Eastgate,No apparent injury
+R0086,2019,12,10,Daylight,35.0,18-44,Riverside,Serious injury
+R0087,2019,1,16,Daylight,35.0,0-17,Eastgate,Minor injury
+R0088,2019,4,19,Dark,25.0,18-44,Downtown,Minor injury
+R0089,2019,6,7,Daylight,25.0,18-44,Northside,No apparent injury
+R0090,2019,6,17,Daylight,30.0,18-44,Downtown,Minor injury
+R0091,2019,5,15,Daylight,25.0,45-64,Southport,No apparent injury
+R0092,2019,3,16,Daylight,40.0,18-44,Southport,Minor injury
+R0093,2019,9,19,Dark,40.0,18-44,Southport,Minor injury
+R0094,2019,1,11,Daylight,45.0,18-44,Downtown,Minor injury
+R0095,2019,9,17,Daylight,,45-64,Old Mill,No apparent injury
+R0096,2019,12,5,Dark,25.0,18-44,Southport,Minor injury
+R0097,2019,3,18,Dusk/Dawn,25.0,65+,Riverside,No apparent injury
+R0098,2019,6,20,Dark,45.0,65+,Southport,Serious injury
+R0099,2019,8,10,Daylight,30.0,65+,Riverside,Fatal
+R0100,2019,3,21,Dark,45.0,18-44,Eastgate,No apparent injury
+R0101,2019,12,0,Dark,30.0,18-44,Northside,Serious injury
+R0102,2019,6,14,Daylight,25.0,45-64,Downtown,No apparent injury
+R0103,2019,8,16,Daylight,30.0,65+,Old Mill,No apparent injury
+R0104,2019,4,19,Dark,35.0,45-64,Old Mill,No apparent injury
+R0105,2019,9,21,Dark,25.0,18-44,Eastgate,Minor injury
+R0106,2019,11,12,Daylight,30.0,0-17,Downtown,Serious injury
+R0107,2019,9,14,Daylight,25.0,45-64,Downtown,Minor injury
+R0108,2019,5,21,Dark,35.0,65+,Southport,No apparent injury
+R0109,2019,4,14,Daylight,35.0,18-44,Northside,Minor injury
+R0110,2019,4,10,Daylight,30.0,45-64,Old Mill,No apparent injury
+R0111,2019,4,6,Dusk/Dawn,35.0,45-64,Eastgate,Minor injury
+R0112,2019,8,17,Daylight,40.0,18-44,Northside,Serious injury
+R0113,2019,2,18,Dusk/Dawn,25.0,65+,Downtown,No apparent injury
+R0114,2019,7,16,Daylight,30.0,65+,Northside,No apparent injury
+R0115,2019,6,21,Dark,35.0,45-64,Eastgate,Minor injury
+R0116,2019,5,15,Daylight,35.0,45-64,Downtown,No apparent injury
+R0117,2019,5,10,Daylight,30.0,45-64,Eastgate,Minor injury
+R0118,2019,1,14,Daylight,25.0,18-44,Old Mill,No apparent injury
+R0119,2019,11,9,Daylight,35.0,18-44,Old Mill,No apparent injury
+R0120,2019,5,13,Daylight,25.0,45-64,Riverside,No apparent injury
+R0121,2019,5,23,Dark,40.0,18-44,Northside,Fatal
+R0122,2019,8,18,Dusk/Dawn,35.0,18-44,Riverside,No apparent injury
+R0123,2019,9,4,Dark,35.0,45-64,Riverside,No apparent injury
+R0124,2019,11,13,Daylight,45.0,18-44,Northside,Serious injury
+R0125,2019,1,0,Dark,40.0,45-64,Northside,Minor injury
+R0126,2019,3,17,Daylight,25.0,65+,Northside,No apparent injury
+R0127,2019,10,22,Dark,35.0,18-44,Downtown,Minor injury
+R0128,2019,4,11,Daylight,35.0,18-44,Eastgate,Minor injury
+R0129,2019,12,7,Daylight,35.0,45-64,Eastgate,Serious injury
+R0130,2019,1,16,Daylight,35.0,45-64,Northside,Minor injury
+R0131,2019,3,8,Daylight,35.0,18-44,Southport,No apparent injury
+R0132,2019,6,8,Daylight,25.0,18-44,Old Mill,Minor injury
+R0133,2019,8,12,Daylight,35.0,65+,Southport,No apparent injury
+R0134,2019,1,18,Dusk/Dawn,35.0,45-64,Northside,Minor injury
+R0135,2019,9,6,Dusk/Dawn,45.0,65+,Riverside,Minor injury
+R0136,2019,4,12,Daylight,,18-44,Downtown,Serious injury
+R0137,2019,1,18,Dusk/Dawn,35.0,18-44,Eastgate,No apparent injury
+R0138,2019,9,6,Dusk/Dawn,35.0,18-44,Southport,Minor injury
+R0139,2019,7,20,Dark,25.0,18-44,Old Mill,No apparent injury
+R0140,2019,12,16,Daylight,30.0,65+,Northside,Serious injury
+R0141,2019,7,11,Daylight,25.0,18-44,Northside,Minor injury
+R0142,2019,12,15,Daylight,30.0,18-44,Riverside,No apparent injury
+R0143,2019,8,17,Daylight,25.0,18-44,Downtown,Serious injury
+R0144,2019,8,14,Daylight,35.0,18-44,Southport,Minor injury
+R0145,2019,12,1,Dark,40.0,18-44,Riverside,Minor injury
+R0146,2019,1,20,Dark,35.0,45-64,Riverside,Serious injury
+R0147,2019,3,7,Daylight,35.0,65+,Downtown,Minor injury
+R0148,2019,9,17,Daylight,35.0,18-44,Riverside,Minor injury
+R0149,2019,1,18,Dusk/Dawn,30.0,0-17,Northside,No apparent injury
+R0150,2019,8,7,Daylight,45.0,45-64,Southport,Fatal
+R0151,2019,8,12,Daylight,30.0,65+,Northside,Minor injury
+R0152,2019,6,21,Dark,35.0,18-44,Eastgate,Serious injury
+R0153,2019,5,8,Daylight,25.0,45-64,Riverside,No apparent injury
+R0154,2019,10,5,Dark,35.0,45-64,Northside,Minor injury
+R0155,2019,3,10,Daylight,35.0,65+,Downtown,No apparent injury
+R0156,2019,9,15,Daylight,30.0,0-17,Old Mill,Minor injury
+R0157,2019,10,15,Daylight,40.0,18-44,Northside,Minor injury
+R0158,2019,7,19,Dark,30.0,45-64,Downtown,Minor injury
+R0159,2019,11,6,Dusk/Dawn,30.0,0-17,Downtown,Serious injury
+R0160,2019,9,18,Dusk/Dawn,25.0,18-44,Riverside,Minor injury
+R0161,2019,2,22,Dark,25.0,18-44,Northside,Serious injury
+R0162,2019,4,11,Daylight,35.0,18-44,Old Mill,No apparent injury
+R0163,2019,9,10,Daylight,30.0,18-44,Southport,Minor injury
+R0164,2019,5,15,Daylight,25.0,45-64,Eastgate,No apparent injury
+R0165,2019,10,7,Daylight,30.0,45-64,Old Mill,No apparent injury
+R0166,2019,11,17,Daylight,35.0,18-44,Southport,Minor injury
+R0167,2019,10,5,Dark,35.0,65+,Northside,Serious injury
+R0168,2019,11,21,Dark,30.0,45-64,Eastgate,No apparent injury
+R0169,2019,2,23,Dark,35.0,0-17,Riverside,Minor injury
+R0170,2019,2,20,Dark,25.0,65+,Old Mill,Minor injury
+R0171,2019,5,11,Daylight,30.0,45-64,Downtown,Minor injury
+R0172,2019,8,6,Dusk/Dawn,35.0,18-44,Old Mill,Serious injury
+R0173,2019,5,8,Daylight,30.0,0-17,Riverside,Fatal
+R0174,2019,8,11,Daylight,45.0,65+,Eastgate,Minor injury
+R0175,2019,12,12,Daylight,40.0,45-64,Northside,Minor injury
+R0176,2019,4,7,Daylight,25.0,45-64,Old Mill,Minor injury
+R0177,2019,10,17,Daylight,45.0,45-64,Southport,Minor injury
+R0178,2019,10,7,Daylight,25.0,45-64,Northside,Minor injury
+R0179,2019,12,13,Daylight,30.0,65+,Northside,Minor injury
+R0180,2019,12,10,Daylight,35.0,45-64,Northside,Minor injury
+R0181,2019,11,9,Daylight,25.0,0-17,Riverside,Minor injury
+R0182,2019,2,17,Daylight,40.0,18-44,Northside,No apparent injury
+R0183,2019,8,6,Dusk/Dawn,35.0,45-64,Old Mill,No apparent injury
+R0184,2019,2,14,Daylight,25.0,18-44,Southport,No apparent injury
+R0185,2019,3,14,Daylight,40.0,65+,Old Mill,Minor injury
+R0186,2019,4,15,Daylight,35.0,18-44,Southport,Minor injury
+R0187,2019,6,11,Daylight,30.0,18-44,Riverside,Minor injury
+R0188,2019,5,7,Daylight,30.0,18-44,Riverside,No apparent injury
+R0189,2019,3,6,Dusk/Dawn,35.0,18-44,Riverside,No apparent injury
+R0190,2019,11,4,Dark,25.0,45-64,Old Mill,No apparent injury
+R0191,2019,1,14,Daylight,35.0,45-64,Old Mill,Minor injury
+R0192,2019,12,13,Daylight,25.0,18-44,Southport,Minor injury
+R0193,2019,9,22,Dark,35.0,65+,Downtown,No apparent injury
+R0194,2019,3,11,Daylight,45.0,18-44,Downtown,Serious injury
+R0195,2019,3,16,Daylight,45.0,18-44,Downtown,Minor injury
+R0196,2019,11,21,Dark,35.0,18-44,Southport,Serious injury
+R0197,2019,1,15,Daylight,45.0,18-44,Downtown,Minor injury
+R0198,2019,8,21,Dark,40.0,45-64,Eastgate,Minor injury
+R0199,2019,3,9,Daylight,25.0,18-44,Southport,Minor injury
+R0200,2019,1,13,Daylight,30.0,18-44,Riverside,Minor injury
+R0201,2019,5,9,Daylight,30.0,18-44,Southport,Minor injury
+R0202,2019,2,17,Daylight,35.0,45-64,Downtown,Minor injury
+R0203,2019,12,7,Daylight,25.0,65+,Riverside,No apparent injury
+R0204,2019,6,11,Daylight,35.0,45-64,Northside,Minor injury
+R0205,2019,1,17,Daylight,30.0,65+,Riverside,No apparent injury
+R0206,2019,1,20,Dark,35.0,45-64,Riverside,Minor injury
+R0207,2019,12,17,Daylight,40.0,18-44,Southport,No apparent injury
+R0208,2019,11,17,Daylight,40.0,0-17,Riverside,Serious injury
+R0209,2019,6,13,Daylight,25.0,18-44,Old Mill,Minor injury
+R0210,2019,3,8,Daylight,35.0,18-44,Northside,Minor injury
+R0211,2020,11,17,Daylight,30.0,65+,Downtown,Minor injury
+R0212,2020,12,20,Dark,40.0,0-17,Northside,Minor injury
+R0213,2020,6,14,Daylight,25.0,0-17,Northside,Minor injury
+R0214,2020,2,20,Dark,25.0,45-64,Downtown,Minor injury
+R0215,2020,1,13,Daylight,35.0,45-64,Downtown,Minor injury
+R0216,2020,11,19,Dark,30.0,18-44,Southport,Minor injury
+R0217,2020,5,18,Dusk/Dawn,30.0,0-17,Riverside,No apparent injury
+R0218,2020,2,12,Daylight,35.0,18-44,Downtown,Minor injury
+R0219,2020,11,18,Dusk/Dawn,40.0,0-17,Downtown,Serious injury
+R0220,2020,2,13,Daylight,25.0,18-44,Old Mill,Minor injury
+R0221,2020,8,14,Daylight,35.0,65+,Old Mill,Serious injury
+R0222,2020,7,12,Daylight,25.0,18-44,Old Mill,Minor injury
+R0223,2020,9,18,Dusk/Dawn,40.0,0-17,Eastgate,Serious injury
+R0224,2020,9,6,Dusk/Dawn,25.0,65+,Riverside,Minor injury
+R0225,2020,6,11,Daylight,25.0,0-17,Northside,Serious injury
+R0226,2020,11,16,Daylight,40.0,45-64,Downtown,Minor injury
+R0227,2020,1,12,Daylight,45.0,65+,Eastgate,Serious injury
+R0228,2020,4,8,Daylight,25.0,18-44,Riverside,Serious injury
+R0229,2020,11,8,Daylight,30.0,45-64,Downtown,No apparent injury
+R0230,2020,5,8,Daylight,25.0,18-44,Old Mill,No apparent injury
+R0231,2020,3,8,Daylight,25.0,18-44,Eastgate,Minor injury
+R0232,2020,3,17,Daylight,25.0,18-44,Southport,Minor injury
+R0233,2020,9,17,Daylight,25.0,65+,Riverside,No apparent injury
+R0234,2020,12,2,Dark,35.0,18-44,Southport,Minor injury
+R0235,2020,8,21,Dark,40.0,0-17,Riverside,Serious injury
+R0236,2020,1,14,Daylight,40.0,18-44,Southport,No apparent injury
+R0237,2020,5,7,Daylight,35.0,18-44,Riverside,Minor injury
+R0238,2020,5,7,Daylight,45.0,45-64,Southport,Minor injury
+R0239,2020,9,17,Daylight,45.0,18-44,Riverside,Minor injury
+R0240,2020,3,20,Dark,35.0,45-64,Riverside,Minor injury
+R0241,2020,2,16,Daylight,45.0,0-17,Riverside,No apparent injury
+R0242,2020,9,9,Daylight,25.0,18-44,Eastgate,No apparent injury
+R0243,2020,2,19,Dark,25.0,18-44,Northside,Minor injury
+R0244,2020,11,10,Daylight,35.0,45-64,Downtown,Minor injury
+R0245,2020,2,23,Dark,35.0,18-44,Downtown,Serious injury
+R0246,2020,3,9,Daylight,25.0,18-44,Riverside,Minor injury
+R0247,2020,6,14,Daylight,35.0,18-44,Eastgate,Minor injury
+R0248,2020,4,7,Daylight,40.0,45-64,Riverside,Minor injury
+R0249,2020,2,18,Dusk/Dawn,30.0,18-44,Eastgate,Minor injury
+R0250,2020,12,18,Dusk/Dawn,40.0,18-44,Riverside,Minor injury
+R0251,2020,8,17,Daylight,25.0,18-44,Southport,Minor injury
+R0252,2020,2,12,Daylight,25.0,18-44,Eastgate,Minor injury
+R0253,2020,6,15,Daylight,25.0,65+,Northside,Minor injury
+R0254,2020,5,23,Dark,35.0,45-64,Northside,Serious injury
+R0255,2020,8,17,Daylight,40.0,45-64,Eastgate,Serious injury
+R0256,2020,7,4,Dark,30.0,18-44,Riverside,Serious injury
+R0257,2020,7,17,Daylight,25.0,18-44,Northside,Minor injury
+R0258,2020,12,23,Dark,30.0,45-64,Southport,Minor injury
+R0259,2020,12,16,Daylight,35.0,65+,Downtown,Serious injury
+R0260,2020,5,21,Dark,30.0,18-44,Riverside,Minor injury
+R0261,2020,7,8,Daylight,30.0,65+,Old Mill,Serious injury
+R0262,2020,4,1,Dark,40.0,0-17,Riverside,Minor injury
+R0263,2020,12,7,Daylight,25.0,45-64,Eastgate,No apparent injury
+R0264,2020,1,7,Daylight,25.0,18-44,Southport,Minor injury
+R0265,2020,7,17,Daylight,30.0,18-44,Riverside,Minor injury
+R0266,2020,5,22,Dark,40.0,45-64,Downtown,Minor injury
+R0267,2020,11,7,Daylight,35.0,65+,Old Mill,Minor injury
+R0268,2020,5,9,Daylight,30.0,18-44,Southport,No apparent injury
+R0269,2020,2,18,Dusk/Dawn,30.0,18-44,Southport,Minor injury
+R0270,2020,12,13,Daylight,30.0,18-44,Old Mill,Minor injury
+R0271,2020,1,3,Dark,30.0,18-44,Northside,Minor injury
+R0272,2020,8,14,Daylight,30.0,18-44,Riverside,Minor injury
+R0273,2020,4,2,Dark,35.0,45-64,Southport,Minor injury
+R0274,2020,11,17,Daylight,35.0,18-44,Eastgate,Minor injury
+R0275,2020,7,18,Dusk/Dawn,30.0,18-44,Old Mill,Minor injury
+R0276,2020,4,22,Dark,25.0,45-64,Southport,Minor injury
+R0277,2020,2,17,Daylight,45.0,0-17,Riverside,Minor injury
+R0278,2020,4,14,Daylight,40.0,45-64,Eastgate,Serious injury
+R0279,2020,5,7,Daylight,25.0,45-64,Southport,Minor injury
+R0280,2020,1,7,Daylight,35.0,45-64,Northside,No apparent injury
+R0281,2020,9,18,Dusk/Dawn,30.0,65+,Northside,No apparent injury
+R0282,2020,6,17,Daylight,35.0,18-44,Old Mill,Minor injury
+R0283,2020,5,17,Daylight,25.0,65+,Northside,Minor injury
+R0284,2020,9,13,Daylight,30.0,45-64,Riverside,Serious injury
+R0285,2020,9,14,Daylight,35.0,45-64,Northside,Minor injury
+R0286,2020,3,15,Daylight,30.0,45-64,Old Mill,Minor injury
+R0287,2020,11,16,Daylight,35.0,18-44,Riverside,No apparent injury
+R0288,2020,7,7,Daylight,35.0,18-44,Downtown,Minor injury
+R0289,2020,4,15,Daylight,40.0,18-44,Riverside,Minor injury
+R0290,2020,1,22,Dark,35.0,45-64,Northside,Serious injury
+R0291,2020,10,9,Daylight,35.0,18-44,Eastgate,Fatal
+R0292,2020,5,15,Daylight,35.0,0-17,Downtown,No apparent injury
+R0293,2020,2,17,Daylight,40.0,18-44,Old Mill,Serious injury
+R0294,2020,5,23,Dark,45.0,18-44,Riverside,Serious injury
+R0295,2020,2,17,Daylight,25.0,0-17,Southport,Minor injury
+R0296,2020,7,11,Daylight,35.0,18-44,Riverside,No apparent injury
+R0297,2020,9,21,Dark,45.0,65+,Old Mill,Serious injury
+R0298,2020,7,9,Daylight,40.0,45-64,Northside,Minor injury
+R0299,2020,10,17,Daylight,25.0,45-64,Southport,Minor injury
+R0300,2020,1,16,Daylight,25.0,0-17,Riverside,No apparent injury
+R0301,2020,11,10,Daylight,35.0,18-44,Old Mill,Minor injury
+R0302,2020,5,8,Daylight,35.0,45-64,Northside,Minor injury
+R0303,2020,3,14,Daylight,30.0,45-64,Northside,No apparent injury
+R0304,2020,8,17,Daylight,35.0,18-44,Southport,Serious injury
+R0305,2020,4,14,Daylight,25.0,65+,Eastgate,No apparent injury
+R0306,2020,3,9,Daylight,35.0,65+,Old Mill,Serious injury
+R0307,2020,11,0,Dark,25.0,0-17,Old Mill,Minor injury
+R0308,2020,10,21,Dark,30.0,18-44,Northside,Minor injury
+R0309,2020,3,15,Daylight,30.0,18-44,Downtown,Minor injury
+R0310,2020,8,18,Dusk/Dawn,35.0,18-44,Riverside,Minor injury
+R0311,2020,2,7,Daylight,30.0,18-44,Downtown,Serious injury
+R0312,2020,6,15,Daylight,25.0,45-64,Eastgate,No apparent injury
+R0313,2020,11,18,Dusk/Dawn,35.0,0-17,Old Mill,Minor injury
+R0314,2020,11,23,Dark,30.0,18-44,Old Mill,No apparent injury
+R0315,2020,9,0,Dark,40.0,45-64,Downtown,Serious injury
+R0316,2020,12,16,Daylight,45.0,18-44,Northside,Minor injury
+R0317,2020,5,7,Daylight,30.0,18-44,Downtown,Minor injury
+R0318,2020,1,7,Daylight,40.0,65+,Eastgate,Serious injury
+R0319,2020,3,8,Daylight,25.0,18-44,Downtown,No apparent injury
+R0320,2020,12,18,Dusk/Dawn,30.0,18-44,Eastgate,Minor injury
+R0321,2020,12,3,Dark,40.0,0-17,Northside,Serious injury
+R0322,2020,6,9,Daylight,35.0,45-64,Downtown,No apparent injury
+R0323,2020,11,11,Daylight,30.0,45-64,Riverside,Minor injury
+R0324,2020,5,16,Daylight,30.0,65+,Downtown,Minor injury
+R0325,2020,5,14,Daylight,45.0,18-44,Southport,Serious injury
+R0326,2020,2,20,Dark,40.0,0-17,Southport,Minor injury
+R0327,2020,4,15,Daylight,30.0,18-44,Northside,No apparent injury
+R0328,2020,2,7,Daylight,30.0,0-17,Old Mill,No apparent injury
+R0329,2020,3,1,Dark,25.0,0-17,Downtown,Minor injury
+R0330,2020,1,13,Daylight,45.0,18-44,Riverside,Minor injury
+R0331,2020,6,5,Dark,45.0,18-44,Northside,Fatal
+R0332,2020,11,20,Dark,25.0,65+,Downtown,No apparent injury
+R0333,2020,1,15,Daylight,30.0,45-64,Riverside,Minor injury
+R0334,2020,7,13,Daylight,35.0,18-44,Old Mill,Serious injury
+R0335,2020,3,6,Dusk/Dawn,25.0,18-44,Riverside,No apparent injury
+R0336,2020,12,20,Dark,30.0,18-44,Downtown,Minor injury
+R0337,2020,3,7,Daylight,25.0,65+,Downtown,No apparent injury
+R0338,2020,1,2,Dark,40.0,18-44,Southport,Minor injury
+R0339,2020,12,10,Daylight,35.0,45-64,Eastgate,Minor injury
+R0340,2020,5,11,Daylight,25.0,18-44,Northside,No apparent injury
+R0341,2020,6,20,Dark,25.0,45-64,Eastgate,Minor injury
+R0342,2020,8,10,Daylight,25.0,18-44,Old Mill,Minor injury
+R0343,2020,6,23,Dark,45.0,18-44,Southport,Serious injury
+R0344,2020,7,6,Dusk/Dawn,35.0,18-44,Northside,Minor injury
+R0345,2020,9,4,Dark,45.0,18-44,Downtown,No apparent injury
+R0346,2020,2,16,Daylight,45.0,45-64,Old Mill,Fatal
+R0347,2020,12,5,Dark,25.0,45-64,Old Mill,No apparent injury
+R0348,2020,2,0,Dark,35.0,18-44,Northside,Serious injury
+R0349,2020,10,18,Dusk/Dawn,30.0,45-64,Southport,No apparent injury
+R0350,2020,6,1,Dark,35.0,45-64,Downtown,Minor injury
+R0351,2020,2,5,Dark,25.0,45-64,Riverside,Minor injury
+R0352,2020,6,18,Dusk/Dawn,40.0,18-44,Southport,Minor injury
+R0353,2020,6,19,Dark,40.0,45-64,Downtown,Serious injury
+R0354,2020,10,13,Daylight,25.0,45-64,Downtown,Minor injury
+R0355,2020,6,17,Daylight,,18-44,Old Mill,No apparent injury
+R0356,2020,7,21,Dark,30.0,18-44,Old Mill,Minor injury
+R0357,2020,11,22,Dark,40.0,18-44,Riverside,Minor injury
+R0358,2020,10,16,Daylight,40.0,18-44,Eastgate,Minor injury
+R0359,2020,9,12,Daylight,25.0,45-64,Southport,No apparent injury
+R0360,2020,11,19,Dark,25.0,18-44,Eastgate,Serious injury
+R0361,2020,7,16,Daylight,35.0,65+,Riverside,Serious injury
+R0362,2020,1,17,Daylight,25.0,45-64,Southport,Minor injury
+R0363,2020,2,14,Daylight,25.0,18-44,Eastgate,Minor injury
+R0364,2020,9,19,Dark,30.0,0-17,Southport,Minor injury
+R0365,2020,4,16,Daylight,25.0,45-64,Old Mill,Minor injury
+R0366,2020,2,16,Daylight,25.0,18-44,Downtown,No apparent injury
+R0367,2020,3,11,Daylight,35.0,45-64,Northside,Minor injury
+R0368,2020,3,12,Daylight,30.0,18-44,Northside,Minor injury
+R0369,2020,9,22,Dark,25.0,18-44,Downtown,Minor injury
+R0370,2020,6,22,Dark,25.0,18-44,Riverside,Minor injury
+R0371,2021,1,15,Daylight,25.0,18-44,Eastgate,Minor injury
+R0372,2021,6,21,Dark,25.0,45-64,Old Mill,Serious injury
+R0373,2021,6,22,Dark,25.0,18-44,Northside,Minor injury
+R0374,2021,3,22,Dark,30.0,18-44,Riverside,Serious injury
+R0375,2021,11,8,Daylight,25.0,18-44,Eastgate,Minor injury
+R0376,2021,6,19,Dark,30.0,18-44,Eastgate,No apparent injury
+R0377,2021,12,17,Daylight,40.0,45-64,Northside,Minor injury
+R0378,2021,10,15,Daylight,30.0,18-44,Northside,Minor injury
+R0379,2021,2,17,Daylight,45.0,18-44,Southport,Serious injury
+R0380,2021,3,10,Daylight,35.0,18-44,Southport,Serious injury
+R0381,2021,8,20,Dark,40.0,45-64,Eastgate,Serious injury
+R0382,2021,12,10,Daylight,25.0,45-64,Northside,No apparent injury
+R0383,2021,2,17,Daylight,30.0,18-44,Old Mill,No apparent injury
+R0384,2021,12,4,Dark,25.0,18-44,Downtown,Minor injury
+R0385,2021,5,14,Daylight,30.0,18-44,Old Mill,Minor injury
+R0386,2021,9,17,Daylight,40.0,18-44,Old Mill,Minor injury
+R0387,2021,3,8,Daylight,30.0,65+,Northside,Serious injury
+R0388,2021,1,14,Daylight,30.0,18-44,Old Mill,Minor injury
+R0389,2021,11,14,Daylight,30.0,18-44,Old Mill,Minor injury
+R0390,2021,8,22,Dark,35.0,18-44,Downtown,Minor injury
+R0391,2021,3,13,Daylight,25.0,65+,Northside,Minor injury
+R0392,2021,4,11,Daylight,30.0,18-44,Eastgate,No apparent injury
+R0393,2021,7,15,Daylight,25.0,18-44,Eastgate,Minor injury
+R0394,2021,5,15,Daylight,45.0,45-64,Northside,Serious injury
+R0395,2021,10,10,Daylight,35.0,18-44,Riverside,Minor injury
+R0396,2021,6,14,Daylight,35.0,45-64,Northside,Minor injury
+R0397,2021,10,20,Dark,35.0,18-44,Downtown,Serious injury
+R0398,2021,8,17,Daylight,30.0,65+,Northside,Minor injury
+R0399,2021,1,2,Dark,30.0,65+,Eastgate,Minor injury
+R0400,2021,12,5,Dark,30.0,65+,Eastgate,Serious injury
+R0401,2021,4,12,Daylight,25.0,45-64,Riverside,Minor injury
+R0402,2021,3,22,Dark,30.0,18-44,Northside,No apparent injury
+R0403,2021,11,7,Daylight,25.0,45-64,Old Mill,Minor injury
+R0404,2021,11,16,Daylight,35.0,18-44,Northside,Minor injury
+R0405,2021,12,5,Dark,,65+,Northside,Serious injury
+R0406,2021,7,15,Daylight,30.0,18-44,Old Mill,Minor injury
+R0407,2021,3,17,Daylight,25.0,18-44,Downtown,Serious injury
+R0408,2021,11,17,Daylight,40.0,0-17,Northside,Minor injury
+R0409,2021,3,13,Daylight,25.0,65+,Old Mill,Minor injury
+R0410,2021,2,9,Daylight,45.0,0-17,Downtown,No apparent injury
+R0411,2021,7,16,Daylight,25.0,18-44,Old Mill,No apparent injury
+R0412,2021,3,21,Dark,25.0,65+,Old Mill,Minor injury
+R0413,2021,1,11,Daylight,45.0,18-44,Old Mill,Serious injury
+R0414,2021,5,17,Daylight,35.0,0-17,Riverside,No apparent injury
+R0415,2021,8,17,Daylight,40.0,18-44,Northside,Serious injury
+R0416,2021,4,15,Daylight,25.0,45-64,Downtown,Minor injury
+R0417,2021,1,6,Dusk/Dawn,25.0,18-44,Riverside,Minor injury
+R0418,2021,9,21,Dark,30.0,18-44,Southport,Minor injury
+R0419,2021,9,17,Daylight,30.0,18-44,Downtown,Minor injury
+R0420,2021,12,16,Daylight,35.0,18-44,Downtown,Minor injury
+R0421,2021,2,13,Daylight,35.0,18-44,Downtown,Minor injury
+R0422,2021,1,16,Daylight,45.0,18-44,Old Mill,Serious injury
+R0423,2021,5,16,Daylight,25.0,18-44,Downtown,Minor injury
+R0424,2021,3,13,Daylight,25.0,18-44,Southport,Minor injury
+R0425,2021,4,1,Dark,25.0,18-44,Eastgate,Minor injury
+R0426,2021,6,12,Daylight,25.0,18-44,Riverside,Minor injury
+R0427,2021,3,8,Daylight,35.0,45-64,Downtown,No apparent injury
+R0428,2021,10,11,Daylight,25.0,18-44,Old Mill,No apparent injury
+R0429,2021,11,5,Dark,35.0,45-64,Riverside,No apparent injury
+R0430,2021,4,5,Dark,40.0,65+,Northside,Fatal
+R0431,2021,12,17,Daylight,25.0,18-44,Northside,Minor injury
+R0432,2021,11,14,Daylight,30.0,65+,Old Mill,Minor injury
+R0433,2021,12,17,Daylight,25.0,45-64,Old Mill,No apparent injury
+R0434,2021,4,8,Daylight,30.0,45-64,Riverside,Minor injury
+R0435,2021,9,19,Dark,45.0,18-44,Southport,Minor injury
+R0436,2021,9,12,Daylight,35.0,18-44,Southport,Minor injury
+R0437,2021,1,19,Dark,45.0,18-44,Downtown,Serious injury
+R0438,2021,6,14,Daylight,25.0,18-44,Old Mill,No apparent injury
+R0439,2021,4,16,Daylight,25.0,45-64,Southport,No apparent injury
+R0440,2021,2,22,Dark,30.0,18-44,Southport,Minor injury
+R0441,2021,10,7,Daylight,30.0,45-64,Riverside,Minor injury
+R0442,2021,12,13,Daylight,30.0,18-44,Northside,No apparent injury
+R0443,2021,9,2,Dark,30.0,45-64,Eastgate,No apparent injury
+R0444,2021,1,14,Daylight,40.0,65+,Riverside,Minor injury
+R0445,2021,4,7,Daylight,30.0,65+,Riverside,Serious injury
+R0446,2021,8,12,Daylight,30.0,0-17,Old Mill,Minor injury
+R0447,2021,5,17,Daylight,35.0,18-44,Downtown,Minor injury
+R0448,2021,5,18,Dusk/Dawn,25.0,18-44,Downtown,Minor injury
+R0449,2021,4,11,Daylight,40.0,0-17,Northside,No apparent injury
+R0450,2021,6,18,Dusk/Dawn,35.0,45-64,Old Mill,No apparent injury
+R0451,2021,12,13,Daylight,25.0,0-17,Downtown,Minor injury
+R0452,2021,2,19,Dark,30.0,18-44,Riverside,No apparent injury
+R0453,2021,2,19,Dark,45.0,18-44,Old Mill,Serious injury
+R0454,2021,5,9,Daylight,35.0,18-44,Old Mill,Minor injury
+R0455,2021,5,0,Dark,25.0,65+,Old Mill,Minor injury
+R0456,2021,3,5,Dark,25.0,18-44,Old Mill,Minor injury
+R0457,2021,4,20,Dark,35.0,18-44,Riverside,Minor injury
+R0458,2021,4,15,Daylight,25.0,18-44,Old Mill,Minor injury
+R0459,2021,6,22,Dark,30.0,45-64,Riverside,Minor injury
+R0460,2021,1,11,Daylight,30.0,18-44,Eastgate,No apparent injury
+R0461,2021,12,14,Daylight,45.0,45-64,Old Mill,Minor injury
+R0462,2021,5,15,Daylight,35.0,0-17,Southport,Minor injury
+R0463,2021,4,11,Daylight,40.0,45-64,Riverside,Minor injury
+R0464,2021,7,11,Daylight,25.0,0-17,Old Mill,No apparent injury
+R0465,2021,6,14,Daylight,35.0,45-64,Riverside,Minor injury
+R0466,2021,9,20,Dark,40.0,18-44,Eastgate,Serious injury
+R0467,2021,11,16,Daylight,45.0,18-44,Old Mill,Minor injury
+R0468,2021,10,17,Daylight,30.0,0-17,Eastgate,Minor injury
+R0469,2021,11,9,Daylight,35.0,18-44,Downtown,Minor injury
+R0470,2021,11,8,Daylight,35.0,18-44,Northside,Minor injury
+R0471,2021,6,20,Dark,25.0,45-64,Downtown,No apparent injury
+R0472,2021,12,9,Daylight,35.0,0-17,Eastgate,Minor injury
+R0473,2021,10,16,Daylight,25.0,0-17,Southport,Minor injury
+R0474,2021,1,19,Dark,30.0,18-44,Southport,Minor injury
+R0475,2021,1,14,Daylight,45.0,18-44,Southport,Fatal
+R0476,2021,9,17,Daylight,25.0,18-44,Riverside,Minor injury
+R0477,2021,7,17,Daylight,35.0,0-17,Southport,Minor injury
+R0478,2021,8,17,Daylight,30.0,65+,Eastgate,No apparent injury
+R0479,2021,10,18,Dusk/Dawn,25.0,45-64,Old Mill,Serious injury
+R0480,2021,5,13,Daylight,25.0,0-17,Eastgate,Minor injury
+R0481,2021,6,7,Daylight,25.0,18-44,Old Mill,Minor injury
+R0482,2021,10,19,Dark,30.0,65+,Eastgate,Minor injury
+R0483,2021,6,0,Dark,30.0,65+,Eastgate,No apparent injury
+R0484,2021,2,5,Dark,40.0,0-17,Riverside,Minor injury
+R0485,2021,7,15,Daylight,25.0,65+,Southport,No apparent injury
+R0486,2021,7,17,Daylight,35.0,18-44,Northside,Serious injury
+R0487,2021,6,18,Dusk/Dawn,30.0,65+,Downtown,No apparent injury
+R0488,2021,12,10,Daylight,30.0,18-44,Northside,Serious injury
+R0489,2021,1,13,Daylight,30.0,18-44,Northside,No apparent injury
+R0490,2021,7,19,Dark,25.0,18-44,Northside,No apparent injury
+R0491,2021,12,12,Daylight,45.0,45-64,Old Mill,Serious injury
+R0492,2021,4,14,Daylight,30.0,18-44,Northside,Serious injury
+R0493,2021,6,13,Daylight,40.0,18-44,Riverside,Minor injury
+R0494,2021,7,15,Daylight,30.0,45-64,Old Mill,Minor injury
+R0495,2021,3,16,Daylight,35.0,18-44,Southport,Minor injury
+R0496,2021,6,11,Daylight,30.0,45-64,Riverside,No apparent injury
+R0497,2021,3,15,Daylight,25.0,18-44,Old Mill,No apparent injury
+R0498,2021,11,5,Dark,30.0,65+,Riverside,Minor injury
+R0499,2021,9,7,Daylight,30.0,65+,Northside,Serious injury
+R0500,2021,2,14,Daylight,30.0,18-44,Northside,Minor injury
+R0501,2021,4,20,Dark,45.0,18-44,Riverside,Serious injury
+R0502,2021,9,14,Daylight,25.0,0-17,Downtown,No apparent injury
+R0503,2021,8,18,Dusk/Dawn,30.0,45-64,Northside,Minor injury
+R0504,2021,10,16,Daylight,35.0,18-44,Old Mill,Minor injury
+R0505,2021,3,19,Dark,25.0,65+,Old Mill,Minor injury
+R0506,2021,9,9,Daylight,35.0,65+,Eastgate,No apparent injury
+R0507,2021,2,16,Daylight,25.0,18-44,Old Mill,Minor injury
+R0508,2021,1,21,Dark,25.0,18-44,Downtown,No apparent injury
+R0509,2021,9,12,Daylight,30.0,0-17,Northside,Serious injury
+R0510,2021,5,17,Daylight,25.0,18-44,Northside,No apparent injury
+R0511,2021,10,22,Dark,35.0,45-64,Eastgate,Serious injury
+R0512,2021,9,1,Dark,25.0,18-44,Riverside,Minor injury
+R0513,2021,7,18,Dusk/Dawn,25.0,18-44,Northside,No apparent injury
+R0514,2021,12,21,Dark,25.0,18-44,Riverside,No apparent injury
+R0515,2021,11,7,Daylight,30.0,45-64,Southport,Minor injury
+R0516,2021,12,18,Dusk/Dawn,35.0,18-44,Northside,Minor injury
+R0517,2021,11,13,Daylight,30.0,65+,Riverside,Minor injury
+R0518,2021,2,16,Daylight,45.0,45-64,Southport,Serious injury
+R0519,2021,1,7,Daylight,25.0,18-44,Old Mill,No apparent injury
+R0520,2021,9,10,Daylight,35.0,45-64,Old Mill,Minor injury
+R0521,2021,10,19,Dark,30.0,18-44,Eastgate,Minor injury
+R0522,2021,11,14,Daylight,45.0,65+,Eastgate,Fatal
+R0523,2021,11,15,Daylight,35.0,0-17,Eastgate,Minor injury
+R0524,2021,1,23,Dark,30.0,65+,Eastgate,Minor injury
+R0525,2021,12,18,Dusk/Dawn,30.0,18-44,Northside,No apparent injury
+R0526,2021,6,18,Dusk/Dawn,45.0,18-44,Southport,Serious injury
+R0527,2021,5,8,Daylight,25.0,18-44,Southport,Minor injury
+R0528,2021,2,13,Daylight,30.0,45-64,Downtown,Minor injury
+R0529,2021,5,7,Daylight,25.0,45-64,Downtown,Minor injury
+R0530,2021,6,13,Daylight,35.0,45-64,Eastgate,No apparent injury
+R0531,2021,2,9,Daylight,30.0,18-44,Riverside,Minor injury
+R0532,2021,1,12,Daylight,30.0,65+,Riverside,Minor injury
+R0533,2021,4,15,Daylight,30.0,18-44,Riverside,Minor injury
+R0534,2021,11,15,Daylight,30.0,65+,Southport,Minor injury
+R0535,2021,7,23,Dark,30.0,18-44,Southport,No apparent injury
+R0536,2021,5,17,Daylight,40.0,65+,Old Mill,Fatal
+R0537,2021,3,17,Daylight,25.0,18-44,Old Mill,No apparent injury
+R0538,2021,12,8,Daylight,25.0,45-64,Northside,Minor injury
+R0539,2021,9,6,Dusk/Dawn,30.0,45-64,Downtown,Minor injury
+R0540,2021,12,11,Daylight,45.0,45-64,Southport,Minor injury
+R0541,2021,2,14,Daylight,25.0,45-64,Riverside,Minor injury
+R0542,2021,6,14,Daylight,30.0,18-44,Old Mill,Minor injury
+R0543,2021,9,7,Daylight,25.0,18-44,Southport,Minor injury
+R0544,2021,6,14,Daylight,25.0,18-44,Southport,No apparent injury
+R0545,2021,4,16,Daylight,40.0,45-64,Southport,Minor injury
+R0546,2021,11,7,Daylight,25.0,18-44,Old Mill,Minor injury
+R0547,2021,3,22,Dark,45.0,18-44,Downtown,Serious injury
+R0548,2021,3,10,Daylight,35.0,18-44,Downtown,Minor injury
+R0549,2021,10,16,Daylight,25.0,65+,Eastgate,Minor injury
+R0550,2021,1,18,Dusk/Dawn,35.0,45-64,Eastgate,Minor injury
+R0551,2021,7,11,Daylight,45.0,45-64,Old Mill,Serious injury
+R0552,2021,3,16,Daylight,40.0,45-64,Downtown,Minor injury
+R0553,2021,9,18,Dusk/Dawn,30.0,18-44,Eastgate,Minor injury
+R0554,2021,8,23,Dark,25.0,65+,Downtown,Minor injury
+R0555,2021,7,19,Dark,35.0,45-64,Northside,Minor injury
+R0556,2021,3,22,Dark,25.0,65+,Riverside,Serious injury
+R0557,2021,9,13,Daylight,25.0,45-64,Old Mill,No apparent injury
+R0558,2021,3,23,Dark,40.0,18-44,Old Mill,Minor injury
+R0559,2021,1,21,Dark,25.0,18-44,Downtown,Serious injury
+R0560,2021,12,8,Daylight,30.0,18-44,Riverside,Minor injury
+R0561,2021,8,7,Daylight,25.0,45-64,Southport,Minor injury
+R0562,2021,6,18,Dusk/Dawn,25.0,18-44,Northside,Minor injury
+R0563,2021,2,12,Daylight,40.0,18-44,Riverside,No apparent injury
+R0564,2021,12,10,Daylight,45.0,65+,Eastgate,Fatal
+R0565,2021,10,10,Daylight,35.0,0-17,Riverside,Minor injury
+R0566,2021,1,15,Daylight,35.0,45-64,Eastgate,No apparent injury
+R0567,2021,6,5,Dark,35.0,45-64,Northside,Minor injury
+R0568,2021,5,6,Dusk/Dawn,25.0,18-44,Downtown,Minor injury
+R0569,2021,2,10,Daylight,25.0,45-64,Downtown,Minor injury
+R0570,2021,7,12,Daylight,45.0,18-44,Downtown,No apparent injury
+R0571,2021,12,14,Daylight,40.0,18-44,Southport,Minor injury
+R0572,2021,5,19,Dark,25.0,18-44,Eastgate,Minor injury
+R0573,2021,1,15,Daylight,30.0,45-64,Old Mill,Minor injury
+R0574,2021,5,17,Daylight,25.0,65+,Downtown,Minor injury
+R0575,2021,12,14,Daylight,45.0,45-64,Southport,No apparent injury
+R0576,2022,6,20,Dark,45.0,18-44,Downtown,Minor injury
+R0577,2022,11,10,Daylight,45.0,18-44,Northside,Minor injury
+R0578,2022,4,6,Dusk/Dawn,40.0,45-64,Southport,No apparent injury
+R0579,2022,12,9,Daylight,25.0,18-44,Northside,No apparent injury
+R0580,2022,5,8,Daylight,35.0,18-44,Northside,Fatal
+R0581,2022,11,12,Daylight,30.0,18-44,Riverside,Minor injury
+R0582,2022,5,15,Daylight,30.0,0-17,Old Mill,Minor injury
+R0583,2022,9,12,Daylight,40.0,45-64,Riverside,Minor injury
+R0584,2022,7,10,Daylight,35.0,0-17,Old Mill,No apparent injury
+R0585,2022,11,19,Dark,40.0,18-44,Southport,Serious injury
+R0586,2022,6,9,Daylight,25.0,45-64,Eastgate,Minor injury
+R0587,2022,8,14,Daylight,35.0,45-64,Riverside,Minor injury
+R0588,2022,4,6,Dusk/Dawn,25.0,45-64,Riverside,Minor injury
+R0589,2022,7,14,Daylight,30.0,18-44,Old Mill,Minor injury
+R0590,2022,8,6,Dusk/Dawn,25.0,18-44,Northside,Minor injury
+R0591,2022,8,11,Daylight,35.0,0-17,Northside,No apparent injury
+R0592,2022,5,23,Dark,35.0,18-44,Southport,Minor injury
+R0593,2022,6,20,Dark,40.0,45-64,Old Mill,Serious injury
+R0594,2022,2,9,Daylight,35.0,45-64,Downtown,Minor injury
+R0595,2022,6,6,Dusk/Dawn,45.0,65+,Northside,Serious injury
+R0596,2022,5,12,Daylight,25.0,45-64,Northside,Minor injury
+R0597,2022,3,14,Daylight,35.0,18-44,Old Mill,Minor injury
+R0598,2022,1,11,Daylight,30.0,45-64,Riverside,No apparent injury
+R0599,2022,10,7,Daylight,25.0,45-64,Old Mill,Minor injury
+R0600,2022,9,19,Dark,25.0,45-64,Southport,Minor injury
+R0601,2022,2,18,Dusk/Dawn,45.0,45-64,Riverside,No apparent injury
+R0602,2022,1,20,Dark,30.0,0-17,Old Mill,No apparent injury
+R0603,2022,2,6,Dusk/Dawn,30.0,65+,Eastgate,Minor injury
+R0604,2022,1,13,Daylight,40.0,65+,Downtown,Serious injury
+R0605,2022,7,10,Daylight,30.0,18-44,Southport,Minor injury
+R0606,2022,8,3,Dark,40.0,18-44,Old Mill,Minor injury
+R0607,2022,3,17,Daylight,35.0,18-44,Old Mill,No apparent injury
+R0608,2022,5,16,Daylight,30.0,45-64,Downtown,Serious injury
+R0609,2022,3,21,Dark,25.0,18-44,Southport,Minor injury
+R0610,2022,11,7,Daylight,35.0,18-44,Southport,Minor injury
+R0611,2022,2,6,Dusk/Dawn,30.0,0-17,Eastgate,Minor injury
+R0612,2022,7,8,Daylight,30.0,45-64,Eastgate,Minor injury
+R0613,2022,1,22,Dark,25.0,18-44,Old Mill,Minor injury
+R0614,2022,12,11,Daylight,30.0,45-64,Eastgate,No apparent injury
+R0615,2022,11,15,Daylight,,18-44,Southport,No apparent injury
+R0616,2022,11,16,Daylight,40.0,45-64,Riverside,No apparent injury
+R0617,2022,12,1,Dark,25.0,18-44,Eastgate,Minor injury
+R0618,2022,10,14,Daylight,25.0,65+,Southport,Serious injury
+R0619,2022,5,17,Daylight,25.0,45-64,Eastgate,No apparent injury
+R0620,2022,3,8,Daylight,45.0,45-64,Southport,Serious injury
+R0621,2022,4,9,Daylight,30.0,65+,Eastgate,No apparent injury
+R0622,2022,8,20,Dark,35.0,65+,Old Mill,Minor injury
+R0623,2022,8,7,Daylight,25.0,45-64,Eastgate,No apparent injury
+R0624,2022,4,12,Daylight,40.0,18-44,Riverside,Fatal
+R0625,2022,6,14,Daylight,25.0,18-44,Eastgate,Minor injury
+R0626,2022,3,9,Daylight,30.0,45-64,Downtown,No apparent injury
+R0627,2022,11,19,Dark,35.0,65+,Eastgate,Minor injury
+R0628,2022,4,14,Daylight,30.0,0-17,Southport,Minor injury
+R0629,2022,8,12,Daylight,40.0,45-64,Southport,Minor injury
+R0630,2022,1,21,Dark,30.0,18-44,Northside,No apparent injury
+R0631,2022,5,6,Dusk/Dawn,25.0,18-44,Eastgate,Minor injury
+R0632,2022,2,21,Dark,30.0,65+,Old Mill,Serious injury
+R0633,2022,5,13,Daylight,35.0,0-17,Eastgate,Minor injury
+R0634,2022,11,6,Dusk/Dawn,30.0,45-64,Downtown,No apparent injury
+R0635,2022,2,10,Daylight,35.0,45-64,Southport,Minor injury
+R0636,2022,2,14,Daylight,45.0,45-64,Southport,Serious injury
+R0637,2022,11,13,Daylight,25.0,18-44,Riverside,Minor injury
+R0638,2022,6,7,Daylight,30.0,65+,Eastgate,Serious injury
+R0639,2022,7,14,Daylight,35.0,45-64,Old Mill,Minor injury
+R0640,2022,3,15,Daylight,35.0,18-44,Southport,Serious injury
+R0641,2022,7,6,Dusk/Dawn,25.0,18-44,Eastgate,Serious injury
+R0642,2022,10,15,Daylight,35.0,18-44,Riverside,No apparent injury
+R0643,2022,9,7,Daylight,35.0,0-17,Downtown,Minor injury
+R0644,2022,11,6,Dusk/Dawn,40.0,45-64,Old Mill,No apparent injury
+R0645,2022,4,15,Daylight,35.0,65+,Southport,No apparent injury
+R0646,2022,1,16,Daylight,35.0,0-17,Old Mill,Minor injury
+R0647,2022,8,15,Daylight,25.0,18-44,Northside,Minor injury
+R0648,2022,8,17,Daylight,40.0,65+,Southport,Serious injury
+R0649,2022,12,11,Daylight,25.0,18-44,Eastgate,No apparent injury
+R0650,2022,3,16,Daylight,40.0,18-44,Southport,No apparent injury
+R0651,2022,3,21,Dark,25.0,0-17,Eastgate,Minor injury
+R0652,2022,10,18,Dusk/Dawn,35.0,65+,Eastgate,No apparent injury
+R0653,2022,2,7,Daylight,25.0,0-17,Eastgate,No apparent injury
+R0654,2022,4,16,Daylight,40.0,18-44,Southport,No apparent injury
+R0655,2022,12,21,Dark,30.0,18-44,Old Mill,Minor injury
+R0656,2022,12,15,Daylight,35.0,18-44,Northside,Minor injury
+R0657,2022,9,18,Dusk/Dawn,30.0,65+,Riverside,Minor injury
+R0658,2022,5,11,Daylight,30.0,45-64,Old Mill,No apparent injury
+R0659,2022,8,19,Dark,25.0,65+,Northside,Minor injury
+R0660,2022,4,19,Dark,30.0,18-44,Downtown,No apparent injury
+R0661,2022,1,21,Dark,35.0,65+,Southport,No apparent injury
+R0662,2022,2,14,Daylight,35.0,45-64,Riverside,Minor injury
+R0663,2022,9,15,Daylight,25.0,45-64,Eastgate,Minor injury
+R0664,2022,5,8,Daylight,25.0,18-44,Downtown,Minor injury
+R0665,2022,4,10,Daylight,30.0,45-64,Southport,Minor injury
+R0666,2022,10,15,Daylight,40.0,18-44,Riverside,Minor injury
+R0667,2022,7,17,Daylight,25.0,65+,Riverside,Minor injury
+R0668,2022,1,17,Daylight,45.0,65+,Eastgate,Serious injury
+R0669,2022,1,21,Dark,30.0,45-64,Riverside,Minor injury
+R0670,2022,9,16,Daylight,40.0,65+,Riverside,Minor injury
+R0671,2022,7,6,Dusk/Dawn,45.0,0-17,Downtown,Minor injury
+R0672,2022,1,22,Dark,35.0,65+,Northside,No apparent injury
+R0673,2022,5,14,Daylight,35.0,0-17,Old Mill,Serious injury
+R0674,2022,6,18,Dusk/Dawn,25.0,18-44,Riverside,Minor injury
+R0675,2022,12,16,Daylight,25.0,45-64,Eastgate,Minor injury
+R0676,2022,5,17,Daylight,25.0,65+,Downtown,Minor injury
+R0677,2022,1,14,Daylight,35.0,18-44,Northside,Serious injury
+R0678,2022,12,19,Dark,30.0,45-64,Northside,No apparent injury
+R0679,2022,2,12,Daylight,30.0,65+,Riverside,No apparent injury
+R0680,2022,4,19,Dark,25.0,45-64,Downtown,No apparent injury
+R0681,2022,4,12,Daylight,35.0,18-44,Eastgate,Serious injury
+R0682,2022,8,2,Dark,30.0,18-44,Southport,Minor injury
+R0683,2022,8,0,Dark,25.0,18-44,Downtown,Minor injury
+R0684,2022,9,1,Dark,25.0,65+,Northside,Serious injury
+R0685,2022,2,11,Daylight,40.0,0-17,Northside,Minor injury
+R0686,2022,2,17,Daylight,30.0,45-64,Southport,Minor injury
+R0687,2022,2,19,Dark,40.0,18-44,Northside,No apparent injury
+R0688,2022,11,16,Daylight,30.0,45-64,Old Mill,No apparent injury
+R0689,2022,8,6,Dusk/Dawn,25.0,45-64,Riverside,Minor injury
+R0690,2022,12,12,Daylight,30.0,18-44,Riverside,Minor injury
+R0691,2022,7,16,Daylight,45.0,18-44,Southport,Serious injury
+R0692,2022,7,19,Dark,25.0,18-44,Eastgate,No apparent injury
+R0693,2022,6,18,Dusk/Dawn,30.0,45-64,Eastgate,No apparent injury
+R0694,2022,8,21,Dark,25.0,45-64,Southport,Fatal
+R0695,2022,10,18,Dusk/Dawn,35.0,18-44,Eastgate,Minor injury
+R0696,2022,1,13,Daylight,45.0,18-44,Downtown,Minor injury
+R0697,2022,3,18,Dusk/Dawn,25.0,18-44,Eastgate,Serious injury
+R0698,2022,10,11,Daylight,35.0,18-44,Old Mill,Minor injury
+R0699,2022,7,2,Dark,30.0,18-44,Eastgate,Serious injury
+R0700,2022,10,10,Daylight,25.0,0-17,Old Mill,No apparent injury
+R0701,2022,7,18,Dusk/Dawn,30.0,0-17,Southport,Minor injury
+R0702,2022,1,9,Daylight,40.0,18-44,Northside,No apparent injury
+R0703,2022,4,8,Daylight,35.0,18-44,Downtown,Minor injury
+R0704,2022,6,12,Daylight,45.0,18-44,Old Mill,Minor injury
+R0705,2022,3,23,Dark,35.0,0-17,Eastgate,Serious injury
+R0706,2022,10,20,Dark,40.0,0-17,Riverside,Minor injury
+R0707,2022,12,7,Daylight,30.0,18-44,Eastgate,No apparent injury
+R0708,2022,4,19,Dark,25.0,18-44,Southport,Minor injury
+R0709,2022,5,17,Daylight,35.0,18-44,Southport,Minor injury
+R0710,2022,8,14,Daylight,35.0,65+,Downtown,Serious injury
+R0711,2022,11,16,Daylight,35.0,0-17,Eastgate,Minor injury
+R0712,2022,4,10,Daylight,25.0,45-64,Northside,No apparent injury
+R0713,2022,9,21,Dark,25.0,0-17,Old Mill,No apparent injury
+R0714,2022,12,14,Daylight,25.0,45-64,Downtown,Minor injury
+R0715,2022,9,1,Dark,30.0,65+,Eastgate,Minor injury
+R0716,2022,7,18,Dusk/Dawn,40.0,65+,Eastgate,Minor injury
+R0717,2022,9,18,Dusk/Dawn,40.0,18-44,Northside,Minor injury
+R0718,2022,11,16,Daylight,35.0,45-64,Southport,Minor injury
+R0719,2022,6,20,Dark,30.0,18-44,Southport,Serious injury
+R0720,2022,12,7,Daylight,30.0,18-44,Riverside,No apparent injury
+R0721,2022,12,10,Daylight,40.0,45-64,Riverside,Minor injury
+R0722,2022,5,13,Daylight,40.0,65+,Southport,Serious injury
+R0723,2022,4,14,Daylight,30.0,18-44,Southport,Minor injury
+R0724,2022,10,6,Dusk/Dawn,45.0,18-44,Eastgate,Minor injury
+R0725,2022,11,17,Daylight,30.0,45-64,Eastgate,Minor injury
+R0726,2022,1,20,Dark,35.0,18-44,Old Mill,Minor injury
+R0727,2022,12,10,Daylight,45.0,18-44,Eastgate,Serious injury
+R0728,2022,12,17,Daylight,40.0,65+,Southport,Minor injury
+R0729,2022,3,8,Daylight,25.0,18-44,Old Mill,Minor injury
+R0730,2022,1,9,Daylight,25.0,18-44,Downtown,Minor injury
+R0731,2022,11,13,Daylight,30.0,65+,Eastgate,Minor injury
+R0732,2022,3,23,Dark,25.0,18-44,Downtown,Minor injury
+R0733,2022,2,16,Daylight,40.0,65+,Eastgate,Minor injury
+R0734,2022,8,0,Dark,25.0,18-44,Downtown,No apparent injury
+R0735,2022,6,18,Dusk/Dawn,30.0,45-64,Northside,No apparent injury
+R0736,2022,3,21,Dark,30.0,45-64,Riverside,Minor injury
+R0737,2022,1,7,Daylight,35.0,45-64,Old Mill,Minor injury
+R0738,2022,4,16,Daylight,45.0,65+,Southport,Minor injury
+R0739,2022,1,18,Dusk/Dawn,30.0,18-44,Southport,Minor injury
+R0740,2022,1,20,Dark,30.0,18-44,Riverside,Minor injury
+R0741,2022,2,8,Daylight,25.0,45-64,Riverside,Serious injury
+R0742,2022,5,17,Daylight,25.0,18-44,Southport,Minor injury
+R0743,2022,11,15,Daylight,35.0,18-44,Eastgate,Serious injury
+R0744,2022,11,9,Daylight,40.0,65+,Northside,No apparent injury
+R0745,2022,12,20,Dark,35.0,18-44,Southport,Minor injury
+R0746,2022,7,21,Dark,25.0,18-44,Downtown,Minor injury
+R0747,2022,4,9,Daylight,30.0,45-64,Old Mill,Minor injury
+R0748,2022,7,20,Dark,30.0,65+,Eastgate,Minor injury
+R0749,2022,10,4,Dark,25.0,0-17,Northside,Fatal
+R0750,2022,3,6,Dusk/Dawn,45.0,65+,Southport,Minor injury
+R0751,2022,7,10,Daylight,25.0,0-17,Southport,Minor injury
+R0752,2022,6,12,Daylight,40.0,45-64,Riverside,No apparent injury
+R0753,2022,2,13,Daylight,35.0,0-17,Riverside,Serious injury
+R0754,2022,6,21,Dark,35.0,45-64,Riverside,Minor injury
+R0755,2022,9,7,Daylight,25.0,18-44,Old Mill,Serious injury
+R0756,2022,7,20,Dark,45.0,0-17,Riverside,Minor injury
+R0757,2022,8,17,Daylight,35.0,65+,Downtown,Serious injury
+R0758,2022,6,18,Dusk/Dawn,25.0,65+,Northside,Minor injury
+R0759,2022,4,17,Daylight,25.0,18-44,Eastgate,No apparent injury
+R0760,2022,9,18,Dusk/Dawn,35.0,18-44,Northside,Serious injury
+R0761,2022,11,10,Daylight,45.0,18-44,Downtown,Serious injury
+R0762,2022,6,16,Daylight,45.0,18-44,Southport,Minor injury
+R0763,2022,6,3,Dark,30.0,18-44,Old Mill,No apparent injury
+R0764,2022,7,20,Dark,30.0,18-44,Southport,No apparent injury
+R0765,2022,2,12,Daylight,30.0,45-64,Old Mill,No apparent injury
+R0766,2022,1,15,Daylight,35.0,45-64,Eastgate,Minor injury
+R0767,2022,1,20,Dark,25.0,18-44,Eastgate,No apparent injury
+R0768,2022,7,17,Daylight,35.0,18-44,Old Mill,Fatal
+R0769,2022,11,22,Dark,30.0,18-44,Downtown,No apparent injury
+R0770,2022,4,23,Dark,30.0,18-44,Downtown,Fatal
+R0771,2022,4,15,Daylight,25.0,65+,Eastgate,Minor injury
+R0772,2022,5,13,Daylight,35.0,18-44,Old Mill,No apparent injury
+R0773,2022,7,14,Daylight,30.0,45-64,Old Mill,No apparent injury
+R0774,2022,10,16,Daylight,25.0,18-44,Southport,No apparent injury
+R0775,2022,3,9,Daylight,45.0,18-44,Old Mill,Minor injury
+R0776,2022,6,14,Daylight,35.0,65+,Old Mill,Minor injury
+R0777,2022,4,17,Daylight,30.0,18-44,Southport,Serious injury
+R0778,2022,5,17,Daylight,45.0,65+,Downtown,Minor injury
+R0779,2022,8,23,Dark,40.0,18-44,Southport,Fatal
+R0780,2022,4,17,Daylight,25.0,18-44,Old Mill,Minor injury
+R0781,2022,9,9,Daylight,25.0,0-17,Eastgate,Minor injury
+R0782,2022,10,99,Dark,35.0,45-64,Old Mill,Minor injury
+R0783,2022,7,17,Daylight,35.0,65+,Eastgate,Minor injury
+R0784,2022,3,18,Dusk/Dawn,25.0,65+,Eastgate,Serious injury
+R0785,2022,6,9,Daylight,35.0,18-44,Downtown,Minor injury
+R0786,2022,6,23,Dark,25.0,45-64,Southport,No apparent injury
+R0787,2022,11,20,Dark,25.0,0-17,Eastgate,No apparent injury
+R0788,2022,1,12,Daylight,35.0,18-44,Eastgate,Minor injury
+R0789,2022,9,16,Daylight,35.0,18-44,Southport,Minor injury
+R0790,2022,2,4,Dark,35.0,45-64,Eastgate,Minor injury
+R0791,2022,2,22,Dark,35.0,18-44,Northside,No apparent injury
+R0792,2022,11,15,Daylight,30.0,65+,Southport,Minor injury
+R0793,2022,1,13,Daylight,40.0,65+,Northside,Minor injury
+R0794,2022,8,18,Dusk/Dawn,30.0,65+,Southport,Serious injury
+R0795,2022,8,20,Dark,35.0,0-17,Northside,Serious injury
+R0796,2022,10,16,Daylight,35.0,45-64,Eastgate,Minor injury
+R0797,2022,3,22,Dark,45.0,18-44,Downtown,Serious injury
+R0798,2022,10,10,Daylight,35.0,18-44,Old Mill,Minor injury
+R0799,2022,1,16,Daylight,45.0,18-44,Downtown,Fatal
+R0800,2022,7,21,Dark,35.0,65+,Eastgate,Serious injury
+R0801,2022,10,12,Daylight,30.0,65+,Downtown,Minor injury
+R0802,2022,6,16,Daylight,30.0,45-64,Southport,No apparent injury
+R0803,2022,7,8,Daylight,25.0,0-17,Riverside,Minor injury
+R0804,2022,2,10,Daylight,25.0,0-17,Eastgate,No apparent injury
+R0805,2022,7,22,Dark,25.0,18-44,Downtown,No apparent injury
+R0806,2023,10,7,Daylight,30.0,65+,Southport,No apparent injury
+R0807,2023,3,20,Dark,40.0,65+,Downtown,Minor injury
+R0808,2023,3,16,Daylight,35.0,0-17,Downtown,Serious injury
+R0809,2023,12,5,Dark,35.0,18-44,Northside,No apparent injury
+R0810,2023,11,5,Dark,30.0,45-64,Southport,Minor injury
+R0811,2023,7,8,Daylight,45.0,65+,Northside,No apparent injury
+R0812,2023,7,9,Daylight,25.0,45-64,Eastgate,Minor injury
+R0813,2023,11,17,Daylight,25.0,45-64,Northside,Minor injury
+R0814,2023,5,10,Daylight,30.0,65+,Riverside,Minor injury
+R0815,2023,11,16,Daylight,35.0,18-44,Downtown,Serious injury
+R0816,2023,9,21,Dark,25.0,18-44,Southport,Minor injury
+R0817,2023,11,9,Daylight,35.0,45-64,Riverside,No apparent injury
+R0818,2023,5,20,Dark,30.0,18-44,Downtown,Serious injury
+R0819,2023,5,8,Daylight,35.0,45-64,Northside,Minor injury
+R0820,2023,9,17,Daylight,25.0,45-64,Downtown,Minor injury
+R0821,2023,2,12,Daylight,45.0,45-64,Riverside,No apparent injury
+R0822,2023,8,10,Daylight,40.0,45-64,Eastgate,Serious injury
+R0823,2023,8,21,Dark,40.0,45-64,Old Mill,Serious injury
+R0824,2023,1,19,Dark,35.0,18-44,Southport,Serious injury
+R0825,2023,2,16,Daylight,25.0,45-64,Southport,Minor injury
+R0826,2023,8,13,Daylight,35.0,18-44,Northside,Minor injury
+R0827,2023,5,19,Dark,40.0,18-44,Southport,Minor injury
+R0828,2023,5,17,Daylight,35.0,0-17,Riverside,No apparent injury
+R0829,2023,6,0,Dark,35.0,18-44,Northside,No apparent injury
+R0830,2023,2,21,Dark,35.0,45-64,Old Mill,No apparent injury
+R0831,2023,10,16,Daylight,25.0,45-64,Old Mill,Minor injury
+R0832,2023,4,14,Daylight,35.0,18-44,Downtown,Minor injury
+R0833,2023,8,9,Daylight,25.0,65+,Northside,No apparent injury
+R0834,2023,1,10,Daylight,25.0,18-44,Old Mill,Fatal
+R0835,2023,4,23,Dark,30.0,65+,Old Mill,Fatal
+R0836,2023,3,12,Daylight,25.0,18-44,Eastgate,No apparent injury
+R0837,2023,10,13,Daylight,25.0,45-64,Northside,No apparent injury
+R0838,2023,6,22,Dark,45.0,18-44,Riverside,No apparent injury
+R0839,2023,5,22,Dark,30.0,65+,Downtown,Minor injury
+R0840,2023,10,20,Dark,30.0,45-64,Old Mill,Serious injury
+R0841,2023,9,22,Dark,35.0,18-44,Downtown,Serious injury
+R0842,2023,2,12,Daylight,25.0,45-64,Eastgate,Minor injury
+R0843,2023,7,15,Daylight,40.0,18-44,Downtown,Minor injury
+R0844,2023,10,15,Daylight,30.0,18-44,Downtown,Minor injury
+R0845,2023,6,99,Daylight,30.0,0-17,Southport,No apparent injury
+R0846,2023,2,19,Dark,25.0,45-64,Eastgate,Minor injury
+R0847,2023,6,14,Daylight,25.0,18-44,Southport,Minor injury
+R0848,2023,6,16,Daylight,45.0,18-44,Eastgate,No apparent injury
+R0849,2023,7,10,Daylight,45.0,0-17,Northside,Minor injury
+R0850,2023,9,16,Daylight,35.0,18-44,Northside,No apparent injury
+R0851,2023,7,9,Daylight,25.0,18-44,Old Mill,Minor injury
+R0852,2023,12,14,Daylight,30.0,18-44,Downtown,Minor injury
+R0853,2023,3,6,Dusk/Dawn,45.0,65+,Northside,Serious injury
+R0854,2023,6,7,Daylight,25.0,18-44,Southport,No apparent injury
+R0855,2023,4,10,Daylight,30.0,18-44,Riverside,Minor injury
+R0856,2023,6,16,Daylight,25.0,45-64,Eastgate,Minor injury
+R0857,2023,9,16,Daylight,25.0,0-17,Southport,No apparent injury
+R0858,2023,6,19,Dark,25.0,18-44,Northside,Minor injury
+R0859,2023,10,19,Dark,30.0,18-44,Downtown,Serious injury
+R0860,2023,10,17,Daylight,25.0,18-44,Northside,Minor injury
+R0861,2023,10,7,Daylight,30.0,45-64,Eastgate,No apparent injury
+R0862,2023,4,13,Daylight,25.0,18-44,Downtown,Minor injury
+R0863,2023,5,5,Dark,30.0,45-64,Northside,No apparent injury
+R0864,2023,10,14,Daylight,30.0,18-44,Downtown,Minor injury
+R0865,2023,11,7,Daylight,30.0,18-44,Old Mill,Minor injury
+R0866,2023,10,1,Dark,25.0,65+,Riverside,Minor injury
+R0867,2023,3,14,Daylight,35.0,18-44,Downtown,No apparent injury
+R0868,2023,2,2,Dark,25.0,45-64,Downtown,Fatal
+R0869,2023,7,13,Daylight,45.0,18-44,Southport,Minor injury
+R0870,2023,2,7,Daylight,35.0,45-64,Northside,No apparent injury
+R0871,2023,2,13,Daylight,30.0,65+,Eastgate,Minor injury
+R0872,2023,7,10,Daylight,35.0,65+,Downtown,No apparent injury
+R0873,2023,1,16,Daylight,40.0,45-64,Old Mill,Serious injury
+R0874,2023,7,11,Daylight,30.0,18-44,Riverside,Minor injury
+R0875,2023,9,18,Dusk/Dawn,30.0,0-17,Eastgate,Minor injury
+R0876,2023,9,0,Dark,30.0,45-64,Downtown,Fatal
+R0877,2023,5,18,Dusk/Dawn,25.0,0-17,Old Mill,Serious injury
+R0878,2023,9,14,Daylight,25.0,45-64,Southport,Minor injury
+R0879,2023,8,17,Daylight,35.0,45-64,Southport,Minor injury
+R0880,2023,12,11,Daylight,35.0,18-44,Downtown,Fatal
+R0881,2023,8,6,Dusk/Dawn,30.0,65+,Old Mill,Minor injury
+R0882,2023,9,11,Daylight,25.0,18-44,Old Mill,Minor injury
+R0883,2023,2,22,Dark,30.0,45-64,Southport,No apparent injury
+R0884,2023,1,16,Daylight,30.0,18-44,Eastgate,No apparent injury
+R0885,2023,5,16,Daylight,25.0,45-64,Old Mill,Minor injury
+R0886,2023,7,15,Daylight,25.0,18-44,Southport,No apparent injury
+R0887,2023,7,10,Daylight,35.0,0-17,Southport,Minor injury
+R0888,2023,6,19,Dark,35.0,45-64,Eastgate,Minor injury
+R0889,2023,9,20,Dark,35.0,45-64,Southport,Minor injury
+R0890,2023,9,15,Daylight,35.0,18-44,Old Mill,Minor injury
+R0891,2023,3,7,Daylight,25.0,65+,Northside,Minor injury
+R0892,2023,10,19,Dark,25.0,18-44,Downtown,No apparent injury
+R0893,2023,9,16,Daylight,45.0,45-64,Southport,Minor injury
+R0894,2023,12,19,Dark,35.0,18-44,Riverside,Minor injury
+R0895,2023,10,19,Dark,30.0,65+,Riverside,No apparent injury
+R0896,2023,2,7,Daylight,45.0,18-44,Old Mill,Serious injury
+R0897,2023,6,7,Daylight,35.0,45-64,Southport,No apparent injury
+R0898,2023,8,7,Daylight,35.0,18-44,Eastgate,Minor injury
+R0899,2023,2,13,Daylight,35.0,18-44,Riverside,Minor injury
+R0900,2023,11,13,Daylight,25.0,45-64,Southport,No apparent injury
+R0901,2023,2,8,Daylight,35.0,45-64,Riverside,Minor injury
+R0902,2023,2,12,Daylight,30.0,18-44,Old Mill,Minor injury
+R0903,2023,1,16,Daylight,35.0,45-64,Southport,Minor injury
+R0904,2023,2,0,Dark,30.0,18-44,Southport,No apparent injury
+R0905,2023,5,15,Daylight,45.0,0-17,Southport,Minor injury
+R0906,2023,11,8,Daylight,30.0,18-44,Downtown,Minor injury
+R0907,2023,4,18,Dusk/Dawn,45.0,45-64,Downtown,Minor injury
+R0908,2023,11,18,Dusk/Dawn,35.0,18-44,Downtown,No apparent injury
+R0909,2023,2,7,Daylight,30.0,45-64,Eastgate,No apparent injury
+R0910,2023,12,7,Daylight,35.0,18-44,Northside,No apparent injury
+R0911,2023,11,16,Daylight,25.0,45-64,Northside,Minor injury
+R0912,2023,1,14,Daylight,30.0,18-44,Old Mill,Minor injury
+R0913,2023,9,16,Daylight,25.0,18-44,Downtown,Minor injury
+R0914,2023,3,16,Daylight,30.0,65+,Downtown,Minor injury
+R0915,2023,5,21,Dark,25.0,18-44,Southport,No apparent injury
+R0916,2023,10,15,Daylight,25.0,18-44,Downtown,Minor injury
+R0917,2023,7,2,Dark,25.0,65+,Riverside,Serious injury
+R0918,2023,1,8,Daylight,45.0,18-44,Northside,No apparent injury
+R0919,2023,10,19,Dark,25.0,45-64,Eastgate,Minor injury
+R0920,2023,5,20,Dark,30.0,18-44,Old Mill,Minor injury
+R0921,2023,4,22,Dark,30.0,65+,Northside,No apparent injury
+R0922,2023,3,20,Dark,30.0,45-64,Riverside,Minor injury
+R0923,2023,12,15,Daylight,35.0,45-64,Northside,Minor injury
+R0924,2023,6,16,Daylight,35.0,18-44,Northside,No apparent injury
+R0925,2023,2,10,Daylight,25.0,0-17,Old Mill,Minor injury
+R0926,2023,4,16,Daylight,30.0,0-17,Riverside,Minor injury
+R0927,2023,4,7,Daylight,25.0,18-44,Southport,Minor injury
+R0928,2023,9,16,Daylight,30.0,18-44,Old Mill,Minor injury
+R0929,2023,7,15,Daylight,30.0,0-17,Riverside,Minor injury
+R0930,2023,5,7,Daylight,30.0,45-64,Northside,Minor injury
+R0931,2023,2,12,Daylight,25.0,45-64,Riverside,No apparent injury
+R0932,2023,8,6,Dusk/Dawn,40.0,45-64,Eastgate,No apparent injury
+R0933,2023,4,13,Daylight,40.0,18-44,Northside,Serious injury
+R0934,2023,1,16,Daylight,25.0,65+,Eastgate,Minor injury
+R0935,2023,3,16,Daylight,35.0,45-64,Riverside,No apparent injury
+R0936,2023,1,9,Daylight,40.0,18-44,Northside,Minor injury
+R0937,2023,11,17,Daylight,25.0,18-44,Eastgate,No apparent injury
+R0938,2023,5,21,Dark,30.0,18-44,Eastgate,Minor injury
+R0939,2023,1,17,Daylight,35.0,18-44,Northside,Minor injury
+R0940,2023,10,18,Dusk/Dawn,30.0,18-44,Downtown,No apparent injury
+R0941,2023,3,19,Dark,35.0,18-44,Old Mill,Minor injury
+R0942,2023,12,14,Daylight,45.0,0-17,Southport,Minor injury
+R0943,2023,6,7,Daylight,25.0,45-64,Northside,No apparent injury
+R0944,2023,5,17,Daylight,35.0,45-64,Downtown,Minor injury
+R0945,2023,11,8,Daylight,25.0,0-17,Old Mill,Minor injury
+R0946,2023,5,8,Daylight,30.0,18-44,Eastgate,Minor injury
+R0947,2023,10,17,Daylight,35.0,45-64,Northside,Minor injury
+R0948,2023,10,99,Dark,35.0,0-17,Northside,Minor injury
+R0949,2023,8,9,Daylight,30.0,18-44,Old Mill,Minor injury
+R0950,2023,12,18,Dusk/Dawn,,0-17,Downtown,Serious injury
+R0951,2023,11,18,Dusk/Dawn,25.0,45-64,Downtown,Minor injury
+R0952,2023,4,7,Daylight,30.0,45-64,Old Mill,Minor injury
+R0953,2023,6,21,Dark,35.0,45-64,Eastgate,Minor injury
+R0954,2023,5,20,Dark,25.0,18-44,Southport,Minor injury
+R0955,2023,5,5,Dark,40.0,45-64,Eastgate,Serious injury
+R0956,2023,2,14,Daylight,25.0,18-44,Riverside,Minor injury
+R0957,2023,1,7,Daylight,25.0,18-44,Southport,Minor injury
+R0958,2023,7,17,Daylight,25.0,65+,Northside,Serious injury
+R0959,2023,4,6,Dusk/Dawn,30.0,65+,Downtown,No apparent injury
+R0960,2023,12,11,Daylight,30.0,18-44,Southport,Serious injury
+R0961,2023,11,8,Daylight,25.0,65+,Eastgate,Minor injury
+R0962,2023,6,14,Daylight,25.0,18-44,Eastgate,No apparent injury
+R0963,2023,5,21,Dark,35.0,45-64,Old Mill,Serious injury
+R0964,2023,5,18,Dusk/Dawn,45.0,18-44,Riverside,No apparent injury
+R0965,2023,2,16,Daylight,25.0,65+,Old Mill,No apparent injury
+R0966,2023,11,13,Daylight,25.0,0-17,Riverside,Minor injury
+R0967,2023,3,11,Daylight,35.0,45-64,Northside,No apparent injury
+R0968,2023,12,10,Daylight,35.0,18-44,Northside,Minor injury
+R0969,2023,9,7,Daylight,40.0,0-17,Southport,Serious injury
+R0970,2023,5,10,Daylight,30.0,18-44,Downtown,Minor injury
+R0971,2023,8,7,Daylight,40.0,45-64,Southport,Minor injury
+R0972,2023,5,9,Daylight,25.0,18-44,Northside,Minor injury
+R0973,2023,11,7,Daylight,40.0,45-64,Southport,Minor injury
+R0974,2023,7,15,Daylight,40.0,45-64,Northside,Minor injury
+R0975,2023,1,12,Daylight,25.0,0-17,Riverside,Minor injury
+R0976,2023,6,10,Daylight,30.0,18-44,Northside,Minor injury
+R0977,2023,4,7,Daylight,30.0,45-64,Eastgate,Minor injury
+R0978,2023,11,10,Daylight,30.0,65+,Southport,Minor injury
+R0979,2023,10,17,Daylight,25.0,45-64,Southport,No apparent injury
+R0980,2023,10,16,Daylight,25.0,45-64,Downtown,Minor injury
+R0981,2023,9,5,Dark,25.0,0-17,Northside,Serious injury
+R0982,2023,4,15,Daylight,25.0,65+,Southport,Minor injury
+R0983,2023,8,19,Dark,25.0,65+,Riverside,Minor injury
+R0984,2023,10,17,Daylight,25.0,18-44,Southport,Minor injury
+R0985,2023,11,10,Daylight,30.0,18-44,Northside,Minor injury
+R0986,2023,11,8,Daylight,30.0,18-44,Eastgate,Minor injury
+R0987,2023,2,16,Daylight,35.0,45-64,Downtown,Minor injury
+R0988,2023,8,17,Daylight,35.0,65+,Eastgate,Minor injury
+R0989,2023,7,8,Daylight,35.0,18-44,Northside,No apparent injury
+R0990,2023,3,16,Daylight,40.0,18-44,Southport,No apparent injury
+R0991,2023,6,23,Dark,30.0,45-64,Southport,Serious injury
+R0992,2023,9,4,Dark,45.0,18-44,Riverside,Fatal
+R0993,2023,9,16,Daylight,25.0,18-44,Riverside,Minor injury
+R0994,2023,5,20,Dark,30.0,18-44,Eastgate,No apparent injury
+R0995,2023,4,14,Daylight,40.0,18-44,Downtown,Minor injury
+R0996,2023,10,18,Dusk/Dawn,40.0,18-44,Southport,Minor injury
+R0997,2023,7,14,Daylight,25.0,18-44,Northside,Minor injury
+R0998,2023,3,21,Dark,25.0,18-44,Southport,Minor injury
+R0999,2023,2,16,Daylight,35.0,65+,Eastgate,Serious injury
+R1000,2023,7,13,Daylight,35.0,65+,Southport,Minor injury
+R1001,2023,11,9,Daylight,30.0,18-44,Riverside,Minor injury
+R1002,2023,7,9,Daylight,40.0,18-44,Southport,Minor injury
+R1003,2023,10,11,Daylight,35.0,18-44,Northside,Minor injury
+R1004,2023,1,10,Daylight,30.0,45-64,Northside,Minor injury
+R1005,2023,3,11,Daylight,30.0,45-64,Riverside,Minor injury
+R1006,2023,3,7,Daylight,30.0,45-64,Riverside,Minor injury
+R1007,2023,8,17,Daylight,30.0,18-44,Northside,Minor injury
+R1008,2023,8,21,Dark,30.0,18-44,Northside,Minor injury
+R1009,2023,4,16,Daylight,35.0,45-64,Southport,Minor injury
+R1010,2023,3,21,Dark,40.0,45-64,Riverside,Serious injury
+R1011,2023,4,17,Daylight,30.0,18-44,Riverside,Minor injury
+R1012,2023,9,22,Dark,30.0,18-44,Northside,No apparent injury
+R1013,2023,3,20,Dark,30.0,0-17,Riverside,No apparent injury
+R1014,2023,12,1,Dark,25.0,45-64,Riverside,Serious injury
+R1015,2023,10,21,Dark,25.0,45-64,Eastgate,No apparent injury
+R1016,2023,4,8,Daylight,30.0,0-17,Eastgate,No apparent injury
+R1017,2023,5,19,Dark,35.0,45-64,Northside,Minor injury
+R1018,2023,10,23,Dark,35.0,18-44,Downtown,No apparent injury
+R1019,2023,5,4,Dark,40.0,18-44,Northside,Minor injury
+R1020,2023,5,15,Daylight,40.0,45-64,Eastgate,Serious injury
+R1021,2023,6,8,Daylight,30.0,18-44,Southport,No apparent injury
+R1022,2023,1,2,Dark,35.0,18-44,Northside,Minor injury
+R1023,2023,2,6,Dusk/Dawn,35.0,18-44,Downtown,Minor injury
+R1024,2023,8,21,Dark,40.0,45-64,Southport,No apparent injury
+R1025,2023,2,13,Daylight,25.0,65+,Eastgate,Serious injury
+R1026,2023,9,13,Daylight,25.0,18-44,Southport,Minor injury
+R1027,2023,5,9,Daylight,25.0,0-17,Northside,No apparent injury
+R1028,2023,7,17,Daylight,30.0,0-17,Northside,Minor injury
+R1029,2023,9,1,Dark,35.0,18-44,Riverside,No apparent injury
+R1030,2023,3,11,Daylight,30.0,18-44,Downtown,No apparent injury
+R1031,2023,10,9,Daylight,35.0,65+,Downtown,Minor injury
+R1032,2023,9,18,Dusk/Dawn,25.0,65+,Old Mill,Minor injury
+R1033,2023,4,22,Dark,30.0,45-64,Downtown,Minor injury
+R1034,2023,5,18,Dusk/Dawn,30.0,18-44,Riverside,Minor injury
+R1035,2023,2,19,Dark,25.0,18-44,Downtown,Serious injury
+R1036,2023,2,7,Daylight,30.0,18-44,Riverside,Minor injury
+R1037,2023,1,11,Daylight,25.0,65+,Eastgate,Minor injury
+R1038,2023,9,14,Daylight,30.0,45-64,Northside,No apparent injury
+R1039,2023,3,7,Daylight,25.0,18-44,Downtown,Minor injury
+R1040,2023,5,1,Dark,35.0,18-44,Old Mill,Minor injury
+R1041,2023,6,12,Daylight,25.0,18-44,Downtown,No apparent injury
+R1042,2023,3,11,Daylight,25.0,18-44,Eastgate,Minor injury
+R1043,2023,10,23,Dark,25.0,18-44,Eastgate,Minor injury
+R1044,2023,12,18,Dusk/Dawn,35.0,18-44,Downtown,No apparent injury
+R1045,2023,5,16,Daylight,25.0,0-17,Eastgate,Minor injury

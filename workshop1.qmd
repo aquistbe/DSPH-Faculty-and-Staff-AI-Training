@@ -31,10 +31,11 @@ No experience needed. If you have never opened ChatGPT or Copilot, this session 
 | Time | Segment |
 |------|---------|
 | 0:00--0:08 | What AI is, which tools to use, and the one data rule |
-| 0:08--0:15 | How AI gets things wrong, and who is responsible |
-| 0:15--0:25 | Guided tour: ChatGPT Edu, step by step (follow along) |
-| 0:25--0:40 | Activity 1: Your first three requests |
-| 0:40--0:55 | Activity 2: Better requests with PTCF |
+| 0:08--0:16 | What it can do: five real tasks (instructor demo) |
+| 0:16--0:23 | How AI gets things wrong, and who is responsible |
+| 0:23--0:33 | Guided tour: ChatGPT Edu, step by step (follow along) |
+| 0:33--0:44 | Activity 1: Your first three requests |
+| 0:44--0:55 | Activity 2: Better requests with PTCF |
 | 0:55--1:00 | Wrap-up and one thing to try this week |
 
 :::{.callout-note}
@@ -61,6 +62,29 @@ Never paste in health information about a person, student records, Social Securi
 :::{.callout-tip}
 ## The Mental Model
 Think of AI as a fast, eager assistant who has read a lot but is sometimes wrong. You tell it what you need, it writes a draft, and you check the draft before you use it.
+:::
+
+---
+
+## What It Can Do: Five Real Tasks (8 min)
+
+The instructor shows what these tools can do on work like ours. Watch first; you will try your own requests in the activities.
+
+| Task | What you ask | What to notice |
+|------|--------------|----------------|
+| **Analyze data and make a figure** (live) | Upload a spreadsheet and ask which speed limits have the highest share of severe pedestrian crashes, with a bar chart, three findings, and any data problems. | It writes and runs the analysis itself, and flags missing and impossible values. You still check the numbers. |
+| **Review your own draft** | "Act as an NIH study section reviewer. List the 5 biggest weaknesses, most serious first. Do not rewrite it." | It finds design and framing problems before a real reviewer does. It critiques your writing; it does not write for you. |
+| **Make or update a presentation** | "Turn this abstract into a 5-slide outline for a community meeting, with speaker notes." | A fast first structure. Your expertise decides what stays. |
+| **Sort an email thread** | "Pull every task out of this thread: who, what, and when. List anything nobody agreed to do." | It catches the item that was raised twice and never assigned. |
+| **Find sources** | "Give me 5 peer-reviewed studies on leading pedestrian intervals, with DOIs." | In our test, one of two DOIs pointed to an unrelated paper. Open every source before you cite it. |
+
+**Try the data demo yourself later:** download the [fabricated crash dataset](demo-materials/Workshop1_Demo_RivertonPedCrashes.csv) (1,045 crashes in a fictional city), upload it to ChatGPT Edu, and paste this prompt:
+
+> This file has pedestrian crashes in our city. Which speed limits have the highest share of crashes where someone was killed or seriously injured? Make a bar chart, give me 3 plain-language findings, and tell me about any data problems.
+
+:::{.callout-note}
+## Beyond the Chat Box
+Agentic tools such as Claude, OpenAI Codex, and Copilot agents can open files, run code, and check their own work across many steps. They are not Drexel-supported: use them with public or low-risk information only. Start with ChatGPT Edu.
 :::
 
 ---
@@ -113,7 +137,7 @@ Duration: ~10 minutes | Format: Follow along with the instructor
 
 ### Activity 1: Your First Three Requests
 ::: {.activity-meta}
-Duration: ~15 minutes | Format: Individual, hands-on
+Duration: ~11 minutes | Format: Individual, hands-on
 :::
 
 **Goal:** See what the tool does well by giving it everyday tasks.
@@ -151,7 +175,7 @@ Copy each prompt below into ChatGPT Edu, one at a time. Read what comes back. Th
 
 ### Activity 2: Better Requests with PTCF
 ::: {.activity-meta}
-Duration: ~15 minutes | Format: Hands-on, then share with a neighbor
+Duration: ~11 minutes | Format: Hands-on, then share with a neighbor
 :::
 
 **Goal:** See how a little more detail gets you a much better answer.

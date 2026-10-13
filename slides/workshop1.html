@@ -72,6 +72,46 @@ html,body{height:100%;background:#11151c;font-family:var(--sans)}
 .s-quote blockquote{color:var(--navy);font-size:46px;line-height:1.22;font-weight:700;margin:18px 0 30px;max-width:1000px}
 .q-attr{display:flex;flex-direction:column;border-left:4px solid var(--gold);padding-left:18px}
 .q-name{color:var(--navy);font-weight:700;font-size:20px} .q-role{color:var(--gray);font-size:17px;margin-top:3px}
+/* showcase demos */
+.s-demo .head{font-size:40px}
+.demo{display:grid;grid-template-columns:1fr 1.18fr;gap:26px;margin-top:22px}
+.panel{border:1px solid var(--line);border-radius:4px;padding:14px 18px;background:#fff;position:relative}
+.ptag{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--teal);margin-bottom:8px}
+.ptag.crim{color:var(--crimson)}
+.prompt{background:var(--off);border-left:4px solid var(--gold);padding:10px 14px;font-size:18px;line-height:1.45;color:var(--slate);font-family:var(--serif);font-style:italic}
+.doc{font-family:var(--serif);font-size:16px;line-height:1.5;color:var(--slate);background:#FBFBFA;border:1px dashed var(--line);padding:10px 14px}
+.doc p{margin-bottom:6px}
+.file{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--navy);font-weight:700;margin-top:10px;border:1px solid var(--line);border-radius:20px;padding:5px 12px}
+.file:before{content:"CSV";background:var(--teal);color:#fff;font-size:10px;padding:2px 5px;border-radius:2px}
+.out{list-style:none}
+.out li{position:relative;padding-left:22px;font-size:17.5px;line-height:1.42;color:var(--slate);margin-bottom:7px}
+.out li:before{content:"";position:absolute;left:3px;top:8px;width:7px;height:7px;border-radius:50%;background:var(--teal)}
+.out.warn li:before{background:var(--crimson)}
+.out .n{font-weight:700;color:var(--crimson);margin-right:4px}
+.figbox{height:200px;margin:-4px -6px 4px}
+.takeaway{position:absolute;left:72px;right:72px;bottom:80px;border-left:5px solid var(--gold);padding:7px 0 7px 16px;
+  color:var(--navy);font-size:18px;font-weight:700;background:linear-gradient(90deg,#FFF8DB,rgba(255,248,219,0))}
+.badge-live{position:absolute;top:60px;right:72px;background:var(--crimson);color:#fff;font-weight:700;font-size:13px;letter-spacing:2px;padding:7px 14px;border-radius:3px}
+.badge-beyond{position:absolute;top:60px;right:72px;background:var(--navy);color:var(--gold);font-weight:700;font-size:12px;letter-spacing:1.5px;padding:7px 14px;border-radius:3px}
+.arrow{color:var(--gold);font-size:30px;font-weight:700;text-align:center;line-height:1}
+.minis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.mini{aspect-ratio:16/9;background:var(--navy);border-radius:3px;padding:9px 10px;color:#fff;display:flex;flex-direction:column;position:relative;overflow:hidden}
+.mini.light{background:#fff;border:1px solid var(--line);color:var(--navy)}
+.mini .mt{font-family:var(--serif);font-weight:700;font-size:14.5px;line-height:1.15}
+.mini .mr{width:22px;height:3px;background:var(--gold);margin:5px 0}
+.mini .mb{font-size:11px;line-height:1.35;color:inherit;opacity:.85}
+.mini .mnum{position:absolute;right:7px;bottom:5px;font-size:9px;opacity:.6}
+.notes{font-size:15.5px;color:var(--gray);line-height:1.45;margin-top:10px;border-top:1px solid var(--line);padding-top:8px}
+.notes b{color:var(--navy)}
+.tbl{width:100%;border-collapse:collapse;font-size:16px;color:var(--slate)}
+.tbl th{text-align:left;background:var(--navy);color:#fff;font-weight:700;padding:5px 8px;font-size:12.5px;letter-spacing:.5px}
+.tbl td{padding:5px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+.cite{font-size:15.5px;line-height:1.4;color:var(--slate);padding:7px 10px;border:1px solid var(--line);border-radius:3px;margin-bottom:7px;display:flex;gap:10px;align-items:flex-start}
+.cite .st{flex:0 0 auto;font-size:11px;font-weight:700;letter-spacing:1px;padding:3px 7px;border-radius:2px;color:#fff;margin-top:1px}
+.st.ok{background:#2E7D4F} .st.bad{background:var(--crimson)}
+.steps{list-style:none;counter-reset:s}
+.steps li{counter-increment:s;position:relative;padding-left:36px;font-size:17.5px;line-height:1.42;color:var(--slate);margin-bottom:9px}
+.steps li:before{content:counter(s);position:absolute;left:0;top:0;width:24px;height:24px;border-radius:50%;background:var(--gold);color:var(--navy);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center}
 /* chrome */
 #bar{position:fixed;left:0;right:0;bottom:0;height:5px;background:rgba(255,255,255,.12);z-index:20}
 #barfill{height:100%;background:var(--gold);width:0;transition:width .2s}
@@ -135,6 +175,402 @@ html,body{height:100%;background:#11151c;font-family:var(--sans)}
 <section class="slide s-section">
   <div class="sec-inner">
     <div class="eyebrow gold">SECTION 02</div>
+    <h2 class="serif">What It Can Do</h2>
+    <div class="rule"></div>
+    <p class="sec-desc">Five real tasks from public health work: analyze data, review a draft, build slides, sort an inbox, find sources, and one look past the chat box.</p>
+  </div>
+</section>
+<section class="slide s-content s-demo">
+  <div class="eyebrow teal">USE CASE 1 · DATA ANALYSIS + FIGURE</div>
+  <h2 class="serif head">Ask a Question of a Spreadsheet</h2><div class="rule"></div>
+  <span class="badge-live">LIVE DEMO</span>
+  <div class="demo">
+    <div class="panel">
+      <div class="ptag">You upload a file and ask</div>
+      <div class="prompt">&ldquo;This file has pedestrian crashes in our city. Which speed limits have the highest share of crashes where someone was killed or seriously injured? Make a bar chart, give me 3 plain-language findings, and tell me about any data problems.&rdquo;</div>
+      <div class="file">Workshop1_Demo_RivertonPedCrashes.csv &middot; 1,045 rows</div>
+      <div class="notes"><b>Fabricated data</b> for a fictional city. ChatGPT Edu writes and runs the analysis code itself; you can click to see the code.</div>
+    </div>
+    <div class="panel">
+      <div class="ptag">What comes back</div>
+      <div class="figbox"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 403.2 237.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-13T09:43:10.399336</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 237.6 
+L 403.2 237.6 
+L 403.2 0 
+L 0 0 
+L 0 237.6 
+z
+" style="fill: none"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 45.536328 209.8 
+L 392.4 209.8 
+L 392.4 10.8 
+L 45.536328 10.8 
+L 45.536328 209.8 
+z
+" style="fill: none"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 61.302859 209.8 
+L 103.619954 209.8 
+L 103.619954 173.850117 
+L 61.302859 173.850117 
+z
+" clip-path="url(#pdefaa3e155)" style="fill: #9fb3cc"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 129.556238 209.8 
+L 171.873333 209.8 
+L 171.873333 164.405837 
+L 129.556238 164.405837 
+z
+" clip-path="url(#pdefaa3e155)" style="fill: #9fb3cc"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 197.809617 209.8 
+L 240.126712 209.8 
+L 240.126712 138.622653 
+L 197.809617 138.622653 
+z
+" clip-path="url(#pdefaa3e155)" style="fill: #006699"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 266.062996 209.8 
+L 308.380091 209.8 
+L 308.380091 97.30191 
+L 266.062996 97.30191 
+z
+" clip-path="url(#pdefaa3e155)" style="fill: #07294d"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 334.316375 209.8 
+L 376.633469 209.8 
+L 376.633469 38.617204 
+L 334.316375 38.617204 
+z
+" clip-path="url(#pdefaa3e155)" style="fill: #971b2f"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="mea14a3617e" d="M 0 0 
+L 0 3.5 
+" style="stroke: #5a6571; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#mea14a3617e" x="82.461406" y="209.8" style="fill: #5a6571; stroke: #5a6571; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 10px; font-family: 'Trebuchet MS', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #5a6571" x="82.461406" y="224.398438" transform="rotate(-0 82.461406 224.398438)">25 mph</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#mea14a3617e" x="150.714785" y="209.8" style="fill: #5a6571; stroke: #5a6571; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 10px; font-family: 'Trebuchet MS', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #5a6571" x="150.714785" y="224.398438" transform="rotate(-0 150.714785 224.398438)">30 mph</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#mea14a3617e" x="218.968164" y="209.8" style="fill: #5a6571; stroke: #5a6571; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 10px; font-family: 'Trebuchet MS', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #5a6571" x="218.968164" y="224.398438" transform="rotate(-0 218.968164 224.398438)">35 mph</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#mea14a3617e" x="287.221543" y="209.8" style="fill: #5a6571; stroke: #5a6571; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 10px; font-family: 'Trebuchet MS', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #5a6571" x="287.221543" y="224.398438" transform="rotate(-0 287.221543 224.398438)">40 mph</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#mea14a3617e" x="355.474922" y="209.8" style="fill: #5a6571; stroke: #5a6571; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 10px; font-family: 'Trebuchet MS', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #5a6571" x="355.474922" y="224.398438" transform="rotate(-0 355.474922 224.398438)">45 mph</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_6">
+      <defs>
+       <path id="m7301162ec7" d="M 0 0 
+L -3.5 0 
+" style="stroke: #5a6571; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m7301162ec7" x="45.536328" y="209.8" style="fill: #5a6571; stroke: #5a6571; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 10px; font-family: 'Trebuchet MS', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #5a6571" x="38.536328" y="213.598828" transform="rotate(-0 38.536328 213.598828)">0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_7">
+      <g>
+       <use xlink:href="#m7301162ec7" x="45.536328" y="173.618182" style="fill: #5a6571; stroke: #5a6571; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 10px; font-family: 'Trebuchet MS', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #5a6571" x="38.536328" y="177.41701" transform="rotate(-0 38.536328 177.41701)">10</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m7301162ec7" x="45.536328" y="137.436364" style="fill: #5a6571; stroke: #5a6571; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 10px; font-family: 'Trebuchet MS', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #5a6571" x="38.536328" y="141.235192" transform="rotate(-0 38.536328 141.235192)">20</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#m7301162ec7" x="45.536328" y="101.254545" style="fill: #5a6571; stroke: #5a6571; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 10px; font-family: 'Trebuchet MS', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #5a6571" x="38.536328" y="105.053374" transform="rotate(-0 38.536328 105.053374)">30</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m7301162ec7" x="45.536328" y="65.072727" style="fill: #5a6571; stroke: #5a6571; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-size: 10px; font-family: 'Trebuchet MS', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #5a6571" x="38.536328" y="68.871555" transform="rotate(-0 38.536328 68.871555)">40</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_11">
+      <g>
+       <use xlink:href="#m7301162ec7" x="45.536328" y="28.890909" style="fill: #5a6571; stroke: #5a6571; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-size: 10px; font-family: 'Trebuchet MS', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #5a6571" x="38.536328" y="32.689737" transform="rotate(-0 38.536328 32.689737)">50</text>
+     </g>
+    </g>
+    <g id="text_12">
+     <text style="font-size: 11px; font-family: 'Trebuchet MS', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #5a6571" x="19.16875" y="110.3" transform="rotate(-90 19.16875 110.3)">% killed or seriously injured</text>
+    </g>
+   </g>
+   <g id="patch_8">
+    <path d="M 45.536328 209.8 
+L 45.536328 10.8 
+" style="fill: none; stroke: #d0d3d4; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 45.536328 209.8 
+L 392.4 209.8 
+" style="fill: none; stroke: #d0d3d4; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_13">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'Trebuchet MS', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #1c2530" x="82.461406" y="169.508298" transform="rotate(-0 82.461406 169.508298)">10%</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 9px; font-family: 'Trebuchet MS', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #ffffff" x="82.461406" y="204.372727" transform="rotate(-0 82.461406 204.372727)">n=312</text>
+   </g>
+   <g id="text_15">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'Trebuchet MS', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #1c2530" x="150.714785" y="160.064019" transform="rotate(-0 150.714785 160.064019)">13%</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 9px; font-family: 'Trebuchet MS', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #ffffff" x="150.714785" y="204.372727" transform="rotate(-0 150.714785 204.372727)">n=271</text>
+   </g>
+   <g id="text_17">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'Trebuchet MS', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #1c2530" x="218.968164" y="134.280835" transform="rotate(-0 218.968164 134.280835)">20%</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 9px; font-family: 'Trebuchet MS', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #ffffff" x="218.968164" y="204.372727" transform="rotate(-0 218.968164 204.372727)">n=244</text>
+   </g>
+   <g id="text_19">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'Trebuchet MS', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #1c2530" x="287.221543" y="92.960092" transform="rotate(-0 287.221543 92.960092)">31%</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 9px; font-family: 'Trebuchet MS', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #ffffff" x="287.221543" y="204.372727" transform="rotate(-0 287.221543 204.372727)">n=119</text>
+   </g>
+   <g id="text_21">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'Trebuchet MS', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #1c2530" x="355.474922" y="34.275386" transform="rotate(-0 355.474922 34.275386)">47%</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 9px; font-family: 'Trebuchet MS', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #ffffff" x="355.474922" y="204.372727" transform="rotate(-0 355.474922 204.372727)">n=93</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pdefaa3e155">
+   <rect x="45.536328" y="10.8" width="346.863672" height="199"/>
+  </clipPath>
+ </defs>
+</svg>
+</div>
+      <ul class="out">
+        <li>Severe outcomes rise from 10% of crashes on 25 mph roads to 47% on 45 mph roads.</li>
+        <li>Crashes after dark were more often severe (26% vs. 16% in daylight).</li>
+      </ul>
+      <ul class="out warn"><li><span class="n">Flagged:</span>6 rows missing a speed limit; 3 rows with an impossible hour (&ldquo;99&rdquo;).</li></ul>
+    </div>
+  </div>
+  <div class="takeaway">Minutes instead of an afternoon. You still check the numbers and decide what they mean.</div>
+  <div class="footer"><span class="f-left">Environmental &amp; Occupational Health</span><span class="f-right">Dornsife School of Public Health</span></div>
+</section>
+<section class="slide s-content s-demo">
+  <div class="eyebrow teal">USE CASE 2 · REVIEW YOUR OWN DRAFT</div>
+  <h2 class="serif head">Get a Tough Reviewer Before the Real One</h2><div class="rule"></div>
+  <div class="demo">
+    <div class="panel">
+      <div class="ptag">Your draft (you wrote it)</div>
+      <div class="doc">
+        <p>The Safer Corners Study will evaluate curb extensions installed at 60 intersections between 2021 and 2024.</p>
+        <p><b>Aim 1:</b> Estimate the effect of curb extensions on pedestrian injuries, comparing police-reported crashes before and after installation.</p>
+        <p><b>Aim 2:</b> Explore community perceptions of safety.</p>
+        <p><b>Aim 3:</b> Assess equity in the rollout across neighborhoods.</p>
+        <p>Our findings will eliminate pedestrian deaths at treated intersections.</p>
+      </div>
+      <div class="prompt" style="margin-top:10px">&ldquo;Act as an NIH study section reviewer. List the 5 biggest weaknesses, most serious first. Do not rewrite it.&rdquo;</div>
+    </div>
+    <div class="panel">
+      <div class="ptag crim">Reviewer critique (actual AI output, trimmed)</div>
+      <ul class="out warn">
+        <li><span class="n">1</span>Aim 1&rsquo;s before-after comparison has no control group, so it cannot separate the effect from citywide trends or regression to the mean.</li>
+        <li><span class="n">2</span>Police-reported crashes undercount pedestrian injuries and are too sparse at 60 sites for adequate power.</li>
+        <li><span class="n">3</span>&ldquo;Eliminate pedestrian deaths&rdquo; is implausible and costs credibility with reviewers.</li>
+        <li><span class="n">4</span>Aim 2 names no population, sample, measures, or analysis; &ldquo;explore&rdquo; signals an unformed aim.</li>
+        <li><span class="n">5</span>Aim 3 defines no equity measure and does not connect to Aim 1.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="takeaway">AI critiques your draft; it does not write it. NIH will not review applications substantially developed by AI.</div>
+  <div class="footer"><span class="f-left">Environmental &amp; Occupational Health</span><span class="f-right">Dornsife School of Public Health</span></div>
+</section>
+<section class="slide s-content s-demo">
+  <div class="eyebrow teal">USE CASE 3 · MAKE OR UPDATE A PRESENTATION</div>
+  <h2 class="serif head">From a Dense Abstract to a Talk Outline</h2><div class="rule"></div>
+  <div class="demo" style="grid-template-columns:.92fr 1.25fr">
+    <div class="panel">
+      <div class="ptag">You paste a published abstract and ask</div>
+      <div class="prompt">&ldquo;Turn this abstract into a 5-slide outline for a community meeting. One idea per slide, plain language, no jargon, and speaker notes for each slide. Then give me a PowerPoint file.&rdquo;</div>
+      <div class="notes" style="margin-top:12px"><b>Also works for updates:</b> &ldquo;Here is last year&rsquo;s deck and this year&rsquo;s numbers. Which slides need to change, and what should they say?&rdquo;</div>
+    </div>
+    <div class="panel">
+      <div class="ptag">What comes back (example): slides + speaker notes</div>
+      <div class="minis">
+        <div class="mini"><div class="mt">Why Your Corner Matters</div><div class="mr"></div><div class="mb">More people are being hit while walking. Most of it happens on a few kinds of streets.</div><span class="mnum">1</span></div>
+        <div class="mini light"><div class="mt">Faster Roads, Worse Injuries</div><div class="mr"></div><div class="mb">At 45 mph, about half of crashes kill or seriously injure the person walking.</div><span class="mnum">2</span></div>
+        <div class="mini light"><div class="mt">What Works</div><div class="mr"></div><div class="mb">Street design (shorter crossings, slower turns) beats awareness campaigns alone.</div><span class="mnum">3</span></div>
+      </div>
+      <div class="notes"><b>Speaker notes, slide 2:</b> &ldquo;Point to the chart. Ask: which of these roads do you cross every day? Pause for answers before moving on.&rdquo;</div>
+      <div class="notes"><b>In practice:</b> today&rsquo;s slides were built with AI help, then checked and edited by me.</div>
+    </div>
+  </div>
+  <div class="takeaway">It gets you a first structure fast. Your expertise decides what stays.</div>
+  <div class="footer"><span class="f-left">Environmental &amp; Occupational Health</span><span class="f-right">Dornsife School of Public Health</span></div>
+</section>
+<section class="slide s-content s-demo">
+  <div class="eyebrow teal">USE CASE 4 · INBOX + LITERATURE</div>
+  <h2 class="serif head">Sort the Thread, Then Check the Sources</h2><div class="rule"></div>
+  <div class="demo" style="grid-template-columns:1fr 1fr">
+    <div class="panel">
+      <div class="ptag">Example: a long planning thread &rarr; action list</div>
+      <div class="prompt">&ldquo;Pull every task out of this thread: who, what, and when. List anything nobody agreed to do.&rdquo;</div>
+      <table class="tbl" style="margin-top:10px">
+        <tr><th>Who</th><th>Task</th><th>Due</th></tr>
+        <tr><td>Maria</td><td>Confirm speaker and title</td><td>Oct 20</td></tr>
+        <tr><td>Dev</td><td>Draft flyer for review</td><td>Oct 24</td></tr>
+        <tr><td>Priya</td><td>Approve catering budget</td><td>Oct 27</td></tr>
+        <tr><td style="color:var(--crimson);font-weight:700">No one</td><td style="color:var(--crimson)">Book the room (raised twice, never assigned)</td><td>&mdash;</td></tr>
+      </table>
+    </div>
+    <div class="panel">
+      <div class="ptag crim">Asked for 5 studies on leading pedestrian intervals</div>
+      <p style="font-size:16.5px;color:var(--slate);line-height:1.4;margin-bottom:10px">The model gave 2 and said it could not name 3 more without inventing them. Then we checked both DOIs:</p>
+      <div class="cite"><span class="st ok">REAL</span><span>Fayish &amp; Gross (2010). <i>Transp Res Rec</i> 2198:15&ndash;22. DOI correct.</span></div>
+      <div class="cite"><span class="st bad">WRONG DOI</span><span>Van Houten et al. (2000). Real paper, but the DOI it gave (1734-11) opens a study of <b>motorcycle helmets</b>. Correct: 10.3141/1734-13.</span></div>
+    </div>
+  </div>
+  <div class="takeaway">Even a careful answer had a wrong citation. Open every source before you cite it.</div>
+  <div class="footer"><span class="f-left">Environmental &amp; Occupational Health</span><span class="f-right">Dornsife School of Public Health</span></div>
+</section>
+<section class="slide s-content s-demo">
+  <div class="eyebrow teal">BEYOND THE CHAT BOX</div>
+  <h2 class="serif head">AI That Works Across Your Files</h2><div class="rule"></div>
+  <span class="badge-beyond">NOT DREXEL-SUPPORTED &middot; LOW-RISK DATA ONLY</span>
+  <div class="demo" style="grid-template-columns:1.1fr 1fr">
+    <div class="panel">
+      <div class="ptag">How this section of today&rsquo;s slides was made</div>
+      <p style="font-size:17px;color:var(--slate);margin-bottom:10px">One request: &ldquo;Add 5&ndash;10 minutes of real use cases to today&rsquo;s slides.&rdquo; An AI agent (Claude, a paid tool) then:</p>
+      <ol class="steps">
+        <li>Opened this deck, the workshop page, and my instructor notes in my OneDrive folder.</li>
+        <li>Asked me 4 questions about format, examples, tools, and timing.</li>
+        <li>Built the fake crash dataset, ran the analysis, and drew the chart.</li>
+        <li>Asked a second AI model for the reviewer critique and the citations, then checked the DOIs itself.</li>
+        <li>Wrote these slides into the deck. I reviewed every one.</li>
+      </ol>
+    </div>
+    <div class="panel">
+      <div class="ptag">What is different from a chat window</div>
+      <ul class="out">
+        <li>It reads and writes real files instead of copy-paste.</li>
+        <li>It runs code and checks its own work.</li>
+        <li>It can hand pieces of a job to other AI models.</li>
+      </ul>
+      <div class="ptag crim" style="margin-top:14px">Why it is not where you start</div>
+      <ul class="out warn">
+        <li>Personal accounts: no student, health, or research data.</li>
+        <li>More power means more to check.</li>
+        <li>Examples: Claude, OpenAI Codex, Copilot agents.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="takeaway">Start with ChatGPT Edu today. This is where the tools are heading.</div>
+  <div class="footer"><span class="f-left">Environmental &amp; Occupational Health</span><span class="f-right">Dornsife School of Public Health</span></div>
+</section>
+<section class="slide s-section">
+  <div class="sec-inner">
+    <div class="eyebrow gold">SECTION 03</div>
     <h2 class="serif">How AI Gets Things Wrong</h2>
     <div class="rule"></div>
     <p class="sec-desc">And who is responsible when it does.</p>
@@ -148,7 +584,7 @@ html,body{height:100%;background:#11151c;font-family:var(--sans)}
 </section>
 <section class="slide s-section">
   <div class="sec-inner">
-    <div class="eyebrow gold">SECTION 03</div>
+    <div class="eyebrow gold">SECTION 04</div>
     <h2 class="serif">Hands-On</h2>
     <div class="rule"></div>
     <p class="sec-desc">A guided tour, three first requests, and a simple recipe for better answers.</p>
@@ -161,14 +597,14 @@ html,body{height:100%;background:#11151c;font-family:var(--sans)}
   <div class="footer"><span class="f-left">Environmental &amp; Occupational Health</span><span class="f-right">Dornsife School of Public Health</span></div>
 </section>
 <section class="slide s-content">
-  <div class="eyebrow teal">ACTIVITY 1 · ~15 MIN</div>
+  <div class="eyebrow teal">ACTIVITY 1 · ~11 MIN</div>
   <h2 class="serif head">Your First Three Requests</h2><div class="rule"></div>
   <p class="lead">Copy each prompt from the workshop page into ChatGPT Edu, one at a time. There are no wrong answers.</p>
   <ul class="bullets"><li><strong>Summarize:</strong> a short paragraph on pedestrian deaths, in 3 bullet points.</li><li><strong>Draft:</strong> a friendly reminder email to a committee, under 100 words.</li><li><strong>Explain:</strong> what a &ldquo;data use agreement&rdquo; is, in plain language.</li><li><strong>Then follow up:</strong> &ldquo;Make it shorter,&rdquo; &ldquo;More formal,&rdquo; or &ldquo;Add a sentence about ___.&rdquo;</li></ul>
   <div class="footer"><span class="f-left">Environmental &amp; Occupational Health</span><span class="f-right">Dornsife School of Public Health</span></div>
 </section>
 <section class="slide s-content">
-  <div class="eyebrow teal">ACTIVITY 2 · ~15 MIN</div>
+  <div class="eyebrow teal">ACTIVITY 2 · ~11 MIN</div>
   <h2 class="serif head">Four Questions Before You Type</h2><div class="rule"></div>
   <div class="compare"><div class="col"><div class="col-head teal-bg">PTCF</div><ul class="bullets"><li><strong>Persona:</strong> who should it act as?</li><li><strong>Task:</strong> what do you want it to do?</li><li><strong>Context:</strong> what does it need to know?</li><li><strong>Format:</strong> what should the answer look like?</li></ul></div><div class="col"><div class="col-head crimson">Try both</div><ul class="bullets"><li><strong>Short:</strong> &ldquo;Write an email about a meeting.&rdquo;</li><li><strong>Full:</strong> &ldquo;You are an experienced department administrator. Write an email announcing a staff meeting Tuesday at 10 in Room 204 about the new travel policy. Under 100 words, warm tone, date and time first.&rdquo;</li></ul></div></div>
   <div class="footer"><span class="f-left">Environmental &amp; Occupational Health</span><span class="f-right">Dornsife School of Public Health</span></div>

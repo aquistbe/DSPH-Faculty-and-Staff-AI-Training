@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -39,10 +42,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-185884c8c6106d4d5e21bb702d36b605.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-e5a00fd6c0fce5251246b1fbc19e77b5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -179,6 +182,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#what-youll-leave-with" id="toc-what-youll-leave-with" class="nav-link" data-scroll-target="#what-youll-leave-with">What You’ll Leave With</a></li>
   <li><a href="#run-of-show" id="toc-run-of-show" class="nav-link" data-scroll-target="#run-of-show">Run of Show</a></li>
   <li><a href="#what-ai-is-and-which-tools-to-use-8-min" id="toc-what-ai-is-and-which-tools-to-use-8-min" class="nav-link" data-scroll-target="#what-ai-is-and-which-tools-to-use-8-min">What AI Is, and Which Tools to Use (8 min)</a></li>
+  <li><a href="#what-it-can-do-five-real-tasks-8-min" id="toc-what-it-can-do-five-real-tasks-8-min" class="nav-link" data-scroll-target="#what-it-can-do-five-real-tasks-8-min">What It Can Do: Five Real Tasks (8 min)</a></li>
   <li><a href="#how-ai-gets-things-wrong-and-who-is-responsible-7-min" id="toc-how-ai-gets-things-wrong-and-who-is-responsible-7-min" class="nav-link" data-scroll-target="#how-ai-gets-things-wrong-and-who-is-responsible-7-min">How AI Gets Things Wrong, and Who Is Responsible (7 min)</a></li>
   <li><a href="#guided-tour-chatgpt-edu-step-by-step" id="toc-guided-tour-chatgpt-edu-step-by-step" class="nav-link" data-scroll-target="#guided-tour-chatgpt-edu-step-by-step">Guided Tour: ChatGPT Edu, Step by Step</a>
   <ul class="collapse">
@@ -257,22 +261,26 @@ ul.task-list li input[type="checkbox"] {
 <td>What AI is, which tools to use, and the one data rule</td>
 </tr>
 <tr class="even">
-<td>0:08–0:15</td>
+<td>0:08–0:16</td>
+<td>What it can do: five real tasks (instructor demo)</td>
+</tr>
+<tr class="odd">
+<td>0:16–0:23</td>
 <td>How AI gets things wrong, and who is responsible</td>
 </tr>
-<tr class="odd">
-<td>0:15–0:25</td>
+<tr class="even">
+<td>0:23–0:33</td>
 <td>Guided tour: ChatGPT Edu, step by step (follow along)</td>
 </tr>
-<tr class="even">
-<td>0:25–0:40</td>
+<tr class="odd">
+<td>0:33–0:44</td>
 <td>Activity 1: Your first three requests</td>
 </tr>
-<tr class="odd">
-<td>0:40–0:55</td>
+<tr class="even">
+<td>0:44–0:55</td>
 <td>Activity 2: Better requests with PTCF</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>0:55–1:00</td>
 <td>Wrap-up and one thing to try this week</td>
 </tr>
@@ -330,6 +338,69 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <hr>
 </section>
+<section id="what-it-can-do-five-real-tasks-8-min" class="level2">
+<h2 class="anchored" data-anchor-id="what-it-can-do-five-real-tasks-8-min">What It Can Do: Five Real Tasks (8 min)</h2>
+<p>The instructor shows what these tools can do on work like ours. Watch first; you will try your own requests in the activities.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 38%">
+<col style="width: 44%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Task</th>
+<th>What you ask</th>
+<th>What to notice</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Analyze data and make a figure</strong> (live)</td>
+<td>Upload a spreadsheet and ask which speed limits have the highest share of severe pedestrian crashes, with a bar chart, three findings, and any data problems.</td>
+<td>It writes and runs the analysis itself, and flags missing and impossible values. You still check the numbers.</td>
+</tr>
+<tr class="even">
+<td><strong>Review your own draft</strong></td>
+<td>“Act as an NIH study section reviewer. List the 5 biggest weaknesses, most serious first. Do not rewrite it.”</td>
+<td>It finds design and framing problems before a real reviewer does. It critiques your writing; it does not write for you.</td>
+</tr>
+<tr class="odd">
+<td><strong>Make or update a presentation</strong></td>
+<td>“Turn this abstract into a 5-slide outline for a community meeting, with speaker notes.”</td>
+<td>A fast first structure. Your expertise decides what stays.</td>
+</tr>
+<tr class="even">
+<td><strong>Sort an email thread</strong></td>
+<td>“Pull every task out of this thread: who, what, and when. List anything nobody agreed to do.”</td>
+<td>It catches the item that was raised twice and never assigned.</td>
+</tr>
+<tr class="odd">
+<td><strong>Find sources</strong></td>
+<td>“Give me 5 peer-reviewed studies on leading pedestrian intervals, with DOIs.”</td>
+<td>In our test, one of two DOIs pointed to an unrelated paper. Open every source before you cite it.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Try the data demo yourself later:</strong> download the <a href="demo-materials/Workshop1_Demo_RivertonPedCrashes.csv">fabricated crash dataset</a> (1,045 crashes in a fictional city), upload it to ChatGPT Edu, and paste this prompt:</p>
+<blockquote class="blockquote">
+<p>This file has pedestrian crashes in our city. Which speed limits have the highest share of crashes where someone was killed or seriously injured? Make a bar chart, give me 3 plain-language findings, and tell me about any data problems.</p>
+</blockquote>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Beyond the Chat Box
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Agentic tools such as Claude, OpenAI Codex, and Copilot agents can open files, run code, and check their own work across many steps. They are not Drexel-supported: use them with public or low-risk information only. Start with ChatGPT Edu.</p>
+</div>
+</div>
+<hr>
+</section>
 <section id="how-ai-gets-things-wrong-and-who-is-responsible-7-min" class="level2">
 <h2 class="anchored" data-anchor-id="how-ai-gets-things-wrong-and-who-is-responsible-7-min">How AI Gets Things Wrong, and Who Is Responsible (7 min)</h2>
 <p><strong>It makes things up.</strong> Because it predicts likely-sounding text, it can invent facts, numbers, and citations. Check anything that matters before you use it.</p>
@@ -370,7 +441,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="activity-1-your-first-three-requests-1" class="level3 activity">
 <h3 class="anchored" data-anchor-id="activity-1-your-first-three-requests-1">Activity 1: Your First Three Requests</h3>
 <div class="activity-meta">
-<p>Duration: ~15 minutes | Format: Individual, hands-on</p>
+<p>Duration: ~11 minutes | Format: Individual, hands-on</p>
 </div>
 <p><strong>Goal:</strong> See what the tool does well by giving it everyday tasks.</p>
 <p>Copy each prompt below into ChatGPT Edu, one at a time. Read what comes back. There are no wrong answers here.</p>
@@ -403,7 +474,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="activity-2-better-requests-with-ptcf-1" class="level3 activity">
 <h3 class="anchored" data-anchor-id="activity-2-better-requests-with-ptcf-1">Activity 2: Better Requests with PTCF</h3>
 <div class="activity-meta">
-<p>Duration: ~15 minutes | Format: Hands-on, then share with a neighbor</p>
+<p>Duration: ~11 minutes | Format: Hands-on, then share with a neighbor</p>
 </div>
 <p><strong>Goal:</strong> See how a little more detail gets you a much better answer.</p>
 <section id="four-questions-to-ask-before-you-type" class="level4">
