@@ -134,7 +134,7 @@ Answer these, then check — your score suggests whether to dive in or skim the 
 
 ## Recommended readings
 
-Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings**, and online where linked:
+Available in the shared OneDrive folder **Staff Faculty AI Workshop → Reading Material**, and online where linked:
 
 - [**Claude Code Now Supports Artifacts**](https://claude.com/blog/artifacts-in-claude-code) — generating interactive, shareable outputs.
 - [**How to Do Agentic Data Science (Eric J. Ma)**](https://ericmjl.github.io/blog/2026/2/1/how-to-do-agentic-data-science/) — building analysis products end-to-end.

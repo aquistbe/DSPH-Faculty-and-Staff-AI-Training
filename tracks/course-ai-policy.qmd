@@ -111,7 +111,7 @@ Answer these, then check — your score suggests whether to dive in or skim the 
 
 ## Recommended readings
 
-Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings**, and online where linked:
+Available in the shared OneDrive folder **Staff Faculty AI Workshop → Reading Material**, and online where linked:
 
 - [**AI-Slop, GrantaGate and Bad Writing**](https://tuhinchakrabarty.substack.com/p/ai-slop-grantagate-and-bad-writing) — what AI-generated academic writing looks like.
 - [**How Responsible AI Changes in the Agent Era**](https://www.turingpost.com/p/how-responsible-ai-changes-in-the-agent-era) — responsibility as AI capabilities grow.

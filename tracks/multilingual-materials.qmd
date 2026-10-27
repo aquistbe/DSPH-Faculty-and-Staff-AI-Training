@@ -155,7 +155,7 @@ Answer these, then check — your score suggests whether to dive in or skim the 
 
 ## Recommended readings
 
-Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings**, and online where linked:
+Available in the shared OneDrive folder **Staff Faculty AI Workshop → Reading Material**, and online where linked:
 
 - [**Watch Your Tone: Language Machines as Writing Technology**](https://www.ailog.blog/p/watch-your-tone-language-machines) — how language models handle voice and nuance.
 - [**A Framework for Technical Writing in the Age of LLMs**](https://thedataquarry.com/blog/a-framework-for-reading-and-writing/) — accuracy discipline that applies across languages.

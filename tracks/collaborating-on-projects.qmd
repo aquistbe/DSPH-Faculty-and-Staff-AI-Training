@@ -134,7 +134,7 @@ Answer these, then check — your score suggests whether to dive in or skim the 
 
 ## Recommended readings
 
-Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings**, and online where linked:
+Available in the shared OneDrive folder **Staff Faculty AI Workshop → Reading Material**, and online where linked:
 
 - [**Introducing Workspace Agents in ChatGPT (OpenAI)**](https://openai.com/index/introducing-workspace-agents-in-chatgpt/) — where shared, team-oriented AI features are heading.
 - [**Interaction Models: A Scalable Approach to Human-AI Collaboration**](https://thinkingmachines.ai/blog/interaction-models/) — how to structure people-plus-AI work.

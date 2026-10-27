@@ -161,7 +161,7 @@ Answer these, then check — your score suggests whether to dive in or skim the 
 
 ## Recommended readings
 
-Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings**, and online where linked:
+Available in the shared OneDrive folder **Staff Faculty AI Workshop → Reading Material**, and online where linked:
 
 - [**Effective Context Engineering for AI Agents (Anthropic)**](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents) — retrieval and context principles.
 - [**Beyond the Semantic Layer: Building a Context Layer for the Agentic Era**](https://www.kaelio.com/blog/building-a-context-layer-for-the-agentic-era) — architecting knowledge for AI.

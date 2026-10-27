@@ -157,7 +157,7 @@ Answer these, then check — your score suggests whether to dive in or skim the 
 
 ## Recommended readings
 
-Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings**, and online where linked:
+Available in the shared OneDrive folder **Staff Faculty AI Workshop → Reading Material**, and online where linked:
 
 - [**Effective Context Engineering for AI Agents (Anthropic)**](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents) — practical principles for context.
 - [**State of Context Engineering in 2026 (Aurimas Griciūnas)**](https://www.newsletter.swirlai.com/p/state-of-context-engineering-in-2026) — the current landscape.

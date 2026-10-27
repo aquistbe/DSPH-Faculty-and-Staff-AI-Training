@@ -152,7 +152,7 @@ Answer these, then check — your score suggests whether to dive in or skim the 
 
 ## Recommended readings
 
-Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings**, and online where linked:
+Available in the shared OneDrive folder **Staff Faculty AI Workshop → Reading Material**, and online where linked:
 
 - [**CoPaper.AI — Your AI Research Co-Author**](https://www.copaper.ai/landing) — what AI research assistants can and can't do.
 - [**Read-Paper-Write-Code: Agentic Reproduction of Social-Science Results (Kohler et al.)**](https://arxiv.org/abs/2604.21965) — AI reproducing analyses — promise and limits.

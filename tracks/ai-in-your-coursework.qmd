@@ -197,7 +197,7 @@ Answer these, then check — your score suggests whether to dive in or skim the 
 
 ## Recommended readings
 
-Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings**, and online where linked:
+Available in the shared OneDrive folder **Staff Faculty AI Workshop → Reading Material**, and online where linked:
 
 - [**How to Outsource Everything to AI and Get Dumb**](https://ruben.substack.com/p/how-to-rot-your-brain-with-ai) — the cognitive-offloading risk, bluntly put; the most useful item here if you're early in a program.
 - [**Judgment Is the Skill That Matters Most in the AI Era**](https://dev.jimgrey.net/2026/05/27/judgment-is-the-skill-that-matters-most-in-the-ai-era/) — what you're actually building in graduate school.

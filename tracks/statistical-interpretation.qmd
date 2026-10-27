@@ -149,7 +149,7 @@ Answer these, then check — your score suggests whether to dive in or skim the 
 
 ## Recommended readings
 
-Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings**, and online where linked:
+Available in the shared OneDrive folder **Staff Faculty AI Workshop → Reading Material**, and online where linked:
 
 - [**Thoughts About the Roles of AI for Statistics**](https://hbiostat.org/talks/ai.html) — where AI fits — and doesn't — in statistical work.
 - [**AI and Survey Sampling Problems (Sharon Lohr)**](https://www.sharonlohr.com/blog/2026/6/10/ai-and-sampling-problems) — caution on sampling and inference.

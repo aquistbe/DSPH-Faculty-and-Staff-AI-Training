@@ -219,7 +219,7 @@ Answer these, then check — your score suggests whether to dive in or skim the 
 
 ## Recommended readings
 
-Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings**, and online where linked:
+Available in the shared OneDrive folder **Staff Faculty AI Workshop → Reading Material**, and online where linked:
 
 - [**Data Centers and Water Consumption (EESI)**](https://www.eesi.org/articles/view/data-centers-and-water-consumption) — the water footprint of AI infrastructure. Note: this piece repeats the widely-circulated "519 mL per 100-word email" figure; that number is a worst-case, older-model estimate that includes indirect water — see the Explorer's Module E for why it's much higher than current on-site figures.
 - [**Are Data Centers Bad for the Environment? (Deseret News)**](https://www.deseret.com/u-s-world/2026/06/21/what-environmental-costs-do-data-centers-have/) — a balanced look at the impacts, and a good corrective to the anxiety-outrunning-evidence pattern.

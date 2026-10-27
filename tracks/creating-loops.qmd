@@ -156,7 +156,7 @@ Answer these, then check — your score suggests whether to dive in or skim the 
 
 ## Recommended readings
 
-Available in the shared OneDrive folder **Staff Faculty AI Workshop → Readings**, and online where linked:
+Available in the shared OneDrive folder **Staff Faculty AI Workshop → Reading Material**, and online where linked:
 
 - [**Loop Library: Repeatable AI Agent Workflows (Forward Future)**](https://signals.forwardfuture.ai/loop-library/) — patterns for reliable loops.
 - [**The Coming Loop (Armin Ronacher)**](https://lucumr.pocoo.org/2026/6/23/the-coming-loop/) — where looped automation is heading.
