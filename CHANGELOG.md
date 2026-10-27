@@ -14,6 +14,42 @@ that forced the change.
 
 ---
 
+## 2026-10-27 — New module: "Data centers: how much of it is AI?"
+
+Added after "Zooming out: the aggregate numbers." Data centers are a major public concern, but much
+of the coverage treats "data center" and "AI" as the same thing. The module shows the AI share of
+world data-center electricity in 2025 under the two boundaries already used in this tool: about
+**155 of 485 TWh** for AI-focused facilities (IEA, April 2026) and **46-82 TWh** for AI accelerators
+only (de Vries-Gao, *Joule* 2025). Either way, roughly a tenth to a third.
+
+- **No figures changed.** Everything comes from sources already cited here (IEA 2026, de Vries-Gao
+  2025, LBNL 2026, Ceres 2025).
+- **One derived figure:** AI-focused data centers were about **three-quarters of 2025's growth** in
+  data-center electricity. From IEA: total 485 TWh after 17% growth (+~70 TWh); AI-focused ~155 TWh
+  after ~50% growth (+~52 TWh). Labeled in the tool as derived, not an IEA number.
+- **Framing:** most of today's data-center footprint is not AI, but most of its growth is; and local
+  effects (water, grid) follow the new, concentrated AI buildout, not the global share.
+
+**Verification (2026-10-27).** Every figure in the module was re-checked against primary sources
+before publishing: IEA *Key Questions on Energy and AI* (executive summary: 485 TWh, +17%, AI-focused
++50%, total ~950 TWh by 2030; report p. 26: AI-focused "around 465 TWh by 2030"); the ~155 TWh 2025
+level is read from IEA Figure 1.5 and endnote 4, and Our World in Data (Ritchie, July 20, 2026) reports
+the same ("non-AI data centers consumed two-thirds of the total"); de Vries-Gao, *Joule* 9(6):101961
+(doi:10.1016/j.joule.2025.101961), 5.3-9.4 GW, 46-82 TWh; LBNL 2025 Update (192 TWh in 2024, 4.7%;
+AI servers 55% of total data-center energy in 2030, Reference Case); Ceres, *Drained by Data* (385
+million to more than 3.7 billion gal/yr cooling water, +870%). Independent check: Aczel et al. 2026
+(doi:10.53328/inr26rma002) estimate ~20% of 448 TWh in 2025, now cited in the module.
+
+**Corrected.** The Phoenix projection said "within about six years." Ceres gives no completion year,
+so both the new module and the aggregate Phoenix card now say "as planned facilities are built." The
+module also notes that water-policy experts (ASU Kyl Center, quoted in *Phoenix New Times*) have
+questioned the study's assumptions.
+
+The 2026-10-15 data refresh (US electricity, video, token-volume, Phoenix and hyperscaler updates)
+is in git history but does not yet have its own entry here.
+
+---
+
 ## 2026-08-13 (later) — Metric tabs, and water/carbon in the comparison modules
 
 ### Energy / Water / Carbon tabs

@@ -404,6 +404,40 @@ td.src a.src-link{color:var(--brand-teal)}
   <div class="kpirow" id="kpirow"></div>
 </section>
 
+<!-- ============ MODULE DC — how much of data centers is AI ============ -->
+<section class="module" aria-labelledby="modDC-h">
+  <h2 id="modDC-h">Data centers: how much of it is AI?</h2>
+  <p class="mod-sub">Data centers are a real local concern: their electricity, water, land, and noise fall on the communities around them. But &ldquo;data center&rdquo; does not mean &ldquo;AI.&rdquo; Most data-center electricity today still runs everything else online, such as email, streaming, cloud storage, websites, banking, and business software. AI is the smaller part, and the fastest-growing one.</p>
+
+  <h3 class="chart-title">World data-center electricity in 2025: 485 TWh</h3>
+  <p class="chart-note">Two credible estimates of the AI share. They differ because they draw the line in different places. Both are shown against IEA&rsquo;s 485 TWh total.</p>
+  <div role="img" aria-label="Bar charts: IEA puts AI-focused data centers at about 155 of 485 TWh (32%). A chip-based estimate puts AI accelerators at 46 to 82 TWh (about 9 to 17%)." style="margin:10px 0 6px">
+    <div style="font-size:13px;color:var(--text-secondary);margin-bottom:4px"><strong style="color:var(--text-primary)">IEA:</strong> whole facilities built mainly for AI</div>
+    <div style="display:flex;height:28px;border-radius:4px;overflow:hidden;border:1px solid var(--hairline)">
+      <div style="width:32%;background:var(--series-energy);color:#fff;font:600 12px/28px var(--sans);padding-left:8px;white-space:nowrap">AI ~155 TWh</div>
+      <div style="flex:1;background:var(--context-gray);color:var(--text-primary);font:12px/28px var(--sans);padding-left:8px;white-space:nowrap">everything else ~330 TWh</div>
+    </div>
+    <div style="font-size:13px;color:var(--text-secondary);margin:14px 0 4px"><strong style="color:var(--text-primary)">Chip-based estimate:</strong> AI chips only</div>
+    <div style="display:flex;height:28px;border-radius:4px;overflow:hidden;border:1px solid var(--hairline)">
+      <div style="width:9.5%;background:var(--series-energy)"></div>
+      <div style="width:7.4%;background:var(--ord-light)" title="range up to 82 TWh"></div>
+      <div style="flex:1;background:var(--context-gray);color:var(--text-primary);font:12px/28px var(--sans);padding-left:8px;white-space:nowrap">AI 46&ndash;82 TWh (dark to light); everything else ~400 TWh</div>
+    </div>
+  </div>
+  <p class="chart-note">Either way, AI was well under half of data-center electricity in 2025: roughly a tenth to a third. An independent 2026 estimate lands in between, at about 20% of 448 TWh (<a class="src-link" href="https://doi.org/10.53328/inr26rma002" target="_blank" rel="noopener">Aczel et al., 2026</a>).</p>
+
+  <div class="kpirow">
+    <div class="tile"><div class="tlabel">Today</div><div class="tval">AI is about 1/10 to 1/3 of data-center electricity</div><div class="tproj">The rest is the ordinary internet and business computing.</div><div class="tsrc"><a class="src-link" href="https://www.iea.org/reports/key-questions-on-energy-and-ai" target="_blank" rel="noopener">IEA, April 2026</a> (~155 of 485 TWh; <a class="src-link" href="https://ourworldindata.org/how-much-energy-do-data-centers-and-artificial-intelligence-use" target="_blank" rel="noopener">Our World in Data</a> reads it the same way: two-thirds non-AI); <a class="src-link" href="https://doi.org/10.1016/j.joule.2025.101961" target="_blank" rel="noopener">de Vries-Gao, Joule 2025</a> (46&ndash;82 TWh)</div></div>
+    <div class="tile"><div class="tlabel">Where the growth is</div><div class="tval">AI-focused data centers were about three-quarters of 2025&rsquo;s growth</div><div class="tproj">They grew ~50% in 2025; data centers overall grew 17%.</div><div class="tsrc"><a class="src-link" href="https://www.iea.org/reports/key-questions-on-energy-and-ai" target="_blank" rel="noopener">IEA, April 2026</a>. The three-quarters share is derived here from IEA&rsquo;s figures, not an IEA number.</div></div>
+    <div class="tile"><div class="tlabel">By 2030 (projected)</div><div class="tval">AI-focused data centers ~465 TWh, about 3&times; today</div><div class="tproj">In the US, AI servers are projected to be 55% of data-center electricity by 2030.</div><div class="tsrc"><a class="src-link" href="https://www.iea.org/reports/key-questions-on-energy-and-ai" target="_blank" rel="noopener">IEA, April 2026</a>; <a class="src-link" href="https://eta.lbl.gov/publications/united-states-data-center-energy-2025" target="_blank" rel="noopener">Lawrence Berkeley National Lab, June 2026</a></div></div>
+  </div>
+
+  <div class="caveat" style="margin-top:18px">
+    <div class="cv-head">So why is the local concern real?</div>
+    Because the growth is AI, and new AI facilities are large and built in particular places. A small share of world electricity can still be a large share of one region&rsquo;s water or grid. In the Phoenix area, for example, on-site cooling water for data centers was about 385 million gallons a year, and Ceres projects more than 3.7 billion as planned facilities are built (<a class="src-link" href="https://www.ceres.org/resources/reports/drained-by-data-the-cumulative-impact-of-data-centers-on-regional-water-stress" target="_blank" rel="noopener">Ceres, 2025</a>; some water-policy experts question the study&rsquo;s assumptions). A fair summary: <strong>most of today&rsquo;s data-center footprint is not AI, but most of its growth is.</strong> When a headline says &ldquo;data centers,&rdquo; ask whether it means all of them or the new AI buildout.
+  </div>
+</section>
+
 <!-- ============ MODULE D2 — growth drivers ============ -->
 <section class="module" aria-labelledby="modG-h">
   <h2 id="modG-h">Where the growth is actually coming from</h2>
@@ -583,7 +617,7 @@ const DATA = {
     us_water: { label: "US data-center water use, 2023", now: "228 billion gallons — 17B direct + 211B indirect", proj: "indirect water is 3-12x direct, depending entirely on how evaporation from hydropower reservoirs is counted (LBNL ~12x; Harvard 2026 ~3x)", source: "LBNL, \"2024 United States Data Center Energy Usage Report,\" Dec 2024 — the direct figure was re-confirmed by a Congressional Research Service report, July 31, 2026. Compare Guidi & Dominici, Harvard T.H. Chan School / Salata Institute, \"The Hidden Water Geography of U.S. Hyperscale Data Centers in the AI Era,\" arXiv 2607.02531, July 2026 (preprint, not yet peer-reviewed): 472 hyperscale facilities, ~300 billion liters/yr consumed (74 GL direct + 226 GL indirect) for the 12 months to March 2026. The direct figures broadly agree; the divergence is almost entirely hydropower attribution. Harvard uses a baseline of 8.0 L/kWh and flags it as contested — its no-hydro sensitivity cuts indirect water by 43%; LBNL applies much higher regional factors. Both measure consumption, not withdrawal, so that is not the source of the disagreement" },
     google_water: { label: "Google data-center water use", now: "10.9 billion gallons direct in 2025 (+34% year over year); indirect water via its electricity use is roughly 3x its direct use", source: "Google Environmental Report, 2026 (published June 30, 2026, covering 2025); WSJ, July 2026" },
     other_hyperscalers: { label: "Microsoft and Amazon, latest reports", now: "Microsoft electricity +24% in a year", detail: "Microsoft (fiscal year to June 2025): water consumption +22%, total emissions +25%. Amazon (2025): carbon footprint +16%, emissions from purchased electricity +34%; its data centers withdrew 9.4 billion liters of water", source: "Microsoft 2026 Environmental Sustainability Report, Environmental Data Fact Sheet (July 2026, fiscal year July 2024-June 2025); Amazon 2025 Sustainability Report (July 2026)" },
-    phoenix: { label: "Phoenix-area data-center water demand", now: "~385 million gal/yr of on-site cooling water", proj: "more than 3.7 billion gal/yr within about six years (+870%), with indirect water from the electricity rising from ~2.9 to more than 14.5 billion gal. Bloomberg Intelligence (Oct 2026) puts planned Arizona AI projects at ~5 billion gal/yr on site, about 4.5% of Phoenix's current water production", source: "Ceres, \"Drained by Data: The Cumulative Impact of Data Centers on Regional Water Stress,\" Sept 2025; Bloomberg Intelligence, reported by Bloomberg, Oct 13, 2026. This replaces an earlier figure (WSJ, July 2026: about 3% of regional water, possibly over 20% by 2031) that could not be traced to a primary source" }
+    phoenix: { label: "Phoenix-area data-center water demand", now: "~385 million gal/yr of on-site cooling water", proj: "more than 3.7 billion gal/yr as planned facilities are built (+870%; Ceres gives no completion year), with indirect water from the electricity rising from ~2.9 to more than 14.5 billion gal. Bloomberg Intelligence (Oct 2026) puts planned Arizona AI projects at ~5 billion gal/yr on site, about 4.5% of Phoenix's current water production", source: "Ceres, \"Drained by Data: The Cumulative Impact of Data Centers on Regional Water Stress,\" Sept 2025; Bloomberg Intelligence, reported by Bloomberg, Oct 13, 2026. This replaces an earlier figure (WSJ, July 2026: about 3% of regional water, possibly over 20% by 2031) that could not be traced to a primary source" }
   },
   growth: {
     intro: "The per-task numbers above are about a person doing a task. The aggregate numbers are about a system running a workload — and those two things are diverging fast. This is the part a per-query view cannot show you.",
