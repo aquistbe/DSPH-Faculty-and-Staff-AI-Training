@@ -22,18 +22,19 @@ This is an **elective**, offered once a year by demand, and aimed at **faculty a
 By the end of this hour, you will be able to:
 
 1. Use **ChatGPT Edu** to draft and refine course materials---learning objectives, session outlines, active-learning activities, and assessments
-2. Use **Microsoft 365 Copilot** to turn an outline into a structured plan, slides, and a rubric inside Word, PowerPoint, and Excel
-3. Use **Gemini Notebook** (formerly NotebookLM --- renamed July 2026; old links redirect) to turn your own readings into student study guides, quizzes, and audio overviews---grounded in your sources
-4. Apply **backward design**: start from learning objectives and let AI help build aligned activities and assessments
-5. Apply the teaching-specific ethics: academic integrity and disclosure, accuracy, accessibility, and student-data privacy (FERPA)
+2. Use **Copilot Chat** or **ChatGPT Edu** to turn an outline into a syllabus section, slide text, and a rubric you paste into Word, PowerPoint, and Excel
+3. *Optional, if you already use them:* use **Claude Code**, **OpenAI Codex**, or the **Claude desktop app** to build course pages as HTML you paste into Canvas
+4. Use **Gemini Notebook** (formerly NotebookLM --- renamed July 2026; old links redirect) to turn your own readings into student study guides, quizzes, and audio overviews---grounded in your sources
+5. Apply **backward design**: start from learning objectives and let AI help build aligned activities and assessments
+6. Apply the teaching-specific ethics: academic integrity and disclosure, accuracy, accessibility, and student-data privacy (FERPA)
 
 ## Run of Show
 
 | Time | Segment |
 |------|---------|
-| 0:00--0:08 | Overview: where AI fits in course design; the three tools and what each does best |
+| 0:00--0:08 | Overview: where AI fits in course design; which tools to use for what |
 | 0:08--0:23 | Ethics & Governance: integrity, accuracy, accessibility, and FERPA |
-| 0:23--0:42 | Activity 1: From objectives to an aligned session (ChatGPT Edu + Copilot) |
+| 0:23--0:42 | Activity 1: From objectives to an aligned session (ChatGPT Edu, Copilot Chat, or an agentic tool) |
 | 0:42--0:57 | Activity 2: Turn your readings into student materials (Gemini Notebook) |
 | 0:57--1:00 | Wrap-up and what to build next |
 
@@ -43,11 +44,12 @@ By the end of this hour, you will be able to:
 
 **Start from the objective, not the slide.** Good course design works *backward*: decide what students should be able to do, then design the assessment that measures it, then build the activities and materials that get them there. AI is fast at drafting at every step---but you bring the disciplinary judgment about what is correct, current, and worth teaching.
 
-**Three tools, and what each is best at.**
+**The tools, and what each is best at.**
 
 - **ChatGPT Edu** (Drexel-approved) --- open-ended drafting and refining: learning objectives, session outlines, case studies, discussion prompts, and rubrics. Build a **custom GPT** (from Core 3)---a "Lesson Planner" or "Rubric Builder"---once, and reuse and share it with colleagues. Use the current default model in the Drexel workspace.
-- **Microsoft 365 Copilot** --- works *inside the files you already use*: turn an outline into a Word syllabus, a PowerPoint deck, or an Excel grading rubric. Microsoft also offers a **Teach** experience that builds structured, standards-aligned unit and lesson plans from a topic; check what is available in your Drexel Microsoft 365 account. The build-from-a-topic structure applies to course units either way.
+- **Copilot Chat** (Drexel-approved) --- the same kind of drafting, with output shaped for your Office files: a syllabus section to paste into Word, slide-by-slide text for PowerPoint, a rubric table for Excel. Drexel does not have the paid Microsoft 365 Copilot license, so there is no Copilot button inside Word or PowerPoint; you paste or upload, then copy the result back.
 - **Gemini Notebook** (Google) --- *source-grounded*: upload your own readings, lecture notes, or a chapter and generate study guides, quizzes, briefing docs, and **Audio Overviews**, all with inline citations to your sources. Excellent for student-facing materials---but a consumer/Google tool, so treat it as **Low Risk Data only** unless Drexel has approved it, and use public or non-sensitive sources. Confirm on Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+- **Agentic tools (optional)** --- **Claude Code**, **OpenAI Codex**, and the **Claude desktop app** can work with files in a folder: build a set of Canvas pages as HTML, check every link, and fix problems across many files at once. They are not Drexel-supported. Course materials with **no student data** (objectives, outlines, your own slides, public readings) are low-risk, so these tools are fine for curriculum work. Student data never goes in.
 
 :::{.callout-tip}
 ## The Mental Model: Backward Design
@@ -95,11 +97,24 @@ Duration: ~19 minutes | Format: Hands-on, choose your track. Use non-sensitive c
 
 3. **Iterate:** ask for a rubric for the assessment, a short case study, or three discussion questions. Push it: *"Make this more active,"* *"Does the assessment actually measure objective 2?"*
 
-#### Track B --- Microsoft 365 Copilot (build it in your files)
+#### Track B --- Copilot Chat (into your Office files)
 
-1. Drop your outline into **Word** and ask Copilot to format it as a session plan or syllabus section.
-2. In **PowerPoint**, ask Copilot to draft a slide deck from the outline; in **Excel**, ask it to build a grading rubric as a table.
-3. If the **Teach** experience is available in your account, generate a structured unit or lesson plan from your topic, then refine it.
+1. Open [Copilot Chat](https://m365.cloud.microsoft/chat), signed in with your Drexel account, and paste or upload your outline. Ask: *"Format this as a syllabus section with weekly topics, readings, and due dates. Use headings I can paste into Word."*
+2. Ask for slides: *"Write slide-by-slide text for a 10-slide deck from this outline: a title and 3 bullets per slide, plus speaker notes."* Paste it into PowerPoint, then use **Design → Designer** for layouts.
+3. Ask for a rubric: *"Build a grading rubric for the assessment as a table: criteria in rows, four performance levels in columns."* Paste the table into Excel or Word.
+
+#### Track C --- Agentic tools (optional: Claude Code, Codex, or the Claude desktop app)
+
+For people who already use one of these. Work in a folder that holds **only** course materials: no rosters, grades, or student work.
+
+1. **Build Canvas pages as HTML.** Put your session plan in the folder and ask:
+
+   > Turn session-plan.docx into three Canvas pages (overview, activity instructions, assessment) as separate HTML files. Use headings in order, accessible tables, alt text for any images, and no outside styles. Then check that every link works.
+
+2. **Paste them into Canvas yourself.** In Canvas, edit the page, switch to the **HTML editor**, and paste. You stay in control of what goes live, and no access token is involved.
+3. **Advanced: the Canvas API, in a sandbox only.** Letting the agent update a course through the Canvas API is fine **only in a sandbox or practice course with no students and no student data**. Keep your token in an environment variable on your own computer, never in the chat or a file the agent writes, and run a dry run first. [Setting Up Your Course with AI](tracks/course-setup-canvas.qmd) shows how to create a token and write a safe script.
+
+**Check your work:** open each page in Canvas's student view. Do the headings, tables, and links still work after pasting?
 
 #### Reflection
 
@@ -145,14 +160,14 @@ Gemini Notebook is a Google tool. Treat it as **Low Risk Data only** unless Drex
 ## Wrap-Up (3 min)
 
 - Start from **objectives**; let AI help build aligned activities, assessments, and materials---you keep the disciplinary judgment.
-- **ChatGPT Edu** for open drafting and reusable custom GPTs; **Microsoft 365 Copilot** for building inside Office files; **Gemini Notebook** for source-grounded student materials (public data only).
+- **ChatGPT Edu** for open drafting and reusable custom GPTs; **Copilot Chat** for content shaped for your Office files; **Gemini Notebook** for source-grounded student materials (public data only); **agentic tools** (optional) for building Canvas-ready HTML, never with student data.
 - Teaching ethics: **integrity and disclosure, verified accuracy, accessibility, and FERPA**.
 
 **Try this before the term:** pick one session you teach, write its objectives, and use ChatGPT Edu to draft an aligned activity and a quick formative assessment. Verify it, then teach it.
 
 :::{.callout-warning}
 ## Data Classification and Student Records
-Confirm the approved data level for each tool on Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools) before putting real material into it. Never enter protected student records (grades, rosters, identifiable student work) into a tool that isn't approved for that data. Gemini Notebook and other consumer tools: public or synthetic content only.
+Confirm the approved data level for each tool on Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools) before putting real material into it. Never enter protected student records (grades, rosters, identifiable student work) into a tool that isn't approved for that data. Gemini Notebook and other consumer tools: public or synthetic content only. Agentic tools (Claude Code, Codex, desktop apps): course materials only, and the Canvas API only in a sandbox course with no student data.
 :::
 
 ---
@@ -161,6 +176,7 @@ Confirm the approved data level for each tool on Drexel's [AI Tools page](https:
 
 - [Core 1: Foundations & Capabilities](workshop1.qmd) --- prompting with PTCF and the Drexel data rules
 - [Core 3: Reusable Assistants](workshop3.qmd) --- custom GPTs and shared Projects, reusable here as a "Lesson Planner"
+- [Setting Up Your Course with AI](tracks/course-setup-canvas.qmd) --- de-identified group formation and safe Canvas API scripts
 - [Tools & Access](tools.qmd) --- data classification for ChatGPT Edu, Copilot, and consumer tools
 
 {{< include /_feedback-workshop.qmd >}}
