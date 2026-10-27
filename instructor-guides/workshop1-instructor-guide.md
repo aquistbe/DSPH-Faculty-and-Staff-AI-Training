@@ -28,12 +28,12 @@ Participants should leave able to:
 | Time | Segment | Slides | Instructor role |
 |---|---|---|---|
 | 0:00-0:08 | What AI is, which tools, the one data rule | 1-6 | Keep it short. Mental model, four terms, tool choice, data rule. |
-| 0:08-0:16 | What it can do: five real tasks | 7-12 | Instructor demo. One live (data), the rest from slides. ~90 seconds per slide. |
-| 0:16-0:23 | How AI gets things wrong, who is responsible | 13-14 | Three points: makes things up, can be biased, you are responsible. Tie back to the wrong DOI on slide 11. |
-| 0:23-0:33 | Guided tour of ChatGPT Edu | 15-16 | Do each step on the projector. Wait until most of the room has finished each step before moving on. |
-| 0:33-0:44 | Activity 1: three first requests | 17 | Walk the room. Help everyone get at least one answer back. |
-| 0:44-0:55 | Activity 2: PTCF | 18 | Show the short and full prompts side by side, then have people write their own. |
-| 0:55-1:00 | Wrap-up and next step | 19-20 | One task to try before Core 2. Point to the feedback form at the bottom of the workshop page. |
+| 0:08-0:17 | What it can do: six real tasks | 7-13 | Instructor demo. One live (data), the rest from slides. ~60-90 seconds per slide. |
+| 0:17-0:23 | How AI gets things wrong, who is responsible | 14-15 | Three points: makes things up, can be biased, you are responsible. Tie back to the wrong DOI on slide 11. |
+| 0:23-0:33 | Guided tour of ChatGPT Edu | 16-17 | Do each step on the projector. Wait until most of the room has finished each step before moving on. |
+| 0:33-0:44 | Activity 1: three first requests | 18 | Walk the room. Help everyone get at least one answer back. |
+| 0:44-0:55 | Activity 2: PTCF | 19 | Show the short and full prompts side by side, then have people write their own. |
+| 0:55-1:00 | Wrap-up and next step | 20-21 | One task to try before Core 2. Point to the feedback form at the bottom of the workshop page. |
 
 ## Slide Plan and Speaking Notes
 
@@ -67,7 +67,7 @@ Say:
 
 Point to the Tools & Access page on the site for the full list. Do not walk through every tool and data classification here.
 
-### Slides 7-12: What It Can Do (8 min)
+### Slides 7-13: What It Can Do (9 min)
 
 Purpose: show beginners why this is worth an hour before they touch it. Keep moving; do not teach the prompts in detail.
 
@@ -84,9 +84,11 @@ Slide 10 (~1 min): the mini-slides are an example. Mention that ChatGPT Edu can 
 
 Slide 11 (~1.5 min): email triage is the easy win for staff. Then the citations: a model was asked for 5 studies on leading pedestrian intervals. It gave 2 and declined to invent the rest. Fayish & Gross (2010), DOI 10.3141/2198-03, checks out. For Van Houten et al. (2000), it gave 10.3141/1734-11, which resolves to a motorcycle helmet paper; the correct DOI is 10.3141/1734-13. Say: "Even a careful answer had a wrong citation."
 
-Slide 12 (~1 min): this section was built by an agentic tool working in your OneDrive folder. Stress the label: not Drexel-supported, low-risk data only. Today everyone starts with ChatGPT Edu.
+Slide 12 (~1 min): student groups. Say: "Even in ChatGPT Edu, I don't upload names. I swap names for IDs in Excel, upload only what matters for grouping, and match the names back myself." Point out the last line of the prompt ("check each rule") and tell them to count anyway; models sometimes say a rule is met when it isn't. The roster is fabricated: `demo-materials/Workshop1_Demo_AnonymizedRoster.csv`. The groups on the slide meet all three rules (checked).
 
-### Slide 14: Wrong, Biased, and Yours
+Slide 13 (~1 min): this section was built by an agentic tool working in your OneDrive folder. Stress the label: not Drexel-supported, low-risk data only. Today everyone starts with ChatGPT Edu.
+
+### Slide 15: Wrong, Biased, and Yours
 
 Say:
 
@@ -96,7 +98,7 @@ Say:
 
 Mention that Core 4 covers verification and disclosure in depth, and the Bias & Equity Audit track covers bias.
 
-### Slide 16: Guided Tour
+### Slide 17: Guided Tour
 
 Do each step on the projector and pause. Ask people to raise a hand or give a thumbs-up when they have finished a step. The steps are:
 
@@ -110,11 +112,11 @@ Do each step on the projector and pause. Ask people to raise a hand or give a th
 
 Steps 4 and 6 teach the most important idea: a chat remembers earlier messages, and a new chat starts fresh.
 
-### Slide 17: Activity 1
+### Slide 18: Activity 1
 
 Participants copy the three prompts from the workshop page (Summarize, Draft, Explain), then try one follow-up. Tell them where the page is: the Core 1 link on the course site.
 
-### Slide 18: Activity 2
+### Slide 19: Activity 2
 
 Run the short prompt and the full PTCF prompt on the projector so the room sees the difference. Then ask everyone to write a PTCF prompt for a real email or short document they need this week, using made-up names and details.
 

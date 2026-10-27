@@ -1,0 +1,25 @@
+student_id,program,concentration,coding
+S01,MS,EOH,None
+S02,PhD,Epi,None
+S03,MS,Epi,Strong
+S04,MPH,Community Health,None
+S05,MPH,Health Mgmt,None
+S06,PhD,EOH,Strong
+S07,MPH,Health Mgmt,Some
+S08,MS,Health Mgmt,Strong
+S09,MS,Health Mgmt,Some
+S10,MPH,Community Health,Some
+S11,MPH,EOH,None
+S12,MPH,Community Health,Some
+S13,MPH,EOH,Some
+S14,MPH,EOH,Strong
+S15,MPH,EOH,None
+S16,MPH,Epi,Some
+S17,PhD,Health Mgmt,None
+S18,MS,Epi,None
+S19,MS,Epi,None
+S20,PhD,Epi,None
+S21,MPH,Health Mgmt,Strong
+S22,MPH,Community Health,None
+S23,MS,Health Mgmt,Strong
+S24,MPH,Epi,Some
