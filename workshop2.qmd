@@ -5,10 +5,10 @@ title: "Core 2 · Workflow Enhancement"
 ::: {.day-header}
 # Core 2 · Workflow Enhancement
 ::: {.day-subtitle}
-Turn tasks you do every week into quick routines with ChatGPT Edu and Copilot Chat
+Start from your own plan, then let ChatGPT Edu or Copilot Chat draft or refine
 :::
 ::: {.day-time}
-One hour | Bring a laptop and one real (non-sensitive) task | Runs weekly in the fall term and repeats in spring --- dates announced by school email
+One hour on Zoom | Have your browser open next to Zoom, plus one real (non-sensitive) task | Runs weekly in the fall term and repeats in spring --- dates announced by school email
 :::
 :::
 
@@ -19,7 +19,7 @@ One hour | Bring a laptop and one real (non-sensitive) task | Runs weekly in the
 
 :::{.callout-note}
 ## Demo Files
-Didn't bring a task? Download a fictional demo file (nothing sensitive):
+Didn't bring a task? Download a fictional demo file (nothing sensitive). The links are also posted in the Zoom chat during the session.
 [Study description (Word)](demo-materials/Workshop2_Demo_StudyDescription.docx) ·
 [Committee email thread (Word)](demo-materials/Workshop2_Demo_EmailThread.docx) ·
 [Seminar attendance data (Excel)](demo-materials/Workshop2_Demo_SeminarAttendance.xlsx) ·
@@ -31,27 +31,36 @@ Didn't bring a task? Download a fictional demo file (nothing sensitive):
 This session picks up where [Core 1](workshop1.qmd) left off. If you can sign in to ChatGPT Edu and type a request, you are ready. By the end of this hour, you will be able to:
 
 1. Pick a weekly task where AI can save you time
-2. Get a document, email, or spreadsheet into Copilot Chat or ChatGPT Edu by pasting or uploading it
-3. Use three everyday moves: summarize, rewrite for an audience, and make a table
-4. Check the answer before you use it
-5. Save one prompt you can reuse
+2. Start from your own plan, then decide: should AI draft it, or should you write it and let AI refine it?
+3. Get a document, email, or spreadsheet into Copilot Chat or ChatGPT Edu by pasting or uploading it
+4. Use AI as an editor: tighten language, catch inconsistencies, and find what's missing
+5. Check the answer before you use it, and save one prompt you can reuse
 
 ## Run of Show
 
 | Time | Segment |
 |------|---------|
-| 0:00--0:05 | Welcome back: how did your Core 1 task go? |
-| 0:05--0:13 | Where AI fits, and which tool to open |
-| 0:13--0:19 | Check before you use it |
-| 0:19--0:24 | Guided start: upload a file to Copilot Chat (follow along) |
-| 0:24--0:44 | Activity 1: Three everyday jobs (pick one) |
-| 0:44--0:55 | Activity 2: Your own task, saved as a recipe |
+| 0:00--0:05 | Welcome back: how did your Core 1 task go? (Zoom chat) |
+| 0:05--0:15 | Plan first, then draft or refine |
+| 0:15--0:20 | Check before you use it |
+| 0:20--0:25 | Guided start: upload a file to Copilot Chat (follow along) |
+| 0:25--0:44 | Activity 1: Three everyday jobs (pick one) |
+| 0:44--0:55 | Activity 2: Your own task: plan, then draft or refine |
 | 0:55--1:00 | Wrap-up and one thing to try this week |
+
+:::{.callout-tip}
+## How This Session Works on Zoom
+- Put **Zoom and your browser side by side**, or use two screens if you have them. You'll watch the instructor's shared screen and work in your own browser.
+- **React with 👍** in Zoom when you finish a step, so the instructor knows when to move on.
+- **Stuck? Say so in the Zoom chat.** Paste the error message (never sensitive content) and we'll help.
+- Demo file links are posted in the chat.
+:::
 
 :::{.callout-note}
 ## A Few Words You'll Hear
+- **Outline (your plan):** a few bullets in your own words: the point, who it's for, and the key facts. You write this, not the AI.
+- **Draft vs. refine:** in a *draft*, AI writes from your outline. In a *refine*, you write and AI suggests improvements.
 - **Upload (attach):** adding a file to the chat with the **+** or paperclip button, so the AI can read it.
-- **Follow-up:** a second request in the same chat that changes the first answer. "Make it shorter" is a follow-up.
 - **Recipe:** a prompt that worked, saved with blanks so you can reuse it.
 - **Copilot Chat:** Microsoft's AI chat, free to everyone at Drexel. It is not the same as the paid Copilot inside Word and Excel, which Drexel does not have.
 :::
@@ -60,24 +69,36 @@ This session picks up where [Core 1](workshop1.qmd) left off. If you can sign in
 
 ## Welcome Back (5 min)
 
-At the end of Core 1 you were asked to do one weekly task with ChatGPT Edu. Turn to a neighbor: what did you try, and did it help? If you didn't get to it, today is the day.
+At the end of Core 1 you were asked to do one weekly task with ChatGPT Edu. **In the Zoom chat, type one line:** what did you try, and did it help? If you didn't get to it, type the task you'll try today.
 
 ---
 
-## Where AI Fits, and Which Tool to Open (8 min)
+## Plan First, Then Draft or Refine (10 min)
 
-**Where AI fits.** Most writing tasks have three parts: you decide what is needed, someone writes a first draft, and someone checks it. AI is good at the middle part. You keep the first and last parts.
+**Start with your plan.** Before you ask AI for anything, write a few bullets in your own words: the point, who it's for, the key facts, and what "done" looks like. It takes two minutes. Without a plan, AI fills the gaps with generic or made-up content. With one, it works from your content, and you can check the result against your plan.
 
-**Good tasks to start with** are ones you do often, that are mostly text, and that are easy to check: meeting recaps, email replies, summaries, plain-language rewrites, and turning notes into a table. **Poor tasks** are final decisions, sources you have not opened, and anything with sensitive information.
+**Then decide what AI should do with it.**
+
+| | **When** | **Examples** |
+|---|---|---|
+| **AI drafts from your outline** | Routine, low stakes, and you know the content | Meeting recaps, reminders, announcements, status updates, turning notes into a table |
+| **You write, AI refines** | Your expertise, judgment, or voice is the point, or the stakes are high | Grant aims, manuscript sections, recommendation letters, performance feedback, policy language |
+| **Leave AI out** | Sensitive information, or the decision itself | Student records or health information, deciding who gets hired or funded, sources you haven't opened |
+
+**AI as your editor.** For the middle row, and for anything you've written, these three prompts do the most good:
+
+1. **Refine the language:** *"Make this clearer and shorter without changing the meaning. List what you changed."*
+2. **Catch inconsistencies:** *"Check this for anything that doesn't match: dates, names, numbers, or a term used two ways. List them; don't rewrite."*
+3. **Find what's missing:** *"This is a [type of document] for [audience]. What would they expect that isn't here? List it; don't add it."*
+
+Asking for a **list, not a rewrite**, keeps the writing yours and makes each suggestion easy to accept or ignore.
 
 **Which tool to open.** Both are free to you and signed in with your Drexel account. Both let you paste text or upload a file.
 
 | | **Copilot Chat** | **ChatGPT Edu** |
 |---|---|---|
 | **Where** | [m365.cloud.microsoft/chat](https://m365.cloud.microsoft/chat) | The Drexel ChatGPT Edu workspace |
-| **Good for** | Quick summaries and rewrites of Drexel documents and email | Longer drafting, going back and forth, and (in Core 3) saved assistants |
-
-Use whichever you like. If one is down or slow, the same prompts work in the other.
+| **Good for** | Quick summaries and edits of Drexel documents and email | Longer drafting, going back and forth, and (in Core 3) saved assistants |
 
 :::{.callout-tip}
 ## What About Copilot Inside Word and Excel?
@@ -91,17 +112,15 @@ Never paste in health information about a person, student records, Social Securi
 
 ---
 
-## Check Before You Use It (6 min)
+## Check Before You Use It (5 min)
 
 Core 1 showed that AI can sound sure and still be wrong. Once AI is part of your weekly work, that turns into three quick questions before anything leaves your hands:
 
-1. **Verified? Is it right?** Check names, dates, and numbers against the original. AI is most likely to slip on numbers.
+1. **Verified? Is it right?** Check it against your plan and the original. Names, dates, and numbers are where AI slips most.
 2. **Disclosed? Should I say AI helped?** For official documents, anything research-related, and anything going outside the school, be open about AI help. Follow [Drexel's AI guidance](https://drexel.edu/provost/ai/pedagogy-guidance/policies) and ask your supervisor or PI if you're unsure.
 3. **Yours? Does it sound like me?** Cut generic phrases and put your own voice back in. If it doesn't say what you mean, it isn't ready.
 
-If any answer is "no," it isn't ready yet.
-
-Use AI to get past the blank page, not to do your thinking for you. [Core 4](workshop5.qmd) spends a full hour on checking and disclosure.
+If any answer is "no," it isn't ready yet. [Core 4](workshop5.qmd) spends a full hour on checking and disclosure.
 
 ---
 
@@ -111,12 +130,12 @@ Use AI to get past the blank page, not to do your thinking for you. [Core 4](wor
 
 ### Guided Start: Upload a File to Copilot Chat
 ::: {.activity-meta}
-Duration: ~5 minutes | Format: Follow along with the instructor
+Duration: ~5 minutes | Format: Follow along with the instructor's shared screen
 :::
 
 **Goal:** Everyone can get a file into the chat and get an answer back.
 
-1. **Download the demo file** [Workshop2_Demo_StudyDescription.docx](demo-materials/Workshop2_Demo_StudyDescription.docx) (a fictional study description).
+1. **Download the demo file** [Workshop2_Demo_StudyDescription.docx](demo-materials/Workshop2_Demo_StudyDescription.docx) (a fictional study description). The link is also in the Zoom chat.
 2. **Open Copilot Chat.** Go to [m365.cloud.microsoft/chat](https://m365.cloud.microsoft/chat) and sign in with your Drexel account. Look for the shield icon, which means enterprise data protection is on. No shield? Check that you signed in with your Drexel account, not a personal one.
 3. **Upload the file.** Click the **+** (or paperclip) button next to the message box and choose the file. You can also open the file and paste the text in.
 4. **Type and press Enter:**
@@ -127,7 +146,7 @@ Duration: ~5 minutes | Format: Follow along with the instructor
 
    > Now make it 3 bullets for a busy dean.
 
-The same steps work in ChatGPT Edu. Use whichever tool you prefer for the rest of the session.
+React with 👍 in Zoom when you have an answer. Summarizing something that already exists is a safe first job: the content is already there, and you can check every bullet against it. The same steps work in ChatGPT Edu.
 
 :::
 
@@ -139,30 +158,30 @@ The same steps work in ChatGPT Edu. Use whichever tool you prefer for the rest o
 
 ### Activity 1: Three Everyday Jobs
 ::: {.activity-meta}
-Duration: ~20 minutes | Format: Hands-on, pick one job (try a second if you finish)
+Duration: ~19 minutes | Format: Hands-on in your own browser, pick one job (try a second if you finish). Questions go in the Zoom chat.
 :::
 
 **Goal:** Do a common job from start to finish: get the material in, ask three things, check the answer, and copy what you need back out. Use Copilot Chat or ChatGPT Edu. Use the demo file, or your own non-sensitive material.
 
-#### Job A --- Summarize and rewrite a document
+#### Job A --- Summarize, rewrite, and find the gaps in a document
 
 Upload [Workshop2_Demo_StudyDescription.docx](demo-materials/Workshop2_Demo_StudyDescription.docx) (or keep the chat from the guided start), then type:
 
 1. *"Summarize this document in 5 bullet points for a project status update."*
 2. *"Rewrite the first paragraph for a community advisory board. No jargon, 8th-grade reading level, 4 sentences."*
-3. *"Draft a short 'Next Steps' paragraph with three concrete steps."*
+3. *"What would a funder expect in a study description that isn't here? List the gaps; don't rewrite."*
 
-Copy the rewrite into a Word document. **Check it:** does the plain version keep the facts right? Did anything get added that wasn't in the original?
+**Check it:** does the plain version keep the facts right? Are the gaps it lists real ones? Step 3 is AI as an editor: it points out what's missing, and you decide what to add.
 
-#### Job B --- Sort out an email thread
+#### Job B --- Sort out an email thread and reply from your outline
 
 Upload [Workshop2_Demo_EmailThread.docx](demo-materials/Workshop2_Demo_EmailThread.docx) (a fictional 6-message committee thread) or paste in a long thread of your own, then type:
 
 1. *"Summarize this thread. List every decision made and every open question."*
 2. *"List the action items as a table: owner, task, due date."*
-3. *"Draft a reply confirming I'll have the syllabus draft ready by July 20. Friendly, two sentences."*
+3. *"Write a reply from my outline: (1) syllabus draft by July 20; (2) who owns the accreditation crosswalk update? Two friendly sentences."*
 
-**Check it:** did it list a decision nobody actually made? In the demo thread, is the accreditation crosswalk a decision, an action item, or an open question?
+**Check it:** did the summary list a decision nobody actually made? Did the reply stick to your two points, or add something you didn't say? A routine reply is a good place for an AI draft, as long as the points are yours.
 
 **For your own email:** in Outlook, the **Summarize** button at the top of a thread gives a quick summary without copying anything. The [Copilot for Email](tracks/copilot-email.qmd) page shows what else works.
 
@@ -178,33 +197,40 @@ Open the file in Excel and paste the formula into cell E2. **Check it:** work ou
 
 #### Quick Reflection
 
-- Which of the three questions saved you the most time?
-- What did you have to fix?
+In the Zoom chat: which of the three prompts saved you the most time, and what did you have to fix?
 
 :::
 
 ---
 
-## Activity 2: Your Own Task, Saved as a Recipe {.activity}
+## Activity 2: Your Own Task --- Plan, Then Draft or Refine {.activity}
 
 ::: {.activity}
 
-### Activity 2: Your Own Task, Saved as a Recipe
+### Activity 2: Your Own Task --- Plan, Then Draft or Refine
 ::: {.activity-meta}
 Duration: ~11 minutes | Format: Individual, bring your own task
 :::
 
-**Goal:** Do one real task you need this week, then save the prompt so next time takes less effort.
+**Goal:** Do one real task you need this week, starting from your own plan, then save the prompt so next time takes less effort.
 
-1. **Pick a task.** The one you tried after Core 1, or a new one: a report section, a summary, meeting notes to clean up, an announcement.
-2. **Write the prompt with PTCF** from Core 1: **P**ersona (who should it act as?), **T**ask (what do you want?), **C**ontext (what does it need to know?), **F**ormat (what should the answer look like?).
-3. **Run it, then improve it twice** with follow-ups: "Make it shorter." "Put it in a table." "Use a warmer tone." "What did you leave out?"
-4. **Do the final edit yourself.** Notice what you changed: that's the part that needed you.
+1. **Plan first.** In a blank document, write 3--5 bullets in your own words: the point, who it's for, the key facts, and what "done" looks like.
+2. **Decide: draft or refine?** Use the table above.
+   - **Routine task?** Paste your outline and ask AI to draft from it (recipe 1 below).
+   - **Your expertise or high stakes?** Write it yourself, or use something you've already written, then paste it in and ask for a list of improvements (recipe 2 below, or the three editor prompts).
+3. **Improve it** with one or two follow-ups: "Shorter." "Warmer tone." "Put it in a table."
+4. **Do the final edit yourself, and check it against your plan.** Is every point from your outline there? Did anything get added that you didn't intend?
 5. **Save it as a recipe.** Copy the prompt into a Word document or OneNote page called "My prompts." Replace the details with blanks in [brackets].
 
-**Example recipe:**
+**Recipe 1 --- draft from my outline:**
 
-> You are a [role]. Summarize [the document] for [audience] in [number] bullet points. Then list any names, dates, or numbers I should double-check.
+> You are a [role]. Write a [type of document] for [audience] from my outline below. Use only what's in the outline; mark anything you had to guess.
+> [your bullets]
+
+**Recipe 2 --- refine my writing:**
+
+> Here is my draft of a [type of document] for [audience]. List anything unclear, inconsistent, or missing. Don't rewrite it.
+> [your draft]
 
 #### No Task of Your Own?
 
@@ -220,12 +246,15 @@ Then ask for one change: *"Make the findings column use numbers, not adjectives.
 
 ## Wrap-Up (5 min)
 
-- **The workflow:** paste or upload, ask, check, copy the answer back. Copilot Chat or ChatGPT Edu both work.
-- **Three moves cover most weekly tasks:** summarize, rewrite for an audience, make a table.
+- **Plan first.** A few bullets in your own words before you ask AI for anything.
+- **Draft or refine?** Routine and low stakes: AI drafts from your outline. Your expertise or high stakes: you write, AI refines.
+- **AI as an editor:** tighten language, catch inconsistencies, find what's missing. Ask for a list, not a rewrite.
 - **Before you use it:** Verified? Disclosed? Yours?
 - **Save the prompts that work** as recipes.
 
-**Try this before Core 3:** save two recipes and use one of them again next week. Bring them; we'll turn them into tools you can share.
+**In the Zoom chat:** one thing you'll try this week.
+
+**Try this before Core 3:** save two recipes, one that drafts from an outline and one that refines your writing, and use one of them again next week. Bring them; we'll turn them into tools you can share.
 
 ---
 
