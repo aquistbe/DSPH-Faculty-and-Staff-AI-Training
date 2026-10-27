@@ -120,7 +120,7 @@ Core 1 showed that AI can sound sure and still be wrong. Once AI is part of your
 2. **Disclosed? Should I say AI helped?** For official documents, anything research-related, and anything going outside the school, be open about AI help. Follow [Drexel's AI guidance](https://drexel.edu/provost/ai/pedagogy-guidance/policies) and ask your supervisor or PI if you're unsure.
 3. **Yours? Does it sound like me?** Cut generic phrases and put your own voice back in. If it doesn't say what you mean, it isn't ready.
 
-If any answer is "no," it isn't ready yet. [Core 4](workshop5.qmd) spends a full hour on checking and disclosure.
+If any answer is "no," it isn't ready yet. For longer or higher-stakes documents, a **second review in a fresh chat** helps: paste the draft and its source into a new chat and ask it to list, with quotes, anything the source doesn't support. [Core 4](workshop5.qmd#second-reviewer) shows how, and spends a full hour on checking and disclosure.
 
 ---
 

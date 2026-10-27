@@ -8,7 +8,7 @@ title: "Core 3 · Reusable Assistants"
 Shared Projects, custom GPTs, and the guardrails that make a reusable assistant trustworthy
 :::
 ::: {.day-time}
-Dates and location: see the schedule on the home page. | 1 hour | Bring a laptop
+On Zoom; dates on the home page schedule. | 1 hour | Have your browser open next to Zoom
 :::
 :::
 

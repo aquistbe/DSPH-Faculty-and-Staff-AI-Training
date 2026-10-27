@@ -1,7 +1,7 @@
 # Instructor Guide: Core 1
 
 Workshop: Foundations & Capabilities  
-Length: 60 minutes  
+Length: 60 minutes, on Zoom  
 Presentation target: about 15 minutes of slides, 40 minutes hands-on  
 Main tools: ChatGPT Edu (Copilot Chat as backup), Drexel AI Tools page  
 Participant assumption: many have never used ChatGPT or Copilot. Some will not know where to type. Pace for them.
@@ -20,8 +20,9 @@ Participants should leave able to:
 - Sign in to ChatGPT Edu with Drexel credentials and confirm what the current default model is. Tell participants to use the default.
 - Walk through the guided-tour steps yourself on the current interface. Confirm where the message box, copy icon, "New chat" button, and chat history are. Update the slide and workshop page if the layout has changed.
 - Open the Drexel AI Tools page in a tab.
-- Project ChatGPT Edu on screen for the guided tour. Enlarge the browser zoom so the back row can read it.
-- Plan for sign-in problems: participants can use Copilot Chat with their Drexel account or pair with a neighbor. If you have a co-facilitator, assign them to sign-in help for the first 15 minutes of hands-on time.
+- Share a single browser window with ChatGPT Edu for the guided tour, not your whole screen, so notifications and other tabs stay private. Enlarge the browser text (Ctrl/Cmd +) so it reads well in a Zoom window.
+- Paste the Core 1 page link in the Zoom chat at the start and again before each activity; late joiners can't see earlier chat messages unless chat history is on.
+- Plan for sign-in problems: participants can use Copilot Chat with their Drexel account, and should say so in the Zoom chat. If you have a co-host, ask them to watch the chat and handle sign-in help for the first 15 minutes of hands-on time.
 
 ## 60-Minute Run of Show
 
@@ -30,8 +31,8 @@ Participants should leave able to:
 | 0:00-0:08 | What AI is, which tools, the one data rule | 1-6 | Keep it short. Mental model, four terms, tool choice, data rule. |
 | 0:08-0:17 | What it can do: six real tasks | 7-13 | Instructor demo. One live (data), the rest from slides. ~60-90 seconds per slide. |
 | 0:17-0:23 | How AI gets things wrong, who is responsible | 14-15 | Three points: makes things up, can be biased, you are responsible. Tie back to the wrong DOI on slide 11. |
-| 0:23-0:33 | Guided tour of ChatGPT Edu | 16-17 | Do each step on the projector. Wait until most of the room has finished each step before moving on. |
-| 0:33-0:44 | Activity 1: three first requests | 18 | Walk the room. Help everyone get at least one answer back. |
+| 0:23-0:33 | Guided tour of ChatGPT Edu | 16-17 | Do each step on your shared screen. Wait for most people's 👍 reactions before moving on. |
+| 0:33-0:44 | Activity 1: three first requests | 18 | Watch the Zoom chat. Help everyone get at least one answer back. |
 | 0:44-0:55 | Activity 2: PTCF | 19 | Show the short and full prompts side by side, then have people write their own. |
 | 0:55-1:00 | Wrap-up and next step | 20-21 | One task to try before Core 2. Point to the feedback form at the bottom of the workshop page. |
 
@@ -100,7 +101,7 @@ Mention that Core 4 covers verification and disclosure in depth, and the Bias & 
 
 ### Slide 17: Guided Tour
 
-Do each step on the projector and pause. Ask people to raise a hand or give a thumbs-up when they have finished a step. The steps are:
+Do each step on your shared screen and pause. Ask people to react with 👍 in Zoom when they have finished a step. The steps are:
 
 1. Sign in and confirm the Drexel workspace.
 2. Find the message box.
@@ -118,7 +119,7 @@ Participants copy the three prompts from the workshop page (Summarize, Draft, Ex
 
 ### Slide 19: Activity 2
 
-Run the short prompt and the full PTCF prompt on the projector so the room sees the difference. Then ask everyone to write a PTCF prompt for a real email or short document they need this week, using made-up names and details.
+Run the short prompt and the full PTCF prompt on your shared screen so everyone sees the difference. Then ask everyone to write a PTCF prompt for a real email or short document they need this week, using made-up names and details.
 
 Say: "You don't need all four parts every time. Adding even one or two helps."
 
@@ -126,7 +127,7 @@ Say: "You don't need all four parts every time. Adding even one or two helps."
 
 Activity 1 is about confidence. The goal is one successful answer per person. Prioritize people who have not gotten any response yet over people who want to go further.
 
-Activity 2 should make the improvement visible. Ask two or three people to read their short and full answers aloud and say which one they would send.
+Activity 2 should make the improvement visible. Ask people to say in the chat which answer they would send, short or full, and invite two or three to unmute and explain why.
 
 If someone wants to use sensitive work content, redirect them:
 

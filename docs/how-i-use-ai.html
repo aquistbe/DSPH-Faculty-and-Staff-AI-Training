@@ -191,6 +191,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#example-2-admin-one-fact-changes-ten-pages-need-fixing" id="toc-example-2-admin-one-fact-changes-ten-pages-need-fixing" class="nav-link" data-scroll-target="#example-2-admin-one-fact-changes-ten-pages-need-fixing">Example 2 — Admin: One Fact Changes, Ten Pages Need Fixing</a></li>
   <li><a href="#example-3-research-the-ai-environmental-footprint-explorer" id="toc-example-3-research-the-ai-environmental-footprint-explorer" class="nav-link" data-scroll-target="#example-3-research-the-ai-environmental-footprint-explorer">Example 3 — Research: The AI Environmental Footprint Explorer</a></li>
   <li><a href="#patterns-you-can-reuse" id="toc-patterns-you-can-reuse" class="nav-link" data-scroll-target="#patterns-you-can-reuse">Patterns You Can Reuse</a></li>
+  <li><a href="#where-this-is-heading-ai-that-reviews-ai" id="toc-where-this-is-heading-ai-that-reviews-ai" class="nav-link" data-scroll-target="#where-this-is-heading-ai-that-reviews-ai">Where This Is Heading: AI That Reviews AI</a></li>
   <li><a href="#try-it-yourself" id="toc-try-it-yourself" class="nav-link" data-scroll-target="#try-it-yourself">Try It Yourself</a></li>
   <li><a href="#related" id="toc-related" class="nav-link" data-scroll-target="#related">Related</a></li>
   <li><a href="#give-feedback-on-this-workshop" id="toc-give-feedback-on-this-workshop" class="nav-link" data-scroll-target="#give-feedback-on-this-workshop">Give Feedback on This Workshop</a></li>
@@ -430,6 +431,18 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Give it the facts it can’t know.</strong> Licenses, local policy, what the screen really looks like, what your students need. Most corrections on this site came from facts only a person had.</li>
 <li><strong>Record what changed and why.</strong> Old value, new value, source, reason. It’s the difference between “updated” and something you can defend later.</li>
 </ol>
+</section>
+<section id="where-this-is-heading-ai-that-reviews-ai" class="level2">
+<h2 class="anchored" data-anchor-id="where-this-is-heading-ai-that-reviews-ai">Where This Is Heading: AI That Reviews AI</h2>
+<p>For software, Anthropic’s <a href="https://code.claude.com/docs/en/code-review">Code Review</a> runs several AI reviewers on each proposed change. A separate step then checks every finding against the code and drops false alarms, ranks what’s left by severity, and posts it for a person. It never approves a change on its own. The rules for what to look for live in a written file in the project, so every review uses the same checklist.</p>
+<p>This site already does the mechanical half: every change is rebuilt and every link is checked before it’s published. The next step is a review pass on the content itself:</p>
+<ul>
+<li><strong>A second reader that didn’t write it.</strong> A separate agent, or a fresh chat, reads each change.</li>
+<li><strong>A written checklist.</strong> Facts match their sources; the data rules match <a href="./tools.html">Tools &amp; Access</a>; plain language; accessible tables and images.</li>
+<li><strong>Evidence for every finding.</strong> Each problem quotes the passage and the source it conflicts with, so it can be checked in seconds.</li>
+<li><strong>The author decides.</strong> Every finding is read and accepted or rejected by a person.</li>
+</ul>
+<p>Code has a head start because it can be run and tested. Documents can’t, which is why the “quote the evidence” step matters so much. <a href="./workshop5.html#second-reviewer">Core 4</a> has a version anyone can try with ChatGPT Edu or Copilot Chat.</p>
 </section>
 <section id="try-it-yourself" class="level2">
 <h2 class="anchored" data-anchor-id="try-it-yourself">Try It Yourself</h2>

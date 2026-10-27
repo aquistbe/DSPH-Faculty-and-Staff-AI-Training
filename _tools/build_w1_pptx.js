@@ -93,7 +93,7 @@ function titleSlide(eyebrow, head, sub, leftName, leftRole, right, notes, dept) 
 titleSlide('AI WORKSHOPS FOR DSPH', 'Foundations & Capabilities',
   'What generative AI is, which Drexel tools to use, and how to ask for what you need. No experience needed.',
   'Alex Quistberg, PhD, MPH', 'Associate Research Professor · Department of Environmental & Occupational Health',
-  'Core 1 · Fall 2026',
+  'Core 1 · Fall 2026 · on Zoom',
   'No experience needed. If you have never opened ChatGPT, you are in the right room. By the end of the hour, everyone will have used ChatGPT Edu for a real task.', true);
 
 // 2 Goals
@@ -165,7 +165,7 @@ section('03', 'Hands-On', 'A guided tour, three first requests, and a simple rec
 
 // 10 Guided tour
 s = content('GUIDED TOUR · ~10 MIN · FOLLOW ALONG', 'ChatGPT Edu, Step by Step',
-  'Do each step on the projector and pause. Ask people to give a thumbs-up when they have finished a step. Steps 4 and 6 teach the most important idea: a chat remembers earlier messages, and a new chat starts fresh. Backup if sign-in fails: Copilot Chat with a Drexel account, or pair with a neighbor.');
+  'Do each step on your shared screen and pause. Ask people to react with a thumbs-up in Zoom when they have finished a step. Steps 4 and 6 teach the most important idea: a chat remembers earlier messages, and a new chat starts fresh. Backup if sign-in fails: Copilot Chat with a Drexel account. Ask people who are stuck to say so in the chat.');
 numbered(s, [
   'Sign in with your Drexel account. Check you are in the Drexel workspace.',
   'Find the message box at the bottom of the screen.',
@@ -189,7 +189,7 @@ bullets(s, [
 
 // 12 Activity 2
 s = content('ACTIVITY 2 · ~15 MIN', 'Four Questions Before You Type',
-  "Run the short prompt and the full prompt on the projector so the room sees the difference. Then ask everyone to write a PTCF prompt for a real email or short document they need this week, using made-up names and details. You don't need all four parts every time; adding even one or two helps. Ask two or three people which answer they would send.");
+  "Run the short prompt and the full prompt on your shared screen so everyone sees the difference. Then ask everyone to write a PTCF prompt for a real email or short document they need this week, using made-up names and details. You don't need all four parts every time; adding even one or two helps. Ask people to paste their prompt in the Zoom chat, and read two or three aloud.");
 column(s, X, 2.95, cw, 4.9, 'PTCF', C.teal, [
   [B('Persona: '), T('who should it act as?')],
   [B('Task: '), T('what do you want it to do?')],
@@ -211,7 +211,7 @@ bullets(s, [
 
 // 14 Closing
 titleSlide('THANK YOU', 'Questions & Discussion',
-  'Next: Core 2 — Workflow Enhancement. Use Copilot and ChatGPT Edu to speed up the work you already do.',
+  'Next: Core 2 — Workflow Enhancement. Start from your own plan, then let AI draft or refine.',
   'Alex Quistberg, PhD, MPH', 'daq26@drexel.edu', 'Department of Environmental & Occupational Health', null, false);
 
 pres.writeFile({ fileName: process.argv[2] }).then(f => console.log('wrote', f));

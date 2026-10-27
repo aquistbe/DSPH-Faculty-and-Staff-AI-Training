@@ -30,7 +30,7 @@ The throughline across every workshop and track is the same: **AI is a productiv
 :::{.callout-note}
 ## Series Details
 
-- **Format:** Four one-hour hands-on core sessions, plus electives and a monthly clinic; bring a laptop
+- **Format:** Four one-hour hands-on core sessions, plus electives and a monthly clinic, all on Zoom; join from a computer, not a phone
 - **Audience:** DSPH faculty, staff (administrative and research), and graduate students
 - **Cadence:** The four core sessions run **weekly in the fall term and repeat in spring**. Electives are offered once a year, by demand. The **AI Clinic** meets monthly in the same slot.
 - **Dates and location:** Announced by school email and posted on this page
@@ -160,7 +160,7 @@ The series continues in **winter quarter** --- the core sessions repeat and the 
 
 - Confirm your access to **ChatGPT Edu** (available to Drexel faculty, professional staff, and students --- [access details](https://servicedesk.drexel.edu/TDClient/277/Portal/Requests/ServiceDet?ID=10760); see [Tools & Access](tools.qmd))
 - Confirm you can sign in to **Microsoft Copilot Chat** with your Drexel account (everyone)
-- Bring a laptop
+- Join from a computer, not a phone, so you can keep Zoom and your browser side by side
 - Bring a real (non-sensitive) work task you'd like help with---an email to draft, a document to summarize, a report section or assignment to outline
 - Read the one-page [data privacy rules](#data-privacy) below
 

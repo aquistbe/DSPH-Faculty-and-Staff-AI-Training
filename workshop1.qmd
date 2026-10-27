@@ -8,7 +8,7 @@ title: "Core 1 · Foundations & Capabilities"
 What generative AI is, which Drexel tools to use, and how to prompt for useful results
 :::
 ::: {.day-time}
-One hour | Bring a laptop | Runs weekly in the fall term and repeats in spring --- dates announced by school email
+One hour on Zoom | Have your browser open next to Zoom | Runs weekly in the fall term and repeats in spring --- dates announced by school email
 :::
 :::
 
@@ -37,6 +37,13 @@ No experience needed. If you have never opened ChatGPT or Copilot, this session 
 | 0:33--0:44 | Activity 1: Your first three requests |
 | 0:44--0:55 | Activity 2: Better requests with PTCF |
 | 0:55--1:00 | Wrap-up and one thing to try this week |
+
+:::{.callout-tip}
+## How This Session Works on Zoom
+- Put **Zoom and your browser side by side**, or use two screens if you have them. You'll watch the instructor's shared screen and try each step in your own browser.
+- **React with 👍** in Zoom when you finish a step, so the instructor knows when to move on.
+- **Stuck? Say so in the Zoom chat.** We'll help you get signed in and get an answer back.
+:::
 
 :::{.callout-note}
 ## A Few Words You'll Hear
@@ -108,12 +115,14 @@ Agentic tools such as Claude, OpenAI Codex, and Copilot agents can open files, r
 
 ### Guided Tour: ChatGPT Edu, Step by Step
 ::: {.activity-meta}
-Duration: ~10 minutes | Format: Follow along with the instructor
+Duration: ~10 minutes | Format: Follow along with the instructor's shared screen
 :::
 
 **Goal:** Everyone signed in and comfortable with the screen before we try real tasks.
 
-**Can't sign in to ChatGPT Edu?** Open Copilot Chat with your Drexel account instead, or pair with a neighbor. Everything today works in either tool.
+**Can't sign in to ChatGPT Edu?** Open Copilot Chat with your Drexel account instead, and say so in the Zoom chat if you need help. Everything today works in either tool.
+
+React with 👍 in Zoom after each step.
 
 1. **Sign in.** Go to ChatGPT Edu and sign in with your Drexel account. Check that you are in the Drexel workspace (the name appears near the top or bottom left).
 2. **Find the message box.** It is at the bottom of the screen. This is where you type your prompt.
@@ -178,7 +187,7 @@ Copy each prompt below into ChatGPT Edu, one at a time. Read what comes back. Th
 
 ### Activity 2: Better Requests with PTCF
 ::: {.activity-meta}
-Duration: ~11 minutes | Format: Hands-on, then share with a neighbor
+Duration: ~11 minutes | Format: Hands-on, then share in the Zoom chat
 :::
 
 **Goal:** See how a little more detail gets you a much better answer.
@@ -209,7 +218,7 @@ You don't need all four every time. Adding even one or two makes a difference.
 
 #### Share
 
-Show a neighbor your prompt and the answer. Suggest one detail they could add.
+Paste your prompt (not the answer) in the Zoom chat. Read one other person's prompt and reply with one detail they could add.
 
 :::
 

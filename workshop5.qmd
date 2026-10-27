@@ -8,7 +8,7 @@ title: "Core 4 · Verify, Disclose, Decide"
 The hands-on ethics hour --- catch a fake citation, catch a wrong number, write a real disclosure
 :::
 ::: {.day-time}
-Dates and location: see the schedule on the home page. | 1 hour | Bring a laptop and one piece of your own recent work
+On Zoom; dates on the home page schedule. | 1 hour | Have your browser open next to Zoom, plus one piece of your own recent work
 :::
 :::
 
@@ -62,7 +62,7 @@ The policy segment at 0:20 is **orientation, not a reading**. Ten minutes on wha
 
 ### Activity 1: Two Verification Drills
 ::: {.activity-meta}
-Duration: ~14 minutes working time (16-minute slot) | Format: Individual, then compare with a neighbor
+Duration: ~14 minutes working time (16-minute slot) | Format: Individual, then compare answers in the Zoom chat
 :::
 
 **Goal:** Catch the two errors that do the most damage in academic and public-health work---an invented source, and a number that drifted.
@@ -110,6 +110,24 @@ No searching for this one. Everything you need is on the page. Below is a source
 
 ---
 
+::: {.callout-note #second-reviewer}
+## Looking Ahead: A Second AI as Reviewer
+Software teams are already using a model worth borrowing. In Anthropic's [Code Review](https://code.claude.com/docs/en/code-review), every proposed change to a program goes through four steps:
+
+1. **Find.** Several AI reviewers read the change at the same time, each looking for problems.
+2. **Verify.** A separate step checks each problem against the actual code and drops the ones that don't hold up.
+3. **Rank.** What's left is sorted by severity, most serious first.
+4. **People decide.** The review leaves comments, but it never approves or blocks the change. A person makes the call.
+
+Code is easier to check than prose, because code can be run and tested. But the principles carry over to any document: a reviewer that didn't write the draft, every finding tied to the exact passage and the source it conflicts with, the most serious problems first, and a person deciding.
+
+**A simple version you can try now** with ChatGPT Edu or Copilot Chat. Open a **new chat**, so it has no memory of helping you write. Paste your draft and its source, and ask:
+
+> Review this draft against the source. List every claim, number, or citation the source doesn't support. For each one, quote the sentence from my draft and the passage from the source it conflicts with. Put the most serious problems first. Don't rewrite anything.
+
+Then check each finding yourself. If the quoted passage isn't really in the source, throw the finding out. This is a second reader, not a replacement for the checks in Activity 1, and it can miss things: a review that finds nothing doesn't mean the draft is right. We're working toward building this kind of review into the series.
+:::
+
 ## Policy Orientation: What the Rules Actually Say (10 min)
 
 *Ten minutes of orientation, not a policy reading. The point is to know when each rule binds you and where to look it up.*
@@ -142,7 +160,7 @@ Longer worked examples of both workflows: [Grant & Proposal Development](tracks/
 
 ### Activity 2: Write a Real Disclosure Statement
 ::: {.activity-meta}
-Duration: ~12 minutes working time (13-minute slot) | Format: Write alone, then trade with a neighbor
+Duration: ~12 minutes working time (13-minute slot) | Format: Write alone, then trade with a partner in a two-person breakout room
 :::
 
 **Goal:** Leave with one honest, specific disclosure statement written for a real piece of your own work---not a policy opinion about disclosure.
@@ -177,7 +195,7 @@ Notice what makes it work: it names **the tool**, it names **what AI did and did
 
 #### Trade it (~3 min)
 
-Hand your statement to a neighbor. Their only job is to answer one question: **"After reading this, do I know what you actually did?"** If they have to ask a follow-up, the statement isn't specific enough yet. Fix it now, while someone is sitting there to tell you.
+The instructor opens two-person breakout rooms. Paste your statement into the Zoom chat for your partner (or, if there are no breakout rooms, send it to someone by direct message in the chat). Their only job is to answer one question: **"After reading this, do I know what you actually did?"** If they have to ask a follow-up, the statement isn't specific enough yet. Fix it now, while someone is there to tell you.
 
 **Expected result.** A two-sentence disclosure that names a tool, distinguishes what AI did from what you did, states a verification step, and asserts your accountability---plus a decision about where it goes.
 

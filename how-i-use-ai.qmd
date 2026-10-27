@@ -117,6 +117,19 @@ These work with ChatGPT Edu and Copilot Chat as well as with agentic tools.
 3. **Give it the facts it can't know.** Licenses, local policy, what the screen really looks like, what your students need. Most corrections on this site came from facts only a person had.
 4. **Record what changed and why.** Old value, new value, source, reason. It's the difference between "updated" and something you can defend later.
 
+## Where This Is Heading: AI That Reviews AI
+
+For software, Anthropic's [Code Review](https://code.claude.com/docs/en/code-review) runs several AI reviewers on each proposed change. A separate step then checks every finding against the code and drops false alarms, ranks what's left by severity, and posts it for a person. It never approves a change on its own. The rules for what to look for live in a written file in the project, so every review uses the same checklist.
+
+This site already does the mechanical half: every change is rebuilt and every link is checked before it's published. The next step is a review pass on the content itself:
+
+- **A second reader that didn't write it.** A separate agent, or a fresh chat, reads each change.
+- **A written checklist.** Facts match their sources; the data rules match [Tools & Access](tools.qmd); plain language; accessible tables and images.
+- **Evidence for every finding.** Each problem quotes the passage and the source it conflicts with, so it can be checked in seconds.
+- **The author decides.** Every finding is read and accepted or rejected by a person.
+
+Code has a head start because it can be run and tested. Documents can't, which is why the "quote the evidence" step matters so much. [Core 4](workshop5.qmd#second-reviewer) has a version anyone can try with ChatGPT Edu or Copilot Chat.
+
 ## Try It Yourself
 
 **With ChatGPT Edu or Copilot Chat (everyone):** at the end of a work session on a long project, paste your notes and ask:
