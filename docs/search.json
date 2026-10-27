@@ -1771,6 +1771,13 @@
     "text": "Guides, references, and where to go deeper after the workshops"
   },
   {
+    "objectID": "resources.html#interactive-tool-ai-environmental-footprint-explorer",
+    "href": "resources.html#interactive-tool-ai-environmental-footprint-explorer",
+    "title": "Resources",
+    "section": "Interactive Tool: AI Environmental Footprint Explorer",
+    "text": "Interactive Tool: AI Environmental Footprint Explorer\nHow much energy, water, and carbon does AI use? The AI Environmental Footprint Explorer compares the footprint of a chatbot question, an agentic task, a video clip, and a year of use, with ranges and sources instead of single numbers, and shows where the experts disagree. Figures are updated as new measurements come out; the changelog records what changed and why.\nOpen the Footprint Explorer ↗\nFor the activities that go with it, see the Environmental Sustainability topic in the Governance, Ethics & Equity track."
+  },
+  {
     "objectID": "resources.html#drexel-tools-access",
     "href": "resources.html#drexel-tools-access",
     "title": "Resources",
