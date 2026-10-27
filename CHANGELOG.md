@@ -14,6 +14,46 @@ that forced the change.
 
 ---
 
+## 2026-10-27 — "AI task vs. doing it yourself": your laptop counted on both sides
+
+The module compared the data center's energy for one AI query against 20 minutes of laptop use,
+and labelled both "device-side." The AI side counted no laptop time at all, though you are at your
+laptop while you write the prompt, read the answer and check it.
+
+### Corrected
+
+- **Laptop power: 30-70 W → 9-22 W** (low 9, mid 12, high 22). The old range was charger
+  ratings, not measured draw. Kirkeby & Lagermann, "Power Assumptions Matter" (arXiv 2510.12566,
+  Oct 2025, rev. Jan 2026), measured **9-13 W** during browser use; the reporting models they
+  compare against assume 15-22 W, used here as the high end. Twenty minutes of laptop use goes
+  from 10-25 Wh (mid 17) to **3-7.3 Wh (mid 4)**.
+- **The AI side now includes your laptop time.** AI version = the query + the minutes at your
+  laptop (default 5). Doing it yourself = the minutes at your laptop (default 20).
+- **Labels.** "Device-side energy" removed; the AI query figures are data-center energy.
+- **Caveat 3** said the module "says nothing about water use," though it has had a water view
+  since August. The caveats were rewritten: laptop counted on both sides but marginal; what is
+  left out of both sides (external monitor, network, manufacturing); and where it happens.
+
+### Added
+
+- **Minute settings** for both sides (AI version 2/5/10/15; yourself 10/20/30/60), so people can
+  see how time spent checking changes the result. A line under the chart states the query's share
+  of the AI version and which tasks come out above doing it yourself.
+- **Philadelphia-area grid option** for your laptop's carbon: EPA eGRID2023, RFC East subregion,
+  **599.2 lb CO2e/MWh ≈ 272 g/kWh**, against the US average 770.9 lb/MWh ≈ 350 g/kWh
+  (eGRID2023 summary tables, rev. 2). It applies only to your laptop; an AI query's carbon
+  depends on where the data center is.
+- **"Figures last checked" date** at the top of the Explorer and in the footer.
+
+### What it shows now
+
+At the mid estimate, a typical chatbot query is about a quarter of the AI version's energy (0.3 of
+1.3 Wh); the rest is your own laptop time, and the total stays below 20 minutes of doing it
+yourself (4 Wh). A long reasoning query (mid 4 Wh) comes out above it. The METR caveat further
+down the page was reworded to match.
+
+---
+
 ## 2026-10-27 — Source check of everything not previously verified
 
 The 2026-10-15 refresh had not been checked against its sources. Every figure it added or changed

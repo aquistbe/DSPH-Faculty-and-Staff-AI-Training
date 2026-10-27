@@ -176,6 +176,8 @@ a.src-link:hover{color:var(--brand-navy)}
 a.src-link:focus-visible{outline:2px solid var(--brand-teal);outline-offset:2px}
 td.src a.src-link{color:var(--brand-teal)}
 .prepnote{margin-top:16px;font-style:italic;color:var(--muted)}
+.lastchecked{font-size:13px;color:var(--muted);margin:6px 0 0}
+.b-take{font-size:14px;color:var(--text-primary);margin:14px 0 0;padding:8px 12px;border-left:3px solid var(--brand-teal);background:var(--surface-1)}
 .colophon{margin-top:26px;padding-top:18px;border-top:1px solid var(--hairline)}
 .colophon h2{margin:0 0 8px}
 .colophon p{margin:0 0 10px;color:var(--text-secondary)}
@@ -204,6 +206,7 @@ td.src a.src-link{color:var(--brand-teal)}
   <h1>AI&rsquo;s Environmental Footprint: A Reality Check</h1>
   <div class="gold-rule"></div>
   <p class="intro">How much energy and water does one AI query actually use &mdash; and how does that compare to things you already do every day? This is a genuinely contested question: <strong>credible public estimates disagree by 10&ndash;30&times;</strong> depending on methodology, so this tool shows <strong>ranges with sources, not single truths</strong> &mdash; here&rsquo;s what&rsquo;s actually known, and what isn&rsquo;t. Hover (or keyboard-focus) any bar or dot for the exact figures and the source behind them.</p>
+  <p class="lastchecked">Figures last checked October 27, 2026. What changed and why is in the <a class="src-link" href="https://github.com/aquistbe/DSPH-Faculty-and-Staff-AI-Training/blob/main/CHANGELOG.md" target="_blank" rel="noopener">changelog</a>.</p>
 </header>
 
 <div class="ctrlrow" id="ctrlrow">
@@ -286,27 +289,46 @@ td.src a.src-link{color:var(--brand-teal)}
   <div class="modhead">
     <div>
       <h2 id="modB-h">AI task vs. doing it yourself</h2>
-      <p class="mod-sub">Each row compares the device-side energy of an AI query against roughly 20 minutes of active laptop use &mdash; a stand-in for doing a simple task manually. Shared log axis.</p>
+      <p class="mod-sub">Your laptop counts on both sides. The AI version is the query in the data center <em>plus</em> the minutes you spend at your laptop writing the prompt, reading the answer, and checking it. Doing it yourself is the minutes you would spend at your laptop instead. Set the minutes to match a task of yours. Shared log axis.</p>
     </div>
     <button class="tbtn" id="btn-tableB" aria-pressed="false">View as table</button>
+  </div>
+  <div class="ctrl-inline">
+    <span class="ctrl-label" id="bai-label">AI version, minutes at your laptop (prompt, read, check):</span>
+    <div class="seg" role="group" aria-labelledby="bai-label" id="baiseg">
+      <button data-min="2" aria-pressed="false">2</button><button data-min="5" aria-pressed="true">5</button><button data-min="10" aria-pressed="false">10</button><button data-min="15" aria-pressed="false">15</button>
+    </div>
+  </div>
+  <div class="ctrl-inline">
+    <span class="ctrl-label" id="bman-label">Doing it yourself, minutes:</span>
+    <div class="seg" role="group" aria-labelledby="bman-label" id="bmanseg">
+      <button data-min="10" aria-pressed="false">10</button><button data-min="20" aria-pressed="true">20</button><button data-min="30" aria-pressed="false">30</button><button data-min="60" aria-pressed="false">60</button>
+    </div>
+  </div>
+  <div class="ctrl-inline" id="bgrid-row" hidden>
+    <span class="ctrl-label" id="bgrid-label">Your laptop&rsquo;s electricity:</span>
+    <div class="seg" role="group" aria-labelledby="bgrid-label" id="bgridseg">
+      <button data-grid="us" aria-pressed="true">US average</button><button data-grid="rfce" aria-pressed="false">Philadelphia area</button>
+    </div>
   </div>
   <div id="modB-chart">
     <div class="metricbar"><span class="metriclab">Show:</span><div class="seg metricseg" role="group" aria-label="Choose which measure to display"><button type="button" data-metric="energy" aria-pressed="true">Energy</button><button type="button" data-metric="water" aria-pressed="false">Water</button><button type="button" data-metric="carbon" aria-pressed="false">Carbon</button></div></div>
     <p class="chart-note" id="modB-basis"></p>
     <div class="legend">
-      <span class="li"><span class="sw dot" style="background:var(--ord-dark)"></span><span id="modB-legend-ai">AI query (energy)</span></span>
-      <span class="li"><span class="sw dot" style="background:var(--ord-light)"></span>Manual: 20 min of laptop use</span>
+      <span class="li"><span class="sw dot" style="background:var(--ord-dark)"></span><span id="modB-legend-ai">AI version: query + your laptop time</span></span>
+      <span class="li"><span class="sw dot" style="background:var(--ord-light)"></span><span id="modB-legend-man">Doing it yourself: your laptop time</span></span>
     </div>
     <div class="lchart" id="chartB"></div>
+    <p class="b-take" id="modB-take" aria-live="polite"></p>
   </div>
   <div id="modB-table" hidden></div>
   <div class="prose-caveats">
     <h3>Read this chart with four caveats</h3>
     <ol>
-      <li><strong>The laptop runs regardless.</strong> You don&rsquo;t power your laptop down the moment you stop typing, so the manual-task figure is <em>marginal</em>, not truly <em>avoided</em>, energy. The comparison overstates the manual cost.</li>
+      <li><strong>The laptop runs regardless.</strong> Counting your laptop on both sides makes the comparison fair, but that energy is <em>marginal</em>, not <em>avoided</em>: if you would be at your computer anyway, the minutes you save go into other work, not off the meter. What really differs between the two paths is the AI query itself and the number of minutes each one takes.</li>
       <li><strong>Substitution cuts both ways.</strong> One AI answer might replace several manual searches (favoring AI) &mdash; or AI&rsquo;s near-zero cost per query might create queries that would never otherwise happen at all (the rebound effect, disfavoring AI). Both are real, and this comparison cannot tell you which dominates for any given use.</li>
-      <li><strong>This only counts device-side electricity.</strong> It says nothing about water use, or about <em>where</em> the electricity and water are drawn &mdash; a data center&rsquo;s footprint is concentrated in one community; your laptop&rsquo;s is not.</li>
-      <li><strong>It says nothing about community-level impacts</strong> &mdash; local grid strain, water stress in specific regions like Phoenix &mdash; which is the actual subject of the WSJ piece this course read. Per-query math cannot answer a siting question.</li>
+      <li><strong>Some things are left out of both sides.</strong> An external monitor would add energy to both bars in proportion to the minutes. Sending a few kilobytes of text over the network adds very little. Manufacturing your laptop is a large share of its lifetime footprint, but you own it either way. Building the data center&rsquo;s chips and servers is counted only in the typical chatbot query&rsquo;s carbon figure.</li>
+      <li><strong>Where it happens matters.</strong> The water and carbon views count the water and carbon behind the electricity, but not <em>where</em> it is drawn: a data center&rsquo;s demand is concentrated in one community; your laptop&rsquo;s is spread across the grid. Local grid strain and water stress in places like Phoenix &mdash; the subject of the WSJ piece this course read &mdash; are siting questions that per-query math cannot answer.</li>
     </ol>
   </div>
 </section>
@@ -354,7 +376,7 @@ td.src a.src-link{color:var(--brand-teal)}
     <ol>
       <li><strong>A dollar of compute is not a dollar of labor.</strong> The two axes diverge because a dollar spent on GPU time buys on the order of 15&times; more electricity than a dollar spent on a person&rsquo;s time. Cost parity and energy parity are different thresholds, and a metric built for one does not answer the other.</li>
       <li><strong>This is one task, and an unusually GPU-hungry one.</strong> Progress on the NanoGPT speedrun <em>requires</em> running training experiments, so both sides are dominated by H100 time rather than by thinking. The ratio measures experimental efficiency per unit of insight, not &ldquo;AI versus humans&rdquo; in general.</li>
-      <li><strong>The direction flips for ordinary work.</strong> The chart directly above shows a single AI query using far less energy than twenty minutes of doing the task by hand. Task type decides the answer. Nothing here says AI is generally the higher-energy option, and nothing in the chart above says it is generally the lower one.</li>
+      <li><strong>The direction flips for ordinary work.</strong> In the chart directly above, a typical AI query plus your own time at the laptop comes in below twenty minutes of doing the task by hand; only a long reasoning query comes in above it. Task type decides the answer. Nothing here says AI is generally the higher-energy option, and nothing in the chart above says it is generally the lower one.</li>
       <li><strong>METR calls its own harness &ldquo;likely inefficient.&rdquo;</strong> The agents had continuous reserved access to the GPUs, which invites wasteful experimentation. A better-run agent would land lower. This is a first-generation setup and should be expected to improve.</li>
       <li><strong>The largest uncertainty was never published.</strong> METR reported the hardware (4 nodes, 32 H100s) and the time limit (5 days) but not how hard those GPUs were actually working. That single assumption moves the agent estimate by about 3&times;, which is more than every other assumption combined.</li>
     </ol>
@@ -521,7 +543,7 @@ td.src a.src-link{color:var(--brand-teal)}
   <h2>Sources</h2>
   <p>Every figure in this tool carries one of the following source strings (also shown on hover and in each table view):</p>
   <ol id="sourcelist"></ol>
-  <p class="prepnote">Prepared 2026-10-15 &mdash; this is a fast-moving topic; treat exact figures as illustrative of order of magnitude and recheck primary sources for anything load-bearing.</p>
+  <p class="prepnote">Prepared 2026-10-15; figures last checked 2026-10-27 &mdash; this is a fast-moving topic; treat exact figures as illustrative of order of magnitude and recheck primary sources for anything load-bearing.</p>
 
   <div class="colophon">
     <h2>How this tool was built</h2>
@@ -575,7 +597,7 @@ const DATA = {
       annual: { perYear: {low:200, mid:300, high:400}, basis: "per household (~2.5 people)", perYearSource: "ENERGY STAR: \"the average American family washes about 300 loads of laundry each year\"" } }
   },
   manual: {
-    laptop_20min: { label: "20 min of active laptop use", sub: "roughly the time a manual version of a simple task might take", energyWh: {low:10, mid:17, high:25}, source: "Typical laptop power draw, 30-70W active use" }
+    laptop: { label: "Your laptop", sub: "9-22 W while you work", perMinWh: {low:0.15, mid:0.2, high:0.367}, source: "Kirkeby & Lagermann, \"Power Assumptions Matter: Evaluating End-user Laptop Energy Models for Sustainability Reporting of Browser-Based Web Services,\" arXiv 2510.12566 (Oct 2025, revised Jan 2026) — measured 9-13 W during browser use; common reporting models assume 15-22 W" }
   },
   agentic: {
     metric: "Expenditure horizon",
@@ -772,6 +794,7 @@ const GAL_TO_L = 3.78541;
 
 /* ============ state & helpers ============ */
 const state = { level: "mid", metric: "energy", task: "frontier_text", scope: "single",
+  bAiMin: 5, bManMin: 20, grid: "us",
   freq: { text: ANNUAL_USAGE.text.presets.typical.value,
           image: ANNUAL_USAGE.image.presets.typical.value,
           video: ANNUAL_USAGE.video.presets.typical.value,
@@ -927,8 +950,10 @@ const SOURCE_HTML = {
   "EPA / ENERGY STAR":
     "EPA / <a class=\"src-link\" href=\"https://www.energystar.gov/products/clothes_washers\" target=\"_blank\" rel=\"noopener\">ENERGY STAR</a>",
 
-  "Typical laptop power draw, 30-70W active use":
-    "Typical laptop power draw, 30-70W active use",
+  "Kirkeby & Lagermann, \"Power Assumptions Matter: Evaluating End-user Laptop Energy Models for Sustainability Reporting of Browser-Based Web Services,\" arXiv 2510.12566 (Oct 2025, revised Jan 2026) — measured 9-13 W during browser use; common reporting models assume 15-22 W":
+    "<a class=\"src-link\" href=\"https://arxiv.org/abs/2510.12566\" target=\"_blank\" rel=\"noopener\">Kirkeby & Lagermann, \"Power Assumptions Matter: Evaluating End-user Laptop Energy Models for Sustainability Reporting of Browser-Based Web Services,\" arXiv 2510.12566 (Oct 2025, revised Jan 2026)</a> — measured 9-13 W during browser use; common reporting models assume 15-22 W",
+  "Philadelphia-area grid intensity ~272 gCO2e/kWh (EPA eGRID2023, RFC East subregion: 599.2 lb CO2e/MWh)":
+    "Philadelphia-area grid intensity ~272 gCO2e/kWh (<a class=\"src-link\" href=\"https://www.epa.gov/system/files/documents/2025-06/summary_tables_rev2.pdf\" target=\"_blank\" rel=\"noopener\">EPA eGRID2023 summary tables</a>, RFC East subregion: 599.2 lb CO2e/MWh)",
 
   "Google, 2025":
     "<a class=\"src-link\" href=\"https://cloud.google.com/blog/products/infrastructure/measuring-the-environmental-impact-of-ai-inference\" target=\"_blank\" rel=\"noopener\">Google, 2025</a>",
@@ -1201,6 +1226,14 @@ function addTriples(a,b){ return roundTriple({low:a.low+b.low, mid:a.mid+b.mid, 
 /* AI water on the same footing as a device: on-site cooling PLUS the water consumed generating
    the electricity. Google's disclosed 0.26 mL per prompt is on-site only. */
 function aiTotalWaterML(t){ return addTriples(t.waterML, gridWaterML(t.energyWh)); }
+/* Module B: your own laptop, on your own grid. The grid choice applies only to the laptop;
+   an AI query's carbon depends on wherever the data center is. */
+const GRIDS = {
+  us:   { gPerWh: 0.35,  source: "US average grid intensity ~350 gCO2e/kWh (EPA eGRID2023)" },
+  rfce: { gPerWh: 0.272, source: "Philadelphia-area grid intensity ~272 gCO2e/kWh (EPA eGRID2023, RFC East subregion: 599.2 lb CO2e/MWh)" }
+};
+function laptopWh(min){ const p = DATA.manual.laptop.perMinWh; return roundTriple({low:p.low*min, mid:p.mid*min, high:p.high*min}); }
+function gridCO2gAt(wh, g){ const f = GRIDS[g].gPerWh; return roundTriple({low:wh.low*f, mid:wh.mid*f, high:wh.high*f}); }
 function annualEverydayKg(d){ // annual kgCO2e
   const a = d.annual;
   // items with an annual energy override (e.g. air conditioning) carry no per-use frequency —
@@ -1545,31 +1578,42 @@ wireTableToggle("btn-tableA","modA-charts","modA-tables");
 
 /* ============ Module B — dumbbell ============ */
 const B_TASKS = ["small_text","frontier_text","complex_text"];
+/* query: what the AI query itself costs, at its source's boundary.
+   dev:   converts your laptop's Wh into the chosen measure. */
 const B_METRIC = {
-  energy: { unit:"Wh", domain:[0.01,100],
+  energy: { unit:"Wh", noun:"energy", domain:[0.01,100],
     ticks:[{v:0.01,l:"0.01"},{v:0.1,l:"0.1"},{v:1,l:"1"},{v:10,l:"10"},{v:100,l:"100"}],
     axis:"watt-hours (Wh) — logarithmic scale: each gridline is 10× the last",
-    ai: t => t.energyWh, man: m => m.energyWh,
-    basis: "Device-side electricity on both sides: the AI query, and roughly 20 minutes of active laptop use as a stand-in for doing the task by hand." },
-  water: { unit:"mL", domain:[0.01,1000],
+    query: t => t.energyWh, dev: wh => wh,
+    devSource: () => DATA.manual.laptop.source,
+    basis: () => "Electricity on both sides. The AI version adds the data center's energy for the query to your laptop's energy for the minutes you set; doing it yourself is your laptop alone. Laptops draw about 9–22 W while you work (measured at 9–13 W during browser use), so 20 minutes is about 3–7 Wh." },
+  water: { unit:"mL", noun:"water", domain:[0.01,1000],
     ticks:[{v:0.01,l:"0.01"},{v:0.1,l:"0.1"},{v:1,l:"1"},{v:10,l:"10"},{v:100,l:"100"},{v:1000,l:"1k"}],
     axis:"milliliters (mL) of freshwater consumed — logarithmic scale: each gridline is 10× the last",
-    ai: t => aiTotalWaterML(t), man: m => gridWaterML(m.energyWh),
-    basis: "Both bars are on the same footing here, which the headline figures usually are not. A laptop consumes no water itself, so its water is entirely what was evaporated generating its electricity. The AI bar adds that same generation water to the data centre's on-site cooling water — Google's disclosed 0.26 mL per prompt covers only the cooling. The generation factor spans 1–4.5 mL per Wh depending on how much reservoir evaporation is attributed to hydropower, which is why these bars have wide whiskers." },
-  carbon: { unit:"g", domain:[0.001,100],
+    query: t => aiTotalWaterML(t), dev: wh => gridWaterML(wh),
+    devSource: () => DATA.manual.laptop.source + " · " + GRID_WATER_SOURCE,
+    basis: () => "Both sides are on the same footing here, which the headline figures usually are not. A laptop consumes no water itself, so its water is entirely what was evaporated generating its electricity. The AI query adds that same generation water to the data centre's on-site cooling water — Google's disclosed 0.26 mL per prompt covers only the cooling. The generation factor spans 1–4.5 mL per Wh depending on how much reservoir evaporation is attributed to hydropower, which is why the ranges are wide." },
+  carbon: { unit:"g", noun:"carbon", domain:[0.001,100],
     ticks:[{v:0.001,l:"0.001"},{v:0.01,l:"0.01"},{v:0.1,l:"0.1"},{v:1,l:"1"},{v:10,l:"10"},{v:100,l:"100"}],
     axis:"grams CO2-equivalent (gCO2e) — logarithmic scale: each gridline is 10× the last",
-    ai: t => t.co2g, man: m => gridCO2g(m.energyWh),
-    basis: "Location-based carbon on both sides, at the US average grid intensity of about 350 gCO2e per kWh. Neither bar counts manufacturing." }
+    query: t => t.co2g, dev: wh => gridCO2gAt(wh, state.grid),
+    devSource: () => DATA.manual.laptop.source + " · " + GRIDS[state.grid].source,
+    basis: () => "Location-based carbon. Your laptop's carbon uses the grid you choose above: " +
+      (state.grid === "rfce" ? "the Philadelphia area (EPA's RFC East region, about 272 g per kWh, roughly a fifth below the US average)." : "the US average, about 350 g per kWh.") +
+      " The query's carbon comes from its source's own accounting and depends on where the data center is, not where you are. Making your laptop isn't counted; of the three query figures, only the typical chatbot query includes making the data center's hardware." }
 };
 function renderModuleB(){
   const M = B_METRIC[state.metric];
   const U = M.unit;
+  const aiMin = state.bAiMin, manMin = state.bManMin;
   const host = document.getElementById("chartB");
   host.textContent = "";
-  document.getElementById("modB-basis").textContent = M.basis;
+  document.getElementById("bgrid-row").hidden = state.metric !== "carbon";
+  document.getElementById("modB-basis").textContent = M.basis();
   document.getElementById("modB-legend-ai").textContent =
-    "AI query (" + (state.metric === "carbon" ? "carbon" : state.metric) + ")";
+    "AI version: query + " + aiMin + " min of your laptop";
+  document.getElementById("modB-legend-man").textContent =
+    "Doing it yourself: " + manMin + " min of your laptop";
   const scale = makeScale(M.domain[0], M.domain[1]);
   const grid = el("div","lgrid");
   M.ticks.forEach((t,i) => {
@@ -1578,13 +1622,14 @@ function renderModuleB(){
     grid.appendChild(g);
   });
   host.appendChild(grid);
-  const man = DATA.manual.laptop_20min;
-  const manV = M.man(man);
-  const manSrc = state.metric === "energy" ? man.source : man.source + " · " + GRID_WATER_SOURCE_FOR(state.metric);
+  const lapAI = M.dev(laptopWh(aiMin));
+  const manV = M.dev(laptopWh(manMin));
+  const devSrc = M.devSource();
   const refs = [];
   B_TASKS.forEach(key => {
     const t = DATA.aiTasks[key];
-    const tV = M.ai(t);
+    const q = M.query(t);
+    const tV = addTriples(q, lapAI);
     const r = el("div","brow");
     r.tabIndex = 0;
     r.style.minHeight = "52px";
@@ -1604,24 +1649,25 @@ function renderModuleB(){
     track.appendChild(aiVal); track.appendChild(mVal);
     r.appendChild(lab); r.appendChild(track);
     host.appendChild(r);
-    refs.push({t, tV, r, conn, aiHit, mHit, aiVal, mVal});
+    refs.push({t, q, tV, r, conn, aiHit, mHit, aiVal, mVal});
     attachTip(aiHit, () => ({
       value: fmtVal(tV[state.level], U) + " (" + state.level + " estimate)",
-      name: "AI: " + t.label,
+      name: "AI version: " + t.label + " — the query " + fmtVal(q[state.level], U) +
+        " + " + aiMin + " min of your laptop " + fmtVal(lapAI[state.level], U),
       range: rangeText(tV, U),
-      source: t.source
+      source: t.source + " / " + devSrc
     }));
     attachTip(mHit, () => ({
       value: fmtVal(manV[state.level], U) + " (" + state.level + " estimate)",
-      name: "Manual: " + man.label + " — " + man.sub,
+      name: "Doing it yourself: " + manMin + " min of your laptop",
       range: rangeText(manV, U),
-      source: manSrc
+      source: devSrc
     }));
     attachTip(r, () => ({
-      value: "AI " + fmtVal(tV[state.level],U) + "  vs.  manual " + fmtVal(manV[state.level],U),
-      name: t.label + " vs. " + man.label,
-      range: "AI: " + rangeText(tV,U) + "   |   Manual: " + rangeText(manV,U),
-      source: t.source + " / " + manSrc
+      value: "AI version " + fmtVal(tV[state.level],U) + "  vs.  yourself " + fmtVal(manV[state.level],U),
+      name: t.label,
+      range: "AI version: " + rangeText(tV,U) + "   |   Yourself: " + rangeText(manV,U),
+      source: t.source + " / " + devSrc
     }));
   });
   const axis = el("div","baxis");
@@ -1634,54 +1680,71 @@ function renderModuleB(){
   host.appendChild(el("div","axis-title", M.axis));
 
   function update(){
+    const lvl = state.level;
     refs.forEach(({t, tV, r, conn, aiHit, mHit, aiVal, mVal}) => {
-      const a = scale(tV[state.level]);
-      const m = scale(manV[state.level]);
+      const a = scale(tV[lvl]);
+      const m = scale(manV[lvl]);
       conn.style.left = Math.min(a,m) + "%";
       conn.style.width = Math.abs(a-m) + "%";
       aiHit.style.left = a + "%"; mHit.style.left = m + "%";
       aiVal.style.left = a + "%"; mVal.style.left = m + "%";
-      aiVal.textContent = fmtVal(tV[state.level],U) + " (AI)";
-      mVal.textContent = fmtVal(manV[state.level],U) + " (manual)";
+      aiVal.textContent = fmtVal(tV[lvl],U) + " (AI version)";
+      mVal.textContent = fmtVal(manV[lvl],U) + " (yourself)";
       r.setAttribute("aria-label",
-        t.label + ": AI " + fmtVal(tV[state.level],U) + " versus manual (" + man.label + ") " +
-        fmtVal(manV[state.level],U) + " at " + state.level + " estimate.");
+        t.label + ": AI version, the query plus " + aiMin + " minutes of your laptop, " + fmtVal(tV[lvl],U) +
+        ", versus " + manMin + " minutes doing it yourself, " + fmtVal(manV[lvl],U) + ", at " + lvl + " estimate.");
     });
+    const ft = refs.find(x => x.t === DATA.aiTasks.frontier_text);
+    const pct = 100 * ft.q[lvl] / ft.tV[lvl];
+    const share = pct < 1 ? "under 1%" : Math.round(pct) + "%";
+    const higher = refs.filter(x => x.tV[lvl] > manV[lvl]).map(x => x.t.label.toLowerCase());
+    let txt = "At these settings, the typical chatbot query itself is " + share + " of the AI version's " + M.noun +
+      "; your " + aiMin + " minutes at the laptop are the rest. ";
+    txt += higher.length
+      ? "The AI version uses more than " + manMin + " minutes of doing it yourself for: " + higher.join("; ") + "."
+      : "Every AI version here uses less than " + manMin + " minutes of doing it yourself.";
+    document.getElementById("modB-take").textContent = txt;
   }
+  buildTableB(M, aiMin, manMin);
   update();
   return update;
 }
-updateB = renderModuleB();
-(function buildTableB(){
-  const man = DATA.manual.laptop_20min;
-  const rows = B_TASKS.map(k => {
-    const t = DATA.aiTasks[k];
-    return ["AI: " + t.label, fmtNum(t.energyWh.low), fmtNum(t.energyWh.mid), fmtNum(t.energyWh.high), t.source];
-  });
-  rows.push(["Manual: " + man.label + " (" + man.sub + ")", fmtNum(man.energyWh.low), fmtNum(man.energyWh.mid), fmtNum(man.energyWh.high), man.source]);
+function buildTableB(Mcur, aiMin, manMin){
   const host = document.getElementById("modB-table");
-  host.appendChild(makeTable("AI query vs. manual task, device-side energy (watt-hours)",
-      ["Item","Low (Wh)","Mid (Wh)","High (Wh)","Source"], rows));
-
-  const wRows = B_TASKS.map(k => {
-    const t = DATA.aiTasks[k]; const v = aiTotalWaterML(t);
-    return ["AI: " + t.label, fmtNum(v.low), fmtNum(v.mid), fmtNum(v.high), t.source + " · plus generation water, " + GRID_WATER_SOURCE];
+  host.textContent = "";
+  [["energy","Electricity (watt-hours)","Wh"],
+   ["water","Freshwater consumed (milliliters) — on-site cooling where applicable, plus water evaporated generating the electricity, on both sides","mL"],
+   ["carbon","Carbon (grams CO2e), location-based; your laptop on the " + (state.grid === "rfce" ? "Philadelphia-area" : "US average") + " grid","g"]
+  ].forEach(([key, cap, u]) => {
+    const M = B_METRIC[key];
+    const lap = M.dev(laptopWh(aiMin)), man = M.dev(laptopWh(manMin));
+    const src = M.devSource();
+    const rows = [];
+    B_TASKS.forEach(k => {
+      const t = DATA.aiTasks[k]; const q = M.query(t); const tot = addTriples(q, lap);
+      rows.push(["Query alone: " + t.label, fmtNum(q.low), fmtNum(q.mid), fmtNum(q.high), t.source]);
+      rows.push(["AI version: " + t.label + " + " + aiMin + " min of your laptop", fmtNum(tot.low), fmtNum(tot.mid), fmtNum(tot.high), t.source + " / " + src]);
+    });
+    rows.push(["Your laptop, " + aiMin + " min (part of each AI version)", fmtNum(lap.low), fmtNum(lap.mid), fmtNum(lap.high), src]);
+    rows.push(["Doing it yourself: " + manMin + " min of your laptop", fmtNum(man.low), fmtNum(man.mid), fmtNum(man.high), src]);
+    host.appendChild(makeTable("AI version vs. doing it yourself: " + cap,
+      ["Item","Low (" + u + ")","Mid (" + u + ")","High (" + u + ")","Source"], rows));
   });
-  const mw = gridWaterML(man.energyWh);
-  wRows.push(["Manual: " + man.label, fmtNum(mw.low), fmtNum(mw.mid), fmtNum(mw.high), GRID_WATER_SOURCE]);
-  host.appendChild(makeTable("AI query vs. manual task, freshwater consumed (milliliters) — on-site cooling where applicable, plus water evaporated generating the electricity, on both sides",
-      ["Item","Low (mL)","Mid (mL)","High (mL)","Source"], wRows));
-
-  const cRows = B_TASKS.map(k => {
-    const t = DATA.aiTasks[k];
-    return ["AI: " + t.label, fmtNum(t.co2g.low), fmtNum(t.co2g.mid), fmtNum(t.co2g.high), t.source];
-  });
-  const mc = gridCO2g(man.energyWh);
-  cRows.push(["Manual: " + man.label, fmtNum(mc.low), fmtNum(mc.mid), fmtNum(mc.high), "US average grid intensity ~350 gCO2e/kWh (EPA eGRID2023)"]);
-  host.appendChild(makeTable("AI query vs. manual task, carbon (grams CO2e), location-based",
-      ["Item","Low (g)","Mid (g)","High (g)","Source"], cRows));
-})();
+}
+updateB = renderModuleB();
 wireTableToggle("btn-tableB","modB-chart","modB-table");
+function wireBSeg(id, attr, key, parse){
+  const btns = document.querySelectorAll("#" + id + " button");
+  btns.forEach(btn => btn.addEventListener("click", () => {
+    state[key] = parse(btn.dataset[attr]);
+    btns.forEach(b => b.setAttribute("aria-pressed", String(b === btn)));
+    updateB = renderModuleB();
+  }));
+}
+wireBSeg("baiseg", "min", "bAiMin", Number);
+wireBSeg("bmanseg", "min", "bManMin", Number);
+wireBSeg("bgridseg", "grid", "grid", String);
+
 
 /* ============ Module B2 — agent vs. human at equal spend ============ */
 const B2_METRIC = {
@@ -1950,6 +2013,7 @@ wireTableToggle("btn-tableC","modC-chart","modC-table");
   add(DATA.carbon.source);
   add(GRID_WATER_SOURCE);
   add("US average grid intensity ~350 gCO2e/kWh (EPA eGRID2023)");
+  add(GRIDS.rfce.source);
   DATA.scope.items.forEach(i => add(i.source));
   add(DATA.rightsizing.challenge.source);
   const host = document.getElementById("sourcelist");
