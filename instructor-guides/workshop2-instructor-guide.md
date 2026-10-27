@@ -29,7 +29,7 @@ Fictional demo files are in `demo-materials/` and linked from the Core 2 page:
 
 - `Workshop2_Demo_StudyDescription.docx`: pedestrian-safety study description. Guided start and Job A.
 - `Workshop2_Demo_EmailThread.docx`: 6-message curriculum-committee thread with one deliberately unclear item (the accreditation crosswalk). Job B.
-- `Workshop2_Demo_SeminarAttendance.xlsx`: 30 rows of monthly seminar attendance and catering cost, three departments. Job C.
+- `Workshop2_Demo_SeminarAttendance.xlsx`: 60 rows of monthly seminar attendance and catering cost for six units (EOH, Epi & Biostat, HMP, CHP, UHC, A.J. Drexel Autism Institute). Job C.
 - `Workshop2_Demo_Abstracts.docx`: three short fictional abstracts, for Activity 2 if someone has no task.
 
 Before the session:
@@ -101,7 +101,7 @@ Built-in teaching moments:
 
 - **Job A (find what's missing):** the study description has aims, methods, products, and partners, but no timeline, budget, sample size, team roles, or plan for privacy in street imagery. Ask people to post one gap the AI found in the chat, and whether it's real. This is AI as an editor: it lists gaps; the author decides what to add.
 - **Job B (reply from your outline):** the person supplies the two points; AI only turns them into sentences. Check whether the reply added anything they didn't say. Also: the accreditation crosswalk was flagged and put on the September agenda, with no owner. Ask: "Decision, action item, or open question?" Summaries often file it wrong.
-- **Job C:** 8 of 30 rows have cost per attendee over $12 (Oct EOH and HMP; Dec EOH and HMP; Jan HMP; all three in June). Nov HMP is exactly $12.00 ($300 ÷ 25). A formula using `>` won't flag it; `>=` will. A good moment to show why you check the formula, not just the answer.
+- **Job C:** 17 of 60 rows have cost per attendee over $12: Oct EOH, HMP, and Autism Institute; every unit in Dec except Epi & Biostat; Jan HMP, CHP, and Autism Institute; all six in June. Nov HMP is exactly $12.00 ($300 ÷ 25). A formula using `>` won't flag it; `>=` will. A good moment to show why you check the formula, not just the answer. For "what stands out?": attendance dips in December and January and is lowest in June in every unit; Epi & Biostat and UHC draw the most people.
 
 ### Slide 19: Activity 2
 

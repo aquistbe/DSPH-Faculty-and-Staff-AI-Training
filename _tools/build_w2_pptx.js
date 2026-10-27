@@ -197,7 +197,7 @@ cardRow(s, [
 // 16-19 Worked examples and Activity 2
 imageSlide(16, 'Find what is missing: the description has aims, methods, products, and partners, but no timeline, budget, sample size, team roles, or plan for privacy in street imagery. Ask people to post one gap in the chat and whether it is real. AI lists gaps; the author decides what to add.');
 imageSlide(17, 'The person supplies the two points; AI only turns them into sentences. Did the reply add anything they did not say? The accreditation crosswalk was put on the September agenda with no owner: decision, action item, or open question?');
-imageSlide(18, '8 of 30 rows are over $12 per attendee (Oct EOH and HMP; Dec EOH and HMP; Jan HMP; all three in June). Nov HMP is exactly $12.00: a formula with > will not flag it, >= will. Check the formula, not just the answer.');
+imageSlide(18, '17 of 60 rows are over $12 per attendee: Oct EOH, HMP, and Autism Institute; all of Dec except Epi & Biostat; Jan HMP, CHP, and Autism Institute; all six in June. Nov HMP is exactly $12.00 ($300 ÷ 25): a formula with > will not flag it, >= will. Check the formula, not just the answer.');
 imageSlide(19, 'Hold people to step 1: a plan before AI. Ask them to type "plan done" in the chat before opening AI. Routine task: recipe 1. Expertise or high stakes: write it, then recipe 2. Everyone saves at least one recipe before leaving.');
 
 // 20 Wrap-up

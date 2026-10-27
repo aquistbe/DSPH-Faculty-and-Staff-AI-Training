@@ -187,7 +187,7 @@ Upload [Workshop2_Demo_EmailThread.docx](demo-materials/Workshop2_Demo_EmailThre
 
 #### Job C --- Make sense of a spreadsheet
 
-Upload [Workshop2_Demo_SeminarAttendance.xlsx](demo-materials/Workshop2_Demo_SeminarAttendance.xlsx) (fictional monthly seminar attendance and catering cost for three departments), then type:
+Upload [Workshop2_Demo_SeminarAttendance.xlsx](demo-materials/Workshop2_Demo_SeminarAttendance.xlsx) (fictional monthly seminar attendance and catering cost for six units: EOH, Epi & Biostat, HMP, Community Health & Prevention, the Urban Health Collaborative, and the A.J. Drexel Autism Institute), then type:
 
 1. *"Summarize this data. What stands out?"*
 2. *"Write an Excel formula for a new column E that says 'Over' when cost per attendee is more than $12. Tell me how to copy it down."*
