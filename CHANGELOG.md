@@ -14,6 +14,82 @@ that forced the change.
 
 ---
 
+## 2026-10-27 — Source check of everything not previously verified
+
+The 2026-10-15 refresh had not been checked against its sources. Every figure it added or changed
+was checked today against the primary source (web search, plus Scite, Consensus and Elicit for
+papers). Most held up. These did not:
+
+### Corrected: wrong
+
+- **Hugging Face AI Energy Score v2.** "Reasoning mode averages ~30x the energy of the same models
+  with reasoning off" → the 30x compares **reasoning models with non-reasoning models**; the same
+  model with reasoning switched on used **150-700x** more (154x, 514x, 697x in the post's table).
+- **Astekin et al. (arXiv 2610.03010).** "Worst case 160x" was presented as energy; it is a
+  **runtime slowdown**. Now: ~6.4x the energy, ~6x longer, worst-case slowdowns of 160x.
+- **California.** "AB 1577 … requires reporting of energy, PUE, water consumption and water-use
+  effectiveness." Enacted AB 1577 covers energy and PUE reporting to the California Energy
+  Commission; **water reporting is a separate bill, AB 2619**. "Effective 2027" removed (not
+  confirmed from the bill text). Sources: Governor's office, Sept 21, 2026; Mayer Brown; Ballard Spahr.
+- **"Energy per successful goal" (arXiv 2605.22883).** The 4.3x figure is from **v1 (May 2026)**.
+  **v2 (Oct 12, 2026)** covers nine task families and reports 0.35-11.07x (CPU only) or 0.4-26.48x
+  (with GPU). Both are now described.
+- **Epoch AI utilization.** "Epoch publishes no utilization assumption" → Epoch's page says average
+  draw is **"typically 60-80% of capacity"**; the tool's naive example in fact uses that range.
+  Epoch's 90% interval is **23-81%**, not 23-82%, as of Oct 13, 2026.
+- **Multiplier caveat.** "Those 10-100x figures come from reasoning-mode frontier models measured
+  through APIs" → the MIT Technology Review ~60x compares non-reasoning Llama 3.1 8B and 405B on
+  research hardware; only Jegham's figures are reasoning-mode API estimates.
+- **Watershed / Bistline "50-500 Wh per agentic workflow."** Not in the linked Heatmap article,
+  and Watershed's framework (arXiv 2608.06733) reports per million tokens, not per task. Removed;
+  the agentic-task range is still bracketed by Couch (~41 Wh) and Masley (~459 Wh).
+
+### Corrected: wording or precision
+
+- Jegham et al.: DeepSeek-R1's 29 Wh is **on DeepSeek's own servers** (7.4 Wh on Azure).
+- Oviedo et al.: "adjacent model sizes" → **a 70B and a 405B model** (0.09 vs 0.39 Wh, ~4x).
+- Luo et al. (2609.29707): the 41-45% GPU-telemetry gap is **across agentic, reasoning and
+  batched-serving workloads**, not agentic only.
+- "Lights, Camera, Carbon" (2607.04553): author order **Jegham, Gamazaychikov & Luccioni**; "under
+  review" → **preprint, not peer-reviewed**. ML.ENERGY v3.0 post dated **January 2026**, not Dec 2025.
+- Hausfather: the double-counting was in a naive sum of the logs (~2.2x) and an AI-assisted first
+  pass, not Claude Code's own counters.
+- EIA pilot surveys: "do not collect water" → **focus on energy rather than water** (the
+  questionnaire covers cooling systems).
+- LBNL: the ~168 TWh restatement for 2023 is **implied** (192 TWh ÷ 1.14), not stated.
+- Microsoft: total emissions **+27%** under the GHG Protocol (market-based); +25% under Microsoft's
+  own criteria.
+- CRS report: it **cites** LBNL's direct-water figure and an estimate that public systems supplied
+  ~97% of on-site water; it did not independently confirm them.
+- Bloomberg Intelligence: Arizona AI projects **under construction**, not "planned."
+- Google totals: "over the same stretch" → **the same period (calendar 2024-2025)**.
+
+### Corrected: internal consistency (found during the check)
+
+- **Everyday carbon.** Laundry 100/175/500 g → **105/315/805 g**; one hour of air conditioning
+  350/1,000/1,500 g → **175/525/1,225 g**; phone charge 2/7/12 g → **4/5/7 g**. All now equal energy ×
+  350 gCO2e/kWh, the tool's stated factor (they had been set by hand in the 2026-08-13 carbon update).
+  The kettle's range is now labeled as grid mix.
+- **Household electricity.** "About 10,500 kWh a year" → **10,791 kWh (2022), about 900 kWh a
+  month**, matching EIA FAQ 97 and the per-capita figure elsewhere in the tool.
+
+### Confirmed (no change)
+
+Oviedo et al. figures and the "estimated" wording; GPT-5 2.33 vs 17.15 Wh; Hausfather's figures;
+video energy (57.5-114.8 Wh; ~1,313 Wh Sora 2 Pro); Alpine et al. "net"; Ye, Tol & Wang; Chen et
+al.; Amazon; Alphabet Q2 tokens; OpenRouter; Ceres electricity-water; Llama 4 model card; Harvard
+preprint flag; LBNL 2025 +22%.
+
+### Not resolved
+
+- OpenAI DevDay 2026 "1.2 billion weekly users" (page returned 403; only secondary confirmation) and
+  NBER w34255 daily-message figure (abstract doesn't state it). Both pre-date the October refresh.
+- Google's 10.9 billion gallons (+34%) is confirmed only by secondary coverage so far.
+- Epoch's August snapshot (78 sites, 12.1 GW) doesn't match the Aug 12 archive (80 sites, 12.4 GW);
+  likely an earlier-August retrieval.
+
+---
+
 ## 2026-10-27 — New module: "Data centers: how much of it is AI?"
 
 Added after "Zooming out: the aggregate numbers." Data centers are a major public concern, but much
