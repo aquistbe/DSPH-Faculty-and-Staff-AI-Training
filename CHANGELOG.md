@@ -45,8 +45,91 @@ so both the new module and the aggregate Phoenix card now say "as planned facili
 module also notes that water-policy experts (ASU Kyl Center, quoted in *Phoenix New Times*) have
 questioned the study's assumptions.
 
-The 2026-10-15 data refresh (US electricity, video, token-volume, Phoenix and hyperscaler updates)
-is in git history but does not yet have its own entry here.
+---
+
+## 2026-10-15 — Data refresh through October 2026
+
+A pass against newer primary sources. Several figures were superseded, one Phoenix figure was
+replaced because it could not be traced to a primary source, and a number of descriptions were
+corrected to say "estimated" where the source is a model rather than a measurement. (This entry was
+written on 2026-10-27 from the commit, 4fbb168.)
+
+### Superseded by newer data
+
+- **US data-center electricity.** 176 TWh in 2023 (4.4%), 325-580 TWh by 2028 (LBNL, Dec 2024) →
+  **192 TWh in 2024 (4.7%); 649 TWh by 2030 (11.8%), range 521-843 TWh**, with AI servers projected
+  at 55% of data-center electricity by 2030. Source: LBNL, *United States Data Center Energy Usage
+  Report: 2025 Update* (Smith et al.), June 2026, which also restates 2023 to about 168 TWh. Why: a
+  newer edition of the same report.
+- **One AI video clip.** 30 / 940 / 3,000 Wh (low/mid/high), from one academic model (CogVideoX,
+  MIT Technology Review 2025) → **57.5 / 115 / 1,313 Wh**; the label is now "one short AI video
+  clip." Source: Gamazaychikov, Jegham & Luccioni, "Lights, Camera, Carbon," arXiv 2607.04553
+  (July 2026, preprint): 57.5-114.8 Wh for a 5-second clip on current open models; the high end is
+  the same team's estimate for one 12-second Sora 2 Pro clip, inferred from generation time. Water
+  and carbon rescaled from energy. Why: the old figure came from an older model on academic hardware;
+  the new one covers current models. Still flagged low-confidence.
+- **OpenRouter token volume.** "~1.5 quadrillion tokens a year run rate (May 2026), ~15x in a year"
+  (Menlo Ventures analysis) → **25 trillion tokens a week (May 2026), 5x in six months, ~1.3
+  quadrillion a year annualized**. Source: OpenRouter's own Series B announcement (May 2026, updated
+  Aug 2026). Why: a first-party figure replaces a third-party analysis.
+- **Model-size multiplier.** The example pair changed from o3/DeepSeek-R1 >33 Wh vs GPT-4.1 nano
+  ~0.47 Wh (>70x) → **DeepSeek-R1 29 Wh vs Llama 3.1 8B 0.44 Wh (>65x)**, from the Nov 2025 revision
+  of Jegham et al.; and the production-serving comparison from "~3-5x, frontier 0.31 vs Llama 70B
+  0.09 Wh" → **~4x, Llama 3.1 405B 0.39 Wh vs 70B 0.09 Wh** (Oviedo et al., *Joule* 2026). Why: the
+  revised paper changed its numbers, and the old pairing compared different model families. The
+  slider values (3 / 50 / 100x) did not change.
+- **Epoch AI data-center dataset.** 78 sites, 12.9 million H100-equivalents, 12.1 GW (Aug 2026) →
+  **94 sites, 14.6 million H100e, 14.1 GW (Oct 2026)**, with Epoch's coverage estimate revised from
+  27% to **44% of global AI compute (90% interval 23-82%)**. The worked "capacity is not
+  consumption" example still uses the August snapshot and says so.
+
+### Replaced: could not be traced to a primary source
+
+- **Phoenix water.** "Roughly 3% of the region's water today, could exceed 20% by 2031" (WSJ,
+  July 2026) → **~385 million gal/yr of on-site cooling water, projected to more than 3.7 billion
+  (+870%); electricity-related water ~2.9 → more than 14.5 billion gal**, from Ceres, *Drained by
+  Data* (Sept 2025), plus Bloomberg Intelligence (Oct 13, 2026): planned Arizona AI projects at ~5
+  billion gal/yr on site, about 4.5% of Phoenix's current water production. Why: the WSJ percentages
+  had no traceable primary source. (The "within about six years" timeframe added here was itself
+  unsupported and was removed on 2026-10-27; see above.)
+
+### Corrected wording or framing
+
+- **Google totals.** "Data-center electricity rose 27% and 37%" → **total electricity use**; and
+  "greenhouse-gas emissions rose 18%, its largest increase" → **operational emissions fell 2%, but
+  supply-chain emissions rose 25%**. Source: Google Environmental Report 2026. Why: the old wording
+  misdescribed what the report measures.
+- **"Measured" → "estimated"** for Oviedo et al. (*Joule* 2026): the 0.31 Wh median and the 3.91 Wh
+  reasoning median come from a bottom-up model built from token throughput, node power and overhead,
+  not meter readings. The DeepSeek-R1 note now says 10.6 Wh is that model's **median** in reasoning
+  mode, not its single heaviest case.
+- **Hausfather agentic day.** "~3.0 kWh per working day" → **per average day of use**, matching the
+  source.
+- **Alpine et al. (enabled emissions).** Now states that the 0.47-1.8 Gt CO2/yr is a **net** figure,
+  after AI's productivity gains in renewables are netted off.
+- **"Energy per successful goal" (arXiv 2605.22883).** "On small models, ~4.3x a linear baseline" →
+  **across eight task families, ~4.3x, although on tool-heavy tasks the agentic version was
+  cheaper**.
+
+### Added
+
+- **Microsoft and Amazon card.** Microsoft electricity +24%, water +22%, total emissions +25%
+  (fiscal year to June 2025); Amazon carbon footprint +16%, purchased-electricity emissions +34%,
+  data-center water withdrawal 9.4 billion liters (2025). Sources: Microsoft 2026 Environmental Data
+  Fact Sheet; Amazon 2025 Sustainability Report.
+- **A third AI-share estimate.** Chen et al., *Communications Sustainability* (Sept 2026): six large
+  companies, ~118 TWh in 2024, 239-295 TWh by 2030 (about 1% of world demand).
+- **Google token volume.** Model APIs alone at ~22 billion tokens a minute by July 2026 (Alphabet
+  Q2 2026 earnings).
+- **Llama 4.** Meta's Llama 4 model card again reports 0 t CO2e market-based vs 1,999 t
+  location-based.
+- **What we don't know.** Microsoft's modelled 0.31 Wh is for generic frontier models, not a
+  measured Copilot figure; OpenAI's only number is an unsourced 0.34 Wh in a CEO blog post (June
+  2025); GPU-only telemetry missed 41-45% of system energy in agentic workloads (Luo et al., 2026);
+  EIA began voluntary data-center energy pilot surveys in March 2026 (no water); California enacted
+  reporting requirements in September 2026 (AB 1577, effective 2027).
+- **Preprint flags.** The Harvard water study (arXiv 2607.02531) is now marked "preprint, not yet
+  peer-reviewed."
 
 ---
 
