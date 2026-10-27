@@ -1,0 +1,44 @@
+---
+title: "Everyday Tools Track"
+---
+
+::: {.topic-badges}
+Self-paced track · 3 topics · novice
+:::
+
+[← All self-paced tracks](../tracks.qmd){.track-back}
+
+AI features already built into the tools you use every day at Drexel: Outlook, Zoom, and Acrobat. You don't need a new account or a new app. Each topic shows what the feature does, how to check its output, and when to leave it off. Every page assumes you've done **[Core 1](../workshop1.qmd)** (prompting and the Drexel data rules).
+
+These tools carry different Drexel data classifications. Copilot Chat signed in with your Drexel account is approved for High Risk Data. Zoom AI Companion is High Risk only when the meeting is not recorded or transcribed. Acrobat AI Assistant is Moderate Risk. Each page explains what that means for real work.
+
+## Difficulty levels
+
+[Novice]{.level-badge .level-novice} &nbsp; getting started — no prior experience needed.
+[Moderate]{.level-badge .level-moderate} &nbsp; comfortable with some AI use.
+[Advanced]{.level-badge .level-advanced} &nbsp; experienced users going deep.
+
+## Topics
+
+| # | Topic | Level | You'll be able to… |
+|---|-------|-------|--------------------|
+| 1 | [Copilot for Email in Outlook](copilot-email.qmd) | [Novice]{.level-badge .level-novice} | Summarize threads, draft replies, and check tone with Copilot Chat in Outlook |
+| 2 | [Zoom AI Companion for Meetings](zoom-ai-companion.qmd) | [Novice]{.level-badge .level-novice} | Summarize meetings, catch up mid-meeting, and know when to leave it off |
+| 3 | [Acrobat AI Assistant for Long Documents](acrobat-ai-assistant.qmd) | [Novice]{.level-badge .level-novice} | Question long PDFs and check every answer against the cited passage |
+
+## Not sure where to start?
+
+Answer a few questions to find your starting point in this track.
+
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions":[{"q":"Copilot summarizes an email thread and lists a change as 'decided.' The thread said it was 'pending registrar confirmation.' What happened?","options":["The summary dropped a qualifier, a common error in AI summaries","The summary is correct","The thread was too long to summarize","Copilot can't read email threads"],"answer":0,"explain":"Checking summaries against the source is the core skill in this track. If you already do this, pick the tool you use most. If not, start at topic 1 (Copilot for Email)."},{"q":"When is Zoom AI Companion approved for High Risk Data at Drexel?","options":["When the meeting is not recorded or transcribed","Always","Only when the meeting is recorded","Never"],"answer":0,"explain":"Drexel lists AI Companion as High Risk Data when not recorded or transcribed, and Low Risk Data when it is. If that's new to you, read topic 2 (Zoom AI Companion) before your next meeting."},{"q":"Acrobat AI Assistant tells you an application is limited to 12 pages. What's the fastest way to check?","options":["Click the citation and read the linked passage","Ask the same question again","Trust it, since it read the document","Search the web"],"answer":0,"explain":"Linked citations are what make Acrobat AI Assistant useful. If you already check them every time, skim topic 3 (Acrobat AI Assistant) for the comparison and checklist activities."}]}
+</script>
+</div>
+
+::: {.callout-warning}
+## Data rules apply throughout
+Use **public or non-sensitive** data for every practice activity. For real work, match the content to each tool's Drexel data classification. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+:::
+
+{{< include /_feedback-track.qmd >}}

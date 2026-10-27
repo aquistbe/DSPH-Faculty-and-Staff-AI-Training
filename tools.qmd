@@ -19,7 +19,7 @@ Drexel's official hub is **[AI at Drexel](https://drexel.edu/provost/ai)** (Offi
 |------|---------------|----------------------------|----------|
 | **ChatGPT Edu** | Faculty, staff, and students, Drexel workspace | Governed by **Drexel ChatGPT Edu Terms of Use** | Writing, summarizing, analysis, custom GPTs |
 | **Microsoft Copilot Chat with Enterprise Data Protection** | Students, faculty, and staff | **High Risk Data** when signed in with Drexel account; **Low Risk Data** otherwise | Web-based AI chat, drafting, summarizing |
-| **Microsoft 365 Copilot** | Faculty and staff, extra-cost license | **High Risk Data** | Word, Excel, PowerPoint, Outlook, Teams |
+| **Microsoft 365 Copilot** (the paid Copilot inside Word, Excel, PowerPoint, Outlook, Teams) | **Not currently provided by Drexel** | n/a | Use Copilot Chat instead: paste or upload your content |
 | **Zoom AI Companion** | Faculty, staff, and students | **High Risk Data** when not recorded/transcribed; **Low Risk Data** when recorded/transcribed | Meeting summaries, recaps, action items |
 | **Adobe Acrobat AI Assistant / PDF Spaces** | Faculty, staff, and students | **Moderate Risk Data** | PDF summarizing, Q&A, cited answers |
 | **Adobe Creative Cloud / Express with Firefly** | Faculty, staff, and students; some licenses are extra cost | **Moderate Risk Data** | Graphics, infographics, communication visuals |
@@ -41,7 +41,7 @@ Regulated or sensitive information --- PHI, non-directory PII, confidential HR i
 - **ChatGPT Edu --- yes.** Students were added in August 2026; sign in with your Drexel account.
 - **Copilot Chat with Enterprise Data Protection --- yes.** Sign in with your Drexel account and confirm EDP is active.
 - **Zoom AI Companion and the Adobe AI tools --- yes**, at the classifications listed in the table above.
-- **Microsoft 365 Copilot inside Word, Excel, PowerPoint, Outlook, and Teams --- no.** That is an extra-cost faculty/staff license. Use **Copilot Chat in the browser** instead and paste your text in; every Copilot Chat prompt in these sessions works that way.
+- **Microsoft 365 Copilot inside Word, Excel, PowerPoint, Outlook, and Teams --- no.** Drexel does not currently provide this license to anyone. Use **Copilot Chat in the browser** instead and paste or upload your content; every Copilot Chat prompt in these sessions works that way.
 - **Two Edu-workspace features have low-fidelity substitutes** if something isn't enabled for you: a **saved instruction block in a note** that you paste at the top of a chat does roughly what a **custom GPT** does (you re-paste it each time instead of it being built in), and a **shared OneDrive folder** of files and a written instruction doc does roughly what a **shared Project** does (the AI won't read the folder itself---you attach the files each session).
 - Your **course AI policies come from your instructors**, not from this site — and that includes the **APE** and the **ILE/capstone**, where the supervising instructor, advisor, or preceptor sets the rules. Drexel's [generative AI and teaching guidance](https://drexel.edu/teaching-and-learning/resources/teaching-tech/GAI-and-teaching/) is instructor-level guidance, not a university-wide policy. Read the syllabus first; these tools don't override it.
 
@@ -66,23 +66,22 @@ Use is governed by the [Drexel ChatGPT Edu Terms of Use](https://servicedesk.dre
 
 ## Microsoft Copilot
 
-Drexel provides two Copilot experiences that matter for this training: **Copilot Chat with Enterprise Data Protection** and **Microsoft 365 Copilot** integrated into Word, Excel, PowerPoint, Outlook, and Teams. We will use both where available.
+Drexel provides **Copilot Chat with Enterprise Data Protection** to faculty, staff, and students. Drexel does **not** currently provide the paid **Microsoft 365 Copilot** license, so the Copilot features built into Word, Excel, PowerPoint, and Teams are not available. In these sessions, you paste or upload content into Copilot Chat instead.
 
 **What it gives you**
 
 - Web-based Copilot Chat for secure drafting, summarizing, and brainstorming when signed in with a Drexel account
-- Draft and rewrite in Word; summarize long documents
-- Summarize email threads and draft replies in Outlook
-- Generate formulas, summarize, and analyze in Excel
-- Recap meetings and action items in Teams
+- Summarize, rewrite, and make tables from text or files you paste or upload
+- In Outlook, the free **Summarize** button on email threads and the **Copilot** pane for drafting and feedback (the paid "Draft with Copilot" and "Coaching by Copilot" buttons are not available)
+- Help with Excel formulas and data questions when you paste the data or upload the file into Copilot Chat
 
 **How to get access**
 
-Sign in with your Drexel account. For Copilot Chat, confirm that Enterprise Data Protection is active before using it with Drexel content. For Word, Excel, PowerPoint, Outlook, and Teams integration, confirm that you have the Microsoft 365 Copilot license enabled.
+Sign in with your Drexel account at [m365.cloud.microsoft/chat](https://m365.cloud.microsoft/chat) or open the Copilot pane in Outlook. Confirm that Enterprise Data Protection is active before using it with Drexel content.
 
 **Data rules**
 
-Drexel's AI Tools page lists Copilot Chat with Enterprise Data Protection as usable with **High Risk Data** when signed in with a Drexel account, and **Low Risk Data** otherwise. Microsoft 365 Copilot is listed as usable with **High Risk Data** for faculty and staff with the extra-cost license. Note: since April 2026, the in-app Copilot button in Word, Excel, and PowerPoint requires the paid Microsoft 365 Copilot license — without it, use Copilot Chat in the browser or Outlook instead ([details](https://servicedesk.drexel.edu/TDClient/277/Portal/KB/Article/20230)). Do not use a personal Microsoft account for Drexel work.
+Drexel's AI Tools page lists Copilot Chat with Enterprise Data Protection as usable with **High Risk Data** when signed in with a Drexel account, and **Low Risk Data** otherwise. Since April 2026, the in-app Copilot button in Word, Excel, and PowerPoint requires the paid Microsoft 365 Copilot license, which Drexel does not currently provide. Use Copilot Chat in the browser or Outlook instead ([details](https://servicedesk.drexel.edu/TDClient/277/Portal/KB/Article/20230)). Do not use a personal Microsoft account for Drexel work.
 
 ## Zoom AI Companion (Meetings)
 

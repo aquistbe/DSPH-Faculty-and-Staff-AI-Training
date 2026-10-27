@@ -1,0 +1,174 @@
+---
+title: "AI for Slides & Presentations"
+---
+
+::: {.topic-badges}
+[Novice]{.level-badge .level-novice} · **Communication & Dissemination** track · ~45 min hands-on + quiz
+:::
+
+[← Back to the Communication & Dissemination track](communication.qmd){.track-back}
+
+*Build the same presentation three ways, compare the results, and choose the right tool for the content and the data.*
+
+## What you'll be able to do
+
+- Turn an outline or document into a first-draft slide deck with an AI tool
+- Compare three routes on the same content: Copilot Chat plus PowerPoint Designer, Adobe Express, and Claude Design
+- Pick a tool based on what's in the slides, not just how they look
+- Check an AI-built deck for wrong numbers, invented content, and accessibility problems
+
+## Overview
+
+AI slide tools are good at structure and layout: turning an outline into slides, suggesting designs, and making a deck look consistent. They are weak at substance. They pad slides with generic claims, invent statistics, and choose images that look right and mean nothing. Use them to get to a clean first draft, then do the part that matters yourself.
+
+**Which tool depends on what's in the slides:**
+
+| Tool | Drexel data rule | Best for | Notes |
+|---|---|---|---|
+| **Copilot Chat** (Drexel account) | High Risk Data when signed in with your Drexel account | Outlines, slide text, and speaker notes for internal decks | Writes the content; you paste it into PowerPoint. Copilot inside PowerPoint needs the paid Microsoft 365 Copilot license, which Drexel does not provide. |
+| **PowerPoint Designer** | Part of Drexel's Microsoft 365 | Layouts for slides you've already written | Not Copilot, and available to everyone. Suggests layouts, not content. |
+| **Adobe Express** | Moderate Risk Data | Public-facing talks, event and outreach presentations | Strong templates and images; approved by Drexel. |
+| **Claude Design** (and similar tools such as Gamma) | **Low Risk Data only**; not Drexel-supported | Talks on published or public material | Often the most polished design. Never use it for internal, student, or unpublished research content. |
+| **ChatGPT Edu** | Drexel ChatGPT Edu terms | Outlines, speaker notes, and restructuring | Can create a basic .pptx file, but design is plain. Best used to write the outline you feed to another tool. |
+
+## Practice activities
+
+Every activity uses the same public outline, built from published pedestrian-safety statistics. Verify the numbers against the original sources before you use them in a real talk.
+
+> **Title:** Why Pedestrian Deaths Are Rising in U.S. Cities
+>
+> 1. The trend: U.S. pedestrian deaths rose about 18% from 2018 to 2022, the highest level since 1981.
+> 2. Where: most deaths occur in urban areas, often on wide, fast arterial roads without sidewalks or crosswalks.
+> 3. Who: Black and Hispanic pedestrians and adults 65 and older die at higher rates.
+> 4. What works: road redesign (road diets, curb extensions, lower speed limits) has stronger evidence than education campaigns.
+> 5. What's next: federal Safe Streets and Roads for All funding, and the local match barrier for under-resourced communities.
+> 6. Call to action: prioritize street design in Vision Zero plans.
+
+```{=html}
+<details class="activity"><summary>Activity 1 · Novice — Write the slides in Copilot Chat, then lay them out with Designer</summary>
+```
+
+**Time** ~15 min · **Tools** Copilot Chat (Drexel account) or ChatGPT Edu, and PowerPoint with Designer
+
+**Goal.** Build the deck with Drexel's own tools: AI writes the slide text, you paste it into PowerPoint, and Designer handles the layout.
+
+**Steps.**
+
+1. Open [Copilot Chat](https://m365.cloud.microsoft/chat) signed in with your Drexel account (or ChatGPT Edu) and type:
+
+   > Turn this outline into slide text for a 7-slide presentation: a 15-minute talk to city planners. One title slide, then one slide per point. For each slide, give a title, no more than 4 short bullet points, and speaker notes with what to say. Use only the facts in the outline.
+
+   Paste the outline after the prompt.
+2. Open a blank presentation in PowerPoint. Paste each slide's title and bullets into a new slide, and the speaker notes into the **Notes** pane.
+3. On each slide, open **Design → Designer** and pick a layout.
+4. Save the deck as `version-powerpoint.pptx`.
+
+**Expected result.** A working deck built entirely in Drexel-approved tools, with a plainer look than the other two versions.
+
+**Check your work.** Did the AI add statistics or claims that weren't in the outline? Check every number before you paste it in.
+
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 2 · Novice — Build the deck in Adobe Express</summary>
+```
+
+**Time** ~15 min · **Tools** Adobe Express (Drexel account)
+
+**Goal.** See how a design-focused, Drexel-approved tool handles the same content.
+
+**Steps.**
+
+1. Sign in to Adobe Express with your Drexel account and start a new **presentation**.
+2. Pick a template, or use the generative option and describe the talk: "15-minute talk for city planners on rising pedestrian deaths, clean and serious, data-focused."
+3. Paste the outline content into the slides. Replace any stock images that are misleading (for example, a suburban sidewalk for a slide about urban arterials).
+4. Export as PowerPoint or PDF and save as `version-express`.
+
+**Expected result.** A more visually polished deck. Watch how much time goes into fixing template placeholder text and images.
+
+**Check your work.** Look at every image and ask whether it shows what the slide claims. Generated or stock images of "pedestrians" often misrepresent the setting and the people most affected.
+
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 3 · Novice — Build the deck in Claude Design (public content only)</summary>
+```
+
+**Time** ~15 min · **Tools** Claude Design (personal or PI-purchased Claude account; **Low Risk Data only**)
+
+**Goal.** See what a leading non-Drexel design tool produces, and why the data rule limits where you can use it.
+
+**Steps.**
+
+1. Open Claude Design and describe the deck:
+
+   > A 7-slide presentation for city planners on rising U.S. pedestrian deaths. Serious, clean, data-forward. One title slide, then one slide per outline point, with a simple chart for the trend on slide 2. Short text; the speaker will do the talking.
+
+   Paste the outline.
+2. Ask for one revision, for example: "Make the chart show only the 2018 and 2022 values, labeled."
+3. Export to PowerPoint or PDF and save as `version-claude`.
+
+**Expected result.** Often the most polished of the three. It may also be the most likely to add a chart with numbers you didn't provide.
+
+**Check your work.** Check every value in any chart it draws. If you gave it two data points, a chart with ten is invented.
+
+**Common pitfalls.** It is easy to paste something internal into a tool this convenient. Claude is Low Risk Data only: public, published material. No internal Drexel documents, student information, unpublished results, or draft grant content.
+
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 4 · Novice — Compare and check the three versions</summary>
+```
+
+**Time** ~10 min · **Tools** The three decks
+
+**Goal.** Choose a tool for your next real presentation.
+
+**Steps.**
+
+1. Put the three decks side by side. For each, note: time to a usable draft, number of factual fixes needed, number of image fixes needed, and how it looks.
+2. Run PowerPoint's **Review → Check Accessibility** on each. Look for missing alt text, low color contrast, and slides without titles.
+3. Decide which tool you'd use for (a) an internal department update, (b) a conference talk on published results, and (c) a community presentation.
+
+**Expected result.** A tool choice driven by the content and data rules first, and design second. For internal content, that means Copilot Chat with PowerPoint, or Adobe Express.
+
+```{=html}
+</details>
+```
+
+## Check your readiness
+
+Answer these, then check — your score suggests whether to dive in or skim the activities first.
+
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions": [{"q": "You need slides for an internal budget update to the department. Which tool fits the data rules?", "options": ["Copilot Chat for the slide text and PowerPoint Designer for layout, or Adobe Express", "Claude Design, because it looks best", "Any tool, since slides aren't sensitive", "A personal ChatGPT account"], "answer": 0, "explain": "Internal budget information isn't public. Use Drexel-approved tools: Copilot Chat signed in with your Drexel account (High Risk Data) with PowerPoint Designer, or Adobe Express (Moderate Risk Data). Claude Design and similar consumer tools are Low Risk Data only."}, {"q": "An AI tool adds a chart with ten years of data. You gave it two numbers. What do you do?", "options": ["Remove or replace the chart; the other eight values are invented", "Keep it; the tool must have found the data", "Keep it but add a footnote", "Ask the tool if the numbers are real"], "answer": 0, "explain": "AI slide tools fill gaps with plausible-looking numbers. Every value on a slide needs a source you checked."}, {"q": "What's the most common problem with AI-chosen images in public health slides?", "options": ["They look right but misrepresent the setting or the people affected", "They are too large", "They are always copyrighted", "They slow down the presentation"], "answer": 0, "explain": "Check every image against what the slide claims, especially images of communities and people."}]}
+</script>
+</div>
+
+## Useful resources
+
+- [Drexel AI Tools page](https://drexel.edu/provost/ai/tools) — approved tools and data classifications.
+- [Design & Visual Communication](design-visual-communication.qmd) — infographics and choosing design tools by data level.
+- [Verifying AI Output](verifying-output.qmd) — checking numbers and claims.
+
+---
+
+## Navigate
+
+**Back to track overview:** [Communication & Dissemination](communication.qmd)
+
+**Related topics:** [Design & Visual Communication](design-visual-communication.qmd) · [Science Communication](science-communication.qmd) · [Verifying AI Output](verifying-output.qmd)
+
+::: {.callout-warning}
+## Data rules
+Match the tool to what's in the slides. Copilot Chat signed in with your Drexel account is approved for High Risk Data; Adobe Express for Moderate Risk Data; Claude Design and other consumer tools for Low Risk Data only. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+:::
+
+{{< include /_feedback-track.qmd >}}

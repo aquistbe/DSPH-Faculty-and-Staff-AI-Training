@@ -22,7 +22,7 @@ You manage schedules, budgets, reports, events, accreditation documents, and com
 | Order | Topic | Type | Why it matters for you |
 |-------|-------|------|----------------------|
 | 1 | [Core 1: Foundations](workshop1.qmd) | Core session | Prompting basics and data rules — **start here** |
-| 2 | [Core 2: Workflow Enhancement](workshop2.qmd) | Core session | Copilot in Word, Outlook, Excel for daily tasks |
+| 2 | [Core 2: Workflow Enhancement](workshop2.qmd) | Core session | Summarize, rewrite, and make tables with ChatGPT Edu and Copilot Chat; save reusable prompts |
 | 3 | [Copilot for Email in Outlook](tracks/copilot-email.qmd) | Self-paced | Summarize threads, draft replies, and check tone where your email already lives |
 | 4 | [Data Security & Classification](tracks/data-security-classification.qmd) | Self-paced | You handle student records, budgets, and HR data — classification matters |
 | 5 | [Verifying AI Output](tracks/verifying-output.qmd) | Self-paced | Catch errors before they reach a report or accreditation document |
@@ -75,9 +75,10 @@ You design courses, write syllabi, create assignments, advise students, and comm
 | 5 | [AI for Curriculum Development](workshop6.qmd) | Elective | Assignment design and AI policies for your courses |
 | 6 | [Writing Your Course AI Policy](tracks/course-ai-policy.qmd) | Self-paced | A clear, enforceable policy for your syllabus |
 | 7 | [Assignment & Assessment Design](tracks/assignment-assessment-design.qmd) | Self-paced | Assignments that work with or despite AI |
-| 8 | [Responsible AI](tracks/responsible-ai.qmd) | Self-paced | Disclosure norms — for you and your students |
-| 9 | [AI Bias & Health Equity Audit](tracks/bias-equity-audit.qmd) | Self-paced | Teach students to test AI across groups |
-| 10 | [Multilingual Materials](tracks/multilingual-materials.qmd) | Self-paced | Translate and adapt materials for diverse learners |
+| 8 | [Setting Up Your Course with AI](tracks/course-setup-canvas.qmd) | Self-paced | Groups from a survey and bulk Canvas updates, with student records de-identified first |
+| 9 | [Responsible AI](tracks/responsible-ai.qmd) | Self-paced | Disclosure norms — for you and your students |
+| 10 | [AI Bias & Health Equity Audit](tracks/bias-equity-audit.qmd) | Self-paced | Teach students to test AI across groups |
+| 11 | [Multilingual Materials](tracks/multilingual-materials.qmd) | Self-paced | Translate and adapt materials for diverse learners |
 
 ::: {.callout-tip}
 ## Teaching faculty priority
@@ -165,7 +166,7 @@ You are writing papers, reading more than anyone can read, learning methods, and
 | Order | Topic | Type | Why it matters for you |
 |-------|-------|------|----------------------|
 | 1 | [Core 1: Foundations](workshop1.qmd) | Core session | Prompting basics and the Drexel data rules — **start here** |
-| 2 | [Core 2: Workflow Enhancement](workshop2.qmd) | Core session | The Copilot Chat variants you can use as a student; the Office in-app Copilot is a faculty/staff license, so work in the browser |
+| 2 | [Core 2: Workflow Enhancement](workshop2.qmd) | Core session | Summarize readings, rewrite drafts, and make tables with ChatGPT Edu and Copilot Chat; save the prompts that work for your courses |
 | 3 | [AI in Your Coursework](tracks/ai-in-your-coursework.qmd) | Self-paced | Read your syllabus AI policies accurately, disclose specifically, and ask before you submit — do this in week one |
 | 4 | [Verifying AI Output](tracks/verifying-output.qmd) | Self-paced | A fabricated citation in a course paper is your name on it, not the model's |
 | 5 | [Keeping Your Judgment](tracks/judgment-and-offloading.qmd) | Self-paced | The skills you're here to build are exactly the ones easiest to hand away — this is the topic to read early, not late |

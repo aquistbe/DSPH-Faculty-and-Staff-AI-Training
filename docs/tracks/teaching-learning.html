@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -39,10 +42,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-185884c8c6106d4d5e21bb702d36b605.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-e5a00fd6c0fce5251246b1fbc19e77b5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -205,10 +208,10 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="topic-badges">
-<p>Self-paced track · 4 topics · novice → moderate</p>
+<p>Self-paced track · 5 topics · novice → moderate</p>
 </div>
 <p><a href="../tracks.html" class="track-back">← All self-paced tracks</a></p>
-<p>Two sides of the same classroom. Topics 1–2 are for <strong>instructors</strong>: writing a course AI policy students can actually follow, and designing assignments that build competence whether or not students use AI. Topics 3–4 are for <strong>graduate students</strong>: reading those policies accurately and disclosing use specifically, then carrying the same habits into a thesis or dissertation that will become papers and fellowship applications.</p>
+<p>Two sides of the same classroom. Topics 1, 2, and 5 are for <strong>instructors</strong>: writing a course AI policy students can actually follow, designing assignments that build competence whether or not students use AI, and setting up a course (groups, pages, due dates) with AI and the Canvas API. Topics 3–4 are for <strong>graduate students</strong>: reading those policies accurately and disclosing use specifically, then carrying the same habits into a thesis or dissertation that will become papers and fellowship applications.</p>
 <p>Read the other side. The clearest instructors are the ones who have seen what a syllabus policy looks like from the seat it’s read in, and the students who read policies best are the ones who understand how they get written. Every page assumes you’ve done <strong><a href="../workshop1.html">Core 1</a></strong> (prompting and the Drexel data rules); instructors will also want the <strong><a href="../workshop6.html">AI for Curriculum Development</a></strong> elective. ChatGPT Edu is available to Drexel faculty, staff, and students — see <a href="../tools.html">Tools &amp; Access</a> for what each group has.</p>
 <section id="difficulty-levels" class="level2">
 <h2 class="anchored" data-anchor-id="difficulty-levels">Difficulty levels</h2>
@@ -254,6 +257,13 @@ ul.task-list li input[type="checkbox"] {
 <td>Students</td>
 <td><span class="level-badge level-moderate">Moderate</span></td>
 <td>Apply the “AI critiques, never drafts” rule before a funder or journal makes it formal</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td><a href="../tracks/course-setup-canvas.html">Setting Up Your Course with AI</a></td>
+<td>Instructors</td>
+<td><span class="level-badge level-moderate">Moderate</span></td>
+<td>Form groups from a de-identified survey and update Canvas in bulk with the API</td>
 </tr>
 </tbody>
 </table>

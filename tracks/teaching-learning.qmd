@@ -3,12 +3,12 @@ title: "Teaching & Learning Track"
 ---
 
 ::: {.topic-badges}
-Self-paced track · 4 topics · novice → moderate
+Self-paced track · 5 topics · novice → moderate
 :::
 
 [← All self-paced tracks](../tracks.qmd){.track-back}
 
-Two sides of the same classroom. Topics 1–2 are for **instructors**: writing a course AI policy students can actually follow, and designing assignments that build competence whether or not students use AI. Topics 3–4 are for **graduate students**: reading those policies accurately and disclosing use specifically, then carrying the same habits into a thesis or dissertation that will become papers and fellowship applications.
+Two sides of the same classroom. Topics 1, 2, and 5 are for **instructors**: writing a course AI policy students can actually follow, designing assignments that build competence whether or not students use AI, and setting up a course (groups, pages, due dates) with AI and the Canvas API. Topics 3–4 are for **graduate students**: reading those policies accurately and disclosing use specifically, then carrying the same habits into a thesis or dissertation that will become papers and fellowship applications.
 
 Read the other side. The clearest instructors are the ones who have seen what a syllabus policy looks like from the seat it's read in, and the students who read policies best are the ones who understand how they get written. Every page assumes you've done **[Core 1](../workshop1.qmd)** (prompting and the Drexel data rules); instructors will also want the **[AI for Curriculum Development](../workshop6.qmd)** elective. ChatGPT Edu is available to Drexel faculty, staff, and students — see [Tools & Access](../tools.qmd) for what each group has.
 
@@ -26,6 +26,7 @@ Read the other side. The clearest instructors are the ones who have seen what a 
 | 2 | [Assignment & Assessment Design in the AI Era](assignment-assessment-design.qmd) | Instructors | [Moderate]{.level-badge .level-moderate} | Design assignments that develop competence whether students use AI or not |
 | 3 | [AI in Your Coursework](ai-in-your-coursework.qmd) | Students | [Novice]{.level-badge .level-novice} | Read course AI policies in good faith, disclose specifically, and ask before you submit |
 | 4 | [AI for Your Thesis or Dissertation](ai-for-your-thesis.qmd) | Students | [Moderate]{.level-badge .level-moderate} | Apply the "AI critiques, never drafts" rule before a funder or journal makes it formal |
+| 5 | [Setting Up Your Course with AI](course-setup-canvas.qmd) | Instructors | [Moderate]{.level-badge .level-moderate} | Form groups from a de-identified survey and update Canvas in bulk with the API |
 
 ## Not sure where to start?
 

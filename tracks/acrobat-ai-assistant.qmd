@@ -1,0 +1,147 @@
+---
+title: "Acrobat AI Assistant for Long Documents"
+---
+
+::: {.topic-badges}
+[Novice]{.level-badge .level-novice} · **Everyday Tools** track · ~35 min hands-on + quiz
+:::
+
+[← Back to the Everyday Tools track](everyday-tools.qmd){.track-back}
+
+*Ask questions of long PDFs (funder guidelines, accreditation criteria, policies, reports) and get answers that point back to the exact passage.*
+
+## What you'll be able to do
+
+- Summarize a long PDF and ask questions about it in Acrobat
+- Use the linked citations to check every answer against the source text
+- Compare two or more documents in one conversation
+- Recognize when an answer goes beyond what the document says
+
+## Overview
+
+Acrobat AI Assistant is available to Drexel faculty, staff, and students in Adobe Acrobat and Acrobat on the web. Drexel's AI Tools page approves it for **Moderate Risk Data**. That covers most internal documents, but not High Risk Data such as PHI, protected student records, or identifiable research data.
+
+Its main advantage over a general chatbot: **answers link to the passage they came from.** Click the citation number and Acrobat jumps to the source text. That makes checking fast, which matters because summaries of long documents can still miss exceptions, merge requirements, or state something the document doesn't say.
+
+What it does well:
+
+- Summaries of long documents, with an outline of sections
+- Questions like "What are the page limits?" or "What does this say about X?"
+- Questions across several PDFs at once (for example, this year's guidelines versus last year's)
+- **PDF Spaces:** a collection of documents you can keep asking questions of over time
+
+## Practice activities
+
+Use public PDFs for practice. Good choices: a funding announcement from the [NIH Guide](https://grants.nih.gov/funding/searchguide/index.html), the CEPH accreditation criteria, or a public Drexel policy.
+
+```{=html}
+<details class="activity"><summary>Activity 1 · Novice — Summarize and question a long PDF</summary>
+```
+
+**Time** ~15 min · **Tools** Adobe Acrobat or Acrobat on the web (Drexel account)
+
+**Goal.** Get oriented in a long document in minutes, and check what you're told.
+
+**Steps.**
+
+1. Open a public funding announcement or policy PDF in Acrobat and open **AI Assistant**.
+2. Ask for a summary, then ask three specific questions, for example:
+
+   > What are the page limits for each section?
+
+   > Who is eligible to apply, and are there any exclusions?
+
+   > What does this document say about the use of AI in preparing an application?
+
+3. For each answer, click at least one citation and read the source passage.
+4. Ask one question the document probably doesn't answer (for example, "What is Drexel's internal routing deadline?"). See whether it says it can't find the answer or makes one up.
+
+**Expected result.** Fast, mostly accurate answers with citations. For the unanswerable question, a good answer says the document doesn't cover it.
+
+**Check your work.** Does the cited passage actually say what the answer claims? Watch for answers that combine two sections into one rule, or drop an "except" or "unless."
+
+**Common pitfalls.** Treating the summary as a substitute for reading the sections you'll be held to. Use it to find them faster.
+
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 2 · Novice — Compare two versions of a document</summary>
+```
+
+**Time** ~10 min · **Tools** Acrobat AI Assistant with multiple files
+
+**Goal.** Find what changed between two versions of a guideline or policy.
+
+**Steps.**
+
+1. Open two related public PDFs, such as this year's and last year's version of a funding announcement or accreditation criteria. Add both to AI Assistant (or a PDF Space).
+2. Ask:
+
+   > What are the substantive differences between these two documents? List each change with the section it appears in, and cite both documents.
+
+3. Check three of the changes by reading both passages.
+
+**Expected result.** A list of changes you can verify. Expect it to miss some small wording changes; for a line-by-line check, use Acrobat's **Compare Files** tool instead.
+
+**Check your work.** Did it report a "change" that is just different wording for the same requirement?
+
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 3 · Novice — Build a checklist from a document</summary>
+```
+
+**Time** ~10 min · **Tools** Acrobat AI Assistant
+
+**Goal.** Turn a long set of requirements into a checklist you can use.
+
+**Steps.**
+
+1. With a funding announcement or policy open, ask:
+
+   > Turn the requirements in this document into a checklist grouped by: documents to prepare, formatting rules, approvals needed, and deadlines. Cite the section for each item.
+
+2. Check each item's citation.
+3. Copy the checklist into Word or OneNote and add what the document can't know: internal deadlines, who in your office handles each step.
+
+**Expected result.** A checklist with a source for every item, ready for your additions.
+
+```{=html}
+</details>
+```
+
+## Check your readiness
+
+Answer these, then check — your score suggests whether to dive in or skim the activities first.
+
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions": [{"q": "What data classification is Acrobat AI Assistant approved for at Drexel?", "options": ["Moderate Risk Data", "High Risk Data", "Low Risk Data only", "Any data"], "answer": 0, "explain": "Moderate Risk covers most internal documents, but not PHI, protected student records, or identifiable research data."}, {"q": "AI Assistant says applications are limited to 12 pages. What's the fastest way to check?", "options": ["Click the citation and read the linked passage", "Ask the same question again", "Trust it; it read the document", "Search the web"], "answer": 0, "explain": "The linked citation is the main advantage of this tool. Use it for every answer that matters."}, {"q": "You ask about something the document doesn't cover. What's the best response from the tool?", "options": ["It says the document doesn't address it", "It gives a confident answer anyway", "It summarizes the whole document again", "It cites the table of contents"], "answer": 0, "explain": "A confident answer to a question the document doesn't cover is a hallucination. Test for this on purpose."}]}
+</script>
+</div>
+
+## Useful resources
+
+- [Drexel AI Tools page](https://drexel.edu/provost/ai/tools) — Acrobat AI Assistant's data classification.
+- [NIH Guide for Grants and Contracts](https://grants.nih.gov/funding/searchguide/index.html) — public PDFs to practice on.
+- [Grant Administration with AI](grant-administration.qmd) — more on requirement checklists and deadlines.
+- [Literature Review & Evidence Synthesis](literature-review.qmd) — working with many papers at once.
+
+---
+
+## Navigate
+
+**Back to track overview:** [Everyday Tools](everyday-tools.qmd)
+
+**Related topics:** [Grant Administration with AI](grant-administration.qmd) · [Literature Review](literature-review.qmd) · [Verifying AI Output](verifying-output.qmd)
+
+::: {.callout-warning}
+## Data rules
+Acrobat AI Assistant is approved for **Moderate Risk Data**. Do not upload documents containing PHI, protected student records, identifiable research data, or other High Risk Data. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+:::
+
+{{< include /_feedback-track.qmd >}}

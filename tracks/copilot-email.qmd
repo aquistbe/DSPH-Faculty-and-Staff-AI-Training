@@ -3,29 +3,29 @@ title: "Copilot for Email in Outlook"
 ---
 
 ::: {.topic-badges}
-[Novice]{.level-badge .level-novice} · **Communication & Dissemination** track · ~40 min hands-on + quiz
+[Novice]{.level-badge .level-novice} · **Everyday Tools** track · ~35 min hands-on + quiz
 :::
 
-[← Back to the Communication & Dissemination track](communication.qmd){.track-back}
+[← Back to the Everyday Tools track](everyday-tools.qmd){.track-back}
 
-*Use Microsoft Copilot inside Outlook to catch up on long threads, pull out action items, draft replies, and check your tone before you send.*
+*Use Copilot Chat inside Outlook to catch up on long threads, pull out action items, draft replies, and check your tone before you send.*
 
 ## What you'll be able to do
 
-- Tell which Copilot you have in Outlook, and what each version can and can't do
+- Know which Copilot features you have in Outlook at Drexel, and which you don't
 - Summarize a long thread and pull out decisions, open questions, and action items
 - Draft a reply and adjust its tone and length before sending
 - Get feedback on a sensitive message, and recognize the emails you should write yourself
 
 ## Overview
 
-Email is where most staff and faculty time goes, and it is where Copilot is most useful day to day. Because Copilot runs inside Drexel's Microsoft 365, it is approved for **High Risk Data** when you are signed in with your Drexel account. That makes it the right AI tool for real email, where ChatGPT Edu or a personal tool would mean copying messages out of Outlook.
+Email is where most staff and faculty time goes, and it is where Copilot is most useful day to day. Because Copilot Chat runs inside Drexel's Microsoft 365, it is approved for **High Risk Data** when you are signed in with your Drexel account. That makes it the right AI tool for real email, where ChatGPT Edu or a personal tool would mean copying messages out of Outlook.
 
-**Which Copilot you have matters.** Drexel offers two versions, and they look similar in Outlook:
+**Which Copilot you have matters.** Microsoft sells two versions, and they look similar in Outlook. Everyone at Drexel has **Copilot Chat**. Drexel does **not** currently provide the paid **Microsoft 365 Copilot** license, so the right-hand column below is not available at Drexel. It's shown so you know which buttons to ignore when you read Microsoft's help pages.
 
-| | **Copilot Chat** (everyone) | **Microsoft 365 Copilot** (paid license) |
+| | **Copilot Chat** (everyone at Drexel) | **Microsoft 365 Copilot** (paid license, not available at Drexel) |
 |---|---|---|
-| Who has it | All faculty, staff, and students signed in with a Drexel account | Faculty and staff with the extra-cost license |
+| Who has it | All faculty, staff, and students signed in with a Drexel account | No one at Drexel |
 | Works with the email you have open | Yes, through the Copilot pane | Yes |
 | **Summarize** button at the top of an email thread | Yes | Yes |
 | "Draft with Copilot" in a new message or reply | No --- type your request in the Copilot pane | Yes |
@@ -41,21 +41,21 @@ Microsoft changes these features and their placement often. If a button in this 
 All activities use the synthetic committee thread from Core 2: [Workshop2_Demo_EmailThread.docx](../demo-materials/Workshop2_Demo_EmailThread.docx). You can also use a real, routine thread of your own. Skip threads about personnel, student conduct or grades, or health information for practice.
 
 ```{=html}
-<details class="activity"><summary>Activity 1 · Novice — Find out which Copilot you have</summary>
+<details class="activity"><summary>Activity 1 · Novice — Find Copilot in Outlook</summary>
 ```
 
 **Time** ~5 min · **Tools** Outlook (new Outlook, Outlook on the web, or the desktop app)
 
-**Goal.** Know what you can use before you start.
+**Goal.** Find the Copilot features you have before you start.
 
 **Steps.**
 
 1. Open Outlook and sign in with your Drexel account.
 2. Open any email thread. You should see a **Summarize** (or **Summary by Copilot**) bar at the top. Everyone with a Drexel account has this.
 3. Look for the **Copilot** icon in the toolbar and open the Copilot pane. This is where you type requests.
-4. Start a new email. If you see **Draft with Copilot** or **Coaching by Copilot** in the message window, you have the paid Microsoft 365 Copilot license. Most people won't.
+4. Start a new email. You won't see **Draft with Copilot** or **Coaching by Copilot** in the message window. Those need the paid license, which Drexel doesn't provide. You'll use the Copilot pane instead.
 
-**Expected result.** You know whether to use Draft with Copilot and Coaching, or the Copilot pane, for Activities 3 and 4.
+**Expected result.** You can find the Summarize bar and the Copilot pane, and you know to use the pane for Activities 3 and 4.
 
 **Common pitfalls.** If you see no Copilot at all, check that you are signed in with your Drexel account, not a personal Microsoft account. If it still doesn't appear, use Copilot Chat in the browser and contact the IT help desk.
 
@@ -67,7 +67,7 @@ All activities use the synthetic committee thread from Core 2: [Workshop2_Demo_E
 <details class="activity"><summary>Activity 2 · Novice — Summarize a thread and pull out action items</summary>
 ```
 
-**Time** ~10 min · **Tools** Copilot in Outlook (either version)
+**Time** ~10 min · **Tools** Copilot in Outlook (Summarize button and Copilot pane)
 
 **Goal.** Catch up on a long thread in one minute, without missing what you owe people.
 
@@ -99,18 +99,18 @@ All activities use the synthetic committee thread from Core 2: [Workshop2_Demo_E
 <details class="activity"><summary>Activity 3 · Novice — Draft a reply and adjust the tone</summary>
 ```
 
-**Time** ~10 min · **Tools** Copilot in Outlook (either version)
+**Time** ~10 min · **Tools** Copilot pane in Outlook
 
 **Goal.** Get a usable reply in one or two passes, in your voice.
 
 **Steps.**
 
-1. Click **Reply**. If you have **Draft with Copilot**, choose it and type the instruction below. Otherwise, type it in the Copilot pane:
+1. Click **Reply**. Then open the Copilot pane and type:
 
    > Draft a reply from James confirming I'll have the syllabus draft to Maria by July 20. Mention that I'll also update the accreditation crosswalk once the registrar confirms. Two or three sentences, friendly and concise.
 
-2. Adjust it. With Draft with Copilot, use the tone and length options (for example, more formal or shorter). In the pane, ask: "Make it more formal" or "Cut it to two sentences."
-3. Insert or paste the draft into your reply. **Do not send it yet.** Read it once for names, dates, and anything you would not actually commit to.
+2. Adjust it. In the pane, ask: "Make it more formal" or "Cut it to two sentences."
+3. Paste the draft into your reply. **Do not send it yet.** Read it once for names, dates, and anything you would not actually commit to.
 
 **Expected result.** A short, accurate reply you would send with minor edits.
 
@@ -128,7 +128,7 @@ All activities use the synthetic committee thread from Core 2: [Workshop2_Demo_E
 <details class="activity"><summary>Activity 4 · Novice — Check the tone of a difficult message</summary>
 ```
 
-**Time** ~10 min · **Tools** Copilot in Outlook (Coaching with the paid license; the Copilot pane otherwise)
+**Time** ~10 min · **Tools** Copilot pane in Outlook
 
 **Goal.** Use AI as a second reader for a message where tone matters, while keeping the words your own.
 
@@ -138,7 +138,7 @@ All activities use the synthetic committee thread from Core 2: [Workshop2_Demo_E
 
 **Steps.**
 
-1. With the paid license, choose **Coaching by Copilot** from the Copilot menu in the compose window. Otherwise, copy the draft into the Copilot pane and type:
+1. Copy the draft into the Copilot pane and type:
 
    > Give me feedback on the tone and clarity of this email to a colleague who missed a deadline. Don't rewrite it. Tell me how it is likely to be read and suggest two specific changes.
 
@@ -150,38 +150,6 @@ All activities use the synthetic committee thread from Core 2: [Workshop2_Demo_E
 **Check your work.** Did the rewrite soften the message so much that the deadline disappeared? The goal is clear and respectful, not vague.
 
 **Common pitfalls.** For messages about performance, conflict, condolences, or anything personal, use Copilot for feedback, not for the words. People can often tell when a sensitive message was written by AI, and it can damage trust.
-
-```{=html}
-</details>
-```
-
-```{=html}
-<details class="activity"><summary>Activity 5 · Moderate — Ask questions across your inbox (paid license)</summary>
-```
-
-**Time** ~10 min · **Tools** Microsoft 365 Copilot in Outlook or Microsoft 365 Copilot Chat (paid license required)
-
-**Goal.** Use Copilot to triage a week of email instead of one thread at a time.
-
-**Steps.**
-
-1. Open the Copilot pane in Outlook and try:
-
-   > What emails from the past week are waiting on a reply from me? List them with sender, subject, and what they're asking for.
-
-2. Then try one of these:
-
-   > Summarize everything about [a project name] from the past two weeks, including any deadlines.
-
-   > Which meetings on my calendar next week have no agenda, and who organized them?
-
-3. Open two of the emails it lists and confirm they say what Copilot claims.
-
-**Expected result.** A starting to-do list for your inbox. It will not be complete.
-
-**Check your work.** Copilot searches your mailbox, but it can miss messages, especially in folders, shared mailboxes, or very recent mail. Do not treat its list as proof that nothing else needs a reply.
-
-**Common pitfalls.** Vague questions get vague answers. Name the project, the person, or the date range.
 
 ```{=html}
 </details>
@@ -204,28 +172,28 @@ Answer these, then check — your score suggests whether to dive in or skim the 
 
 <div class="readiness-quiz">
 <script type="application/json" class="quiz-data">
-{"questions": [{"q": "You don't see a 'Draft with Copilot' button in Outlook. What's the best next step?", "options": ["Open the Copilot pane and type your request there", "Copy the email into a personal ChatGPT account", "Assume Copilot isn't available to you", "Ask a colleague to draft it"], "answer": 0, "explain": "Without the paid license, the Copilot pane (or Copilot Chat in the browser, signed in with Drexel) does most of the same work. Personal AI tools are Low Risk Data only and not appropriate for real email."}, {"q": "Copilot summarizes a thread and lists 'Move EPI 570 to fall' as a final decision. The thread said 'pending registrar confirmation.' What happened?", "options": ["The summary dropped a qualifier, a common error in thread summaries", "The summary is correct", "The thread was too short to summarize", "Copilot is not allowed to summarize threads"], "answer": 0, "explain": "Summaries tend to flatten 'pending,' 'tentative,' and 'if no objections.' Always check decisions against the original."}, {"q": "Which email is the best fit for a Copilot-drafted first version?", "options": ["A reminder about a committee deadline", "A message to an employee about a performance concern", "A condolence note to a colleague", "A reply to a student disputing a grade"], "answer": 0, "explain": "Routine, low-stakes messages are where Copilot saves the most time. For personnel, personal, and student matters, write it yourself and use Copilot for feedback at most."}]}
+{"questions": [{"q": "You don't see a 'Draft with Copilot' button in Outlook. What's the best next step?", "options": ["Open the Copilot pane and type your request there", "Copy the email into a personal ChatGPT account", "Assume Copilot isn't available to you", "Ask a colleague to draft it"], "answer": 0, "explain": "Draft with Copilot needs the paid license, which Drexel doesn't provide. The Copilot pane (or Copilot Chat in the browser, signed in with Drexel) does the same work. Personal AI tools are Low Risk Data only and not appropriate for real email."}, {"q": "Copilot summarizes a thread and lists 'Move EPI 570 to fall' as a final decision. The thread said 'pending registrar confirmation.' What happened?", "options": ["The summary dropped a qualifier, a common error in thread summaries", "The summary is correct", "The thread was too short to summarize", "Copilot is not allowed to summarize threads"], "answer": 0, "explain": "Summaries tend to flatten 'pending,' 'tentative,' and 'if no objections.' Always check decisions against the original."}, {"q": "Which email is the best fit for a Copilot-drafted first version?", "options": ["A reminder about a committee deadline", "A message to an employee about a performance concern", "A condolence note to a colleague", "A reply to a student disputing a grade"], "answer": 0, "explain": "Routine, low-stakes messages are where Copilot saves the most time. For personnel, personal, and student matters, write it yourself and use Copilot for feedback at most."}]}
 </script>
 </div>
 
 ## Useful resources
 
 - [Copilot Chat in the browser](https://m365.cloud.microsoft/chat) — sign in with your Drexel account.
-- [Drexel IT: Microsoft 365 Copilot licensing changes](https://servicedesk.drexel.edu/TDClient/277/Portal/KB/Article/20230) — what works with and without the paid license.
+- [Drexel IT: Microsoft 365 Copilot licensing changes](https://servicedesk.drexel.edu/TDClient/277/Portal/KB/Article/20230) — what works without the paid license, which Drexel does not provide.
 - [Drexel AI Tools page](https://drexel.edu/provost/ai/tools) — approved tools and data classifications.
-- [Core 2: Workflow Enhancement](../workshop2.qmd) — Copilot in Word, Outlook, and Excel, with the same demo thread.
+- [Core 2: Workflow Enhancement](../workshop2.qmd) — summarizing and drafting with Copilot Chat and ChatGPT Edu, with the same demo email thread.
 
 ---
 
 ## Navigate
 
-**Back to track overview:** [Communication & Dissemination](communication.qmd)
+**Back to track overview:** [Everyday Tools](everyday-tools.qmd)
 
 **Related topics:** [Verifying AI Output](verifying-output.qmd) · [Data Security & Classification Deep-Dive](data-security-classification.qmd) · [Grant Administration with AI](grant-administration.qmd)
 
 ::: {.callout-warning}
 ## Data rules
-Copilot signed in with your Drexel account is approved for **High Risk Data**, so it can work with your real email. That does not change the rules for what you forward or share: PHI, protected student records, and identifiable research data still follow HIPAA, FERPA, your IRB protocol, and any data use agreement. For practice, use the demo thread. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+Copilot Chat signed in with your Drexel account is approved for **High Risk Data**, so it can work with your real email. That does not change the rules for what you forward or share: PHI, protected student records, and identifiable research data still follow HIPAA, FERPA, your IRB protocol, and any data use agreement. For practice, use the demo thread. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
 :::
 
 {{< include /_feedback-track.qmd >}}

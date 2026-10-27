@@ -1,0 +1,149 @@
+---
+title: "Zoom AI Companion for Meetings"
+---
+
+::: {.topic-badges}
+[Novice]{.level-badge .level-novice} · **Everyday Tools** track · ~30 min hands-on + quiz
+:::
+
+[← Back to the Everyday Tools track](everyday-tools.qmd){.track-back}
+
+*Use Zoom's built-in AI to summarize meetings, catch up when you join late, and turn discussion into action items, and know when to leave it off.*
+
+## What you'll be able to do
+
+- Turn on AI meeting summaries and review them before sharing
+- Ask AI Companion questions during a meeting to catch up
+- Check a summary against what was actually said
+- Decide which meetings should not use AI Companion
+
+## Overview
+
+Zoom AI Companion is included with Drexel's Zoom accounts for faculty, staff, and students. Its main uses:
+
+- **Meeting summary:** after the meeting, the host gets a summary with key points and next steps, which can be edited and shared.
+- **Ask AI Companion:** during a meeting, ask questions such as "What did I miss?" or "What was decided about the budget?"
+- **Recording summaries:** for cloud recordings, a summary and chapters you can skim instead of rewatching.
+
+**Drexel's data rule depends on recording.** Drexel's AI Tools page lists AI Companion as approved for **High Risk Data when the meeting is not recorded or transcribed**, and **Low Risk Data when it is recorded or transcribed**. In practice: summaries of unrecorded meetings are the safer default. Once you record or transcribe, treat the content as if it could become public.
+
+**Tell people.** When AI Companion is summarizing, Zoom shows participants a notice. Say it out loud too, at the start: "I'm using AI Companion to take notes; the summary will go to [who]." Some people speak less freely when they know a summary is being made, and they should get to decide.
+
+You manage your AI Companion settings in **Zoom settings → AI Companion** on the Zoom web portal. Some options are controlled by Drexel IT at the account level, so ask IT if one you need is turned off.
+
+## Practice activities
+
+Use a low-stakes meeting for all activities: a routine team check-in, a planning call, or a practice meeting with a colleague.
+
+```{=html}
+<details class="activity"><summary>Activity 1 · Novice — Summarize a meeting and check it</summary>
+```
+
+**Time** ~15 min (plus the meeting) · **Tools** Zoom with AI Companion
+
+**Goal.** Get a usable summary and learn where it goes wrong.
+
+**Steps.**
+
+1. As host, start the meeting and click **AI Companion** in the toolbar to start the meeting summary. Tell participants.
+2. During the meeting, take your own brief notes: decisions, action items, and who owns them.
+3. After the meeting, open the summary (it arrives by email and in the Zoom app or web portal).
+4. Compare it to your notes. Mark anything wrong, missing, or wrongly attributed.
+5. Edit the summary before sharing. Remove side conversations and anything that shouldn't go to the whole group.
+
+**Expected result.** A summary that gets most topics right but misses some nuance: a tentative idea recorded as a decision, or an action item with no owner.
+
+**Check your work.** Did it turn "we should think about" into "the team agreed to"? That is the most common error.
+
+**Common pitfalls.** Sharing the raw summary with everyone automatically. Review first; you're responsible for what goes out.
+
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 2 · Novice — Catch up during a meeting</summary>
+```
+
+**Time** ~5 min · **Tools** Zoom with AI Companion
+
+**Goal.** Use AI Companion when you join late or lose the thread.
+
+**Steps.**
+
+1. Join a meeting a few minutes late (or step away briefly).
+2. Open **AI Companion** in the meeting and ask: "Summarize what's been discussed so far" or "Has anything been assigned to me?"
+3. Check the answer by listening for the next few minutes or asking a colleague.
+
+**Expected result.** A short recap. If the host hasn't enabled in-meeting questions, you may not see this option.
+
+**Common pitfalls.** Asking about something said while you weren't there and repeating the answer as fact. Confirm before you act on it.
+
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 3 · Novice — Turn a summary into a follow-up email</summary>
+```
+
+**Time** ~10 min · **Tools** Zoom summary, the Copilot pane in Outlook or ChatGPT Edu
+
+**Goal.** Get from meeting to follow-up in one step.
+
+**Steps.**
+
+1. Copy your edited summary from Activity 1.
+2. In the Copilot pane in Outlook (see [Copilot for Email](copilot-email.qmd)) or ChatGPT Edu, type:
+
+   > Turn these meeting notes into a short follow-up email to the attendees: two sentences of summary, then a table of action items with owner and due date. Flag any action item without an owner or date instead of guessing.
+
+3. Check the table against your own notes and send it yourself.
+
+**Expected result.** A follow-up email in about five minutes, with gaps flagged rather than invented.
+
+```{=html}
+</details>
+```
+
+## When to leave it off
+
+Don't use AI Companion, or turn it off, in meetings about:
+
+- Personnel matters, performance, hiring decisions, or grievances
+- Individual students: advising, accommodations, grades, or conduct
+- Patients, research participants, or identifiable study data (check your IRB protocol and any data use agreement)
+- Confidential negotiations, legal matters, or anything under an NDA
+
+If a participant asks you to turn it off, turn it off.
+
+## Check your readiness
+
+Answer these, then check — your score suggests whether to dive in or skim the activities first.
+
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions": [{"q": "Under Drexel's data classification, when is Zoom AI Companion approved for High Risk Data?", "options": ["When the meeting is not recorded or transcribed", "Always", "Only when the meeting is recorded", "Never"], "answer": 0, "explain": "Drexel lists AI Companion as High Risk Data when not recorded or transcribed, and Low Risk Data when recorded or transcribed."}, {"q": "The summary says 'The team agreed to move the deadline.' Your notes say someone suggested it and no one decided. What do you do?", "options": ["Correct the summary before sharing it", "Share it as is; the AI heard the meeting", "Delete the whole summary", "Ask the AI to confirm"], "answer": 0, "explain": "Summaries often turn suggestions into decisions. Edit before you share; you're responsible for what goes out."}, {"q": "Which meeting should not use AI Companion?", "options": ["An advising meeting about a student's accommodations", "A weekly team planning check-in", "A practice run of a conference talk", "A committee meeting on event logistics"], "answer": 0, "explain": "Individual student matters, personnel issues, and identifiable research data are meetings to leave AI Companion off."}]}
+</script>
+</div>
+
+## Useful resources
+
+- [Drexel AI Tools page](https://drexel.edu/provost/ai/tools) — AI Companion's data classification.
+- [Copilot for Email in Outlook](copilot-email.qmd) — turn summaries into follow-up email.
+- [Verifying AI Output](verifying-output.qmd) — checking summaries against sources.
+
+---
+
+## Navigate
+
+**Back to track overview:** [Everyday Tools](everyday-tools.qmd)
+
+**Related topics:** [Copilot for Email in Outlook](copilot-email.qmd) · [Collaborating on Projects](collaborating-on-projects.qmd) · [Data Security & Classification Deep-Dive](data-security-classification.qmd)
+
+::: {.callout-warning}
+## Data rules
+Zoom AI Companion is approved for **High Risk Data when meetings are not recorded or transcribed**, and **Low Risk Data when they are**. Tell participants when it's on, review summaries before sharing, and leave it off for personnel, student, patient, and research-participant matters. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+:::
+
+{{< include /_feedback-track.qmd >}}

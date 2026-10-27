@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Setting Up Your Course with AI – AI Workshops for DSPH</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-e5a00fd6c0fce5251246b1fbc19e77b5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<meta name="robots" content="noindex, nofollow">
+<script data-goatcounter="https://aquistbe.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">AI Workshops for DSPH</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-core-sessions" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Core Sessions</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-core-sessions">    
+        <li>
+    <a class="dropdown-item" href="../workshop1.html">
+ <span class="dropdown-text">Core 1 · Foundations &amp; Capabilities</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../workshop2.html">
+ <span class="dropdown-text">Core 2 · Workflow Enhancement</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../workshop3.html">
+ <span class="dropdown-text">Core 3 · Reusable Assistants</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../workshop5.html">
+ <span class="dropdown-text">Core 4 · Verify, Disclose, Decide</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-electives" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Electives</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-electives">    
+        <li>
+    <a class="dropdown-item" href="../workshop4.html">
+ <span class="dropdown-text">Documents &amp; Visuals (Adobe)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../workshop6.html">
+ <span class="dropdown-text">AI for Curriculum Development</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../tracks.html"> 
+<span class="menu-text">Self-Paced Tracks</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../paths.html"> 
+<span class="menu-text">Learning Paths</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../tools.html"> 
+<span class="menu-text">Tools &amp; Access</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../resources.html"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="mailto:daq26@drexel.edu"> <i class="bi bi-envelope" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-youll-be-able-to-do" id="toc-what-youll-be-able-to-do" class="nav-link active" data-scroll-target="#what-youll-be-able-to-do">What you’ll be able to do</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#practice-activities" id="toc-practice-activities" class="nav-link" data-scroll-target="#practice-activities">Practice activities</a></li>
+  <li><a href="#which-tool-for-which-step" id="toc-which-tool-for-which-step" class="nav-link" data-scroll-target="#which-tool-for-which-step">Which tool for which step</a></li>
+  <li><a href="#check-your-readiness" id="toc-check-your-readiness" class="nav-link" data-scroll-target="#check-your-readiness">Check your readiness</a></li>
+  <li><a href="#useful-resources" id="toc-useful-resources" class="nav-link" data-scroll-target="#useful-resources">Useful resources</a></li>
+  <li><a href="#navigate" id="toc-navigate" class="nav-link" data-scroll-target="#navigate">Navigate</a></li>
+  <li><a href="#give-feedback-on-this-page" id="toc-give-feedback-on-this-page" class="nav-link" data-scroll-target="#give-feedback-on-this-page">Give Feedback on This Page</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Setting Up Your Course with AI</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="topic-badges">
+<p><span class="level-badge level-moderate">Moderate</span> · <strong>Teaching &amp; Learning</strong> track · ~60 min hands-on + quiz</p>
+</div>
+<p><a href="../tracks/teaching-learning.html" class="track-back">← Back to the Teaching &amp; Learning track</a></p>
+<p><em>Form student groups from a survey, update course content in bulk, and push the changes to Canvas, while keeping student records out of AI tools.</em></p>
+<section id="what-youll-be-able-to-do" class="level2">
+<h2 class="anchored" data-anchor-id="what-youll-be-able-to-do">What you’ll be able to do</h2>
+<ul>
+<li>Remove identifying details from a student survey before any AI tool sees it</li>
+<li>Use AI to propose balanced groups from survey answers, then check and adjust them yourself</li>
+<li>Have AI write a script that uses the Canvas API to create groups or update course pages, and run it safely</li>
+<li>Decide which tool fits which step, based on whether student data is involved</li>
+</ul>
+</section>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>Two start-of-term tasks eat hours: forming project groups that actually work, and updating a course shell for a new term (dates, pages, links, announcements). AI helps with both, but they involve different data.</p>
+<p><strong>Course content</strong> (syllabus, pages, assignment descriptions) usually contains no student information. You can revise it with ChatGPT Edu, or with Claude if it contains nothing beyond Low Risk data.</p>
+<p><strong>Student survey answers and rosters are education records protected by FERPA.</strong> Before using them with AI, remove names, emails, and student IDs, and replace them with codes. Keep the file that links codes to names (the <em>crosswalk</em>) on your own computer or OneDrive, never in an AI tool. Even with codes, use only Drexel-approved tools for this data: <strong>Copilot Chat</strong> signed in with your Drexel account (approved for High Risk Data) or <strong>ChatGPT Edu</strong>. Do not use Claude, personal ChatGPT, or other consumer tools with student records, coded or not.</p>
+<p><strong>The Canvas API</strong> lets a script do what you would otherwise click through by hand: create groups, add students, update pages, shift due dates. ChatGPT Edu and Claude cannot log in to Canvas for you. Instead, you ask AI to <em>write</em> a short Python script, and you run it on your computer with your own Canvas access token. The token and the crosswalk never leave your machine.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Canvas’s built-in AI features
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Canvas has its own AI features (Instructure has released tools such as discussion summaries and rubric and quiz-question drafting). Drexel is discussing whether to turn them on. This page covers what you can do now with the Canvas API and Drexel-approved AI tools; we will add the built-in features when they are available.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Before you use the API
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Drexel faculty can create their own Canvas access token (Activity 3 shows how). Always test scripts in a <strong>sandbox or practice course</strong> first, and export a backup of the real course (<strong>Settings → Export Course Content</strong>) before any script changes it.</p>
+</div>
+</div>
+</section>
+<section id="practice-activities" class="level2">
+<h2 class="anchored" data-anchor-id="practice-activities">Practice activities</h2>
+<p>All activities use the made-up survey below. Twelve fictional students answered a start-of-term survey for a methods course.</p>
+<blockquote class="blockquote">
+<pre><code>name,email,program,stats_experience,role_preference,available_times,time_zone,notes
+Ana Torres,at123@drexel.edu,MPH-Epi,High,Analysis,Tue eve; Thu eve,ET,
+Ben Okafor,bo456@drexel.edu,MPH-CHP,Low,Writing,Mon eve; Wed eve,ET,Works full time at a clinic
+Chloe Park,cp789@drexel.edu,MS-Biostat,High,Analysis,Tue eve; Sat am,PT,
+Dev Patel,dp234@drexel.edu,MPH-EOH,Medium,Presenting,Tue eve; Thu eve,ET,
+Elena Ruiz,er567@drexel.edu,MPH-CHP,Low,Organizing,Mon eve; Thu eve,ET,Parent of twins
+Farah Khan,fk890@drexel.edu,MPH-Epi,Medium,Writing,Wed eve; Sat am,ET,
+Gabe Miller,gm345@drexel.edu,DrPH,High,Organizing,Tue eve; Wed eve,CT,Former hospital data manager
+Hana Sato,hs678@drexel.edu,MPH-HMP,Low,Presenting,Thu eve; Sat am,ET,
+Isaac Brown,ib901@drexel.edu,MPH-Epi,Medium,Analysis,Mon eve; Tue eve,ET,
+Jada Wilson,jw112@drexel.edu,MPH-CHP,Low,Writing,Wed eve; Thu eve,ET,
+Kofi Mensah,km334@drexel.edu,MS-Biostat,High,Analysis,Mon eve; Sat am,ET,Only student joining from Ghana
+Lena Novak,ln556@drexel.edu,MPH-EOH,Medium,Presenting,Tue eve; Thu eve,ET,</code></pre>
+</blockquote>
+<p>Save it as <code>survey_raw.csv</code> in a private folder on your computer or OneDrive.</p>
+<details class="activity"><summary>Activity 1 · Novice — De-identify the survey</summary>
+<p><strong>Time</strong> ~15 min · <strong>Tools</strong> Excel (no AI needed)</p>
+<p><strong>Goal.</strong> Produce a file an approved AI tool can use to form groups, and a separate crosswalk that stays with you.</p>
+<p><strong>Steps.</strong></p>
+<ol type="1">
+<li>Open <code>survey_raw.csv</code> in Excel. Insert a column called <code>code</code> and fill it with S01 through S12. Sort the rows randomly first (add a column with <code>=RAND()</code>, sort by it, then delete it) so the codes don’t follow alphabetical order.</li>
+<li>Copy the <code>code</code>, <code>name</code>, and <code>email</code> columns into a new file. Save it as <code>crosswalk.csv</code> in your private folder. <strong>This file never goes into an AI tool.</strong></li>
+<li>In the original file, delete the <code>name</code> and <code>email</code> columns.</li>
+<li>Deal with the <code>notes</code> column. Free text is where identifying details hide. “Only student joining from Ghana” and “Former hospital data manager” identify a person as surely as a name. Delete the column, or replace notes with a neutral flag you need for grouping (for example, <code>limited_evening_availability = yes</code>).</li>
+<li>Look for rare combinations. The only DrPH student, or the only student in Pacific Time, can be re-identified by anyone who knows the class. Keep only the columns you need for grouping, and generalize where you can (for example, “outside ET” instead of a specific zone).</li>
+<li>Save the result as <code>survey_coded.csv</code>.</li>
+</ol>
+<p><strong>Expected result.</strong> <code>survey_coded.csv</code> with code, program, stats experience, role preference, availability, and a time-zone flag. No names, emails, or free text.</p>
+<p><strong>Check your work.</strong> Hand the coded file to a colleague who knows the class. Could they name anyone? If yes, generalize further.</p>
+<p><strong>Common pitfalls.</strong> Canvas user IDs, Drexel IDs, and email usernames are identifiers too. Don’t use them as codes.</p>
+</details>
+<details class="activity"><summary>Activity 2 · Moderate — Propose balanced groups from the survey</summary>
+<p><strong>Time</strong> ~15 min · <strong>Tools</strong> Copilot Chat (Drexel account) or ChatGPT Edu</p>
+<p><strong>Goal.</strong> Get a first draft of groups that meets your criteria, and understand the trade-offs.</p>
+<p><strong>Steps.</strong></p>
+<ol type="1">
+<li><p>Upload <code>survey_coded.csv</code> and type:</p>
+<blockquote class="blockquote">
+<p>This file has start-of-term survey answers from 12 students, identified only by code. Form 4 groups of 3. Rules, in order of priority: (1) every group shares at least one available time; (2) every group has at least one student with High or Medium stats experience; (3) mix programs where possible; (4) spread role preferences so no group has three people who want the same role. Show the groups as a table (group, code, program, stats experience, role, shared time). Then list any rule you could not fully meet and why.</p>
+</blockquote></li>
+<li><p>Check every group against the rules yourself. Count the shared times by hand for at least two groups.</p></li>
+<li><p>Adjust with what you know and the AI doesn’t: students who asked to work together or apart, or a group that looks lopsided. Ask for a revision in plain language, for example: “Swap S04 and S09 and recheck the rules.”</p></li>
+<li><p>Save the final table as <code>groups_coded.csv</code> with two columns: <code>code</code>, <code>group</code>.</p></li>
+</ol>
+<p><strong>Expected result.</strong> Four groups that meet rules 1 and 2, with an honest note on where rules 3 and 4 required compromise.</p>
+<p><strong>Check your work.</strong> AI tools often claim a constraint is met when it isn’t, especially shared availability. Your hand check is the step that counts.</p>
+<p><strong>Common pitfalls.</strong> Don’t ask the AI to group students by demographic characteristics or to infer anything about them from the survey. Group on the criteria you told students you would use.</p>
+<p><strong>The most private option.</strong> Instead of uploading the data, ask the AI to <em>write a script</em> that forms groups from a file with these columns, test it on made-up data, and then run it yourself on the real file. The survey never leaves your computer. Activity 3 uses the same approach.</p>
+</details>
+<details class="activity"><summary>Activity 3 · Advanced — Create the groups in Canvas with the API</summary>
+<p><strong>Time</strong> ~20 min · <strong>Tools</strong> ChatGPT Edu or Claude (to write the script, using no real data), Python, a Canvas practice course</p>
+<p><strong>Goal.</strong> Put the groups into Canvas without adding 12 students by hand, and without giving an AI tool your token or roster.</p>
+<p><strong>Setup.</strong></p>
+<ol type="1">
+<li><strong>Create a Canvas access token.</strong> In Canvas, go to <strong>Account → Settings</strong> and click <strong>+ New Access Token</strong>. Give it a purpose (“group setup”) and set an expiration date a few days out. Copy it once; Canvas won’t show it again. Treat it like your password: anyone with it can act as you in Canvas.</li>
+<li><strong>Store it outside your script.</strong> On a Mac, in Terminal: <code>export CANVAS_TOKEN="paste-token-here"</code>. On Windows PowerShell: <code>$env:CANVAS_TOKEN="paste-token-here"</code>. Never paste the token into an AI chat or save it in a file you share.</li>
+<li><strong>Add Canvas user IDs to your crosswalk.</strong> The script needs each student’s Canvas ID. In the practice course, open <strong>People</strong>, click a student, and read the number at the end of the URL. Add a <code>canvas_user_id</code> column to <code>crosswalk.csv</code>. This file still stays local.</li>
+</ol>
+<p><strong>Steps.</strong></p>
+<ol type="1">
+<li><p>Ask ChatGPT Edu or Claude to write the script. Describe the files; don’t upload them:</p>
+<blockquote class="blockquote">
+<p>Write a Python script called make_groups.py. It reads groups_coded.csv (columns: code, group) and crosswalk.csv (columns: code, name, email, canvas_user_id), joins them on code, and uses the Canvas REST API to (1) create a group category called “Project Groups” in course COURSE_ID, (2) create one group per group number, and (3) add each student to their group. Read the Canvas base URL and course ID from variables at the top of the script and the token from the CANVAS_TOKEN environment variable. Add a –dry-run option that prints what it would do without changing anything. Use the requests library. Explain each step in comments for someone new to Python.</p>
+</blockquote></li>
+<li><p>Read the script. Check that it uses these Canvas endpoints and nothing else:</p>
+<ul>
+<li><code>POST /api/v1/courses/:course_id/group_categories</code> (create the group set)</li>
+<li><code>POST /api/v1/group_categories/:group_category_id/groups</code> (create each group)</li>
+<li><code>POST /api/v1/groups/:group_id/memberships</code> (add a student)</li>
+</ul></li>
+<li><p>Run it with <code>--dry-run</code> in the practice course. Read the output line by line.</p></li>
+<li><p>Run it for real in the practice course. In Canvas, open <strong>People → Groups</strong> and compare to your table.</p></li>
+<li><p>Only then change the course ID to your real course and run it again.</p></li>
+</ol>
+<p><strong>Expected result.</strong> A “Project Groups” group set in Canvas matching <code>groups_coded.csv</code>, with no student data ever sent to an AI tool.</p>
+<p><strong>Check your work.</strong> Count members in each group in Canvas. If something fails, paste the <strong>error message</strong> (not the token or data) into the chat and ask for a fix.</p>
+<p><strong>Common pitfalls.</strong> Running without a dry run first. Leaving a long-lived token active: delete it in <strong>Account → Settings</strong> when you’re done.</p>
+</details>
+<details class="activity"><summary>Activity 4 · Advanced — Update course pages and due dates for a new term</summary>
+<p><strong>Time</strong> ~20 min · <strong>Tools</strong> ChatGPT Edu or Claude (course content only), Python, a Canvas practice course</p>
+<p><strong>Goal.</strong> Update a course shell copied from last term (dates, term names, outdated text) without editing every page by hand.</p>
+<p><strong>Steps.</strong></p>
+<ol type="1">
+<li><p>Export a backup of the course (<strong>Settings → Export Course Content</strong>).</p></li>
+<li><p>Ask AI to write a script, <code>export_pages.py</code>, that downloads every page in the course to a local folder as one HTML file per page. It uses <code>GET /api/v1/courses/:course_id/pages</code> to list them and <code>GET /api/v1/courses/:course_id/pages/:url</code> to get each body.</p></li>
+<li><p>Revise the content. Check first that the pages contain no student names, grades, or feedback. Then open a few in ChatGPT Edu or Claude and ask, for example:</p>
+<blockquote class="blockquote">
+<p>Update this course page for Fall 2026: change term references from Fall 2025, flag any dates that need my attention rather than guessing them, and list every change you made. Keep the HTML structure and links intact.</p>
+</blockquote></li>
+<li><p>Compare each revised file with the original before accepting it. Word’s <strong>Compare</strong> feature or any text-diff tool works.</p></li>
+<li><p>Ask AI for a second script, <code>update_pages.py</code>, that uploads the revised files with <code>PUT /api/v1/courses/:course_id/pages/:url</code> (field <code>wiki_page[body]</code>), with a <code>--dry-run</code> option. Run it in the practice course first.</p></li>
+<li><p><strong>Due dates:</strong> ask for a script that shifts every assignment’s due date by a set number of days using <code>PUT /api/v1/courses/:course_id/assignments/:id</code> (field <code>assignment[due_at]</code>). Check holidays and exam weeks yourself; a uniform shift won’t know about them.</p></li>
+</ol>
+<p><strong>Expected result.</strong> Updated pages and dates, with a list of every change and a backup you can restore.</p>
+<p><strong>Check your work.</strong> Open five pages and three assignments in Canvas as a student would see them (<strong>Student View</strong>). Check links, dates, and formatting.</p>
+<p><strong>Common pitfalls.</strong> AI “improving” wording you didn’t ask it to change, or guessing dates. Tell it to flag, not fill in. Canvas’s built-in <strong>Adjust events and due dates</strong> option during course copy may be enough for simple date shifts.</p>
+</details>
+</section>
+<section id="which-tool-for-which-step" class="level2">
+<h2 class="anchored" data-anchor-id="which-tool-for-which-step">Which tool for which step</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Step</th>
+<th>Contains student data?</th>
+<th>Tools to use</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>De-identifying the survey</td>
+<td>Yes</td>
+<td>Excel on your computer. No AI needed.</td>
+</tr>
+<tr class="even">
+<td>Forming groups from the coded survey</td>
+<td>Yes, coded</td>
+<td>Copilot Chat (Drexel account) or ChatGPT Edu. Or have AI write a script and run it locally.</td>
+</tr>
+<tr class="odd">
+<td>Writing API scripts</td>
+<td>No (describe files, don’t upload them)</td>
+<td>ChatGPT Edu, Copilot Chat, or Claude</td>
+</tr>
+<tr class="even">
+<td>Revising course pages</td>
+<td>Usually no. Check first.</td>
+<td>ChatGPT Edu, Copilot Chat, or Claude if Low Risk only</td>
+</tr>
+<tr class="odd">
+<td>Running scripts with your token and crosswalk</td>
+<td>Yes</td>
+<td>Your computer only</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="check-your-readiness" class="level2">
+<h2 class="anchored" data-anchor-id="check-your-readiness">Check your readiness</h2>
+<p>Answer these, then check — your score suggests whether to dive in or skim the activities first.</p>
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions": [{"q": "You removed names and emails from a survey, but the notes column says 'only student joining from Ghana.' Is the file de-identified?", "options": ["No: free-text details and rare combinations can identify a student", "Yes: names and emails are gone", "Yes, if you use ChatGPT Edu", "Only if the class is large"], "answer": 0, "explain": "Anyone who knows the class could identify that student. Delete free text or replace it with neutral flags, and generalize rare combinations."}, {"q": "Where should your Canvas access token go?", "options": ["An environment variable on your own computer", "Into the AI chat so it can test the script", "Hard-coded in a script you share with colleagues", "In the course syllabus"], "answer": 0, "explain": "The token lets anyone act as you in Canvas. Keep it local, give it a short expiration, and delete it when you're done."}, {"q": "Which tool is appropriate for proposing groups from a coded student survey?", "options": ["Copilot Chat signed in with your Drexel account, or ChatGPT Edu", "Claude, since the names were removed", "A personal ChatGPT account", "Any tool, since the data is coded"], "answer": 0, "explain": "Coded survey answers are still education records if you can link them back. Use Drexel-approved tools only. Claude and personal tools are Low Risk Data only."}]}
+</script>
+</div>
+</section>
+<section id="useful-resources" class="level2">
+<h2 class="anchored" data-anchor-id="useful-resources">Useful resources</h2>
+<ul>
+<li><a href="https://canvas.instructure.com/doc/api/">Canvas REST API documentation</a> — the Groups, Group Categories, Pages, and Assignments sections cover everything on this page.</li>
+<li><a href="https://drexel.edu/provost/ai/tools">Drexel AI Tools page</a> — approved tools and data classifications.</li>
+<li><a href="../tracks/de-identification-synthetic-data.html">De-identification &amp; Synthetic Data</a> — more on rare combinations and re-identification risk.</li>
+<li><a href="../tracks/coding-with-ai.html">Coding with AI</a> — getting started with AI-written Python scripts.</li>
+</ul>
+<hr>
+</section>
+<section id="navigate" class="level2">
+<h2 class="anchored" data-anchor-id="navigate">Navigate</h2>
+<p><strong>Back to track overview:</strong> <a href="../tracks/teaching-learning.html">Teaching &amp; Learning</a></p>
+<p><strong>Related topics:</strong> <a href="../tracks/assignment-assessment-design.html">Assignment &amp; Assessment Design</a> · <a href="../tracks/data-security-classification.html">Data Security &amp; Classification Deep-Dive</a> · <a href="../workshop6.html">AI for Curriculum Development</a></p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Data rules
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Student survey answers, rosters, grades, and submissions are FERPA-protected education records. De-identify before using an AI tool, keep the crosswalk and your Canvas token on your own computer, and use only Drexel-approved tools (Copilot Chat with your Drexel account, or ChatGPT Edu) for coded student data. Claude and personal tools are Low Risk Data only. See <a href="../tools.html">Tools &amp; Access</a> and Drexel’s <a href="https://drexel.edu/provost/ai/tools">AI Tools page</a>.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="give-feedback-on-this-page" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="give-feedback-on-this-page">Give Feedback on This Page</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Two minutes: tell us how this track is working
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Your feedback shapes which topics get expanded and what new activities are added.</p>
+<p><a href="https://forms.cloud.microsoft/r/eLHm7tRtGY" class="btn btn-primary" target="_blank"><strong>Self-paced track feedback form</strong> ↗</a></p>
+<p>In the form, select this page from the list of topics.</p>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<!-- Self-paced track styles + readiness-quiz engine (included after body) -->
+<style>
+/* Difficulty badges */
+.level-badge{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.04em;
+  text-transform:uppercase;padding:.15em .6em;border-radius:1em;vertical-align:middle}
+.level-novice{background:#e3f3e8;color:#1d6b3b;border:1px solid #9fd3b2}
+.level-moderate{background:#fdf0d6;color:#8a5a00;border:1px solid #f0cf86}
+.level-advanced{background:#e7ecf5;color:#07294d;border:1px solid #9fb3cc}
+.topic-badges{margin:.2rem 0 .4rem;color:#5a6571;font-size:.95rem}
+.topic-meta{color:#5a6571;font-size:.95rem;margin-bottom:1rem}
+.track-back{display:inline-block;margin:.2rem 0 1rem;font-size:.95rem}
+
+/* Track / topic tables */
+.topic-list td:first-child{white-space:nowrap}
+
+/* Collapsible activities (native <details>, no JS needed) */
+details.activity{border:1px solid #d2dae8;border-left:4px solid #006699;border-radius:6px;
+  margin:.8rem 0;background:#f7f9fb;padding:0 1.15rem}
+details.activity > summary{cursor:pointer;font-weight:700;color:#07294d;padding:.7rem 0;
+  list-style:none;font-size:1.02rem;outline:none}
+details.activity > summary::-webkit-details-marker{display:none}
+details.activity > summary::before{content:"\25B8\00a0";color:#006699;font-weight:700}
+details.activity[open] > summary::before{content:"\25BE\00a0"}
+details.activity[open]{padding-bottom:.7rem}
+details.activity[open] > summary{border-bottom:1px solid #e3e9f2;margin-bottom:.5rem}
+details.activity > summary:hover{color:#006699}
+details.activity > *:not(summary):first-of-type{margin-top:.4rem}
+
+/* Readiness quiz */
+.readiness-quiz{border:1px solid #d2dae8;border-radius:8px;padding:1.1rem 1.25rem;margin:1rem 0;
+  background:#f7f9fb}
+.rq-q{margin:0 0 1rem;padding:.6rem .8rem;border-radius:6px;border:1px solid transparent}
+.rq-qtext{font-weight:600;margin:0 0 .5rem}
+.rq-opt{display:block;margin:.25rem 0;cursor:pointer;line-height:1.4}
+.rq-opt input{margin-right:.5rem}
+.rq-fb{margin-top:.45rem;font-size:.9rem;display:none}
+.rq-fb.rq-fb-ok,.rq-fb.rq-fb-no,.rq-fb.rq-fb-none{display:block}
+.rq-fb-ok{color:#1d6b3b}
+.rq-fb-no{color:#a12a2a}
+.rq-fb-none{color:#8a5a00}
+.rq-correct{background:#f0f9f3;border-color:#bfe3cd}
+.rq-wrong{background:#fcf1f1;border-color:#eccccc}
+.rq-btn{background:#07294d;color:#fff;border:none;border-radius:6px;padding:.5rem 1.1rem;
+  font-weight:600;cursor:pointer}
+.rq-btn:hover{background:#0a3a6b}
+.rq-score{margin-top:.8rem;font-weight:600;color:#07294d}
+</style>
+<script>
+(function(){
+  function init(){
+    var boxes=document.querySelectorAll('.readiness-quiz');
+    boxes.forEach(function(box,bi){
+      var dataEl=box.querySelector('script.quiz-data');
+      if(!dataEl) return;
+      var data; try{data=JSON.parse(dataEl.textContent);}catch(e){return;}
+      var qs=(data&&data.questions)||[];
+      if(!qs.length) return;
+      var wrap=document.createElement('div');
+      qs.forEach(function(q,qi){
+        var qd=document.createElement('div'); qd.className='rq-q';
+        var p=document.createElement('p'); p.className='rq-qtext'; p.textContent=(qi+1)+'. '+q.q; qd.appendChild(p);
+        (q.options||[]).forEach(function(opt,oi){
+          var lab=document.createElement('label'); lab.className='rq-opt';
+          var inp=document.createElement('input'); inp.type='radio'; inp.name='rq_'+bi+'_'+qi; inp.value=oi;
+          lab.appendChild(inp); lab.appendChild(document.createTextNode(' '+opt)); qd.appendChild(lab);
+        });
+        var fb=document.createElement('div'); fb.className='rq-fb'; qd.appendChild(fb);
+        wrap.appendChild(qd);
+      });
+      var btn=document.createElement('button'); btn.type='button'; btn.className='rq-btn'; btn.textContent='Check my answers';
+      var score=document.createElement('div'); score.className='rq-score';
+      btn.addEventListener('click',function(){
+        var correct=0;
+        qs.forEach(function(q,qi){
+          var qd=wrap.children[qi]; var sel=qd.querySelector('input:checked'); var fb=qd.querySelector('.rq-fb');
+          qd.classList.remove('rq-correct','rq-wrong');
+          if(!sel){ fb.textContent='Select an answer.'; fb.className='rq-fb rq-fb-none'; return; }
+          if(parseInt(sel.value,10)===q.answer){ correct++; qd.classList.add('rq-correct'); fb.textContent='Correct. '+(q.explain||''); fb.className='rq-fb rq-fb-ok'; }
+          else { qd.classList.add('rq-wrong'); fb.textContent='Not quite. '+(q.explain||''); fb.className='rq-fb rq-fb-no'; }
+        });
+        var pct=Math.round(correct/qs.length*100);
+        var verdict=pct>=80?"You're ready — dive in.":(pct>=50?"Close — skim the readings first, then start Activity 1.":"Start with the readings and Activity 1, then retry.");
+        score.textContent='You scored '+correct+'/'+qs.length+' ('+pct+'%). '+verdict;
+        try{
+          if(window.goatcounter&&window.goatcounter.count){
+            var slug=location.pathname.split('/').pop().replace(/\.html$/,'')||'index';
+            window.goatcounter.count({path:'quiz/'+slug+'/'+correct+'of'+qs.length,title:'Readiness quiz: '+slug,event:true});
+          }
+        }catch(e){}
+      });
+      box.innerHTML=''; box.appendChild(wrap); box.appendChild(btn); box.appendChild(score);
+    });
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}
+})();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>AI Workshops for DSPH | Dornsife School of Public Health | Drexel University</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Developed with the assistance of Claude (Anthropic); reviewed and owned by the author. Built with Quarto.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

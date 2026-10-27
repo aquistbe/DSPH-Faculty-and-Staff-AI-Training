@@ -24,13 +24,14 @@ Everything builds on **[Core 1 · Foundations & Capabilities](workshop1.qmd)** �
 | Track | Topics | Level range |
 |-------|--------|-------------|
 | [**Data & Analysis**](tracks/data-analysis.qmd) | Basics, cleaning, coding, statistics, dashboards, image annotation, qualitative, advanced (8) | novice → advanced |
-| [**Communication & Dissemination**](tracks/communication.qmd) | Science communication, grant writing, literature review, multilingual materials, manuscripts, design & visual tools, collaborating on projects, grant admin, Copilot for email (9) | novice → advanced |
+| [**Communication & Dissemination**](tracks/communication.qmd) | Science communication, grant writing, literature review, multilingual materials, manuscripts, design & visual tools, collaborating on projects, grant admin, slides (9) | novice → advanced |
+| [**Everyday Tools**](tracks/everyday-tools.qmd) | Copilot for email in Outlook, Zoom AI Companion, Acrobat AI Assistant (3) | novice |
 | [**Technical & Agentic**](tracks/technical-agentic.qmd) | Skills, context engineering, agents, loops, local models, RAG, MCP (7) | moderate → advanced |
 | [**Governance, Ethics & Equity**](tracks/governance-ethics.qmd) | Verifying output, sustainability, data security, responsible AI, bias & equity audit, keeping your judgment, mentoring & advising (7) | novice → moderate |
 | [**Methods & Study Design**](tracks/methods-study-design.qmd) | Survey design, program evaluation, de-identification & synthetic data, geospatial (4) | moderate → advanced |
-| [**Teaching & Learning**](tracks/teaching-learning.qmd) | Course AI policy, assignment & assessment design, AI in your coursework, AI for your thesis (4) | novice → moderate |
+| [**Teaching & Learning**](tracks/teaching-learning.qmd) | Course AI policy, assignment & assessment design, course setup in Canvas, AI in your coursework, AI for your thesis (5) | novice → moderate |
 
-That's **38 self-paced topics** across six tracks. Pick the track that fits your work, start at your level, and go at your own pace.
+That's **43 self-paced topics** across seven tracks. Pick the track that fits your work, start at your level, and go at your own pace.
 
 The **Teaching & Learning** track has two sides: the first two topics are written for instructors, the last two for graduate students. Reading the other side is worth the twenty minutes — policies get clearer when you've seen them from the seat they're read in.
 

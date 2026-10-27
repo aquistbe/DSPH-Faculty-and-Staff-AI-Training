@@ -1,0 +1,227 @@
+---
+title: "Setting Up Your Course with AI"
+---
+
+::: {.topic-badges}
+[Moderate]{.level-badge .level-moderate} · **Teaching & Learning** track · ~60 min hands-on + quiz
+:::
+
+[← Back to the Teaching & Learning track](teaching-learning.qmd){.track-back}
+
+*Form student groups from a survey, update course content in bulk, and push the changes to Canvas, while keeping student records out of AI tools.*
+
+## What you'll be able to do
+
+- Remove identifying details from a student survey before any AI tool sees it
+- Use AI to propose balanced groups from survey answers, then check and adjust them yourself
+- Have AI write a script that uses the Canvas API to create groups or update course pages, and run it safely
+- Decide which tool fits which step, based on whether student data is involved
+
+## Overview
+
+Two start-of-term tasks eat hours: forming project groups that actually work, and updating a course shell for a new term (dates, pages, links, announcements). AI helps with both, but they involve different data.
+
+**Course content** (syllabus, pages, assignment descriptions) usually contains no student information. You can revise it with ChatGPT Edu, or with Claude if it contains nothing beyond Low Risk data.
+
+**Student survey answers and rosters are education records protected by FERPA.** Before using them with AI, remove names, emails, and student IDs, and replace them with codes. Keep the file that links codes to names (the *crosswalk*) on your own computer or OneDrive, never in an AI tool. Even with codes, use only Drexel-approved tools for this data: **Copilot Chat** signed in with your Drexel account (approved for High Risk Data) or **ChatGPT Edu**. Do not use Claude, personal ChatGPT, or other consumer tools with student records, coded or not.
+
+**The Canvas API** lets a script do what you would otherwise click through by hand: create groups, add students, update pages, shift due dates. ChatGPT Edu and Claude cannot log in to Canvas for you. Instead, you ask AI to *write* a short Python script, and you run it on your computer with your own Canvas access token. The token and the crosswalk never leave your machine.
+
+:::{.callout-note}
+## Canvas's built-in AI features
+Canvas has its own AI features (Instructure has released tools such as discussion summaries and rubric and quiz-question drafting). Drexel is discussing whether to turn them on. This page covers what you can do now with the Canvas API and Drexel-approved AI tools; we will add the built-in features when they are available.
+:::
+
+:::{.callout-important}
+## Before you use the API
+Drexel faculty can create their own Canvas access token (Activity 3 shows how). Always test scripts in a **sandbox or practice course** first, and export a backup of the real course (**Settings → Export Course Content**) before any script changes it.
+:::
+
+## Practice activities
+
+All activities use the made-up survey below. Twelve fictional students answered a start-of-term survey for a methods course.
+
+> ```
+> name,email,program,stats_experience,role_preference,available_times,time_zone,notes
+> Ana Torres,at123@drexel.edu,MPH-Epi,High,Analysis,Tue eve; Thu eve,ET,
+> Ben Okafor,bo456@drexel.edu,MPH-CHP,Low,Writing,Mon eve; Wed eve,ET,Works full time at a clinic
+> Chloe Park,cp789@drexel.edu,MS-Biostat,High,Analysis,Tue eve; Sat am,PT,
+> Dev Patel,dp234@drexel.edu,MPH-EOH,Medium,Presenting,Tue eve; Thu eve,ET,
+> Elena Ruiz,er567@drexel.edu,MPH-CHP,Low,Organizing,Mon eve; Thu eve,ET,Parent of twins
+> Farah Khan,fk890@drexel.edu,MPH-Epi,Medium,Writing,Wed eve; Sat am,ET,
+> Gabe Miller,gm345@drexel.edu,DrPH,High,Organizing,Tue eve; Wed eve,CT,Former hospital data manager
+> Hana Sato,hs678@drexel.edu,MPH-HMP,Low,Presenting,Thu eve; Sat am,ET,
+> Isaac Brown,ib901@drexel.edu,MPH-Epi,Medium,Analysis,Mon eve; Tue eve,ET,
+> Jada Wilson,jw112@drexel.edu,MPH-CHP,Low,Writing,Wed eve; Thu eve,ET,
+> Kofi Mensah,km334@drexel.edu,MS-Biostat,High,Analysis,Mon eve; Sat am,ET,Only student joining from Ghana
+> Lena Novak,ln556@drexel.edu,MPH-EOH,Medium,Presenting,Tue eve; Thu eve,ET,
+> ```
+
+Save it as `survey_raw.csv` in a private folder on your computer or OneDrive.
+
+```{=html}
+<details class="activity"><summary>Activity 1 · Novice — De-identify the survey</summary>
+```
+
+**Time** ~15 min · **Tools** Excel (no AI needed)
+
+**Goal.** Produce a file an approved AI tool can use to form groups, and a separate crosswalk that stays with you.
+
+**Steps.**
+
+1. Open `survey_raw.csv` in Excel. Insert a column called `code` and fill it with S01 through S12. Sort the rows randomly first (add a column with `=RAND()`, sort by it, then delete it) so the codes don't follow alphabetical order.
+2. Copy the `code`, `name`, and `email` columns into a new file. Save it as `crosswalk.csv` in your private folder. **This file never goes into an AI tool.**
+3. In the original file, delete the `name` and `email` columns.
+4. Deal with the `notes` column. Free text is where identifying details hide. "Only student joining from Ghana" and "Former hospital data manager" identify a person as surely as a name. Delete the column, or replace notes with a neutral flag you need for grouping (for example, `limited_evening_availability = yes`).
+5. Look for rare combinations. The only DrPH student, or the only student in Pacific Time, can be re-identified by anyone who knows the class. Keep only the columns you need for grouping, and generalize where you can (for example, "outside ET" instead of a specific zone).
+6. Save the result as `survey_coded.csv`.
+
+**Expected result.** `survey_coded.csv` with code, program, stats experience, role preference, availability, and a time-zone flag. No names, emails, or free text.
+
+**Check your work.** Hand the coded file to a colleague who knows the class. Could they name anyone? If yes, generalize further.
+
+**Common pitfalls.** Canvas user IDs, Drexel IDs, and email usernames are identifiers too. Don't use them as codes.
+
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 2 · Moderate — Propose balanced groups from the survey</summary>
+```
+
+**Time** ~15 min · **Tools** Copilot Chat (Drexel account) or ChatGPT Edu
+
+**Goal.** Get a first draft of groups that meets your criteria, and understand the trade-offs.
+
+**Steps.**
+
+1. Upload `survey_coded.csv` and type:
+
+   > This file has start-of-term survey answers from 12 students, identified only by code. Form 4 groups of 3. Rules, in order of priority: (1) every group shares at least one available time; (2) every group has at least one student with High or Medium stats experience; (3) mix programs where possible; (4) spread role preferences so no group has three people who want the same role. Show the groups as a table (group, code, program, stats experience, role, shared time). Then list any rule you could not fully meet and why.
+
+2. Check every group against the rules yourself. Count the shared times by hand for at least two groups.
+3. Adjust with what you know and the AI doesn't: students who asked to work together or apart, or a group that looks lopsided. Ask for a revision in plain language, for example: "Swap S04 and S09 and recheck the rules."
+4. Save the final table as `groups_coded.csv` with two columns: `code`, `group`.
+
+**Expected result.** Four groups that meet rules 1 and 2, with an honest note on where rules 3 and 4 required compromise.
+
+**Check your work.** AI tools often claim a constraint is met when it isn't, especially shared availability. Your hand check is the step that counts.
+
+**Common pitfalls.** Don't ask the AI to group students by demographic characteristics or to infer anything about them from the survey. Group on the criteria you told students you would use.
+
+**The most private option.** Instead of uploading the data, ask the AI to *write a script* that forms groups from a file with these columns, test it on made-up data, and then run it yourself on the real file. The survey never leaves your computer. Activity 3 uses the same approach.
+
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 3 · Advanced — Create the groups in Canvas with the API</summary>
+```
+
+**Time** ~20 min · **Tools** ChatGPT Edu or Claude (to write the script, using no real data), Python, a Canvas practice course
+
+**Goal.** Put the groups into Canvas without adding 12 students by hand, and without giving an AI tool your token or roster.
+
+**Setup.**
+
+1. **Create a Canvas access token.** In Canvas, go to **Account → Settings** and click **+ New Access Token**. Give it a purpose ("group setup") and set an expiration date a few days out. Copy it once; Canvas won't show it again. Treat it like your password: anyone with it can act as you in Canvas.
+2. **Store it outside your script.** On a Mac, in Terminal: `export CANVAS_TOKEN="paste-token-here"`. On Windows PowerShell: `$env:CANVAS_TOKEN="paste-token-here"`. Never paste the token into an AI chat or save it in a file you share.
+3. **Add Canvas user IDs to your crosswalk.** The script needs each student's Canvas ID. In the practice course, open **People**, click a student, and read the number at the end of the URL. Add a `canvas_user_id` column to `crosswalk.csv`. This file still stays local.
+
+**Steps.**
+
+1. Ask ChatGPT Edu or Claude to write the script. Describe the files; don't upload them:
+
+   > Write a Python script called make_groups.py. It reads groups_coded.csv (columns: code, group) and crosswalk.csv (columns: code, name, email, canvas_user_id), joins them on code, and uses the Canvas REST API to (1) create a group category called "Project Groups" in course COURSE_ID, (2) create one group per group number, and (3) add each student to their group. Read the Canvas base URL and course ID from variables at the top of the script and the token from the CANVAS_TOKEN environment variable. Add a --dry-run option that prints what it would do without changing anything. Use the requests library. Explain each step in comments for someone new to Python.
+
+2. Read the script. Check that it uses these Canvas endpoints and nothing else:
+   - `POST /api/v1/courses/:course_id/group_categories` (create the group set)
+   - `POST /api/v1/group_categories/:group_category_id/groups` (create each group)
+   - `POST /api/v1/groups/:group_id/memberships` (add a student)
+3. Run it with `--dry-run` in the practice course. Read the output line by line.
+4. Run it for real in the practice course. In Canvas, open **People → Groups** and compare to your table.
+5. Only then change the course ID to your real course and run it again.
+
+**Expected result.** A "Project Groups" group set in Canvas matching `groups_coded.csv`, with no student data ever sent to an AI tool.
+
+**Check your work.** Count members in each group in Canvas. If something fails, paste the **error message** (not the token or data) into the chat and ask for a fix.
+
+**Common pitfalls.** Running without a dry run first. Leaving a long-lived token active: delete it in **Account → Settings** when you're done.
+
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 4 · Advanced — Update course pages and due dates for a new term</summary>
+```
+
+**Time** ~20 min · **Tools** ChatGPT Edu or Claude (course content only), Python, a Canvas practice course
+
+**Goal.** Update a course shell copied from last term (dates, term names, outdated text) without editing every page by hand.
+
+**Steps.**
+
+1. Export a backup of the course (**Settings → Export Course Content**).
+2. Ask AI to write a script, `export_pages.py`, that downloads every page in the course to a local folder as one HTML file per page. It uses `GET /api/v1/courses/:course_id/pages` to list them and `GET /api/v1/courses/:course_id/pages/:url` to get each body.
+3. Revise the content. Check first that the pages contain no student names, grades, or feedback. Then open a few in ChatGPT Edu or Claude and ask, for example:
+
+   > Update this course page for Fall 2026: change term references from Fall 2025, flag any dates that need my attention rather than guessing them, and list every change you made. Keep the HTML structure and links intact.
+
+4. Compare each revised file with the original before accepting it. Word's **Compare** feature or any text-diff tool works.
+5. Ask AI for a second script, `update_pages.py`, that uploads the revised files with `PUT /api/v1/courses/:course_id/pages/:url` (field `wiki_page[body]`), with a `--dry-run` option. Run it in the practice course first.
+6. **Due dates:** ask for a script that shifts every assignment's due date by a set number of days using `PUT /api/v1/courses/:course_id/assignments/:id` (field `assignment[due_at]`). Check holidays and exam weeks yourself; a uniform shift won't know about them.
+
+**Expected result.** Updated pages and dates, with a list of every change and a backup you can restore.
+
+**Check your work.** Open five pages and three assignments in Canvas as a student would see them (**Student View**). Check links, dates, and formatting.
+
+**Common pitfalls.** AI "improving" wording you didn't ask it to change, or guessing dates. Tell it to flag, not fill in. Canvas's built-in **Adjust events and due dates** option during course copy may be enough for simple date shifts.
+
+```{=html}
+</details>
+```
+
+## Which tool for which step
+
+| Step | Contains student data? | Tools to use |
+|---|---|---|
+| De-identifying the survey | Yes | Excel on your computer. No AI needed. |
+| Forming groups from the coded survey | Yes, coded | Copilot Chat (Drexel account) or ChatGPT Edu. Or have AI write a script and run it locally. |
+| Writing API scripts | No (describe files, don't upload them) | ChatGPT Edu, Copilot Chat, or Claude |
+| Revising course pages | Usually no. Check first. | ChatGPT Edu, Copilot Chat, or Claude if Low Risk only |
+| Running scripts with your token and crosswalk | Yes | Your computer only |
+
+## Check your readiness
+
+Answer these, then check — your score suggests whether to dive in or skim the activities first.
+
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions": [{"q": "You removed names and emails from a survey, but the notes column says 'only student joining from Ghana.' Is the file de-identified?", "options": ["No: free-text details and rare combinations can identify a student", "Yes: names and emails are gone", "Yes, if you use ChatGPT Edu", "Only if the class is large"], "answer": 0, "explain": "Anyone who knows the class could identify that student. Delete free text or replace it with neutral flags, and generalize rare combinations."}, {"q": "Where should your Canvas access token go?", "options": ["An environment variable on your own computer", "Into the AI chat so it can test the script", "Hard-coded in a script you share with colleagues", "In the course syllabus"], "answer": 0, "explain": "The token lets anyone act as you in Canvas. Keep it local, give it a short expiration, and delete it when you're done."}, {"q": "Which tool is appropriate for proposing groups from a coded student survey?", "options": ["Copilot Chat signed in with your Drexel account, or ChatGPT Edu", "Claude, since the names were removed", "A personal ChatGPT account", "Any tool, since the data is coded"], "answer": 0, "explain": "Coded survey answers are still education records if you can link them back. Use Drexel-approved tools only. Claude and personal tools are Low Risk Data only."}]}
+</script>
+</div>
+
+## Useful resources
+
+- [Canvas REST API documentation](https://canvas.instructure.com/doc/api/) — the Groups, Group Categories, Pages, and Assignments sections cover everything on this page.
+- [Drexel AI Tools page](https://drexel.edu/provost/ai/tools) — approved tools and data classifications.
+- [De-identification & Synthetic Data](de-identification-synthetic-data.qmd) — more on rare combinations and re-identification risk.
+- [Coding with AI](coding-with-ai.qmd) — getting started with AI-written Python scripts.
+
+---
+
+## Navigate
+
+**Back to track overview:** [Teaching & Learning](teaching-learning.qmd)
+
+**Related topics:** [Assignment & Assessment Design](assignment-assessment-design.qmd) · [Data Security & Classification Deep-Dive](data-security-classification.qmd) · [AI for Curriculum Development](../workshop6.qmd)
+
+::: {.callout-warning}
+## Data rules
+Student survey answers, rosters, grades, and submissions are FERPA-protected education records. De-identify before using an AI tool, keep the crosswalk and your Canvas token on your own computer, and use only Drexel-approved tools (Copilot Chat with your Drexel account, or ChatGPT Edu) for coded student data. Claude and personal tools are Low Risk Data only. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+:::
+
+{{< include /_feedback-track.qmd >}}

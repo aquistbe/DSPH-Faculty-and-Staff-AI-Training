@@ -20,7 +20,7 @@ For 2026--27 the series is organized into **four core sessions** plus a set of *
 
 No prior experience with AI is required. The focus is practical: what these tools can do, how to use them to save time on real work, and how to bring them into team projects and coursework.
 
-Prefer to learn at your own pace? The **[Self-Paced Tracks](tracks.qmd)** turn these topics into self-guided pages with practice activities, readiness quizzes, and curated readings---**36 topics across five tracks**, from data analysis to governance and ethics.
+Prefer to learn at your own pace? The **[Self-Paced Tracks](tracks.qmd)** turn these topics into self-guided pages with practice activities, readiness quizzes, and curated readings---**43 topics across seven tracks**, from data analysis to governance and ethics.
 
 :::{.callout-important}
 ## Use AI to amplify your judgment, not replace it
@@ -46,7 +46,7 @@ Four one-hour sessions that everyone is welcome at, run **every fall and repeate
 | # | Session | What You'll Do |
 |---|---------|----------------|
 | [Core 1](workshop1.qmd) | **Foundations & Capabilities** | What generative AI is, which Drexel-approved tools to use, and prompting that gets useful results |
-| [Core 2](workshop2.qmd) | **Workflow Enhancement** | Use ChatGPT Edu, Copilot Chat, and Microsoft 365 Copilot to speed up writing, email, summarizing, and Office tasks |
+| [Core 2](workshop2.qmd) | **Workflow Enhancement** | Make AI part of your weekly routine: summarize, rewrite, and make tables with ChatGPT Edu and Copilot Chat, and save the prompts that work |
 | [Core 3](workshop3.qmd) | **Reusable Assistants** | Turn prompts that work into shared Projects, custom GPTs, and simple agentic assistants your team or lab can reuse |
 | [Core 4](workshop5.qmd) | **Verify, Disclose, Decide** | A hands-on hour on verification, funder and journal policy, disclosure, and the judgment calls in between |
 
@@ -103,7 +103,7 @@ Ethics and governance aren't a bolt-on module---they run through the whole serie
 :::
 
 ::: {.quick-link-card}
-[**Self-Paced Tracks**<br>36 topics, five tracks, at your own pace](tracks.qmd){.card-day}
+[**Self-Paced Tracks**<br>43 topics, seven tracks, at your own pace](tracks.qmd){.card-day}
 :::
 
 ::: {.quick-link-card}
@@ -154,7 +154,7 @@ The series continues in **winter quarter** --- the core sessions repeat and the 
 ## Before You Come {.checklist}
 
 - Confirm your access to **ChatGPT Edu** (available to Drexel faculty, professional staff, and students --- [access details](https://servicedesk.drexel.edu/TDClient/277/Portal/Requests/ServiceDet?ID=10760); see [Tools & Access](tools.qmd))
-- Confirm you can sign in to **Microsoft Copilot Chat** with your Drexel account (everyone), and to **Microsoft 365 Copilot** in Office if you hold that license (faculty and staff, extra cost)
+- Confirm you can sign in to **Microsoft Copilot Chat** with your Drexel account (everyone)
 - Bring a laptop
 - Bring a real (non-sensitive) work task you'd like help with---an email to draft, a document to summarize, a report section or assignment to outline
 - Read the one-page [data privacy rules](#data-privacy) below
@@ -166,7 +166,7 @@ Drexel-approved tools are not all equal on data:
 
 - **ChatGPT Edu** is licensed by Drexel and governed by Drexel's ChatGPT Edu Terms of Use. Your prompts are not used to train OpenAI models. Use **the current default model** in the Drexel workspace unless a session tells you otherwise. Do **not** enter sensitive information that Drexel must protect by law, contract, or policy, including PHI.
 - **Microsoft Copilot Chat** with Enterprise Data Protection is listed by Drexel as usable with **High Risk Data** when signed in with a Drexel account, and **Low Risk Data** otherwise.
-- **Microsoft 365 Copilot** in Word, Excel, PowerPoint, Outlook, and Teams is listed by Drexel as usable with **High Risk Data** for licensed faculty and staff.
+- **Microsoft 365 Copilot** (the paid Copilot inside Word, Excel, PowerPoint, and Teams) is not currently provided by Drexel. Use Copilot Chat and paste or upload your content instead.
 - **Zoom AI Companion** is listed by Drexel as usable with **High Risk Data** when a meeting is not recorded or transcribed, and **Low Risk Data** when it is recorded or transcribed. Notify participants when it is active.
 - **Adobe Acrobat AI Assistant, PDF Spaces, Creative Cloud, and Express** are listed by Drexel as usable with **Moderate Risk Data**.
 - **Research study data is stricter than the tiers**: none of it goes into commercial/consumer AI tools (PII and HIPAA data absolutely never), and even de-identified, aggregate, or public study data needs the **PI's approval** and must respect the IRB protocol, any data use agreement, and the data source's terms of use. See the Research Data callout on [Tools & Access](tools.qmd).

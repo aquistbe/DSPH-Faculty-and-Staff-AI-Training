@@ -10,7 +10,7 @@ Self-paced track · 9 topics · novice → advanced
 
 Use AI to write, translate, and disseminate public-health work — from grants and manuscripts to plain-language and multilingual materials. Every page assumes you've done **[Core 1](../workshop1.qmd)** (prompting and the Drexel data rules). The throughline: AI drafts; you verify and own every fact, citation, and claim.
 
-Teaching-related topics — course AI policies, assignment design, and the student-facing pages on coursework and thesis work — now live in the **[Teaching & Learning](teaching-learning.qmd)** track.
+Teaching-related topics — course AI policies, assignment design, and the student-facing pages on coursework and thesis work — now live in the **[Teaching & Learning](teaching-learning.qmd)** track. The AI features built into Outlook, Zoom, and Acrobat now live in the **[Everyday Tools](everyday-tools.qmd)** track.
 
 ## Difficulty levels
 
@@ -30,7 +30,7 @@ Teaching-related topics — course AI policies, assignment design, and the stude
 | 6 | [AI for Design & Visual Communication](design-visual-communication.qmd) | [Moderate]{.level-badge .level-moderate} | Make graphics with Claude, Canva, Figma, and Adobe — matched to the data level |
 | 7 | [Collaborating on Projects](collaborating-on-projects.qmd) | [Moderate]{.level-badge .level-moderate} | Set up shared Projects and custom GPTs for a team (companion to Core 3) |
 | 8 | [Grant Administration with AI](grant-administration.qmd) | [Novice]{.level-badge .level-novice} | Track deadlines, format compliance docs, and draft progress reports |
-| 9 | [Copilot for Email in Outlook](copilot-email.qmd) | [Novice]{.level-badge .level-novice} | Summarize threads, draft replies, and check tone with Copilot in Outlook |
+| 9 | [AI for Slides & Presentations](ai-slides-presentations.qmd) | [Novice]{.level-badge .level-novice} | Build one deck three ways and choose a tool by content and data rules |
 
 ## Not sure where to start?
 

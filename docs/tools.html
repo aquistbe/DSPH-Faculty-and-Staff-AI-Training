@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -39,10 +42,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-185884c8c6106d4d5e21bb702d36b605.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-e5a00fd6c0fce5251246b1fbc19e77b5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -248,10 +251,10 @@ ul.task-list li input[type="checkbox"] {
 <td>Web-based AI chat, drafting, summarizing</td>
 </tr>
 <tr class="odd">
-<td><strong>Microsoft 365 Copilot</strong></td>
-<td>Faculty and staff, extra-cost license</td>
-<td><strong>High Risk Data</strong></td>
-<td>Word, Excel, PowerPoint, Outlook, Teams</td>
+<td><strong>Microsoft 365 Copilot</strong> (the paid Copilot inside Word, Excel, PowerPoint, Outlook, Teams)</td>
+<td><strong>Not currently provided by Drexel</strong></td>
+<td>n/a</td>
+<td>Use Copilot Chat instead: paste or upload your content</td>
 </tr>
 <tr class="even">
 <td><strong>Zoom AI Companion</strong></td>
@@ -312,7 +315,7 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>ChatGPT Edu — yes.</strong> Students were added in August 2026; sign in with your Drexel account.</li>
 <li><strong>Copilot Chat with Enterprise Data Protection — yes.</strong> Sign in with your Drexel account and confirm EDP is active.</li>
 <li><strong>Zoom AI Companion and the Adobe AI tools — yes</strong>, at the classifications listed in the table above.</li>
-<li><strong>Microsoft 365 Copilot inside Word, Excel, PowerPoint, Outlook, and Teams — no.</strong> That is an extra-cost faculty/staff license. Use <strong>Copilot Chat in the browser</strong> instead and paste your text in; every Copilot Chat prompt in these sessions works that way.</li>
+<li><strong>Microsoft 365 Copilot inside Word, Excel, PowerPoint, Outlook, and Teams — no.</strong> Drexel does not currently provide this license to anyone. Use <strong>Copilot Chat in the browser</strong> instead and paste or upload your content; every Copilot Chat prompt in these sessions works that way.</li>
 <li><strong>Two Edu-workspace features have low-fidelity substitutes</strong> if something isn’t enabled for you: a <strong>saved instruction block in a note</strong> that you paste at the top of a chat does roughly what a <strong>custom GPT</strong> does (you re-paste it each time instead of it being built in), and a <strong>shared OneDrive folder</strong> of files and a written instruction doc does roughly what a <strong>shared Project</strong> does (the AI won’t read the folder itself—you attach the files each session).</li>
 <li>Your <strong>course AI policies come from your instructors</strong>, not from this site — and that includes the <strong>APE</strong> and the <strong>ILE/capstone</strong>, where the supervising instructor, advisor, or preceptor sets the rules. Drexel’s <a href="https://drexel.edu/teaching-and-learning/resources/teaching-tech/GAI-and-teaching/">generative AI and teaching guidance</a> is instructor-level guidance, not a university-wide policy. Read the syllabus first; these tools don’t override it.</li>
 </ul>
@@ -334,19 +337,18 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="microsoft-copilot" class="level2">
 <h2 class="anchored" data-anchor-id="microsoft-copilot">Microsoft Copilot</h2>
-<p>Drexel provides two Copilot experiences that matter for this training: <strong>Copilot Chat with Enterprise Data Protection</strong> and <strong>Microsoft 365 Copilot</strong> integrated into Word, Excel, PowerPoint, Outlook, and Teams. We will use both where available.</p>
+<p>Drexel provides <strong>Copilot Chat with Enterprise Data Protection</strong> to faculty, staff, and students. Drexel does <strong>not</strong> currently provide the paid <strong>Microsoft 365 Copilot</strong> license, so the Copilot features built into Word, Excel, PowerPoint, and Teams are not available. In these sessions, you paste or upload content into Copilot Chat instead.</p>
 <p><strong>What it gives you</strong></p>
 <ul>
 <li>Web-based Copilot Chat for secure drafting, summarizing, and brainstorming when signed in with a Drexel account</li>
-<li>Draft and rewrite in Word; summarize long documents</li>
-<li>Summarize email threads and draft replies in Outlook</li>
-<li>Generate formulas, summarize, and analyze in Excel</li>
-<li>Recap meetings and action items in Teams</li>
+<li>Summarize, rewrite, and make tables from text or files you paste or upload</li>
+<li>In Outlook, the free <strong>Summarize</strong> button on email threads and the <strong>Copilot</strong> pane for drafting and feedback (the paid “Draft with Copilot” and “Coaching by Copilot” buttons are not available)</li>
+<li>Help with Excel formulas and data questions when you paste the data or upload the file into Copilot Chat</li>
 </ul>
 <p><strong>How to get access</strong></p>
-<p>Sign in with your Drexel account. For Copilot Chat, confirm that Enterprise Data Protection is active before using it with Drexel content. For Word, Excel, PowerPoint, Outlook, and Teams integration, confirm that you have the Microsoft 365 Copilot license enabled.</p>
+<p>Sign in with your Drexel account at <a href="https://m365.cloud.microsoft/chat">m365.cloud.microsoft/chat</a> or open the Copilot pane in Outlook. Confirm that Enterprise Data Protection is active before using it with Drexel content.</p>
 <p><strong>Data rules</strong></p>
-<p>Drexel’s AI Tools page lists Copilot Chat with Enterprise Data Protection as usable with <strong>High Risk Data</strong> when signed in with a Drexel account, and <strong>Low Risk Data</strong> otherwise. Microsoft 365 Copilot is listed as usable with <strong>High Risk Data</strong> for faculty and staff with the extra-cost license. Note: since April 2026, the in-app Copilot button in Word, Excel, and PowerPoint requires the paid Microsoft 365 Copilot license — without it, use Copilot Chat in the browser or Outlook instead (<a href="https://servicedesk.drexel.edu/TDClient/277/Portal/KB/Article/20230">details</a>). Do not use a personal Microsoft account for Drexel work.</p>
+<p>Drexel’s AI Tools page lists Copilot Chat with Enterprise Data Protection as usable with <strong>High Risk Data</strong> when signed in with a Drexel account, and <strong>Low Risk Data</strong> otherwise. Since April 2026, the in-app Copilot button in Word, Excel, and PowerPoint requires the paid Microsoft 365 Copilot license, which Drexel does not currently provide. Use Copilot Chat in the browser or Outlook instead (<a href="https://servicedesk.drexel.edu/TDClient/277/Portal/KB/Article/20230">details</a>). Do not use a personal Microsoft account for Drexel work.</p>
 </section>
 <section id="zoom-ai-companion-meetings" class="level2">
 <h2 class="anchored" data-anchor-id="zoom-ai-companion-meetings">Zoom AI Companion (Meetings)</h2>

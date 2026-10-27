@@ -15,7 +15,7 @@ Guides, references, and where to go deeper after the workshops
 - **[AI Tools + data classification](https://drexel.edu/provost/ai/tools)** --- which tools are approved for which data (authoritative).
 - **ChatGPT Edu** --- university-licensed; primary tool for the workshops, available to faculty, professional staff, and students. Use **the current default model** in the Drexel workspace. [Request access](https://servicedesk.drexel.edu/TDClient/277/Portal/Requests/ServiceDet?ID=10760). See also [Tools & Access](tools.qmd).
 - **Microsoft Copilot Chat with Enterprise Data Protection** --- sign in with your Drexel M365 account; Drexel lists it as usable with **High Risk Data** when Enterprise Data Protection is active.
-- **Microsoft 365 Copilot** --- integrated with Word, Excel, PowerPoint, Outlook, and Teams for licensed faculty and staff; Drexel lists it as usable with **High Risk Data**.
+- **Microsoft 365 Copilot** --- the paid Copilot inside Word, Excel, PowerPoint, Outlook, and Teams. Drexel does not currently provide this license; use Copilot Chat and paste or upload your content instead.
 - **Zoom AI Companion** --- included with Drexel Zoom; meeting summaries, recaps, and action items. Drexel lists it as **High Risk Data** when not recorded or transcribed and **Low Risk Data** when recorded or transcribed.
 - **Adobe Acrobat AI Assistant, PDF Spaces, Creative Cloud, and Express** --- document and visual tools; Drexel lists them as usable with **Moderate Risk Data**. Featured in the [Documents & Visuals with Adobe](workshop4.qmd) elective.
 
