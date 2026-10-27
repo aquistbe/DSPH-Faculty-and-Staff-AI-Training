@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -39,10 +42,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-185884c8c6106d4d5e21bb702d36b605.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-e5a00fd6c0fce5251246b1fbc19e77b5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -178,17 +181,22 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#core-2-workflow-enhancement" id="toc-core-2-workflow-enhancement" class="nav-link active" data-scroll-target="#core-2-workflow-enhancement">Core 2 · Workflow Enhancement</a></li>
   <li><a href="#what-youll-leave-with" id="toc-what-youll-leave-with" class="nav-link" data-scroll-target="#what-youll-leave-with">What You’ll Leave With</a></li>
   <li><a href="#run-of-show" id="toc-run-of-show" class="nav-link" data-scroll-target="#run-of-show">Run of Show</a></li>
-  <li><a href="#overview-8-min" id="toc-overview-8-min" class="nav-link" data-scroll-target="#overview-8-min">Overview (8 min)</a></li>
-  <li><a href="#ethics-governance-verification-disclosure-and-over-reliance-15-min" id="toc-ethics-governance-verification-disclosure-and-over-reliance-15-min" class="nav-link" data-scroll-target="#ethics-governance-verification-disclosure-and-over-reliance-15-min">Ethics &amp; Governance: Verification, Disclosure, and Over-Reliance (15 min)</a></li>
-  <li><a href="#activity-1-microsoft-365-copilot-in-office" id="toc-activity-1-microsoft-365-copilot-in-office" class="nav-link" data-scroll-target="#activity-1-microsoft-365-copilot-in-office">Activity 1: Microsoft 365 Copilot in Office</a>
+  <li><a href="#welcome-back-5-min" id="toc-welcome-back-5-min" class="nav-link" data-scroll-target="#welcome-back-5-min">Welcome Back (5 min)</a></li>
+  <li><a href="#where-ai-fits-and-which-tool-to-open-8-min" id="toc-where-ai-fits-and-which-tool-to-open-8-min" class="nav-link" data-scroll-target="#where-ai-fits-and-which-tool-to-open-8-min">Where AI Fits, and Which Tool to Open (8 min)</a></li>
+  <li><a href="#check-before-you-use-it-6-min" id="toc-check-before-you-use-it-6-min" class="nav-link" data-scroll-target="#check-before-you-use-it-6-min">Check Before You Use It (6 min)</a></li>
+  <li><a href="#guided-start-upload-a-file-to-copilot-chat" id="toc-guided-start-upload-a-file-to-copilot-chat" class="nav-link" data-scroll-target="#guided-start-upload-a-file-to-copilot-chat">Guided Start: Upload a File to Copilot Chat</a>
   <ul class="collapse">
-  <li><a href="#activity-1-microsoft-365-copilot-in-office-1" id="toc-activity-1-microsoft-365-copilot-in-office-1" class="nav-link" data-scroll-target="#activity-1-microsoft-365-copilot-in-office-1">Activity 1: Microsoft 365 Copilot in Office</a></li>
+  <li><a href="#guided-start-upload-a-file-to-copilot-chat-1" id="toc-guided-start-upload-a-file-to-copilot-chat-1" class="nav-link" data-scroll-target="#guided-start-upload-a-file-to-copilot-chat-1">Guided Start: Upload a File to Copilot Chat</a></li>
   </ul></li>
-  <li><a href="#activity-2-chatgpt-edu-for-your-real-task" id="toc-activity-2-chatgpt-edu-for-your-real-task" class="nav-link" data-scroll-target="#activity-2-chatgpt-edu-for-your-real-task">Activity 2: ChatGPT Edu for Your Real Task</a>
+  <li><a href="#activity-1-three-everyday-jobs" id="toc-activity-1-three-everyday-jobs" class="nav-link" data-scroll-target="#activity-1-three-everyday-jobs">Activity 1: Three Everyday Jobs</a>
   <ul class="collapse">
-  <li><a href="#activity-2-chatgpt-edu-for-your-real-task-1" id="toc-activity-2-chatgpt-edu-for-your-real-task-1" class="nav-link" data-scroll-target="#activity-2-chatgpt-edu-for-your-real-task-1">Activity 2: ChatGPT Edu for Your Real Task</a></li>
+  <li><a href="#activity-1-three-everyday-jobs-1" id="toc-activity-1-three-everyday-jobs-1" class="nav-link" data-scroll-target="#activity-1-three-everyday-jobs-1">Activity 1: Three Everyday Jobs</a></li>
   </ul></li>
-  <li><a href="#wrap-up-7-min" id="toc-wrap-up-7-min" class="nav-link" data-scroll-target="#wrap-up-7-min">Wrap-Up (7 min)</a></li>
+  <li><a href="#activity-2-your-own-task-saved-as-a-recipe" id="toc-activity-2-your-own-task-saved-as-a-recipe" class="nav-link" data-scroll-target="#activity-2-your-own-task-saved-as-a-recipe">Activity 2: Your Own Task, Saved as a Recipe</a>
+  <ul class="collapse">
+  <li><a href="#activity-2-your-own-task-saved-as-a-recipe-1" id="toc-activity-2-your-own-task-saved-as-a-recipe-1" class="nav-link" data-scroll-target="#activity-2-your-own-task-saved-as-a-recipe-1">Activity 2: Your Own Task, Saved as a Recipe</a></li>
+  </ul></li>
+  <li><a href="#wrap-up-5-min" id="toc-wrap-up-5-min" class="nav-link" data-scroll-target="#wrap-up-5-min">Wrap-Up (5 min)</a></li>
   <li><a href="#looking-ahead" id="toc-looking-ahead" class="nav-link" data-scroll-target="#looking-ahead">Looking Ahead</a></li>
   <li><a href="#give-feedback-on-this-workshop" id="toc-give-feedback-on-this-workshop" class="nav-link" data-scroll-target="#give-feedback-on-this-workshop">Give Feedback on This Workshop</a></li>
   </ul>
@@ -219,10 +227,10 @@ ul.task-list li input[type="checkbox"] {
 <section id="core-2-workflow-enhancement" class="level1 day-header">
 <h1>Core 2 · Workflow Enhancement</h1>
 <div class="day-subtitle">
-<p>Use ChatGPT Edu, Copilot Chat, and Microsoft 365 Copilot to speed up the work you already do</p>
+<p>Turn tasks you do every week into quick routines with ChatGPT Edu and Copilot Chat</p>
 </div>
 <div class="day-time">
-<p>One hour | Bring a laptop and a real (non-sensitive) task | Runs weekly in the fall term and repeats in spring — dates announced by school email</p>
+<p>One hour | Bring a laptop and one real (non-sensitive) task | Runs weekly in the fall term and repeats in spring — dates announced by school email</p>
 </div>
 </section>
 <div class="slides-cta">
@@ -238,18 +246,18 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Didn’t bring a task? Download a synthetic demo file (all content fictional and non-sensitive): <a href="demo-materials/Workshop2_Demo_StudyDescription.docx">Study description (Word)</a> · <a href="demo-materials/Workshop2_Demo_EmailThread.docx">Committee email thread (Word)</a> · <a href="demo-materials/Workshop2_Demo_SeminarAttendance.xlsx">Seminar attendance data (Excel)</a> · <a href="demo-materials/Workshop2_Demo_Abstracts.docx">Three abstracts (Word)</a></p>
+<p>Didn’t bring a task? Download a fictional demo file (nothing sensitive): <a href="demo-materials/Workshop2_Demo_StudyDescription.docx">Study description (Word)</a> · <a href="demo-materials/Workshop2_Demo_EmailThread.docx">Committee email thread (Word)</a> · <a href="demo-materials/Workshop2_Demo_SeminarAttendance.xlsx">Seminar attendance data (Excel)</a> · <a href="demo-materials/Workshop2_Demo_Abstracts.docx">Three abstracts (Word)</a></p>
 </div>
 </div>
 <section id="what-youll-leave-with" class="level2">
 <h2 class="anchored" data-anchor-id="what-youll-leave-with">What You’ll Leave With</h2>
-<p>By the end of this hour, you will be able to:</p>
+<p>This session picks up where <a href="./workshop1.html">Core 1</a> left off. If you can sign in to ChatGPT Edu and type a request, you are ready. By the end of this hour, you will be able to:</p>
 <ol type="1">
-<li>Spot which of your recurring tasks are good candidates for AI help</li>
-<li>Use Microsoft 365 Copilot inside Word, Outlook, and Excel for everyday tasks</li>
-<li>Use ChatGPT Edu with the current default model, and Copilot Chat with Enterprise Data Protection, to summarize, rewrite, and analyze faster</li>
-<li>Build a small “prompt recipe” you can reuse</li>
-<li>Apply the workflow ethics: verify before it counts, disclose AI use appropriately, and avoid over-reliance</li>
+<li>Pick a weekly task where AI can save you time</li>
+<li>Get a document, email, or spreadsheet into Copilot Chat or ChatGPT Edu by pasting or uploading it</li>
+<li>Use three everyday moves: summarize, rewrite for an audience, and make a table</li>
+<li>Check the answer before you use it</li>
+<li>Save one prompt you can reuse</li>
 </ol>
 </section>
 <section id="run-of-show" class="level2">
@@ -267,193 +275,240 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td>0:00–0:08</td>
-<td>Overview: where AI fits in a workflow; Copilot Chat, Microsoft 365 Copilot, and ChatGPT Edu</td>
+<td>0:00–0:05</td>
+<td>Welcome back: how did your Core 1 task go?</td>
 </tr>
 <tr class="even">
-<td>0:08–0:23</td>
-<td>Ethics &amp; Governance: verification, disclosure, and over-reliance</td>
+<td>0:05–0:13</td>
+<td>Where AI fits, and which tool to open</td>
 </tr>
 <tr class="odd">
-<td>0:23–0:42</td>
-<td>Activity 1: Microsoft 365 Copilot in Office</td>
+<td>0:13–0:19</td>
+<td>Check before you use it</td>
 </tr>
 <tr class="even">
-<td>0:42–0:55</td>
-<td>Activity 2: ChatGPT Edu for your real task</td>
+<td>0:19–0:24</td>
+<td>Guided start: upload a file to Copilot Chat (follow along)</td>
+</tr>
+<tr class="odd">
+<td>0:24–0:44</td>
+<td>Activity 1: Three everyday jobs (pick one)</td>
+</tr>
+<tr class="even">
+<td>0:44–0:55</td>
+<td>Activity 2: Your own task, saved as a recipe</td>
 </tr>
 <tr class="odd">
 <td>0:55–1:00</td>
-<td>Wrap-up and save your prompt recipe</td>
+<td>Wrap-up and one thing to try this week</td>
 </tr>
 </tbody>
 </table>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>A Few Words You’ll Hear
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Upload (attach):</strong> adding a file to the chat with the <strong>+</strong> or paperclip button, so the AI can read it.</li>
+<li><strong>Follow-up:</strong> a second request in the same chat that changes the first answer. “Make it shorter” is a follow-up.</li>
+<li><strong>Recipe:</strong> a prompt that worked, saved with blanks so you can reuse it.</li>
+<li><strong>Copilot Chat:</strong> Microsoft’s AI chat, free to everyone at Drexel. It is not the same as the paid Copilot inside Word and Excel, which Drexel does not have.</li>
+</ul>
+</div>
+</div>
 <hr>
 </section>
-<section id="overview-8-min" class="level2">
-<h2 class="anchored" data-anchor-id="overview-8-min">Overview (8 min)</h2>
-<p><strong>Where AI fits.</strong> The biggest time savings come from the repetitive middle of a task—the first draft, the summary, the reformat, the “make this clearer.” AI handles that draft; you bring the judgment and the final word.</p>
-<p><strong>Copilot vs.&nbsp;ChatGPT Edu—when to use which.</strong></p>
-<ul>
-<li><strong>Microsoft 365 Copilot</strong> shines when the work is <em>already in a Microsoft file</em>: a Word doc to rewrite, an Outlook thread to summarize, an Excel sheet to analyze. It sees the document you’re in and respects Microsoft 365 permissions. It requires the paid faculty/staff license.</li>
-<li><strong>Copilot Chat with Enterprise Data Protection</strong> is useful for web-based drafting, summarizing, and brainstorming when you do not need a reusable GPT—and it’s what to use if you don’t have the in-app Copilot license.</li>
-<li><strong>ChatGPT Edu</strong> shines for open-ended drafting, summarizing pasted text, file-based analysis, and building reusable assistants. Use the current default model in the Drexel workspace.</li>
-</ul>
-<p>Use each tool according to Drexel’s data classifications. See <a href="./tools.html">Tools &amp; Access</a>.</p>
+<section id="welcome-back-5-min" class="level2">
+<h2 class="anchored" data-anchor-id="welcome-back-5-min">Welcome Back (5 min)</h2>
+<p>At the end of Core 1 you were asked to do one weekly task with ChatGPT Edu. Turn to a neighbor: what did you try, and did it help? If you didn’t get to it, today is the day.</p>
+<hr>
+</section>
+<section id="where-ai-fits-and-which-tool-to-open-8-min" class="level2">
+<h2 class="anchored" data-anchor-id="where-ai-fits-and-which-tool-to-open-8-min">Where AI Fits, and Which Tool to Open (8 min)</h2>
+<p><strong>Where AI fits.</strong> Most writing tasks have three parts: you decide what is needed, someone writes a first draft, and someone checks it. AI is good at the middle part. You keep the first and last parts.</p>
+<p><strong>Good tasks to start with</strong> are ones you do often, that are mostly text, and that are easy to check: meeting recaps, email replies, summaries, plain-language rewrites, and turning notes into a table. <strong>Poor tasks</strong> are final decisions, sources you have not opened, and anything with sensitive information.</p>
+<p><strong>Which tool to open.</strong> Both are free to you and signed in with your Drexel account. Both let you paste text or upload a file.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>Copilot Chat</strong></th>
+<th><strong>ChatGPT Edu</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Where</strong></td>
+<td><a href="https://m365.cloud.microsoft/chat">m365.cloud.microsoft/chat</a></td>
+<td>The Drexel ChatGPT Edu workspace</td>
+</tr>
+<tr class="even">
+<td><strong>Good for</strong></td>
+<td>Quick summaries and rewrites of Drexel documents and email</td>
+<td>Longer drafting, going back and forth, and (in Core 3) saved assistants</td>
+</tr>
+</tbody>
+</table>
+<p>Use whichever you like. If one is down or slow, the same prompts work in the other.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Find Your Candidates
+<span class="screen-reader-only">Tip</span>What About Copilot Inside Word and Excel?
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>A task is a good AI candidate if it’s (1) text-heavy, (2) something you do repeatedly, and (3) low-stakes enough that a draft-plus-review is fine. Think: status updates, meeting recaps, first drafts, summaries, reformatting.</p>
+<p>Drexel does not have the Microsoft 365 Copilot license, so the Copilot button inside Word, Excel, and PowerPoint is not available. You don’t need it. Upload the file to Copilot Chat or ChatGPT Edu (or paste the text), ask for what you need, and copy the answer back into your document. In Outlook, everyone has the <strong>Summarize</strong> button at the top of an email thread; see <a href="./tracks/copilot-email.html">Copilot for Email</a>.</p>
 </div>
 </div>
-<hr>
-</section>
-<section id="ethics-governance-verification-disclosure-and-over-reliance-15-min" class="level2">
-<h2 class="anchored" data-anchor-id="ethics-governance-verification-disclosure-and-over-reliance-15-min">Ethics &amp; Governance: Verification, Disclosure, and Over-Reliance (15 min)</h2>
-<p><em>The thread continues. Core 1 covered how AI fails and who’s accountable. Today: what that accountability means once AI is in your daily work. <a href="./workshop5.html">Core 4</a> is where we put a full hour into practicing it.</em></p>
-<p><strong>Verify before it counts.</strong> Speed is the selling point and the trap. AI can fabricate facts, statistics, and citations that read as authoritative. For anything that goes into a real document or decision, check it against the source—especially numbers and references. A quick rule from the intensive course: <em>if you can’t open it, you can’t cite it.</em> Treat every AI-supplied figure as unverified until you’ve confirmed it.</p>
-<p><strong>Disclose appropriately.</strong> Norms are still forming, but the safe defaults are clear: for official work products, external communications, and anything research-related, be transparent that AI assisted, following Drexel’s <a href="https://drexel.edu/provost/ai/pedagogy-guidance/policies">AI policy</a> and your unit’s expectations. Disclosure protects your credibility and models the behavior we want across the school. When unsure, ask your supervisor or PI what level of disclosure they expect.</p>
-<p><strong>Don’t over-rely.</strong> If AI does all the drafting and thinking, two things erode: your own skill and judgment, and your voice. Outputs also drift toward a generic sameness. Use AI to get past the blank page and to pressure-test your thinking—not to replace it. Read what it produces critically, keep your own voice, and stay the expert in the loop.</p>
-<p><strong>Confidentiality in everyday workflows.</strong> Even approved tools have limits. Microsoft 365 Copilot can see the document and files you have access to—make sure that’s appropriate before you ask it to summarize across them. Match every task to Drexel’s data classification, and never paste regulated data into a tool not cleared for it. See <a href="./tools.html">Tools &amp; Access</a>.</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>Before You Hit Send
+<span class="screen-reader-only">Important</span>Same Data Rule as Core 1
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Three checks on anything AI helped write: <strong>Verified?</strong> (facts and citations confirmed). <strong>Disclosed?</strong> (AI use noted where expected). <strong>Yours?</strong> (it says what you mean, in your voice). If not all three, it’s not ready.</p>
+<p>Never paste in health information about a person, student records, Social Security numbers, or identifiable research data. When in doubt, leave it out or make the details up. Full details are on the <a href="./tools.html">Tools &amp; Access</a> page.</p>
 </div>
 </div>
 <hr>
 </section>
-<section id="activity-1-microsoft-365-copilot-in-office" class="level2 activity">
-<h2 class="activity anchored" data-anchor-id="activity-1-microsoft-365-copilot-in-office">Activity 1: Microsoft 365 Copilot in Office</h2>
-<section id="activity-1-microsoft-365-copilot-in-office-1" class="level3 activity">
-<h3 class="anchored" data-anchor-id="activity-1-microsoft-365-copilot-in-office-1">Activity 1: Microsoft 365 Copilot in Office</h3>
+<section id="check-before-you-use-it-6-min" class="level2">
+<h2 class="anchored" data-anchor-id="check-before-you-use-it-6-min">Check Before You Use It (6 min)</h2>
+<p>Core 1 showed that AI can sound sure and still be wrong. Once AI is part of your weekly work, that turns into three quick questions before anything leaves your hands:</p>
+<ol type="1">
+<li><strong>Verified? Is it right?</strong> Check names, dates, and numbers against the original. AI is most likely to slip on numbers.</li>
+<li><strong>Disclosed? Should I say AI helped?</strong> For official documents, anything research-related, and anything going outside the school, be open about AI help. Follow <a href="https://drexel.edu/provost/ai/pedagogy-guidance/policies">Drexel’s AI guidance</a> and ask your supervisor or PI if you’re unsure.</li>
+<li><strong>Yours? Does it sound like me?</strong> Cut generic phrases and put your own voice back in. If it doesn’t say what you mean, it isn’t ready.</li>
+</ol>
+<p>If any answer is “no,” it isn’t ready yet.</p>
+<p>Use AI to get past the blank page, not to do your thinking for you. <a href="./workshop5.html">Core 4</a> spends a full hour on checking and disclosure.</p>
+<hr>
+</section>
+<section id="guided-start-upload-a-file-to-copilot-chat" class="level2 activity">
+<h2 class="activity anchored" data-anchor-id="guided-start-upload-a-file-to-copilot-chat">Guided Start: Upload a File to Copilot Chat</h2>
+<section id="guided-start-upload-a-file-to-copilot-chat-1" class="level3 activity">
+<h3 class="anchored" data-anchor-id="guided-start-upload-a-file-to-copilot-chat-1">Guided Start: Upload a File to Copilot Chat</h3>
 <div class="activity-meta">
-<p>Duration: ~19 minutes | Format: Hands-on, choose by your role</p>
+<p>Duration: ~5 minutes | Format: Follow along with the instructor</p>
 </div>
-<p><strong>Goal:</strong> Use Microsoft 365 Copilot where your work already lives. Pick the track that fits you. Use non-sensitive or appropriately classified content only. Each track has a worked example with a demo file — use it as-is, or substitute your own material and run the same three prompts.</p>
-<p>Don’t have the in-app Copilot license? Run the same prompts in <strong>Copilot Chat</strong> in the browser, pasting the demo text in.</p>
-<section id="track-a-word-drafting-rewriting" class="level4">
-<h4 class="anchored" data-anchor-id="track-a-word-drafting-rewriting">Track A — Word (drafting &amp; rewriting)</h4>
-<p><strong>Worked example: from study aims to lay summary.</strong> Open <a href="demo-materials/Workshop2_Demo_StudyDescription.docx">Workshop2_Demo_StudyDescription.docx</a> (a synthetic pedestrian-safety study description) or your own document, then run:</p>
+<p><strong>Goal:</strong> Everyone can get a file into the chat and get an answer back.</p>
+<ol type="1">
+<li><p><strong>Download the demo file</strong> <a href="demo-materials/Workshop2_Demo_StudyDescription.docx">Workshop2_Demo_StudyDescription.docx</a> (a fictional study description).</p></li>
+<li><p><strong>Open Copilot Chat.</strong> Go to <a href="https://m365.cloud.microsoft/chat">m365.cloud.microsoft/chat</a> and sign in with your Drexel account. Look for the shield icon, which means enterprise data protection is on. No shield? Check that you signed in with your Drexel account, not a personal one.</p></li>
+<li><p><strong>Upload the file.</strong> Click the <strong>+</strong> (or paperclip) button next to the message box and choose the file. You can also open the file and paste the text in.</p></li>
+<li><p><strong>Type and press Enter:</strong></p>
+<blockquote class="blockquote">
+<p>Summarize this document in 5 bullet points for a project status update.</p>
+</blockquote></li>
+<li><p><strong>Ask a follow-up:</strong></p>
+<blockquote class="blockquote">
+<p>Now make it 3 bullets for a busy dean.</p>
+</blockquote></li>
+</ol>
+<p>The same steps work in ChatGPT Edu. Use whichever tool you prefer for the rest of the session.</p>
+</section>
+<hr>
+</section>
+<section id="activity-1-three-everyday-jobs" class="level2 activity">
+<h2 class="activity anchored" data-anchor-id="activity-1-three-everyday-jobs">Activity 1: Three Everyday Jobs</h2>
+<section id="activity-1-three-everyday-jobs-1" class="level3 activity">
+<h3 class="anchored" data-anchor-id="activity-1-three-everyday-jobs-1">Activity 1: Three Everyday Jobs</h3>
+<div class="activity-meta">
+<p>Duration: ~20 minutes | Format: Hands-on, pick one job (try a second if you finish)</p>
+</div>
+<p><strong>Goal:</strong> Do a common job from start to finish: get the material in, ask three things, check the answer, and copy what you need back out. Use Copilot Chat or ChatGPT Edu. Use the demo file, or your own non-sensitive material.</p>
+<section id="job-a-summarize-and-rewrite-a-document" class="level4">
+<h4 class="anchored" data-anchor-id="job-a-summarize-and-rewrite-a-document">Job A — Summarize and rewrite a document</h4>
+<p>Upload <a href="demo-materials/Workshop2_Demo_StudyDescription.docx">Workshop2_Demo_StudyDescription.docx</a> (or keep the chat from the guided start), then type:</p>
 <ol type="1">
 <li><em>“Summarize this document in 5 bullet points for a project status update.”</em></li>
-<li><em>“Rewrite the first paragraph for a community advisory board — no jargon, 8th-grade reading level, keep it to 4 sentences.”</em></li>
-<li><em>“Draft a short ‘Next Steps’ section: one paragraph, three concrete steps, active voice.”</em></li>
+<li><em>“Rewrite the first paragraph for a community advisory board. No jargon, 8th-grade reading level, 4 sentences.”</em></li>
+<li><em>“Draft a short ‘Next Steps’ paragraph with three concrete steps.”</em></li>
 </ol>
-<p><strong>Watch for:</strong> does the lay version keep the facts accurate? Did anything get invented? That’s your verify step.</p>
+<p>Copy the rewrite into a Word document. <strong>Check it:</strong> does the plain version keep the facts right? Did anything get added that wasn’t in the original?</p>
 </section>
-<section id="track-b-outlook-email-triage" class="level4">
-<h4 class="anchored" data-anchor-id="track-b-outlook-email-triage">Track B — Outlook (email triage)</h4>
-<p><strong>Worked example: find the decisions, draft the reply.</strong> Open a long thread of your own, or use the mock 6-message curriculum-committee thread in <a href="demo-materials/Workshop2_Demo_EmailThread.docx">Workshop2_Demo_EmailThread.docx</a> (paste it into Copilot Chat if you’re not working in Outlook), then run:</p>
+<section id="job-b-sort-out-an-email-thread" class="level4">
+<h4 class="anchored" data-anchor-id="job-b-sort-out-an-email-thread">Job B — Sort out an email thread</h4>
+<p>Upload <a href="demo-materials/Workshop2_Demo_EmailThread.docx">Workshop2_Demo_EmailThread.docx</a> (a fictional 6-message committee thread) or paste in a long thread of your own, then type:</p>
 <ol type="1">
 <li><em>“Summarize this thread. List every decision made and every open question.”</em></li>
 <li><em>“List the action items as a table: owner, task, due date.”</em></li>
-<li><em>“Draft a reply confirming I’ll have the syllabus draft ready by the end of next week — concise and friendly, two sentences.”</em></li>
+<li><em>“Draft a reply confirming I’ll have the syllabus draft ready by July 20. Friendly, two sentences.”</em></li>
 </ol>
-<p><strong>Watch for:</strong> did it invent a decision that was never actually made? Threads are where AI over-summarizes — in the demo thread, is the accreditation crosswalk a decision, an action item, or an open question?</p>
-<p><strong>Want more on email?</strong> The self-paced <a href="./tracks/copilot-email.html">Copilot for Email in Outlook</a> page walks through summaries, replies, tone checks, and inbox-wide questions, and explains what works with and without the paid license.</p>
+<p><strong>Check it:</strong> did it list a decision nobody actually made? In the demo thread, is the accreditation crosswalk a decision, an action item, or an open question?</p>
+<p><strong>For your own email:</strong> in Outlook, the <strong>Summarize</strong> button at the top of a thread gives a quick summary without copying anything. The <a href="./tracks/copilot-email.html">Copilot for Email</a> page shows what else works.</p>
 </section>
-<section id="track-c-excel-quick-analysis" class="level4">
-<h4 class="anchored" data-anchor-id="track-c-excel-quick-analysis">Track C — Excel (quick analysis)</h4>
-<p><strong>Worked example: seminar attendance and spend.</strong> Open <a href="demo-materials/Workshop2_Demo_SeminarAttendance.xlsx">Workshop2_Demo_SeminarAttendance.xlsx</a> (synthetic monthly attendance and catering cost for three departments) or your own sheet, then run:</p>
+<section id="job-c-make-sense-of-a-spreadsheet" class="level4">
+<h4 class="anchored" data-anchor-id="job-c-make-sense-of-a-spreadsheet">Job C — Make sense of a spreadsheet</h4>
+<p>Upload <a href="demo-materials/Workshop2_Demo_SeminarAttendance.xlsx">Workshop2_Demo_SeminarAttendance.xlsx</a> (fictional monthly seminar attendance and catering cost for three departments), then type:</p>
 <ol type="1">
 <li><em>“Summarize this data. What stands out?”</em></li>
-<li><em>“Add a column that flags rows where cost per attendee is over $12.”</em></li>
-<li><em>“Suggest a chart showing the attendance trend by department across the year.”</em></li>
+<li><em>“Write an Excel formula for a new column E that says ‘Over’ when cost per attendee is more than $12. Tell me how to copy it down.”</em></li>
+<li><em>“Which months had the lowest attendance? Suggest one chart I could make in Excel to show the trend.”</em></li>
 </ol>
-<p><strong>Watch for:</strong> check the flag formula against one row by hand before you trust the column.</p>
+<p>Open the file in Excel and paste the formula into cell E2. <strong>Check it:</strong> work out one row by hand (October, EOH: $402 ÷ 29 people = about $13.86, so it should say “Over”). How many rows are flagged?</p>
 </section>
-<section id="reflection" class="level4">
-<h4 class="anchored" data-anchor-id="reflection">Reflection</h4>
+<section id="quick-reflection" class="level4">
+<h4 class="anchored" data-anchor-id="quick-reflection">Quick Reflection</h4>
 <ul>
-<li>Did Copilot save time versus doing it by hand? Where did you still need to correct it?</li>
-<li>Which of your weekly tasks could this replace the first-draft step for?</li>
+<li>Which of the three questions saved you the most time?</li>
+<li>What did you have to fix?</li>
 </ul>
 </section>
 </section>
 <hr>
 </section>
-<section id="activity-2-chatgpt-edu-for-your-real-task" class="level2 activity">
-<h2 class="activity anchored" data-anchor-id="activity-2-chatgpt-edu-for-your-real-task">Activity 2: ChatGPT Edu for Your Real Task</h2>
-<section id="activity-2-chatgpt-edu-for-your-real-task-1" class="level3 activity">
-<h3 class="anchored" data-anchor-id="activity-2-chatgpt-edu-for-your-real-task-1">Activity 2: ChatGPT Edu for Your Real Task</h3>
+<section id="activity-2-your-own-task-saved-as-a-recipe" class="level2 activity">
+<h2 class="activity anchored" data-anchor-id="activity-2-your-own-task-saved-as-a-recipe">Activity 2: Your Own Task, Saved as a Recipe</h2>
+<section id="activity-2-your-own-task-saved-as-a-recipe-1" class="level3 activity">
+<h3 class="anchored" data-anchor-id="activity-2-your-own-task-saved-as-a-recipe-1">Activity 2: Your Own Task, Saved as a Recipe</h3>
 <div class="activity-meta">
-<p>Duration: ~13 minutes | Format: Individual, bring your own task</p>
+<p>Duration: ~11 minutes | Format: Individual, bring your own task</p>
 </div>
-<p><strong>Goal:</strong> Run one task you actually need to do this week, start to finish.</p>
-<section id="instructions" class="level4">
-<h4 class="anchored" data-anchor-id="instructions">Instructions</h4>
+<p><strong>Goal:</strong> Do one real task you need this week, then save the prompt so next time takes less effort.</p>
 <ol type="1">
-<li>Pick a real task that is non-sensitive or appropriate for ChatGPT Edu under Drexel’s Terms of Use: a report section, a summary of a long document, a set of meeting notes to clean up, a draft announcement, a literature blurb on a public topic.</li>
-<li>In ChatGPT Edu, use the current default model. Write a <strong>PTCF prompt</strong> (Persona, Task, Context, Format—from Core 1). Be specific about the format you want.</li>
-<li>Run it. Then <strong>iterate</strong>: shorten, change tone, add a section, ask for a table. Push it 2–3 rounds until it’s close to usable.</li>
-<li>Do the final edit yourself. Note what you changed—that’s the part that needs your expertise.</li>
+<li><strong>Pick a task.</strong> The one you tried after Core 1, or a new one: a report section, a summary, meeting notes to clean up, an announcement.</li>
+<li><strong>Write the prompt with PTCF</strong> from Core 1: <strong>P</strong>ersona (who should it act as?), <strong>T</strong>ask (what do you want?), <strong>C</strong>ontext (what does it need to know?), <strong>F</strong>ormat (what should the answer look like?).</li>
+<li><strong>Run it, then improve it twice</strong> with follow-ups: “Make it shorter.” “Put it in a table.” “Use a warmer tone.” “What did you leave out?”</li>
+<li><strong>Do the final edit yourself.</strong> Notice what you changed: that’s the part that needed you.</li>
+<li><strong>Save it as a recipe.</strong> Copy the prompt into a Word document or OneNote page called “My prompts.” Replace the details with blanks in [brackets].</li>
 </ol>
-</section>
-<section id="worked-example-summarize-then-act" class="level4">
-<h4 class="anchored" data-anchor-id="worked-example-summarize-then-act">Worked Example: Summarize-Then-Act</h4>
-<p>No task of your own? Use <a href="demo-materials/Workshop2_Demo_Abstracts.docx">Workshop2_Demo_Abstracts.docx</a> — three short synthetic abstracts on pedestrian safety. Paste them into ChatGPT Edu with:</p>
+<p><strong>Example recipe:</strong></p>
 <blockquote class="blockquote">
-<p><em>“Summarize each abstract as one row of a table: population, method, key finding. Then draft a 3-sentence email to my research team on what these mean for our streetlight and injury analysis.”</em></p>
+<p>You are a [role]. Summarize [the document] for [audience] in [number] bullet points. Then list any names, dates, or numbers I should double-check.</p>
 </blockquote>
-<p>Then iterate:</p>
-<ul>
-<li><strong>Round 2:</strong> <em>“Cut it to half the length. Make the findings column quantitative — effect sizes, not adjectives.”</em></li>
-<li><strong>Round 3:</strong> <em>“Add a column rating each study’s relevance to our project, 1–3, with a one-phrase justification.”</em></li>
-</ul>
-<p><strong>Verify:</strong> check every number in the table against the abstracts — confidence intervals are the easiest thing for AI to mangle.</p>
-</section>
-<section id="two-patterns-worth-knowing" class="level4">
-<h4 class="anchored" data-anchor-id="two-patterns-worth-knowing">Two Patterns Worth Knowing</h4>
-<p><strong>Summarize-then-act.</strong> Paste a long document and ask: <em>“Summarize the key points, then draft a 3-sentence email I can send to my team about what they need to do.”</em> One step gets you from raw material to a usable product.</p>
-<p><strong>Make-it-a-table.</strong> For anything with structure—options, pros and cons, a comparison, a schedule—add: <em>“Put this in a table.”</em> It’s faster to scan and easier to drop into a doc.</p>
-</section>
-<section id="build-a-reusable-recipe" class="level4">
-<h4 class="anchored" data-anchor-id="build-a-reusable-recipe">Build a Reusable Recipe</h4>
-<p>Once a prompt works, save it. Strip out the specifics and leave placeholders:</p>
+<section id="no-task-of-your-own" class="level4">
+<h4 class="anchored" data-anchor-id="no-task-of-your-own">No Task of Your Own?</h4>
+<p>Use <a href="demo-materials/Workshop2_Demo_Abstracts.docx">Workshop2_Demo_Abstracts.docx</a>, three short fictional abstracts. Upload it and type:</p>
 <blockquote class="blockquote">
-<p>You are a [role]. [Task]. Context: [details]. Format: [structure, length, tone].</p>
+<p>Summarize each abstract as one row of a table: population, method, key finding. Then draft a 3-sentence email to my research team on what these mean for our pedestrian safety work.</p>
 </blockquote>
-<p>Keep these in a running note. Next week you fill in the blanks instead of starting over.</p>
+<p>Then ask for one change: <em>“Make the findings column use numbers, not adjectives.”</em> <strong>Check it:</strong> compare every number in the table with the abstracts. Confidence intervals are easy for AI to get wrong.</p>
 </section>
 </section>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>Verify Before It Counts
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>AI can invent facts, citations, and numbers. For anything that goes into a real document or decision, check it against the source. Never paste sensitive or regulated data into any tool unless that tool and use case are approved for it.</p>
-</div>
-</div>
 <hr>
 </section>
-<section id="wrap-up-7-min" class="level2">
-<h2 class="anchored" data-anchor-id="wrap-up-7-min">Wrap-Up (7 min)</h2>
+<section id="wrap-up-5-min" class="level2">
+<h2 class="anchored" data-anchor-id="wrap-up-5-min">Wrap-Up (5 min)</h2>
 <ul>
-<li><strong>Microsoft 365 Copilot</strong> for work inside Office files; <strong>Copilot Chat</strong> for protected web chat; <strong>ChatGPT Edu</strong> for open drafting and reusable assistants.</li>
-<li>The win is the first draft and the summary—you keep the judgment.</li>
-<li>Save the prompts that work as <strong>reusable recipes</strong>.</li>
+<li><strong>The workflow:</strong> paste or upload, ask, check, copy the answer back. Copilot Chat or ChatGPT Edu both work.</li>
+<li><strong>Three moves cover most weekly tasks:</strong> summarize, rewrite for an audience, make a table.</li>
+<li><strong>Before you use it:</strong> Verified? Disclosed? Yours?</li>
+<li><strong>Save the prompts that work</strong> as recipes.</li>
 </ul>
-<p><strong>Try this before Core 3:</strong> save two prompt recipes you’d actually reuse. We’ll turn shared recipes into team tools next session.</p>
+<p><strong>Try this before Core 3:</strong> save two recipes and use one of them again next week. Bring them; we’ll turn them into tools you can share.</p>
 <hr>
 </section>
 <section id="looking-ahead" class="level2">
