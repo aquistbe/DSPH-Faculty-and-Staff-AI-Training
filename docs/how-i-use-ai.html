@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Elective · How I Use AI: Building This Course – AI Workshops for DSPH</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-e5a00fd6c0fce5251246b1fbc19e77b5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<meta name="robots" content="noindex, nofollow">
+<script data-goatcounter="https://aquistbe.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">AI Workshops for DSPH</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-core-sessions" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Core Sessions</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-core-sessions">    
+        <li>
+    <a class="dropdown-item" href="./workshop1.html">
+ <span class="dropdown-text">Core 1 · Foundations &amp; Capabilities</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./workshop2.html">
+ <span class="dropdown-text">Core 2 · Workflow Enhancement</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./workshop3.html">
+ <span class="dropdown-text">Core 3 · Reusable Assistants</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./workshop5.html">
+ <span class="dropdown-text">Core 4 · Verify, Disclose, Decide</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-electives" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Electives</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-electives">    
+        <li>
+    <a class="dropdown-item" href="./workshop4.html">
+ <span class="dropdown-text">Documents &amp; Visuals (Adobe)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./workshop6.html">
+ <span class="dropdown-text">AI for Curriculum Development</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./how-i-use-ai.html">
+ <span class="dropdown-text">How I Use AI: Building This Course</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./tracks.html"> 
+<span class="menu-text">Self-Paced Tracks</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./paths.html"> 
+<span class="menu-text">Learning Paths</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./tools.html"> 
+<span class="menu-text">Tools &amp; Access</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./resources.html"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="mailto:daq26@drexel.edu"> <i class="bi bi-envelope" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#elective-how-i-use-ai-building-this-course" id="toc-elective-how-i-use-ai-building-this-course" class="nav-link active" data-scroll-target="#elective-how-i-use-ai-building-this-course">Elective · How I Use AI: Building This Course</a></li>
+  <li><a href="#the-example-this-website" id="toc-the-example-this-website" class="nav-link" data-scroll-target="#the-example-this-website">The Example: This Website</a></li>
+  <li><a href="#what-youll-leave-with" id="toc-what-youll-leave-with" class="nav-link" data-scroll-target="#what-youll-leave-with">What You’ll Leave With</a></li>
+  <li><a href="#run-of-show-planned" id="toc-run-of-show-planned" class="nav-link" data-scroll-target="#run-of-show-planned">Run of Show (planned)</a></li>
+  <li><a href="#the-setup" id="toc-the-setup" class="nav-link" data-scroll-target="#the-setup">The Setup</a></li>
+  <li><a href="#example-1-teaching-rebuilding-core-1-for-first-time-users" id="toc-example-1-teaching-rebuilding-core-1-for-first-time-users" class="nav-link" data-scroll-target="#example-1-teaching-rebuilding-core-1-for-first-time-users">Example 1 — Teaching: Rebuilding Core 1 for First-Time Users</a></li>
+  <li><a href="#example-2-admin-one-fact-changes-ten-pages-need-fixing" id="toc-example-2-admin-one-fact-changes-ten-pages-need-fixing" class="nav-link" data-scroll-target="#example-2-admin-one-fact-changes-ten-pages-need-fixing">Example 2 — Admin: One Fact Changes, Ten Pages Need Fixing</a></li>
+  <li><a href="#example-3-research-the-ai-environmental-footprint-explorer" id="toc-example-3-research-the-ai-environmental-footprint-explorer" class="nav-link" data-scroll-target="#example-3-research-the-ai-environmental-footprint-explorer">Example 3 — Research: The AI Environmental Footprint Explorer</a></li>
+  <li><a href="#patterns-you-can-reuse" id="toc-patterns-you-can-reuse" class="nav-link" data-scroll-target="#patterns-you-can-reuse">Patterns You Can Reuse</a></li>
+  <li><a href="#try-it-yourself" id="toc-try-it-yourself" class="nav-link" data-scroll-target="#try-it-yourself">Try It Yourself</a></li>
+  <li><a href="#related" id="toc-related" class="nav-link" data-scroll-target="#related">Related</a></li>
+  <li><a href="#give-feedback-on-this-workshop" id="toc-give-feedback-on-this-workshop" class="nav-link" data-scroll-target="#give-feedback-on-this-workshop">Give Feedback on This Workshop</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Elective · How I Use AI: Building This Course</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="elective-how-i-use-ai-building-this-course" class="level1 day-header">
+<h1>Elective · How I Use AI: Building This Course</h1>
+<div class="day-subtitle">
+<p>One real project, three kinds of work: teaching, admin, and research</p>
+</div>
+<div class="day-time">
+<p>1 hour, live demo | Date to be announced by school email | No laptop needed; bring questions</p>
+</div>
+</section>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Elective Session
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This is a <strong>live demonstration</strong>, not a hands-on workshop. The date will be announced by school email and posted on the <a href="./index.html#schedule">home page</a>. This page is the reference: what the demo covers, the examples, and how to try the same patterns yourself. It builds on <a href="./workshop1.html">Core 1</a> through <a href="./workshop3.html">Core 3</a>.</p>
+</div>
+</div>
+<section id="the-example-this-website" class="level2">
+<h2 class="anchored" data-anchor-id="the-example-this-website">The Example: This Website</h2>
+<p>The site you are reading was built and is maintained with AI. Since June 2026, the pages, slides, PowerPoint files, demo datasets, and the <a href="interactive/ai-footprint-explorer.html">AI Environmental Footprint Explorer</a> have been drafted, built, and checked with Claude, mostly through <strong>Claude Code</strong> (an agentic tool that works in a folder of files) and the <strong>Claude desktop app</strong>. Every change is reviewed before it is published, and the full history is public on <a href="https://github.com/aquistbe/DSPH-Faculty-and-Staff-AI-Training">GitHub</a>.</p>
+<p>It is a useful example because one project covers the three kinds of work most of us do: <strong>teaching</strong> (building course materials), <strong>admin</strong> (keeping a lot of pages accurate when something changes), and <strong>research</strong> (finding, checking, and citing evidence).</p>
+</section>
+<section id="what-youll-leave-with" class="level2">
+<h2 class="anchored" data-anchor-id="what-youll-leave-with">What You’ll Leave With</h2>
+<ol type="1">
+<li>A concrete picture of what an agentic AI tool does well, and where it needs you</li>
+<li>Three patterns you can reuse with any tool: keep context in files, make the AI check its own work, and record what changed and why</li>
+<li>A clear sense of which work belongs in Drexel tools (ChatGPT Edu, Copilot Chat) and which can go in other tools</li>
+</ol>
+</section>
+<section id="run-of-show-planned" class="level2">
+<h2 class="anchored" data-anchor-id="run-of-show-planned">Run of Show (planned)</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 40%">
+<col style="width: 60%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Time</th>
+<th>Segment</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0:00–0:08</td>
+<td>The setup: tools, folder, and the data boundary</td>
+</tr>
+<tr class="even">
+<td>0:08–0:23</td>
+<td>Teaching: rebuilding Core 1 for first-time users (live)</td>
+</tr>
+<tr class="odd">
+<td>0:23–0:38</td>
+<td>Admin: one fact changes, ten pages need fixing (live)</td>
+</tr>
+<tr class="even">
+<td>0:38–0:50</td>
+<td>Research: the Footprint Explorer and its record of corrections</td>
+</tr>
+<tr class="odd">
+<td>0:50–1:00</td>
+<td>Questions, and how to start with your own project</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="the-setup" class="level2">
+<h2 class="anchored" data-anchor-id="the-setup">The Setup</h2>
+<p><strong>Why non-Drexel tools are fine here.</strong> Everything on this site is public: no student records, no personnel information, no unpublished research. That makes it <strong>low-risk information</strong>, so tools that aren’t Drexel-supported, like Claude Code, are allowed. The same tools would <strong>not</strong> be fine for a folder with rosters, grades, or study data. See <a href="./tools.html">Tools &amp; Access</a>.</p>
+<p><strong>How the work is organized.</strong></p>
+<ul>
+<li><strong>One folder.</strong> The site is plain-text files in one folder. The AI reads and edits the files directly, so there is no copying and pasting.</li>
+<li><strong>Instructions in a file.</strong> A short project file tells the AI what the course is and who it’s for, so each session starts with that context.</li>
+<li><strong>Handoff notes.</strong> At the end of a work session, the AI writes a short note: what was published, what’s waiting for review, and what’s still undecided. The next session starts by reading it. These notes stay on my computer.</li>
+<li><strong>A build and a check.</strong> After each change, the site is rebuilt and every link is checked automatically before anything is published.</li>
+</ul>
+<hr>
+</section>
+<section id="example-1-teaching-rebuilding-core-1-for-first-time-users" class="level2">
+<h2 class="anchored" data-anchor-id="example-1-teaching-rebuilding-core-1-for-first-time-users">Example 1 — Teaching: Rebuilding Core 1 for First-Time Users</h2>
+<p><strong>The task.</strong> Core 1 assumed too much for people who had never opened ChatGPT. It needed to be simpler, and the page, the slides, the PowerPoint, and the instructor guide all had to match.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>The AI did</th>
+<th>I did</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Rewrote the page in plainer language, with a glossary and a step-by-step guided tour</td>
+<td>Decided what a first-time user needs, and what to cut</td>
+</tr>
+<tr class="even">
+<td>Rebuilt the HTML slides, and wrote a small script that generates the PowerPoint from the same content, so the two can’t drift apart</td>
+<td>Picked the six demo tasks, and ran the live demo myself before the session</td>
+</tr>
+<tr class="odd">
+<td>Made fictional demo data: a crash dataset for a fictional city and a class roster with IDs instead of names</td>
+<td>Set the rules for the student-groups example</td>
+</tr>
+<tr class="even">
+<td>Checked that the example student groups on the slide really meet all three grouping rules</td>
+<td>Approved every slide before it went out</td>
+</tr>
+</tbody>
+</table>
+<p><strong>What got caught.</strong></p>
+<ul>
+<li><strong>A citation that looked right.</strong> Asked for studies with DOIs, a model returned one DOI that led to a paper on motorcycle helmets. That mistake became a slide in Core 1.</li>
+<li><strong>Steps written from memory.</strong> The guided-tour steps for ChatGPT Edu were drafted without seeing the screen. They had to be checked against the real interface before the session.</li>
+</ul>
+<hr>
+</section>
+<section id="example-2-admin-one-fact-changes-ten-pages-need-fixing" class="level2">
+<h2 class="anchored" data-anchor-id="example-2-admin-one-fact-changes-ten-pages-need-fixing">Example 2 — Admin: One Fact Changes, Ten Pages Need Fixing</h2>
+<p><strong>The task.</strong> The site told people to use Copilot inside Word and Excel. Drexel doesn’t have that license. Every page that said so needed fixing, and Core 2 needed rebuilding around Copilot Chat. The same week, three topics moved into a new <strong>Everyday Tools</strong> track.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>The AI did</th>
+<th>I did</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Searched every page for anything that implied the license, and listed them</td>
+<td>Supplied the facts it couldn’t know: which licenses Drexel has, that faculty can create Canvas tokens, which menu names were right</td>
+</tr>
+<tr class="even">
+<td>Rewrote Core 2, its slides, PowerPoint, instructor guide, and the text inside the demo files</td>
+<td>Decided the new track structure and how basic Core 2 should be</td>
+</tr>
+<tr class="odd">
+<td>Moved three topics to the new track, then fixed topic numbers, counts, and back-links on every page that mentioned them</td>
+<td>Reviewed the changes before publishing</td>
+</tr>
+<tr class="even">
+<td>Rebuilt the site, checked every link (none broken), and wrote a plain description of each change</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>What got caught.</strong></p>
+<ul>
+<li><strong>Numbers that were already wrong.</strong> The home page said “36 topics across five tracks,” which was already out of date before this change. Finding every mention of something is where an agent beats a person.</li>
+<li><strong>A rule with an edge case.</strong> In the Core 2 spreadsheet demo, one row costs exactly $12.00 per person. A formula using “more than” skips it; “at least” catches it. That became a note for instructors.</li>
+</ul>
+<hr>
+</section>
+<section id="example-3-research-the-ai-environmental-footprint-explorer" class="level2">
+<h2 class="anchored" data-anchor-id="example-3-research-the-ai-environmental-footprint-explorer">Example 3 — Research: The AI Environmental Footprint Explorer</h2>
+<p><strong>The task.</strong> After news reports on data-center water use in July 2026, faculty and students asked how much energy and water AI really uses. The <a href="interactive/ai-footprint-explorer.html">Footprint Explorer</a> answers that with ranges, sources, and the disagreements left visible.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>The AI did</th>
+<th>I did</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Research synthesis across agency reports, company disclosures, and journal articles</td>
+<td>Traced every figure to a primary source before it went in</td>
+</tr>
+<tr class="even">
+<td>Wrote the interactive tool, plus R and Stata starter scripts that use a public dataset</td>
+<td>Decided which numbers to trust, which to leave out, and how to describe the disagreements</td>
+</tr>
+<tr class="odd">
+<td>Re-checked the figures against new sources every few months</td>
+<td>Approved each refresh</td>
+</tr>
+</tbody>
+</table>
+<p><strong>What got caught.</strong> The project keeps a public <a href="https://github.com/aquistbe/DSPH-Faculty-and-Staff-AI-Training/blob/main/CHANGELOG.md">changelog</a> that records, for every changed figure, the old value, the new value, the source that forced the change, and why the old one was wrong. A few entries:</p>
+<ul>
+<li><strong>A widely cited figure was superseded.</strong> The often-quoted ~3 Wh per chatbot query came from a 2023 estimate. A 2026 study measured a median of about 0.3 Wh in production, so the high end was lowered.</li>
+<li><strong>A true statement stopped being true.</strong> “There is no authoritative estimate of AI’s share of data-center electricity” was correct when written, and wrong after an April 2026 agency report.</li>
+<li><strong>A check that couldn’t be run.</strong> The dataset’s website was unreachable when the scripts were written, so the column names were never verified. The scripts print the columns first, and the changelog says so.</li>
+</ul>
+<hr>
+</section>
+<section id="patterns-you-can-reuse" class="level2">
+<h2 class="anchored" data-anchor-id="patterns-you-can-reuse">Patterns You Can Reuse</h2>
+<p>These work with ChatGPT Edu and Copilot Chat as well as with agentic tools.</p>
+<ol type="1">
+<li><strong>Keep context in files, not in your head.</strong> A short “about this project” note and an end-of-session handoff note save you from re-explaining every time. In ChatGPT Edu, a shared Project does the same job (<a href="./workshop3.html">Core 3</a>).</li>
+<li><strong>Make the AI check its own work, then check the check.</strong> Ask for a link check, a count, a rule check, or a list of every place something appears. Then spot-check one or two yourself.</li>
+<li><strong>Give it the facts it can’t know.</strong> Licenses, local policy, what the screen really looks like, what your students need. Most corrections on this site came from facts only a person had.</li>
+<li><strong>Record what changed and why.</strong> Old value, new value, source, reason. It’s the difference between “updated” and something you can defend later.</li>
+</ol>
+</section>
+<section id="try-it-yourself" class="level2">
+<h2 class="anchored" data-anchor-id="try-it-yourself">Try It Yourself</h2>
+<p><strong>With ChatGPT Edu or Copilot Chat (everyone):</strong> at the end of a work session on a long project, paste your notes and ask:</p>
+<blockquote class="blockquote">
+<p>Write a short handoff note for the next time I work on this: what I finished, what’s waiting on someone else, and what I still need to decide. Use three headings and bullet points.</p>
+</blockquote>
+<p>Paste that note at the start of your next chat.</p>
+<p><strong>With Claude Code, Codex, or the Claude desktop app (if you use them):</strong> point the tool at a folder of <strong>public</strong> material, such as your course website or a public report, and ask:</p>
+<blockquote class="blockquote">
+<p>Find every place these files mention [a fact that changed]. List each one with the file name and the sentence. Don’t edit anything yet.</p>
+</blockquote>
+<p>Review the list, then ask it to make the edits and show you what changed. Keep student data, personnel information, and unpublished research out of the folder.</p>
+<hr>
+</section>
+<section id="related" class="level2">
+<h2 class="anchored" data-anchor-id="related">Related</h2>
+<ul>
+<li><a href="./workshop3.html">Core 3: Reusable Assistants</a> — shared Projects and custom GPTs, the Drexel-tool version of “context in files”</li>
+<li><a href="./tracks/technical-agentic.html">Technical &amp; Agentic track</a> — self-paced topics on agentic tools, skills, and connecting tools</li>
+<li><a href="./tools.html">Tools &amp; Access</a> — which data can go into which tool</li>
+</ul>
+<hr>
+</section>
+<section id="give-feedback-on-this-workshop" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="give-feedback-on-this-workshop">Give Feedback on This Workshop</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Two minutes: tell us how this session went
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Your feedback directly shapes how these workshops are revised and what gets scheduled next.</p>
+<p><a href="https://forms.cloud.microsoft/r/nkvSu3x9PD" class="btn btn-primary" target="_blank"><strong>Workshop feedback form</strong> ↗</a></p>
+<p>In the first question, select the session you attended.</p>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<!-- Self-paced track styles + readiness-quiz engine (included after body) -->
+<style>
+/* Difficulty badges */
+.level-badge{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.04em;
+  text-transform:uppercase;padding:.15em .6em;border-radius:1em;vertical-align:middle}
+.level-novice{background:#e3f3e8;color:#1d6b3b;border:1px solid #9fd3b2}
+.level-moderate{background:#fdf0d6;color:#8a5a00;border:1px solid #f0cf86}
+.level-advanced{background:#e7ecf5;color:#07294d;border:1px solid #9fb3cc}
+.topic-badges{margin:.2rem 0 .4rem;color:#5a6571;font-size:.95rem}
+.topic-meta{color:#5a6571;font-size:.95rem;margin-bottom:1rem}
+.track-back{display:inline-block;margin:.2rem 0 1rem;font-size:.95rem}
+
+/* Track / topic tables */
+.topic-list td:first-child{white-space:nowrap}
+
+/* Collapsible activities (native <details>, no JS needed) */
+details.activity{border:1px solid #d2dae8;border-left:4px solid #006699;border-radius:6px;
+  margin:.8rem 0;background:#f7f9fb;padding:0 1.15rem}
+details.activity > summary{cursor:pointer;font-weight:700;color:#07294d;padding:.7rem 0;
+  list-style:none;font-size:1.02rem;outline:none}
+details.activity > summary::-webkit-details-marker{display:none}
+details.activity > summary::before{content:"\25B8\00a0";color:#006699;font-weight:700}
+details.activity[open] > summary::before{content:"\25BE\00a0"}
+details.activity[open]{padding-bottom:.7rem}
+details.activity[open] > summary{border-bottom:1px solid #e3e9f2;margin-bottom:.5rem}
+details.activity > summary:hover{color:#006699}
+details.activity > *:not(summary):first-of-type{margin-top:.4rem}
+
+/* Readiness quiz */
+.readiness-quiz{border:1px solid #d2dae8;border-radius:8px;padding:1.1rem 1.25rem;margin:1rem 0;
+  background:#f7f9fb}
+.rq-q{margin:0 0 1rem;padding:.6rem .8rem;border-radius:6px;border:1px solid transparent}
+.rq-qtext{font-weight:600;margin:0 0 .5rem}
+.rq-opt{display:block;margin:.25rem 0;cursor:pointer;line-height:1.4}
+.rq-opt input{margin-right:.5rem}
+.rq-fb{margin-top:.45rem;font-size:.9rem;display:none}
+.rq-fb.rq-fb-ok,.rq-fb.rq-fb-no,.rq-fb.rq-fb-none{display:block}
+.rq-fb-ok{color:#1d6b3b}
+.rq-fb-no{color:#a12a2a}
+.rq-fb-none{color:#8a5a00}
+.rq-correct{background:#f0f9f3;border-color:#bfe3cd}
+.rq-wrong{background:#fcf1f1;border-color:#eccccc}
+.rq-btn{background:#07294d;color:#fff;border:none;border-radius:6px;padding:.5rem 1.1rem;
+  font-weight:600;cursor:pointer}
+.rq-btn:hover{background:#0a3a6b}
+.rq-score{margin-top:.8rem;font-weight:600;color:#07294d}
+</style>
+<script>
+(function(){
+  function init(){
+    var boxes=document.querySelectorAll('.readiness-quiz');
+    boxes.forEach(function(box,bi){
+      var dataEl=box.querySelector('script.quiz-data');
+      if(!dataEl) return;
+      var data; try{data=JSON.parse(dataEl.textContent);}catch(e){return;}
+      var qs=(data&&data.questions)||[];
+      if(!qs.length) return;
+      var wrap=document.createElement('div');
+      qs.forEach(function(q,qi){
+        var qd=document.createElement('div'); qd.className='rq-q';
+        var p=document.createElement('p'); p.className='rq-qtext'; p.textContent=(qi+1)+'. '+q.q; qd.appendChild(p);
+        (q.options||[]).forEach(function(opt,oi){
+          var lab=document.createElement('label'); lab.className='rq-opt';
+          var inp=document.createElement('input'); inp.type='radio'; inp.name='rq_'+bi+'_'+qi; inp.value=oi;
+          lab.appendChild(inp); lab.appendChild(document.createTextNode(' '+opt)); qd.appendChild(lab);
+        });
+        var fb=document.createElement('div'); fb.className='rq-fb'; qd.appendChild(fb);
+        wrap.appendChild(qd);
+      });
+      var btn=document.createElement('button'); btn.type='button'; btn.className='rq-btn'; btn.textContent='Check my answers';
+      var score=document.createElement('div'); score.className='rq-score';
+      btn.addEventListener('click',function(){
+        var correct=0;
+        qs.forEach(function(q,qi){
+          var qd=wrap.children[qi]; var sel=qd.querySelector('input:checked'); var fb=qd.querySelector('.rq-fb');
+          qd.classList.remove('rq-correct','rq-wrong');
+          if(!sel){ fb.textContent='Select an answer.'; fb.className='rq-fb rq-fb-none'; return; }
+          if(parseInt(sel.value,10)===q.answer){ correct++; qd.classList.add('rq-correct'); fb.textContent='Correct. '+(q.explain||''); fb.className='rq-fb rq-fb-ok'; }
+          else { qd.classList.add('rq-wrong'); fb.textContent='Not quite. '+(q.explain||''); fb.className='rq-fb rq-fb-no'; }
+        });
+        var pct=Math.round(correct/qs.length*100);
+        var verdict=pct>=80?"You're ready — dive in.":(pct>=50?"Close — skim the readings first, then start Activity 1.":"Start with the readings and Activity 1, then retry.");
+        score.textContent='You scored '+correct+'/'+qs.length+' ('+pct+'%). '+verdict;
+        try{
+          if(window.goatcounter&&window.goatcounter.count){
+            var slug=location.pathname.split('/').pop().replace(/\.html$/,'')||'index';
+            window.goatcounter.count({path:'quiz/'+slug+'/'+correct+'of'+qs.length,title:'Readiness quiz: '+slug,event:true});
+          }
+        }catch(e){}
+      });
+      box.innerHTML=''; box.appendChild(wrap); box.appendChild(btn); box.appendChild(score);
+    });
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}
+})();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>AI Workshops for DSPH | Dornsife School of Public Health | Drexel University</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Developed with the assistance of Claude (Anthropic); reviewed and owned by the author. Built with Quarto.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

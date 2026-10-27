@@ -1,0 +1,142 @@
+---
+title: "Elective · How I Use AI: Building This Course"
+---
+
+::: {.day-header}
+# Elective · How I Use AI: Building This Course
+::: {.day-subtitle}
+One real project, three kinds of work: teaching, admin, and research
+:::
+::: {.day-time}
+1 hour, live demo | Date to be announced by school email | No laptop needed; bring questions
+:::
+:::
+
+:::{.callout-note}
+## Elective Session
+This is a **live demonstration**, not a hands-on workshop. The date will be announced by school email and posted on the [home page](index.qmd#schedule). This page is the reference: what the demo covers, the examples, and how to try the same patterns yourself. It builds on [Core 1](workshop1.qmd) through [Core 3](workshop3.qmd).
+:::
+
+## The Example: This Website
+
+The site you are reading was built and is maintained with AI. Since June 2026, the pages, slides, PowerPoint files, demo datasets, and the [AI Environmental Footprint Explorer](interactive/ai-footprint-explorer.html) have been drafted, built, and checked with Claude, mostly through **Claude Code** (an agentic tool that works in a folder of files) and the **Claude desktop app**. Every change is reviewed before it is published, and the full history is public on [GitHub](https://github.com/aquistbe/DSPH-Faculty-and-Staff-AI-Training).
+
+It is a useful example because one project covers the three kinds of work most of us do: **teaching** (building course materials), **admin** (keeping a lot of pages accurate when something changes), and **research** (finding, checking, and citing evidence).
+
+## What You'll Leave With
+
+1. A concrete picture of what an agentic AI tool does well, and where it needs you
+2. Three patterns you can reuse with any tool: keep context in files, make the AI check its own work, and record what changed and why
+3. A clear sense of which work belongs in Drexel tools (ChatGPT Edu, Copilot Chat) and which can go in other tools
+
+## Run of Show (planned)
+
+| Time | Segment |
+|------|---------|
+| 0:00--0:08 | The setup: tools, folder, and the data boundary |
+| 0:08--0:23 | Teaching: rebuilding Core 1 for first-time users (live) |
+| 0:23--0:38 | Admin: one fact changes, ten pages need fixing (live) |
+| 0:38--0:50 | Research: the Footprint Explorer and its record of corrections |
+| 0:50--1:00 | Questions, and how to start with your own project |
+
+---
+
+## The Setup
+
+**Why non-Drexel tools are fine here.** Everything on this site is public: no student records, no personnel information, no unpublished research. That makes it **low-risk information**, so tools that aren't Drexel-supported, like Claude Code, are allowed. The same tools would **not** be fine for a folder with rosters, grades, or study data. See [Tools & Access](tools.qmd).
+
+**How the work is organized.**
+
+- **One folder.** The site is plain-text files in one folder. The AI reads and edits the files directly, so there is no copying and pasting.
+- **Instructions in a file.** A short project file tells the AI what the course is and who it's for, so each session starts with that context.
+- **Handoff notes.** At the end of a work session, the AI writes a short note: what was published, what's waiting for review, and what's still undecided. The next session starts by reading it. These notes stay on my computer.
+- **A build and a check.** After each change, the site is rebuilt and every link is checked automatically before anything is published.
+
+---
+
+## Example 1 --- Teaching: Rebuilding Core 1 for First-Time Users
+
+**The task.** Core 1 assumed too much for people who had never opened ChatGPT. It needed to be simpler, and the page, the slides, the PowerPoint, and the instructor guide all had to match.
+
+| The AI did | I did |
+|---|---|
+| Rewrote the page in plainer language, with a glossary and a step-by-step guided tour | Decided what a first-time user needs, and what to cut |
+| Rebuilt the HTML slides, and wrote a small script that generates the PowerPoint from the same content, so the two can't drift apart | Picked the six demo tasks, and ran the live demo myself before the session |
+| Made fictional demo data: a crash dataset for a fictional city and a class roster with IDs instead of names | Set the rules for the student-groups example |
+| Checked that the example student groups on the slide really meet all three grouping rules | Approved every slide before it went out |
+
+**What got caught.**
+
+- **A citation that looked right.** Asked for studies with DOIs, a model returned one DOI that led to a paper on motorcycle helmets. That mistake became a slide in Core 1.
+- **Steps written from memory.** The guided-tour steps for ChatGPT Edu were drafted without seeing the screen. They had to be checked against the real interface before the session.
+
+---
+
+## Example 2 --- Admin: One Fact Changes, Ten Pages Need Fixing
+
+**The task.** The site told people to use Copilot inside Word and Excel. Drexel doesn't have that license. Every page that said so needed fixing, and Core 2 needed rebuilding around Copilot Chat. The same week, three topics moved into a new **Everyday Tools** track.
+
+| The AI did | I did |
+|---|---|
+| Searched every page for anything that implied the license, and listed them | Supplied the facts it couldn't know: which licenses Drexel has, that faculty can create Canvas tokens, which menu names were right |
+| Rewrote Core 2, its slides, PowerPoint, instructor guide, and the text inside the demo files | Decided the new track structure and how basic Core 2 should be |
+| Moved three topics to the new track, then fixed topic numbers, counts, and back-links on every page that mentioned them | Reviewed the changes before publishing |
+| Rebuilt the site, checked every link (none broken), and wrote a plain description of each change | |
+
+**What got caught.**
+
+- **Numbers that were already wrong.** The home page said "36 topics across five tracks," which was already out of date before this change. Finding every mention of something is where an agent beats a person.
+- **A rule with an edge case.** In the Core 2 spreadsheet demo, one row costs exactly $12.00 per person. A formula using "more than" skips it; "at least" catches it. That became a note for instructors.
+
+---
+
+## Example 3 --- Research: The AI Environmental Footprint Explorer
+
+**The task.** After news reports on data-center water use in July 2026, faculty and students asked how much energy and water AI really uses. The [Footprint Explorer](interactive/ai-footprint-explorer.html) answers that with ranges, sources, and the disagreements left visible.
+
+| The AI did | I did |
+|---|---|
+| Research synthesis across agency reports, company disclosures, and journal articles | Traced every figure to a primary source before it went in |
+| Wrote the interactive tool, plus R and Stata starter scripts that use a public dataset | Decided which numbers to trust, which to leave out, and how to describe the disagreements |
+| Re-checked the figures against new sources every few months | Approved each refresh |
+
+**What got caught.** The project keeps a public [changelog](https://github.com/aquistbe/DSPH-Faculty-and-Staff-AI-Training/blob/main/CHANGELOG.md) that records, for every changed figure, the old value, the new value, the source that forced the change, and why the old one was wrong. A few entries:
+
+- **A widely cited figure was superseded.** The often-quoted ~3 Wh per chatbot query came from a 2023 estimate. A 2026 study measured a median of about 0.3 Wh in production, so the high end was lowered.
+- **A true statement stopped being true.** "There is no authoritative estimate of AI's share of data-center electricity" was correct when written, and wrong after an April 2026 agency report.
+- **A check that couldn't be run.** The dataset's website was unreachable when the scripts were written, so the column names were never verified. The scripts print the columns first, and the changelog says so.
+
+---
+
+## Patterns You Can Reuse
+
+These work with ChatGPT Edu and Copilot Chat as well as with agentic tools.
+
+1. **Keep context in files, not in your head.** A short "about this project" note and an end-of-session handoff note save you from re-explaining every time. In ChatGPT Edu, a shared Project does the same job ([Core 3](workshop3.qmd)).
+2. **Make the AI check its own work, then check the check.** Ask for a link check, a count, a rule check, or a list of every place something appears. Then spot-check one or two yourself.
+3. **Give it the facts it can't know.** Licenses, local policy, what the screen really looks like, what your students need. Most corrections on this site came from facts only a person had.
+4. **Record what changed and why.** Old value, new value, source, reason. It's the difference between "updated" and something you can defend later.
+
+## Try It Yourself
+
+**With ChatGPT Edu or Copilot Chat (everyone):** at the end of a work session on a long project, paste your notes and ask:
+
+> Write a short handoff note for the next time I work on this: what I finished, what's waiting on someone else, and what I still need to decide. Use three headings and bullet points.
+
+Paste that note at the start of your next chat.
+
+**With Claude Code, Codex, or the Claude desktop app (if you use them):** point the tool at a folder of **public** material, such as your course website or a public report, and ask:
+
+> Find every place these files mention [a fact that changed]. List each one with the file name and the sentence. Don't edit anything yet.
+
+Review the list, then ask it to make the edits and show you what changed. Keep student data, personnel information, and unpublished research out of the folder.
+
+---
+
+## Related
+
+- [Core 3: Reusable Assistants](workshop3.qmd) --- shared Projects and custom GPTs, the Drexel-tool version of "context in files"
+- [Technical & Agentic track](tracks/technical-agentic.qmd) --- self-paced topics on agentic tools, skills, and connecting tools
+- [Tools & Access](tools.qmd) --- which data can go into which tool
+
+{{< include /_feedback-workshop.qmd >}}

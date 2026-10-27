@@ -36,6 +36,8 @@ website:
             text: "Documents & Visuals (Adobe)"
           - href: workshop6.qmd
             text: "AI for Curriculum Development"
+          - href: how-i-use-ai.qmd
+            text: "How I Use AI: Building This Course"
       - href: tracks.qmd
         text: "Self-Paced Tracks"
       - href: paths.qmd

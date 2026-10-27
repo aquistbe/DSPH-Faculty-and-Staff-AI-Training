@@ -59,7 +59,8 @@ Offered **once a year, by demand**. Dates are announced by school email.
 | Elective | What You'll Do |
 |----------|----------------|
 | [**Documents & Visuals with Adobe**](workshop4.qmd) | Acrobat AI Assistant for PDFs and Firefly for infographics and communication graphics |
-| [**AI for Curriculum Development**](workshop6.qmd) | Design courses and build teaching materials with ChatGPT Edu, Microsoft 365 Copilot, and Gemini Notebook |
+| [**AI for Curriculum Development**](workshop6.qmd) | Design courses and build teaching materials with ChatGPT Edu, Copilot Chat, and Gemini Notebook, plus optional Canvas-ready pages with Claude Code or Codex |
+| [**How I Use AI: Building This Course**](how-i-use-ai.qmd) | A live demo of one real project, this website, as an example of AI in teaching, admin, and research work *(date to be announced)* |
 | **Data & Code for Research Staff** *(planned)* | AI for data cleaning, coding in Stata/R/Python, debugging, and reproducible analysis |
 | **AI for Grad Students** *(planned)* | Coursework, thesis and dissertation work, and the disclosure norms you'll be held to |
 
@@ -100,6 +101,10 @@ Ethics and governance aren't a bolt-on module---they run through the whole serie
 
 ::: {.quick-link-card}
 [**Elective**<br>AI for Curriculum Development](workshop6.qmd){.card-day}
+:::
+
+::: {.quick-link-card}
+[**Elective**<br>How I Use AI: Building This Course](how-i-use-ai.qmd){.card-day}
 :::
 
 ::: {.quick-link-card}
