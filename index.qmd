@@ -47,7 +47,7 @@ Four one-hour sessions that everyone is welcome at, run **every fall and repeate
 |---|---------|----------------|
 | [Core 1](workshop1.qmd) | **Foundations & Capabilities** | What generative AI is, which Drexel-approved tools to use, and prompting that gets useful results |
 | [Core 2](workshop2.qmd) | **Workflow Enhancement** | Make AI part of your weekly routine: summarize, rewrite, and make tables with ChatGPT Edu and Copilot Chat, and save the prompts that work |
-| [Core 3](workshop3.qmd) | **Reusable Assistants** | Turn prompts that work into shared Projects, custom GPTs, and simple agentic assistants your team or lab can reuse |
+| [Core 3](workshop3.qmd) | **Set It Up Once** | Turn a prompt that works into a reusable assistant (ChatGPT Edu plugin or Project), test its guardrails, and choose tasks worth scheduling |
 | [Core 4](workshop5.qmd) | **Verify, Disclose, Decide** | A hands-on hour on verification, funder and journal policy, disclosure, and the judgment calls in between |
 
 Slides and materials for each session are linked at the top of its page.
@@ -88,7 +88,7 @@ Ethics and governance aren't a bolt-on module---they run through the whole serie
 :::
 
 ::: {.quick-link-card}
-[**Core 3**<br>Reusable Assistants](workshop3.qmd){.card-day}
+[**Core 3**<br>Set It Up Once](workshop3.qmd){.card-day}
 :::
 
 ::: {.quick-link-card}
@@ -146,7 +146,7 @@ The **four core sessions run through the fall term and repeat in winter quarter*
 | Tue, Oct 13 | 1:00--2:00 PM | [Core 1 · Foundations & Capabilities](workshop1.qmd) |
 | Thu, Oct 22 | 2:00--3:00 PM | AI in the Classroom (faculty session) |
 | Tue, Oct 27 | 1:00--2:00 PM | [Core 2 · Workflow Enhancement](workshop2.qmd) |
-| Tue, Nov 10 | 1:00--2:00 PM | [Core 3 · Reusable Assistants](workshop3.qmd) |
+| Tue, Nov 10 | 1:00--2:00 PM | [Core 3 · Set It Up Once](workshop3.qmd) |
 | Thu, Nov 19 | 1:00--2:00 PM | AI in the Classroom (faculty session) |
 | Tue, Nov 24 | 1:00--2:00 PM | [Core 4 · Verify, Disclose, Decide](workshop5.qmd) |
 | Thu, Dec 3 | 1:00--2:00 PM | [Elective · Documents & Visuals (Adobe)](workshop4.qmd) |

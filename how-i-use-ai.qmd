@@ -148,7 +148,7 @@ Review the list, then ask it to make the edits and show you what changed. Keep s
 
 ## Related
 
-- [Core 3: Reusable Assistants](workshop3.qmd) --- shared Projects and custom GPTs, the Drexel-tool version of "context in files"
+- [Core 3: Set It Up Once](workshop3.qmd) --- plugins, shared Projects, and scheduled tasks, the Drexel-tool version of "context in files"
 - [Technical & Agentic track](tracks/technical-agentic.qmd) --- self-paced topics on agentic tools, skills, and connecting tools
 - [Tools & Access](tools.qmd) --- which data can go into which tool
 

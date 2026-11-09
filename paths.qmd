@@ -26,7 +26,7 @@ You manage schedules, budgets, reports, events, accreditation documents, and com
 | 3 | [Copilot for Email in Outlook](tracks/copilot-email.qmd) | Self-paced | Summarize threads, draft replies, and check tone where your email already lives |
 | 4 | [Data Security & Classification](tracks/data-security-classification.qmd) | Self-paced | You handle student records, budgets, and HR data — classification matters |
 | 5 | [Verifying AI Output](tracks/verifying-output.qmd) | Self-paced | Catch errors before they reach a report or accreditation document |
-| 6 | [Core 3: Reusable Assistants](workshop3.qmd) | Core session | Reusable prompts and shared templates for your team |
+| 6 | [Core 3: Set It Up Once](workshop3.qmd) | Core session | Reusable prompts and shared templates for your team |
 | 7 | [Design & Visual Communication](tracks/design-visual-communication.qmd) | Self-paced | Flyers, event materials, and accessible visuals |
 | 8 | [Responsible AI](tracks/responsible-ai.qmd) | Self-paced | Disclosure norms and accountability for AI-assisted work |
 | 9 | [Grant Administration with AI](tracks/grant-administration.qmd) | Self-paced | Deadline tracking, compliance checks, and budget formatting |
@@ -52,7 +52,7 @@ You manage data, run analyses, coordinate IRB submissions, track grant deadlines
 | 6 | [Coding with AI](tracks/coding-with-ai.qmd) | Self-paced | Generate, debug, and translate code (R, Stata, Python) |
 | 7 | [Statistical Interpretation](tracks/statistical-interpretation.qmd) | Self-paced | Translate models across languages and interrogate output |
 | 8 | [Verifying AI Output](tracks/verifying-output.qmd) | Self-paced | Catch fabricated citations and wrong statistics |
-| 9 | [Core 3: Reusable Assistants](workshop3.qmd) | Core session | Reusable prompts for recurring research tasks |
+| 9 | [Core 3: Set It Up Once](workshop3.qmd) | Core session | Reusable prompts for recurring research tasks |
 | 10 | [Literature Review](tracks/literature-review.qmd) | Self-paced | Search strategy and evidence synthesis |
 
 ::: {.callout-tip}
@@ -190,7 +190,7 @@ Everything in the coursework path, plus:
 | 2 | [Grant Proposal Development](tracks/grant-proposal-development.qmd) | Self-paced | F31s, dissertation awards, and training-grant sections — and the funder disclosure rules that come with them |
 | 3 | [Manuscript Preparation & Peer Review](tracks/manuscript-peer-review.qmd) | Self-paced | Build the habit now: **AI critiques your draft, it never writes it.** Learn that ethos here, before a journal or funder policy makes it a formal problem |
 | 4 | [Qualitative Analysis](tracks/qualitative-analysis.qmd) *or* [Statistical Interpretation](tracks/statistical-interpretation.qmd) | Self-paced | Pick by your methods — coding and thematic work, or interrogating model output you have to defend |
-| 5 | [Core 3: Reusable Assistants](workshop3.qmd) | Core session | Turn the prompts that work into something you and your lab reuse across a multi-year project |
+| 5 | [Core 3: Set It Up Once](workshop3.qmd) | Core session | Turn the prompts that work into something you and your lab reuse across a multi-year project |
 | 6 | [Core 4: Verify, Disclose, Decide](workshop5.qmd) | Core session | Verification you practice, what funders and journals now require, and how to disclose — go before your first submission, not after |
 
 ::: {.callout-tip}

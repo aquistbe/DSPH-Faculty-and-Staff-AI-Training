@@ -17,7 +17,7 @@ Drexel's official hub is **[AI at Drexel](https://drexel.edu/provost/ai)** (Offi
 
 | Tool | Drexel access | Drexel data classification | Best for |
 |------|---------------|----------------------------|----------|
-| **ChatGPT Edu** | Faculty, staff, and students, Drexel workspace | Governed by **Drexel ChatGPT Edu Terms of Use** | Writing, summarizing, analysis, custom GPTs |
+| **ChatGPT Edu** | Faculty, staff, and students, Drexel workspace | Governed by **Drexel ChatGPT Edu Terms of Use** | Writing, summarizing, analysis, plugins, scheduled tasks |
 | **Microsoft Copilot Chat with Enterprise Data Protection** | Students, faculty, and staff | **High Risk Data** when signed in with Drexel account; **Low Risk Data** otherwise | Web-based AI chat, drafting, summarizing |
 | **Microsoft 365 Copilot** (the paid Copilot inside Word, Excel, PowerPoint, Outlook, Teams) | **Not currently provided by Drexel** | n/a | Use Copilot Chat instead: paste or upload your content |
 | **Zoom AI Companion** | Faculty, staff, and students | **High Risk Data** when not recorded/transcribed; **Low Risk Data** when recorded/transcribed | Meeting summaries, recaps, action items |
@@ -42,7 +42,7 @@ Regulated or sensitive information --- PHI, non-directory PII, confidential HR i
 - **Copilot Chat with Enterprise Data Protection --- yes.** Sign in with your Drexel account and confirm EDP is active.
 - **Zoom AI Companion and the Adobe AI tools --- yes**, at the classifications listed in the table above.
 - **Microsoft 365 Copilot inside Word, Excel, PowerPoint, Outlook, and Teams --- no.** Drexel does not currently provide this license to anyone. Use **Copilot Chat in the browser** instead and paste or upload your content; every Copilot Chat prompt in these sessions works that way.
-- **Two Edu-workspace features have low-fidelity substitutes** if something isn't enabled for you: a **saved instruction block in a note** that you paste at the top of a chat does roughly what a **custom GPT** does (you re-paste it each time instead of it being built in), and a **shared OneDrive folder** of files and a written instruction doc does roughly what a **shared Project** does (the AI won't read the folder itself---you attach the files each session).
+- **Two Edu-workspace features have low-fidelity substitutes** if something isn't enabled for you: a **saved instruction block in a note** that you paste at the top of a chat does roughly what a **plugin** does (you re-paste it each time instead of it being built in), and a **shared OneDrive folder** of files and a written instruction doc does roughly what a **shared Project** does (the AI won't read the folder itself---you attach the files each session).
 - Your **course AI policies come from your instructors**, not from this site — and that includes the **APE** and the **ILE/capstone**, where the supervising instructor, advisor, or preceptor sets the rules. Drexel's [generative AI and teaching guidance](https://drexel.edu/teaching-and-learning/resources/teaching-tech/GAI-and-teaching/) is instructor-level guidance, not a university-wide policy. Read the syllabus first; these tools don't override it.
 
 ## ChatGPT Edu (Primary Tool)
@@ -54,7 +54,8 @@ ChatGPT Edu is Drexel's institutionally supported version of ChatGPT. It is the 
 - Access to current OpenAI models in a Drexel-managed workspace. In these materials, "**the current default model**" means whatever model the Drexel ChatGPT Edu workspace selects by default (model names change too often to hard-code); "**the smaller/faster model**" means the lighter option in the picker.
 - Prompts and uploaded content are **not used to train OpenAI's models**
 - Higher message limits than the free tier
-- The ability to build and share **custom GPTs** (reusable assistants with your own instructions and files) inside the Drexel workspace
+- The ability to build and share **plugins** (reusable assistants with your own instructions and files) inside the Drexel workspace. Plugins replace custom GPTs, which OpenAI stopped creating on October 26, 2026 and plans to retire on December 11, 2026. See [Core 3](workshop3.qmd).
+- **Scheduled tasks**: prompts that run on their own at a set time (up to 10 active per person)
 
 **How to get access**
 

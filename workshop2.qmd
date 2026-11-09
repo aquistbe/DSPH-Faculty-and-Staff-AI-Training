@@ -260,6 +260,6 @@ Then ask for one change: *"Make the findings column use numbers, not adjectives.
 
 ## Looking Ahead
 
-**Core 3: Reusable Assistants** --- turning the prompts that work into things you and your team use again: **shared Projects** in ChatGPT Edu (one workspace for a group's files, instructions, and chats), **custom GPTs**, a shared prompt library, and a first look at assistants that take several steps on their own.
+**Core 3: Set It Up Once** --- turning a prompt that works into a reusable assistant in ChatGPT Edu (a **plugin**, which replaces custom GPTs, or a **shared Project**), testing its guardrails, and choosing which tasks are worth running on a schedule.
 
 {{< include /_feedback-workshop.qmd >}}

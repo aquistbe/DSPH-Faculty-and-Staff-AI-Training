@@ -1,173 +1,60 @@
-# Instructor Guide: Workshop 3
+# Instructor Guide: Core 3 · Set It Up Once
 
-Workshop: Collaboration on Projects  
-Length: 60 minutes  
-Presentation target: 15-20 minutes  
-Main tools: ChatGPT Edu custom GPTs, shared prompt library, Zoom AI Companion, OpenAI Academy  
-Participant assumption: participants can now run prompts and identify low-risk examples
+Length: 60 minutes on Zoom
+Slides: `slides/workshop3.html` (25 slides)
+Main tools: ChatGPT Edu (plugins, Projects, scheduled tasks), Copilot Chat (agents), Claude (instructor demo only)
+Handout: `demo-materials/Workshop3_Guardrail_Card.docx`
 
-## Goals
+## Why this session changed (November 2026)
 
-Participants should leave able to:
+OpenAI stopped new custom GPTs on October 26, 2026 and plans to retire them on December 11, 2026 (dates can vary by workspace). The replacement is the plugin: instructions become a skill, knowledge files become reference files, and custom actions are not migrated. The session now builds a plugin instead of a custom GPT, adds a guardrail card, and adds scheduled tasks. The old shared-Project activity is folded into Build B and the fallback tip. The project-description risk exercise was dropped from the session; `Workshop3_Demo_ProjectDescription.docx` stays in `demo-materials/` for the Collaborating on Projects track.
 
-1. Turn meeting notes into summaries, decisions, and action items.
-2. Draft and stress-test a simple project plan.
-3. Create or outline one internal custom GPT in ChatGPT Edu.
-4. Start a shared prompt library for their team.
-5. Know where to continue learning through OpenAI Academy.
+## Prep (day before)
 
-## Instructor Prep
+- [ ] In ChatGPT Edu: confirm **@ Plugin Creator** works and note the exact steps you see. If they differ from the page, tell participants at the start.
+- [ ] Build both plugins ahead of time (Grant Deadline Tracker with a fresh CSV; Crossing Points Recap with the style guide and template). Run the three tests on each so you know how they fail.
+- [ ] Confirm **Scheduled** appears in the ChatGPT Edu sidebar. Create the PubMed task once so you can show the Scheduled list.
+- [ ] In Copilot Chat: check whether **Create an agent** appears for a Drexel account. If it does not, drop that line from slide 9 and the page tip.
+- [ ] Claude demo: set up a Project with the Crossing Points Recap instructions + the two reference files; save the same instructions as a Skill; create the weekly PubMed scheduled task. Use only the fictional files.
+- [ ] Post in the Zoom chat at the start: links to the guardrail card and the four Word demo files.
 
-- Open ChatGPT Edu and confirm custom GPT creation is available.
-- Prepare a simple custom GPT example, such as "Meeting Recap Assistant."
-- Open a shared prompt library example in Word, Teams, SharePoint, or OneDrive.
-- Open OpenAI Academy in a browser tab.
-- Prepare a sample set of messy meeting notes for participants who do not bring their own.
+## Run of show
 
-Ready-made synthetic demo files are in `demo-materials/` (also linked from the workshop 3 page). Each ends with its workshop prompt and a "then check" list:
+| Time | Segment | Slides | Notes |
+|---|---|---|---|
+| 0:00-0:05 | Welcome back | 1-3 | Zoom chat: which Core 2 prompt did you reuse, what did you re-explain? |
+| 0:05-0:13 | What changed; four parts; which tool | 4-7 | Keep it short. The main point: write instructions in your own Word document. |
+| 0:13-0:30 | Activity 1: build a plugin | 8-12 | Demo the Plugin Creator steps on your screen first (2 min), then release. Build A is the default. |
+| 0:30-0:40 | Activity 2: guardrail card + three tests | 13-16 | Card sections 1-3 in 3 min, tests in 5. Ask for scores in the chat. |
+| 0:40-0:52 | Activity 3: sort tasks, set one up | 17-22 | Part A answers in chat for 3, 5, 8, then show slide 20. Part B: everyone creates one task with an end date. |
+| 0:52-0:57 | Claude live demo | 23 | Same Word document pasted into a Project and a Skill; rerun Test 1 and 2; show the scheduled task. |
+| 0:57-1:00 | Wrap-up, feedback QR | 24-25 | One assistant or task they'll set up this month. |
 
-- `Workshop3_Demo_MeetingNotes.docx` — messy study-team check-in notes (Activity 1 Part A). Planted teaching moments: only ONE real decision (the September newsletter), so you can catch the AI inventing others — the budget move and equipment choice were NOT decided; two unassigned action items (Spanish translation, October room booking); vague dates ("hopefully back soon"); and a personnel aside (student worker missing shifts) that must not reach a shared recap — use it to run the shared-space test live.
-- `Workshop3_Demo_ProjectDescription.docx` — two-paragraph fictional study description (Activity 1 Part B). Five planted risks the AI's plan should surface: DUA stuck in legal review, city installation schedule outside team control, a shared analyst, student-worker coverage during counts, and a 90-day report clock that starts regardless. Score the AI's risk list against the five.
-- `Workshop3_Demo_StyleGuide.docx` + `Workshop3_Demo_UpdateTemplate.docx` — the upload pair for Activity 2 (shared Project reference files). After uploading both, run "Using the uploaded template, draft a project update for this month" and point out that the output follows the template's Done / In Progress / Needs Attention structure and the style guide's rules (bottom line, no unexplained acronyms) without re-pasting them — the shared-context payoff, demonstrated.
+If time runs short, cut Activity 3 Part B to a demo of your own scheduled task and keep Part A.
 
-Live-demo script (~4 minutes, before releasing the room): open the meeting notes, run the recap prompt, and check the three planted traps aloud — invented decisions, unassigned items, the personnel note. That models both the recap habit and the shared-space test in one pass.
+## Expected results (for checking participants' work)
 
-## 60-Minute Run of Show
+**Build A (Grant Deadline Tracker):** two deadlines in 30 days (+10, +25); only +10 is URGENT; ends with the funder-site reminder. Tests: declines budget question, declines again on push, says the NSF CAREER deadline isn't on file.
 
-| Time | Segment | Instructor role |
-|---|---|---|
-| 0:00-0:03 | Reconnect | Ask for one prompt recipe that worked. |
-| 0:03-0:20 | Minimal slides | Move from individual prompting to team reuse. |
-| 0:20-0:33 | Meeting recap and project plan | Participants turn notes into action items and risks. |
-| 0:33-0:51 | Custom GPT or prompt library | Participants build or outline one reusable team tool. |
-| 0:51-0:56 | OpenAI Academy | Show where to find events, content, and education/work resources. |
-| 0:56-1:00 | Commitment | Each participant names one team habit to try. |
+**Build B (Crossing Points Recap):** one decision (September newsletter, Rosa). Second corridor, budget move, counter equipment = open questions. Spanish translation and October room booking = Unassigned. IRB check = No date. Student-worker note left out with a one-line notice. Tests: declines the note to Jordan, declines on push, says the notes give no IRB due date.
 
-## Slide Plan and Speaking Notes
+**Common failures to point out:** Test 2 (push back) often succeeds; Plugin Creator sometimes rewrites rules more loosely than the pasted instructions, which is why step 4 says to read the final instructions.
 
-Use 7 slides. The Academy slide can be a live browser demo rather than a detailed slide.
+## Talking points
 
-### Slide 1: From Individual Use to Team Practice
+- Slide 5: "Custom actions" do not migrate. Few faculty use them, but anyone with a GPT that calls an outside service needs to reconnect it.
+- Slide 6: The custom GPT retirement is the reason to keep instructions in your own document. If a tool changes, you paste, retest, and move on.
+- Slide 7: Copilot Chat agents are free when grounded in instructions and public websites; using SharePoint or OneDrive files requires the paid license or pay-as-you-go billing, which Drexel does not have. Scheduled prompts in Copilot also require the paid license.
+- Slide 16: "Advisory only" means a person checks the output before anyone acts on it. The grant tracker is advisory only.
+- Slide 18: A task no one reads still runs and uses the plan's allowance.
+- Slide 23: Claude is Low Risk Data only and not Drexel-supported. Show it to make the portability point, not to recommend a switch.
 
-Claim: A prompt that works for one person is useful; a prompt the team can reuse becomes a standard.
+## Data rules to repeat
 
-Say:
+No health information about a person, student records, HR matters, or identifiable research data in any assistant or scheduled task. Shared assistants: reference files must be fine for everyone they're shared with. Share inside the Drexel workspace only.
 
-- "Today is about shared work: meetings, project planning, prompt libraries, and custom GPTs."
-- "The goal is a repeatable team habit, not a polished AI system."
+## Sources checked 2026-11-09
 
-### Slide 2: Three Team Uses That Are Worth Starting
-
-Claim: Start with recaps, plans, and reusable prompts.
-
-Say:
-
-- "Meeting recaps reduce lost decisions and vague follow-up."
-- "Project-plan prompts surface risks and missing owners."
-- "Prompt libraries and custom GPTs let later users benefit from what early adopters learn."
-
-### Slide 3: Meeting Recap Pattern
-
-Claim: The most useful recap separates summary, decisions, action items, and uncertainties.
-
-Prompt:
-
-> Turn these notes into four sections: brief summary, decisions made, action items with owner and due date, and unclear items that need follow-up.
-
-Say:
-
-- "The unclear-items section is the point. It shows where the meeting did not actually resolve ownership or timing."
-
-### Slide 4: Stress-Test the Project Plan
-
-Claim: AI can help find gaps before they become project delays.
-
-Prompt:
-
-> Draft a simple project plan with phases, tasks, owners, and timeline. Then list the top 5 risks, what would reduce each risk, and what early warning sign we should watch.
-
-Say:
-
-- "Use this to find blind spots. Do not outsource the decision."
-
-### Slide 5: Custom GPT or Prompt Library?
-
-Claim: Use the lightest reusable tool that solves the problem.
-
-Say:
-
-- "Use a prompt library when the team needs shared examples and can copy/paste."
-- "Use a custom GPT when the team needs the same instructions, tone, format, or reference files every time."
-- "Share custom GPTs internally only, consistent with Drexel workspace rules."
-
-### Slide 6: Data and Permission Check
-
-Claim: Shared AI tools increase consistency, but they also increase privacy and permission risk.
-
-Say:
-
-- "Do not upload sensitive reference files just because a GPT is internal."
-- "Use public, low-risk, synthetic, or explicitly approved content."
-- "For research data, check IRB and data use agreements."
-
-Reading to mention: `LLMs can unmask pseudonymous users at scale with surprising accuracy - Ars Techn.pdf`
-
-### Slide 7: Where to Keep Learning
-
-Claim: OpenAI Academy gives participants a place to continue after the workshops.
-
-Live demo:
-
-1. Open https://academy.openai.com/.
-2. Point to Events, Content, Work, and Education.
-3. Ask participants to find one relevant resource or event after the session.
-
-Say:
-
-- "This is a good place for short learning after the workshop. Check Events for live or recorded sessions, and Content for role-based topics."
-
-## Activity Facilitation Notes
-
-For custom GPTs, some participants may move quickly and others may not know what to build. Offer these starter ideas:
-
-- Meeting Recap Assistant
-- Plain-Language Rewriter
-- Grant Reminder Drafter
-- Research Project Update Assistant
-- Student/Staff Onboarding Q&A Assistant
-- Policy Summary Assistant
-
-Use this starter instruction:
-
-> You are a [role] for the DSPH [team]. When given [input], produce [output] in this format: [structure]. Use a [tone] tone. If key information is missing, ask for it before producing the output. Never include sensitive or identifying data.
-
-If custom GPT creation is unavailable or slow, have participants write the instructions in a shared document instead. That document becomes the seed for a later GPT.
-
-## OpenAI Academy Placement
-
-Introduce OpenAI Academy near the end, after participants have enough context to know what to look for. Keep it to 3-5 minutes:
-
-- Show the home page.
-- Point to Content and Events.
-- Mention that relevant sessions may appear under Work and Education.
-- Ask participants to bookmark it and choose one resource after the workshop.
-
-## Common Questions
-
-**Should every team build a custom GPT?**  
-No. A shared prompt library is often enough. Build a custom GPT when the task is repeated, the output format is stable, and the instructions need to stay consistent.
-
-**Can a custom GPT use our internal files?**  
-Only if those files are appropriate under Drexel's ChatGPT Edu terms, data-classification guidance, IRB requirements, and any data use agreements.
-
-**What should we do after the workshop?**  
-Pick one team habit for 30 days: AI-assisted meeting recaps, a shared prompt library, or one internal custom GPT for a repeated task.
-
-## Optional References
-
-- `Introducing workspace agents in ChatGPT - OpenAI.pdf`
-- `Understanding-AI-agents.pdf`
-- `(1) AI Agents for Data Scientists- Automations vs Agents.pdf`
-- `LLMs can unmask pseudonymous users at scale with surprising accuracy - Ars Techn.pdf`
-- OpenAI Academy
-- Drexel AI Tools + Data Classification
+- OpenAI Help: Plugins in ChatGPT; Build plugins (learn.chatgpt.com/docs/build-plugins); Scheduled tasks in ChatGPT (Edu limit 10 active; tasks in a Project can't read Project files; no more than hourly).
+- Custom GPT retirement dates: MSU IT KB (retirement Dec 11, 2026; no new GPTs after Oct 26, 2026); ETIH coverage.
+- Microsoft: Copilot Chat agents grounded in instructions and public websites at no added cost (learn.microsoft.com/copilot/agents); scheduled prompts require a Microsoft 365 Copilot license (Microsoft Support).

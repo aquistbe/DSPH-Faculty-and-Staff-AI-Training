@@ -27,7 +27,7 @@ website:
           - href: workshop2.qmd
             text: "Core 2 · Workflow Enhancement"
           - href: workshop3.qmd
-            text: "Core 3 · Reusable Assistants"
+            text: "Core 3 · Set It Up Once"
           - href: workshop5.qmd
             text: "Core 4 · Verify, Disclose, Decide"
       - text: "Electives"

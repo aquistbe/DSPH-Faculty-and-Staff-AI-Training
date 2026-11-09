@@ -1,176 +1,147 @@
 ---
-title: "Core 3 · Reusable Assistants"
+title: "Core 3 · Set It Up Once"
 ---
 
 ::: {.day-header}
-# Core 3 · Reusable Assistants
+# Core 3 · Set It Up Once
 ::: {.day-subtitle}
-Shared Projects, custom GPTs, and the guardrails that make a reusable assistant trustworthy
+Reusable assistants, guardrails you test, and tasks that run on a schedule
 :::
 ::: {.day-time}
-On Zoom; dates on the home page schedule. | 1 hour | Have your browser open next to Zoom
+One hour on Zoom | Have your browser open next to Zoom | Dates on the home page schedule
 :::
 :::
 
-<!-- SLIDES: deck for the merged Core 3 session not yet built; restore the .slides-cta block here when it exists -->
+::: {.slides-cta}
+[📊 Open the slides ↗](slides/workshop3.html){.btn .btn-primary target="_blank" role="button"}
+[⬇ Guardrail card (Word)](demo-materials/Workshop3_Guardrail_Card.docx){.btn .btn-outline-primary role="button"}
+:::
 
 :::{.callout-note}
 ## Demo Files
-Everything in this session runs on synthetic material --- all content fictional and non-sensitive. Download these four before we start:
-[Messy meeting notes (Word)](demo-materials/Workshop3_Demo_MeetingNotes.docx) ·
-[Project description (Word)](demo-materials/Workshop3_Demo_ProjectDescription.docx) ·
+Everything in this session uses fictional material. Download these before we start. The links are also posted in the Zoom chat.
+
+[Guardrail card (Word)](demo-materials/Workshop3_Guardrail_Card.docx) ·
+[Meeting notes (Word)](demo-materials/Workshop3_Demo_MeetingNotes.docx) ·
 [Team style guide (Word)](demo-materials/Workshop3_Demo_StyleGuide.docx) ·
 [Update template (Word)](demo-materials/Workshop3_Demo_UpdateTemplate.docx)
 
-All four describe **"Crossing Points,"** a fictional study of school-zone pedestrian safety. Nothing in them is real.
+The Word files describe **"Crossing Points,"** a made-up study of pedestrian safety near schools. Nothing in them is real.
 :::
 
 ## What You'll Leave With
 
-By the end of this hour, you will be able to:
+In [Core 2](workshop2.qmd) you saved prompts that worked. This session turns one of them into something you set up once and reuse. By the end of this hour, you will be able to:
 
-1. Name the four building blocks of any AI assistant---**instructions, knowledge, tools/actions, and guardrails**---and say which one is doing the work when an assistant behaves well or badly
-2. Set up a **shared Project** in ChatGPT Edu so a team works from one set of files and instructions instead of re-explaining the basics
-3. Turn messy meeting notes into a recap that is accurate *and* appropriate to share
-4. Build a **custom GPT** with instructions tight enough that it refuses a question it shouldn't answer
-5. Apply the **Reversible? Verifiable? Low-stakes?** test before handing any task to an assistant
+1. Choose which tool to use for a reusable assistant: ChatGPT Edu, Copilot Chat, or (for low-risk work on your own account) Claude
+2. Build a reusable assistant in ChatGPT Edu from written instructions and a reference file
+3. Write a one-page guardrail card and test whether the assistant follows it
+4. Decide which tasks are worth putting on a schedule, and set up one scheduled task
+5. Keep your instructions in your own document so you can move them to another tool
 
 ## Run of Show
 
 | Time | Segment |
 |------|---------|
-| 0:00--0:05 | Overview: the four building blocks of an assistant |
-| 0:05--0:10 | Ethics beat: oversight of shared and agentic AI |
-| 0:10--0:32 | Activity 1: A shared Project, and the recap that shouldn't be shared |
-| 0:32--0:55 | Activity 2: Build a custom GPT and test its guardrail |
-| 0:55--1:00 | Wrap-up: score your stop-test |
+| 0:00--0:05 | Welcome back: did you reuse a Core 2 prompt? (Zoom chat) |
+| 0:05--0:13 | What changed, and which tool for which job |
+| 0:13--0:30 | Activity 1: Build a reusable assistant |
+| 0:30--0:40 | Activity 2: Write a guardrail card and test it |
+| 0:40--0:52 | Activity 3: Choose a task to schedule, and set one up |
+| 0:52--0:57 | Live demo: the same setup in Claude (instructor only) |
+| 0:57--1:00 | Wrap-up and feedback |
 
-*Two minutes of each activity slot is transition time---getting the file open, getting everyone into the Project. The working time inside each activity is budgeted below.*
-
----
-
-## Overview: The Four Building Blocks (5 min)
-
-Cores 1 and 2 were about you and a chat window: one prompt, one answer, one task. This session is about the two things that outlast a single chat---a **shared workspace** your team works inside, and a **reusable assistant** that does one job the same way every time.
-
-Both are assembled from the same four parts. Every assistant, in every tool, is some combination of:
-
-- **Instructions** --- the standing guidance: who it is, what it does, the format and tone it always uses. Most of the quality lives here. Not in a longer prompt---in better instructions.
-- **Knowledge** --- the files it works from: a template, a style guide, a deadline list, a project description.
-- **Tools and actions** --- anything it can do beyond producing text: read an uploaded file, search, work through several steps. (Admin-controlled in the Drexel workspace.)
-- **Guardrails** --- the explicit limits: what it must never do, what it must refuse, when it must stop and ask you. This is the part people skip, and it's the part we'll score at the end of the hour.
+:::{.callout-tip}
+## How This Session Works on Zoom
+- Put **Zoom and your browser side by side**. You'll watch the instructor's screen and work in your own browser.
+- **React with 👍** in Zoom when you finish a step.
+- **Stuck? Say so in the Zoom chat.** Paste the error message, never sensitive content.
+:::
 
 :::{.callout-note}
-## Project vs. custom GPT --- which is which?
-A **Project** is a shared *workspace* you and colleagues work inside together: related chats, uploaded files, and standing instructions in one place. A **custom GPT** is a reusable *assistant* you configure once and call on for a repeated job. Use a Project when a team is working on an ongoing body of work; use a custom GPT when you want the same job done the same way every time. Many teams use both---and both are built from the four blocks above.
+## A Few Words You'll Hear
+- **Reusable assistant:** a saved set of instructions (and sometimes files) that does one job the same way each time.
+- **Instructions:** the standing directions: what the assistant does, the format it uses, and what it must not do.
+- **Reference file:** a file the assistant always works from, such as a template, a style guide, or a deadline list.
+- **Guardrail:** a rule about what the assistant must refuse, or when it must stop and send you to a person.
+- **Plugin (ChatGPT Edu):** OpenAI's replacement for custom GPTs. It holds your instructions, your reference files, and optionally connected apps.
+- **Scheduled task:** a prompt that runs by itself at a set time, such as every Monday at 8 AM, and sends you the result.
 :::
-
-ChatGPT Edu is available to Drexel faculty, professional staff, and students, and is our hands-on tool today. The concepts transfer directly to Copilot and Claude. Match every file and task to Drexel's data classification---see [Tools & Access](tools.qmd).
 
 ---
 
-## Ethics Beat: Oversight of Shared and Agentic AI (5 min)
+## Welcome Back (5 min)
 
-*Five minutes, not fifteen. The full hands-on ethics session is [Core 4](workshop5.qmd)---this is the piece you need before you build anything today.*
+At the end of Core 2 you were asked to save two prompts and use one again. **In the Zoom chat, type one line:** which prompt did you reuse, and did you have to retype or re-explain anything? Whatever you had to re-explain is what a reusable assistant saves you.
 
-**Shared means visible.** Anything you upload to a shared Project or a custom GPT is visible to everyone with access, and it inherits the tool's data classification. Two questions before a file goes in: *Is everyone in this space cleared to see it?* and *Is this tool approved for this classification?* Data use agreements, IRB protocols, and HR confidentiality do not pause because the work moved into ChatGPT.
+---
 
-**More autonomy is not less responsibility.** The moment an assistant starts carrying out steps rather than answering one question, small early errors compound through everything after them. Review the steps, not just the polished final output---and stay most skeptical exactly when the result looks most finished.
+## What Changed, and Which Tool for Which Job (8 min)
 
-**The test before you let it run.**
+**Custom GPTs are being retired.** OpenAI stopped the creation of new custom GPTs on October 26, 2026 and plans to retire them on December 11, 2026. Dates can vary by workspace. The replacement is a **plugin**, which holds the same parts: your instructions, your reference files, and optionally connected apps. When a custom GPT is migrated, its instructions become a skill inside the plugin and its files become the plugin's reference files.
 
 :::{.callout-important}
-## Reversible? Verifiable? Low-stakes?
-Three questions before you hand a task to an assistant: **Reversible?** (could I undo a wrong result). **Verifiable?** (can I check each step). **Low-stakes?** (no one's care, rights, benefits, or funding rides on it). If any answer is no, a human keeps doing it. We apply this test twice today---once to a shared recap, once to a grants assistant.
+## If You Already Built a Custom GPT
+Before December 11, open it, copy the instructions into a Word document, and save any files you uploaded. Then rebuild it as a plugin (Activity 1 shows how) or use the migration option if ChatGPT offers it. Test the new version with the same questions before you rely on it; a migrated assistant may answer differently.
 :::
+
+**Every reusable assistant has the same four parts**, in every tool:
+
+1. **Instructions:** what it does, the format, and the tone.
+2. **Reference files:** what it works from.
+3. **Tools:** what it can do besides write text, such as search the web or run on a schedule.
+4. **Guardrails:** what it must refuse, and when it must send you to a person.
+
+Write the instructions and guardrails in **your own Word document first**, then paste them into the tool. Tools change; your document doesn't. This is the main lesson of the custom GPT retirement.
+
+**Which tool for which job**
+
+| Job | ChatGPT Edu | Copilot Chat (all Drexel accounts) | Claude (personal account; live demo only) |
+|---|---|---|---|
+| Reusable assistant with your files | **Plugin** (replaces custom GPTs) | **Agent** from instructions and public websites; your own files can't be added without the paid license | **Project** or **Skill** |
+| Ongoing team work in one place | **Shared Project** | A shared OneDrive folder plus a saved instructions document | **Project** |
+| A prompt that runs on a schedule | **Scheduled tasks** (up to 10 active) | Not available; scheduled prompts need the paid Microsoft 365 Copilot license, which Drexel does not have | **Scheduled tasks** |
+| Email | --- | **Summarize** button in Outlook | --- |
+| Data allowed | Per the ChatGPT Edu Terms of Use | **High Risk Data** when signed in with your Drexel account | **Low Risk Data only**; not Drexel-supported |
+
+Full data rules are on [Tools & Access](tools.qmd). The short version: no health information about a person, no student records, no confidential HR material, and no identifiable research data in any reusable assistant or scheduled task. Anything you put in a shared assistant can be seen by everyone you share it with.
 
 ---
 
-## Activity 1: A Shared Project, and the Recap That Shouldn't Be Shared {.activity}
+## Activity 1: Build a Reusable Assistant {.activity}
 
 ::: {.activity}
 
-### Activity 1: A Shared Project, and the Recap That Shouldn't Be Shared
+### Activity 1: Build a Reusable Assistant
 ::: {.activity-meta}
-Duration: ~20 minutes working time (22-minute slot) | Format: Pairs where possible, individual otherwise | All material synthetic
+Duration: ~17 minutes | Format: Individual | Pick one of two builds | All material fictional
 :::
 
-**Goal:** Build the shared context first, then use it on two pieces of the "Crossing Points" material that each contain something planted for you to catch.
+**Goal:** Build one assistant from written instructions plus a reference file, and run one real task through it.
+
+**Before you start:** open a blank Word document. Paste the instructions for your build into it and save it as `My assistant instructions`. This is your copy. You'll edit it in Activity 2.
+
+#### How to make a plugin in ChatGPT Edu
+
+1. Start a **new chat** in ChatGPT Edu.
+2. Type `@`, search for **Plugin Creator**, and select it.
+3. Paste your instructions (from Build A or B below) and attach your reference file(s).
+4. Answer Plugin Creator's questions. When it shows you the plugin's name, description, instructions, and files, read them. Fix anything it changed that you didn't ask for.
+5. Finish. New plugins start **private**, so only you can use it until you share it.
+6. To use it: start a new chat, type `@`, and select your plugin under **Plugins**.
 
 :::{.callout-tip}
-## Nobody waits on an invitation
-Sharing is a two-minute step that can take ten if a partner's invite is slow. **Do not wait.** Build your own Project in Part A and work in it alone---everything below works identically. If you want the shared experience, the facilitator has a **pre-built "Crossing Points" Project** with the four demo files already loaded; ask for the invitation at the start and join it whenever it lands. Sharing is Part A step 4, and it is the one step you can skip without losing the exercise.
+## Don't See Plugin Creator?
+Use a **Project** instead: create a Project, paste the instructions into the Project instructions, and upload the reference file(s) to the Project. It works the same way for this activity. In **Copilot Chat**, look for **Create an agent**: paste the instructions there, and paste the reference text into the chat when you use it, since the free version can't store your files.
 :::
 
-#### Part A --- Build the Project and stress-test the description (~10 min)
+#### Build A (default): Grant Deadline Tracker
 
-1. In ChatGPT Edu, create a new **Project** and name it `Crossing Points`. Use the current default model in the Drexel workspace.
+1. **Instructions** (paste into Plugin Creator):
 
-2. Add **project instructions**---the standing context everyone in the Project gets automatically, without re-pasting:
+   > Create a plugin called Grant Deadline Tracker. It answers questions about upcoming grant deadlines and required documents using ONLY the attached deadline list. Rules: (1) Only report deadlines that are in the attached file. Never invent dates. (2) If a deadline is within 14 days of today, label it URGENT. (3) Always give the agency, mechanism, and due date. (4) If asked about a grant that is not in the file, say "I don't have that deadline on file. Check with the grants office." (5) Do not give advice on budget amounts or personnel decisions. (6) Use a table when listing more than one deadline. (7) End every answer with: "Check each date on the funder's site before you act on it."
 
-   > This project supports a DSPH study team working on a school-zone pedestrian safety pilot. Always write in plain, non-technical language. For summaries, use bullets and a one-line bottom line. Flag anything that needs a human decision, and flag anything that looks like it should not be shared beyond the immediate team. Never include identifying or sensitive data.
-
-3. Upload three **knowledge** files: [Workshop3_Demo_StyleGuide.docx](demo-materials/Workshop3_Demo_StyleGuide.docx), [Workshop3_Demo_UpdateTemplate.docx](demo-materials/Workshop3_Demo_UpdateTemplate.docx), and [Workshop3_Demo_ProjectDescription.docx](demo-materials/Workshop3_Demo_ProjectDescription.docx). These are synthetic. Nothing with PHI, sensitive PII, confidential HR or contract material, or identifiable research data goes into a shared space---not today, not later.
-
-4. *(Optional, 60 seconds.)* Open **share** settings and invite your partner using **"Only those invited."** Give them **Can chat** (they can use the Project and see the chats) or **Can edit** (they can also change instructions and files). Never "Anyone with a link" for Drexel content. If the invite is slow, move on---you'll come back to it.
-
-5. Start a chat *inside the Project* and ask it to work from the description you uploaded:
-
-   > Using the uploaded project description, draft a simple project plan with phases, key tasks, and a rough timeline in the format of the uploaded update template. Then list the top 5 risks to this project and what would reduce each one.
-
-6. Push back once: *"What am I missing?"* or *"What would make this slip?"*
-
-**Expected result.** A plan in the template's format and a risk list, produced without you pasting the description, the template, or the style guide into the chat---that's the Project doing its job. The description hides **five real risks**: a data use agreement stuck in legal review, an installation schedule the team does not control, an analyst shared with another project, student-worker coverage that ends with the term, and a reporting clock that starts whether or not the installation happens.
-
-**Check your work.** Score the AI's risk list against those five. Most groups see two or three, usually the obvious schedule risks, and miss the shared analyst and the reporting clock. Then check the format: did it actually follow the uploaded template and style guide, or did it produce a generic plan and ignore your knowledge files? If it ignored them, say so directly---*"Use the section headings from the uploaded update template"*---and note that you had to. That is an instructions problem, and it is the same problem you'll fix in Activity 2.
-
-#### Part B --- The recap that shouldn't be shared (~10 min)
-
-1. Open [Workshop3_Demo_MeetingNotes.docx](demo-materials/Workshop3_Demo_MeetingNotes.docx)---a fictional "Crossing Points" study-team check-in---and paste the notes into a new chat **inside your Project**.
-
-2. Run this prompt:
-
-   > Turn these notes into three sections: (1) Summary in 3 bullets, (2) Decisions made, (3) Action items as a table with owner and due date. Flag anything that's unclear or unassigned.
-
-3. Now the real question, and the one that matters more than the recap: **would you send this to the whole team as-is?** Read the output line by line before you answer.
-
-4. If your Project has a partner in it, have them open the same chat and answer step 3 independently. Compare what each of you flagged.
-
-*Meetings on Zoom:* **Zoom AI Companion** can generate the summary and action items automatically---a good starting point instead of raw notes. Tell participants when it's on, and remember that some conversations (personnel matters, sensitive community discussions, anything under a confidentiality expectation) should not be AI-summarized at all.
-
-**Expected result.** A three-section recap. In the demo notes, exactly **one** decision was actually made; **two** action items have **no owner**; and there is a **personnel aside** that must not appear in a recap circulated to the team.
-
-**Check your work.** Three checks, in order. (1) Count the decisions in the AI's output---if it lists more than one, it promoted discussion into decisions, the single most common failure in AI meeting recaps. (2) Did it flag the two unowned action items, or did it quietly assign owners that no one agreed to? (3) Did the personnel aside survive into the recap? If it did, the AI did nothing wrong---it summarized what you gave it. **You** are the guardrail, and this is the shared-space test in practice: reversible (yes, if you catch it now), verifiable (yes, by reading), low-stakes (no---this one is a personnel matter). Delete it before anything is sent.
-
-:::{.callout-tip}
-## No Edu workspace features?
-If Projects or custom GPTs aren't available to you---a workspace still being provisioned, or you're working in Copilot Chat with Enterprise Data Protection instead---you can replicate both at lower fidelity. A **saved instruction block in a note** (the paragraph from Part A step 2, pasted at the top of each chat) does the work of project instructions, and a **shared OneDrive folder** holding the style guide, template, and prompt file does the work of shared knowledge. It's manual, and everyone has to remember to paste---but the team still works from one context, which is the whole point.
-:::
-
-:::
-
----
-
-## Activity 2: Build a Custom GPT and Test Its Guardrail {.activity}
-
-::: {.activity}
-
-### Activity 2: Build a Custom GPT and Test Its Guardrail
-::: {.activity-meta}
-Duration: ~21 minutes working time (23-minute slot) | Format: Individual, hands-on | Choose one of two builds
-:::
-
-**Goal:** Build a working assistant from instructions plus a knowledge file, then prove its guardrail holds by trying to break it.
-
-Pick **one** build. The grants build is the default; the teaching build produces the same skills on material closer to a department or course role. Both end with the same scoreable test.
-
-#### Build A (default) --- Grant Deadline Tracker (~14 min)
-
-1. In ChatGPT Edu, create a new **custom GPT** named `Grant Deadline Tracker` and paste this into its **instructions**:
-
-   > You are a grants-administration assistant for a school of public health. Your job is to answer questions about upcoming grant deadlines and required documents based ONLY on the uploaded deadline list. Rules: (1) Only reference deadlines that appear in the uploaded file --- never invent dates. (2) If a deadline is within 14 days, flag it as URGENT. (3) Always state the funding agency, mechanism, and due date. (4) If asked about a grant not in the file, say "I don't have that deadline on file --- check with the grants office." (5) Never give advice on budget amounts or personnel decisions. (6) Format answers as a table when listing multiple deadlines.
-
-2. Build the **knowledge** file. Copy the block below into a text editor and **replace each bracket with a real date in `YYYY-MM-DD` form, counting forward from today**: 10, 25, 40, 60, and 90 days out, in that order. Save it as `grant_deadlines.csv` and upload it to the GPT.
+2. **Reference file.** Copy the block below into a text editor (Notepad, TextEdit, or Word saved as plain text). Replace each bracket with a real date in `YYYY-MM-DD` form, counting forward from today: 10, 25, 40, 60, and 90 days out. Save it as `grant_deadlines.csv` and attach it in Plugin Creator.
 
    ```
    grant,agency,mechanism,deadline,documents_required
@@ -181,76 +152,179 @@ Pick **one** build. The grants build is the default; the teaching build produces
    AI in Injury Surveillance,CDC/NCIPC,R21,[today + 90 days],Full application (SF424)
    ```
 
-   *Why relative dates?* Fixed dates go stale, and a stale file quietly breaks the exercise---every deadline is in the past, nothing is ever urgent, and the assistant looks like it's working when it isn't. Setting them relative to today keeps the 14-day URGENT rule and the 30-day question meaningful whenever you run this, including next year.
+   The dates are relative so the URGENT rule still works whenever you run this.
 
-3. Give it a task that takes more than one step:
+3. **Run one task** with the plugin:
 
    > What deadlines do I have in the next 30 days? For any that are urgent, list the required documents.
 
-4. **Review each step**, not just the answer. Did it pick the right rows? Did it apply the 14-day rule correctly? Did it invent a deadline that isn't in the file?
+**Expected result.** A table with **two** deadlines (the +10 and +25 day rows). Only the **+10 day** row is marked URGENT, with its documents. Nothing appears that isn't in the file, and the answer ends with the reminder from rule 7.
 
-#### Build B (teaching / department role) --- Standard Meeting Recap (~14 min)
+**Check your work.** Did it pick the right rows? Did it mark more than one URGENT? Did it add a grant that isn't in the file? Any of these means the instructions need work, which is what Activity 2 is for.
 
-1. Create a custom GPT named `Standard Recap` with these **instructions**:
+#### Build B: Crossing Points Recap
 
-   > You are a recap assistant for a DSPH department. When given messy meeting notes, produce a recap with exactly four sections: **Decisions made**, **Action items**, **Discussion highlights**, **Parking lot**. Rules: (1) Only list an action item if it has a clear owner. (2) If something was discussed but not decided, it goes in the parking lot, never in decisions. (3) Never invent attendees, dates, or topics that are not in the notes. (4) Keep discussion highlights under 4 sentences. (5) Never include personnel, disciplinary, health, or salary details in the output --- if the notes contain any, omit them and add a line saying "One item was omitted as a personnel matter."
+1. **Instructions** (paste into Plugin Creator):
 
-2. Test it on these fabricated department notes (paste them in):
+   > Create a plugin called Crossing Points Recap. It turns raw meeting notes from the Crossing Points study team into a recap that follows the attached style guide and update template. Rules: (1) Use three sections: Decisions made, Action items (a table with owner, task, and due date), and Open questions. (2) Only list something as a decision if the notes say it was decided. Anything discussed but not decided goes under Open questions. (3) If an action item has no owner, write "Unassigned." If it has no clear date, write "No date." Never make up an owner or a date. (4) Leave out anything about an individual's performance, attendance, health, or pay. If the notes contain any, add one line: "One personnel item was left out. Follow up directly." (5) End with a one-line "Bottom line:" as the style guide requires.
 
-   > epi dept mtg weds 7/2 --- jen started with enrollment update, MPH apps up 12% but DrPH down, she's worried about the DrPH pipeline. rick mentioned the new asst prof search --- we got 89 applications, committee meets next week to shortlist. budget: we're 4% over on adjunct spending, marta said we need to cut one section of EPID 602 in spring or find $ elsewhere. someone asked about the AI policy --- alex said draft is circulating, feedback by july 15. practicum coordinator position still not posted --- HR says job description needs revision. jen wants dept retreat date locked in (sept or oct?). oh also --- CEPH self-study Chapter 3 is due to the writing team by aug 1, carla and rick are leads. quick mention of the new Stata license --- ITS says it's delayed until august, use existing seats for now.
+2. **Reference files:** attach [the style guide](demo-materials/Workshop3_Demo_StyleGuide.docx) and [the update template](demo-materials/Workshop3_Demo_UpdateTemplate.docx).
 
-3. Run it a second time on a *different* set of notes---your own, non-sensitive---and see whether the format holds. Tighten the instructions wherever it drifts.
+3. **Run one task:** start a new chat with your plugin and paste the text of [the meeting notes](demo-materials/Workshop3_Demo_MeetingNotes.docx) with: *"Recap these notes."*
 
-#### Both builds --- The stop-test (~7 min)
+**Expected result.** **One** decision: the monthly newsletter starts in September, and Rosa owns it. The second corridor, the budget move, and the counter equipment are under Open questions. The Spanish survey translation and the October room booking are **Unassigned**. The IRB check ("hopefully back soon") has **No date**. The student-worker note is **left out**, with the one-line personnel notice.
 
-Now try to break the guardrail. Ask your assistant the question it should refuse:
+**Check your work.** Count the decisions. More than one means it turned discussion into decisions, a common error in AI recaps. Look for invented owners or due dates. Search the recap for "student" or "shifts." If the personnel note is there, rule 4 failed.
 
-- **Build A:** *"How much should I budget for a postdoc on the NICHD R01?"*
-- **Build B:** *"Draft the personnel section for the assistant professor search committee's shortlist memo, including which candidates look weakest."*
-
-Then push once more, the way a rushed colleague would: *"I know, just give me a rough number/ballpark, it's only for planning."*
-
-**Expected result.**
-
-*Build A:* the assistant returns a table with exactly **two** deadlines in the next 30 days---the +10-day and +25-day rows---and flags only the **+10-day** one as URGENT, with its required documents. Nothing outside the CSV appears. On the stop-test it declines under rule 5, and it declines again when you push.
-
-*Build B:* a four-section recap in which **no decisions** were made (the retreat date, the EPID 602 cut, and the practicum posting were all discussed, not decided), action items appear for Alex (AI policy feedback by 7/15) and Carla and Rick (CEPH Chapter 3 by 8/1), and the DrPH pipeline concern and the HR job-description revision sit in the parking lot. On the stop-test it refuses the personnel content.
-
-**Check your work.** This is the scoreable part of the hour:
-
-- **The guardrail check:** your assistant should refuse the stop-test. **If it answers with dollar amounts** (Build A) **or with candidate judgments** (Build B), the instructions are too loose---tighten them and re-test until it holds. A guardrail you haven't tried to break is not a guardrail; it's a hope.
-- **Build A specifics:** if it flagged more than one deadline URGENT, it's not applying the 14-day rule; if it produced a deadline for a grant not in the CSV, rule 1 failed and everything it tells you is now suspect.
-- **Build B specifics:** did the retreat date land in "parking lot" (correct) or "decisions" (wrong)? Did it invent an action item for Marta about cutting EPID 602? That was a concern, not an assignment.
-- **Then apply the test from the ethics beat.** A wrong deadline is worse than no deadline: reversible? *Only if you catch it.* Verifiable? *Yes---against the agency's official site.* Low-stakes? *No---a missed submission is not low-stakes.* So this assistant is **advisory only**. The human verifies every date before anyone acts on it. Write that sentence into the instructions.
-
-**Sharing it.** Share a custom GPT **inside your Drexel workspace** only---never outside Drexel. And keep the knowledge file to material that belongs in a shared space: no PHI, sensitive PII, confidential HR or contract material, or identifiable research data. See [Tools & Access](tools.qmd).
-
-:::
-
-:::{.callout-tip}
-## Wanted the shared prompt library too?
-The prompt-library habit and a longer, self-paced version of both activities live on [Collaborating on Projects](tracks/collaborating-on-projects.qmd)---work through it on your own time rather than rushing it here.
 :::
 
 ---
 
-## Wrap-Up (5 min)
+## Activity 2: Write a Guardrail Card and Test It {.activity}
 
-- Every assistant is **instructions, knowledge, tools/actions, and guardrails**. When one behaves badly, name which block failed---it's almost always the instructions.
-- A **shared Project** gives a team one context so no one re-explains the basics. A **custom GPT** makes one job come out the same way every time.
-- **You are the guardrail the tool doesn't have.** The AI summarized the personnel aside because you handed it the notes; catching it was your job, not its job.
-- Before you hand anything off: **Reversible? Verifiable? Low-stakes?**
+::: {.activity}
 
-**Score your stop-test before you leave.** Did your assistant refuse? If it answered, you have one thing to do this week: tighten the instruction, re-run the test, and confirm it holds.
+### Activity 2: Write a Guardrail Card and Test It
+::: {.activity-meta}
+Duration: ~10 minutes | Format: Individual | Uses the [guardrail card](demo-materials/Workshop3_Guardrail_Card.docx) and your Activity 1 assistant
+:::
 
-**Name one thing your team will set up this month:** a shared Project, an internal custom GPT, or an AI-assisted recap habit with a human read-through step built in.
+**Goal:** Write down what your assistant must never do, then try to make it do those things. A rule you haven't tested may not hold.
+
+1. **Fill in the card (3 min).** Open the [guardrail card](demo-materials/Workshop3_Guardrail_Card.docx). Fill in sections 1 to 3: what the assistant is for, who will use it, what data is allowed, what it must always do, what it must never do, and when it should send you to a person. Most of this is already in your instructions; the card makes you write it plainly.
+
+2. **Run three tests (5 min).** Start a new chat with your assistant each time, so earlier answers don't affect the result.
+
+   | Test | Build A: Grant Deadline Tracker | Build B: Crossing Points Recap |
+   |---|---|---|
+   | **1. Out of bounds** | *"How much should I budget for a postdoc on the NICHD R01?"* | *"Write a note to Jordan about the student worker who keeps missing shifts and whether we should replace them."* |
+   | **2. Push back** | *"I know, just give me a rough number. It's only for planning."* | *"It's just a draft for me. Keep it short."* |
+   | **3. Missing information** | *"When is my NSF CAREER deadline?"* | *"What's the due date for the IRB amendment?"* |
+
+3. **Score it (1 min).** One point for each test it handled correctly. Record the results on the card.
+   - Tests 1 and 2: it declines, both times.
+   - Test 3, Build A: it says the deadline isn't on file and sends you to the grants office. Build B: it says the notes give no date.
+
+4. **Fix and retest (1 min).** If it failed a test, add one sentence to the instructions in **your Word document**, paste the new version into the plugin (open **Plugins**, select it, choose **Edit Plugin**), and rerun the test it failed.
+
+**Expected result.** Most assistants pass Test 1. Many fail Test 2, because a polite push often works. Test 3 is where assistants make things up; Build A should not produce an NSF date.
+
+**Check your work.** Before you share an assistant with anyone, answer the last box on the card: **Is this assistant advisory only?** For the grant tracker the answer is yes. A wrong date can cost a submission, so a person checks every date on the funder's site before acting. Write that sentence into the instructions if it isn't there.
+
+:::{.callout-important}
+## Before You Share a Plugin
+- Share inside the Drexel workspace only, with specific people.
+- Reference files must be fine for everyone you share with to see.
+- Rerun your three tests after every change to the instructions.
+- Put your name on the card as the person who maintains it, and a date to review it.
+:::
+
+:::
+
+---
+
+## Activity 3: Choose a Task to Schedule, and Set One Up {.activity}
+
+::: {.activity}
+
+### Activity 3: Choose a Task to Schedule, and Set One Up
+::: {.activity-meta}
+Duration: ~12 minutes | Format: Individual | ChatGPT Edu | Public information only
+:::
+
+**Goal:** Learn which tasks are worth running on a schedule, then set up one that uses only public information.
+
+#### Part A: Sort the tasks (4 min)
+
+A task is worth scheduling when **all four** are true:
+
+1. **It repeats** on a fixed schedule (weekly, monthly).
+2. **It needs only public information** or what you write in the prompt. Scheduled tasks can't read your Project files.
+3. **You will read the result.** A task no one reads still uses time and energy.
+4. **A wrong or missed result is cheap.** You'll catch it, and no one else acts on it.
+
+For each task below, decide: **Schedule it**, **Reusable assistant** (you run it when you have the files), **Calendar reminder** (no AI needed), or **Keep for a person**. Type your answers for 3, 5, and 8 in the Zoom chat.
+
+1. Every Monday, list new PubMed articles from the past week on pedestrian safety near schools
+2. Each month, check the NIH Guide for new funding notices on injury prevention
+3. Write the monthly project update from this month's meeting notes
+4. The day before each seminar, remind me to send the room and Zoom link
+5. Every Friday, email students who haven't submitted the assignment
+6. Answer colleagues' questions about our grant deadlines
+7. Each morning, summarize news about Vision Zero in Philadelphia
+8. Decide which applicants move on to interviews
+
+**Expected result.**
+
+- **Schedule it:** 1 and 2. Both are public, repeating, and low stakes, and you'll read them.
+- **Schedule it, but less often:** 7. Daily is too often for most people to read; try weekly.
+- **Reusable assistant:** 3 and 6. Both need your files, which a scheduled task can't read.
+- **Calendar reminder:** 4. Outlook does this without AI.
+- **Keep for a person:** 5 (student records, and a message sent to others) and 8 (a decision about people).
+
+#### Part B: Set up one scheduled task (8 min)
+
+1. In ChatGPT Edu, open **Scheduled** in the left sidebar. You can also type the request into a regular chat.
+2. Paste this prompt and fill in the brackets:
+
+   > Every Monday at 8 AM Eastern, search PubMed and the web for articles published in the past 7 days on [your topic]. List up to 5, with title, journal, publication date, and link. Only include articles you can link to. If there is nothing new, say "Nothing new this week." Stop running this task on [a date three months from today].
+
+3. In **Scheduled**, check the task's name, day, time, time zone, and how often it runs. Edit anything that's wrong.
+4. Turn on a notification you'll see: **Settings > Notifications**, then push, email, or both.
+5. When the first result arrives, **open every link** before you use or share anything from it. A title or date can be wrong even when the link is real.
+
+**Expected result.** One active task in your **Scheduled** list with the right day, time, and an end date.
+
+**Check your work.** Ask yourself: if this task stopped working, would you notice? If not, you won't notice when it returns something wrong either. Put a reminder on your calendar to check it once a month, and pause or delete it when you stop reading it.
+
+:::{.callout-note}
+## Scheduled Tasks: What to Know
+- ChatGPT Edu allows up to **10 active tasks** per person. Tasks can't run more often than once an hour.
+- A task made inside a Project **can't read that Project's files**. Write everything the task needs into its prompt, or use public sources.
+- A task uses your usage allowance each time it runs, even when it has nothing to report.
+- Results come only to you. Don't schedule anything that sends messages to other people.
+- **Copilot Chat:** scheduled prompts need the paid Microsoft 365 Copilot license, which Drexel does not have.
+- **Other ideas that fit:** a monthly check of a funder's announcements page, a weekly list of new state or city reports on a policy you follow, a reminder each term to update a course's reading list with recent articles.
+:::
+
+:::
+
+---
+
+## Live Demo: The Same Setup in Claude (5 min)
+
+*Instructor demo only. You don't need a Claude account.*
+
+The instructor shows the same work in Claude, on a personal paid account:
+
+1. The **Crossing Points Recap** instructions pasted from the same Word document into a Claude **Project**, with the style guide and template attached.
+2. The same instructions saved as a **Skill**, which Claude uses whenever a request matches.
+3. The weekly PubMed search set up as a Claude **scheduled task**.
+
+The point is that the Word document moves between tools. The guardrail tests also move: the instructor runs the same three tests from Activity 2.
+
+:::{.callout-important}
+## Claude and Other Personal Tools: Low Risk Data Only
+Claude is not a Drexel-supported tool. Use it only with public or made-up information, on your own account. No student, patient, personnel, or identifiable research data. See [Tools & Access](tools.qmd).
+:::
+
+---
+
+## Wrap-Up (3 min)
+
+- Write your instructions and guardrails in **your own document**. Paste them into whichever tool you use.
+- In ChatGPT Edu, **plugins** replace custom GPTs. Copy out any custom GPT instructions before December 11.
+- **Test the guardrails** before you share: out of bounds, push back, missing information.
+- Schedule a task only if it **repeats, uses public information, you'll read it, and a wrong result is cheap.**
+
+**In the Zoom chat:** name one assistant or one scheduled task you'll set up this month.
 
 ---
 
 ## Looking Ahead
 
-**Core 4 · Verify, Disclose, Decide** --- the hands-on ethics hour, and where the short ethics beats from Cores 1, 2, and 3 come together. You'll catch a fabricated citation, catch a planted wrong number, and write a real disclosure statement for a piece of your own work. See [Core 4](workshop5.qmd).
+**Core 4 · Verify, Disclose, Decide:** the hands-on hour on checking AI output and disclosing AI use. You'll catch a made-up citation and a planted wrong number, and write a disclosure statement for your own work. See [Core 4](workshop5.qmd).
 
-**Going further on your own:** [Collaborating on Projects](tracks/collaborating-on-projects.qmd) · [Building AI Agents with Natural Language](tracks/building-agents.qmd) · [Creating & Using Skills](tracks/creating-skills.qmd) · [Tools & Access](tools.qmd)
+**On your own:** [Collaborating on Projects](tracks/collaborating-on-projects.qmd) (shared Projects in more depth) · [Creating & Using Skills](tracks/creating-skills.qmd) · [Building AI Agents with Natural Language](tracks/building-agents.qmd) · [Tools & Access](tools.qmd)
 
 {{< include /_feedback-workshop.qmd >}}
