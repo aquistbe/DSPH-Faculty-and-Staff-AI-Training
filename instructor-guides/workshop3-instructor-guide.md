@@ -56,6 +56,7 @@ If time runs short, cut Activity 3 Part B to a demo of your own scheduled task a
 - Slide 5: The custom GPT retirement is the reason to keep instructions in your own document. If a tool changes, you paste, retest, and move on.
 - Slide 6: "Custom actions" do not migrate. Few faculty use them, but anyone with a GPT that calls an outside service needs to reconnect it.
 - Slide 7: Instructions for newer models should be shorter and plainer. Current OpenAI and Anthropic guidance: say what you want and why, and drop repeated warnings, ALL-CAPS "MUST/NEVER" lines, and contradictory rules, which can make newer models rigid or overly cautious. Keep the guardrails and rely on the three tests.
+- Slide 7 ("Stuck?" line): Participants can ask the AI to draft their instructions if they give it enough context and attach the reference documents. The page has a copy-ready prompt. Stress that they read and trim the draft, attach only documents allowed in that tool, and still run the three tests.
 - Slide 8: Copilot Chat agents are free when grounded in instructions and public websites; using SharePoint or OneDrive files requires the paid license or pay-as-you-go billing, which Drexel does not have. Scheduled prompts in Copilot also require the paid license.
 - Slide 14: Skills can apply in an ordinary chat when a request matches. Drexel's sharing and connected-app settings are not confirmed; say so if asked.
 - Slide 18: "Advisory only" means a person checks the output before anyone acts on it. The grant tracker is advisory only.

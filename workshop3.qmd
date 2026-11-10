@@ -115,6 +115,14 @@ I recommend writing the instructions and guardrails in **a Word document first**
 
 **Shorter, plainer instructions now work better.** Newer AI models follow instructions closely, so OpenAI and Anthropic now recommend fewer, clearer instructions: say what you want and why, and remove repeated warnings, ALL-CAPS "MUST" and "NEVER" lines, and rules that contradict each other. A long list of rules written for older models can make a newer one rigid or overly cautious. Keep the guardrails that matter, and test with the three tests in Activity 2.
 
+**Let the AI draft the instructions.** You don't have to write them from scratch. Give the AI enough context about the job, attach the documents the assistant will work from, and ask it to write a first draft:
+
+```markdown
+I'm building an assistant that [describe the job and who will use it]. I've attached [the notes, style guide, template, or list it will work from]. Write short, plain instructions for it: what it does, the format and tone, and what it should refuse or send to a person. Ask me questions first if anything is unclear.
+```
+
+Read the draft and cut anything you didn't ask for before you paste it in, then run the three tests. Attach only documents that are allowed in that tool.
+
 **Which tool to use**
 
 | Job | ChatGPT Edu | Copilot Chat (all Drexel accounts) | Claude (personal account; live demo only) |
