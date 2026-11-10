@@ -29,7 +29,7 @@ Everything builds on **[Core 1 · Foundations & Capabilities](workshop1.qmd)** �
 | [**Technical & Agentic**](tracks/technical-agentic.qmd) | Skills, context engineering, agents, loops, local models, RAG, MCP (7) | moderate → advanced |
 | [**Governance, Ethics & Equity**](tracks/governance-ethics.qmd) | Verifying output, sustainability, data security, responsible AI, bias & equity audit, keeping your judgment, mentoring & advising (7) | novice → moderate |
 | [**Methods & Study Design**](tracks/methods-study-design.qmd) | Survey design, program evaluation, de-identification & synthetic data, geospatial (4) | moderate → advanced |
-| [**Teaching & Learning**](tracks/teaching-learning.qmd) | Course AI policy, assignment & assessment design, secure-point assessment, Blackboard to Canvas, course setup in Canvas, AI in your coursework, AI for your thesis (7) | novice → moderate |
+| [**Teaching & Learning**](tracks/teaching-learning.qmd) | Course AI policy, assignment & assessment design, secure-point assessment, AI in your coursework, AI for your thesis, Blackboard to Canvas, course setup in Canvas (7) | novice → moderate |
 
 That's **45 self-paced topics** across seven tracks. Pick the track that fits your work, start at your level, and go at your own pace.
 
