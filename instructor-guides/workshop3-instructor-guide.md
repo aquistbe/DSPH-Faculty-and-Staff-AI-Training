@@ -1,7 +1,7 @@
 # Instructor Guide: Core 3 · Set It Up Once
 
 Length: 60 minutes on Zoom
-Slides: `slides/workshop3.html` (25 slides)
+Slides: `slides/workshop3.html` (27 slides)
 Main tools: ChatGPT Edu (plugins, Projects, scheduled tasks), Copilot Chat (agents), Claude (instructor demo only)
 Handout: `demo-materials/Workshop3_Guardrail_Card.docx`
 
@@ -22,15 +22,25 @@ OpenAI stopped new custom GPTs on October 26, 2026 and plans to retire them on D
 
 | Time | Segment | Slides | Notes |
 |---|---|---|---|
-| 0:00-0:05 | Welcome back | 1-3 | Zoom chat: which Core 2 prompt did you reuse, what did you re-explain? |
-| 0:05-0:13 | What changed; four parts; which tool | 4-7 | Keep it short. The main point: write instructions in your own Word document. |
-| 0:13-0:30 | Activity 1: build a plugin | 8-12 | Demo the Plugin Creator steps on your screen first (2 min), then release. Build A is the default. |
-| 0:30-0:40 | Activity 2: guardrail card + three tests | 13-16 | Card sections 1-3 in 3 min, tests in 5. Ask for scores in the chat. |
-| 0:40-0:52 | Activity 3: sort tasks, set one up | 17-22 | Part A answers in chat for 3, 5, 8, then show slide 20. Part B: everyone creates one task with an end date. |
-| 0:52-0:57 | Claude live demo | 23 | Same Word document pasted into a Project and a Skill; rerun Test 1 and 2; show the scheduled task. |
-| 0:57-1:00 | Wrap-up, feedback QR | 24-25 | One assistant or task they'll set up this month. |
+| 0:00-0:05 | Welcome back; basic how-tos | 1-4 | Zoom chat: which Core 2 prompt did you reuse, what did you re-explain? |
+| 0:05-0:13 | What changed; four parts; which tool | 5-8 | Keep it short. The main point: write instructions in your own Word document. |
+| 0:13-0:30 | Activity 1: build a plugin | 9-14 | Build Crossing Points Recap (Build B) on your screen first, step by step, while people follow. Then release. Point newer users to Build B; Build A needs editing a .csv file. Slide 14 (other uses) is 1 minute; skip if short on time. |
+| 0:30-0:40 | Activity 2: guardrail card + three tests | 15-18 | Card is optional during the session; the three tests are the priority. Ask for scores in the chat. |
+| 0:40-0:52 | Activity 3: sort tasks, set one up | 19-24 | Part A answers in chat for 3, 5, 8, then show slide 22. Part B: everyone creates one task with an end date. |
+| 0:52-0:57 | Claude live demo | 25 | Same Word document pasted into a Project and a Skill; rerun Test 1 and 2; show the scheduled task. |
+| 0:57-1:00 | Wrap-up, feedback QR | 26-27 | One assistant or task they'll set up this month. |
 
 If time runs short, cut Activity 3 Part B to a demo of your own scheduled task and keep Part A.
+
+## Participants who are less comfortable with Office and Zoom
+
+- Ask a colleague to co-host and watch the Zoom chat for help requests.
+- Show slide 4 (basic how-tos) and walk through Side-by-side view, Downloads, the copy icon on the page, and the + button in ChatGPT. Do each one on your screen.
+- For every step in Activity 1: show it first, then say "now you," then wait for thumbs-up reactions.
+- Every prompt on the page is in a gray box with a copy icon. Send the page link in the chat at the start.
+- Build B uses only downloaded files and the attach button; steer newer users there.
+- Tell people it is fine to watch and do the steps later from the page.
+- If many people are stuck at the plugin step, switch to a Project (the tip box on the page) or do Build B together as a follow-along.
 
 ## Expected results (for checking participants' work)
 
@@ -45,9 +55,10 @@ If time runs short, cut Activity 3 Part B to a demo of your own scheduled task a
 - Slide 5: "Custom actions" do not migrate. Few faculty use them, but anyone with a GPT that calls an outside service needs to reconnect it.
 - Slide 6: The custom GPT retirement is the reason to keep instructions in your own document. If a tool changes, you paste, retest, and move on.
 - Slide 7: Copilot Chat agents are free when grounded in instructions and public websites; using SharePoint or OneDrive files requires the paid license or pay-as-you-go billing, which Drexel does not have. Scheduled prompts in Copilot also require the paid license.
-- Slide 16: "Advisory only" means a person checks the output before anyone acts on it. The grant tracker is advisory only.
-- Slide 18: A task no one reads still runs and uses the plan's allowance.
-- Slide 23: Claude is Low Risk Data only and not Drexel-supported. Show it to make the portability point, not to recommend a switch.
+- Slide 14: Skills can apply in an ordinary chat when a request matches. Drexel's sharing and connected-app settings are not confirmed; say so if asked.
+- Slide 18: "Advisory only" means a person checks the output before anyone acts on it. The grant tracker is advisory only.
+- Slide 20: A task no one reads still runs and uses the plan's allowance.
+- Slide 25: Claude is Low Risk Data only and not Drexel-supported. Show it to make the portability point, not to recommend a switch.
 
 ## Data rules to repeat
 
