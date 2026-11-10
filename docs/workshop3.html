@@ -269,7 +269,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Building reusable assistants in ChatGPT Edu, testing their limits, and scheduling routine tasks</p>
 </div>
 <div class="day-time">
-<p>One hour on Zoom | Have your browser open next to Zoom | Dates on the home page schedule</p>
+<p>Tuesday, November 10, 2026 | 1:00–2:00 PM on Zoom | Have your browser open next to Zoom</p>
 </div>
 </section>
 <div class="slides-cta">
@@ -434,6 +434,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Guardrails:</strong> what it should refuse, and when it should send you to a person.</li>
 </ol>
 <p>I recommend writing the instructions and guardrails in <strong>a Word document first</strong> and then pasting them into the tool. When a tool changes, as custom GPTs just did, you still have your instructions.</p>
+<p><strong>If you are comfortable with plain text,</strong> keep your instructions in a Markdown (<code>.md</code>) file instead. Headings and bullet points paste cleanly into every tool, and Claude Skills are saved as Markdown files.</p>
+<p><strong>Shorter, plainer instructions now work better.</strong> Newer AI models follow instructions closely, so OpenAI and Anthropic now recommend fewer, clearer instructions: say what you want and why, and remove repeated warnings, ALL-CAPS “MUST” and “NEVER” lines, and rules that contradict each other. A long list of rules written for older models can make a newer one rigid or overly cautious. Keep the guardrails that matter, and test with the three tests in Activity 2.</p>
 <p><strong>Which tool to use</strong></p>
 <table class="caption-top table">
 <colgroup>
@@ -524,7 +526,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h4 class="anchored" data-anchor-id="build-a-grant-deadline-tracker">Build A: Grant Deadline Tracker</h4>
 <ol type="1">
 <li><p><strong>Instructions</strong> (paste into Plugin Creator):</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Create a plugin called Grant Deadline Tracker. It answers questions about upcoming grant deadlines and required documents using ONLY the attached deadline list. Rules: (1) Only report deadlines that are in the attached file. Never invent dates. (2) If a deadline is within 14 days of today, label it URGENT. (3) Always give the agency, mechanism, and due date. (4) If asked about a grant that is not in the file, say "I don't have that deadline on file. Check with the grants office." (5) Do not give advice on budget amounts or personnel decisions. (6) Use a table when listing more than one deadline. (7) End every answer with: "Check each date on the funder's site before you act on it."</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Create a plugin called Grant Deadline Tracker. It answers questions about upcoming grant deadlines and required documents using only the attached deadline list. Rules: (1) Only report deadlines that are in the attached file. Never invent dates. (2) If a deadline is within 14 days of today, label it URGENT. (3) Always give the agency, mechanism, and due date. (4) If asked about a grant that is not in the file, say "I don't have that deadline on file. Check with the grants office." (5) Do not give advice on budget amounts or personnel decisions. (6) Use a table when listing more than one deadline. (7) End every answer with: "Check each date on the funder's site before you act on it."</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li><p><strong>Reference file.</strong> Copy the block below into a text editor (Notepad, TextEdit, or Word saved as plain text). Replace each bracket with a real date in <code>YYYY-MM-DD</code> form, counting forward from today: 10, 25, 40, 60, and 90 days out. Save it as <code>grant_deadlines.csv</code> and attach it in Plugin Creator.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>grant,agency,mechanism,deadline,documents_required</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>Vision Zero Evaluation,City of Philadelphia,Contract renewal,<span class="co">[</span><span class="ot">today + 10 days</span><span class="co">]</span>,Quarterly report + invoice</span>

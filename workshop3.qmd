@@ -12,7 +12,7 @@ format:
 Building reusable assistants in ChatGPT Edu, testing their limits, and scheduling routine tasks
 :::
 ::: {.day-time}
-One hour on Zoom | Have your browser open next to Zoom | Dates on the home page schedule
+Tuesday, November 10, 2026 | 1:00–2:00 PM on Zoom | Have your browser open next to Zoom
 :::
 :::
 
@@ -111,6 +111,10 @@ Before December 11, open it, copy the instructions into a Word document, and sav
 
 I recommend writing the instructions and guardrails in **a Word document first** and then pasting them into the tool. When a tool changes, as custom GPTs just did, you still have your instructions.
 
+**If you are comfortable with plain text,** keep your instructions in a Markdown (`.md`) file instead. Headings and bullet points paste cleanly into every tool, and Claude Skills are saved as Markdown files.
+
+**Shorter, plainer instructions now work better.** Newer AI models follow instructions closely, so OpenAI and Anthropic now recommend fewer, clearer instructions: say what you want and why, and remove repeated warnings, ALL-CAPS "MUST" and "NEVER" lines, and rules that contradict each other. A long list of rules written for older models can make a newer one rigid or overly cautious. Keep the guardrails that matter, and test with the three tests in Activity 2.
+
 **Which tool to use**
 
 | Job | ChatGPT Edu | Copilot Chat (all Drexel accounts) | Claude (personal account; live demo only) |
@@ -159,7 +163,7 @@ Use a **Project** instead. Create a Project, paste the instructions into the Pro
 1. **Instructions** (paste into Plugin Creator):
 
    ```markdown
-   Create a plugin called Grant Deadline Tracker. It answers questions about upcoming grant deadlines and required documents using ONLY the attached deadline list. Rules: (1) Only report deadlines that are in the attached file. Never invent dates. (2) If a deadline is within 14 days of today, label it URGENT. (3) Always give the agency, mechanism, and due date. (4) If asked about a grant that is not in the file, say "I don't have that deadline on file. Check with the grants office." (5) Do not give advice on budget amounts or personnel decisions. (6) Use a table when listing more than one deadline. (7) End every answer with: "Check each date on the funder's site before you act on it."
+   Create a plugin called Grant Deadline Tracker. It answers questions about upcoming grant deadlines and required documents using only the attached deadline list. Rules: (1) Only report deadlines that are in the attached file. Never invent dates. (2) If a deadline is within 14 days of today, label it URGENT. (3) Always give the agency, mechanism, and due date. (4) If asked about a grant that is not in the file, say "I don't have that deadline on file. Check with the grants office." (5) Do not give advice on budget amounts or personnel decisions. (6) Use a table when listing more than one deadline. (7) End every answer with: "Check each date on the funder's site before you act on it."
    ```
 
 2. **Reference file.** Copy the block below into a text editor (Notepad, TextEdit, or Word saved as plain text). Replace each bracket with a real date in `YYYY-MM-DD` form, counting forward from today: 10, 25, 40, 60, and 90 days out. Save it as `grant_deadlines.csv` and attach it in Plugin Creator.

@@ -1,5 +1,6 @@
 # Instructor Guide: Core 3 · Set It Up Once
 
+Date: Tuesday, November 10, 2026, 1:00–2:00 PM
 Length: 60 minutes on Zoom
 Slides: `slides/workshop3.html` (27 slides)
 Main tools: ChatGPT Edu (plugins, Projects, scheduled tasks), Copilot Chat (agents), Claude (instructor demo only)
@@ -52,13 +53,14 @@ If time runs short, cut Activity 3 Part B to a demo of your own scheduled task a
 
 ## Talking points
 
-- Slide 5: "Custom actions" do not migrate. Few faculty use them, but anyone with a GPT that calls an outside service needs to reconnect it.
-- Slide 6: The custom GPT retirement is the reason to keep instructions in your own document. If a tool changes, you paste, retest, and move on.
-- Slide 7: Copilot Chat agents are free when grounded in instructions and public websites; using SharePoint or OneDrive files requires the paid license or pay-as-you-go billing, which Drexel does not have. Scheduled prompts in Copilot also require the paid license.
+- Slide 5: The custom GPT retirement is the reason to keep instructions in your own document. If a tool changes, you paste, retest, and move on.
+- Slide 6: "Custom actions" do not migrate. Few faculty use them, but anyone with a GPT that calls an outside service needs to reconnect it.
+- Slide 7: Instructions for newer models should be shorter and plainer. Current OpenAI and Anthropic guidance: say what you want and why, and drop repeated warnings, ALL-CAPS "MUST/NEVER" lines, and contradictory rules, which can make newer models rigid or overly cautious. Keep the guardrails and rely on the three tests.
+- Slide 8: Copilot Chat agents are free when grounded in instructions and public websites; using SharePoint or OneDrive files requires the paid license or pay-as-you-go billing, which Drexel does not have. Scheduled prompts in Copilot also require the paid license.
 - Slide 14: Skills can apply in an ordinary chat when a request matches. Drexel's sharing and connected-app settings are not confirmed; say so if asked.
 - Slide 18: "Advisory only" means a person checks the output before anyone acts on it. The grant tracker is advisory only.
 - Slide 20: A task no one reads still runs and uses the plan's allowance.
-- Slide 25: Claude is Low Risk Data only and not Drexel-supported. Show it to make the portability point, not to recommend a switch.
+- Slide 25: Claude is Low Risk Data only and not Drexel-supported. Show it to make the portability point, not to recommend a switch. For more advanced participants: a Markdown (.md) file works as well as a Word document and pastes cleanly; Claude Skills are Markdown files.
 
 ## Data rules to repeat
 
