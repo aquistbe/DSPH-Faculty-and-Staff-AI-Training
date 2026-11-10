@@ -73,12 +73,14 @@ You design courses, write syllabi, create assignments, advise students, and comm
 | 3 | [Science Communication](tracks/science-communication.qmd) | Self-paced | Translate findings for students and the public |
 | 4 | [Verifying AI Output](tracks/verifying-output.qmd) | Self-paced | Model verification habits for your students |
 | 5 | [AI for Curriculum Development](workshop6.qmd) | Elective | Assignment design and AI policies for your courses |
-| 6 | [Writing Your Course AI Policy](tracks/course-ai-policy.qmd) | Self-paced | A clear, enforceable policy for your syllabus |
+| 6 | [Writing Your Course AI Policy](tracks/course-ai-policy.qmd) | Self-paced | A clear policy for your syllabus, with checks behind the rules |
 | 7 | [Assignment & Assessment Design](tracks/assignment-assessment-design.qmd) | Self-paced | Assignments that work with or despite AI |
-| 8 | [Setting Up Your Course with AI](tracks/course-setup-canvas.qmd) | Self-paced | Groups from a survey and bulk Canvas updates, with student records de-identified first |
-| 9 | [Responsible AI](tracks/responsible-ai.qmd) | Self-paced | Disclosure norms — for you and your students |
-| 10 | [AI Bias & Health Equity Audit](tracks/bias-equity-audit.qmd) | Self-paced | Teach students to test AI across groups |
-| 11 | [Multilingual Materials](tracks/multilingual-materials.qmd) | Self-paced | Translate and adapt materials for diverse learners |
+| 8 | [Assessment That Holds Up to AI](tracks/secure-points-assessment.qmd) | Self-paced | Verify understanding at a few secure points; skip the AI detectors |
+| 9 | [Moving a Course from Blackboard to Canvas](tracks/blackboard-to-canvas.qmd) | Self-paced | Blackboard goes read-only Dec 31, 2026: export, import, and clean up with AI |
+| 10 | [Setting Up Your Course with AI](tracks/course-setup-canvas.qmd) | Self-paced | Groups from a survey and bulk Canvas updates, with student records de-identified first |
+| 11 | [Responsible AI](tracks/responsible-ai.qmd) | Self-paced | Disclosure norms — for you and your students |
+| 12 | [AI Bias & Health Equity Audit](tracks/bias-equity-audit.qmd) | Self-paced | Teach students to test AI across groups |
+| 13 | [Multilingual Materials](tracks/multilingual-materials.qmd) | Self-paced | Translate and adapt materials for diverse learners |
 
 ::: {.callout-tip}
 ## Teaching faculty priority

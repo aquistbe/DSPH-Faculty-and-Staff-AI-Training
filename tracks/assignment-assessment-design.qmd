@@ -14,11 +14,11 @@ title: "Assignment & Assessment Design in the AI Era"
 
 - Redesign assignments so AI assistance doesn't bypass the learning objective
 - Create assessments that test judgment, application, and reflection — not just recall
-- Set clear, enforceable expectations for AI use in student work
+- Set clear expectations for AI use in student work, and know what has to back them up
 
 ## Overview
 
-AI can write a passable essay, summarize a paper, draft code, and answer many exam questions. That doesn't mean assignments are broken — it means the ones that test recall or generic writing need updating. Assignments that require students to apply concepts to specific local data, reflect on their own reasoning, or make and defend judgment calls are harder to shortcut with AI and more aligned with what public-health professionals actually do.
+AI can write a passable essay, summarize a paper, draft code, and answer many exam questions. That doesn't mean assignments are broken — it means the ones that test recall or generic writing need updating. Assignments that require students to apply concepts to specific local data, reflect on their own reasoning, or make and defend judgment calls are more aligned with what public-health professionals actually do. They are also harder to shortcut with AI today, but that advantage is shrinking: tools that browse the web can now pull local data and real sources. Design these assignments for the learning, and check understanding at a few secure points instead (see [Assessment That Holds Up to AI](secure-points-assessment.qmd)).
 
 The goal isn't to ban AI or to make assignments "AI-proof" — it's to design work that develops the competencies you're actually assessing, whether students use AI tools or not.
 
@@ -54,9 +54,9 @@ This assignment is easy to complete with AI in about 30 seconds. The learning ob
 
 **Expected result.** Three redesigned options. Strong redesigns typically involve: using real local data (e.g., "Using this Philadelphia Health Department report, calculate and interpret..."), requiring students to explain their reasoning process, or asking them to evaluate a flawed example. Weak redesigns just make the prompt longer.
 
-**Check your work.** Try completing your redesigned assignment with AI. If the AI can still produce a submission that would earn a good grade without the student learning anything, redesign further.
+**Check your work.** Try completing your redesigned assignment with AI, including a tool with web search turned on. If the AI can still produce a submission that would earn a good grade without the student learning anything, redesign further, or decide this is an open-lane assignment and check the same skill at a secure point.
 
-**Common pitfalls.** Adding "cite 5 sources" doesn't help — AI fabricates citations. Adding "be creative" doesn't help — AI is fluent. Focus on tasks that require the student to *use* their understanding on specific, local, or personal material.
+**Common pitfalls.** Adding "cite 5 sources" doesn't help — it doesn't test the objective, and tools that search the web can find real sources. Adding "be creative" doesn't help — AI is fluent. Focus on tasks that require the student to *use* their understanding on specific, local, or personal material.
 
 **Stretch (optional).** Redesign one more assignment from a different course using the same principles.
 
@@ -70,7 +70,7 @@ This assignment is easy to complete with AI in about 30 seconds. The learning ob
 
 **Time** ~15 min · **Tools** ChatGPT Edu
 
-**Goal.** Write clear, specific AI-use expectations for a single assignment — not a vague syllabus statement.
+**Goal.** Write clear, specific AI-use expectations for a single assignment — not a vague syllabus statement — and name what backs them up.
 
 **Setup.** Use your redesigned assignment from Activity 1 (or a real assignment from your course). Decide: for this specific assignment, what AI use is acceptable, what isn't, and what must be disclosed?
 
@@ -86,7 +86,7 @@ This assignment is easy to complete with AI in about 30 seconds. The learning ob
 
 3. Close those gaps and finalize.
 
-**Expected result.** A specific, enforceable AI-use section for one assignment. It should be clear enough that two students reading it would reach the same conclusion about what's allowed. (To see what this reads like from the student's seat — including how a "cite any AI use" line lands when it doesn't say how — see [AI in Your Coursework](ai-in-your-coursework.qmd), the student-facing mirror of this page.)
+**Expected result.** A specific AI-use section for one assignment. It should be clear enough that two students reading it would reach the same conclusion about what's allowed. Clear rules prevent confusion, but a rule is not a control: students can ignore it. If the section prohibits AI, name the check that backs it, such as an oral question about this assignment ([Corbin, Dawson & Liu, 2025](https://doi.org/10.1080/02602938.2025.2503964)). (To see what this reads like from the student's seat — including how a "cite any AI use" line lands when it doesn't say how — see [AI in Your Coursework](ai-in-your-coursework.qmd), the student-facing mirror of this page.)
 
 **Check your work.** Show it to a colleague or TA. If they interpret the rules differently than you intended, the language needs tightening.
 
@@ -105,7 +105,7 @@ Answer these, then check — your score suggests whether to dive in or skim the 
 
 <div class="readiness-quiz">
 <script type="application/json" class="quiz-data">
-{"questions": [{"q": "The best way to make assignments 'AI-resistant' is to…", "options": ["Require application to specific, local, or personal material", "Make prompts longer", "Ban AI entirely", "Add more citations"], "answer": 0, "explain": "AI struggles with tasks that require specific, local application and personal judgment."}, {"q": "A good AI-use policy for an assignment should be…", "options": ["Specific enough that students know exactly what's allowed", "Vague to allow flexibility", "A blanket ban", "Optional"], "answer": 0, "explain": "Clarity prevents confusion and enables enforcement."}, {"q": "Adding 'cite 5 sources' to an assignment…", "options": ["Doesn't help — AI fabricates citations", "Makes it AI-proof", "Ensures accuracy", "Tests research skills"], "answer": 0, "explain": "Citation requirements don't prevent AI use; they add a new failure mode."}]}
+{"questions": [{"q": "Which approach holds up best as AI tools improve?", "options": ["Check understanding at a few secure points, such as an oral question about the student's own work", "Require specific local data in every assignment", "Ban AI in every assignment", "Require more citations"], "answer": 0, "explain": "Local data and citation requirements rely on AI being bad at the task, and tools that browse the web are closing that gap. A ban is a rule students can ignore. A check of the student's own understanding doesn't depend on either."}, {"q": "A good AI-use policy for an assignment should be…", "options": ["Specific enough that students know exactly what's allowed", "Vague to allow flexibility", "A blanket ban", "Optional"], "answer": 0, "explain": "Clarity prevents confusion. Enforcement needs a check behind the rule, not just the rule."}, {"q": "Adding 'cite 5 sources' to an assignment…", "options": ["Doesn't help — it doesn't test the objective, and AI can supply citations", "Makes it AI-proof", "Ensures accuracy", "Tests research skills"], "answer": 0, "explain": "Citation requirements don't prevent AI use. Older chatbots invent citations, and tools that search the web can find real ones."}]}
 </script>
 </div>
 
@@ -120,15 +120,16 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Reading 
 
 - [ChatGPT Edu (Drexel AI Tools)](https://drexel.edu/provost/ai/tools) — the approved tool, with data rules.
 - [Drexel Academic Integrity Policy](https://drexel.edu/studentlife/community-standards/code-of-conduct/) — the institutional framework for academic honesty.
+- [Assessment That Holds Up to AI](secure-points-assessment.qmd) — how to check understanding at a few secure points, and which designs will hold up as AI improves.
 - [AI in Your Coursework](ai-in-your-coursework.qmd) — the student-facing mirror of this page: how students read assignment AI-use rules and write a disclosure worth reading.
 
 ---
 
 ## Navigate
 
-**Next in this track:** [AI in Your Coursework](ai-in-your-coursework.qmd)
+**Next in this track:** [Assessment That Holds Up to AI](secure-points-assessment.qmd)
 
-**Related topics:** [Writing Your Course AI Policy](course-ai-policy.qmd) · [AI in Your Coursework](ai-in-your-coursework.qmd) · [Verifying AI Output](verifying-output.qmd)
+**Related topics:** [Assessment That Holds Up to AI](secure-points-assessment.qmd) · [Writing Your Course AI Policy](course-ai-policy.qmd) · [AI in Your Coursework](ai-in-your-coursework.qmd) · [Verifying AI Output](verifying-output.qmd)
 
 ::: {.callout-warning}
 ## Data rules

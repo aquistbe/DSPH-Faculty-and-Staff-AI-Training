@@ -64,6 +64,11 @@ Objectives → assessment → activities → materials. Ask AI to help at each s
 
 **Model the integrity you ask of students.** Set a clear AI policy for your course, and be transparent with students about where and how you used AI to build it. The standard you hold students to is more credible when your own use is open and intentional.
 
+:::{.callout-tip}
+## Checking what students learned
+Don't try to make every assignment AI-proof. Most of those designs depend on AI being bad at the task, and they erode as tools improve. Check understanding at a few secure points instead, such as a short oral about the student's own work, and let AI be used elsewhere. A "no AI" label holds only if a check like that sits behind it. The self-paced topic [Assessment That Holds Up to AI](tracks/secure-points-assessment.qmd) has five patterns, a checklist, and [the evidence behind them](tracks/secure-points-evidence.qmd).
+:::
+
 **Verify everything you hand to students.** AI invents facts, citations, statistics, and can misstate disciplinary content with confidence. Every figure, citation, and claim in a teaching material needs to be checked against the source---students will not catch errors you miss. The rule from Core 2 applies: *if you can't open it, you can't cite it.*
 
 **Design for accessibility and equity.** AI can help here---alt text for images, plain-language versions, adjusting reading level, drafting captions. It can also bake in bias or produce materials that don't meet accessibility standards. Check that examples and images are inclusive and that what you publish is accessible to every student.
@@ -176,6 +181,8 @@ Confirm the approved data level for each tool on Drexel's [AI Tools page](https:
 
 - [Core 1: Foundations & Capabilities](workshop1.qmd) --- prompting with PTCF and the Drexel data rules
 - [Core 3: Reusable Assistants](workshop3.qmd) --- custom GPTs and shared Projects, reusable here as a "Lesson Planner"
+- [Assessment That Holds Up to AI](tracks/secure-points-assessment.qmd) --- check understanding at a few secure points; patterns, a checklist, and the evidence
+- [Moving a Course from Blackboard to Canvas](tracks/blackboard-to-canvas.qmd) --- export without student data, import into a sandbox, and clean up with AI and the Canvas API
 - [Setting Up Your Course with AI](tracks/course-setup-canvas.qmd) --- de-identified group formation and safe Canvas API scripts
 - [Tools & Access](tools.qmd) --- data classification for ChatGPT Edu, Copilot, and consumer tools
 

@@ -291,6 +291,7 @@ That is the confidence move. You are not "being careful about AI" in the abstrac
 - [Verifying AI Output](tracks/verifying-output.qmd) --- the self-paced version, with an automated numeric-verification exercise
 - [Responsible AI](tracks/responsible-ai.qmd) --- disclosure norms and governance frameworks (WHO, ASPPH)
 - [Keeping Your Judgment](tracks/judgment-and-offloading.qmd) --- cognitive offloading and calibrated reliance
+- [Assessment That Holds Up to AI](tracks/secure-points-assessment.qmd) --- for instructors: checking what students understand, not just what AI produced
 - [Grant & Proposal Development](tracks/grant-proposal-development.qmd) · [Manuscript Preparation & Peer Review](tracks/manuscript-peer-review.qmd) --- the funder and journal rules, worked through
 - [Tools & Access](tools.qmd) --- Drexel's data classifications and which tool is approved for what
 

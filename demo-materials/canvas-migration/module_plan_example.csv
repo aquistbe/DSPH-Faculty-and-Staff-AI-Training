@@ -1,0 +1,11 @@
+module,type,ref,title,indent
+Start Here,Page,syllabus,Syllabus,
+Start Here,Page,course-schedule,Course Schedule,
+Start Here,Discussion,123456,,
+Week 1: Introduction,SubHeader,,Read and watch,
+Week 1: Introduction,Page,week-1-overview,,1
+Week 1: Introduction,File,234567,,1
+Week 1: Introduction,ExternalUrl,https://www.cdc.gov/places/,CDC PLACES data portal,1
+Week 1: Introduction,SubHeader,,Do,
+Week 1: Introduction,Assignment,345678,,1
+Week 1: Introduction,Quiz,456789,,1

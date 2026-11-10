@@ -44,7 +44,7 @@ You're in good company: funders (NIH, NSF) and journals (ICMJE, COPE) have recen
 
    > Draft a course AI policy for this epidemiology course. The policy should: (a) state the overall stance (AI is a tool, not a replacement for learning), (b) specify allowed and prohibited uses for each assignment type, (c) require disclosure of AI use, (d) explain consequences for violations, and (e) include 2-3 specific examples so students know where the line is. Keep it under 400 words — students won't read a 2-page policy.
 
-2. Review for enforceability: Could you actually detect a violation? If you can't tell whether a student used AI for their problem set calculations, your prohibition may be unenforceable — consider redesigning the assignment instead.
+2. Check what backs each prohibition. A rule alone is something students can ignore, and AI detectors are too unreliable to count on. A prohibition holds only if something other than the rule shows whether the student can do the work, such as an oral question about that assignment. If nothing backs it, add a check or redesign the assignment so AI use doesn't bypass the learning. (See [Assessment That Holds Up to AI](secure-points-assessment.qmd).)
 
 3. Add a "why" statement — one sentence explaining how the policy connects to the learning objectives:
 
@@ -88,7 +88,7 @@ You're in good company: funders (NIH, NSF) and journals (ICMJE, COPE) have recen
 
 **Expected result.** A tightened policy plus an alternative version that shows the other end of the spectrum. Most courses land somewhere in between. (For the same exercise from the other side of the desk — students reading three different policies in one term — see [AI in Your Coursework](ai-in-your-coursework.qmd), the student-facing mirror of this page.)
 
-**Check your work.** The final policy should pass three tests: (1) A student can read it and know what to do. (2) You can detect most violations or have designed assignments where violations don't bypass learning. (3) It connects to your learning objectives, not just institutional rules.
+**Check your work.** The final policy should pass three tests: (1) A student can read it and know what to do. (2) Every prohibition has a check behind it that doesn't depend on students following the rule (not an AI detector), or the assignment is designed so AI use doesn't bypass the learning. (3) It connects to your learning objectives, not just institutional rules.
 
 **Common pitfalls.** Banning AI use in a course where students will use AI in their jobs after graduation deserves a justification. "Because it's academic dishonesty" is weaker than "because you need to be able to do this calculation yourself in a job interview."
 
@@ -130,7 +130,7 @@ Available in the shared OneDrive folder **Staff Faculty AI Workshop → Reading 
 
 **Next in this track:** [Assignment & Assessment Design in the AI Era](assignment-assessment-design.qmd)
 
-**Related topics:** [Assignment & Assessment Design in the AI Era](assignment-assessment-design.qmd) · [AI in Your Coursework](ai-in-your-coursework.qmd) · [Responsible AI](responsible-ai.qmd)
+**Related topics:** [Assignment & Assessment Design in the AI Era](assignment-assessment-design.qmd) · [Assessment That Holds Up to AI](secure-points-assessment.qmd) · [AI in Your Coursework](ai-in-your-coursework.qmd) · [Responsible AI](responsible-ai.qmd)
 
 ::: {.callout-warning}
 ## Data rules

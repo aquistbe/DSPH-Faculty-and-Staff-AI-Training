@@ -217,7 +217,7 @@ Answer these, then check — your score suggests whether to dive in or skim the 
 
 **Back to track overview:** [Teaching & Learning](teaching-learning.qmd)
 
-**Related topics:** [Assignment & Assessment Design](assignment-assessment-design.qmd) · [Data Security & Classification Deep-Dive](data-security-classification.qmd) · [AI for Curriculum Development](../workshop6.qmd)
+**Related topics:** [Moving a Course from Blackboard to Canvas](blackboard-to-canvas.qmd) · [Assignment & Assessment Design](assignment-assessment-design.qmd) · [Data Security & Classification Deep-Dive](data-security-classification.qmd) · [AI for Curriculum Development](../workshop6.qmd)
 
 ::: {.callout-warning}
 ## Data rules

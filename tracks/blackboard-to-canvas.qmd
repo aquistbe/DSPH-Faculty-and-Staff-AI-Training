@@ -1,0 +1,313 @@
+---
+title: "Moving a Course from Blackboard to Canvas with AI"
+---
+
+::: {.topic-badges}
+[Moderate]{.level-badge .level-moderate} · **Teaching & Learning** track · ~60 min hands-on (Activities 1–3), +30 min for the API (Activity 4)
+:::
+
+[← Back to the Teaching & Learning track](teaching-learning.qmd){.track-back}
+
+*Let Canvas move the content. Use AI for the cleanup, which is where the hours go.*
+
+## What you'll be able to do
+
+- Export a Blackboard course **without student data** and import it into a Canvas sandbox
+- Use AI to sort what the import left behind (broken links, duplicates, missing dates) and plan a cleaner module structure
+- Rebuild messy imported pages as clean, accessible Canvas pages, and check every change
+- (Optional) Use the Canvas API to take an inventory, build modules, and update pages in bulk
+
+## Overview
+
+Drexel is [moving to Canvas](https://drexel.edu/provost/news-events/announcements/2026/January/drexel-moving-to-canvas). **Blackboard Learn Original courses become read-only on December 31, 2026.** After that, [student access ends and courses become view-only for faculty](https://drexel.edu/provost/news-events/announcements/2026/August/fall-2026-courses-in-canvas). If you have a Blackboard course you want to reuse, export it before then.
+
+Most of the move is not an AI job. **Canvas has a built-in importer for Blackboard export files**, and it brings over most pages, files, assignments, tests, and discussions. What it can't do is make the result tidy. Imported courses tend to arrive with:
+
+- a flat structure, with Blackboard folders turned into pages inside modules;
+- duplicate items (Canvas adds "-2" or "-3" to repeated names);
+- links that still point to Blackboard;
+- missing availability dates, quiz settings, and discussion grading settings, which [don't import](https://cdn.prod.web.uta.edu/-/media/project/website/provost/canvas/pdfs/premigration_checklist_manualmove.pdf) and must be re-entered;
+- Blackboard blogs, journals, and wikis that don't import at all and need to be rebuilt, for example as assignments.
+
+That cleanup is where AI earns its place. It can sort a long list of problems, propose a module structure from your old syllabus, rewrite cluttered pages into clean Canvas HTML, and write scripts that make repetitive changes for you. You still decide, check, and publish.
+
+:::{.callout-important}
+## Before you start
+- **Export, don't archive.** In Blackboard, an **Export Package** contains course content only. An **Archive** adds student submissions, grades, and discussion posts. Use the export for everything on this page.
+- **Check the export for student information anyway.** Course files can include things you uploaded yourself: an old roster, a graded spreadsheet, a sample of student work. Remove those before any file goes near an AI tool.
+- **Work in a sandbox.** Import into a practice or sandbox course first, not the course students will see. If you don't have one, ask the Instructional Technology Group (ITG) at [itg@drexel.edu](mailto:itg@drexel.edu).
+- **Download the export right away.** Blackboard deletes [user-created export packages after 30 days](https://help.anthology.com/Blackboard/Instructor/en/course-and-content-management/reuse-content/export-and-archive-courses.html).
+:::
+
+### Which tool for which step
+
+| Step | Student data? | Tools |
+|---|---|---|
+| Export from Blackboard, import into Canvas | No (export package) | Blackboard and Canvas. No AI needed |
+| Sorting import issues, planning modules | No | ChatGPT Edu; Claude if the content is Low Risk only |
+| Rewriting pages and syllabus text | Usually no. Check first | ChatGPT Edu; Claude if Low Risk only |
+| Writing API scripts | No (describe the task; don't upload data) | ChatGPT Edu, Copilot Chat, or Claude |
+| Running scripts with your Canvas token | Your token is a password | Your computer only. Never paste the token into a chat |
+
+Publisher materials (test banks, slide decks) may have license terms that limit how you can copy or share them. Check before pasting them into any tool.
+
+## Practice activities
+
+All four activities use one of your own Blackboard courses and a Canvas sandbox. Activities 1–3 need no coding. Activity 4 uses the Canvas API.
+
+```{=html}
+<details class="activity"><summary>Activity 1 · Novice — Export from Blackboard and import into your sandbox</summary>
+```
+
+**Time** ~20 min (plus waiting) · **Tools** Blackboard, Canvas · **No AI in this step**
+
+**Goal.** Get your course content into a Canvas sandbox, and see what the import reports.
+
+**Steps in Blackboard (Original course view).** These steps follow [Cornell's](https://teaching.cornell.edu/sites/default/files/2019-01/FINAL%20Quick-Start_%20Moving%20from%20Blackboard%20to%20Canvas%20%281%29.pdf) and [Troy's](https://it.troy.edu/canvas/assets/documents/Moving-Materials-from-Blackboard-to-Canvas.pdf) guides. Drexel's menus may look slightly different.
+
+1. Open the course. In the Control Panel, go to **Packages and Utilities → Export/Archive Course**.
+2. Click **Export Package** (not *Archive Course*).
+3. Under file options, choose to **copy links and include copies of the files**, including files outside the course default directory, so your attachments come along.
+4. Under course materials, click **Select All**, then **Submit**.
+5. When the package appears (this can take several minutes), download it. **Do not unzip it.** Canvas needs the original .zip file.
+
+**Steps in Canvas.** These follow [UT Arlington's guide](https://cdn.prod.web.uta.edu/-/media/project/website/provost/canvas/pdfs/import_blackboard_course_to_canvas.pdf).
+
+1. Open your **sandbox** course. Go to **Settings → Import Course Content** (on the course home page this may appear as **Import Existing Content**).
+2. For **Content Type**, choose the Blackboard option (**Blackboard 6/7/8/9 export .zip file**; newer versions add "/Ultra").
+3. Choose your .zip file. Select **All content**.
+4. Under **Adjust events and due dates**, choose **Remove dates**. You'll set this term's dates on purpose later, instead of inheriting old ones.
+5. Click **Import** and wait for the job to finish.
+6. Read the result. **Completed** in green means no issues. In yellow, it means Canvas logged issues: click the issues link and copy the list into a document. Don't include anything with student names.
+7. Back in **Settings**, click **Validate Links in Content → Start Link Validation**. Copy the list of broken links when it finishes.
+
+**Expected result.** A sandbox course with your content in **Modules**, plus two lists: import issues and broken links.
+
+**Check your work.** Open **Modules**, **Pages**, **Files**, **Assignments**, and **Quizzes**. Note anything missing, especially blogs, journals, wikis, and question pools, which may need to be moved separately.
+
+**Common pitfalls.** Importing into the live course instead of the sandbox (an import *adds to* the course; it does not replace it). Unzipping the export first. Picking **Archive** in Blackboard.
+
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 2 · Novice — Sort the cleanup list and plan your modules with AI</summary>
+```
+
+**Time** ~15 min · **Tools** ChatGPT Edu (or Claude, if the content is Low Risk only)
+
+**Goal.** Turn a messy import into a prioritized to-do list and a cleaner module structure.
+
+**Setup.** Gather three things, as text: (1) the import issues and broken-link lists from Activity 1; (2) your module list (copy it from the **Modules** page, or use `inventory.md` from Activity 4); (3) your syllabus schedule. Check that none of it names a student.
+
+**Steps.**
+
+1. Paste the three items into ChatGPT Edu with this prompt:
+
+   ```markdown
+   I imported a Blackboard course into a Canvas sandbox. Below are (1) the import issues Canvas reported, (2) the broken links, (3) the current module list, and (4) my syllabus schedule.
+
+   Do two things:
+   A. Sort every issue and broken link into: Fix before students see the course / Fix later / Probably delete. One line each, with the reason.
+   B. Propose a module structure for Canvas: a "Start Here" module, then one module per week from the schedule. For each module, list which existing items belong in it, using their exact current titles. List any item you can't place, and any week with no content.
+
+   Don't invent content, dates, or items that aren't in my lists. Ask me if something is unclear.
+   ```
+
+2. Check part B against your course. Is every item placed? Did it invent anything?
+3. Ask for revisions in plain language, for example: "Move the policy brief to Week 9 and split Week 5 into two modules."
+
+**Expected result.** A to-do list sorted by priority, and a week-by-week module plan that uses only items that exist.
+
+**Check your work.** Pick three items from the plan and find each one in Canvas. AI tools sometimes "tidy" titles or invent a reading that sounds right.
+
+**Stretch (optional).** Ask it to output the plan in the CSV format used by the module-building script in Activity 4 (`module,type,ref,title,indent`).
+
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 3 · Moderate — Rebuild a messy page</summary>
+```
+
+**Time** ~15 min · **Tools** ChatGPT Edu (or Claude, if Low Risk only), Canvas editor
+
+**Goal.** Turn a cluttered imported page into a clean, accessible Canvas page without losing content.
+
+**Steps.**
+
+1. In the sandbox, open a page that came over badly (Blackboard folder pages and the syllabus are common ones). Click **Edit**, then the **HTML editor** button (`</>`) at the bottom right of the editor, and copy the HTML.
+2. Check it for student names, grades, or feedback. Then paste it into ChatGPT Edu with:
+
+   ```markdown
+   This is a course page imported from Blackboard into Canvas. Rewrite the HTML as a clean Canvas page:
+   - keep every piece of content and every link; do not add or remove information;
+   - use headings (h2, h3) in order, short paragraphs, and real lists;
+   - remove empty tags, inline font styling, and leftover Blackboard formatting;
+   - give every image an alt attribute; if you can't tell what an image shows, write alt="TODO: describe" instead of guessing;
+   - list any link that points to Blackboard (it will be broken in Canvas), and any date, so I can update them myself;
+   - do not change dates or guess new ones.
+   After the HTML, list every change you made.
+   ```
+
+3. Compare the result with the original. Word's **Compare** feature, or any text-comparison tool, makes this quick.
+4. Paste the new HTML into the Canvas HTML editor and save. Fix the Blackboard links by pointing them at the Canvas copies of those files or pages.
+5. Run the **accessibility checker** in the Canvas editor and fix what it flags.
+
+**Expected result.** A page with the same content, clean structure, alt text, working links, and a list of what changed.
+
+**Check your work.** View it in **Student View**. Click every link.
+
+**Common pitfalls.** Accepting "improved" wording you didn't ask for. Letting the AI fill in dates. Losing an embedded video or file link: if the original had one, the new version must too.
+
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 4 · Advanced — Do it in bulk with the Canvas API</summary>
+```
+
+**Time** ~30 min · **Tools** Python 3 (on a Mac, typing `python3` in Terminal offers to install it if needed), a Canvas access token, your sandbox, ChatGPT Edu or Claude (to plan and to explain errors)
+
+**Goal.** Take an inventory of the whole imported course, build modules from a plan, and update many pages at once, with dry runs and backups.
+
+**Setup.**
+
+1. **Create a short-lived Canvas token** and store it outside your scripts. [Setting Up Your Course with AI, Activity 3](course-setup-canvas.qmd) walks through this. Set an expiration date a few days out.
+2. **Set two variables** in Terminal (Mac) before running anything:
+
+   ```bash
+   export CANVAS_BASE_URL="https://canvas.drexel.edu"
+   export CANVAS_TOKEN="paste-your-token-here"
+   ```
+
+   Use the address you see in your browser when you're in Canvas, without anything after `.edu`. On Windows PowerShell, use `$env:CANVAS_BASE_URL="..."` and `$env:CANVAS_TOKEN="..."`. Never paste the token into an AI chat.
+
+3. **Download the three scripts** into one folder. They use only standard Python, so there is nothing to install. Each has instructions at the top.
+   - [canvas_inventory.py](../demo-materials/canvas-migration/canvas_inventory.py) — **read-only**. Lists modules, pages, assignments, quizzes, discussions, files, and import issues, and flags Blackboard links, empty pages, duplicates, items outside any module, and assignments with no due date.
+   - [canvas_build_modules.py](../demo-materials/canvas-migration/canvas_build_modules.py) — builds modules from a plan file. **Dry run unless you add `--apply`.** Creates new, unpublished modules; never deletes anything.
+   - [canvas_pages.py](../demo-materials/canvas-migration/canvas_pages.py) — downloads every page to edit, then uploads only the pages you changed. **Dry run unless you add `--apply`.** Saves the current version to `backup/` before replacing it.
+   - [module_plan_example.csv](../demo-materials/canvas-migration/module_plan_example.csv) — the plan format.
+
+**Steps.**
+
+1. **Inventory.** Find the course ID (the number in the course URL) and run:
+
+   ```bash
+   python3 canvas_inventory.py 123456
+   ```
+
+   Open `inventory.md`. The **Flags** section is your cleanup list. Check file names for anything that identifies a student before you share it with an AI tool.
+
+2. **Plan.** Paste `inventory.md` and your syllabus schedule into ChatGPT Edu:
+
+   ```markdown
+   Here is an inventory of a Canvas course imported from Blackboard, and my syllabus schedule. Write a module plan as CSV with the columns module,type,ref,title,indent.
+   - type is one of Page, Assignment, Quiz, Discussion, File, SubHeader, ExternalUrl.
+   - ref is the exact "ref" value shown in the inventory (the page_url for pages, the numeric id for everything else). For ExternalUrl, ref is the web address. For SubHeader, leave ref blank and put the text in title.
+   - Start with a "Start Here" module, then one module per week from the schedule.
+   - Use only items that are in the inventory. After the CSV, list items you left out and why.
+   ```
+
+   Save the CSV as `module_plan.csv`. Read it: does every row point at a real item in the right week?
+
+3. **Dry run, then build.**
+
+   ```bash
+   python3 canvas_build_modules.py 123456 module_plan.csv           # shows what it would do
+   python3 canvas_build_modules.py 123456 module_plan.csv --apply   # creates the modules
+   ```
+
+   The script checks every row against the course first and stops if anything doesn't match. New modules are unpublished. Review them in Canvas, delete the old imported modules you no longer need, then publish.
+
+4. **Pages in bulk.**
+
+   ```bash
+   python3 canvas_pages.py export 123456           # saves pages/*.html
+   ```
+
+   Rewrite the pages that need it, one at a time, with the Activity 3 prompt, and save each result over its file. Then:
+
+   ```bash
+   python3 canvas_pages.py update 123456           # lists changed pages
+   python3 canvas_pages.py update 123456 --apply   # uploads them, with backups
+   ```
+
+5. **Check.** Run the inventory again. The flag list should be shorter. Open changed pages in **Student View**, and run **Validate Links in Content** again.
+6. **Revoke the token** in **Account → Settings** when you're done.
+
+**Prefer to have AI write the scripts?** That works too. Describe the task, not your data, and check that the script uses only the endpoints you expect: `GET /api/v1/courses/:course_id/modules`, `.../pages`, `.../assignments`, `.../content_migrations/:id/migration_issues` to read; `POST .../modules`, `POST .../modules/:module_id/items`, `PUT .../pages/:url_or_id` to write. Ask for a `--dry-run` option every time. The provided scripts are a working reference to compare against.
+
+**Expected result.** A sandbox course organized week by week, cleaned-up pages with backups of the originals, and a shorter flag list.
+
+**Check your work.** Compare the module plan with what Canvas shows. Open three changed pages and their backups side by side.
+
+**Common pitfalls.** Skipping the dry run. Running against the live course before the sandbox. Leaving the token active. Pasting an error message that contains your token into a chat: copy the error text only.
+
+```{=html}
+</details>
+```
+
+## What still needs your hands
+
+AI and scripts help with structure and text. These items need you, in Canvas:
+
+- **Dates.** Availability windows and due dates don't carry over usefully. Set this term's dates deliberately.
+- **Quiz settings.** Time limits, attempts, and availability don't import. Check every question that has an image or a formula. Blackboard **hot spot** questions aren't supported.
+- **Rubrics.** They may import with their layout reversed. Rebuilding them in Canvas is often faster.
+- **Blogs, journals, and wikis.** Rebuild these as assignments or discussions.
+- **Integrations.** Drexel says Course Reserves, Kaltura, Turnitin, and other [Blackboard integrations are available in Canvas](https://drexel.edu/provost/news-events/announcements/2025/November/canvas-update), but you need to connect them in the new course. For Course Reserves, you must [link each Canvas course shell](https://library.drexel.edu/services/course-reserves/faculty-instructions) to the reserves tool before you can create a reading list.
+- **A second look.** The Teaching and Learning Center offers a [course review](https://drexel.edu/provost/news-events/announcements/2026/April/canvas-transition-update-and-supports) based on the OSCQR standards before a course goes live. You can also import the **Drexel Canvas Course Template** from Canvas Commons as a starting structure.
+
+## Check your readiness
+
+Answer these, then check — your score suggests whether to dive in or skim the activities first.
+
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions": [{"q": "In Blackboard, which package should you create before using any of it with an AI tool?", "options": ["An Export Package, which contains course content only", "An Archive, which includes everything", "Either one; they contain the same things", "A Grade Center download"], "answer": 0, "explain": "An archive adds student submissions, grades, and discussion posts. Use the export package, and still check your uploaded files for anything that identifies a student."}, {"q": "Your imported quiz shows no availability dates or time limit. What happened?", "options": ["Those settings don't import from Blackboard; you set them in Canvas", "The import failed and should be redone", "Canvas doesn't support time limits", "AI can restore them from the export"], "answer": 0, "explain": "Availability dates and quiz settings are among the things that don't import. Set them on purpose for the new term."}, {"q": "Before running a script that changes your course, you should…", "options": ["Run it as a dry run in a sandbox course first", "Run it on the live course so students see changes quickly", "Paste your token into the AI chat so it can check the script", "Turn off backups to save time"], "answer": 0, "explain": "Dry run first, sandbox first, backups on, and the token never leaves your computer."}]}
+</script>
+</div>
+
+## Useful resources
+
+- [**Quick Guide (Word, 2 pages)**](../demo-materials/Blackboard_to_Canvas_Quick_Guide.docx) — the five steps, the data rules, and both prompts on one handout.
+- [Countdown to Canvas](https://drexel.edu/countdowntocanvas) — Drexel's FAQs, training, and timeline. Questions go to the Instructional Technology Group at [itg@drexel.edu](mailto:itg@drexel.edu).
+- [Setting Up Your Course with AI](course-setup-canvas.qmd) — creating a token, forming groups, and updating pages and due dates for a new term.
+- [Assessment That Holds Up to AI](secure-points-assessment.qmd) — a good moment to rethink assessments, while you're rebuilding them anyway.
+- [Canvas API documentation](https://developerdocs.instructure.com/services/canvas) — the full reference, for checking what a script does.
+
+## Sources
+
+Checked on 10 November 2026.
+
+- Drexel University, Office of the Provost. (2025, November 13). Update on Canvas, Drexel's new learning management system. [Link](https://drexel.edu/provost/news-events/announcements/2025/November/canvas-update)
+- Drexel University, Office of the Provost. (2026, January 12). Drexel is moving to Canvas—here's what you need to know. [Link](https://drexel.edu/provost/news-events/announcements/2026/January/drexel-moving-to-canvas)
+- Drexel University, Office of the Provost. (2026, April 17). Canvas transition update and supports. [Link](https://drexel.edu/provost/news-events/announcements/2026/April/canvas-transition-update-and-supports)
+- Drexel University, Office of the Provost. (2026, August). Fall 2026 courses now available in Canvas. [Link](https://drexel.edu/provost/news-events/announcements/2026/August/fall-2026-courses-in-canvas)
+- Drexel University Libraries. Course Reserves: Instructions for faculty. [Link](https://library.drexel.edu/services/course-reserves/faculty-instructions)
+- Anthology. Export and archive courses (Blackboard Learn help). [Link](https://help.anthology.com/Blackboard/Instructor/en/course-and-content-management/reuse-content/export-and-archive-courses.html)
+- Cornell University, Center for Teaching Innovation. (2019). Quick start: Moving from Blackboard to Canvas. [PDF](https://teaching.cornell.edu/sites/default/files/2019-01/FINAL%20Quick-Start_%20Moving%20from%20Blackboard%20to%20Canvas%20%281%29.pdf)
+- Illinois Institute of Technology. Copy course contents from Blackboard to Canvas. [Link](https://www.iit.edu/cli/canvas/copy-course-contents-blackboard-canvas)
+- Troy University, Educational Technology. Moving materials from Blackboard to Canvas. [PDF](https://it.troy.edu/canvas/assets/documents/Moving-Materials-from-Blackboard-to-Canvas.pdf)
+- University of Texas at Arlington. Import Blackboard course to Canvas. [PDF](https://cdn.prod.web.uta.edu/-/media/project/website/provost/canvas/pdfs/import_blackboard_course_to_canvas.pdf)
+- University of Texas at Arlington. Pre-migration checklist (manual move). [PDF](https://cdn.prod.web.uta.edu/-/media/project/website/provost/canvas/pdfs/premigration_checklist_manualmove.pdf)
+- Instructure. Canvas LMS REST API: Content Migrations, Modules, Pages. [Link](https://developerdocs.instructure.com/services/canvas)
+
+---
+
+## Navigate
+
+**Next in this track:** [Setting Up Your Course with AI](course-setup-canvas.qmd)
+
+**Related topics:** [Setting Up Your Course with AI](course-setup-canvas.qmd) · [Assessment That Holds Up to AI](secure-points-assessment.qmd) · [Writing Your Course AI Policy](course-ai-policy.qmd)
+
+::: {.callout-warning}
+## Data rules
+Use the Blackboard **export package**, not the archive. Before anything goes into an AI tool, check pages and file names for student names, grades, or feedback. ChatGPT Edu is governed by Drexel's Terms of Use; Claude and other consumer tools are for Low Risk data only. Your Canvas token stays on your computer. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+:::
+
+{{< include /_feedback-track.qmd >}}

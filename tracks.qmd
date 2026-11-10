@@ -29,11 +29,11 @@ Everything builds on **[Core 1 · Foundations & Capabilities](workshop1.qmd)** �
 | [**Technical & Agentic**](tracks/technical-agentic.qmd) | Skills, context engineering, agents, loops, local models, RAG, MCP (7) | moderate → advanced |
 | [**Governance, Ethics & Equity**](tracks/governance-ethics.qmd) | Verifying output, sustainability, data security, responsible AI, bias & equity audit, keeping your judgment, mentoring & advising (7) | novice → moderate |
 | [**Methods & Study Design**](tracks/methods-study-design.qmd) | Survey design, program evaluation, de-identification & synthetic data, geospatial (4) | moderate → advanced |
-| [**Teaching & Learning**](tracks/teaching-learning.qmd) | Course AI policy, assignment & assessment design, course setup in Canvas, AI in your coursework, AI for your thesis (5) | novice → moderate |
+| [**Teaching & Learning**](tracks/teaching-learning.qmd) | Course AI policy, assignment & assessment design, secure-point assessment, Blackboard to Canvas, course setup in Canvas, AI in your coursework, AI for your thesis (7) | novice → moderate |
 
-That's **43 self-paced topics** across seven tracks. Pick the track that fits your work, start at your level, and go at your own pace.
+That's **45 self-paced topics** across seven tracks. Pick the track that fits your work, start at your level, and go at your own pace.
 
-The **Teaching & Learning** track has two sides: the first two topics are written for instructors, the last two for graduate students. Reading the other side is worth the twenty minutes — policies get clearer when you've seen them from the seat they're read in.
+The **Teaching & Learning** track has two sides: topics 1–3, 6, and 7 are written for instructors, topics 4–5 for graduate students. Reading the other side is worth the twenty minutes — policies get clearer when you've seen them from the seat they're read in.
 
 Not sure where to start? Try the [**Learning Paths**](paths.qmd) page — it maps topics to your role (admin, research, teaching, practice, mentoring, or graduate student).
 

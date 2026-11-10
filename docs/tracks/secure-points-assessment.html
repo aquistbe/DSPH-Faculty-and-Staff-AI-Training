@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Assessment That Holds Up to AI: Verify at a Few Secure Points – AI Workshops for DSPH</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-e5a00fd6c0fce5251246b1fbc19e77b5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<meta name="robots" content="noindex, nofollow">
+<script data-goatcounter="https://aquistbe.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">AI Workshops for DSPH</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-core-sessions" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Core Sessions</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-core-sessions">    
+        <li>
+    <a class="dropdown-item" href="../workshop1.html">
+ <span class="dropdown-text">Core 1 · Foundations &amp; Capabilities</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../workshop2.html">
+ <span class="dropdown-text">Core 2 · Workflow Enhancement</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../workshop3.html">
+ <span class="dropdown-text">Core 3 · Set It Up Once</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../workshop5.html">
+ <span class="dropdown-text">Core 4 · Verify, Disclose, Decide</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-electives" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Electives</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-electives">    
+        <li>
+    <a class="dropdown-item" href="../workshop4.html">
+ <span class="dropdown-text">Documents &amp; Visuals (Adobe)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../workshop6.html">
+ <span class="dropdown-text">AI for Curriculum Development</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../how-i-use-ai.html">
+ <span class="dropdown-text">How I Use AI: Building This Course</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../tracks.html"> 
+<span class="menu-text">Self-Paced Tracks</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../paths.html"> 
+<span class="menu-text">Learning Paths</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../tools.html"> 
+<span class="menu-text">Tools &amp; Access</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../resources.html"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="mailto:daq26@drexel.edu"> <i class="bi bi-envelope" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-youll-be-able-to-do" id="toc-what-youll-be-able-to-do" class="nav-link active" data-scroll-target="#what-youll-be-able-to-do">What you’ll be able to do</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#rules-are-not-controls" id="toc-rules-are-not-controls" class="nav-link" data-scroll-target="#rules-are-not-controls">Rules are not controls</a></li>
+  <li><a href="#five-patterns-for-secure-points" id="toc-five-patterns-for-secure-points" class="nav-link" data-scroll-target="#five-patterns-for-secure-points">Five patterns for secure points</a>
+  <ul class="collapse">
+  <li><a href="#oral-checkpoint-on-the-students-own-work" id="toc-oral-checkpoint-on-the-students-own-work" class="nav-link" data-scroll-target="#oral-checkpoint-on-the-students-own-work">1. Oral checkpoint on the student’s own work</a></li>
+  <li><a href="#a-value-you-can-check-against-the-source" id="toc-a-value-you-can-check-against-the-source" class="nav-link" data-scroll-target="#a-value-you-can-check-against-the-source">2. A value you can check against the source</a></li>
+  <li><a href="#planted-error-critique-graded-against-a-key" id="toc-planted-error-critique-graded-against-a-key" class="nav-link" data-scroll-target="#planted-error-critique-graded-against-a-key">3. Planted-error critique graded against a key</a></li>
+  <li><a href="#build-log-graded-on-the-quality-of-checking" id="toc-build-log-graded-on-the-quality-of-checking" class="nav-link" data-scroll-target="#build-log-graded-on-the-quality-of-checking">4. Build log graded on the quality of checking</a></li>
+  <li><a href="#audit-of-dated-claims" id="toc-audit-of-dated-claims" class="nav-link" data-scroll-target="#audit-of-dated-claims">5. Audit of dated claims</a></li>
+  </ul></li>
+  <li><a href="#how-long-each-pattern-will-hold-up" id="toc-how-long-each-pattern-will-hold-up" class="nav-link" data-scroll-target="#how-long-each-pattern-will-hold-up">How long each pattern will hold up</a></li>
+  <li><a href="#why-not-use-ai-detectors" id="toc-why-not-use-ai-detectors" class="nav-link" data-scroll-target="#why-not-use-ai-detectors">Why not use AI detectors</a></li>
+  <li><a href="#worked-example-intro-to-urban-health" id="toc-worked-example-intro-to-urban-health" class="nav-link" data-scroll-target="#worked-example-intro-to-urban-health">Worked example: Intro to Urban Health</a></li>
+  <li><a href="#practice-activities" id="toc-practice-activities" class="nav-link" data-scroll-target="#practice-activities">Practice activities</a></li>
+  <li><a href="#check-your-readiness" id="toc-check-your-readiness" class="nav-link" data-scroll-target="#check-your-readiness">Check your readiness</a></li>
+  <li><a href="#recommended-readings" id="toc-recommended-readings" class="nav-link" data-scroll-target="#recommended-readings">Recommended readings</a></li>
+  <li><a href="#useful-resources" id="toc-useful-resources" class="nav-link" data-scroll-target="#useful-resources">Useful resources</a></li>
+  <li><a href="#sources" id="toc-sources" class="nav-link" data-scroll-target="#sources">Sources</a></li>
+  <li><a href="#navigate" id="toc-navigate" class="nav-link" data-scroll-target="#navigate">Navigate</a></li>
+  <li><a href="#give-feedback-on-this-page" id="toc-give-feedback-on-this-page" class="nav-link" data-scroll-target="#give-feedback-on-this-page">Give Feedback on This Page</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Assessment That Holds Up to AI: Verify at a Few Secure Points</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="topic-badges">
+<p><span class="level-badge level-moderate">Moderate</span> · <strong>Teaching &amp; Learning</strong> track · ~40 min hands-on + readings and quiz</p>
+</div>
+<p><a href="../tracks/teaching-learning.html" class="track-back">← Back to the Teaching &amp; Learning track</a></p>
+<p><em>Stop trying to make every assignment AI-proof. Check what students understand at a few points you can trust, and let AI be used everywhere else.</em></p>
+<section id="what-youll-be-able-to-do" class="level2">
+<h2 class="anchored" data-anchor-id="what-youll-be-able-to-do">What you’ll be able to do</h2>
+<ul>
+<li>Decide which of your assessments need to be <strong>secure</strong> and which can allow AI</li>
+<li>Choose a <strong>structural check</strong> for each secure point, and know what it does and does not protect against</li>
+<li>Tell which designs will <strong>age quickly</strong> as AI tools improve, and which will hold up</li>
+</ul>
+</section>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>Most “AI-resistant” assignment advice tries to make every task hard for AI: use local data, ask for personal reflection, require specific citations. That approach is losing ground. Newer tools can browse the web, open data portals, and work inside a learning management system on their own. A task that was hard for a chatbot in 2023 may be easy for one today.</p>
+<p>A more durable approach comes from Australia’s higher education regulator, TEQSA. Its 2023 guidance calls for “<a href="https://www.teqsa.gov.au/sites/default/files/2023-09/assessment-reform-age-artificial-intelligence-discussion-paper.pdf">security at meaningful points across a program</a>”: a few places where you confirm what students can do on their own, instead of trying to secure everything. The University of Sydney’s <a href="https://educational-innovation.sydney.edu.au/teaching@sydney/embracing-the-future-of-assessment-at-the-university-of-sydney/">two-lane model</a> puts the same idea into practice:</p>
+<ul>
+<li><strong>Lane 1 (secure).</strong> A small number of supervised or verified tasks, such as exams, viva voces, or interactive orals, that confirm students have learned what the course requires. Sydney says to use these sparingly.</li>
+<li><strong>Lane 2 (open).</strong> Most assessment. AI is allowed, and the task is designed to help students learn, including how to use AI well.</li>
+</ul>
+<p>TEQSA’s <a href="https://www.teqsa.gov.au/sites/default/files/2025-09/enacting-assessment-reform-in-a-time-of-artificial-intelligence.pdf">2025 follow-up</a> adds one practical point for anyone teaching a single course: include at least one secure task, and make it a <strong>hurdle</strong>. In its words, it should not be “possible to pass the unit/subject without having satisfactorily completed the secure task(s).” A secure task that students can skip and still pass protects very little.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>The one question to ask about any assignment
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>What must this assignment show that the student can do without AI?</strong> If the answer is “nothing,” put it in the open lane, allow AI, and teach students to use it well. If the answer is something specific, you need a check that works even when a student ignores your AI rule.</p>
+</div>
+</div>
+</section>
+<section id="rules-are-not-controls" class="level2">
+<h2 class="anchored" data-anchor-id="rules-are-not-controls">Rules are not controls</h2>
+<p>Many courses now label each assignment with an AI-use level, such as a traffic light or the <a href="https://doi.org/10.53761/q3azde36">AI Assessment Scale</a>. Labels are worth having. They tell students what you expect, and the UK’s quality agency found that inconsistent AI rules across modules and staff <a href="https://www.qaa.ac.uk/news-events/news/new-research-reveals-the-variability-of-policies--practices-and-student-experience-in-the-age-of-ai">leave students and staff confused</a>.</p>
+<p>But a label is not a control. <a href="https://doi.org/10.1080/02602938.2025.2503964">Corbin, Dawson &amp; Liu (2025)</a> separate two kinds of change:</p>
+<ul>
+<li><strong>Discursive changes</strong> are instructions that students “remain free to ignore”: an AI policy, a tier, a traffic light.</li>
+<li><strong>Structural changes</strong> change how the task works, so the check doesn’t depend on students following the rule.</li>
+</ul>
+<p>They argue that most current frameworks rely on discursive changes, which creates an “enforcement illusion.” A red “no AI” label on an essay is a request, not a safeguard.</p>
+<p>The evidence that requests alone don’t hold is starting to come in. A 2026 preprint (not yet peer reviewed) analyzed about 7,500 applications to a US public policy master’s program. In 2025, most applicants submitted at least one essay that was mainly AI-written, <a href="https://doi.org/10.48550/arxiv.2609.22549">despite an explicit ban</a>.</p>
+<p><strong>The practical rule:</strong> a “no AI” label on an assignment holds only if a structural check sits behind it. For each assignment where you prohibit AI, name the secure point that would show whether the student can do that work.</p>
+</section>
+<section id="five-patterns-for-secure-points" class="level2">
+<h2 class="anchored" data-anchor-id="five-patterns-for-secure-points">Five patterns for secure points</h2>
+<p>These patterns come from a redesign of an asynchronous online course (see the <a href="#worked-example-intro-to-urban-health">worked example</a> below). Each one can be adapted to other subjects. None works alone, and they differ a lot in how well they will hold up.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Pattern</th>
+<th>What it is</th>
+<th>What it protects against</th>
+<th>What it doesn’t</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>1. Oral checkpoint on the student’s own work</strong></td>
+<td>A short recorded or live explanation that includes a question about something the student submitted</td>
+<td>Submitting work the student doesn’t understand</td>
+<td>Reading a prepared script, unless someone asks follow-up questions</td>
+</tr>
+<tr class="even">
+<td><strong>2. A value you can check</strong></td>
+<td>Students retrieve a specific figure from a named public source and report it with its uncertainty</td>
+<td>Made-up numbers, which you can check against the source in a minute</td>
+<td>Tools that browse the web and pull the real value</td>
+</tr>
+<tr class="odd">
+<td><strong>3. Planted-error critique, graded against a key</strong></td>
+<td>Students find errors you deliberately placed in a worked example or report</td>
+<td>Padding with plausible but generic critiques, because false findings cost points</td>
+<td>Errors that are visible from the text alone. AI finds those easily</td>
+</tr>
+<tr class="even">
+<td><strong>4. Build log graded on the quality of checking</strong></td>
+<td>Students record what AI produced and how they checked it. You grade the checking</td>
+<td>Uncritical acceptance of AI output (it teaches the skill)</td>
+<td>Generated logs. A log proves nothing about who did the work</td>
+</tr>
+<tr class="odd">
+<td><strong>5. Audit of dated claims</strong></td>
+<td>Students check claims from an older lecture or reading against current sources</td>
+<td>Weak source evaluation (it teaches lateral reading)</td>
+<td>A transcript pasted into a model that can search the web</td>
+</tr>
+</tbody>
+</table>
+<section id="oral-checkpoint-on-the-students-own-work" class="level3">
+<h3 class="anchored" data-anchor-id="oral-checkpoint-on-the-students-own-work">1. Oral checkpoint on the student’s own work</h3>
+<p>Ask each student to explain their own work: a number they reported, a decision they made, a source they chose. Generic AI answers to a question about <em>this student’s</em> submission are easy to spot. Oral assessment has the <a href="../tracks/secure-points-evidence.html#oral-checkpoints">strongest evidence</a> of anything here, but nearly all of it comes from <strong>live</strong> orals where the examiner can ask follow-up questions. A recorded oral with no follow-up is weaker, because a student can read a prepared script.</p>
+<p><strong>Make it stronger:</strong> use a question about the student’s own submission every time; publish a bank of general questions so students prepare; grade whether students are explaining or reciting; offer a live option.</p>
+</section>
+<section id="a-value-you-can-check-against-the-source" class="level3">
+<h3 class="anchored" data-anchor-id="a-value-you-can-check-against-the-source">2. A value you can check against the source</h3>
+<p>Ask students to pull a specific estimate from a named public source (a census table, a surveillance report, a data portal) and report it with its margin of error. You can check it in seconds. Chatbots without web access make up specific details, and they <a href="https://doi.org/10.2196/80371">do it more often on narrow topics</a>. But tools that browse the web can now retrieve the real value. Treat this as a <strong>skills task</strong>, and pair it with an oral question: <em>“Explain your value and what its uncertainty interval means.”</em></p>
+</section>
+<section id="planted-error-critique-graded-against-a-key" class="level3">
+<h3 class="anchored" data-anchor-id="planted-error-critique-graded-against-a-key">3. Planted-error critique graded against a key</h3>
+<p>Give students a short analysis or report with errors you planted, and grade their findings against a fixed key. An open count (“find at least three problems”) rewards volume, and AI produces plausible critiques on demand. A key makes grading objective and makes false findings cost points. Current AI models catch errors that are visible in the text, such as a wrong formula or an inconsistent number. Errors that can only be found by <strong>checking the cited source</strong> last longer. But agentic tools can open sources too, so expect this to erode.</p>
+</section>
+<section id="build-log-graded-on-the-quality-of-checking" class="level3">
+<h3 class="anchored" data-anchor-id="build-log-graded-on-the-quality-of-checking">4. Build log graded on the quality of checking</h3>
+<p>Ask students to log what AI gave them and how they checked it, then grade how good the checking was. Don’t treat the log as proof of process. In one study, <a href="https://doi.org/10.1016/j.caeai.2023.100140">ChatGPT-written reflections scored higher</a> than students’ own on all six rubric criteria. This pattern was never a security measure. It’s worth doing because it teaches students to judge AI output. Its value as a check comes from the oral: ask students to explain one check from their own log.</p>
+</section>
+<section id="audit-of-dated-claims" class="level3">
+<h3 class="anchored" data-anchor-id="audit-of-dated-claims">5. Audit of dated claims</h3>
+<p>Give students a lecture or reading that is several years old, and ask them to check two of its claims against current sources. It teaches lateral reading (leaving a source to see what others say about it), which <a href="https://doi.org/10.1177/016146811912101102">professional fact checkers rely on</a>. It is weak as security: a student can paste the transcript into a model that can search the web. Require the specific current source and value that updates the claim, so you can check it quickly. Use it early in the term as practice for patterns 2 and 3.</p>
+</section>
+</section>
+<section id="how-long-each-pattern-will-hold-up" class="level2">
+<h2 class="anchored" data-anchor-id="how-long-each-pattern-will-hold-up">How long each pattern will hold up</h2>
+<p>Some of these patterns rely on AI being bad at the task. Those are eroding fast. Agentic browsers such as OpenAI’s Atlas and Perplexity’s Comet operate a browser on their own. A 2025 article from <a href="https://stacker.com/stories/technology/cheating-beyond-chatgpt-agentic-browsers-present-risks-universities">Pangram</a> (a company that sells AI detectors) describes students using them on platforms like Canvas, including a student who showed Comet completing a quiz. The same tools can open a data portal and pull a real value, or open a cited source and check a claim.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Pattern or choice</th>
+<th>Relies on AI being bad at the task?</th>
+<th>Where it stands now</th>
+<th>Why it’s still worth doing</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Oral checkpoint on own work</td>
+<td>No.&nbsp;It relies on the student talking about their own work</td>
+<td>Partly durable. Reading an AI-written script is possible, especially without follow-up questions</td>
+<td>The question about the student’s own work; grading explanation vs.&nbsp;recitation</td>
+</tr>
+<tr class="even">
+<td>A value you can check</td>
+<td>Yes</td>
+<td>Largely eroded as a check. Tools that browse can retrieve real values</td>
+<td>Teaches a real skill; pair it with an oral question</td>
+</tr>
+<tr class="odd">
+<td>Planted-error critique</td>
+<td>Partly. Errors that need a source check last longer</td>
+<td>Eroding. Agentic tools can open sources</td>
+<td>Key-based grading; the learning value is unchanged</td>
+</tr>
+<tr class="even">
+<td>Build log</td>
+<td>Never was a check</td>
+<td>Unchanged</td>
+<td>Teaches students to judge AI output</td>
+</tr>
+<tr class="odd">
+<td>Audit of dated claims</td>
+<td>Yes</td>
+<td>Eroded. A transcript plus a web-enabled model can do it</td>
+<td>Practice for the later tasks</td>
+</tr>
+<tr class="even">
+<td>No AI detectors</td>
+<td>No</td>
+<td>The case gets stronger as AI improves</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td>Few secure points; lighter workload; structure over rules</td>
+<td>No</td>
+<td>Durable</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Read plainly:</strong> in an asynchronous course, the oral checkpoints carry most of the verification. Keep the other patterns for what they teach, but don’t count them as security.</p>
+</section>
+<section id="why-not-use-ai-detectors" class="level2">
+<h2 class="anchored" data-anchor-id="why-not-use-ai-detectors">Why not use AI detectors</h2>
+<p>Detectors look like a structural check, but they are a weak one:</p>
+<ul>
+<li><strong>Unreliable.</strong> A test of 14 tools, including Turnitin, found them “<a href="https://doi.org/10.1007/s40979-023-00146-z">neither accurate nor reliable</a>.”</li>
+<li><strong>Easy to evade.</strong> Simple edits to AI-written text <a href="https://doi.org/10.1186/s41239-024-00487-w">cut detector accuracy by 17.4%</a>. The authors conclude detectors can’t currently be recommended for deciding integrity cases.</li>
+<li><strong>A flag isn’t evidence a student can answer.</strong> A score says nothing about what the student understands. An oral question does.</li>
+</ul>
+<p>You may have heard that detectors are biased against non-native English writers. <a href="https://doi.org/10.1016/j.patter.2023.100779">A 2023 study</a> found that seven detectors flagged 61.3% of TOEFL essays as AI-written on average. A <a href="https://doi.org/10.48550/arxiv.2609.22549">2026 preprint</a> found no such difference with the commercial detector it used. That question is open. The case against detectors doesn’t depend on it: unreliability and easy evasion are enough.</p>
+</section>
+<section id="worked-example-intro-to-urban-health" class="level2">
+<h2 class="anchored" data-anchor-id="worked-example-intro-to-urban-health">Worked example: Intro to Urban Health</h2>
+<p><em>Intro to Urban Health</em> (EOH 550 / PBHL 350) is a fully asynchronous online course at Dornsife. Its redesign uses all five patterns:</p>
+<ul>
+<li><strong>Three recorded oral checkpoints</strong> spread across the term. Each draws a question from a bank students can see in advance and asks one fixed question about the student’s own submitted work. The first checkpoint asks students to explain a value they retrieved and its uncertainty interval.</li>
+<li><strong>A data retrieval task.</strong> Students pull a neighborhood-level public health estimate from a public data portal and report it with its margin of error.</li>
+<li><strong>A planted-error critique</strong>, graded against a key, with some errors that can only be found by checking the source.</li>
+<li><strong>A build log</strong> graded on how well students checked AI output.</li>
+<li><strong>An early audit</strong> of claims in a lecture recorded several years ago.</li>
+<li><strong>An AI-use level on every assignment.</strong> AI is optional for some tasks and prohibited for the synthesis assignments. The oral checkpoints are the only check behind that prohibition, so the fixed oral questions need to cover the prohibited assignments.</li>
+</ul>
+<p><strong>What the design can and can’t claim:</strong></p>
+<ul>
+<li>The real verification sits in the oral checkpoints. The other tasks stay for what they teach.</li>
+<li>Because the orals are recorded with no follow-up questions, a student could read a prepared script. The fixed question about the student’s own work is what makes that hard.</li>
+<li>A live oral with follow-up questions, the strongest format, was set aside to keep the course fully asynchronous. It stays available as an accommodation.</li>
+<li>Some UK voices now argue for <a href="https://www.timeshighereducation.com/news/ban-all-remote-unsupervised-tests-immediately-urges-report">ending unsupervised remote assessment</a> altogether. A fully asynchronous course can’t meet that bar, and this design doesn’t claim to. Its defense is narrower: students have to explain their own work, on a timer, at several points.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Checklist: run this on one of your own assignments
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><strong>What must it show</strong> the student can do without AI? If nothing, put it in the open lane and allow AI.</li>
+<li><strong>What is the structural check?</strong> A conversation about the student’s own work, a value or claim you can check against the source, a key. “The syllabus says no AI” is not a check.</li>
+<li><strong>Does the check rely on AI being bad at the task?</strong> If yes, expect it to erode. Back it with an oral question.</li>
+<li><strong>Is every prohibited deliverable tied to a secure point?</strong> If a “no AI” assignment has nothing behind it, either add a question about it to a secure task or move it to the open lane.</li>
+<li><strong>Can a student pass the course without passing the secure points?</strong> If so, consider making them a hurdle.</li>
+<li><strong>Are you relying on a detector?</strong> Take it out of the plan.</li>
+<li><strong>Can you grade the check quickly?</strong> A check you can’t keep up with won’t get done.</li>
+<li><strong>Is the workload reasonable?</strong> Students under heavy workload and time pressure <a href="https://doi.org/10.1186/s41239-024-00444-7">use ChatGPT more</a>. Fewer, better tasks help.</li>
+<li><strong>Is the AI rule written on the assignment</strong>, and consistent with your other assignments?</li>
+<li><strong>What’s the accommodation?</strong> Decide in advance what a student who can’t do the standard format will do instead.</li>
+</ol>
+</div>
+</div>
+</section>
+<section id="practice-activities" class="level2">
+<h2 class="anchored" data-anchor-id="practice-activities">Practice activities</h2>
+<details class="activity"><summary>Activity 1 · Moderate — Sort your course into two lanes</summary>
+<p><strong>Time</strong> ~20 min · <strong>Tools</strong> ChatGPT Edu (optional)</p>
+<p><strong>Goal.</strong> Decide which assessments in one of your courses need to be secure, and give each secure point a structural check.</p>
+<p><strong>Setup.</strong> List every graded task in one course, with a one-line description of each. Use the task descriptions only. Do not paste in student work, grades, or rosters.</p>
+<p><strong>Steps.</strong></p>
+<ol type="1">
+<li><p>For each task, answer the checklist question: <em>What must this show the student can do without AI?</em> Mark each task <strong>open</strong> or <strong>secure</strong>.</p></li>
+<li><p>Keep secure points few. TEQSA’s course-level pathway asks for at least one secure task per course. If most of your tasks are marked secure, look again.</p></li>
+<li><p>For each secure task, name its structural check, using the five patterns above. If you want a second opinion, paste your list into ChatGPT Edu:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Here are the graded tasks in my course, marked open (AI allowed) or secure (must show the student can do it without AI). For each secure task, tell me (1) what structural check would confirm the student's own understanding, (2) whether that check relies on AI being bad at the task, and (3) which open tasks have no secure point checking the same skill. Be brief, and tell me where my plan relies on a rule instead of a check.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p>Check that every task where you prohibit AI is tied to a secure point.</p></li>
+</ol>
+<p><strong>Expected result.</strong> A short table of your tasks: open or secure, the check for each secure one, and any “no AI” task with nothing behind it.</p>
+<p><strong>Check your work.</strong> Run the checklist on your weakest secure point. If it fails questions 2 or 3, strengthen it or back it with an oral question.</p>
+<p><strong>Common pitfalls.</strong> Marking everything secure, which you can’t sustain. Treating a longer prompt or a “cite five sources” rule as a check. Counting a build log or reflection as proof of who did the work.</p>
+</details>
+<details class="activity"><summary>Activity 2 · Moderate — Build a planted error that needs a source check</summary>
+<p><strong>Time</strong> ~20 min · <strong>Tools</strong> ChatGPT Edu</p>
+<p><strong>Goal.</strong> See for yourself which errors AI catches and which it misses, so you can design a critique task that holds up longer.</p>
+<p><strong>Setup.</strong> Write a short paragraph (about 150 words) in your subject that cites one real public source, such as a government report or data table. Use only public information.</p>
+<p><strong>Steps.</strong></p>
+<ol type="1">
+<li><p>Plant two errors:</p>
+<ul>
+<li>an <strong>internal</strong> error, visible from the text alone (an arithmetic mistake, or two numbers that contradict each other);</li>
+<li>a <strong>source</strong> error, visible only if someone opens the cited source (a figure that differs from what the source reports, or a claim the source doesn’t make).</li>
+</ul></li>
+<li><p>In a new chat with web search <strong>off</strong> (if your tool lets you), paste the paragraph and ask:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>This paragraph contains errors. Find every error, explain why it is wrong, and say how confident you are.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p>Repeat in a new chat with web search <strong>on</strong>.</p></li>
+<li><p>Compare: which errors did it find each time? Did it invent errors that aren’t there?</p></li>
+</ol>
+<p><strong>Expected result.</strong> It usually finds the internal error. Whether it finds the source error depends on whether it can open the source. With web search on, it may find it. That is the durability point: errors that need a source check last longer, but not forever.</p>
+<p><strong>Check your work.</strong> Write the key for your paragraph: each planted error, and why it’s wrong. If AI found both errors without web access, your source error was visible from the text. Make it subtler.</p>
+<p><strong>Stretch (optional).</strong> Add one question to an oral checkpoint that asks a student to explain how they found one of the errors.</p>
+</details>
+</section>
+<section id="check-your-readiness" class="level2">
+<h2 class="anchored" data-anchor-id="check-your-readiness">Check your readiness</h2>
+<p>Answer these, then check — your score suggests whether to dive in or skim the readings first.</p>
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions": [{"q": "An essay assignment carries a red 'No AI' label. What makes the ban hold?", "options": ["A structural check behind it, such as an oral question about that essay", "Stating the ban clearly in the syllabus", "Running submissions through an AI detector", "Asking students to sign an honesty statement"], "answer": 0, "explain": "Labels and statements are rules students can ignore. A ban holds only when a check that doesn't depend on the student following the rule sits behind it (Corbin, Dawson & Liu, 2025)."}, {"q": "Which of these will hold up best as AI tools improve?", "options": ["An oral question about the student's own submitted work", "Requiring a specific value from a local data source", "Asking students to find errors in a worked example", "Requiring five peer-reviewed citations"], "answer": 0, "explain": "The other three rely on AI being bad at the task, and tools that browse the web are closing that gap. An oral question about the student's own work does not rely on AI being bad at anything."}, {"q": "Why not rely on AI detectors?", "options": ["They are unreliable and simple edits defeat them", "They are too expensive", "They only work on short texts", "They are reliable but slow"], "answer": 0, "explain": "Tests found detectors 'neither accurate nor reliable,' and simple edits cut their accuracy. Whether they are biased against non-native writers is disputed, but the case doesn't depend on that."}]}
+</script>
+</div>
+</section>
+<section id="recommended-readings" class="level2">
+<h2 class="anchored" data-anchor-id="recommended-readings">Recommended readings</h2>
+<ul>
+<li><a href="https://doi.org/10.1080/02602938.2025.2503964"><strong>Talk is cheap: why structural assessment changes are needed for a time of GenAI</strong></a> — Corbin, Dawson &amp; Liu (2025). The case for structure over rules, in about ten pages.</li>
+<li><a href="https://www.teqsa.gov.au/sites/default/files/2025-09/enacting-assessment-reform-in-a-time-of-artificial-intelligence.pdf"><strong>Enacting assessment reform in a time of artificial intelligence</strong></a> — TEQSA (2025). Three practical pathways, including one secure task per course.</li>
+<li><a href="https://educational-innovation.sydney.edu.au/teaching@sydney/embracing-the-future-of-assessment-at-the-university-of-sydney/"><strong>Embracing the future of assessment at the University of Sydney</strong></a> — Liu &amp; Bridgeman (2023). The two-lane model in plain language.</li>
+</ul>
+</section>
+<section id="useful-resources" class="level2">
+<h2 class="anchored" data-anchor-id="useful-resources">Useful resources</h2>
+<ul>
+<li><a href="../tracks/secure-points-evidence.html"><strong>The Evidence Behind Secure-Point Assessment</strong></a> — the companion page: what the research shows for each pattern, what 2026 sources add, and the limits of the evidence.</li>
+<li><a href="../tracks/course-ai-policy.html">Writing Your Course AI Policy</a> — the rules side. This page covers the checks that make rules hold.</li>
+<li><a href="../tracks/assignment-assessment-design.html">Assignment &amp; Assessment Design in the AI Era</a> — redesigning open-lane assignments so they still build competence.</li>
+<li><a href="https://drexel.edu/studentlife/community-standards/code-of-conduct/">Drexel Academic Integrity Policy</a> — the institutional framework for academic honesty.</li>
+</ul>
+</section>
+<section id="sources" class="level2">
+<h2 class="anchored" data-anchor-id="sources">Sources</h2>
+<p>Checked against the publisher, Crossref, or Scite on 10 November 2026.</p>
+<ul>
+<li>Abbas, M., Jam, F. A., &amp; Khan, T. I. (2024). Is it harmful or helpful? Examining the causes and consequences of generative AI usage among university students. <em>International Journal of Educational Technology in Higher Education, 21</em>, 10. <a href="https://doi.org/10.1186/s41239-024-00444-7" class="uri">https://doi.org/10.1186/s41239-024-00444-7</a></li>
+<li>Corbin, T., Dawson, P., &amp; Liu, D. (2025). Talk is cheap: Why structural assessment changes are needed for a time of GenAI. <em>Assessment &amp; Evaluation in Higher Education, 50</em>(7), 1087–1097. <a href="https://doi.org/10.1080/02602938.2025.2503964" class="uri">https://doi.org/10.1080/02602938.2025.2503964</a></li>
+<li>Isley, C., Gaebler, J. D., &amp; Goel, S. (2026). AI-written admissions essays are widespread but penalized. <em>arXiv</em> (preprint, not peer reviewed). <a href="https://doi.org/10.48550/arxiv.2609.22549" class="uri">https://doi.org/10.48550/arxiv.2609.22549</a></li>
+<li>Li, Y., Sha, L., Yan, L., et al.&nbsp;(2023). Can large language models write reflectively. <em>Computers and Education: Artificial Intelligence, 4</em>, 100140. <a href="https://doi.org/10.1016/j.caeai.2023.100140" class="uri">https://doi.org/10.1016/j.caeai.2023.100140</a></li>
+<li>Liang, W., Yuksekgonul, M., Mao, Y., Wu, E., &amp; Zou, J. (2023). GPT detectors are biased against non-native English writers. <em>Patterns, 4</em>(7), 100779. <a href="https://doi.org/10.1016/j.patter.2023.100779" class="uri">https://doi.org/10.1016/j.patter.2023.100779</a></li>
+<li>Linardon, J., Jarman, H. K., McClure, Z., Anderson, C., Liu, C., &amp; Messer, M. (2025). Influence of topic familiarity and prompt specificity on citation fabrication in mental health research using large language models. <em>JMIR Mental Health, 12</em>, e80371. <a href="https://doi.org/10.2196/80371" class="uri">https://doi.org/10.2196/80371</a></li>
+<li>Liu, D., &amp; Bridgeman, A. (2023, December 8). Embracing the future of assessment at the University of Sydney. <em>Teaching@Sydney</em>. <a href="https://educational-innovation.sydney.edu.au/teaching@sydney/embracing-the-future-of-assessment-at-the-university-of-sydney/">Link</a></li>
+<li>Lodge, J. M., Howard, S., Bearman, M., Dawson, P., et al.&nbsp;(2023). <em>Assessment reform for the age of artificial intelligence</em>. TEQSA. <a href="https://www.teqsa.gov.au/sites/default/files/2023-09/assessment-reform-age-artificial-intelligence-discussion-paper.pdf">PDF</a></li>
+<li>Lodge, J. M., Bearman, M., Dawson, P., Gniel, H., Harper, R., Liu, D., McLean, J., &amp; Ucnik, L. (2025). <em>Enacting assessment reform in a time of artificial intelligence</em>. TEQSA. <a href="https://www.teqsa.gov.au/sites/default/files/2025-09/enacting-assessment-reform-in-a-time-of-artificial-intelligence.pdf">PDF</a></li>
+<li>Luckhurst, G. (2026, August 18). Ban all remote unsupervised tests “immediately”, urges report. <em>Times Higher Education</em>. <a href="https://www.timeshighereducation.com/news/ban-all-remote-unsupervised-tests-immediately-urges-report">Link</a> (reports on Newton, P., <em>Evidence of Learning Through Assessment</em>, Policy Exchange; the report itself was not read)</li>
+<li>Perkins, M., Furze, L., Roe, J., &amp; MacVaugh, J. (2024). The Artificial Intelligence Assessment Scale (AIAS): A framework for ethical integration of generative AI in educational assessment. <em>Journal of University Teaching and Learning Practice, 21</em>(6). <a href="https://doi.org/10.53761/q3azde36" class="uri">https://doi.org/10.53761/q3azde36</a></li>
+<li>Perkins, M., Roe, J., Vu, B. H., Postma, D., et al.&nbsp;(2024). Simple techniques to bypass GenAI text detectors: Implications for inclusive education. <em>International Journal of Educational Technology in Higher Education, 21</em>, 53. <a href="https://doi.org/10.1186/s41239-024-00487-w" class="uri">https://doi.org/10.1186/s41239-024-00487-w</a></li>
+<li>Quality Assurance Agency. (2026, July 9). <em>The perfect storm: AI, assessment and a sector under pressure</em>. <a href="https://www.qaa.ac.uk/news-events/news/new-research-reveals-the-variability-of-policies--practices-and-student-experience-in-the-age-of-ai">News release</a></li>
+<li>Roitman, A. (2025, October 27). Cheating beyond ChatGPT: Agentic browsers present risks to universities. Pangram, via Stacker. <a href="https://stacker.com/stories/technology/cheating-beyond-chatgpt-agentic-browsers-present-risks-universities">Link</a></li>
+<li>Weber-Wulff, D., Anohina-Naumeca, A., Bjelobaba, S., et al.&nbsp;(2023). Testing of detection tools for AI-generated text. <em>International Journal for Educational Integrity, 19</em>, 26. <a href="https://doi.org/10.1007/s40979-023-00146-z" class="uri">https://doi.org/10.1007/s40979-023-00146-z</a></li>
+<li>Wineburg, S., &amp; McGrew, S. (2019). Lateral reading and the nature of expertise: Reading less and learning more when evaluating digital information. <em>Teachers College Record, 121</em>(11). <a href="https://doi.org/10.1177/016146811912101102" class="uri">https://doi.org/10.1177/016146811912101102</a></li>
+</ul>
+<p>The evidence for each pattern, with its own sources, is on the <a href="../tracks/secure-points-evidence.html">companion page</a>.</p>
+<hr>
+</section>
+<section id="navigate" class="level2">
+<h2 class="anchored" data-anchor-id="navigate">Navigate</h2>
+<p><strong>Next in this track:</strong> <a href="../tracks/ai-in-your-coursework.html">AI in Your Coursework</a></p>
+<p><strong>Related topics:</strong> <a href="../tracks/secure-points-evidence.html">The Evidence Behind Secure-Point Assessment</a> · <a href="../tracks/assignment-assessment-design.html">Assignment &amp; Assessment Design in the AI Era</a> · <a href="../tracks/course-ai-policy.html">Writing Your Course AI Policy</a> · <a href="../tracks/verifying-output.html">Verifying AI Output</a></p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Data rules
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Use course descriptions, task descriptions, and public sources when you plan with AI. Do not put real student submissions, recordings, grades, or rosters into an AI tool. See <a href="../tools.html">Tools &amp; Access</a> and Drexel’s <a href="https://drexel.edu/provost/ai/tools">AI Tools page</a>.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="give-feedback-on-this-page" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="give-feedback-on-this-page">Give Feedback on This Page</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Two minutes: tell us how this track is working
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Your feedback shapes which topics get expanded and what new activities are added.</p>
+<p><a href="https://forms.cloud.microsoft/r/eLHm7tRtGY" class="btn btn-primary" target="_blank"><strong>Self-paced track feedback form</strong> ↗</a></p>
+<p>In the form, select this page from the list of topics.</p>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<!-- Self-paced track styles + readiness-quiz engine (included after body) -->
+<style>
+/* Difficulty badges */
+.level-badge{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.04em;
+  text-transform:uppercase;padding:.15em .6em;border-radius:1em;vertical-align:middle}
+.level-novice{background:#e3f3e8;color:#1d6b3b;border:1px solid #9fd3b2}
+.level-moderate{background:#fdf0d6;color:#8a5a00;border:1px solid #f0cf86}
+.level-advanced{background:#e7ecf5;color:#07294d;border:1px solid #9fb3cc}
+.topic-badges{margin:.2rem 0 .4rem;color:#5a6571;font-size:.95rem}
+.topic-meta{color:#5a6571;font-size:.95rem;margin-bottom:1rem}
+.track-back{display:inline-block;margin:.2rem 0 1rem;font-size:.95rem}
+
+/* Track / topic tables */
+.topic-list td:first-child{white-space:nowrap}
+
+/* Collapsible activities (native <details>, no JS needed) */
+details.activity{border:1px solid #d2dae8;border-left:4px solid #006699;border-radius:6px;
+  margin:.8rem 0;background:#f7f9fb;padding:0 1.15rem}
+details.activity > summary{cursor:pointer;font-weight:700;color:#07294d;padding:.7rem 0;
+  list-style:none;font-size:1.02rem;outline:none}
+details.activity > summary::-webkit-details-marker{display:none}
+details.activity > summary::before{content:"\25B8\00a0";color:#006699;font-weight:700}
+details.activity[open] > summary::before{content:"\25BE\00a0"}
+details.activity[open]{padding-bottom:.7rem}
+details.activity[open] > summary{border-bottom:1px solid #e3e9f2;margin-bottom:.5rem}
+details.activity > summary:hover{color:#006699}
+details.activity > *:not(summary):first-of-type{margin-top:.4rem}
+
+/* Readiness quiz */
+.readiness-quiz{border:1px solid #d2dae8;border-radius:8px;padding:1.1rem 1.25rem;margin:1rem 0;
+  background:#f7f9fb}
+.rq-q{margin:0 0 1rem;padding:.6rem .8rem;border-radius:6px;border:1px solid transparent}
+.rq-qtext{font-weight:600;margin:0 0 .5rem}
+.rq-opt{display:block;margin:.25rem 0;cursor:pointer;line-height:1.4}
+.rq-opt input{margin-right:.5rem}
+.rq-fb{margin-top:.45rem;font-size:.9rem;display:none}
+.rq-fb.rq-fb-ok,.rq-fb.rq-fb-no,.rq-fb.rq-fb-none{display:block}
+.rq-fb-ok{color:#1d6b3b}
+.rq-fb-no{color:#a12a2a}
+.rq-fb-none{color:#8a5a00}
+.rq-correct{background:#f0f9f3;border-color:#bfe3cd}
+.rq-wrong{background:#fcf1f1;border-color:#eccccc}
+.rq-btn{background:#07294d;color:#fff;border:none;border-radius:6px;padding:.5rem 1.1rem;
+  font-weight:600;cursor:pointer}
+.rq-btn:hover{background:#0a3a6b}
+.rq-score{margin-top:.8rem;font-weight:600;color:#07294d}
+</style>
+<script>
+(function(){
+  function init(){
+    var boxes=document.querySelectorAll('.readiness-quiz');
+    boxes.forEach(function(box,bi){
+      var dataEl=box.querySelector('script.quiz-data');
+      if(!dataEl) return;
+      var data; try{data=JSON.parse(dataEl.textContent);}catch(e){return;}
+      var qs=(data&&data.questions)||[];
+      if(!qs.length) return;
+      var wrap=document.createElement('div');
+      qs.forEach(function(q,qi){
+        var qd=document.createElement('div'); qd.className='rq-q';
+        var p=document.createElement('p'); p.className='rq-qtext'; p.textContent=(qi+1)+'. '+q.q; qd.appendChild(p);
+        (q.options||[]).forEach(function(opt,oi){
+          var lab=document.createElement('label'); lab.className='rq-opt';
+          var inp=document.createElement('input'); inp.type='radio'; inp.name='rq_'+bi+'_'+qi; inp.value=oi;
+          lab.appendChild(inp); lab.appendChild(document.createTextNode(' '+opt)); qd.appendChild(lab);
+        });
+        var fb=document.createElement('div'); fb.className='rq-fb'; qd.appendChild(fb);
+        wrap.appendChild(qd);
+      });
+      var btn=document.createElement('button'); btn.type='button'; btn.className='rq-btn'; btn.textContent='Check my answers';
+      var score=document.createElement('div'); score.className='rq-score';
+      btn.addEventListener('click',function(){
+        var correct=0;
+        qs.forEach(function(q,qi){
+          var qd=wrap.children[qi]; var sel=qd.querySelector('input:checked'); var fb=qd.querySelector('.rq-fb');
+          qd.classList.remove('rq-correct','rq-wrong');
+          if(!sel){ fb.textContent='Select an answer.'; fb.className='rq-fb rq-fb-none'; return; }
+          if(parseInt(sel.value,10)===q.answer){ correct++; qd.classList.add('rq-correct'); fb.textContent='Correct. '+(q.explain||''); fb.className='rq-fb rq-fb-ok'; }
+          else { qd.classList.add('rq-wrong'); fb.textContent='Not quite. '+(q.explain||''); fb.className='rq-fb rq-fb-no'; }
+        });
+        var pct=Math.round(correct/qs.length*100);
+        var verdict=pct>=80?"You're ready — dive in.":(pct>=50?"Close — skim the readings first, then start Activity 1.":"Start with the readings and Activity 1, then retry.");
+        score.textContent='You scored '+correct+'/'+qs.length+' ('+pct+'%). '+verdict;
+        try{
+          if(window.goatcounter&&window.goatcounter.count){
+            var slug=location.pathname.split('/').pop().replace(/\.html$/,'')||'index';
+            window.goatcounter.count({path:'quiz/'+slug+'/'+correct+'of'+qs.length,title:'Readiness quiz: '+slug,event:true});
+          }
+        }catch(e){}
+      });
+      box.innerHTML=''; box.appendChild(wrap); box.appendChild(btn); box.appendChild(score);
+    });
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}
+})();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>AI Workshops for DSPH | Dornsife School of Public Health | Drexel University</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Developed with the assistance of Claude (Anthropic); reviewed and owned by the author. Built with Quarto.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

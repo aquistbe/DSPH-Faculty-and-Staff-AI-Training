@@ -1,0 +1,269 @@
+---
+title: "Assessment That Holds Up to AI: Verify at a Few Secure Points"
+---
+
+::: {.topic-badges}
+[Moderate]{.level-badge .level-moderate} · **Teaching & Learning** track · ~40 min hands-on + readings and quiz
+:::
+
+[← Back to the Teaching & Learning track](teaching-learning.qmd){.track-back}
+
+*Stop trying to make every assignment AI-proof. Check what students understand at a few points you can trust, and let AI be used everywhere else.*
+
+## What you'll be able to do
+
+- Decide which of your assessments need to be **secure** and which can allow AI
+- Choose a **structural check** for each secure point, and know what it does and does not protect against
+- Tell which designs will **age quickly** as AI tools improve, and which will hold up
+
+## Overview
+
+Most "AI-resistant" assignment advice tries to make every task hard for AI: use local data, ask for personal reflection, require specific citations. That approach is losing ground. Newer tools can browse the web, open data portals, and work inside a learning management system on their own. A task that was hard for a chatbot in 2023 may be easy for one today.
+
+A more durable approach comes from Australia's higher education regulator, TEQSA. Its 2023 guidance calls for "[security at meaningful points across a program](https://www.teqsa.gov.au/sites/default/files/2023-09/assessment-reform-age-artificial-intelligence-discussion-paper.pdf)": a few places where you confirm what students can do on their own, instead of trying to secure everything. The University of Sydney's [two-lane model](https://educational-innovation.sydney.edu.au/teaching@sydney/embracing-the-future-of-assessment-at-the-university-of-sydney/) puts the same idea into practice:
+
+- **Lane 1 (secure).** A small number of supervised or verified tasks, such as exams, viva voces, or interactive orals, that confirm students have learned what the course requires. Sydney says to use these sparingly.
+- **Lane 2 (open).** Most assessment. AI is allowed, and the task is designed to help students learn, including how to use AI well.
+
+TEQSA's [2025 follow-up](https://www.teqsa.gov.au/sites/default/files/2025-09/enacting-assessment-reform-in-a-time-of-artificial-intelligence.pdf) adds one practical point for anyone teaching a single course: include at least one secure task, and make it a **hurdle**. In its words, it should not be "possible to pass the unit/subject without having satisfactorily completed the secure task(s)." A secure task that students can skip and still pass protects very little.
+
+:::{.callout-tip}
+## The one question to ask about any assignment
+**What must this assignment show that the student can do without AI?** If the answer is "nothing," put it in the open lane, allow AI, and teach students to use it well. If the answer is something specific, you need a check that works even when a student ignores your AI rule.
+:::
+
+## Rules are not controls
+
+Many courses now label each assignment with an AI-use level, such as a traffic light or the [AI Assessment Scale](https://doi.org/10.53761/q3azde36). Labels are worth having. They tell students what you expect, and the UK's quality agency found that inconsistent AI rules across modules and staff [leave students and staff confused](https://www.qaa.ac.uk/news-events/news/new-research-reveals-the-variability-of-policies--practices-and-student-experience-in-the-age-of-ai).
+
+But a label is not a control. [Corbin, Dawson & Liu (2025)](https://doi.org/10.1080/02602938.2025.2503964) separate two kinds of change:
+
+- **Discursive changes** are instructions that students "remain free to ignore": an AI policy, a tier, a traffic light.
+- **Structural changes** change how the task works, so the check doesn't depend on students following the rule.
+
+They argue that most current frameworks rely on discursive changes, which creates an "enforcement illusion." A red "no AI" label on an essay is a request, not a safeguard.
+
+The evidence that requests alone don't hold is starting to come in. A 2026 preprint (not yet peer reviewed) analyzed about 7,500 applications to a US public policy master's program. In 2025, most applicants submitted at least one essay that was mainly AI-written, [despite an explicit ban](https://doi.org/10.48550/arxiv.2609.22549).
+
+**The practical rule:** a "no AI" label on an assignment holds only if a structural check sits behind it. For each assignment where you prohibit AI, name the secure point that would show whether the student can do that work.
+
+## Five patterns for secure points
+
+These patterns come from a redesign of an asynchronous online course (see the [worked example](#worked-example-intro-to-urban-health) below). Each one can be adapted to other subjects. None works alone, and they differ a lot in how well they will hold up.
+
+| Pattern | What it is | What it protects against | What it doesn't |
+|---|---|---|---|
+| **1. Oral checkpoint on the student's own work** | A short recorded or live explanation that includes a question about something the student submitted | Submitting work the student doesn't understand | Reading a prepared script, unless someone asks follow-up questions |
+| **2. A value you can check** | Students retrieve a specific figure from a named public source and report it with its uncertainty | Made-up numbers, which you can check against the source in a minute | Tools that browse the web and pull the real value |
+| **3. Planted-error critique, graded against a key** | Students find errors you deliberately placed in a worked example or report | Padding with plausible but generic critiques, because false findings cost points | Errors that are visible from the text alone. AI finds those easily |
+| **4. Build log graded on the quality of checking** | Students record what AI produced and how they checked it. You grade the checking | Uncritical acceptance of AI output (it teaches the skill) | Generated logs. A log proves nothing about who did the work |
+| **5. Audit of dated claims** | Students check claims from an older lecture or reading against current sources | Weak source evaluation (it teaches lateral reading) | A transcript pasted into a model that can search the web |
+
+### 1. Oral checkpoint on the student's own work
+
+Ask each student to explain their own work: a number they reported, a decision they made, a source they chose. Generic AI answers to a question about *this student's* submission are easy to spot. Oral assessment has the [strongest evidence](secure-points-evidence.qmd#oral-checkpoints) of anything here, but nearly all of it comes from **live** orals where the examiner can ask follow-up questions. A recorded oral with no follow-up is weaker, because a student can read a prepared script.
+
+**Make it stronger:** use a question about the student's own submission every time; publish a bank of general questions so students prepare; grade whether students are explaining or reciting; offer a live option.
+
+### 2. A value you can check against the source
+
+Ask students to pull a specific estimate from a named public source (a census table, a surveillance report, a data portal) and report it with its margin of error. You can check it in seconds. Chatbots without web access make up specific details, and they [do it more often on narrow topics](https://doi.org/10.2196/80371). But tools that browse the web can now retrieve the real value. Treat this as a **skills task**, and pair it with an oral question: *"Explain your value and what its uncertainty interval means."*
+
+### 3. Planted-error critique graded against a key
+
+Give students a short analysis or report with errors you planted, and grade their findings against a fixed key. An open count ("find at least three problems") rewards volume, and AI produces plausible critiques on demand. A key makes grading objective and makes false findings cost points. Current AI models catch errors that are visible in the text, such as a wrong formula or an inconsistent number. Errors that can only be found by **checking the cited source** last longer. But agentic tools can open sources too, so expect this to erode.
+
+### 4. Build log graded on the quality of checking
+
+Ask students to log what AI gave them and how they checked it, then grade how good the checking was. Don't treat the log as proof of process. In one study, [ChatGPT-written reflections scored higher](https://doi.org/10.1016/j.caeai.2023.100140) than students' own on all six rubric criteria. This pattern was never a security measure. It's worth doing because it teaches students to judge AI output. Its value as a check comes from the oral: ask students to explain one check from their own log.
+
+### 5. Audit of dated claims
+
+Give students a lecture or reading that is several years old, and ask them to check two of its claims against current sources. It teaches lateral reading (leaving a source to see what others say about it), which [professional fact checkers rely on](https://doi.org/10.1177/016146811912101102). It is weak as security: a student can paste the transcript into a model that can search the web. Require the specific current source and value that updates the claim, so you can check it quickly. Use it early in the term as practice for patterns 2 and 3.
+
+## How long each pattern will hold up
+
+Some of these patterns rely on AI being bad at the task. Those are eroding fast. Agentic browsers such as OpenAI's Atlas and Perplexity's Comet operate a browser on their own. A 2025 article from [Pangram](https://stacker.com/stories/technology/cheating-beyond-chatgpt-agentic-browsers-present-risks-universities) (a company that sells AI detectors) describes students using them on platforms like Canvas, including a student who showed Comet completing a quiz. The same tools can open a data portal and pull a real value, or open a cited source and check a claim.
+
+| Pattern or choice | Relies on AI being bad at the task? | Where it stands now | Why it's still worth doing |
+|---|---|---|---|
+| Oral checkpoint on own work | No. It relies on the student talking about their own work | Partly durable. Reading an AI-written script is possible, especially without follow-up questions | The question about the student's own work; grading explanation vs. recitation |
+| A value you can check | Yes | Largely eroded as a check. Tools that browse can retrieve real values | Teaches a real skill; pair it with an oral question |
+| Planted-error critique | Partly. Errors that need a source check last longer | Eroding. Agentic tools can open sources | Key-based grading; the learning value is unchanged |
+| Build log | Never was a check | Unchanged | Teaches students to judge AI output |
+| Audit of dated claims | Yes | Eroded. A transcript plus a web-enabled model can do it | Practice for the later tasks |
+| No AI detectors | No | The case gets stronger as AI improves | — |
+| Few secure points; lighter workload; structure over rules | No | Durable | — |
+
+**Read plainly:** in an asynchronous course, the oral checkpoints carry most of the verification. Keep the other patterns for what they teach, but don't count them as security.
+
+## Why not use AI detectors
+
+Detectors look like a structural check, but they are a weak one:
+
+- **Unreliable.** A test of 14 tools, including Turnitin, found them "[neither accurate nor reliable](https://doi.org/10.1007/s40979-023-00146-z)."
+- **Easy to evade.** Simple edits to AI-written text [cut detector accuracy by 17.4%](https://doi.org/10.1186/s41239-024-00487-w). The authors conclude detectors can't currently be recommended for deciding integrity cases.
+- **A flag isn't evidence a student can answer.** A score says nothing about what the student understands. An oral question does.
+
+You may have heard that detectors are biased against non-native English writers. [A 2023 study](https://doi.org/10.1016/j.patter.2023.100779) found that seven detectors flagged 61.3% of TOEFL essays as AI-written on average. A [2026 preprint](https://doi.org/10.48550/arxiv.2609.22549) found no such difference with the commercial detector it used. That question is open. The case against detectors doesn't depend on it: unreliability and easy evasion are enough.
+
+## Worked example: Intro to Urban Health
+
+*Intro to Urban Health* (EOH 550 / PBHL 350) is a fully asynchronous online course at Dornsife. Its redesign uses all five patterns:
+
+- **Three recorded oral checkpoints** spread across the term. Each draws a question from a bank students can see in advance and asks one fixed question about the student's own submitted work. The first checkpoint asks students to explain a value they retrieved and its uncertainty interval.
+- **A data retrieval task.** Students pull a neighborhood-level public health estimate from a public data portal and report it with its margin of error.
+- **A planted-error critique**, graded against a key, with some errors that can only be found by checking the source.
+- **A build log** graded on how well students checked AI output.
+- **An early audit** of claims in a lecture recorded several years ago.
+- **An AI-use level on every assignment.** AI is optional for some tasks and prohibited for the synthesis assignments. The oral checkpoints are the only check behind that prohibition, so the fixed oral questions need to cover the prohibited assignments.
+
+**What the design can and can't claim:**
+
+- The real verification sits in the oral checkpoints. The other tasks stay for what they teach.
+- Because the orals are recorded with no follow-up questions, a student could read a prepared script. The fixed question about the student's own work is what makes that hard.
+- A live oral with follow-up questions, the strongest format, was set aside to keep the course fully asynchronous. It stays available as an accommodation.
+- Some UK voices now argue for [ending unsupervised remote assessment](https://www.timeshighereducation.com/news/ban-all-remote-unsupervised-tests-immediately-urges-report) altogether. A fully asynchronous course can't meet that bar, and this design doesn't claim to. Its defense is narrower: students have to explain their own work, on a timer, at several points.
+
+:::{.callout-note}
+## Checklist: run this on one of your own assignments
+1. **What must it show** the student can do without AI? If nothing, put it in the open lane and allow AI.
+2. **What is the structural check?** A conversation about the student's own work, a value or claim you can check against the source, a key. "The syllabus says no AI" is not a check.
+3. **Does the check rely on AI being bad at the task?** If yes, expect it to erode. Back it with an oral question.
+4. **Is every prohibited deliverable tied to a secure point?** If a "no AI" assignment has nothing behind it, either add a question about it to a secure task or move it to the open lane.
+5. **Can a student pass the course without passing the secure points?** If so, consider making them a hurdle.
+6. **Are you relying on a detector?** Take it out of the plan.
+7. **Can you grade the check quickly?** A check you can't keep up with won't get done.
+8. **Is the workload reasonable?** Students under heavy workload and time pressure [use ChatGPT more](https://doi.org/10.1186/s41239-024-00444-7). Fewer, better tasks help.
+9. **Is the AI rule written on the assignment**, and consistent with your other assignments?
+10. **What's the accommodation?** Decide in advance what a student who can't do the standard format will do instead.
+:::
+
+## Practice activities
+
+```{=html}
+<details class="activity"><summary>Activity 1 · Moderate — Sort your course into two lanes</summary>
+```
+
+**Time** ~20 min · **Tools** ChatGPT Edu (optional)
+
+**Goal.** Decide which assessments in one of your courses need to be secure, and give each secure point a structural check.
+
+**Setup.** List every graded task in one course, with a one-line description of each. Use the task descriptions only. Do not paste in student work, grades, or rosters.
+
+**Steps.**
+
+1. For each task, answer the checklist question: *What must this show the student can do without AI?* Mark each task **open** or **secure**.
+2. Keep secure points few. TEQSA's course-level pathway asks for at least one secure task per course. If most of your tasks are marked secure, look again.
+3. For each secure task, name its structural check, using the five patterns above. If you want a second opinion, paste your list into ChatGPT Edu:
+
+   ```markdown
+   Here are the graded tasks in my course, marked open (AI allowed) or secure (must show the student can do it without AI). For each secure task, tell me (1) what structural check would confirm the student's own understanding, (2) whether that check relies on AI being bad at the task, and (3) which open tasks have no secure point checking the same skill. Be brief, and tell me where my plan relies on a rule instead of a check.
+   ```
+
+4. Check that every task where you prohibit AI is tied to a secure point.
+
+**Expected result.** A short table of your tasks: open or secure, the check for each secure one, and any "no AI" task with nothing behind it.
+
+**Check your work.** Run the checklist on your weakest secure point. If it fails questions 2 or 3, strengthen it or back it with an oral question.
+
+**Common pitfalls.** Marking everything secure, which you can't sustain. Treating a longer prompt or a "cite five sources" rule as a check. Counting a build log or reflection as proof of who did the work.
+
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="activity"><summary>Activity 2 · Moderate — Build a planted error that needs a source check</summary>
+```
+
+**Time** ~20 min · **Tools** ChatGPT Edu
+
+**Goal.** See for yourself which errors AI catches and which it misses, so you can design a critique task that holds up longer.
+
+**Setup.** Write a short paragraph (about 150 words) in your subject that cites one real public source, such as a government report or data table. Use only public information.
+
+**Steps.**
+
+1. Plant two errors:
+   - an **internal** error, visible from the text alone (an arithmetic mistake, or two numbers that contradict each other);
+   - a **source** error, visible only if someone opens the cited source (a figure that differs from what the source reports, or a claim the source doesn't make).
+2. In a new chat with web search **off** (if your tool lets you), paste the paragraph and ask:
+
+   ```markdown
+   This paragraph contains errors. Find every error, explain why it is wrong, and say how confident you are.
+   ```
+
+3. Repeat in a new chat with web search **on**.
+4. Compare: which errors did it find each time? Did it invent errors that aren't there?
+
+**Expected result.** It usually finds the internal error. Whether it finds the source error depends on whether it can open the source. With web search on, it may find it. That is the durability point: errors that need a source check last longer, but not forever.
+
+**Check your work.** Write the key for your paragraph: each planted error, and why it's wrong. If AI found both errors without web access, your source error was visible from the text. Make it subtler.
+
+**Stretch (optional).** Add one question to an oral checkpoint that asks a student to explain how they found one of the errors.
+
+```{=html}
+</details>
+```
+
+## Check your readiness
+
+Answer these, then check — your score suggests whether to dive in or skim the readings first.
+
+<div class="readiness-quiz">
+<script type="application/json" class="quiz-data">
+{"questions": [{"q": "An essay assignment carries a red 'No AI' label. What makes the ban hold?", "options": ["A structural check behind it, such as an oral question about that essay", "Stating the ban clearly in the syllabus", "Running submissions through an AI detector", "Asking students to sign an honesty statement"], "answer": 0, "explain": "Labels and statements are rules students can ignore. A ban holds only when a check that doesn't depend on the student following the rule sits behind it (Corbin, Dawson & Liu, 2025)."}, {"q": "Which of these will hold up best as AI tools improve?", "options": ["An oral question about the student's own submitted work", "Requiring a specific value from a local data source", "Asking students to find errors in a worked example", "Requiring five peer-reviewed citations"], "answer": 0, "explain": "The other three rely on AI being bad at the task, and tools that browse the web are closing that gap. An oral question about the student's own work does not rely on AI being bad at anything."}, {"q": "Why not rely on AI detectors?", "options": ["They are unreliable and simple edits defeat them", "They are too expensive", "They only work on short texts", "They are reliable but slow"], "answer": 0, "explain": "Tests found detectors 'neither accurate nor reliable,' and simple edits cut their accuracy. Whether they are biased against non-native writers is disputed, but the case doesn't depend on that."}]}
+</script>
+</div>
+
+## Recommended readings
+
+- [**Talk is cheap: why structural assessment changes are needed for a time of GenAI**](https://doi.org/10.1080/02602938.2025.2503964) — Corbin, Dawson & Liu (2025). The case for structure over rules, in about ten pages.
+- [**Enacting assessment reform in a time of artificial intelligence**](https://www.teqsa.gov.au/sites/default/files/2025-09/enacting-assessment-reform-in-a-time-of-artificial-intelligence.pdf) — TEQSA (2025). Three practical pathways, including one secure task per course.
+- [**Embracing the future of assessment at the University of Sydney**](https://educational-innovation.sydney.edu.au/teaching@sydney/embracing-the-future-of-assessment-at-the-university-of-sydney/) — Liu & Bridgeman (2023). The two-lane model in plain language.
+
+## Useful resources
+
+- [**The Evidence Behind Secure-Point Assessment**](secure-points-evidence.qmd) — the companion page: what the research shows for each pattern, what 2026 sources add, and the limits of the evidence.
+- [Writing Your Course AI Policy](course-ai-policy.qmd) — the rules side. This page covers the checks that make rules hold.
+- [Assignment & Assessment Design in the AI Era](assignment-assessment-design.qmd) — redesigning open-lane assignments so they still build competence.
+- [Drexel Academic Integrity Policy](https://drexel.edu/studentlife/community-standards/code-of-conduct/) — the institutional framework for academic honesty.
+
+## Sources
+
+Checked against the publisher, Crossref, or Scite on 10 November 2026.
+
+- Abbas, M., Jam, F. A., & Khan, T. I. (2024). Is it harmful or helpful? Examining the causes and consequences of generative AI usage among university students. *International Journal of Educational Technology in Higher Education, 21*, 10. <https://doi.org/10.1186/s41239-024-00444-7>
+- Corbin, T., Dawson, P., & Liu, D. (2025). Talk is cheap: Why structural assessment changes are needed for a time of GenAI. *Assessment & Evaluation in Higher Education, 50*(7), 1087–1097. <https://doi.org/10.1080/02602938.2025.2503964>
+- Isley, C., Gaebler, J. D., & Goel, S. (2026). AI-written admissions essays are widespread but penalized. *arXiv* (preprint, not peer reviewed). <https://doi.org/10.48550/arxiv.2609.22549>
+- Li, Y., Sha, L., Yan, L., et al. (2023). Can large language models write reflectively. *Computers and Education: Artificial Intelligence, 4*, 100140. <https://doi.org/10.1016/j.caeai.2023.100140>
+- Liang, W., Yuksekgonul, M., Mao, Y., Wu, E., & Zou, J. (2023). GPT detectors are biased against non-native English writers. *Patterns, 4*(7), 100779. <https://doi.org/10.1016/j.patter.2023.100779>
+- Linardon, J., Jarman, H. K., McClure, Z., Anderson, C., Liu, C., & Messer, M. (2025). Influence of topic familiarity and prompt specificity on citation fabrication in mental health research using large language models. *JMIR Mental Health, 12*, e80371. <https://doi.org/10.2196/80371>
+- Liu, D., & Bridgeman, A. (2023, December 8). Embracing the future of assessment at the University of Sydney. *Teaching@Sydney*. [Link](https://educational-innovation.sydney.edu.au/teaching@sydney/embracing-the-future-of-assessment-at-the-university-of-sydney/)
+- Lodge, J. M., Howard, S., Bearman, M., Dawson, P., et al. (2023). *Assessment reform for the age of artificial intelligence*. TEQSA. [PDF](https://www.teqsa.gov.au/sites/default/files/2023-09/assessment-reform-age-artificial-intelligence-discussion-paper.pdf)
+- Lodge, J. M., Bearman, M., Dawson, P., Gniel, H., Harper, R., Liu, D., McLean, J., & Ucnik, L. (2025). *Enacting assessment reform in a time of artificial intelligence*. TEQSA. [PDF](https://www.teqsa.gov.au/sites/default/files/2025-09/enacting-assessment-reform-in-a-time-of-artificial-intelligence.pdf)
+- Luckhurst, G. (2026, August 18). Ban all remote unsupervised tests "immediately", urges report. *Times Higher Education*. [Link](https://www.timeshighereducation.com/news/ban-all-remote-unsupervised-tests-immediately-urges-report) (reports on Newton, P., *Evidence of Learning Through Assessment*, Policy Exchange; the report itself was not read)
+- Perkins, M., Furze, L., Roe, J., & MacVaugh, J. (2024). The Artificial Intelligence Assessment Scale (AIAS): A framework for ethical integration of generative AI in educational assessment. *Journal of University Teaching and Learning Practice, 21*(6). <https://doi.org/10.53761/q3azde36>
+- Perkins, M., Roe, J., Vu, B. H., Postma, D., et al. (2024). Simple techniques to bypass GenAI text detectors: Implications for inclusive education. *International Journal of Educational Technology in Higher Education, 21*, 53. <https://doi.org/10.1186/s41239-024-00487-w>
+- Quality Assurance Agency. (2026, July 9). *The perfect storm: AI, assessment and a sector under pressure*. [News release](https://www.qaa.ac.uk/news-events/news/new-research-reveals-the-variability-of-policies--practices-and-student-experience-in-the-age-of-ai)
+- Roitman, A. (2025, October 27). Cheating beyond ChatGPT: Agentic browsers present risks to universities. Pangram, via Stacker. [Link](https://stacker.com/stories/technology/cheating-beyond-chatgpt-agentic-browsers-present-risks-universities)
+- Weber-Wulff, D., Anohina-Naumeca, A., Bjelobaba, S., et al. (2023). Testing of detection tools for AI-generated text. *International Journal for Educational Integrity, 19*, 26. <https://doi.org/10.1007/s40979-023-00146-z>
+- Wineburg, S., & McGrew, S. (2019). Lateral reading and the nature of expertise: Reading less and learning more when evaluating digital information. *Teachers College Record, 121*(11). <https://doi.org/10.1177/016146811912101102>
+
+The evidence for each pattern, with its own sources, is on the [companion page](secure-points-evidence.qmd).
+
+---
+
+## Navigate
+
+**Next in this track:** [AI in Your Coursework](ai-in-your-coursework.qmd)
+
+**Related topics:** [The Evidence Behind Secure-Point Assessment](secure-points-evidence.qmd) · [Assignment & Assessment Design in the AI Era](assignment-assessment-design.qmd) · [Writing Your Course AI Policy](course-ai-policy.qmd) · [Verifying AI Output](verifying-output.qmd)
+
+::: {.callout-warning}
+## Data rules
+Use course descriptions, task descriptions, and public sources when you plan with AI. Do not put real student submissions, recordings, grades, or rosters into an AI tool. See [Tools & Access](../tools.qmd) and Drexel's [AI Tools page](https://drexel.edu/provost/ai/tools).
+:::
+
+{{< include /_feedback-track.qmd >}}
